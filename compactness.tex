@@ -1,0 +1,442 @@
+\chapter{Compactness and finiteness}
+
+\section{Compactness theorem}
+
+\section{Convergence of compact spaces.}
+
+\begin{thm}{Definition}
+Let $\spc{X}$ and $\spc{Y}$ be metric space,
+a map $f\:\spc{X}\to\spc{Y}$
+is called \emph{$\eps$-isometry}\index{isometry!$\eps$-siometry}
+if the following two condition hold:
+\begin{subthm}{}
+$\Im f$ is an $\eps$-net of $\spc{Y}$
+\end{subthm}
+
+\begin{subthm}{}
+$\dist{f(x)}{f(x')}{\spc{Y}}\lege\dist{x}{x'}{\spc{X}}\pm\eps$ for any $x,x'\in\spc{X}$
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Definition}
+Let $\spc{X}_n$ be a sequence of compact metric spaces and $\spc{X}_\infty$ is an other compact metric space.
+We say that $\spc{X}_n$ converges to $\spc{X}_\infty$ in the sence of Gromov--Hausdorff if there is a sequence of $\eps_n$-isometries 
+$f_n\:\spc{X}_\infty\to \spc{X}_n$ for a sequence of positive numbers $\eps_n$ converging to $0$ as $n\to\infty$.
+\end{thm}
+
+
+The following theorem roughly states that isometry class of Gromov--Hausdorff limit is uniquely defined once it is compact. 
+
+\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ be metric spaces
+such that $\spc{X}_n\xto{\GH}\spc{X}_\infty$, 
+$\spc{X}_n\xto{\bar\GH}\bar{\spc{X}}_\infty$.
+
+Assume that $\bar{\spc{X}}_\infty$ is compact.
+Then $\spc{X}_\infty\iso \bar{\spc{X}}_\infty$.
+\end{thm}
+
+
+\parit{Proof.}
+For each $x_\infty\in\spc{X}_\infty$,
+fix its liftings $x_n\in\spc{X}_n$.
+
+Choose some ultrafilter $\o$.
+Define $\bar x_\infty\in \bar{\spc{X}}_\infty$ such that $\bar x_n\xGHto{\bar\GH}\bar x_\infty$;
+since $\bar{\spc{X}}_\infty$ is compact, the $\o$-limit is defined.
+We claim that the map $x_\infty\to \bar x_\infty$ is an isometry.
+
+Indeed, according to the definition of Gromov--Hausdorff convergence, 
+\[\dist{\bar x_\infty}{\bar y_\infty}{\bar{\spc{X}}_\infty}
+=
+\lim_{n\to\o}\dist{x_n}{y_n}{\spc{X}_n}
+=
+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}.
+\]
+Thus, the map $x_\infty\to\bar x_\infty$ gives a distance preserving map
+$\map\:\spc{X}_\infty\hookrightarrow\bar{\spc{X}}_\infty$.
+In particular,  
+$\spc{X}_\infty$ is compact.
+Switching $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ and applying the same argument, 
+we get an isometiric embedding 
+$\bar{\spc{X}}_\infty\hookrightarrow\spc{X}_\infty$.
+Thus, the result follows from Lemma~\ref{lem:>=-isometry}.
+\qeds
+
+
+
+
+\begin{thm}{Definition}
+ Given two compact spaces $\spc{X}$ and $\spc{Y}$, we will write 
+\begin{itemize}
+\item $\spc{X}\le \spc{Y}$ if there is a non-contracting map $\map\:\spc{X}\to \spc{Y}$.
+\item $\spc{X}\le \spc{Y}+\eps$ if there is a map $\map\:\spc{X}\to \spc{Y}$ such that for any $x,x'\in \spc{X}$ we have
+\[\dist{x}{x'}{}\le \dist{\map(x)}{\map(x')}{}+\eps.\]
+\end{itemize}
+
+Further, we define \emph{Gromov--Hausdorff distance}\index{Gromov--Hausdorff distance} between $\spc{X}$ and $\spc{Y}$, $\GHdist(\spc{X},\spc{Y})$ as infimum of all $\eps>0$ such that
+$\spc{X}\le \spc{Y}+\eps$ and $\spc{Y}\le \spc{X}+\eps$.
+\end{thm}
+
+\parbf{Remark for AKP.}
+This notation is a bit slang-like, maybe better to use $\succcurlyeq$ instead of $\ge$.
+Yet $\spc{Y}+\eps$ migh be needed to be changed;
+one might think that $\spc{Y}+\eps$ is a metric space $(\ushort{\spc{Y}},\dist{}{}{}+\eps \rho)$, where $\rho$ is a discreate metric on $\ushort{\spc{Y}}$ (i.e. $\rho(x,y)=1$ if $x\not=y$). 
+It will be totally correct to introduce some operator say $\op{Add}_\eps\spc{Y}$, but it is also less intuitive...
+One may also write something like 
+$\spc{X}\succcurlyeq \spc{Y}^{+\eps}$ or $\spc{X}\succcurlyeq^{\eps+} \spc{Y}$...
+
+\medskip
+
+The Gromov--Hausdorff distance turns the set of all isometry classes of compact metric spaces into a metric space.
+The following theorem shows that convergence in this space coinsides with the Gromov--Hausdorff convergence defined above.
+
+\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be compact metric spaces.
+Then 
+\[\spc{X}_n\xto{}\spc{X}_\infty
+\ \ \Leftrightarrow\ \ 
+\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0.\]
+
+\end{thm}
+
+\parit{Proof; $(\Leftarrow)$.}
+Let $\spc{X}_n\xto{\GH} \spc{X}_\infty$
+and $b_n\:\spc{X}_n\to \spc{X}_\infty$ be a sequence of maps such that
+\[\dist{a_n(x)}{a_n(y)}{\spc{X}_\infty}
+\ge
+\dist{x}{y}{\spc{X}_n}-\eps_n,\]
+\[\dist{b_n(v)}{b_n(w)}{\spc{X}_n}
+\ge
+\dist{v}{w}{\spc{X}_\infty}-\eps_n\]
+for any $x,y\in \spc{X}_n$ and $v,w\in\spc{X}_\infty$ and some sequence $\eps_n\to0+$.
+
+Let us show that $\spc{X}_n\xto{\GH}\spc{X}_\infty$. 
+
+Fix $\eps>0$ and choose a maximal $\eps$-packing $\{x^1,x^2,\dots,x^\kay\}$ in $\spc{X}_\infty$ such that the value $\sum_{i<j}\dist{x^i}{x^j}{}$ is maximal.
+Note that 
+\[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}>\dist{x^i}{x^j}{}-2\cdot\eps_n.\]
+Thus, 
+$\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}-\dist{x^i}{x^j}{}
+\to_{n\to\infty} 
+0$ for all $i$ and $j$.
+For all large $n$,
+we have $2\cdot\eps_n<\dist{x^i}{x^j}{}-\eps$.
+Thus $\dist{b_n(x^i)}{b_n(x^j)}{\spc{X}_n}>\eps$ 
+and \[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{\spc{X}_n}>\eps\] 
+for all $i\not=j$.
+Thus, for each large $n$, 
+the set $\{a_n\circ b_n(x^i)\}$ forms a maximal $\eps$-packing and therefore an $\eps$-net in $\spc{X}_\infty$.
+Since $\eps>0$ is arbitrary, we get \ref{def:GH:appr1}.
+
+Since $\{a_n\circ b_n(x^i)\}$ is an  $\eps$-net in $\spc{X}_\infty$,
+for any $y_n\in\spc{X}_n$, there is $x^i$ such that $\dist{a_n\circ b_n(x^i)}{a_n(y_n)}{}<\eps$.
+Thus, $\dist{b_n(x^i)}{y_n}{}<\eps+\eps_n$.
+
+Further, note that the set $\{b_n(x^i)\}$ forms an $(\eps+\eps_n)$-net in $\spc{X}_n$.
+Otherwise, if for some $y_n\in \spc{X}_n$, we have $\dist{y_n}{b_n(x^i)}{}$ for all $i$,
+then $\dist{a_n\circ b_n(x^i)}{a_n(y_n)}{}>\eps$; 
+i.e. $\kay<\pack_\eps{X}_\infty$, a contradiction.
+
+\parit{$(\Rightarrow)$.}
+Assume $\spc{X}_n\xto{\GH}\spc{X}_\infty$.
+Fix $\eps>0$ and choose a maximal $\eps$-packing $\{x^1,x^2,\dots,x^\kay\}$ in $\spc{X}_\infty$.
+For each $x^i$, 
+choose a sequence $x^i_n\in\spc{X}_n$ such that $a_n(x^i_n)\to x^i$.
+Note that for all large $n$, we have $\dist{x^i_n}{x^j_n}{}>\eps$.
+For each point $z\in \spc{X}_\infty$, choose $x^i$ so that $\dist{z}{x^i}{}<\eps$ and define map $b_n\:\spc{X}_\infty\to\spc{X}_n$ such that 
+$b_n(z)=x^i_n$.
+\qeds
+
+
+
+\begin{thm}{Lemma}\label{lem:>=-isometry}
+Let $\spc{X}$ and $\spc{Y}$ be two metric spaces 
+and $\spc{X}$ is compact then
+\[
+\spc{X}\ge\spc{Y}\ge\spc{X}
+\ \ \Leftrightarrow\ \ 
+\spc{X}\iso\spc{Y}.
+\]
+
+\end{thm}
+
+The following proof was suggested by Travis Morrison.
+
+\parit{Proof.}
+Let $f\: \spc{X} \to \spc{Y}$ 
+and $g\: \spc{Y} \to \spc{X}$ be non contracting mappings.
+It is sufficient to prove that $h  = g\circ f\:\spc{X}\to \spc{X}$ is an isometry. 
+
+Given any pair of points $x,y\in \spc{X}$, 
+set $x_n=h^{\circ n}(x)$ and $y_n=h^{\circ n}(y)$.
+Since $\spc{X}$ is compact, one can choose an incresing sequence of integers $n_\kay$
+such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+converge.
+In particular, both of these sequences  are Cauchy;
+i.e.,
+\[
+\dist{x_{n_i}}{x_{n_j}}{},\dist{y_{n_i}}{y_{n_j}}{}\to 0
+\]
+as $\min\{i,j\}\to\infty$.
+Sinse $h$ is nonconotracting, we get
+\[
+\dist{x}{x_{|n_i-n_j|}}{}\le \dist{x_{n_i}}{x_{n_j}}{}.
+\]
+It follows that  
+there is a sequence $m_i\to\infty$ such that
+\[
+x_{m_i}\to x\ \ \text{and}\ \ y_{m_i}\to y\ \ \text{as}\ \ \kay\to\infty.
+\eqlbl{eq:x_l->x}
+\]
+
+Let $\ell_n=\dist{x_n}{y_n}{}$.
+Since $h$ is noncontracting, $(\ell_n)$ is a nondecreasing sequence.
+On the other hand, 
+from \ref{eq:x_l->x}, it follows that $\ell_{m_i}\to\dist{x}{y}{}=\ell_0$ as $m_i\to\infty$;
+i.e., $(\ell_n)$ is a constant sequece.
+In particular $\ell_0=\ell_1$ for any $x$ and $y\in \spc{X}$;
+i.e., $h$ is distance preserving map.
+
+Therefore $h(X)$ is isometric to $\spc{X}$.
+From \ref{eq:x_l->x}, we get that $h(\spc{X})$ is everywhere dense.
+Sinse $X$ is compact, we get $h(\spc{X})=\spc{X}$.
+%Let  $\{x^i\}_{i=1}^{n}$ be a maximal $\eps$-packing in $\spc{X}$ such that  $\sum_{i<j}\dist{x^i}{x^j}{}$ attends maximum value. The set $\{\map (x^i)\}$ forms a maximal $\eps$-packing in $\spc{X}$. Sinse $\sum_{i<j}\dist{x^i}{x^j}{}$ is maximal, we have \[\dist{\map (x^i)}{\map (x^j)}{}=\dist{x^i}{x^j}{}\] for all $i,j$.
+%
+%Recal that maximal $\eps$-packing is an $\eps$-net (see ???).
+%Thus, the set $\{\map(x^i)\}$ forms an $\eps$-net in $\spc{X}$.
+%Thus for any two points $p,q$ one can find points $x^i,x^j$ such that
+%\[\dist{\map (p)}{\map (x^i)}{}\le\eps\ \ \text{and}\ \ \dist{\map (q)}{\map (x^j)}{}\le\eps\]
+%Therefore, since $\map $ is non contracting,
+%\[\dist{p}{q}{}
+%\le
+%\dist{\map (p)}{\map (q)}{}
+%\le
+%\dist{\map (x^i)}{\map (x^j)}{}+2\cdot\eps
+%=
+%\dist{x^i}{x^j}{}+2\cdot\eps
+%\le
+%\dist{p}{q}{}+4\cdot\eps.\]
+%Sinse $\eps>0$ can be chousen arbitrary, we have
+%\[\dist{p}{q}{}
+%=
+%\dist{\map (p)}{\map (q)}{}.\]
+\qeds
+
+\section{Strongly convex functions}
+
+\section{A finiteness theorem}
+
+\section{Controlled concavity}
+\addtocounter{subsection}{1}
+\setcounter{thm}{0}
+
+In this and the next sections we introduce a couple of techniques which use
+comparison of $m$-dimensional Alexandrov's space with a model space of the same
+dimension \label{lob-k-m}$\Lob{m}\kappa$ (that is $m$-dimensional simply connected Riemannian manifold with constant curvature $\kappa$).
+These techniques were introduced by Perelman in \cite{perelman:morse}
+and \cite{perelman:DC}.
+
+We start with the local existence of a strictly concave function on an Alexandrov's space.
+
+\begin{thm}{Theorem~\cite[3.6]{perelman:morse}}
+\label{thm:strictly-concave}
+Let $A\in\CBB{}{}$. 
+
+For any point $p\in A$ there is a strictly concave function $f$ defined in an
+open neighborhood of $p$.
+
+Moreover, given $v\in T_p$, the differential, $d_p f(x)$, can be chosen
+arbitrarily close to $x\mapsto -\<v,x\>$
+\end{thm}
+
+\begin{wrapfigure}{r}{35mm}
+\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/strictly-concave(0.25)}
+\lbl[tr]{125,05;$q$}
+\lbl[br]{32,166;$\gamma(t)$}
+\lbl[l]{44,159;$\alpha(t)$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} 
+Consider the real-to-real function 
+$$\phi_{r,c}(x)=(x-r)- c{(x-r)^2}/r,$$
+so we have 
+$$\phi_{r,c}(r)=0,\ \ \phi_{r,c}'(r)=1\ \ \phi_{r,c}''(r)=- {2c}/{r}.$$ 
+
+Let $\gamma$ be a unit-speed geodesic, fix a point $q$ and set 
+$$\alpha(t)=\angle(\gamma^+(t),\dir{\gamma(t)}{q}).$$
+If $r>0$ is sufficiently small and $\dist{q}{\gamma(t)}{}$ is sufficiently close to
+$r$, then direct calculations show that
+$$(\phi_{r,c}\circ\dist{q}{}{}\circ\gamma)''(t)
+\le 
+\frac{3-c\cdot \cos^2\alpha(t)}{r}.$$
+
+Now, assume $\{q_i\}$, $i=\{1,..,N\}$ is a finite set of points such that $\dist{p}{q_i}{}=r$ for any $i$. 
+For $x\in A$ and $\xi_x\in \Sigma_x$, set $\alpha_i(\xi_x)=\angle(\xi_x,\dir{p}{q_i})$. 
+Assume we have a collection $\{q_i\}$ such
+that for any $x\in B_\eps(p)$ and $\xi_x\in \Sigma_x$ 
+we have  $\max_i\{\dist{\alpha_i(\xi_x)}{\tfrac\pi2}{}\}\ge\eps>0$. 
+Then  taking in the above inequality $c>3N/\cos^2\eps$, we get that the function
+$$f=\sum_i \phi_{r,c}\circ\dist{q_i}{}{}$$
+is strictly concave in $B_{\eps'}(p)$ for some positive $\eps'<\eps$.
+
+To construct the needed collection $\{q_i\}$, note that for small $r>0$ one can
+construct $N_\delta\ge \Const/\delta^{(m-1)}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$
+and $\tilde\angle_\kappa q_i p q_j>\delta$ (here $\Const=\Const(\Sigma_p)>0$).
+On the other hand, the set of directions which is orthogonal to a given direction
+is smaller than $S^{m-2}$ and therefore contains at most
+$\Const(m)/\delta^{(m-2)}$ directions with angles at least $\delta$. 
+Therefore, for small enough $\delta>0$, $\{q_i\}$ forms the needed collection.
+
+If $r$ is small enough, points $q_i$ can be chosen so that all directions
+$\dir{p}{q_i}$ will be $\eps$-close to a given direction $\xi$ and
+therefore the second property follows.
+\qeds
+
+Note that in the theorem~\ref{thm:strictly-concave} (as well as in
+theorem~\ref{exist-control}), the function $f$ can be chosen to have maximum value $0$ at $p$,
+$f(p)=0$ and with $d_p f(x)$ arbitrary close to $-|x|$.
+It can be constructed by taking the minimum of the functions in these theorems. Whence the claim below follows.
+
+
+\begin{thm}{Claim}\label{cor:convex-nbhd}
+For any point of an Alexandrov's space there is an arbitrary small closed convex
+neighborhood.
+\end{thm}
+
+Applying rescaling and passing to the limit, 
+one can estimate the size of the convex
+hull in an Alexandrov's space in terms of the volume of a ball containing it:
+
+\begin{thm}{Lemma on strictly concave convex hulls
+\cite[4.3]{perelman-petrunin:extremal}}
+For any $v>0$, $r>0$ and $\kappa\in \RR$, $m\in\NN$ there is $\eps>0$ such that,
+if $A\in\CBB{m}\kappa$ and $\vol B_{r}(p)\ge v$ then for any $\rho<\eps\cdot r$, 
+$$\diam[\Conv B_\rho(p)]\le \rho/\eps.$$
+
+In particular, for any compact Alexandrov's $A$ space there is $\Const\in \RR$ such that for
+any subset $X\subset A$
+$$\diam \left(\Conv X \right)\le \Const\cdot\diam X.$$
+\end{thm}
+
+
+
+
+
+\subsection{General definition.} 
+The above construction can be generalized and optimized in many ways to fit
+particular needs. 
+Here we introduce one such variation which is not the most general, but general
+enough to work in most applications.
+
+Let $A$ be an Alexandrov's space and $f\:A\to \RR$,
+$$f=\Theta(\dist[2]{q_1}{}{},\dist[2]{q_2}{}{},\dots,\dist[2]{q_N}{}{})$$ be a \emph{simple
+function} (see section~\ref{adm}).
+If $A$ is $m$-dimensional, we say that such a function $f$ has \emph{controlled
+concavity of type} $(\lambda,\kappa)$ at $p\in A$, if for any $\eps>0$ there is
+$\delta>0$, such that for any collection of points $\{\tilde p,\tilde q_i\}$ in
+the \emph{model $m$-space}%
+\footnote{that is, a simply connected $m$-manifold with
+constant curvature $\kappa$.} $\Lob{m}\kappa$  satisfying 
+$$\dist{\tilde q_i}{\tilde q_j}{}> \dist{q_i}{q_j}{}-\delta\ \ \text{and}\ \  \bigl|\dist{\tilde
+p}{\tilde q_i}{}-\dist{p}{q_i}{}\bigr|<\delta \ \ \text{for all}\ \ i,j,$$ 
+we have that the function 
+$\tilde f\:\Lob{m}\kappa\to \RR$ defined by 
+$$\tilde f=\Theta(\dist[2]{\tilde q_1}{}{},\dist[2]{\tilde q_2}{}{},..,\dist[2]{\tilde
+q_n}{}{})$$
+is $(\lambda-\eps)$-concave in a small neighborhood of $\tilde p$.
+
+The following lemma states that the conrolled concavity is stronger than the usual
+concavity.
+
+\begin{thm}{Lemma} \label{contr-concave}
+Let $A\in\CBB{m}\kappa$.
+
+If a simple function 
+$$f=\Theta(\dist[2]{q_1}{}{},\dist[2]{q_2}{}{},..,\dist[2]{q_N}{}{}),\ \ f\:A\to\RR$$ 
+has a conrolled concavity type $(\lambda,\kappa)$ at each point $p\in \Omega$, then
+$f''\le \lambda$ in $\Omega$. 
+\end{thm}
+
+The proof is just a direct calculation similar to that in the proof
+of~\ref{thm:strictly-concave}. 
+Note also, that the function constructed in the proof of
+theorem~\ref{thm:strictly-concave} has controlled concavity.
+In fact from the
+same proof follows:
+
+\begin{thm}{Existence} \label{exist-control}
+Let $A\in\CBB{m}{}$, $p\in A$, $\lambda,\kappa\in\RR$.
+Then there is a function $f$ of controlled concavity $(\lambda,\kappa)$
+at $p$.
+
+Moreover, given $v\in T_p$, the function $f$ can be chosen so that its differential $d_p f(x)$ will be arbitrary close to $x\mapsto -\<v,x\>$.
+\end{thm}
+
+Since functions with a conrolled concavity are simple they admit liftings, and
+from the definition it is clear that these liftings also have controlled
+concavity of the same type.
+More precisely, we get the following.
+
+\begin{thm}{Concavity of lifting} \label{lem:lifting}
+Let $A\in\CBB{m}{}$.
+
+Assume a simple function 
+$$f\:A\to \RR,\ \ f=\Theta(\dist[2]{q_1}{}{},\dist[2]{q_2}{}{},..,\dist[2]{q_N}{}{})$$
+has controlled concavity type $(\lambda,\kappa)$ at $p$.
+
+Let $A_n\in\CBB{m}\kappa$,
+$A_n\GHto A$ (so, no collapse) and $\{p_n\},\{q_{i,n}\}\in
+A_n$ be sequences of points such that $p_n\to p\in A$ and  $q_{i,n}\to q_i\in A$
+for each $i$.
+
+Then for all large $n$, the liftings of $f$,
+$$f_n\:A_n\to \RR,\ \
+f_n=\Theta(\dist[2]{q_{1,n}}{}{},\dist[2]{q_{2,n}}{}{},..,\dist[2]{q_{N,n}}{}{})$$
+have controlled concavity type $(\lambda,\kappa)$ at $p_n$. 
+\end{thm}
+
+\section{Homotopy stability}
+
+\begin{thm}{Proposition}\label{prop:homotopy-eq}
+Let $\spc{L}_n$ be a sequence of $m$-dimensional $\CBB{}{\kappa}$ spaces.
+Assume that as $n\to\infty$, the sequence $\spc{L}_n$ converges to a compact  $m$-dimensional $\CBB{}{\kappa}$ space $\spc{L}_\infty$.
+Then $\spc{L}_n$ is homotopically equivalent to $\spc{L}_\infty$ for all large $n$.
+\end{thm}
+
+The proposition above together with compactness theorem
+implies the following.
+
+\begin{thm}{Corollary}
+Given a positive integer $m$, a  positive reals $D$ and $v$ and there finitely many homotopy types of compact $m$-dimensional manifolds with diameter at most $D$, volume at least $v$ and sectional curvature at least $-1$.
+\end{thm}
+
+\parit{Proof.}
+Assume contrary,
+that is there is a sequence of Riemannian manifolds $\spc{M}_n$ with pairwise distinct homotopy types and the curvature, diameter, volume bounds as int the formulation of corollary.
+
+By compactness theorem, 
+we can pass to a converging subsequence of $\spc{M}_n$.
+Denote by $\spc{M}_\infty$ its limit.
+
+By Proposition~\ref{prop:homotopy-eq}, $\spc{M}_n$ is homotopically equivalent to $\spc{M}_\infty$ for all large $n$,
+a contradiction.
+\qeds
+
+
+\parit{Proof of Proposition~\ref{prop:homotopy-eq}.}
+According to ??? for any point $p\in\spc{L}_\infty$ 
+one can choose a strictly concave function $f_p$ 
+which is defined in a neighborhood $\Omega\ni p$ 
+and has a maximum at $p$.
+
+We can assume that the set 
+\[K_p=\set{x\in\Omega}{f_p(x)\ge0}\] 
+forms s compact set; if not add an appropriate real number to $f_p$.
+
+Since $\spc{L}_\infty$ is compact, there is an array of points $p_1,\dots,p_n$
+such that the interiors of $K_{p_1},\dots,K_{p_n}$ cover $\spc{L}_\infty$.
+
+According to ???, each $f_p$ is a limit of strictly concave functions defined on $\spc{L}_n$.
+???
+\qeds
