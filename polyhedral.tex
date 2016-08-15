@@ -104,8 +104,9 @@ $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
 Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
 \end{thm}
 
-The spaces of paths $\alpha\:[0,1]\to\spc{U}$ also comes with the natural metric
-\[\dist{\gamma_1}{\gamma_2}{}=\sup\set{\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}}{t\in[0,1]}.\]
+Recall that \emph{path} is a curve parametrized by $[0,1]$.
+The spaces of paths in $\spc{U}$ also comes with the natural metric
+\[\dist{\alpha}{\beta}{}=\sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.\]
 
 \begin{thm}{Corollary}\label{cor:path-geod}
 Let $\spc{U}$ is a locally $\Cat{}{0}$ space than 
@@ -409,9 +410,9 @@ then $\spc{P}$ is a $\Cat{}{0}$ space.
 
 \begin{thm}{Definition}
 A simplicial complex $\mathcal{S}$ 
-is called \index{flag complex}\emph{flag} if whenever $\{v_0,\z\dots,v_\kay\}$
+is called \index{flag complex}\emph{flag} if whenever $\{v^0,\z\dots,v^\kay\}$
 is a set of distinct vertices of $\mathcal{S}$
-which are pairwise joined by edges, then the vertexes $v_0,\dots,v_\kay$
+which are pairwise joined by edges, then the vertexes $v^0,\dots,v^\kay$
 span a $\kay$-simplex in $\mathcal{S}$.
 
 If the above condition is satisfied only for $\kay=2$, 
@@ -480,14 +481,14 @@ if and only if $\tau$ is flag.
 \end{thm}
 
 \parit{Proof; ``only-if'' part.} 
-Assume there are three vertices $v_1,v_2$ and $v_3$ of $\tau$
+Assume there are three vertices $v^1,v^2$ and $v^3$ of $\tau$
 that are pairwise joined by edges 
 but do not span a simplex.
 Note that in this case 
-$$\mangle\hinge{v_1}{v_2}{v_3}=\mangle\hinge{v_2}{v_3}{v_1}=\mangle\hinge{v_3}{v_1}{v_1}=\pi.$$
+$$\mangle\hinge{v^1}{v^2}{v^3}=\mangle\hinge{v^2}{v^3}{v^1}=\mangle\hinge{v^3}{v^1}{v^1}=\pi.$$
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
-The join of the geodesics $[v_1v_2]$, $[v_2v_3]$ and $[v_3v_1]$
+The join of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
 forms a locally geodesic loop in $\spc{P}$. 
 \end{clm}
 
@@ -543,22 +544,22 @@ if $\tau$ is flag.
 
 \begin{thm}{Exercise}
 Let $\spc{U}\in \Cat{}{0}$
-and $\phi_1,\phi_2,\dots,\phi_k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
+and $\phi^1,\phi^2,\dots,\phi^k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
 that is 
 \begin{itemize}
-\item $\phi_i\circ\phi_i=\phi_i$ for each $i$;
-\item $\phi_i\circ\phi_j=\phi_j\circ\phi_i$ for any $i$ and $j$;
-\item $\dist{\phi_i(x)}{\phi_i(y)}{\spc{U}}\le \dist{x}{y}{\spc{U}}$ for each $i$ and any $x,y\in\spc{U}$.
+\item $\phi^i\circ\phi^i=\phi^i$ for each $i$;
+\item $\phi^i\circ\phi^j=\phi^j\circ\phi^i$ for any $i$ and $j$;
+\item $\dist{\phi^i(x)}{\phi^i(y)}{\spc{U}}\le \dist{x}{y}{\spc{U}}$ for each $i$ and any $x,y\in\spc{U}$.
 \end{itemize}
-Set $A_i=\Im \phi_i$ for all $i$;
-note that each $A_i$ is a weakly convex set.
+Set $A^i=\Im \phi^i$ for all $i$;
+note that each $A^i$ is a weakly convex set.
 
 Assume $\Gamma$ is a finite graph 
 (without loops and multiple edges) 
 with edges labeled by $1,2,\dots, n$.
 Denote by $\spc{U}^\Gamma$ the space obtained by taking 
 a copy of $\spc{U}$ for each vertex of $\Gamma$ and 
-gluing two such copies along $A_i$ if the corresponding vertices are joint by an edge labeled by $i$.
+gluing two such copies along $A^i$ if the corresponding vertices are joint by an edge labeled by $i$.
 
 Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space
 \end{thm}
@@ -567,8 +568,8 @@ Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space
 The following construction is given by Billera, Holmes and Vogtmann in \cite{BHV}.
 
 Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
-labeled by $a_1,\dots,a_n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a_1,\dots,a_n$ and all the other verices of degree 3 
+labeled by $a^1,\dots,a^n$.
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other verices of degree 3 
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the lengh of an edge is $0$, we assume that edge degenerates;
 such a tree can be also decribed using a different topological tree $\tau'$.
@@ -624,7 +625,7 @@ Let $\spc{S}$ be a simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its 
 Consider $\RR^N$ with the standard basis $\{e_1,\dots,e_N\}$.
 Denote by $\square^N$ the standard unit cube in $\RR^N$;
 that is 
-\[\square^N=\set{(x_1,\dots,x_n)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
+\[\square^N=\set{(x_1,\dots,x_N)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
 
 Given a $\kay$-dimensional simplex $\<v_{i_0},\dots,v_{i_\kay}\>$ in $\spc{S}$, 
 mark the $(\kay\z+1)$-dimensional faces in $\square^N$ (there are  $2^{N-\kay}$ of them)
@@ -848,26 +849,6 @@ and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$.
 
 \section{Comments}
 
-\parbf{Generalized flag condition.}
-It would be interesting to get an analog of the flag condition for other simplices 
-which (not necessary right-angled).
-Such a condition for some spherical Coxeter simplex
-could resolve the following problem; 
-see \cite{panov-petrunin} for more details. 
-
-\begin{thm}{Braid space problem}
-Consider $\CC^n$ with coordinates $z_1,z_2,\dots,z_n$.
-Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$, for all $i\ne j$,
-pass to the universal caver and consider the completion $\spc{B}_n$ 
-of the obtained space.
-
-Is it true that $\spc{B}_n$ is a $\Cat{}{0}$ space for any $n$.
-\end{thm}
-
-The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$.
-This and number of related questions are discussed in \cite{panov-petrunin:ramification}
-
-\parbf{More exotic constructions.}
 The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting thins; 
 some of them discussed in the survey \cite{davis-survey} by Michael Davis.
 
@@ -913,7 +894,7 @@ A similar construction was used by Michael Davis, Tadeusz Januszkiewicz and Jean
 to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that (1) $M$ admits a polyhedral metric which is locally $\Cat{}{0}$ but it does not admit a Riemannian metric with nonpositive sectional curvature.
 
 The construction described in this chapter also lead to so called \emph{hyperbolization}, a flexible tool to construct a aspherical spaces;
-??? is a good survey in the subject.
+\cite{charney-davis} is a good survey in the subject.
 
 
 

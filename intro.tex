@@ -1,12 +1,21 @@
 \mainmatter
-\chapter{Manifesto}
+\chapter*{Manifesto}
 
 Consider the space $\mathcal{M}_4$ of all isometry classes of 4-point metric space.
 Each element in $\mathcal{M}_4$ can be described by 6 numbers 
  --- the distances between all 6 pairs of its points, say $\ell_{i,j}$ for $1\le i< j\le 4$ modulo permutations of $(1,2,3,4)$.
 These 6 numbers is subject to 12 triangle inequalities; that is,
 \[\ell_{i,j}+\ell_{j,k}\ge \ell_{i,k}\]
-holds for all $i$, $j$ and $k$; here we assume that $\ell_{j,i}=\ell_{i,j}$ and $\ell_{i,i}=0$. 
+holds for all $i$, $j$ and $k$; here we assume that $\ell_{j,i}=\ell_{i,j}$ and $\ell_{i,i}=0$.
+
+\begin{wrapfigure}[8]{r}{53mm}
+\begin{lpic}[t(0mm),b(-0mm),r(0mm),l(0mm)]{pics/NEP(1)}
+\lbl{8,12;$\mathcal{N}_4$}
+\lbl{26,12;$\mathcal{E}_4$}
+\lbl{42,12;$\mathcal{P}_4$}
+\lbl[t]{26,0;$\mathcal{M}_4$}
+\end{lpic}
+\end{wrapfigure}
 
 Consider the subset $\mathcal{E}_4\subset \mathcal{M}_4$ of all isometry classes of metric spaces which admit an isometric embedding into Euclidean space.
 The complement $\mathcal{M}_4\backslash \mathcal{E}_4$ has two connected components.
@@ -16,24 +25,12 @@ Prove the latter statement.
 \end{thm}
 
 
-One of the component will be denoted by $\mathcal{P}_4$ and the other by $\mathcal{N}_4$,
-here $\mathcal{P}$ stays for \emph{positive} 
-and $\mathcal{N}$ stays for \emph{negative}.
-Say, assume $[x^1x^2x^3]$ is an equilateral triangle in the plane 
-and $x^4$ be the midpoint of side $[x^2x^3]$.
-Define the distances $\ell_{i,j}=\dist{x^i}{x^j}{\EE^2}$ for all $i<j$ except $\ell_{1,4}$.
-\begin{itemize}
-\item If one takes $\ell_{1,4}=\dist{x^1}{x^4}{\EE^2}$ then the obtained class of the metric space belongs to $\mathcal{E}_4$.
-\item If one takes $\ell_{1,4}$ slightly smaller than $\dist{x^1}{x^4}{\EE^2}$ then the obtained class of the metric space belongs to $\mathcal{N}_4$.
-\item If one takes $\ell_{1,4}$ slightly bigger than $\dist{x^1}{x^4}{\EE^2}$ then the obtained class of the metric space belongs to $\mathcal{P}_4$.
-\end{itemize}
-
-
+One of the component will be denoted by $\mathcal{P}_4$ and the other by $\mathcal{N}_4$.
+Here $\mathcal{P}$ and $\mathcal{N}$ stay for \emph{positive} 
+and \emph{negative curvature} because spheres have no quadrouples of type $\mathcal{N}_4$ and hyperbolic plane has no quadrouples of type $\mathcal{P}_4$.
 
 If a space with an intrinsic metric has no quadruples of points of type $\mathcal{P}_4$ or $\mathcal{N}_4$ 
 are called Alexandrov space with non-positive or non-negative curvature correspondingly.
-
-These two conditions could be understood as 4-point analog of triangle inequality.
 
 Here is an exercise, solving which would force the reader to rebuild considrable part of the theory.
 
@@ -45,14 +42,15 @@ Show that $\spc{X}$ is isometric to the convex set in a Hilbert space.
 
 In fact it would be helpful to think about this exercise for a couple of days before you proceed on reading.
 
-If instead of Euclidean space, one takes hyperbolic space,
+Instead of Euclidean space, one takes hyperbolic space,
 one arrives to the definition of spaces with curvature bounded above or below by $-1$.
-To define spaces with curvature bounded above or below by $1$
-One has to take unit 3-dimesional sphere instead,
+To define spaces with curvature bounded above or below by $1$,
+one has to take unit 3-dimesional sphere instead,
 and allow to check only quadrouples of points such that each of the 4 triangles has perimeter at most $2\cdot\pi$.
 The later condition could be thought as a part of \emph{spherical triangle inequality}.
 
 \medskip
+\noindent\rule{2cm}{0.4pt}
 
 These lectures were a part of the mini-course in Summer School ``Algebra and Geometry'' held on 25--31 June 2016 in Yaroslavl, Russia.
 
