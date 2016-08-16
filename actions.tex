@@ -9,10 +9,10 @@ A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies
 \emph{(1+3)-point $\kappa$-comparison}%
 \index{(1+3)-point $\kappa$-comparison} 
 if 
-\[\angk\kappa p{x^1}{x^2}
-+\angk\kappa p{x^2}{x^3}
-+\angk\kappa p{x^3}{x^1}\le 2\cdot\pi.\eqlbl{Yup-kappa}\]
-or at least one of the model angles $\angk\kappa p{x^i}{x^j}$ is not defined.
+\[\angk p{x^1}{x^2}
++\angk p{x^2}{x^3}
++\angk p{x^3}{x^1}\le 2\cdot\pi.\eqlbl{Yup-kappa}\]
+or at least one of the model angles $\angk p{x^i}{x^j}$ is not defined.
 \end{thm}
 
 \begin{thm}{Definition}
@@ -29,9 +29,10 @@ We say that $\spc{L}$ an Alexandrov space with curvature bounded below
 \parbf{Remarks} 
 \begin{itemize}
 \item Alexandrov spaces with curvature bounded below usually will be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
-\item In the definition of spaces with curvature $\ge\kappa$, when $\kappa>0$ most authors assume in addition that $\diam \spc{L}\le \varpi\kappa$, or equivalently, that $\spc{L}$ is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
-\item If $\kappa<\Kappa$, then any  $\CBB{}{\kappa}$ space  is a $\CBB{}{\Kappa}$ space.
-However, in the case $\Kappa>0$ it is not at all trivial, and will be shown only in \ref{cor:CAT>k-sence}.
+\item In the definition of spaces with curvature $\ge1$, 
+most authors assume in addition that $\diam \spc{L}\le \pi$. 
+We do not make this assumption. 
+In particular, we consider the real line to have curvature $\ge 1$.
 \end{itemize}
 
 \begin{thm}{Exercise}
@@ -39,9 +40,9 @@ Let $\spc{L}$ be a length space.
 Show that $\spc{L}$ is a $\CBB{}0$ space
 if and only if 
 \[
-\area\modtrig0(xyz)
+\area\modtrig(xyz))_{\EE^2}
 \le
-\area\modtrig0(pxy)+\area\modtrig0(pyz)+\area\modtrig0(pzx)
+\area\modtrig(pxy)_{\EE^2}+\area\modtrig(pyz)_{\EE^2}+\area\modtrig(pzx)_{\EE^2}
 \]
 for any 4 distinct points $p,x,y,z\in\spc{L}$.
 \end{thm}
@@ -73,30 +74,32 @@ Note that
 \dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
 for all $i$ and $j$.
 Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
-\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
+\[\angk {\hat{p}}{\hat{x}^1}{\hat{x}^2}
 <
-\angk\kappa p{x^1}{x^2}+\eps
+\angk p{x^1}{x^2}+\eps
 \eqlbl{eq:angles-M-L}\]
 holds for all $i$ and $j$.
 
 By (1+3)-point comparison in $\spc{L}$,
 we have
-\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
-+\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
-+\angk\kappa {\hat{p}}{\hat{x}^3}{\hat{x}^1}
+\[\angk {\hat{p}}{\hat{x}^1}{\hat{x}^2}
++\angk {\hat{p}}{\hat{x}^2}{\hat{x}^3}
++\angk {\hat{p}}{\hat{x}^3}{\hat{x}^1}
 \le 
 2\cdot\pi\]
 assuming all the angles on the left hand side are defined.
 Applying  \ref{eq:angles-M-L}, 
 we get 
-\[\angk\kappa p{x^1}{x^2}
-+\angk\kappa p{x^2}{x^3}
-+\angk\kappa p{x^3}{x^1}< 2\cdot\pi+3\cdot\eps.\]
+\[\angk p{x^1}{x^2}
++\angk p{x^2}{x^3}
++\angk p{x^3}{x^1}
+< 
+2\cdot\pi+3\cdot\eps.\]
 
 Since $\eps>0$ is arbitrary we have 
-\[\angk\kappa p{x^1}{x^2}
-+\angk\kappa p{x^2}{x^3}
-+\angk\kappa p{x^3}{x^1}\le 2\cdot\pi;\]
+\[\angk p{x^1}{x^2}
++\angk p{x^2}{x^3}
++\angk p{x^3}{x^1}\le 2\cdot\pi;\]
 that is,
 the (1+3)-point $\kappa$-comparison holds in $\spc{M}$.
 It remains to apply Proposition~\ref{prop:submet-length}.
@@ -155,7 +158,7 @@ From comparison we have that $\vol(\map_\alpha \spc{L})\ge\alpha^m\vol \spc{L}$.
 For any $x\in \spc{L}$ and all $\alpha<\tfrac{1}{2}$ we have $\map_\alpha x\in V_i$.
 Assume $x'=\map_\alpha x\notin V_i$,
 then threre is $p_j$ such that $\dist{p_i}{x'}{}\ge\dist{p_j}{x'}{}$.
-Then from comparison, we have $\angk0{p_j}{p_i}{x}>\tfrac\pi2$;
+Then from comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
 that is, $p_j$ does not form a one-point extremal set.???
 \qeds
 
@@ -212,7 +215,8 @@ $\left(\begin{smallmatrix}
 v&0\\0&w
 \end{smallmatrix}\right)$.
 Note that $[0,\tfrac\pi2]\iso\SS^3/\TT^2$
-and $\Sigma_w$ is isometric to the warped product $\SS^1\times_{f_{p,q}}[0,\tfrac\pi2]$ (compare with Exercise~\ref{ex:chohom-1=warped-product}).
+and $\Sigma_w$ is isometric to the warped product $\SS^1\times_{f_{p,q}}[0,\tfrac\pi2]$ 
+(compare with Exercise~\ref{ex:chohom-1=warped-product}).
 Let us compute the warping function $f_{p,q}$. 
 If $t\in [0,\tfrac\pi2]$
 is the projection of $x\in \SS^3$

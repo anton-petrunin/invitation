@@ -1,0 +1,137 @@
+\chapter*{Semisolutions}
+\parbf{Exercise~\ref{ex:two-components-of-M4}.}
+\parbf{Exercise~\ref{ex:convex-set}.}
+\parbf{Exercise~\ref{ex:product-cone}.}
+\parbf{Exercise~\ref{ex:no-geod}.}
+Given a metric graph $\Gamma$ define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$ substitute the edge $[pq]$ by  a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with an inner metric. 
+
+Let $\spc{X}_0=[0,1]$ and define $\spc{X}_k$ for $k\ge 1$ inductively as $\spc{X}_k=P_k(\spc{X}_{k-1})$.
+
+Let $\spc{Y}_k$ be the set of vertices of $\spc{X}_k$ with the induced metric. By construction the inclusion $\spc{Y}_k\subset \spc{Y}_{k+1}$ is distance preserving.
+
+Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\spc{Y}=\bar {\spc{Y}}_\infty$ be its metric completion. Then $\spc{Y}$ is a length space since it satisfies the almost midpoint property. But it is not hard to see that no two distinct points in $\spc{Y}$ can be connected by a shortest geodesic. \qeds
+
+AN OTHER SOLUTION from here http://mathoverflow.net/q/15720
+if we want it, I can ask fedya.???
+
+Well, the unit ball in $c_0$ is almost what you want (there is no unique shortest curve between points). 
+All we need now is to enhance "bypasses" and to give disadvantage to "straight lines". 
+This can easily be done by taking the distance element to be \[(2+\sum_n 2^{-n}x_n)^{-1}\|dx\|_\infty,\] 
+which is never less than the usual distance element in $c_0$ and never greater than 3 times it in the unit ball. Now, if we have any continuous finite length curve $x(t)$ from $y$ to $z$ parametrized by the arclength, we can easily shorten it by replacing the $m$-th position by the maximum of the actual value of $x_m(t)$ and 
+\[y_m+t(z_m-y_m)/d+\frac 12 \min(t,d-t),\] 
+where $d$ is the length of $x(t)$, which will work if $m$ is large enough since $\max_t|x_m(t)|\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.
+
+\parbf{Exercise~\ref{exercise from BH}.}The following example is from~\cite{BH}.
+
+Consider the following subset of $\R^2$:
+
+\[
+\spc{X}=(0,1]\times\{0\}\cup (0,1]\times\{1\}\cup_{n\ge 1}\{1/n\}\times[0,1]
+\]
+Consider the induced inner metric on $\spc{X}$. It's obviously locally compact and geodesic.
+However, it's immediate to check that its metric completion $\bar{\spc{X}}=[0,1]\times\{0\}\cup [0,1]\times\{1\}\cup_{n\ge 1}\{1/n\}\times[0,1]$ is neither. \qeds 
+
+\parbf{Exercise~\ref{ex:adjacent-angles}.}
+\parbf{Exercise~\ref{ex:geod-CBB}.}
+\parbf{Exercise~\ref{ex:geod-CBA}.}
+\parbf{Exercise~\ref{exr-crofton}.}
+Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
+By approximation it's clearly enough to prove this for  smooth curves of length $< 2\pi$ with transverse self-intersections. Furthermore, by changing such  a curve near its self-intersection points  it can be approximated with respect to the Hausdorff distance by simple closed curves. 
+Thus, without loss of generality we can assume that $\alpha$ is a simple closed curve of length $<2\pi$.
+By Crofton's formula we have that
+\[
+L(\alpha)=\frac 1 4 \int _{\SS^2}\#(\alpha\cap v^\perp) \d_v\vol_2
+\]
+
+Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. By the intermediate value theorem the same holds true if $\#(\alpha\cap v^\perp) =1$.
+Suppose  $\#(\alpha\cap v^\perp) \ge 2$ for all $v\in\SS^2$. Then Crofton's formula implies that
+$L(\alpha)\ge \frac 1 4 \int_{\SS^2}2=2\pi$. \qeds
+
+\parbf{Exercise~\ref{ex:cone+susp}.}
+\parbf{Exercise~\ref{ex:product}.}
+\parbf{Exercise~\ref{ex:short-map}.}
+\parbf{Exercise~\ref{ex:ruled-surface}.}
+\parbf{Exercise~\ref{ex:convex-balls}.}
+\parbf{Exercise~\ref{ex:closest-point}.}
+\parbf{Exercise~\ref{ex:two-rays}.}
+\parbf{Exercise~\ref{ex:branching-cover}.}
+\parbf{Exercise~\ref{ex:supporting-planes}.}
+\parbf{Exercise~\ref{ex:compact-walls}.}
+\parbf{Exercise~\ref{ex:centrally-simmetric-walls}.}
+\parbf{Exercise~\ref{ex:null-homotopic}.}
+\parbf{``If'' part of Theorem~\ref{thm:PL-CAT}.}
+\parbf{Exercise~\ref{ex:unique-geod=CAT}.}
+\parbf{Exercise~\ref{ex:baricenric-flag}.}
+\parbf{Exercise~\ref{ex:flag>=pi/2}.}
+\parbf{Exercise~\ref{ex:short-retracts}.}
+\parbf{Exercise~\ref{ex:tree}.}
+\parbf{Exercise~\ref{ex:flag-aspherical}.}
+\parbf{Exercise~\ref{ex:example-pi_infty-new}.}
+\parbf{Exercise~\ref{ex:funny-S}.}
+In the proof we apply the following lemma from \cite{edwards}; 
+it follows from the disjoint discs property.
+
+
+\begin{thm}{Lemma}\label{lem:homomanifold-characterization}
+Let $\spc{S}$ be a simplicial complex which 
+is an $m$-dimensional homology manifold for some $m\ge 5$.
+Assume all the vertices of
+$\spc{S}$ have simply connected links.
+Then $\spc{S}$ is a topological manifold.
+\end{thm}
+
+
+It is sufficient to construct a simplicial complex $\spc{S}$
+such that 
+\begin{itemize}
+\item $\spc{S}$ is a closed $(m-1)$-dimensional homology manifold;
+\item $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$;
+\item $\spc{S}\sim \mathbb{S}^{m-1}$; that is, $\spc{S}$ is homotopy equivalent to $\mathbb{S}^{m-1}$.
+\end{itemize}
+
+Indeed, assume such $\spc{S}$ is constructed.
+Then the suspension
+$\spc{R}\z=\Susp\spc{S}$
+is an $m$-dimensional homology manifold with a natural triangulation coming from $\spc{S}$.
+By Lemma~\ref{lem:homomanifold-characterization},
+$\spc{R}$ is a topological manifold.
+According to generalized Poincar\'{e} conjecture,
+$\spc{R}\simeq\mathbb{S}^m$;
+that is
+$\spc{R}$ is homeomorphic to $\mathbb{S}^m$.
+Since $\Cone \spc{S}\simeq \spc{R}\backslash\{s\}$ where $s$ denotes a south pole of the suspension 
+and $\EE^m\simeq \mathbb{S}^m\backslash\{p\}$
+for any point $p\in \mathbb{S}^m$
+we get 
+\[\Cone \spc{S}\simeq\EE^m.\]
+
+Let us construct $\spc{S}$.
+Fix an $(m-2)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
+According to \cite{kervaire} %it is a good readable paper, but I am sure the existance follows from sometheng written before
+an example of that type exists for any $m\ge 5$.
+
+Remove from $\Sigma$ one $(m-2)$-simplex.
+Denote the obtained complex by $\Sigma'$.
+Since $m\ge 5$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
+
+Consider the product $\Sigma'\times [0,1]$. 
+Attach to it the cone over its boundary $\partial (\Sigma'\times [0,1])$.
+Denote by $\spc{S}$ the obtained simplicial complex
+and by $v$ the tip of the attached cone.
+
+Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$ which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
+  Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
+
+The complement $\spc{S}\backslash\{v\}$ is homotopy equivalent to $\Sigma'$.
+Therefore 
+\[
+\pi_1(\spc{S}\backslash\{v\})
+=\pi_1\Sigma'
+=\pi_1\Sigma\ne 0.
+\]
+That is, $\spc{S}$ satisfies the conditions above.
+\parbf{Exercise~\ref{ex:concave-triangle}.}
+\parbf{Exercise~\ref{ex:bishop-sphere}.}
+\parbf{Exercise~\ref{ex:two-planes}.}
+\parbf{Exercise~\ref{ex:CAT=>two-convex}.}
+\parbf{Exercise~\ref{ex:two-convex-not-a-CAT}.}

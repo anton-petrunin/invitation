@@ -1,5 +1,13 @@
 \chapter{Globalization and asphericity}
 
+In this chapter we introduce locally $\Cat[0]$ spaces and show that universal cover of locally $\Cat[0]$ space forms a $\Cat[0]$ space. 
+The latter implies that any locally $\Cat[0]$ space is aspherical; 
+that is its universal cover is contractible.
+This observation is used to construct exotic aspherical manifolds.
+
+
+\section{Locally CAT spaces}
+
 We say that space $\spc{U}$ is locally $\Cat{}{0}$ (or locally $\Cat{}{1}$) if
 a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$ (or correspondingly $\Cat{}{1}$ space).
 These definition are equivalent to saying that each point $p$ admits an open neighborhood $\Omega$
@@ -18,7 +26,7 @@ This toy set can be used to produce examples of exotic aspherical spaces.
 \section{Space of local geodesics}\label{sec:geod-space}
 
 In this section we will study behavior of local geodesics in the locally $\Cat{}{}$  spaces.  
-The proved statements will be used in the proof of the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}).
+The proved statements will be used in the proof of Globalization theorem (\ref{thm:hadamard-cartan}).
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
 Let $\spc{U}$ be a locally $\Cat{}{0}$ or locally $\Cat{}{1}$ space.
@@ -116,6 +124,23 @@ Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ space than
 for any path $\alpha$ with length less than $\pi$ 
 there is a choice of local geodesic path $\gamma$ with length less than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma$ is continuous and if $\alpha$ is a local geodesic path then $\gamma=\alpha$.
 \end{thm}
+
+Given a path $\alpha\:[0,1]\to\spc{U}$,
+we denote by $\bar\alpha$ the same path traveled in the opposite direction;
+that is,
+\[\bar\alpha(t)=\alpha(1-t).\]
+Joint of two paths will be denoted with ``$*$'';
+if two paths $\alpha$ and $\beta$ connect the same pair of points then the joint $\bar\alpha*\beta$ forms a closed curve.
+
+\begin{thm}{Exercise}\label{ex:null-homotopic}
+Assume $\spc{U}$ is a locally $\Cat{}{1}$ space and the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary \ref{cor:path-geod}.
+
+Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$,
+each has lengths less than $\pi$ 
+and the joint 
+$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$ then $\gamma_\alpha=\gamma_\beta$.
+\end{thm}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -239,25 +264,8 @@ It remains to apply the patchwork globalization theorem (\ref{thm:alex-patch}).
 
 \parit{$\Cat{}{1}$ case.}
 The proof goes along the same lines, 
-but one has to be more careful with the condition on the paths $\alpha$ and $\beta$ which guarantee $\gamma_\alpha=\gamma_\beta$.
+but one one need to use Exercise~\ref{ex:null-homotopic}. \qeds
 
-Given a path $\alpha\:[0,1]\to\spc{U}$,
-we denote by $\bar\alpha$ the same path traveled in the opposite direction;
-that is,
-\[\bar\alpha(t)=\alpha(1-t).\]
-Joint of two paths will be denoted with ``$*$'';
-if two paths $\alpha$ and $\beta$ connect the same pair of points then the joint $\bar\alpha*\beta$ forms a closed curve.
-
-Assume $\spc{U}$ is a locally $\Cat{}{1}$ space.
-Given two paths $\alpha$ and $\beta$ in $\spc{U}$ with lengths less than $\pi$,
-one needs to show the following:
-\begin{clm}{}
-If the joint 
-$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$ then $\gamma_\alpha=\gamma_\beta$.
-\end{clm}
-
-The proof of the claim is straightforward and left to the reader.
-\qeds
 
 \section{Polyhedral spaces}
 
@@ -375,19 +383,21 @@ The $\Cat{}{1}$ is analogous, one only has to consider the homotopy class of clo
 
 
 \parit{Proof of Theorem~\ref{thm:PL-CAT}.}
-Let us apply induction on $\dim\spc{P}$.
+We prove ``only if'' part and leave ``if'' part as an exercise.
+
+We apply induction on $\dim\spc{P}$.
 The base case $\dim\spc{P}=0$ is evident.
+Let us start with $\Cat{}{1}$ case.
 
 \parit{Step.}
 Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
 
-We will only give a proof of the ``if" direction.
 
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
-is isometric to the $\kappa$-cone over 
+is isometric to the neighborhood of the north pole in the suspension over 
 the $\Sigma_p$.
-By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
+By the second part of Exercise~\ref{ex:cone+susp} 
 it is sufficient to show that 
 \[\Sigma_p\in \Cat{}1.
 \eqlbl{eq:Sigma-in-CAT(1)}\]
@@ -397,9 +407,11 @@ and its  links are isometric to  links of $\spc{P}$.
 By the  induction hypothesis, $\Sigma_p$ is $\Cat{}{1}$.
 Applying Grolbalization (\ref{thm:hadamard-cartan}),
 we get the statement.
+
+The $\Cat{}{0}$ case is different only in the last step, where we need to use the first part of Exercise~\ref{ex:cone+susp}.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:unique-geod=CAT}
 Show that if in a polyhedral space $\spc{P}$
 any two points can be connected by a unique geodesic 
 then $\spc{P}$ is a $\Cat{}{0}$ space.
@@ -493,7 +505,7 @@ forms a locally geodesic loop in $\spc{P}$.
 \end{clm}
 
 Now assume that $\spc{P}$ is a $\Cat{}{1}$ space.
-Then by \ref{thm:warp-curv-bound:cbb:a},
+Then by Theorem~\ref{thm:PL-CAT},
 $\Link_\sigma\spc{P}$ is a $\Cat{}{1}$ space for every simplex $\sigma$ 
 in $\tau$. 
 
@@ -535,14 +547,14 @@ The same argument as above shows that $\gamma$ spends time $\pi$ on every visit 
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:flag>=pi/2}
 Assume that a spherical polyhedral space $\spc{P}$
 admits a triangulation $\tau$ such that all dihedral angles of all simplexes are at least $\tfrac\pi2$.
 Show that $\spc{P}$ is a $\Cat{}{1}$ space
 if $\tau$ is flag.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:short-retracts}
 Let $\spc{U}\in \Cat{}{0}$
 and $\phi^1,\phi^2,\dots,\phi^k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
 that is 
@@ -576,7 +588,7 @@ such a tree can be also decribed using a different topological tree $\tau'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with a convex closed cone in  $\mathbb{R}^{2\cdot n-3}$.
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the legth metric on $\spc{T}_n$ induced by these metrics.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:tree}
 Show that $\spc{T}_n$ with the described metric is a $\Cat{}0$ space.
 \end{thm}
 
@@ -661,10 +673,10 @@ from the construction above.
 If ${\spc{S}}$ is flag, 
 then by Flag condition (\ref{thm:flag}) 
 the link of any cube in $\spc{Q}$ is a $\Cat{}{1}$ space.
-Therefore, by cone construction (\ref{thm:warp-curv-bound:cbb:a})
+Therefore, by cone construction (Exercise \ref{ex:cone+susp})
 $\spc{Q}$
 is locally $\Cat{}{0}$ space.
-It remains to apply Hadamard--Cartan theorem 
+It remains to apply Globalization theorem 
 \ref{thm:hadamard-cartan}.
 \qeds
 
@@ -673,7 +685,7 @@ it follows that the cubical analog
 of any flag complex is aspherical.
 The following exercise states that the  converse also holds, see \cite[5.4]{davis-survey}.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:flag-aspherical}
 A simplicial complex is flag 
 if and only if its cubical analog is aspherical.
 \end{thm}
@@ -681,7 +693,7 @@ if and only if its cubical analog is aspherical.
 \section{Exotic aspherical manifolds}
 
 
-By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan})
+By Globalization theorem (\ref{thm:hadamard-cartan})
 any $\Cat{}{0}$ space is contractible.
 Therefore any complete locally $\Cat{}{0}$ space 
 is \emph{aspherical};
@@ -882,7 +894,7 @@ and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 
 
 It worth to note that any complete simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
-In fact by Hadamard--Cartan theorem
+In fact by Globalization theorem
 (\ref{thm:hadamard-cartan}), 
 the exponential map at one point of such manifold is a homeomorphism.
 In particular there is no Riemannian analog of the proposition.

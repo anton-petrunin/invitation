@@ -5,8 +5,7 @@ In this chapter we define $\Cat{}{}$ spaces and give the first application to th
 
 \section{Thin triangles} \label{sec:thin-triangle}
 
-Here we introduce the notion of thin triangles and
-use it to define of $\Cat{}{}$ spaces. 
+
 The inheritance lemma \ref{lem:inherit-angle} proved below 
 plays the central role in the theory;
 it will lead to two fundamental constructions: patchwork globalization  (\ref{thm:alex-patch}) 
@@ -50,7 +49,7 @@ while $\Cat{}{1}$ spaces will play a role only in due to the following statement
 
 The cone and suspension are defined in Section \ref{sec:constructions}.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:cone+susp}
 Let $\spc{V}$ be a space and $\spc{U}=\Cone\spc{V}$.
 Show that $\spc{U}$ is a $\Cat{}{0}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 
@@ -60,7 +59,7 @@ $\spc{U}$ is a $\Cat{}{1}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 
 The following exercise is bit simpler, but can be proved essentially the same way.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:product}
 Assume $\spc{U}$ and $\spc{V}$ are $\Cat{}{0}$ spaces.
 Show that the product space $\spc{U}\times\spc{V}$ is $\Cat{}{0}$.
 \end{thm}
@@ -72,7 +71,8 @@ In a $\Cat{}{0}$ space, pairs of points are joined by unique geodesics, and thes
 Analogously, in a $\Cat{}{1}$ space, pairs of points on distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
-\parit{Proof.} Given 4 points $p^1,p^2,q^1,q^2$ in a $\Cat{}{0}$ space $\spc{U}$, 
+\parit{Proof.} 
+Given 4 points $p^1,p^2,q^1,q^2$ in a $\Cat{}{0}$ space $\spc{U}$, 
 consider two triangles $\trig{p^1}{q^1}{p^2}$ and $\trig{p^2}{q^2}{q^1}$.
 Since both these triangles are thin, we get 
 \begin{align*}
@@ -138,8 +138,8 @@ Analogously, if $\trig p x y$ has perimeter $<2\cdot\varpi\kappa$ and both trian
 \end{thm} 
 
 \parit{Proof.}
-Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig\kappa(p x z)$ 
-and $\trig {\dot p} {\dot y} {\dot z}=\modtrig\kappa(p y z)$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
+Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
+and $\trig {\dot p} {\dot y} {\dot z}=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
 \begin{wrapfigure}{r}{28mm}
 \begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/cat-monoton-ineq(0.45)}
@@ -152,12 +152,12 @@ and $\trig {\dot p} {\dot y} {\dot z}=\modtrig\kappa(p y z)$ so that $\dot x$ an
 \end{wrapfigure}
 
 Let us show that 
-\[\angk{}{z}{p}{x}+\angk{}{z}{p}{y}
+\[\angk{z}{p}{x}+\angk{z}{p}{y}
 \ge
 \pi.
 \eqlbl{eq:<+<>=pi}\]
 Suppose contrary, that is
-\[\angk{}{z}{p}{x}+\angk{}{z}{p}{y}
+\[\angk{z}{p}{x}+\angk{z}{p}{y}
 <
 \pi.\]
 Then for some point $\dot w\in[\dot p\dot z]$, we have \[\dist{\dot x}{\dot w}{}+\dist{\dot w}{\dot y}{}
@@ -183,7 +183,7 @@ in such a way that
 \~y&\mapsto \dot y.
 \end{align*}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:short-map}
 Prove the last statement. 
 \end{thm}
 
@@ -198,21 +198,35 @@ Recall that a surface formed by one parameter family of line segments is called 
 that is, it admits a parametrization $f(u,v)=a(u)+b(u)\cdot v$.
 The following Exercise is a classical theorem prved by  Alexandrov in \cite{alexandrov:ruled}.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:ruled-surface}
 Show that any Lipschitz ruled surface in the Euclidean space 
 equipped with induced length metric forms a $\Cat{}{0}$ space.
 \end{thm}
 
 Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\Omega\ni p$ such that any geodesic with the ends in $A$ which lie in $\Omega$ lies in $A$. 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:convex-balls}
 Any ball in a $\Cat{}{0}$ space forms a convex set.
 
 Analogousely, any ball in a $\Cat{}{1}$ space of radius $R<\tfrac\pi2$ forms a convex set.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:locally-convex}
 Show that in any $\Cat{}{0}$ space any closed locally convex set is convex.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:closest-point}
+Let  $\spc{U}\in\Cat{}0$ and $K\subset \spc{U}$ be a closed convex set.
+Show that 
+
+\begin{subthm}{}
+For each point $p\in \spc{U}$ there is unique point $p^*\in K$ which minimize the distance $\dist{p}{p^*}{}$.
+\end{subthm}
+
+\begin{subthm}{}
+The defined closest-point projection $p\mapsto p^*$ is short. 
+\end{subthm}
+
 \end{thm}
 
 
@@ -293,7 +307,7 @@ we get that $\trig {x^0}{x^1}{z^2}$
 and consequently $\trig {x^0}{x^1}{x^2}$ is thin.
 \qeds 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:two-rays}
 Let $Q$ be the nonconvex subset of the plane 
 bounded by two rays $\tilde\gamma^1$ and $\tilde\gamma^2$
 with common starting point and angle $\alpha$ between them.
@@ -303,7 +317,8 @@ starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\Cat{}{0}$ space.
 \end{thm}
 
-\begin{thm}{Exercise} Let $\spc{U}$ be a $\Cat{}{0}$ space.
+\begin{thm}{Exercise}\label{ex:branching-cover} 
+Let $\spc{U}$ be a $\Cat{}{0}$ space.
 Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
 Show that $\tilde{\spc{U}}$ is a $\Cat{}{0}$ space.
 \end{thm}
@@ -431,9 +446,15 @@ It remains to apply Proposition~\ref{prop:A-check-A}.
 
 %???PIC
 
+Let $X$ be a convex set in a Euclidean space.
+By a \emph{dihedral angle} we understand an intersection of two half-spaces;
+the intersection of corresponding hyperplanes is called the \emph{edge} of the angle.
+We say that a dihedral angle $D$ is supporting $X$ at point $p\in X$ 
+if $D$ contains $X$ and the edge of $D$ contains $p$.
+
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
 Let $A$ and $B$ be two convex sets in $\EE^m$.
-Assume that any dihedral angle containing $A\cap B$ with the edge passing through $A\cap B$ has measure at least $\alpha$.
+Assume that any dihedral angle supporting $A\cap B$ at some point has measure at least $\alpha$.
 Then the Reshetnyak's puff pastry for the array
 \[(\underbrace{A,B,A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
 is end-to-end convex. 
@@ -496,16 +517,16 @@ Proposition~\ref{prop:A-check-A} together with Observation~\ref{obs:end-to-end-c
 imply \ref{clm:z in xy} in  case $z$ lies in the interior of $A$.
 The same way we can treat the case, $z$ lies in the interior of $B$.
 
-The following claim is an exercise in convex geometry, whose proof we leave to the reader.
+Further we will use the following exercise in convex geometry
 
-\begin{clm}{}
+\begin{thm}{Exercise}\label{ex:supporting-planes}
 There are half-spaces $\dot A$ and $\dot B$ such that
 $\dot A\supset A$ and $\dot B\supset B$
 and 
 \[\dist{x}{z}{}+\dist{y}{z}{}\] 
 takes minimal value
 for all $z\in \dot A\cap \dot B$.
-\end{clm}
+\end{thm}
 
 \begin{wrapfigure}{r}{35mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
@@ -636,7 +657,7 @@ the set $A$ contains a small right circular cone
 with tip at $p$ and aperture $\eps$.
 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:compact-walls}
 Assume that the walls
 of billiard table $T$ 
 are compact, convex and have a common  interior point.

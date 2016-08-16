@@ -1,9 +1,8 @@
 %%!TEX root = the-examples.tex
 \chapter{Subsets}
 
-This chapter provides some conditions on a subset of Euclidean space which guarantee that the subset equipped with the induced length-metric forms a $\Cat{}{0}$ space.
-In this chapter might help to understand what inner live in Alexandrov geometry is like.
-
+In this chapter we give a partial answer to the following question.
+\emph{Which subset of Euclidean space equipped with the induced length-metric form $\Cat{}{0}$ spaces?}
 
 \section{Motivating examples}
 
@@ -27,8 +26,8 @@ The answers is given below, but it is instructive to think about this question b
 
 \parbf{$\bm{A}$.} No, $A\notin \Cat{}{0}$.
  
-The boundary $\partial A$ is the parabolid described by  $z=x^2+y^2$ in particular it bounds an open convex set in $\EE^3$ which complement is $A$.
-The closest point projection of $A\to\partial A$ is short (see \ref{lem:closest point}).
+The boundary $\partial A$ is the paraboloid described by  $z=x^2+y^2$ in particular it bounds an open convex set in $\EE^3$ which complement is $A$.
+The closest point projection of $A\to\partial A$ is short (Exercise~\ref{ex:closest-point}).
 It follows that $\partial A$ is a convex set in $A$ equipped with the induced length metric.
 
 Therefore if $A$ forms a $\Cat{}{0}$ then so is $\partial A$.
@@ -206,7 +205,7 @@ In particular $\Delta \subset K$, a contradiction.
 
 \parit{``If'' part.}
 Since $K$ is simply connected,
-by Cartan--Hadamard theorem \ref{thm:hadamard-cartan}, 
+by Globalization theorem \ref{thm:hadamard-cartan}, 
 it is sufficient to show that $\curv_p K\le 0$ at any point $p\in K$.
 
 If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$; 
@@ -319,12 +318,6 @@ Therefore $\curv_pK\le 0$.
 The following $\CBB{}{}$-analog of the above theorem; 
 its proof is simpler.
 
-\begin{thm}{Exercise}\label{ex:set-with-smooth-bry:CBB}
-Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
-Assume that the $\Int K$ is dense in $K$.
-Show that 
-$K\in \CBB{}{0}$ if and only if $K$ is convex. 
-\end{thm}
 
 \section{Open sets of Euclidean plane}
 
@@ -368,9 +361,15 @@ that is the sides $[xy]$, $[yz]$ and $[zx]$ intersect each other only at the com
 If this is not the case, chopping the overlapping part of sides reduces to the injective case.
 
 Again, the open region, say $\Delta$, bounded by the image of $[xyz]$  has concave sides, otherwise one could shorten the sides by pushing them into $\Omega$.
-It remains to show that any triangle with concave sides is thin.
-The latter is left to the reader.
+It remains to solve the exercise below.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:concave-triangle}
+Assume $\Delta$ is a solid plane triangle with concave sides.
+Show that $\Delta$ equipped with induced intrinsic metric is thin.
+\end{thm}
+
+
 
 Here is a spherical analog of above lemma;
 which can be proved along the same lines.
@@ -532,14 +531,17 @@ Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ ext
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
 denote by $p$ the image of $\tilde p$ in $K$.
-By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) it is sufficient to show that 
-\[\curv_{\tilde p}\tilde K\le 0.
-\eqlbl{eq:curv=<0}\]
+By Globalization theorem (\ref{thm:hadamard-cartan}) it is sufficient to show that 
 
-Recall that $\Sigma_{\tilde p}\tilde K$ denotes the space of directions at $\tilde p$.
+\begin{clm}{}\label{eq:curv=<0}
+A small neighborhood of $\tilde p$ in $\tilde K$ forms a $\Cat{}{0}$ space.
+\end{clm}
+
+Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at $\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
 isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
-By Theorem~\ref{thm:warp-curv-bound:cbb:S}, \ref{eq:curv=<0} follows if 
+By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows if 
+
 \begin{clm}{}\label{eq:curv=<1}
 $\Sigma_{\tilde p}$ is a $\Cat{}{0}$ space.
 \end{clm}
@@ -556,7 +558,7 @@ Any closed curve in $\tilde\Theta$ of length less than $2\cdot\pi$ is contactabl
 \end{clm}
 
 
-Consider a colsed curve $\tilde \gamma$ of length $<2\cdot\pi$ in $\tilde\Theta$.
+Consider a closed curve $\tilde \gamma$ of length $<2\cdot\pi$ in $\tilde\Theta$.
 Its projection $\gamma$ in $\Theta\subset\SS^2$ has the same length.
 Therefore by Hemisphere lemma~\ref{lem:hemisphere}, $\gamma$ lies in an open hemisphere.
 Then for a plane $\Pi$ close to $p$,
@@ -666,7 +668,7 @@ and the remaing part is locally concave.
 It remains to show that (1) and (2) imply that $\partial\Omega'$
 is piecewise linear.
 
-The proof of the last statement is left to the reader.%???MORE???
+The proof of the last statement is left to the reader.%???MORE, EXERECISE???
 \qeds
 
 \parit{Proof of \ref{thm:shefel}.}
@@ -706,7 +708,7 @@ we get that (2+2)-comparison holds in $\Omega$ for $x^1,x^2,x^3,x^4$.
 The statement follows since the quadruple $x^1,x^2,x^3,x^4\in\Omega$ is arbitrary.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:CAT=>two-convex}
 Assume $K\subset\EE^m$ is a closed set bounded by a Lipschitz hypersurface.
 Equip $K$ with the induced length metric.
 Show that if $K\in \Cat{}{0}$ then $K$ is two-convex.
@@ -716,7 +718,7 @@ The following exercise is analogous to Exercise~\ref{ex:two-planes}.
 It provides a counterexample to the analog of Corollary~\ref{cor:shefel} in higher dimensions.
 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:two-convex-not-a-CAT}
 Let $K=W\cap W'$, where 
 \[W=\set{(x,y,z,t)\in \EE^4}{z\ge -x^2-y^2}\]
 and $W'=\iota(W)$ for some motion $\iota\:\EE^4\to\EE^4$.
