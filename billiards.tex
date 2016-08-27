@@ -3,6 +3,8 @@
 
 In this chapter we define $\Cat{}{}$ spaces and give the first application to the billiards.
 
+%%%???MAYBE WE SHOULD ADD A SHORT SECTION ON 4-POINT CONDITION.
+
 \section{Thin triangles} \label{sec:thin-triangle}
 
 
@@ -194,15 +196,6 @@ By composition,  the natural map from $\trig{\~ p}{\~ x}{\~ y}$ to $\trig p y z$
 The spherical case is done along the same lines.
 \qeds
 
-Recall that a surface formed by one parameter family of line segments is called \emph{ruled surface};
-that is, it admits a parametrization $f(u,v)=a(u)+b(u)\cdot v$.
-The following Exercise is a classical theorem prved by  Alexandrov in \cite{alexandrov:ruled}.
-
-\begin{thm}{Exercise}\label{ex:ruled-surface}
-Show that any Lipschitz ruled surface in the Euclidean space 
-equipped with induced length metric forms a $\Cat{}{0}$ space.
-\end{thm}
-
 Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\Omega\ni p$ such that any geodesic with the ends in $A$ which lie in $\Omega$ lies in $A$. 
 
 \begin{thm}{Exercise}\label{ex:convex-balls}
@@ -212,11 +205,12 @@ Analogousely, any ball in a $\Cat{}{1}$ space of radius $R<\tfrac\pi2$ forms a c
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:locally-convex}
-Show that in any $\Cat{}{0}$ space any closed locally convex set is convex.
+Show that in any $\Cat{}{0}$ space any closed connected locally convex set is convex.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:closest-point}
-Let  $\spc{U}\in\Cat{}0$ and $K\subset \spc{U}$ be a closed convex set.
+Let  $\spc{U}$ be a $\Cat{}0$ space 
+and $K\subset \spc{U}$ be a closed convex set.
 Show that 
 
 \begin{subthm}{}
@@ -258,10 +252,11 @@ Note that $A=\spc{U}^1\cap \spc{U}^2\subset \spc{W}$,
 therefore $A$ is also convex set in $\spc{W}$.
 
 The following theorem was proved by Reshetnyak in \cite{reshetnyak:glue}.
+Recall, that once you see $\Cat{}{\kappa}$, you may read $\Cat{}{0}$ or $\Cat{}{1}$.
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ are $\Cat{}{0}$ spaces 
+$\spc{U}^1$ and $\spc{U}^2$ are $\Cat{}{\kappa}$ spaces 
 with isometric closed sets $A^i\subset\spc{U}^i$ and $\iota\:A^1\to A^2$ is an isometry.
 Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is $\Cat{}{0}$ space.
 \end{thm}
@@ -271,8 +266,8 @@ By construction of gluing space, the statement can be reformulated the following
 
 \begin{thm}{Reformulation of \ref{thm:gluing}}
 Let $\spc{W}$ be a space which has two closed convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that
-$\spc{U}^1\cup\spc{U}^1=\spc{W}$ and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
-Then $\spc{W}$ is a $\Cat{}{0}$ space.
+$\spc{U}^1\cup\spc{U}^1=\spc{W}$ and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{\kappa}$.
+Then $\spc{W}$ is a $\Cat{}{\kappa}$ space.
 \end{thm}
 
 
@@ -287,7 +282,7 @@ Then $\spc{W}$ is a $\Cat{}{0}$ space.
 \end{lpic}
 \end{wrapfigure}
 
-It is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$ of perimeter $<2\cdot \varpi\kappa$ 
+It is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$  
 in $\spc{W}$ is thin.
 This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}^i$.
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}^1$ and $x^1,x^2\in\spc{U}^2$.

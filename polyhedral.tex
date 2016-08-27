@@ -1,25 +1,25 @@
 \chapter{Globalization and asphericity}
 
-In this chapter we introduce locally $\Cat[0]$ spaces and show that universal cover of locally $\Cat[0]$ space forms a $\Cat[0]$ space. 
+In this chapter we introduce locally $\Cat{}{0}$ spaces and show that universal cover of locally $\Cat{}{0}$ space forms a $\Cat{}{0}$ space. 
 The latter implies that any locally $\Cat[0]$ space is aspherical; 
 that is its universal cover is contractible.
-This observation is used to construct exotic aspherical manifolds.
+
+The globalization theorem leads to a \emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
+Playing with this toy set we produce examples of exotic aspherical spaces.
+
 
 
 \section{Locally CAT spaces}
 
-We say that space $\spc{U}$ is locally $\Cat{}{0}$ (or locally $\Cat{}{1}$) if
+We say that space $\spc{U}$ is \emph{locally $\Cat{}{0}$} (or \emph{locally $\Cat{}{1}$}) if
 a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$ (or correspondingly $\Cat{}{1}$ space).
-These definition are equivalent to saying that each point $p$ admits an open neighborhood $\Omega$
-such that any triangle in $\Omega$ is thin, or correspondingly spherically thin.
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so $\SS^1$ is locally $\Cat{}{0}$.
-On the other hand, $\SS^1$ is not $\Cat{}{0}$ since the closed geodesic in $\SS^1$ is not minimizing, so $\SS^1$ does not satisfy Theorem~\ref{thm:cat-unique}. 
+On the other hand, $\SS^1$ is not $\Cat{}{0}$ since the closed geodesic in $\SS^1$ is not minimizing, so $\SS^1$ does not satisfy Theorem~\ref{thm:cat-unique}.
 
-In this chapter we will prove globalization theorem for $\Cat{}{}$ spaces;
-that is we give some conditions for locally $\Cat{}{}$ which guarantee that they are globally $\Cat{}{}$.
-The globalization theorem leads to a \emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
-This toy set can be used to produce examples of exotic aspherical spaces.
+This definition is equivalent to saying that each point $p\in \spc{U}$ admits an open neighborhood $\Omega$
+such that any triangle in $\Omega$ is thin, or correspondingly spherically thin.
+The proof goes along the same lines as Exercise \ref{ex:convex-balls}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -75,29 +75,30 @@ $\map\circ\hat\gamma=\gamma$.
 \end{thm}
 
 \parit{Proof.} 
-Fix $r>0$ so that the closed ball
+Fix $r>0$ so that for each $t\in[0,1]$,
+the closed ball
 $\cBall[\gamma(t),r]$ forms a $\Cat{}{\kappa}$ space.
 
-Choose balls $\spc{B}^i=\cBall[\alpha(t^i),r(t^i)]$
-for some partition $a\z=t^0<t^1<\dots<t^n\z=b$
-in such a way that 
-$\Int\spc{B}^i\supset \alpha([t^{i-1},t^i])$ for all $i>0$.
+Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ so that 
+\[\oBall(\gamma(t^i),r)\supset \gamma([t^{i-1},t^i])\] for all $n>i>0$.
+Set $\spc{B}^i=\cBall[\gamma(t^i),r]$.
 
-Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i>0$.
+%???PIC
+
+Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i$.
 Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along $\sim$.
+
 Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
 we conclude that $\spc{N}$ is a $\Cat{}{\kappa}$ space.
 
-For $t\in[t^{i-1},t^i]$, let $\hat\alpha(t)$  be the equivalence class of $(i,\alpha(t))$ in $\spc{N}$.
-Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\alpha$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\alpha(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
+For $t\in[t^{i-1},t^i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in $\spc{N}$.
+Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\gamma$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\gamma(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
 
 Define $\map\:\hat\Omega\to\spc{U}$
 by sending the equivalence class of $(i,x)$ to $x$.
-It is straightforward to check that $\map\:\spc{N}\to\spc{U}$, $\hat\alpha\:[0,1]\to\spc{N}$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
-
-To prove the final statement in the lemma,
-we only have to choose $\eps>0$ so that in addition $\dist{\alpha(\tau)}{\alpha(\tau')}{}>2\cdot\eps$ if $\tau\le t^{i-1}$ and $t^i\le\tau'$ for some $i$.
+It is straightforward to check that $\map$, 
+$\hat\gamma$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
 \qeds
 
 The following two corollaries follow from Patchwork along a curve
@@ -368,7 +369,7 @@ Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geod
 \end{thm}
 
 \parit{Proof.}
-By Globalization theorem \ref{thm:hadamard-cartan}), we need to show that the space is simply connected.
+By Globalization theorem (\ref{thm:hadamard-cartan}), we need to show that the space is simply connected.
 Assume contrary. 
 Fix a nontrivial homotopy class of closed curves.
 
@@ -522,6 +523,8 @@ imply the ``only-if'' part.
 By Lemma~\ref{lem:link-of-flag} and Theorem~\ref{thm:PL-CAT},
 it is sufficient to show that any closed local geodesic $\gamma$ 
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
+
+%???+PIC
 
 Fix a flag complex $\spc{S}$.
 Recall that the  \index{star of vertex}\emph{star} of a vertex $v$ (briefly $\overline \Star_v$)
@@ -766,7 +769,7 @@ $\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
 
 Indeed, according to Proposition \ref{prob:cubical-analog},
 $\tilde{\spc{Q}}$ is $\Cat{}{0}$.
-By ???, %here there should be ref to locconvex+connected => convex in CAT(0)
+By Exercise \ref{ex:locally-convex}???,
 it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
 or equivalently $G$ is locally convex in $\spc{Q}$.
 
