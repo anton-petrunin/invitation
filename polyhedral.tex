@@ -105,7 +105,7 @@ The following two corollaries follow from Patchwork along a curve
 (\ref{lem:patch}) 
 and Theorem on uniqueness of geodesics~\ref{thm:cat-unique}.
 
-\begin{thm}{Corollary}
+\begin{thm}{Corollary}\label{cor:discrete-paths}
 If $\spc{U}$ is a locally $\Cat{}{0}$ space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ is discrete;
 that is for any local geodesic path $\gamma$ connecting $p$ to $q$ there is $\eps>0$ such that for any other geodesic path $\delta$ from $p$ to $q$ we have
 $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
@@ -437,6 +437,7 @@ Note that every flag complex is determined by its 1-skeleton.
 
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
+
 Conclude that any simplicial complex is homeomorphic to a $\Cat{}{1}$ space.
 \end{thm}
 
@@ -737,15 +738,6 @@ Assume  $\tilde{\spc{Q}}$ is simply connected at infinity.
 Then $\spc{S}$ is simply connected.
 \end{thm}
 
-The proof below can be modified to prove the following extension. 
-
-\begin{thm}{Exercise}\label{ex:example-pi_infty-new}
-Under the assumptions of the Lemma~\ref{lem:example-pi_infty}, 
-for any vertex $v$ in $\spc{S}$
-the complement $\spc{S}\backslash\{v\}$ is simply connected.
-\end{thm}
-
-
 \parit{Proof of Lemma~\ref{lem:example-pi_infty}.}
 Assume $\spc{S}$ is not simply connected.
 Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
@@ -817,6 +809,12 @@ the circle $C_R$
 lies outside of any compact set $K'$ in $\tilde{\spc{Q}}$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:example-pi_infty-new}
+Under the assumptions of the Lemma~\ref{lem:example-pi_infty}, 
+for any vertex $v$ in $\spc{S}$
+the complement $\spc{S}\backslash\{v\}$ is simply connected.
+\end{thm}
 
 \parit{Proof of Proposition~\ref{prop:aspherical}.}
 Let $\Sigma^{m-1}$ be an $(m-1)$-dmensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold $\spc{W}$. 
