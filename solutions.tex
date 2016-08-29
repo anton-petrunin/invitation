@@ -1,0 +1,442 @@
+\chapter*{Semisolutions}
+\parbf{Exercise~\ref{ex:two-components-of-M4}.}
+Let $\spc{X}$ be a 4-point metric space.
+
+Fix a tetrahedron $\triangle$ in $\RR^3$.
+The verices of tetrahedron, 
+say $x_0$, $x_1$, $x_2$, $x_3$ can be identified with the points of $\spc{X}$.
+
+Note that there is unique qadratic form $W$ on $\RR^3$
+such that 
+\[W(x_i-x_j)=\dist[2]{x_i}{x_j}{\spc{X}}\]
+for all $i$ and $j$;
+here $\dist{x_i}{x_j}{\spc{X}}$ denotes the distance beween $x_i$ and $x_j$ in $\spc{X}$.
+
+By triangle inequality $W(v)\ge 0$ 
+for any vector $v$ parallel to one of the faces of $\triangle$.
+
+Note that $\spc{X}$ is isometric to a 4-point subset in the Euclidean space
+if and ony if $W(v)\ge 0$ for any vector $v$ in $\RR^3$.
+
+\begin{wrapfigure}{r}{52mm}
+\begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/quad(1)}
+\end{lpic}
+\end{wrapfigure}
+
+Therefore if $\spc{X}$ is not of type $\mathcal{E}_4$ then $W(v)<0$ for some vector $v$.
+From above, the vector $v$ must be transveral to each of 4 faces of $\triangle$.
+Therefore if we project $\triangle$ along $v$ to a plane transveral to $v$ we see one of the folwing two pictures.
+
+It is easy to see that the combinatorics of the picture does not depend on the choice of $v$. 
+Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ not connected. 
+
+It remains to show that if the combinatorics of the pictures for two spaces is the same then one can continuousely deform one space into the other.
+This can be easily done deforming $W$ and apply permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessay.
+
+
+
+
+
+\parbf{Exercise~\ref{ex:convex-set}.}
+The simplest proof we know require proof tangent cones for Alexandrov spaces.
+
+
+\parbf{Exercise~\ref{ex:product-cone}.}
+\parbf{Exercise~\ref{ex:no-geod}.}
+Given a metric graph $\Gamma$ define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$ substitute the edge $[pq]$ by  a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with an inner metric. 
+
+Let $\spc{X}_0=[0,1]$ and define $\spc{X}_k$ for $k\ge 1$ inductively as $\spc{X}_k=P_k(\spc{X}_{k-1})$.
+
+Let $\spc{Y}_k$ be the set of vertices of $\spc{X}_k$ with the induced metric. By construction the inclusion $\spc{Y}_k\subset \spc{Y}_{k+1}$ is distance preserving.
+
+Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\spc{Y}=\bar {\spc{Y}}_\infty$ be its metric completion. Then $\spc{Y}$ is a length space since it satisfies the almost midpoint property. But it is not hard to see that no two distinct points in $\spc{Y}$ can be connected by a shortest geodesic. \qeds
+
+AN OTHER SOLUTION from here http://mathoverflow.net/q/15720
+if we want it, I can ask fedya.???
+
+Well, the unit ball in $c_0$ is almost what you want (there is no unique shortest curve between points). 
+All we need now is to enhance "bypasses" and to give disadvantage to "straight lines". 
+This can easily be done by taking the distance element to be \[(2+\sum_n 2^{-n}x_n)^{-1}\|dx\|_\infty,\] 
+which is never less than the usual distance element in $c_0$ and never greater than 3 times it in the unit ball. Now, if we have any continuous finite length curve $x(t)$ from $y$ to $z$ parametrized by the arclength, we can easily shorten it by replacing the $m$-th position by the maximum of the actual value of $x_m(t)$ and 
+\[y_m+t(z_m-y_m)/d+\frac 12 \min(t,d-t),\] 
+where $d$ is the length of $x(t)$, which will work if $m$ is large enough since $\max_t|x_m(t)|\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.
+
+\parbf{Exercise~\ref{exercise from BH}.}
+The following example is taken from the book of Bridson and Haefliger \cite{BH}.
+
+Consider the following subset of $\R^2$:
+
+\[
+\spc{X}
+=
+\bigl((0,1]\times\{0,1\}\bigr)
+\cup
+\bigl(\bigcup_{n\ge 1}\{1/n\}\times[0,1]\bigr)
+\]
+Consider the induced inner metric on $\spc{X}$. It's obviously locally compact and geodesic.
+However, it's immediate to check that its metric completion \[\bar{\spc{X}}
+=
+\bigl([0,1]\times\{0,1\}\bigr)
+\cup
+\bigl(\bigcup_{n\ge 1}\{1/n\}\times[0,1]\bigr)\] 
+is neither. \qeds 
+
+\parbf{Exercise~\ref{ex:adjacent-angles}.}
+Assume contrary; that is
+\[\mangle\hinge pxz+\mangle\hinge pyz< \pi\]
+By triangle inequality for angles (\ref{claim:angle-3angle-inq})
+we have 
+\[\mangle\hinge pxy<\pi\]
+The latter cotradicts the triangle inequality for the triangle $[\bar x p \bar y]$,
+where the points
+$\bar x\in ]px]$ and $\bar y\in ]py]$
+are sufficiently close to $p$.
+
+%\parbf{Exercise~\ref{ex:geod-CBB}.}
+\parbf{Exercise~\ref{ex:geod-CBA}.}
+Fix sufficiently small $\eps>0$.
+
+Consider a sequence of directions $\xi_n$ of geodesics $[pq_n]$.
+Since the geodesics are extandable,
+we can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal.
+
+Since $\spc{U}$ is proper,
+the sequence $q_n$ has partial limit, say $q$.
+It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
+assuming the latter is defined.
+
+
+\parbf{Exercise~\ref{exr-crofton}.}
+Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
+By approximation it's clearly enough to prove this for  smooth curves of length $< 2\cdot\pi$ with transverse self-intersections. 
+
+Given $v\in \SS^2$, denote by $v^\perp$ the equator in $\SS^2$ with the pole at $v$.
+Further, $\# X$ will denote the number of points in the set $X$.
+
+Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. 
+Note that $\#(\alpha\cap v^\perp)$ is even for almost all $v$.
+
+Therefore, if $\alpha$ does not lie in a hemisphere then
+$\#(\alpha\cap v^\perp) \ge 2$ for almost all $v\in\SS^2$.  
+
+By Crofton's formula we have that
+\begin{align*}
+\length(\alpha)
+&=\frac 1 4\cdot \int\limits_{\SS^2}\#(\alpha\cap v^\perp)\cdot \d_v\area\ge
+\\
+&\ge2\cdot\pi.
+\end{align*}
+
+
+\parbf{Exercise~\ref{ex:cone+susp}.}
+\parbf{Exercise~\ref{ex:product}.}
+
+\begin{wrapfigure}{r}{27mm}
+\begin{lpic}[%draft,
+t(-5mm),b(0mm),r(0mm),l(0mm)]{sbapics/resh(0.3)}
+\lbl[t]{47,9;$\~p$}
+\lbl[l]{82,88;$\~x$}
+\lbl[r]{2,74;$\~y$}
+\lbl[b]{37,82;$\~z$}
+\lbl[tr]{33,62;$\~z_x$}
+\lbl[tl]{46,63;$\~z_y$}
+\end{lpic}
+\end{wrapfigure}
+\parbf{Exercise~\ref{ex:short-map}.}
+By Alexandrov's lemma (\ref{lem:alex}), 
+there are nonoverlapping triangles 
+$\trig{\~p}{\~x}{\~z_y}\iso\trig {\dot p}{\dot x}{\dot z}$ 
+and 
+$\trig{\~p}{\~y}{\~z_x}\iso\trig {\dot p}{\dot y}{\dot z}$
+ inside triangle $\trig{\~p}{\~x}{\~y}$.
+
+Connect points in each pair
+$(\~z,\~z_x)$, 
+$(\~z_x,\~z_y)$ 
+and $(\~z_y,\~z)$ 
+with arcs of circles centered at 
+$\~y$, $\~p$, and $\~x$ respectively. 
+Define $F$ as follows.
+\begin{itemize}
+\item Map  $\Conv\trig{\~p}{\~x}{\~z_y}$ isometrically onto  $\Conv\trig {\dot p}{\dot x}{\dot y}$;
+similarly map $\Conv \trig{\~p}{\~y}{\~z_x}$ onto $\Conv \trig {\dot p}{\dot y}{\dot z}$.
+\end{itemize}
+
+\begin{itemize}
+\item If $x$ is in one of the three circular sectors, say at distance $r$ from center of the circle, let $F(x)$ be the point on the corresponding segment 
+$[p z]$, 
+$[x z]$ 
+or $[y z]$ whose distance from the lefthand endpoint of the segment is $r$.
+\item Finally, if $x$ lies in the remaining curvilinear triangle $\~z \~z_x \~z_y$, 
+set $F(x) = z$. 
+\end{itemize}
+By construction, $F$ satisfies the conditions. 
+
+\parbf{Exercise~\ref{ex:convex-balls}.}
+It is sufficient to show that 
+\[\dist{p}{z}{}\le \max\{\dist{p}{x}{},\dist{p}{y}{}\}\]
+for any $p$ and any $z\in[xy]$.
+
+The statement follows since the triangle $\trig pxy$ is thin
+and the above condition holds in the Euclidean plane.
+
+In $\Cat{}{1}$ case, the proof is the same, but we need to assume in addition that 
+$\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$
+
+\parbf{Exercise~\ref{ex:closest-point}.}
+Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
+Hence the existance of $p^*$ follows.
+
+Assume $p^*$ is not uniquely defined;
+that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from $p$.
+Sicne $K$ is convex the midpoint $z$ of $[xy]$ lies in $K$.
+
+Note that $\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{}$, a contradiction.
+
+It remains to show that the map $p\mapsto p^*$ is short;
+that is 
+\[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\eqlbl{eq:short-p-p}\]
+
+Note that 
+\[\mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2
+\quad
+\text{and}
+\quad
+\mangle\hinge{q^*}{p}{p^*}\ge \tfrac\pi2,\] 
+if the lefthand sides are defined. 
+
+
+Construct the model triangles 
+$\trig{\~p}{\~p^*}{\~q^*}$ and $\trig{\~p}{\~q}{\~q^*}$
+of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
+the points $\~p^*$ and $\~q$ lie on the opposite sides from $[{\~p}{\~q^*}]$.
+
+By comparison and triangle inequality for angles, we get \ref{claim:angle-3angle-inq}
+\[\mangle\hinge{\~p^*}{\~p}{\~q^*}\ge \mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2
+\quad
+\text{and}
+\quad
+\mangle\hinge{\~q^*}{\~q}{\~p^*}\ge \mangle\hinge{q^*}{q}{p^*}\ge \tfrac\pi2
+\]
+assuming that the left hand sides are defined. 
+Hence 
+\[\dist{\~p}{\~q}{}\ge \dist{\~p^*}{\~q^*}{}.\]
+The latter is equivalent to \ref{eq:short-p-p}.
+
+\parbf{Exercise~\ref{ex:two-rays}.}
+Consider the angle $A$ in the plane of measure $\pi-\alpha$.
+Note that $A$ is $\Cat{}{0}$.
+Therefore by Reshetnyak gluing theorem \ref{thm:gluing},
+by gluing a side of $A$ to $\gamma_1$ in $\spc{U}$ we obtain a $\Cat{}{0}$ space, say $\spc{U}'$.
+
+Note that $\gamma_2$ together with the other side of $A$ forms a both sides infinite geodesic, say $\gamma$ in $\spc{U}'$.
+In particular, $\gamma$ is a convex set isometric to $\RR$.
+
+Glue a half-plane along its boundary to $\gamma$.
+By Reshetnyak gluing theorem \ref{thm:gluing} the obtained space is $\Cat{}{0}$.
+
+It remains to note that this space can be obtained directly by gluing $\spc{U}$ to with $Q$ along $\gamma_1$ and $\gamma_2$.
+
+
+\parbf{Exercise~\ref{ex:branching-cover}.}
+Consider a $\eps$-neighborhood $A$ of the geodesic.
+Note that $A_\eps$ forms a convex set.
+By Reshetnyak gluing theorem the doubling $\spc{W}_\eps$ of $\spc{U}$ in $A_\eps$ is a $\Cat{}{0}$ space.
+
+Consider the other space $\spc{W}'_\eps$ obtained by double covering of $\spc{U}\backslash A_\eps$ and gluing back $A_\eps$.
+
+Note that $\spc{W}'_\eps$ is locally isometric to $\spc{W}_\eps$. 
+That is for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ such that $\delta$-neighborhood of $p$ is isometric to $\delta$-neighborhood of $p$ for all small $\delta>0$.
+
+Further note that $\spc{W}'_\eps$ is simply connected.
+By globalization theorem, $\spc{W}'_\eps$ s $\Cat{}{0}$.
+
+It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$.
+
+%%%???HERE WE USE GLOBALIZATION AND LIMIT!!!
+
+
+\parbf{Exercise~\ref{ex:supporting-planes}.}
+By approximation, it is sufficient to consider the case when 
+$A$ and $B$ have smooth boundary.
+In the latter case the choice of $\dot A$ and $\dot B$ is unique;
+and a variation argument shows that it satisfies the condition.
+
+%%%+PIC???
+\parbf{Exercise~\ref{ex:compact-walls}.}
+Fix $r>0$ and $R<\infty$ so that 
+\[\oBall(0,r)\subset A^i\subset \oBall(0,R)\]
+for each wall $A^i$.
+
+It remains to note that all the intersections of  walls  have $\eps$-wide for
+\[\eps=2\cdot \arcsin\tfrac rR.\]
+
+\parbf{Exercise~\ref{ex:centrally-simmetric-walls}.}
+Note that there is $R<\infty$
+such that if $X$ is an intersection of arbitrary number of walls
+and then there is an isometry of $X$ 
+which moves any point $p\in X$ to a point in $\oBall(0,R)$.
+
+The rest of the proof goes along the same lines as Exercise~\ref{ex:compact-walls}.
+
+\parbf{Exercise~\ref{ex:null-homotopic}.}
+Note that the existance of null-homotopy is equivalent to the following.
+There are two one-parameter family of paths $\alpha_\tau$ and $\beta_\tau$, $\tau\in[0,1]$ 
+such that 
+\begin{itemize}
+\item $\length\alpha_\tau$, $\length\beta_\tau<\pi$ for any $\tau$.
+\item $\alpha_\tau(0)=\beta_\tau(0)$ and $\alpha_\tau(1)=\beta_\tau(1)$ for any $\tau$.
+\item $\alpha_0(t)=\beta_0(t)$ for any $t$.
+\item $\alpha_1(t)=\alpha(t)$ and $\beta_1(t)=\beta(t)$ for any $t$.
+\end{itemize}
+
+By Corollary~\ref{cor:discrete-paths},
+the construction in Corollary~\ref{cor:path-geod} produces the same result for $\alpha_\tau$ and $\beta_\tau$.
+Hence the result follows.
+
+
+\parbf{``If'' part of Theorem~\ref{thm:PL-CAT}.}
+\parbf{Exercise~\ref{ex:unique-geod=CAT}.}
+
+\parbf{Exercise~\ref{ex:baricenric-flag}.}
+Checking the flag condition is straightforward once you know the following description of the barycentric subdevision.
+
+Each vertexes $v$ of the barycentric subdevision 
+corresponds to a simplex $\triangle_v$ of the original triangulation.
+A set vertices form a simplex in the subdevision, 
+if it can be ordered, say as $v_1,\dots,v_\kay$,
+such that the correspoding simplexes form a nested sequence
+\[\triangle_{v_1}\subset\dots\subset\triangle_{v_\kay}.\]
+
+
+
+
+\parbf{Exercise~\ref{ex:flag>=pi/2}.}
+The proof goes along the same lines as the proof of Flag condition~\ref{thm:flag}.
+The only difference that geodesic spends time at least $\pi$ the star of each vertex.
+
+\parbf{Exercise~\ref{ex:short-retracts}.}
+Start with a copy of $\spc{U}$ for each vertex of $\Gamma$
+and glue them recuresevely using the following operation and stages.
+
+At the stage $n$ glue only spaces along $A^n$.
+
+In one step of the stage, choose two connected components of partially glued copies and glue them along the corresponding $A^n$'s.
+Apply Reshetnyak gluing theorem to show that each connected component after the stage is $\Cat{}{0}$ assuming that all connected component were $\Cat{}{0}$ before the step.
+
+
+\parbf{Exercise~\ref{ex:tree}.}
+The space $\spc{T}_n$ has natural cone structure with the vertex formed by completely degenerate tree --- all its edges have zero length.
+Note that the space $\Sigma$, 
+over which the cone is taken comes naturally with triangulation 
+with all-right spherical simplicies.
+
+It remains to check that the complex is flag 
+and apply Exercise~\ref{ex:cone+susp}.
+
+\parbf{Exercise~\ref{ex:flag-aspherical}.}
+\parbf{Exercise~\ref{ex:example-pi_infty-new}.}
+Solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}.
+The only difference, the set $G$ formed by squares with the vertexes at the  midpoints of some edges of the cubical analog. 
+
+\parbf{Exercise~\ref{ex:funny-S}.}
+In the proof we apply the following lemma from \cite{edwards}; 
+it follows from the disjoint discs property.
+
+
+\begin{thm}{Lemma}\label{lem:homomanifold-characterization}
+Let $\spc{S}$ be a simplicial complex which 
+is an $m$-dimensional homology manifold for some $m\ge 5$.
+Assume all the vertices of
+$\spc{S}$ have simply connected links.
+Then $\spc{S}$ is a topological manifold.
+\end{thm}
+
+
+It is sufficient to construct a simplicial complex $\spc{S}$
+such that 
+\begin{itemize}
+\item $\spc{S}$ is a closed $(m-1)$-dimensional homology manifold;
+\item $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$;
+\item $\spc{S}\sim \mathbb{S}^{m-1}$; that is, $\spc{S}$ is homotopy equivalent to $\mathbb{S}^{m-1}$.
+\end{itemize}
+
+Indeed, assume such $\spc{S}$ is constructed.
+Then the suspension
+$\spc{R}\z=\Susp\spc{S}$
+is an $m$-dimensional homology manifold with a natural triangulation coming from $\spc{S}$.
+By Lemma~\ref{lem:homomanifold-characterization},
+$\spc{R}$ is a topological manifold.
+According to generalized Poincar\'{e} conjecture,
+$\spc{R}\simeq\mathbb{S}^m$;
+that is
+$\spc{R}$ is homeomorphic to $\mathbb{S}^m$.
+Since $\Cone \spc{S}\simeq \spc{R}\backslash\{s\}$ where $s$ denotes a south pole of the suspension 
+and $\EE^m\simeq \mathbb{S}^m\backslash\{p\}$
+for any point $p\in \mathbb{S}^m$
+we get 
+\[\Cone \spc{S}\simeq\EE^m.\]
+
+Let us construct $\spc{S}$.
+Fix an $(m-2)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
+According to \cite{kervaire} %it is a good readable paper, but I am sure the existance follows from sometheng written before
+an example of that type exists for any $m\ge 5$.
+
+Remove from $\Sigma$ one $(m-2)$-simplex.
+Denote the obtained complex by $\Sigma'$.
+Since $m\ge 5$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
+
+Consider the product $\Sigma'\times [0,1]$. 
+Attach to it the cone over its boundary $\partial (\Sigma'\times [0,1])$.
+Denote by $\spc{S}$ the obtained simplicial complex
+and by $v$ the tip of the attached cone.
+
+Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$ which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
+  Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
+
+The complement $\spc{S}\backslash\{v\}$ is homotopy equivalent to $\Sigma'$.
+Therefore 
+\[
+\pi_1(\spc{S}\backslash\{v\})
+=\pi_1\Sigma'
+=\pi_1\Sigma\ne 0.
+\]
+That is, $\spc{S}$ satisfies the conditions above.
+
+\parbf{Exercise~\ref{ex:concave-triangle}.}
+By approximation,
+it is sufficient to consider the case of poygonalal sides.
+
+The latter case can be done by induction on number of sides.
+The base case of triangle is evident.
+
+To prove the step, apply Alexndrov's lemma (\ref{lem:alex}) 
+together with the costruction in Exercise~\ref{ex:short-map}.
+
+\parbf{Exercise~\ref{ex:bishop-sphere}.}
+
+%%%???SHOULD WE DO FINITE COVER TO AVOID NONPROPER SPACES???
+\parbf{Exercise~\ref{ex:two-planes}.}
+The space $K$ forms a cone over branched covering of $\mathbb{S}^3$ infinitely branching along two big circles.
+
+If the planes are not orthogonal then the minimal distance between the circles is less than $\tfrac\pi2$.
+Assume that this distance is realized by a geodesic $[\xi\zeta]$.
+broken line made by four liftings of $[\xi\zeta]$ forms a closed geodesic in $K$. 
+By ???, $K$ is not $\Cat{}{0}$.
+
+If the planes are orthogonal then the corresponding big circles in $\SS^3$ are formes by subcomplexes of a flag triangulation of $\SS^3$ with all-right simplicies.
+The branching cover is also flag.
+It remains to apply the flag condition \ref{thm:flag}.
+
+\parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
+
+
+\parbf{Exercise~\ref{ex:CAT=>two-convex}.}
+Show that if $K$ is not two-convex then there is a plane triangle $\triangle$ which sides lying completely in $K$, 
+but its interior contains the points of the complement $\EE^m\backslash K$.
+
+It remains to note that $\triangle$ is not thin in $K$.
+
+
+
+\parbf{Exercise~\ref{ex:two-convex-not-a-CAT}.}

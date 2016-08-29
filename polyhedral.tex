@@ -1,24 +1,32 @@
 \chapter{Globalization and asphericity}
 
-We say that space $\spc{U}$ is locally $\Cat{}{0}$ (or locally $\Cat{}{1}$) if
+In this chapter we introduce locally $\Cat{}{0}$ spaces and show that universal cover of locally $\Cat{}{0}$ space forms a $\Cat{}{0}$ space. 
+The latter implies that any locally $\Cat[0]$ space is aspherical; 
+that is its universal cover is contractible.
+
+The globalization theorem leads to a \emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
+Playing with this toy set we produce examples of exotic aspherical spaces.
+
+
+
+\section{Locally CAT spaces}
+
+We say that space $\spc{U}$ is \emph{locally $\Cat{}{0}$} (or \emph{locally $\Cat{}{1}$}) if
 a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$ (or correspondingly $\Cat{}{1}$ space).
-These definition are equivalent to saying that each point $p$ admits an open neighborhood $\Omega$
-such that any triangle in $\Omega$ is thin, or correspondingly spherically thin.
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so $\SS^1$ is locally $\Cat{}{0}$.
-On the other hand, $\SS^1$ is not $\Cat{}{0}$ since the closed geodesic in $\SS^1$ is not minimizing, so $\SS^1$ does not satisfy Theorem~\ref{thm:cat-unique}. 
+On the other hand, $\SS^1$ is not $\Cat{}{0}$ since the closed geodesic in $\SS^1$ is not minimizing, so $\SS^1$ does not satisfy Theorem~\ref{thm:cat-unique}.
 
-In this chapter we will prove globalization theorem for $\Cat{}{}$ spaces;
-that is we give some conditions for locally $\Cat{}{}$ which guarantee that they are globally $\Cat{}{}$.
-The globalization theorem leads to a \emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
-This toy set can be used to produce examples of exotic aspherical spaces.
+This definition is equivalent to saying that each point $p\in \spc{U}$ admits an open neighborhood $\Omega$
+such that any triangle in $\Omega$ is thin, or correspondingly spherically thin.
+The proof goes along the same lines as Exercise \ref{ex:convex-balls}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Space of local geodesics}\label{sec:geod-space}
 
 In this section we will study behavior of local geodesics in the locally $\Cat{}{}$  spaces.  
-The proved statements will be used in the proof of the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}).
+The proved statements will be used in the proof of Globalization theorem (\ref{thm:hadamard-cartan}).
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
 Let $\spc{U}$ be a locally $\Cat{}{0}$ or locally $\Cat{}{1}$ space.
@@ -67,36 +75,37 @@ $\map\circ\hat\gamma=\gamma$.
 \end{thm}
 
 \parit{Proof.} 
-Fix $r>0$ so that the closed ball
+Fix $r>0$ so that for each $t\in[0,1]$,
+the closed ball
 $\cBall[\gamma(t),r]$ forms a $\Cat{}{\kappa}$ space.
 
-Choose balls $\spc{B}^i=\cBall[\alpha(t^i),r(t^i)]$
-for some partition $a\z=t^0<t^1<\dots<t^n\z=b$
-in such a way that 
-$\Int\spc{B}^i\supset \alpha([t^{i-1},t^i])$ for all $i>0$.
+Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ so that 
+\[\oBall(\gamma(t^i),r)\supset \gamma([t^{i-1},t^i])\] for all $n>i>0$.
+Set $\spc{B}^i=\cBall[\gamma(t^i),r]$.
 
-Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i>0$.
+%???PIC
+
+Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i$.
 Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along $\sim$.
+
 Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
 we conclude that $\spc{N}$ is a $\Cat{}{\kappa}$ space.
 
-For $t\in[t^{i-1},t^i]$, let $\hat\alpha(t)$  be the equivalence class of $(i,\alpha(t))$ in $\spc{N}$.
-Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\alpha$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\alpha(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
+For $t\in[t^{i-1},t^i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in $\spc{N}$.
+Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\gamma$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\gamma(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
 
 Define $\map\:\hat\Omega\to\spc{U}$
 by sending the equivalence class of $(i,x)$ to $x$.
-It is straightforward to check that $\map\:\spc{N}\to\spc{U}$, $\hat\alpha\:[0,1]\to\spc{N}$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
-
-To prove the final statement in the lemma,
-we only have to choose $\eps>0$ so that in addition $\dist{\alpha(\tau)}{\alpha(\tau')}{}>2\cdot\eps$ if $\tau\le t^{i-1}$ and $t^i\le\tau'$ for some $i$.
+It is straightforward to check that $\map$, 
+$\hat\gamma$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
 \qeds
 
 The following two corollaries follow from Patchwork along a curve
 (\ref{lem:patch}) 
 and Theorem on uniqueness of geodesics~\ref{thm:cat-unique}.
 
-\begin{thm}{Corollary}
+\begin{thm}{Corollary}\label{cor:discrete-paths}
 If $\spc{U}$ is a locally $\Cat{}{0}$ space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ is discrete;
 that is for any local geodesic path $\gamma$ connecting $p$ to $q$ there is $\eps>0$ such that for any other geodesic path $\delta$ from $p$ to $q$ we have
 $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
@@ -104,8 +113,9 @@ $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
 Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
 \end{thm}
 
-The spaces of paths $\alpha\:[0,1]\to\spc{U}$ also comes with the natural metric
-\[\dist{\gamma_1}{\gamma_2}{}=\sup\set{\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}}{t\in[0,1]}.\]
+Recall that \emph{path} is a curve parametrized by $[0,1]$.
+The spaces of paths in $\spc{U}$ also comes with the natural metric
+\[\dist{\alpha}{\beta}{}=\sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.\]
 
 \begin{thm}{Corollary}\label{cor:path-geod}
 Let $\spc{U}$ is a locally $\Cat{}{0}$ space than 
@@ -115,6 +125,23 @@ Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ space than
 for any path $\alpha$ with length less than $\pi$ 
 there is a choice of local geodesic path $\gamma$ with length less than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma$ is continuous and if $\alpha$ is a local geodesic path then $\gamma=\alpha$.
 \end{thm}
+
+Given a path $\alpha\:[0,1]\to\spc{U}$,
+we denote by $\bar\alpha$ the same path traveled in the opposite direction;
+that is,
+\[\bar\alpha(t)=\alpha(1-t).\]
+Joint of two paths will be denoted with ``$*$'';
+if two paths $\alpha$ and $\beta$ connect the same pair of points then the joint $\bar\alpha*\beta$ forms a closed curve.
+
+\begin{thm}{Exercise}\label{ex:null-homotopic}
+Assume $\spc{U}$ is a locally $\Cat{}{1}$ space and the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary \ref{cor:path-geod}.
+
+Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$,
+each has lengths less than $\pi$ 
+and the joint 
+$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$ then $\gamma_\alpha=\gamma_\beta$.
+\end{thm}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -238,25 +265,8 @@ It remains to apply the patchwork globalization theorem (\ref{thm:alex-patch}).
 
 \parit{$\Cat{}{1}$ case.}
 The proof goes along the same lines, 
-but one has to be more careful with the condition on the paths $\alpha$ and $\beta$ which guarantee $\gamma_\alpha=\gamma_\beta$.
+but one one need to use Exercise~\ref{ex:null-homotopic}. \qeds
 
-Given a path $\alpha\:[0,1]\to\spc{U}$,
-we denote by $\bar\alpha$ the same path traveled in the opposite direction;
-that is,
-\[\bar\alpha(t)=\alpha(1-t).\]
-Joint of two paths will be denoted with ``$*$'';
-if two paths $\alpha$ and $\beta$ connect the same pair of points then the joint $\bar\alpha*\beta$ forms a closed curve.
-
-Assume $\spc{U}$ is a locally $\Cat{}{1}$ space.
-Given two paths $\alpha$ and $\beta$ in $\spc{U}$ with lengths less than $\pi$,
-one needs to show the following:
-\begin{clm}{}
-If the joint 
-$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$ then $\gamma_\alpha=\gamma_\beta$.
-\end{clm}
-
-The proof of the claim is straightforward and left to the reader.
-\qeds
 
 \section{Polyhedral spaces}
 
@@ -359,7 +369,7 @@ Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geod
 \end{thm}
 
 \parit{Proof.}
-By Globalization theorem \ref{thm:hadamard-cartan}), we need to show that the space is simply connected.
+By Globalization theorem (\ref{thm:hadamard-cartan}), we need to show that the space is simply connected.
 Assume contrary. 
 Fix a nontrivial homotopy class of closed curves.
 
@@ -374,19 +384,21 @@ The $\Cat{}{1}$ is analogous, one only has to consider the homotopy class of clo
 
 
 \parit{Proof of Theorem~\ref{thm:PL-CAT}.}
-Let us apply induction on $\dim\spc{P}$.
+We prove ``only if'' part and leave ``if'' part as an exercise.
+
+We apply induction on $\dim\spc{P}$.
 The base case $\dim\spc{P}=0$ is evident.
+Let us start with $\Cat{}{1}$ case.
 
 \parit{Step.}
 Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
 
-We will only give a proof of the ``if" direction.
 
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
-is isometric to the $\kappa$-cone over 
+is isometric to the neighborhood of the north pole in the suspension over 
 the $\Sigma_p$.
-By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
+By the second part of Exercise~\ref{ex:cone+susp} 
 it is sufficient to show that 
 \[\Sigma_p\in \Cat{}1.
 \eqlbl{eq:Sigma-in-CAT(1)}\]
@@ -396,9 +408,11 @@ and its  links are isometric to  links of $\spc{P}$.
 By the  induction hypothesis, $\Sigma_p$ is $\Cat{}{1}$.
 Applying Grolbalization (\ref{thm:hadamard-cartan}),
 we get the statement.
+
+The $\Cat{}{0}$ case is different only in the last step, where we need to use the first part of Exercise~\ref{ex:cone+susp}.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:unique-geod=CAT}
 Show that if in a polyhedral space $\spc{P}$
 any two points can be connected by a unique geodesic 
 then $\spc{P}$ is a $\Cat{}{0}$ space.
@@ -409,9 +423,9 @@ then $\spc{P}$ is a $\Cat{}{0}$ space.
 
 \begin{thm}{Definition}
 A simplicial complex $\mathcal{S}$ 
-is called \index{flag complex}\emph{flag} if whenever $\{v_0,\z\dots,v_\kay\}$
+is called \index{flag complex}\emph{flag} if whenever $\{v^0,\z\dots,v^\kay\}$
 is a set of distinct vertices of $\mathcal{S}$
-which are pairwise joined by edges, then the vertexes $v_0,\dots,v_\kay$
+which are pairwise joined by edges, then the vertexes $v^0,\dots,v^\kay$
 span a $\kay$-simplex in $\mathcal{S}$.
 
 If the above condition is satisfied only for $\kay=2$, 
@@ -423,6 +437,7 @@ Note that every flag complex is determined by its 1-skeleton.
 
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
+
 Conclude that any simplicial complex is homeomorphic to a $\Cat{}{1}$ space.
 \end{thm}
 
@@ -480,19 +495,19 @@ if and only if $\tau$ is flag.
 \end{thm}
 
 \parit{Proof; ``only-if'' part.} 
-Assume there are three vertices $v_1,v_2$ and $v_3$ of $\tau$
+Assume there are three vertices $v^1,v^2$ and $v^3$ of $\tau$
 that are pairwise joined by edges 
 but do not span a simplex.
 Note that in this case 
-$$\mangle\hinge{v_1}{v_2}{v_3}=\mangle\hinge{v_2}{v_3}{v_1}=\mangle\hinge{v_3}{v_1}{v_1}=\pi.$$
+$$\mangle\hinge{v^1}{v^2}{v^3}=\mangle\hinge{v^2}{v^3}{v^1}=\mangle\hinge{v^3}{v^1}{v^1}=\pi.$$
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
-The join of the geodesics $[v_1v_2]$, $[v_2v_3]$ and $[v_3v_1]$
+The join of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
 forms a locally geodesic loop in $\spc{P}$. 
 \end{clm}
 
 Now assume that $\spc{P}$ is a $\Cat{}{1}$ space.
-Then by \ref{thm:warp-curv-bound:cbb:a},
+Then by Theorem~\ref{thm:PL-CAT},
 $\Link_\sigma\spc{P}$ is a $\Cat{}{1}$ space for every simplex $\sigma$ 
 in $\tau$. 
 
@@ -509,6 +524,8 @@ imply the ``only-if'' part.
 By Lemma~\ref{lem:link-of-flag} and Theorem~\ref{thm:PL-CAT},
 it is sufficient to show that any closed local geodesic $\gamma$ 
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
+
+%???+PIC
 
 Fix a flag complex $\spc{S}$.
 Recall that the  \index{star of vertex}\emph{star} of a vertex $v$ (briefly $\overline \Star_v$)
@@ -534,31 +551,31 @@ The same argument as above shows that $\gamma$ spends time $\pi$ on every visit 
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:flag>=pi/2}
 Assume that a spherical polyhedral space $\spc{P}$
 admits a triangulation $\tau$ such that all dihedral angles of all simplexes are at least $\tfrac\pi2$.
 Show that $\spc{P}$ is a $\Cat{}{1}$ space
 if $\tau$ is flag.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:short-retracts}
 Let $\spc{U}\in \Cat{}{0}$
-and $\phi_1,\phi_2,\dots,\phi_k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
+and $\phi^1,\phi^2,\dots,\phi^k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
 that is 
 \begin{itemize}
-\item $\phi_i\circ\phi_i=\phi_i$ for each $i$;
-\item $\phi_i\circ\phi_j=\phi_j\circ\phi_i$ for any $i$ and $j$;
-\item $\dist{\phi_i(x)}{\phi_i(y)}{\spc{U}}\le \dist{x}{y}{\spc{U}}$ for each $i$ and any $x,y\in\spc{U}$.
+\item $\phi^i\circ\phi^i=\phi^i$ for each $i$;
+\item $\phi^i\circ\phi^j=\phi^j\circ\phi^i$ for any $i$ and $j$;
+\item $\dist{\phi^i(x)}{\phi^i(y)}{\spc{U}}\le \dist{x}{y}{\spc{U}}$ for each $i$ and any $x,y\in\spc{U}$.
 \end{itemize}
-Set $A_i=\Im \phi_i$ for all $i$;
-note that each $A_i$ is a weakly convex set.
+Set $A^i=\Im \phi^i$ for all $i$;
+note that each $A^i$ is a weakly convex set.
 
 Assume $\Gamma$ is a finite graph 
 (without loops and multiple edges) 
 with edges labeled by $1,2,\dots, n$.
 Denote by $\spc{U}^\Gamma$ the space obtained by taking 
 a copy of $\spc{U}$ for each vertex of $\Gamma$ and 
-gluing two such copies along $A_i$ if the corresponding vertices are joint by an edge labeled by $i$.
+gluing two such copies along $A^i$ if the corresponding vertices are joint by an edge labeled by $i$.
 
 Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space
 \end{thm}
@@ -567,15 +584,15 @@ Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space
 The following construction is given by Billera, Holmes and Vogtmann in \cite{BHV}.
 
 Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
-labeled by $a_1,\dots,a_n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a_1,\dots,a_n$ and all the other verices of degree 3 
+labeled by $a^1,\dots,a^n$.
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other verices of degree 3 
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the lengh of an edge is $0$, we assume that edge degenerates;
 such a tree can be also decribed using a different topological tree $\tau'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with a convex closed cone in  $\mathbb{R}^{2\cdot n-3}$.
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the legth metric on $\spc{T}_n$ induced by these metrics.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:tree}
 Show that $\spc{T}_n$ with the described metric is a $\Cat{}0$ space.
 \end{thm}
 
@@ -624,7 +641,7 @@ Let $\spc{S}$ be a simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its 
 Consider $\RR^N$ with the standard basis $\{e_1,\dots,e_N\}$.
 Denote by $\square^N$ the standard unit cube in $\RR^N$;
 that is 
-\[\square^N=\set{(x_1,\dots,x_n)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
+\[\square^N=\set{(x_1,\dots,x_N)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
 
 Given a $\kay$-dimensional simplex $\<v_{i_0},\dots,v_{i_\kay}\>$ in $\spc{S}$, 
 mark the $(\kay\z+1)$-dimensional faces in $\square^N$ (there are  $2^{N-\kay}$ of them)
@@ -660,10 +677,10 @@ from the construction above.
 If ${\spc{S}}$ is flag, 
 then by Flag condition (\ref{thm:flag}) 
 the link of any cube in $\spc{Q}$ is a $\Cat{}{1}$ space.
-Therefore, by cone construction (\ref{thm:warp-curv-bound:cbb:a})
+Therefore, by cone construction (Exercise \ref{ex:cone+susp})
 $\spc{Q}$
 is locally $\Cat{}{0}$ space.
-It remains to apply Hadamard--Cartan theorem 
+It remains to apply Globalization theorem 
 \ref{thm:hadamard-cartan}.
 \qeds
 
@@ -672,7 +689,7 @@ it follows that the cubical analog
 of any flag complex is aspherical.
 The following exercise states that the  converse also holds, see \cite[5.4]{davis-survey}.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:flag-aspherical}
 A simplicial complex is flag 
 if and only if its cubical analog is aspherical.
 \end{thm}
@@ -680,7 +697,7 @@ if and only if its cubical analog is aspherical.
 \section{Exotic aspherical manifolds}
 
 
-By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan})
+By Globalization theorem (\ref{thm:hadamard-cartan})
 any $\Cat{}{0}$ space is contractible.
 Therefore any complete locally $\Cat{}{0}$ space 
 is \emph{aspherical};
@@ -721,15 +738,6 @@ Assume  $\tilde{\spc{Q}}$ is simply connected at infinity.
 Then $\spc{S}$ is simply connected.
 \end{thm}
 
-The proof below can be modified to prove the following extension. 
-
-\begin{thm}{Exercise}\label{ex:example-pi_infty-new}
-Under the assumptions of the Lemma~\ref{lem:example-pi_infty}, 
-for any vertex $v$ in $\spc{S}$
-the complement $\spc{S}\backslash\{v\}$ is simply connected.
-\end{thm}
-
-
 \parit{Proof of Lemma~\ref{lem:example-pi_infty}.}
 Assume $\spc{S}$ is not simply connected.
 Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
@@ -753,7 +761,7 @@ $\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
 
 Indeed, according to Proposition \ref{prob:cubical-analog},
 $\tilde{\spc{Q}}$ is $\Cat{}{0}$.
-By ???, %here there should be ref to locconvex+connected => convex in CAT(0)
+By Exercise \ref{ex:locally-convex}???,
 it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
 or equivalently $G$ is locally convex in $\spc{Q}$.
 
@@ -802,6 +810,12 @@ lies outside of any compact set $K'$ in $\tilde{\spc{Q}}$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:example-pi_infty-new}
+Under the assumptions of the Lemma~\ref{lem:example-pi_infty}, 
+for any vertex $v$ in $\spc{S}$
+the complement $\spc{S}\backslash\{v\}$ is simply connected.
+\end{thm}
+
 \parit{Proof of Proposition~\ref{prop:aspherical}.}
 Let $\Sigma^{m-1}$ be an $(m-1)$-dmensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold $\spc{W}$. 
 
@@ -848,26 +862,6 @@ and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$.
 
 \section{Comments}
 
-\parbf{Generalized flag condition.}
-It would be interesting to get an analog of the flag condition for other simplices 
-which (not necessary right-angled).
-Such a condition for some spherical Coxeter simplex
-could resolve the following problem; 
-see \cite{panov-petrunin} for more details. 
-
-\begin{thm}{Braid space problem}
-Consider $\CC^n$ with coordinates $z_1,z_2,\dots,z_n$.
-Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$, for all $i\ne j$,
-pass to the universal caver and consider the completion $\spc{B}_n$ 
-of the obtained space.
-
-Is it true that $\spc{B}_n$ is a $\Cat{}{0}$ space for any $n$.
-\end{thm}
-
-The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$.
-This and number of related questions are discussed in \cite{panov-petrunin:ramification}
-
-\parbf{More exotic constructions.}
 The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting thins; 
 some of them discussed in the survey \cite{davis-survey} by Michael Davis.
 
@@ -901,7 +895,7 @@ and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 
 
 It worth to note that any complete simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
-In fact by Hadamard--Cartan theorem
+In fact by Globalization theorem
 (\ref{thm:hadamard-cartan}), 
 the exponential map at one point of such manifold is a homeomorphism.
 In particular there is no Riemannian analog of the proposition.
@@ -913,7 +907,7 @@ A similar construction was used by Michael Davis, Tadeusz Januszkiewicz and Jean
 to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that (1) $M$ admits a polyhedral metric which is locally $\Cat{}{0}$ but it does not admit a Riemannian metric with nonpositive sectional curvature.
 
 The construction described in this chapter also lead to so called \emph{hyperbolization}, a flexible tool to construct a aspherical spaces;
-??? is a good survey in the subject.
+\cite{charney-davis} is a good survey in the subject.
 
 
 

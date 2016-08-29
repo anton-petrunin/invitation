@@ -1,20 +1,22 @@
 \chapter{Preliminaries}
 
-In this chapter we fix some conventions assuming that the reader is familiar with basic notions in metric geometry.
+In this chapter we fix some conventions and remind the main definitions.
+For more background in metric geometry, reader advised to read the book of Burgos and Ivanov \cite{BBI}.
+ 
 
 \section{Metric spaces}
 \label{sec:metric spaces}
 
 
-The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$
-if we need to emphasize 
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
+The latter notation is used if we need to emphasize 
 that the distance is taken in the space ${\spc{X}}$.
 
-The function $y\mapsto \dist{x}{y}{}$ is called \emph{distance function}\index{distance function} from $x$ and denoted as  $\dist{x}{}{}$. 
+The function $\dist{x}{}{}\:y\mapsto \dist{x}{y}{}$ is called \emph{distance function}\index{distance function} from $x$. 
 
 \begin{itemize}
 \item The \emph{diameter}\index{Diameter} of metric space $\spc{X}$ is defined as
-\[\diam \spc{X}=\sup\set{\dist{x}{y}{}}{x,y\in \spc{X}}.\]
+\[\diam \spc{X}=\sup\set{\dist{x}{y}{\spc{X}}}{x,y\in \spc{X}}.\]
 
 \item Given $R\in[0,\infty]$ and $x\in \spc{X}$, the sets
 \begin{align*}
@@ -23,25 +25,10 @@ The function $y\mapsto \dist{x}{y}{}$ is called \emph{distance function}\index{d
 \cBall[x,R]&=\{y\in \spc{X}\mid \dist{x}{y}{}\le R\}
 \end{align*}
 are called respectively the  \emph{open}\index{open ball} and  the \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
- If we need to emphasize that these balls are taken in the metric space $\spc{X}$,
+Again, if we need to emphasize that these balls are taken in the metric space $\spc{X}$,
 we write 
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}\]
 correspondingly.
-
-\item
-For subsets $A, B\subset \spc{X}$, 
-we define the distance between $A$ and $B$  as 
-\[\dist{A}{B}{}
-\df
-\inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]
-\item
-For any subset $A\subset\spc{X}$,  the sets
-\begin{align*}
-\oBall(A,R)&=\{y\in \spc{X}\mid \dist{A}{y}{}<R\},
-\\
-\cBall[A,R]&=\{y\in \spc{X}\mid \dist{A}{y}{}\le R\}
-\end{align*}
-are called respectively the  \emph{open}\index{open tubular neighborhood} and \emph{closed $R$-neighborhoods}\index{closed neighborhood} of $A$.
 \end{itemize}
 
 A metric space $\spc{X}$ is called \emph{proper}\index{proper space} if all closed bounded sets in $\spc{X}$ are compact. 
@@ -49,41 +36,61 @@ This condition is equivalent to each of the following statements:
 \begin{enumerate}
 \item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
 the closed ball $\cBall[p,R]\subset\spc{X}$ is compact. 
-\item The function $\dist{p}{}{}\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$.
+\item The function $\dist{p}{}{}\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$;
+that is, for any compact set $K\subset \RR$, its inverse image 
+$\set{x\in \spc{X}}{\dist{p}{x}{\spc{X}}\in K}$
+is compact.
 \end{enumerate}
-
-The following two propositions are standard and easy to prove.
-
-\begin{thm}{Proposition}
-Proper metric spaces are second-countable.
-\end{thm}
-
-
-\begin{thm}{Proposition}\label{compact=seq-compact}
-Let $\spc{X}$ be a metric space. Then the following are equivalent
-\begin{enumerate}[i)]
-\item $\spc{X}$ is compact;
-\item $\spc{X}$ is \emph{sequentially compact}, that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
-\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net in $\spc{X}$, that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\cup_i\oBall(p_i,\eps)=\spc{X}$.
-\end{enumerate}
-\end{thm}
-
-Recall that a family of maps between metric spaces $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$ is called \emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.
-\begin{thm}{Arzel\`a-Ascoli theorem}\cite[Lemma 3.10]{BH}
-
-Let  $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$  be an equicontinuous family  of maps where $\spc{Y}$ is compact and $\spc{X}$ is separable. 
-
-Then $\{f_\alpha\}$ contains a uniformly convergent subsequence $f_{\alpha_i}\to f\co\spc{X}\to\spc{Y}$.
-\end{thm}
 
 \section{Constructions}\label{sec:constructions}
 
+\parbf{Product space.}
 Given two metric spaces $\spc{U}$ and $\spc{V}$, the \emph{product space} 
 $\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ in the set $\spc{U}\times\spc{V}$ 
 with the metric defined by formulas
 \[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
 
-%???CONE AND SUSP
+Given a metric spaces $\spc{U}$,
+we say that $\spc{V}$ is Euclidean cone over $\spc{U}$
+if the underlying set of $\spc{V}$ is formed 
+
+\parbf{Cone.}
+The \emph{cone} $\spc{V}=\Cone\spc{U}$ over metric space $\spc{U}$
+is defined as the metric space with underlying set formed by the equivalence classes on
+$[0,\infty)\times \spc{U}$ with the minimal equivalence relation ``$\sim$'' such that $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$
+and the metric given by cosine rule
+\[
+\dist{(p,s)}{(q,t)}{\spc{V}} 
+=
+\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
+\]
+where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
+
+The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called \emph{tip of the cone} and denoted by $0$ or $0_{\spc{V}}$.
+The distance $\dist{0}{v}{\spc{V}}$ is called norm of $v$ and denoted as $|v|$ or $|v|_{\spc{V}}$.
+
+\parbf{Suspension.}
+The \emph{suspension} $\spc{V}=\Susp\spc{U}$ over metric space $\spc{U}$
+is defined as the metric space with underlying set formed by the equivalence classes on
+$[0,\infty]\times \spc{U}$ with the equivalence relation ``$\sim$'' defined by $(0,p)\sim (0,q)$ and $(\pi,p)\sim (\pi,q)$ for any points $p,q\in\spc{U}$
+and the metric given by spherical cosine rule
+\[
+\cos\dist{(p,s)}{(q,t)}{\Cone\spc{U}} 
+=
+\cos s\cdot\cot t+\sin s\cdot\sin t\cdot\cos\alpha,
+\]
+where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
+
+The points in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ is called \emph{north} \emph{south pole} of the suspension.
+
+\begin{thm}{Exercise}\label{ex:product-cone}
+Let $\spc{U}$ be a metric space.
+Show that the spaces 
+\[\RR\times \Cone\spc{U}\quad\text{and}\quad\Cone[\Susp\spc{U}]\]
+are isometric.
+\end{thm}
+
+
 
 
 \section{Geodesics, triangles and hinges}
@@ -102,7 +109,20 @@ A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \emph{ray}\ind
 
 A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \emph{line}\index{line}.
 
-%geodesic between points is not defined???
+\begin{thm}{Proposition}\label{prop:busemann}
+Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a ray. 
+Then the \index{Busemann function}\emph{Busemann function} $\bus_\gamma\:\spc{X}\to \RR$ 
+\[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
+is defined
+and $1$-Lipschitz.
+\end{thm}
+
+\parit{Proof.}
+As  follows from the triangle inequality, the function \[t\mapsto\dist{\gamma(t)}{x}{}- t\] is nonincreasing in $t$.  
+Clearly $\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}$.
+Thus the limit in \ref{eq:def:busemann*} is defined.
+\qeds
+
 A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{*}{*}]}$}.
 We assume $\geod_{[p q]}$ is parametrized starting at $p$; 
 that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
@@ -139,19 +159,6 @@ $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
 A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
 
-\begin{thm}{Proposition}\label{prop:busemann}
-Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a ray. 
-Then the \index{Busemann function}\emph{Busemann function} $\bus_\gamma\:\spc{X}\to \RR$ 
-\[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
-is defined
-and $1$-Lipschitz.
-\end{thm}
-
-\parit{Proof.}
-As  follows from the triangle inequality, the function \[t\mapsto\dist{\gamma(t)}{x}{}- t\] is nonincreasing in $t$.  
-Clearly $\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}$.
-Thus the limit in \ref{eq:def:busemann*} is defined.
-\qeds
 
 \parbf{Triangles.}
 For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use short notation 
@@ -160,8 +167,7 @@ Again given a triple $p,q,r\in \spc{X}$ it may be no triangle
 $\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also it maybe many different triangles with these vertexes, any of which can be denoted by $\trig p q r$.
 Once we write $\trig p q r$, it means we made a choice of such a triangle, 
 that is, a choice of each $[q r], [r p]$ and $[p q]$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triangle} $\trig p q r$;
-it obviousely coinsides with perimeter of triple $p$, $q$, $r$ defined below.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triangle} $\trig p q r$.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
@@ -174,7 +180,8 @@ Let $\spc{X}$ be a metric space.
 A set $A\subset\spc{X}$ is called 
 \emph{convex}%
 \index{convex set}
-if for every two points $p,q\in A$ there every geodesic $[pq]$ of $\spc{X}$ 
+if for every two points $p,q\in A$, 
+every geodesic $[pq]$ of $\spc{X}$ 
 lies in $A$.
 
 A set $A\subset\spc{X}$ is called 
@@ -345,8 +352,8 @@ Assume the contrary; that is, $\rho(x)<\infty$.
 
 Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
-the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in $B$.
-Since $B$ is closed and hence complete, it has to be compact by Proposition~\ref{compact=seq-compact}.
+the set $\cBall[x,\rho(x)-\eps]$ forms a compact $\eps$-net in $B$.
+Since $B$ is closed and hence complete, it has to be compact.
 \claimqeds
 
 \begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
@@ -371,7 +378,7 @@ Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact;
 a contradiction.
 \qeds
 
-\begin{thm}{Exercise}(from \cite{BH})\label{exercise from BH}
+\begin{thm}{Exercise}\label{exercise from BH}
 Construct a geodesic space which is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
@@ -393,34 +400,32 @@ but whose completion is neither geodesic nor locally compact.
 \section{Model angles and triangles.}\label{sec:mod-tri/angles}
 
 Let $\spc{X}$ be a metric space, 
-$p,q,r\in \spc{X}$ 
-and $\kappa\in\RR$. 
+$p,q,r\in \spc{X}$. 
 Let us define its \emph{model triangle}\index{model triangle} $\trig{\~p}{\~q}{\~r}$ 
 (briefly, 
-$\trig{\~p}{\~q}{\~r}=\modtrig\kappa(p q r)$%
-\index{$\modtrig\kappa$!$\modtrig\kappa({*}{*}{*})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
+$\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
+\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ such that
 \[\dist{\~p}{\~q}{}=\dist{p}{q}{},
 \ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
 \ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
 
-In the notation of Section~\ref{model}, 
-$\modtrig\kappa(p q r)=\modtrig\kappa\{\dist{q}{r}{},\dist{r}{p}{},\dist{p}{q}{}\}$.
+The same way we can define a \emph{hyperbolic} and \emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
+in the hyperbolic plane $\HH^2$ and sphere $\SS^2$.
+In the latter case the model triangle is said to be defined if in addition
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
+In this case it also exists and unique up to isometry of $\SS^2$.
 
-If $\kappa\le 0$ model triangle allways defined, it exists and unique up to isometry of $\Lob2\kappa$.
-If $\kappa>0$, the model triangle is said to be defined if in addition
-\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
-In this case it also exists and unique up to isometry of $\Lob2\kappa$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triple} $p$, $q$, $r$.
+If 
+$\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
+and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
+the angle measure of 
+$\trig{\~p}{\~q}{\~r}$ at $\~p$ 
+will be called \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
+$\angk p q r_{\EE^2}$%
+\index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
+The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
+in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\SS^2}$ is defined.
 
-If for  $p,q,r\in \spc{X}$,
-$\trig{\~p}{\~q}{\~r}=\modtrig\kappa(p q r)$ is defined 
-and $\dist{p}{q}{},\dist{p}{r}{}>0$, the angle measure of 
-$\trig{\~p}{\~q}{\~r}$ at $\~ p$ will be called \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
-$\angk\kappa p q r$%
-\index{$\tangle\mc\kappa$!$\angk\kappa{{*}}{{*}}{{*}}$}.
-
-In the notation of Section~\ref{model}, 
-$\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}$.
 
 \begin{wrapfigure}[10]{r}{35mm}
 \begin{lpic}[t(0mm),b(-10mm),r(0mm),l(0mm)]{pics/lem_alex1(0.4)}
@@ -435,68 +440,70 @@ $\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}
 \index{Alexandrov's lemma}
 \index{lemma!Alexandrov's lemma}
 \label{lem:alex}  
-Let $p,q,r,z$ be distinct points in a metric space such that $z\in \l]p r\r[$ and 
-\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
+Let $p,q,r,z$ be distinct points in a metric space such that $z\in \l]p r\r[$.
 Then 
 the following expressions have the same sign:
 \begin{subthm}{lem-alex-difference}
-$\angk\kappa p q z
--\angk\kappa p q r$,
+$\angk p q z
+-\angk p q r$,
 \end{subthm} 
 
 \begin{subthm}{lem-alex-angle}
-$\angk\kappa z q p
-+\angk\kappa z q r -\pi$.
+$\angk z q p
++\angk z q r -\pi$.
 \end{subthm}
 
 Moreover,
-\[\angk\kappa q p r \ge \angk\kappa q p z +  \angk\kappa q z r,\]
+\[\angk q p r \ge \angk q p z +  \angk q z r,\]
 with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
+
+The same holds for hyperbolic and spherical model angles, but in the latter case one has to assume in addition that
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
 \end{thm}
 
 \parit{Proof.} By the triangle inequality, 
 \[
 \dist{p}{q}{}+\dist{q}{z}{}+\dist{z}{p}{}\le \dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.
 \]
-Therefore the model triangle $\trig{\~p}{\~q}{\~z}=\modtrig\kappa p q z$ is defined.
+Therefore the model triangle $\trig{\~p}{\~q}{\~z}=\modtrig(p q z)_{\EE^2}$ is defined.
 Take 
 a point $\~r$ on the extension of 
 $[\~p \~z]$ beyond $\~z$ so that $\dist{\~p}{\~r}{}=\dist{p}{r}{}$ (and therefore $\dist{\~p}{\~z}{}=\dist{p}{z}{}$). 
- 
-From monotonicity of function $a\mapsto\tangle\mc\kappa\{a;b,c\}$ (\ref{increase}), 
+
+Since the increasing the opposite side in the plane triangle increase the corresponding angle, 
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
-\item $\mangle\hinge{\~p}{\~q}{\~r}-\angk\kappa{p}{q}{r}$;
+\item $\mangle\hinge{\~p}{\~q}{\~r}-\angk{p}{q}{r}$;
 \item $\dist{\~p}{\~r}{}-\dist{p}{r}{}$;
-\item $\mangle\hinge{\~z}{\~q}{\~r}-\angk\kappa{z}{q}{r}$.
+\item $\mangle\hinge{\~z}{\~q}{\~r}-\angk{z}{q}{r}$.
 \end{enumerate}
 Since 
-\[\mangle\hinge{\~p}{\~q}{\~r}=\mangle\hinge{\~p}{\~q}{\~z}=\angk\kappa{p}{q}{z}\]
+\[\mangle\hinge{\~p}{\~q}{\~r}=\mangle\hinge{\~p}{\~q}{\~z}=\angk{p}{q}{z}\]
 and
 \[ \mangle\hinge{\~z}{\~q}{\~r}
 =\pi-\mangle\hinge{\~z}{\~p}{\~q}
-=\pi-\angk\kappa{z}{p}{q},\]
+=\pi-\angk{z}{p}{q},\]
 the first statement follows.
 
-For the second statement, construct $\trig{\~q}{\~z}{r'}=\modtrig\kappa q z r$ on the opposite side of $[\~q\~z]$ from $\trig{\~p}{\~q}{\~z}$.  
+For the second statement, construct $\trig{\~q}{\~z}{\~r'}=\modtrig(qzr)_{\EE^2}$ on the opposite side of $[\~q\~z]$ from $\trig{\~p}{\~q}{\~z}$.  
 Since
-\[\dist{\~p}{r'}{}\le \dist{\~p}{\~z}{} + \dist{\~z}{r'}{}=\dist{p}{z}{}+\dist{z}{r}{}=\dist{p}{r}{},\]
+\[\dist{\~p}{\~r'}{}\le \dist{\~p}{\~z}{} + \dist{\~z}{\~r'}{}=\dist{p}{z}{}+\dist{z}{r}{}=\dist{p}{r}{},\]
 then 
 \begin{align*}
-\angk\kappa{q}{p}{z} + \angk\kappa{q}{z}{r} 
+\angk{q}{p}{z} + \angk{q}{z}{r} 
 &
 = 
-\mangle\hinge{\~q}{\~p}{\~z}+ \mangle\hinge{\~q}{\~z}{r'} 
+\mangle\hinge{\~q}{\~p}{\~z}+ \mangle\hinge{\~q}{\~z}{\~r'} 
 =
 \\
 &
 = 
-\mangle\hinge{\~q}{\~p}{r'}
+\mangle\hinge{\~q}{\~p}{\~r'}
 \le
 \\
-&\le  \angk\kappa q p r.
+&\le  \angk q p r.
 \end{align*}
-Equality holds if and only  if $\dist{\~p}{r'}{}=\dist{p}{r}{}$, 
+Equality holds if and only  if $\dist{\~p}{\~r'}{}=\dist{p}{r}{}$, 
 as required.
 \qeds
 
@@ -508,68 +515,58 @@ Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} as
 follows:\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \[\mangle\hinge p x y
 \df
-\lim_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
+\lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y}_{\EE^2},\eqlbl{eq:def-angle}\]
 where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
-
-Similarly to $\angk\kappa p{x}{y}$, 
-we will use short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}}$}
-\[\side\kappa \hinge p x y=
-\side\kappa \l\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\r\}.\]
-The value $\side\kappa \hinge p x y$ will be called the  \emph{model side}
- of hinge $\hinge p x y$.Ð
-
-\parbf{Remark.}\label{page:upper-angle}
-We stick to this definition since in Alexandrov's geometry angles always defined (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
-For general metric spaces, the angle need not be defined\index{$\mangle$!$\mangle^\text{up}$}
-and it is more natural to consider \emph{upper angle}\index{angle!upper angle} which is defined as
-\[\mangle^\text{up}\hinge p x y
-\df
-\limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
-where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
-A good discussion of different definition of angles is given in ???.
 
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
-For any $\kappa,\Kappa\in\RR$, there exists  $\Const\in\RR$ such that
-\[|\angk\Kappa p{x}{y}-\angk\kappa p{x}{y}|
-\le 
-\Const\cdot\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
+For any three points $p,x,y$ in a metric space the following inequalities
+\[
+\begin{aligned}
+|\angk p{x}{y}_{\SS^2}-\angk p{x}{y}_{\EE^2}|
+&\le 
+\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
+\\
+|\angk p{x}{y}_{\HH^2}-\angk p{x}{y}_{\EE^2}|
+&\le 
+\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
+\end{aligned}
 \eqlbl{eq:k-K}\]
-whenever  the lefthand side is defined.
+hold whenever the left hand side is defined.
 \end{thm}
 
-Lemma~\ref{lem:k-K-angle} implies that 
-the definition of angle is independent of $\kappa$.
-In particular, one can take $\kappa=0$ in the definition, so that the angle can be calculated from the  cosine law:
-\[\cos\angk{0}{p}{x}{y}
+The lemma above implies that 
+the definition of angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
+In particular, may use Euclidean plane, 
+so that the angle can be calculated from the  cosine law:
+\[\cos\angk{p}{x}{y}_{\EE^2}
 =
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
 \parit{Proof.}
-The function $\kappa\mapsto \angk\kappa p{x}{y}$ is nondecreasing (see \ref{k-decrease}).
-Thus, for $\Kappa>\kappa$, we have
+Note that 
+\[\angk p{x}{y}_{\HH^2}\le\angk{p}{x}{y}_{\EE^2}\le \angk p{x}{y}_{\SS^2}.\]
+Therefore
 \begin{align*}
-0\le \angk\Kappa p{x}{y}-\angk{\kappa}p{x}{y}
-\le& \angk\Kappa p{x}{y}+\angk\Kappa {x}p{y}+\angk\Kappa {y}p{x}-
+0\le \angk p{x}{y}_{\SS^2}-\angk p{x}{y}_{\HH^2}
+\le& \angk p{x}{y}_{\SS^2}+\angk {x}p{y}_{\SS^2}+\angk {y}p{x}_{\SS^2}-
 \\
-&-\angk\kappa p{x}{y}-\angk\kappa {x}p{y}-\angk\kappa {y}p{x}
+&-\angk p{x}{y}_{\HH^2}-\angk {x}p{y}_{\HH^2}-\angk {y}p{x}_{\HH^2}
 = 
 \\
-=&\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
+=&\area\modtrig(pxy)_{\SS^2}+\area\modtrig(pxy)_{\HH^2}.
 \end{align*}
 Thus, \ref{eq:k-K} follows since 
-%???WHY???
-\[0
-\le
-\area\modtrig\kappa(pxy)\le \area\modtrig\Kappa(pxy),
-%\le
-%O\l(\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}\r),
-\]
-%!!!
-where the latter area is at most $\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}$.
-
-%???It is true without assuming $K\le 0$??? if $K\le 0$ and hence, by central projection from a sphere to its tangent plane, is at most $\tan\dist[{{}}]{p}{x}{}\cdot\tan\dist[{{}}]{p}{y}{}$ if $K=1$.
-\qeds
+\begin{align*}
+0
+&\le
+\area\modtrig(pxy)_{\HH^2}\le 
+\\
+&\le\area\modtrig(pxy)_{\SS^2}\le
+\\
+&\le\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}.
+\end{align*}
+\qedsf
 
 
 
@@ -582,8 +579,7 @@ If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then 
 
 \end{thm}
 
-\parbf{Remark.}
-The above theorem also holds for upper angles, see the remark on page \pageref{page:upper-angle}.
+
 
 
 \parit{Proof.} 
@@ -628,7 +624,7 @@ $\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}
 so $t,\tau,s$ may be taken sufficiently small.
 \qeds 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:adjacent-angles}
 Prove that the sum of adjacent angles is at least $\pi$.
 
 More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
@@ -669,4 +665,103 @@ for any $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
+\section{Space of directions and tangent space}
+\label{sec:tangent-space+directions}
 
+Let $\spc{X}$ be a metric space with defined angles.
+Fix a point $p\in \spc{X}$. 
+
+Consider the set $\mathfrak{S}_p$ 
+of all nontrivial unit-speed geodesics  which start at $p$.
+By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
+that is, $(\mathfrak{S}_p,\mangle)$ 
+forms a pseudometric space.
+
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
+and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
+for the equivalence relation 
+\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
+
+%???
+%\begin{thm}{Exercise}\label{ex:geod-CBB}
+%Assume $\spc{L}$ is a $\CBB{}{}$ space,  and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
+%Show that 
+%\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
+%
+%\end{thm}
+
+\begin{thm}{Exercise}\label{ex:geod-CBA}
+Assume $\spc{U}$ is a $\Cat{}{}$ space
+ with extendable geodesics;
+that is for any geodesic in $\spc{U}$
+is an arc in a both-side infinite local geodesic.
+
+Show that the space of geodesic derections 
+$\Sigma_p'$ is complete for any $p\in \spc{U}$.
+\end{thm}
+
+The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The elements of $\Sigma_p$ are called \emph{directions} at $p$.
+
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
+
+The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
+To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
+Given $\alpha,\beta\in \mathfrak{T}_p$,
+set 
+\[\dist{\alpha}{\beta}{\mathfrak{T}_p}
+=
+\lim_{\eps\to0} 
+\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps
+\eqlbl{eq:dist-in-T_p}\]
+Since the angles in $\spc{X}$ are defined, 
+\ref{eq:dist-in-T_p}
+defines a pseudometric on $\mathfrak{T}_p$.
+
+
+The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
+The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
+\[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+The completion of $\T'_p$ is therefore  natuaral isometric to $\T_p$.
+
+The elements of $\T_p$ will be called tangent vector at $p$,
+despite that $\T_p$ is only cone --- not a vector space.
+The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
+
+\section{Hemisphere lemma}\label{curves-in-model}
+
+
+\begin{thm}{Hemisphere lemma}
+\label{lem:hemisphere}
+For $\kappa>0$, any closed path of length $<2\cdot \varpi\kappa$ (respectively, $\le2\cdot \varpi\kappa$) in $\Lob2\kappa$ lies in an open (respectively, closed) hemisphere. 
+\end{thm}
+
+\parit{Proof.} By rescaling, we may assume that $\kappa=1$ and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\SS^2$.
+Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
+
+Assume $\ell<\pi$.
+Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
+Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
+Let $z$ be the midpoint of  $[pq]$.  
+We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
+If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
+Without loss of generality we may assume that $r\in\check\alpha$. 
+The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which passes through $r$ and its antipodal point $r'$.
+Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
+
+If $\ell=\pi$, then either $\alpha$ is a local geodesic, and hence a great circle, 
+or $\alpha$ may be strictly shortened by substituting a geodesic arc for a subarc of $\alpha$ 
+whose endpoints $p^1,p^2$ are arbitrarily close to some point $p$ on  $\alpha$.
+In the latter case,  $\alpha$ lies in a closed hemisphere obtained as a limit of closures of open hemispheres  containing the shortened curves as $p^1,p^2$ approach $p$.
+\qeds
+
+
+
+%\begin{thm}{Lemma}\label{lem:proj-to-conv}Let $K\subset\Lob2\kappa$ be a convex closed set.Then there is a short map $\map\:\Lob2\kappa\to K$ such that $\map(x)=x$ for any $x\in K$. \end{thm}
+
+\begin{thm}{Exercise}\label{exr-crofton}
+Build a proof of Hemisphere lemma
+\ref{lem:hemisphere} based on Crofton's formula.
+\end{thm}

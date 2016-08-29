@@ -27,7 +27,6 @@
 \def\nospace{\hskip0mm}
 
 \def\:{\colon}
-%\newcommand*{\?}{%\!\mathrel{\vcenter{\offinterlineskip\hbox{.}\vskip-0.75ex\hbox{.}\vskip-0.75ex\hbox{.}}}}%%%%???VERTICAL...
 \def\~{\tilde}
 
 
@@ -263,11 +262,11 @@
 }
 
 
-\newcommand*{\modtrig}[1]{{\~\triangle}\mc{#1}}
+\newcommand*{\modtrig}[0]{{\~\triangle}}
 \newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
-\newcommand*{\angk}[4]{\tangle\mc{#1}(#2\,{}^{#3}_{#4}\hspace{-0.2ex})}
+\newcommand*{\angk}[3]{\tangle(#1\,{}^{#2}_{#3}\hspace{-0.2ex})}
 \newcommand*{\sdk}[4]{\~\boxdot\mc{#1}_#2({#3},{#4})}
-\newcommand*{\angkk}[4]{\tangle\mc{#1}\l(#2\,{}^{#3}_{#4}\hspace{-0.2ex}\r)}%as \angk+big()
+\newcommand*{\angkk}[3]{\tangle\l(#1\,{}^{#2}_{#3}\hspace{-0.2ex}\r)}%as \angk+big()
 \newcommand*{\side}[1]{\mathop{\~\curlyvee}\nolimits\mc{#1}}
 \newcommand*{\sn}[1]{\mathrm{sn}\mc{#1}}
 \newcommand*{\cs}[1]{\mathrm{cs}\mc{#1}}
@@ -330,7 +329,7 @@
 {\ifthenelse{\isempty{#3}}
 {\ifthenelse{\isempty{#2}}%
 {|{*}\z-{*}|_{#4}^{#1}}%
-{|{#2}\z-{*}|_{#4}^{#1}}}%
+{\mathop{\rm dist}\nolimits_{#2}^{#1}}}%
 {|{#2}\z-{#3}|_{#4}^{#1}}}
 
 \newcommand*\toshayetdist[4][{}]%
