@@ -1,7 +1,7 @@
 \chapter{Globalization and asphericity}
 
-In this chapter we introduce locally $\Cat{}{0}$ spaces and show that universal cover of locally $\Cat{}{0}$ space forms a $\Cat{}{0}$ space. 
-The latter implies that any locally $\Cat[0]$ space is aspherical; 
+In this chapter we introduce locally $\Cat{}{0}$ spaces and show that universal cover of locally $\Cat{}{0}$ proper length space forms a $\Cat{}{0}$ proper length space. 
+The latter implies that any locally $\Cat[0]$ proper length space is aspherical; 
 that is its universal cover is contractible.
 
 The globalization theorem leads to a \emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
@@ -29,7 +29,7 @@ In this section we will study behavior of local geodesics in the locally $\Cat{}
 The proved statements will be used in the proof of Globalization theorem (\ref{thm:hadamard-cartan}).
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
-Let $\spc{U}$ be a locally $\Cat{}{0}$ or locally $\Cat{}{1}$ space.
+Let $\spc{U}$ be a locally $\Cat{}{0}$ or locally $\Cat{}{1}$ proper length space.
 
 Assume $\gamma_n\:[0,1]\to\spc{U}$ be a sequence of local geodesic paths converging to a path $\gamma_\infty\:[0,1]\to\spc{U}$.
 Then $\gamma_\infty$ is a local geodesic path.
@@ -41,13 +41,13 @@ as $n\to\infty$.
 \parit{Proof.} 
 Fix $t\in[0,1]$.  
 Let $R>0$ be the value such that $\cBall[\gamma_\infty(t),R]$ 
-forms a $\Cat{}{0}$ space.
+forms a $\Cat{}{0}$ proper length space.
 
 A local geodesic segment  with length $<R/2$, and intersecting $\oBall(\gamma_\infty(t),R/2)$, cannot leave $\cBall[\gamma_\infty(t),R]$ and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.  
 In particular, for all sufficiently large $n$, any subsegment  of $\gamma_n$ through $\gamma_n(t)$  with length $<R/2$ is a geodesic.
 
 
-Since $\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ space, by Theorem~\ref{thm:cat-unique},
+Since $\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ proper length space, by Theorem~\ref{thm:cat-unique},
 geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 which contains a neighborhood of $t$ in $[0,1]$
@@ -63,10 +63,10 @@ so that its endpoints follow given trajectories.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
-Let $\spc{U}$ be a locally $\Cat{}{\kappa}$  space, 
+Let $\spc{U}$ be a locally $\Cat{}{\kappa}$  proper length space, 
 and $\gamma\:[0,1]\to\spc{U}$ be a locally geodesic path.
 
-Then there is a $\Cat{}{\kappa}$ space $\spc{N}$,
+Then there is a $\Cat{}{\kappa}$ proper length space $\spc{N}$,
 an open set $\hat\Omega\subset \spc{N}$,
 and a geodesic path $\hat\gamma\:[0,1]\to\hat\Omega$,
 such that there is an open locally isometric immersion 
@@ -77,7 +77,7 @@ $\map\circ\hat\gamma=\gamma$.
 \parit{Proof.} 
 Fix $r>0$ so that for each $t\in[0,1]$,
 the closed ball
-$\cBall[\gamma(t),r]$ forms a $\Cat{}{\kappa}$ space.
+$\cBall[\gamma(t),r]$ forms a $\Cat{}{\kappa}$ proper length space.
 
 Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ so that 
 \[\oBall(\gamma(t^i),r)\supset \gamma([t^{i-1},t^i])\] for all $n>i>0$.
@@ -90,7 +90,7 @@ Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along $\sim$.
 
 Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
-we conclude that $\spc{N}$ is a $\Cat{}{\kappa}$ space.
+we conclude that $\spc{N}$ is a $\Cat{}{\kappa}$ proper length space.
 
 For $t\in[t^{i-1},t^i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in $\spc{N}$.
 Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\gamma$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\gamma(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
@@ -106,22 +106,24 @@ The following two corollaries follow from Patchwork along a curve
 and Theorem on uniqueness of geodesics~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:discrete-paths}
-If $\spc{U}$ is a locally $\Cat{}{0}$ space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ is discrete;
+If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ is discrete;
 that is for any local geodesic path $\gamma$ connecting $p$ to $q$ there is $\eps>0$ such that for any other geodesic path $\delta$ from $p$ to $q$ we have
 $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
 
-Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
+Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
 \end{thm}
 
 Recall that \emph{path} is a curve parametrized by $[0,1]$.
-The spaces of paths in $\spc{U}$ also comes with the natural metric
-\[\dist{\alpha}{\beta}{}=\sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.\]
+The spaces of paths in $\spc{U}$ comes with the natural metric
+\[\dist{\alpha}{\beta}{}
+=
+\sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.\]
 
 \begin{thm}{Corollary}\label{cor:path-geod}
-Let $\spc{U}$ is a locally $\Cat{}{0}$ space than 
+Let $\spc{U}$ is a locally $\Cat{}{0}$ proper length space than 
 for any path $\alpha$ there is a choice of local geodesic path $\gamma$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma$ is continuous and if $\alpha$ is a local geodesic path then $\gamma=\alpha$. 
 
-Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ space than 
+Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space than 
 for any path $\alpha$ with length less than $\pi$ 
 there is a choice of local geodesic path $\gamma$ with length less than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma$ is continuous and if $\alpha$ is a local geodesic path then $\gamma=\alpha$.
 \end{thm}
@@ -134,7 +136,7 @@ Joint of two paths will be denoted with ``$*$'';
 if two paths $\alpha$ and $\beta$ connect the same pair of points then the joint $\bar\alpha*\beta$ forms a closed curve.
 
 \begin{thm}{Exercise}\label{ex:null-homotopic}
-Assume $\spc{U}$ is a locally $\Cat{}{1}$ space and the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary \ref{cor:path-geod}.
+Assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space and the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary \ref{cor:path-geod}.
 
 Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$,
 each has lengths less than $\pi$ 
@@ -165,14 +167,14 @@ Gromov  \cite[p.119]{gromov:hyp-groups}.
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Alexander and Bishop in \cite{ballmann:cartan-hadamard}
 and generalized further \cite{a-b:h-c}.  
 
-For $\Cat{}{1}$ spaces Globalization theorem was proved by Bowditch in \cite{bowditch}.
+For $\Cat{}{1}$ spaces, the globalization theorem was proved by Bowditch in \cite{bowditch}.
 
 \begin{thm}{Globalization theorem}
 \label{thm:hadamard-cartan}
-Any simply connected locally $\Cat{}{0}$ space 
+Any simply connected locally $\Cat{}{0}$ proper length space 
 is $\Cat{}{0}$.
 
-Analogously, assume $\spc{U}$ is a locally $\Cat{}{1}$ space
+Analogously, assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space
 such that any closed curve $\gamma\:\SS^1\to \spc{U}$ with length smaller than $2\cdot\pi$
 is null-homotopic in the class of closed curves length smaller than $2\cdot\pi$.
 Then $\spc{U}$ is a $\Cat{}{1}$ space.
@@ -189,17 +191,17 @@ The proof use a thin-triangle decompositions,
 and the inheritance lemma (\ref{lem:inherit-angle}). 
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
-A locally $\Cat{}{0}$ space $\spc{U}$ is $\Cat{}{0}$
+A locally $\Cat{}{0}$ proper length space $\spc{U}$ is $\Cat{}{0}$
 if and only if the pairs of points in $\spc{U}$  are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 
-Analogously, a locally $\Cat{}{1}$ space $\spc{U}$ is $\Cat{}{1}$ 
+Analogously, a locally $\Cat{}{1}$ proper length space $\spc{U}$ is $\Cat{}{1}$ 
 if and only if the pairs of points in $\spc{U}$ at distance less $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 The proof of Patchwork globalization uses the following construction:
 
 \begin{thm}{Line-of-sight map} \label{def:sight}
-Let  $p$ be a point and $\alpha$ be a curve of finite length in  an length space $\spc{X}$. 
+Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
 Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic from $p$ to $\bar\alpha(t)$, we say 
 \[[
 0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)%\eqlbl{eq:line-of-sight}
@@ -271,12 +273,12 @@ but one one need to use Exercise~\ref{ex:null-homotopic}. \qeds
 \section{Polyhedral spaces}
 
 \begin{thm}{Definition}\label{def:poly}
-A space $\spc{P}$ is called  
+A length space $\spc{P}$ is called  
 \emph{polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that an every simplex in $\tau$ is isometric to a simplex in a Euclidean space of appropriate dimension.
 
-Analogousely, a space $\spc{P}$ is called  
+Analogousely, a length space $\spc{P}$ is called  
 \emph{spherical polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that an every simplex in $\tau$ is isometric to a simplex in a unit sphere of appropriate dimension.
@@ -358,7 +360,8 @@ The following theorem provides a combinatorial description of polyhedral spaces 
 Let $\spc{P}$ be a polyhedral space and $\tau$ be its triangulation. 
 Then $\spc{P}$ is locally $\Cat{}{0}$ if and only if the link of any simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
 
-Analogously, if $\spc{P}$ be a spherical polyhedral space and $\tau$ be a its triangulation. Then $\spc{P}$ is $\Cat{}{1}$ if and only if $\spc{P}$ and every link of any simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
+Analogously, if $\spc{P}$ be a spherical polyhedral space and $\tau$ be a its triangulation. 
+Then $\spc{P}$ is $\Cat{}{1}$ if and only if $\spc{P}$ and every link of any simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
 \end{thm}
 
 In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}).
@@ -438,7 +441,7 @@ Note that every flag complex is determined by its 1-skeleton.
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
 
-Conclude that any simplicial complex is homeomorphic to a $\Cat{}{1}$ space.
+Conclude that any finite simplicial complex is homeomorphic to a $\Cat{}{1}$ proper length space.
 \end{thm}
 
 
@@ -666,7 +669,7 @@ is isometric to  ${\spc{S}}$
 equipped with the spherical right-angled metric.
 
 In particular, if $\spc{S}$ is a flag complex 
-then $\spc{Q}$ is a locally $\Cat{}{0}$ space 
+then $\spc{Q}$ is a locally $\Cat{}{0}$
 and therefore its universal cover $\tilde{\spc{Q}}$ is a $\Cat{}{0}$ space.
 \end{thm}
 
@@ -698,8 +701,8 @@ if and only if its cubical analog is aspherical.
 
 
 By Globalization theorem (\ref{thm:hadamard-cartan})
-any $\Cat{}{0}$ space is contractible.
-Therefore any complete locally $\Cat{}{0}$ space 
+any $\Cat{}{0}$ proper length space is contractible.
+Therefore any complete locally $\Cat{}{0}$ proper length space 
 is \emph{aspherical};
 that is, they have contractible universal covers.
 This observation can be used to construct examples of aspherical spaces. 

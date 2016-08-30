@@ -25,14 +25,14 @@ and
 $\trig{\~q}{\~x}{\~y}=\modtrig{}(qxy)_{\SS^2}$
 then we arrive to the definition of $\Cat{}{1}$ comparison
 for quadruple of points.
-If one f the spherical model triangles is undefined --- that is, if 
-\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi\] 
-or \[\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi\]
----
-we assume that $\Cat{}{1}$ comparison holds automatically.
+If one of the spherical model triangles is undefined\footnote{ that is, if 
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi\]
+or
+\[\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
+we assume that $\Cat{}{1}$ comparison automatically holds.
 
 We can do the same for the model plane with curvature $\kappa$;
-that is a sphere if $\kappa>0$, Euclidean plane if $\kappa=$ and  Lobachevsky plane of curvature $\kappa$ if $\kappa<0$.
+that is a sphere if $\kappa>0$, Euclidean plane if $\kappa=0$ and  Lobachevsky plane if $\kappa<0$.
 In this case we will arrive to a definition of $\Cat{}{\kappa}$ comparison.
 However in these notes we will consider only $\Cat{}{1}$ and $\Cat{}{0}$ comparison, so if you see $\Cat{}{\kappa}$, you can assume that $\kappa$ is $1$ or $0$.
 
@@ -42,11 +42,24 @@ all quadruples of the metric space $\spc{X}$
 satisfy $\Cat{}{\kappa}$ comparison 
 then we say that the space $\spc{X}$ is $\Cat{}{\kappa}$.
 
+Note that in order to check $\Cat{}{\kappa}$ comparison , it sufficient to know 6 distances between all the pairs of points in the quadruple.
+In particular the limit of $\Cat{}{\kappa}$ spaces is a $\Cat{}{\kappa}$; it does not even matter which definition of convergence for metric spaces you use as far as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
 
+\begin{thm}{Exercise}\label{ex:cone+susp}
+Let $\spc{V}$ be a space and $\spc{U}=\Cone\spc{V}$.
+Show that $\spc{U}$ is a $\Cat{}{0}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 
+Analogously, if $\spc{U}=\Susp\spc{V}$ then 
+$\spc{U}$ is a $\Cat{}{1}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
+\end{thm}
 
+The following exercise is bit simpler, but can be proved essentially the same way.
 
-%%%???MAYBE WE SHOULD ADD A SHORT SECTION ON 4-POINT CONDITION.
+\begin{thm}{Exercise}\label{ex:product}
+Assume $\spc{U}$ and $\spc{V}$ are $\Cat{}{0}$ spaces.
+Show that the product space $\spc{U}\times\spc{V}$ is $\Cat{}{0}$.
+\end{thm}
+
 
 \section{Thin triangles} \label{sec:thin-triangle}
 
@@ -78,50 +91,23 @@ is called \emph{spherically thin}\index{spherically thin} if
 the natural map from the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$ to $\trig{x^1}{x^2}{x^3}$ is short.
 \end{thm}
 
-\begin{thm}{Definition}
-We say that the space $\spc{X}$ is $\Cat{}{0}$ if 
-%S
-it is a geodesic space and
-% 
-all its triangles are thin.
-
-Analogously, we say that the space $\spc{X}$ is $\Cat{}{1}$ if all its triangles are spherically thin.
+\begin{thm}{Exercise}
+Show that a geodesic space is $\Cat{}{0}$ 
+(correspondingly $\Cat{}{1}$) 
+if and only if 
+all its triangles are thin (or correspondingly spherically thin).
 \end{thm}
-
-We could also define $\Cat{}{-1}$ spaces using the natural map from the model triangle in the hyperbolic plane.
-Yet more generally one can define $\Cat{}{\kappa}$ spaces for any real value $\kappa$, by using the model triangles in the $\kappa$-plane which is complete simply connected surface of constant curvature $\kappa$.
-
-On the other hand the classes of $\Cat{}{0}$ and $\Cat{}{1}$ are sufficient to show the ideas;
-so when you see $\Cat{}{\kappa}$ you can assume $\kappa=0$ or~$1$.
-In fact the class of $\Cat{}{0}$ spaces plays the main role,
-while $\Cat{}{1}$ spaces will play a role only  due to the following statement.
 
 The cone and suspension are defined in Section \ref{sec:constructions}.
 
-\begin{thm}{Exercise}\label{ex:cone+susp}
-Let $\spc{V}$ be a space and $\spc{U}=\Cone\spc{V}$.
-Show that $\spc{U}$ is a $\Cat{}{0}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
-
-Analogously, if $\spc{U}=\Susp\spc{V}$ then 
-$\spc{U}$ is a $\Cat{}{1}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
-\end{thm}
-
-The following exercise is bit simpler, but can be proved essentially the same way.
-
-\begin{thm}{Exercise}\label{ex:product}
-Assume $\spc{U}$ and $\spc{V}$ are $\Cat{}{0}$ spaces.
-Show that the product space $\spc{U}\times\spc{V}$ is $\Cat{}{0}$.
-\end{thm}
-
-
 \begin{thm}{Uniqueness of geodesics}\label{thm:cat-unique}
-In a $\Cat{}{0}$ space, pairs of points are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+In a $\Cat{}{0}$ proper length space, pairs of points are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 
-Analogously, in a $\Cat{}{1}$ space, pairs of points on distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+Analogously, in a $\Cat{}{1}$ proper length space, pairs of points on distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 \parit{Proof.} 
-Given 4 points $p^1,p^2,q^1,q^2$ in a $\Cat{}{0}$ space $\spc{U}$, 
+Given 4 points $p^1,p^2,q^1,q^2$ in a $\Cat{}{0}$ proper length space $\spc{U}$, 
 consider two triangles $\trig{p^1}{q^1}{p^2}$ and $\trig{p^2}{q^2}{q^1}$.
 Since both these triangles are thin, we get 
 \begin{align*}
@@ -140,10 +126,10 @@ The $\Cat{}{1}$ case is done essentially the same way.
 
 
 \begin{thm}{Proposition}\label{cor:loc-geod-are-min}
-Suppose $\spc{U}$ is a $\Cat{}{0}$ space.  
+Suppose $\spc{U}$ is a $\Cat{}{0}$ proper length space.  
 Then any local geodesic in $\spc{U}$ is a minimizing geodesic.
 
-Analogously, if $\spc{U}$ is a $\Cat{}{1}$ space then any local geodesic with length $<\pi$ in $\spc{U}$ is a minimizing geodesic.
+Analogously, if $\spc{U}$ is a $\Cat{}{1}$ proper length space then any local geodesic with length $<\pi$ in $\spc{U}$ is a minimizing geodesic.
 \end{thm}
 
 \parit{Proof.}
@@ -246,17 +232,17 @@ The spherical case is done along the same lines.
 Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\Omega\ni p$ such that any geodesic with the ends in $A$ which lie in $\Omega$ lies in $A$. 
 
 \begin{thm}{Exercise}\label{ex:convex-balls}
-Any ball in a $\Cat{}{0}$ space forms a convex set.
+Any ball in a $\Cat{}{0}$ proper length space forms a convex set.
 
-Analogousely, any ball in a $\Cat{}{1}$ space of radius $R<\tfrac\pi2$ forms a convex set.
+Analogousely, any ball in a $\Cat{}{1}$ proper length space of radius $R<\tfrac\pi2$ forms a convex set.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:locally-convex}
-Show that in any $\Cat{}{0}$ space any closed connected locally convex set is convex.
+Show that in any $\Cat{}{0}$ proper length space any closed connected locally convex set is convex.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:closest-point}
-Let  $\spc{U}$ be a $\Cat{}0$ space 
+Let  $\spc{U}$ be a $\Cat{}0$ proper length space 
 and $K\subset \spc{U}$ be a closed convex set.
 Show that 
 
@@ -274,11 +260,11 @@ The defined closest-point projection $p\mapsto p^*$ is short.
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ are spaces 
+$\spc{U}^1$ and $\spc{U}^2$ are proper length spaces 
 with isometric closed convex sets $A^i\subset\spc{U}^i$ and $\iota\:A^1\to A^2$ be an isometry.
 Consider the space $\spc{W}$ of all equivalence classes on $\spc{U}^1\sqcup\spc{U}^2$ for the equivalence relation such that $a\sim\iota(a)$ for any $a\in A^1$.
 
-It is straightforward to see that $\spc{W}$ forms a space if equipped with the following metric
+It is straightforward to see that $\spc{W}$ forms a proper length space if equipped with the following metric
 \begin{align*}
 \dist{x}{y}{\spc{W}}&=\dist{x}{y}{\spc{U}^i}
 \\
@@ -298,45 +284,30 @@ this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted furt
 Note that $A=\spc{U}^1\cap \spc{U}^2\subset \spc{W}$,
 therefore $A$ is also a convex set in $\spc{W}$.
 
-The following theorem was proved by Reshetnyak for proper spaces in \cite{reshetnyak:glue}.
+The following theorem was proved by Reshetnyak in \cite{reshetnyak:glue}.
 Recall, that once you see $\Cat{}{\kappa}$, you may read $\Cat{}{0}$ or $\Cat{}{1}$.
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
-%<<<<<<< HEAD
-$\spc{U}^1$ and $\spc{U}^2$ are $\Cat{}{0}$ spaces 
+$\spc{U}^1$ and $\spc{U}^2$ are $\Cat{}{0}$ proper length spaces 
 with isometric 
-%S
-%closed 
-complete convex
-%
+closed 
+ convex
 sets $A^i\subset\spc{U}^i$, and $\iota\:A^1\to A^2$ is an isometry.
-%=======
-%$\spc{U}^1$ and $\spc{U}^2$ are $\Cat{}{\kappa}$ spaces 
-%with isometric closed sets $A^i\subset\spc{U}^i$ and $\iota\:A^1\to A^2$ is an isometry.
-%>>>>>>> 05815d2d9699d712a209a65888348851fe07213c
-Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is $\Cat{}{0}$ space.
+Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is $\Cat{}{0}$ proper length space.
 \end{thm}
 
 \parit{Proof.} 
 By construction of the gluing space, the statement can be reformulated the following way.
 
 \begin{thm}{Reformulation of \ref{thm:gluing}}
-%<<<<<<< HEAD
 Let $\spc{W}$ be a 
-space which has two closed 
+proper length space which has two closed 
 convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
 $\spc{U}^1\cup\spc{U}^1=\spc{W}$,
-%S
 $A=\spc{U}^1\cap \spc{U}^2$ is complete, 
-%
 and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
 Then $\spc{W}$ is a $\Cat{}{0}$ space.
-%=======
-%Let $\spc{W}$ be a space which has two closed convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that
-%$\spc{U}^1\cup\spc{U}^1=\spc{W}$ and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{\kappa}$.
-%Then $\spc{W}$ is a $\Cat{}{\kappa}$ space.
-%>>>>>>> 05815d2d9699d712a209a65888348851fe07213c
 \end{thm}
 
 
@@ -351,14 +322,7 @@ Then $\spc{W}$ is a $\Cat{}{0}$ space.
 \end{lpic}
 \end{wrapfigure}
 
-%<<<<<<< HEAD
-%S
-First we carry out the proof supposing our space $\spc{W}$ is geodesic:
-
 It suffices to show that any triangle $\trig {x^0}{x^1}{x^2}$ 
-%=======
-%It is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$  
-%>>>>>>> 05815d2d9699d712a209a65888348851fe07213c
 in $\spc{W}$ is thin.
 This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}^i$.
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}^1$ and $x^1,x^2\in\spc{U}^2$.
@@ -376,37 +340,20 @@ $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is thin.
 Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice 
 we get that $\trig {x^0}{x^1}{z^2}$ 
 and consequently $\trig {x^0}{x^1}{x^2}$ is thin.
-
-%S
-Now, returning to the general case, we complete the proof by showing that  $\spc{W}$ really is a geodesic space:
-
-For $x^1\in\spc{U}^1$, $x^2\in\spc{U}^2$, we may choose a sequence $z^i\in A$ such that $\dist{x^1}{z^i}{} + \dist{z^i}{x^2}{}$ converges to $\dist{x^1}{x^2}{}$, 
-and $\dist{x^1}{z^i}{}$ and $\dist{x^2}{z^i}{}$ converge. Since $A$ is complete, it suffices to show $z^i$ is a Cauchy sequence; in that case,  the limit point $p$ of $z^i$ satisfies  $\dist{x^1}{p}{} + \dist{p}{x^2}{}=\dist{x^1}{x^2}{}$, so the geodesics $[x^ 1p]$ in $\spc{U}_1$ and $[x^ 2p]$ in $\spc{U}_2$ form a geodesic $[x^1x^2]$ in $\spc{W}$.
-
-Let $z^{ij}$ be the midpoint of $[z^i z^j]$. For any  $\eps >0$, we may assume (taking  a subsequence and possibly relabeling $x^1$ and $x^2$) that for $i,j$ sufficiently large,
-\[
-\dist{x^1}{z^{ij}}{}\ge \dist{x^1}{z^i}{} - \eps,\ \ 
-\dist{x^1}{z^{ij}}{}\ge \dist{x^1}{z^j}{} - \eps.
-\]
-
-Since triangle $\trig{x^1}{z^i}{z^j}$ is thin, the analogous inequalities hold for the Euclidean model triangle $\trig{\tilde x^1}{\tilde z^i}{\tilde z^j}$ and the midpoint  $\tilde z^{ij}$  of $[{\tilde x^i}{\tilde x^j}]$.  
-Moreover, $\dist{\tilde x^1}{\tilde z^{ij}}{} \le \max\{\dist{\tilde x^1}{\tilde z^i}{}, \dist{\tilde x^1}{\tilde z^j}{}\}$, so  $\dist{\tilde x^1}{\tilde z^{ij}}{}$ and $ \dist{\tilde x^1}{\tilde z^i}{}$ are arbitrarily close for for $i,j$ sufficiently large. 
-But then $\dist{\tilde z^i}{\tilde z^j}{}$ becomes arbitrarily small for $i,j$ sufficiently large: otherwise there would be a nondegenerate limit triangle $\trig{\tilde x^1}{q}{r}$ in the Euclidean plane with $\dist{\tilde x^1}{q}{} = \dist{\tilde x^1}{r}{} =\dist{\tilde x^1}{m}{}$, where $m$ is the midpoint of 
-$[qr]$, a contradiction. Since $\dist{\tilde z^i}{\tilde z^j}{}=\dist{z^i}{z^j}{}$, then $z^i$ is a Cauchy sequence.  The theorem follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:two-rays}
 Let $Q$ be the nonconvex subset of the plane 
 bounded by two rays $\tilde\gamma^1$ and $\tilde\gamma^2$
 with common starting point and angle $\alpha$ between them.
-Assume $\spc{U}$ is a $\Cat{}{0}$ space
+Assume $\spc{U}$ is a $\Cat{}{0}$ proper length space
 and $\gamma^1,\gamma^2$ be two rays in $\spc{U}$
 starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\Cat{}{0}$ space.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:branching-cover} 
-Let $\spc{U}$ be a $\Cat{}{0}$ space.
+Let $\spc{U}$ be a $\Cat{}{0}$ proper length space.
 Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
 Show that $\tilde{\spc{U}}$ is a $\Cat{}{0}$ space.
 \end{thm}
@@ -460,7 +407,7 @@ of the natural projection $x^\kay\mapsto x$ is an isometry.
 
 
 \begin{thm}{Observation}\label{obs:puff pastry is CAT}
-Any Reshetnyak's puff pastry is a $\Cat{}{0}$ space.
+Any Reshetnyak's puff pastry is a $\Cat{}{0}$ proper length space.
 \end{thm}
 
 \parit{Proof.} Apply Reshetnyak's gluing theorem \ref{thm:gluing} recursively for the convex sets in the array.
@@ -486,10 +433,10 @@ The first statement in the proposition
 follows from the construction of Reshetnyak's  puff pastries.
 
 By Observation~\ref{obs:puff pastry is CAT}, 
-$\spc{R}$  and  $\check{\spc{R}}$ are $\Cat{}{0}$ spaces, 
+$\spc{R}$  and  $\check{\spc{R}}$ are $\Cat{}{0}$ proper length spaces, 
 hence $[x^i y^j]_{\spc{R}}$ 
-and $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
- are unique.  Since the map $\spc{R}\to\check{\spc{R}}$ is short, the image of $[x^i y^j]_{\spc{R}}$
+and $[\check x^i \check y^j]_{\check{\spc{R}}}$ are unique.  
+Since the map $\spc{R}\to\check{\spc{R}}$ is short, the image of $[x^i y^j]_{\spc{R}}$
 is a geodesic of $\check{\spc{R}}$ joining $\check x^i$ to $\check y^j$.
 Hence the second statement follows.
 \qeds
@@ -881,7 +828,7 @@ at break points
 --- in particular, 
 the angle of reflection is equal to the angle of incidence --- 
 the lift $\bar\gamma$ is locally a geodesic in $\spc{R}_\gamma$.
-Since $\spc{R}_\gamma$ is a $\Cat{}{0}$ space (see Observation~\ref{obs:puff pastry is CAT}),
+Since $\spc{R}_\gamma$ is a $\Cat{}{0}$ proper length space (see Observation~\ref{obs:puff pastry is CAT}),
 $\bar\gamma$ is a geodesic.
 
 Since $\gamma$ does not pass  through $A^1\cap\dots\cap A^n$,
