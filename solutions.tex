@@ -415,6 +415,7 @@ together with the costruction in Exercise~\ref{ex:short-map}.
 
 \parbf{Exercise~\ref{ex:bishop-sphere}.}
 
+
 %%%???SHOULD WE DO FINITE COVER TO AVOID NONPROPER SPACES???
 \parbf{Exercise~\ref{ex:two-planes}.}
 The space $K$ forms a cone over branched covering of $\mathbb{S}^3$ infinitely branching along two big circles.
@@ -429,6 +430,24 @@ The branching cover is also flag.
 It remains to apply the flag condition \ref{thm:flag}.
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
+Consider the surface $S$ 
+formed by closure of the remaining part of the boundary.
+Note that the boundary $\partial S$ of $S$ is formed by some number of broken lines.
+
+Assume $S$ is not a piecewise linear.
+Show that there is a line segment $[pq]$ in $\EE^3$ tangent to $S$ at $p$ which has no common points with $S$ except $p$.
+
+Since $S$ is locally concave,
+there is a local inner supporting plane $\Pi$ at $p$ which contains the segment $[pq]$.
+
+Note that $\Pi\cap S$ contains a segment $[xy]$ passing through $p$ with the ends at $\partial S$.
+
+Show that there is a line segmet of $\partial S$ starting at $x$ or $y$ which lies in $\Pi$.
+
+From the latter statement and local convexity of $S$, 
+all points of $[pq]$ sufficiently close to $p$ lie in $S$,
+a contradiction.
+
 
 
 \parbf{Exercise~\ref{ex:CAT=>two-convex}.}
@@ -437,6 +456,26 @@ but its interior contains the points of the complement $\EE^m\backslash K$.
 
 It remains to note that $\triangle$ is not thin in $K$.
 
-
-
 \parbf{Exercise~\ref{ex:two-convex-not-a-CAT}.}
+Clearly the set $W$ is two-convex.
+Therefore $K$ is two-convex as an interesection of two convex sets.
+
+The set $K$ on big scale looks like the complement of the half-spaces of two 3-dimnsional spaces in $\EE^4$.
+More precisely the limit, say $K'$ of $\tfrac1n\cdot K$ is 
+the completion of the complement of the half-spaces of two 3-dimensional spaces in $\EE^4$ equipped with intrinsic metric.
+
+In particular $K'$ is a cone over space $\Sigma$ which 
+can be obtained as the completion of sphere $\SS^3$ with removed two 2-dimensional hemispheres, say $H_1$ and $H_2$.
+The intersection of these hemispheres is tipically formed by a geodesic segment, say $[\xi\zeta]$.
+
+Consider the hemispheres $H_1$ and $H_2$ so that $[\xi\zeta]$ is orthogonal to the boundary spheres and its length less than $\tfrac\pi2$.
+Then the projection of a closed geodesic in $\Sigma$ to $\SS^3$
+is formed by a joint of 4 copies of $[\xi\zeta]$.
+In particular there is a closed geodesic in $\Sigma$ shorter than $2\cdot\pi$.
+Hence $\Sigma$ is not $\Cat{}{1}$ 
+and therefore $K'$ and consequently $K$ are not $\Cat{}{0}$.
+
+
+
+
+

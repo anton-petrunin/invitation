@@ -3,6 +3,49 @@
 
 In this chapter we define $\Cat{}{}$ spaces and give the first application to the billiards.
 
+\section{4-point condition}
+
+%???+PIC
+
+Given a quadrouple of points $p,q,x,y$ in a metric space $\spc{X}$,
+consider two model triangles in the plane 
+$\trig{\~p}{\~x}{\~y}=\modtrig{}(pxy)_{\EE^2}$ 
+and 
+$\trig{\~q}{\~x}{\~y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\~x\~y]$.
+
+If the inequality
+\[\dist{p}{q}{\spc{X}}\le \dist{\~p}{\~z}{\EE^2}+\dist{\~z}{\~q}{\EE^2}\]
+holds for any point $\~z\in [\~x\~y]$ then we say that 
+the quadruple $p,q,x,y$ \emph{satisfies $\Cat{}{0}$ comparison}.
+
+
+One can do the same for spherical model triangles  
+$\trig{\~p}{\~x}{\~y}=\modtrig{}(pxy)_{\SS^2}$ 
+and 
+$\trig{\~q}{\~x}{\~y}=\modtrig{}(qxy)_{\SS^2}$
+then we arrive to the definition of $\Cat{}{1}$ comparison
+for quadruple of points.
+If one f the spherical model triangles is undefined --- that is, if 
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi\] 
+or \[\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi\]
+---
+we assume that $\Cat{}{1}$ comparison holds automatically.
+
+We can do the same for the model plane with curvature $\kappa$;
+that is a sphere if $\kappa>0$, Euclidean plane if $\kappa=$ and  Lobachevsky plane of curvature $\kappa$ if $\kappa<0$.
+In this case we will arrive to a definition of $\Cat{}{\kappa}$ comparison.
+However in these notes we will consider only $\Cat{}{1}$ and $\Cat{}{0}$ comparison, so if you see $\Cat{}{\kappa}$, you can assume that $\kappa$ is $1$ or $0$.
+
+
+If  
+all quadruples of the metric space $\spc{X}$
+satisfy $\Cat{}{\kappa}$ comparison 
+then we say that the space $\spc{X}$ is $\Cat{}{\kappa}$.
+
+
+
+
+
 %%%???MAYBE WE SHOULD ADD A SHORT SECTION ON 4-POINT CONDITION.
 
 \section{Thin triangles} \label{sec:thin-triangle}
