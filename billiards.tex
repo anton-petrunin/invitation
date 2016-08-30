@@ -255,7 +255,7 @@ this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted furt
 Note that $A=\spc{U}^1\cap \spc{U}^2\subset \spc{W}$,
 therefore $A$ is also a convex set in $\spc{W}$.
 
-The following theorem was proved by Reshetnyak in \cite{reshetnyak:glue}.
+The following theorem was proved by Reshetnyak for proper spaces in \cite{reshetnyak:glue}.
 Recall, that once you see $\Cat{}{\kappa}$, you may read $\Cat{}{0}$ or $\Cat{}{1}$.
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
@@ -279,13 +279,15 @@ Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is $\Cat{}{0}$ spa
 By construction of the gluing space, the statement can be reformulated the following way.
 
 \begin{thm}{Reformulation of \ref{thm:gluing}}
-<<<<<<< HEAD
+%<<<<<<< HEAD
 Let $\spc{W}$ be a 
+space which has two closed 
+convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
+$\spc{U}^1\cup\spc{U}^1=\spc{W}$,
 %S
-complete
+$A=\spc{U}^1\cap \spc{U}^2$ is complete, 
 %
-space which has two closed convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that
-$\spc{U}^1\cup\spc{U}^1=\spc{W}$ and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
+and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
 Then $\spc{W}$ is a $\Cat{}{0}$ space.
 %=======
 %Let $\spc{W}$ be a space which has two closed convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that
@@ -333,20 +335,20 @@ we get that $\trig {x^0}{x^1}{z^2}$
 and consequently $\trig {x^0}{x^1}{x^2}$ is thin.
 
 %S
-Returning to the general case, we complete the proof by showing $\spc{W}$ must be geodesic:
+Now, returning to the general case, we complete the proof by showing that  $\spc{W}$ really is a geodesic space:
 
 For $x^1\in\spc{U}^1$, $x^2\in\spc{U}^2$, we may choose a sequence $z^i\in A$ such that $\dist{x^1}{z^i}{} + \dist{z^i}{x^2}{}$ converges to $\dist{x^1}{x^2}{}$, 
 and $\dist{x^1}{z^i}{}$ and $\dist{x^2}{z^i}{}$ converge. Since $A$ is complete, it suffices to show $z^i$ is a Cauchy sequence; in that case,  the limit point $p$ of $z^i$ satisfies  $\dist{x^1}{p}{} + \dist{p}{x^2}{}=\dist{x^1}{x^2}{}$, so the geodesics $[x^ 1p]$ in $\spc{U}_1$ and $[x^ 2p]$ in $\spc{U}_2$ form a geodesic $[x^1x^2]$ in $\spc{W}$.
 
-Let $z$ be the midpoint of $[z^i z^j]$. For any  $\eps >0$, we may assume (taking  a subsequence and possibly relabeling $x^1$ and $x^2$) that for $i,j$ sufficiently large,
+Let $z^{ij}$ be the midpoint of $[z^i z^j]$. For any  $\eps >0$, we may assume (taking  a subsequence and possibly relabeling $x^1$ and $x^2$) that for $i,j$ sufficiently large,
 \[
-\dist{x^1}{z}{}\ge \dist{x^1}{z^i}{} - \eps,\ \ 
-\dist{x^1}{z}{}\ge \dist{x^1}{z^j}{} - \eps.
+\dist{x^1}{z^{ij}}{}\ge \dist{x^1}{z^i}{} - \eps,\ \ 
+\dist{x^1}{z^{ij}}{}\ge \dist{x^1}{z^j}{} - \eps.
 \]
 
-Since triangle $\trig{x^1}{z^1}{z^2}$ is thin, the analogous inequalities hold for the Euclidean model triangle $\trig{\tilde x^1}{\tilde z^1}{\tilde z^2}$ and the midpoint  $\tilde z$  of $[{\tilde x^i}{\tilde x^j}]$.  
-Moreover, $\dist{x^1}{z}{} \le \max\{\dist{x^1}{z^i}{}, \dist{x^1}{z^j}{}\}$, so  $\dist{x^1}{z}{}$ and $ \dist{x^1}{z^i}{}$ converge to the same limit. 
-Therefore $\dist{\tilde z^i}{\tilde z^j}{}$ becomes arbitrarily small for $i,j$ sufficiently large; otherwise there would be a nondegenerate limit triangle $\trig{p}{q}{r}$ in the Euclidean plane with $\dist{p}{q}{} = \dist{p}{r}{} =\dist{p}{m}{}$, where $m$ is the midpoint of 
+Since triangle $\trig{x^1}{z^i}{z^j}$ is thin, the analogous inequalities hold for the Euclidean model triangle $\trig{\tilde x^1}{\tilde z^i}{\tilde z^j}$ and the midpoint  $\tilde z^{ij}$  of $[{\tilde x^i}{\tilde x^j}]$.  
+Moreover, $\dist{\tilde x^1}{\tilde z^{ij}}{} \le \max\{\dist{\tilde x^1}{\tilde z^i}{}, \dist{\tilde x^1}{\tilde z^j}{}\}$, so  $\dist{\tilde x^1}{\tilde z^{ij}}{}$ and $ \dist{\tilde x^1}{\tilde z^i}{}$ are arbitrarily close for for $i,j$ sufficiently large. 
+But then $\dist{\tilde z^i}{\tilde z^j}{}$ becomes arbitrarily small for $i,j$ sufficiently large: otherwise there would be a nondegenerate limit triangle $\trig{\tilde x^1}{q}{r}$ in the Euclidean plane with $\dist{\tilde x^1}{q}{} = \dist{\tilde x^1}{r}{} =\dist{\tilde x^1}{m}{}$, where $m$ is the midpoint of 
 $[qr]$, a contradiction. Since $\dist{\tilde z^i}{\tilde z^j}{}=\dist{z^i}{z^j}{}$, then $z^i$ is a Cauchy sequence.  The theorem follows.
 \qeds
 
