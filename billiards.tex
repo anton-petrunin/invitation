@@ -5,13 +5,21 @@ In this chapter we define $\Cat{}{}$ spaces and give the first application to th
 
 \section{4-point condition}
 
-%???+PIC
-
 Given a quadrouple of points $p,q,x,y$ in a metric space $\spc{X}$,
 consider two model triangles in the plane 
 $\trig{\~p}{\~x}{\~y}=\modtrig{}(pxy)_{\EE^2}$ 
 and 
 $\trig{\~q}{\~x}{\~y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\~x\~y]$.
+
+\begin{wrapfigure}{r}{31mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/CAT-pqxyz(1)}
+\lbl[r]{10.5,2;$\~p$}
+\lbl[l]{30,27;$\~q$}
+\lbl[r]{0.5,27;$\~x$}
+\lbl[l]{23,2;$\~y$}
+\lbl[b]{12,16;$\~z$}
+\end{lpic}
+\end{wrapfigure}
 
 If the inequality
 \[\dist{p}{q}{\spc{X}}\le \dist{\~p}{\~z}{\EE^2}+\dist{\~z}{\~q}{\EE^2}\]
@@ -19,22 +27,24 @@ holds for any point $\~z\in [\~x\~y]$ then we say that
 the quadruple $p,q,x,y$ \emph{satisfies $\Cat{}{0}$ comparison}.
 
 
-One can do the same for spherical model triangles  
+If one does the same for spherical model triangles  
 $\trig{\~p}{\~x}{\~y}=\modtrig{}(pxy)_{\SS^2}$ 
 and 
 $\trig{\~q}{\~x}{\~y}=\modtrig{}(qxy)_{\SS^2}$
-then we arrive to the definition of $\Cat{}{1}$ comparison
-for quadruple of points.
+then he arrives to the definition of $\Cat{}{1}$ comparison.
 If one of the spherical model triangles is undefined\footnote{ that is, if 
-\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi\]
-or
-\[\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
-we assume that $\Cat{}{1}$ comparison automatically holds.
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi
+\quad
+\text{or}
+\quad
+\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
+then it is assumed that $\Cat{}{1}$ comparison automatically holds for this quadruple.
 
 We can do the same for the model plane with curvature $\kappa$;
 that is a sphere if $\kappa>0$, Euclidean plane if $\kappa=0$ and  Lobachevsky plane if $\kappa<0$.
 In this case we will arrive to a definition of $\Cat{}{\kappa}$ comparison.
-However in these notes we will consider only $\Cat{}{1}$ and $\Cat{}{0}$ comparison, so if you see $\Cat{}{\kappa}$, you can assume that $\kappa$ is $1$ or $0$.
+However in these notes we will consider mostly $\Cat{}{0}$ comparison and occasionally $\Cat{}{1}$ comparison;
+so, if you see $\Cat{}{\kappa}$, you can assume that $\kappa$ is $0$ or $1$.
 
 
 If  
@@ -42,8 +52,14 @@ all quadruples of the metric space $\spc{X}$
 satisfy $\Cat{}{\kappa}$ comparison 
 then we say that the space $\spc{X}$ is $\Cat{}{\kappa}$.
 
-Note that in order to check $\Cat{}{\kappa}$ comparison , it sufficient to know 6 distances between all the pairs of points in the quadruple.
-In particular the limit of $\Cat{}{\kappa}$ spaces is a $\Cat{}{\kappa}$; it does not even matter which definition of convergence for metric spaces you use as far as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
+Note that in order to check $\Cat{}{\kappa}$ comparison, it sufficient to know 6 distances between all the pairs of points in the quadruple.
+The latter observation implies the following.
+
+\begin{thm}{Proposition}
+The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is $\Cat{}{\kappa}$.
+\end{thm}
+
+In fact it does not even matter which definition of convergence for metric spaces you use as far as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
 
 \begin{thm}{Exercise}\label{ex:cone+susp}
 Let $\spc{V}$ be a space and $\spc{U}=\Cone\spc{V}$.
@@ -138,9 +154,16 @@ Choose $a$ to be the maximal value
 such that $\gamma$ is minimizing on $[0,a]$.
 Further choose $b>a$ so that $\gamma$ is minimizing on $[a,b]$.
 
-%???+PIC
 
-Since triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin, we have
+\begin{wrapfigure}{r}{21mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/local-geod(1)}
+\lbl[t]{2.5,1;$\gamma(0)$}
+\lbl[b]{10,14;$\gamma(a)$}
+\lbl[t]{19,8;$\gamma(b)$}
+\end{lpic}
+\end{wrapfigure}
+
+Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin, we have
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
 for all small $\eps>0$,
 a contradiction.
@@ -479,7 +502,13 @@ for $\bm{A}$ with $A^\kay$ replaced by $\EE^m$.
 It remains to apply Proposition~\ref{prop:A-check-A}.
 \qeds
 
-%???PIC
+\begin{wrapfigure}[7]{r}{32mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/dihedral-angle(1)}
+\lbl[t]{2,5;$p$}
+\lbl{22,12;$X$}
+\lbl{27,23;$D$}
+\end{lpic}
+\end{wrapfigure}
 
 Let $X$ be a convex set in a Euclidean space.
 By a \emph{dihedral angle} we understand an intersection of two half-spaces;
@@ -507,7 +536,7 @@ is end-to-end convex.
 \end{thm}
 
 \begin{wrapfigure}{r}{52mm}
-\begin{lpic}[t(-9mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
 \lbl[t]{23,33,6;$\alpha$}
 \lbl[b]{20,47,6;$\alpha$}
 \lbl[b]{30,3,6;$\alpha$}
@@ -552,17 +581,6 @@ Proposition~\ref{prop:A-check-A} together with Observation~\ref{obs:end-to-end-c
 imply \ref{clm:z in xy} in  case $z$ lies in the interior of $A$.
 The same way we can treat the case, $z$ lies in the interior of $B$.
 
-Further we will use the following exercise in convex geometry
-
-\begin{thm}{Exercise}\label{ex:supporting-planes}
-There are half-spaces $\dot A$ and $\dot B$ such that
-$\dot A\supset A$ and $\dot B\supset B$
-and 
-\[\dist{x}{z}{}+\dist{y}{z}{}\] 
-takes minimal value
-for all $z\in \dot A\cap \dot B$.
-\end{thm}
-
 \begin{wrapfigure}{r}{35mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
 \lbl[br]{13,35;$x$}
@@ -574,6 +592,17 @@ for all $z\in \dot A\cap \dot B$.
 \lbl[t]{31,29;$\dot B$}
 \end{lpic}
 \end{wrapfigure}
+
+Further we will use the following exercise in convex geometry
+
+\begin{thm}{Exercise}\label{ex:supporting-planes}
+There are half-spaces $\dot A$ and $\dot B$ such that
+$\dot A\supset A$ and $\dot B\supset B$
+and 
+\[\dist{x}{z}{}+\dist{y}{z}{}\] 
+takes minimal value
+for all $z\in \dot A\cap \dot B$.
+\end{thm}
 
 Note that the angle measure of  $\dot A\cap \dot B$ is at least $\alpha$.
 

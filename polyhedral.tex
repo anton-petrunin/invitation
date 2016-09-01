@@ -79,6 +79,16 @@ Fix $r>0$ so that for each $t\in[0,1]$,
 the closed ball
 $\cBall[\gamma(t),r]$ forms a $\Cat{}{\kappa}$ proper length space.
 
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/patching-balls(1)}
+\lbl{7,7.5;$\spc{B}^0$}
+\lbl{20,6;$\spc{B}^1$}
+\lbl{40.5,4;$\dots$}
+\lbl{51,4.5,6;$\dots$}
+\lbl{73,8;$\spc{B}^n$}
+\end{lpic}
+\end{center}
+
 Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ so that 
 \[\oBall(\gamma(t^i),r)\supset \gamma([t^{i-1},t^i])\] for all $n>i>0$.
 Set $\spc{B}^i=\cBall[\gamma(t^i),r]$.
@@ -528,10 +538,7 @@ By Lemma~\ref{lem:link-of-flag} and Theorem~\ref{thm:PL-CAT},
 it is sufficient to show that any closed local geodesic $\gamma$ 
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
 
-%???+PIC
-
-Fix a flag complex $\spc{S}$.
-Recall that the  \index{star of vertex}\emph{star} of a vertex $v$ (briefly $\overline \Star_v$)
+Recall that the  \index{star of vertex}\emph{closed star} of a vertex $v$ (briefly $\overline \Star_v$)
 is formed by all the simplices  containing $v$. Similarly, $\Star_v$,   the open star of $v$, is the union of all simplices containing $v$ with faces opposite $v$ removed.
 
 Choose a simplex $\sigma$ which contains a point of $\gamma$.
@@ -542,6 +549,16 @@ Note that
 Since the zeroes of $f$ are  $\pi$ apart,
 $\gamma$ 
 spends time $\pi$ on every visit to $\Star_v$.
+
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/two-stars(1)}
+\lbl[br]{10,11;$v$}
+\lbl[bl]{33,11;$v'$}
+\lbl{11,5;$\Star_v$}
+\lbl{32,19;$\Star_{v'}$}
+\lbl[b]{15,18;$\gamma$}
+\end{lpic}
+\end{center}
 
 After leaving $\Star_v$,
 the local geodesic $\gamma$ has to enter another simplex, 
