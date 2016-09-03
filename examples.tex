@@ -194,14 +194,7 @@ By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2
 Assume $K$ is not two-convex.
 Then by Proposition~\ref{prop:two-cove+smooth}, there is a triangle $[xyz]$ in $K$ which is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,z\}$ does not lie in $K$ completely.
-
-
-If $K$ is a $\Cat{}{0}$ space,
-then by Reshetnyak majorization theorem, %???NOT YET IN INVITATION???
-there is a short map $f\:\Delta\to K$ which preserves $x$, $y$ and $z$.
-
-Note that the map $f$ has to be identity.
-In particular $\Delta \subset K$, a contradiction.
+Evidently $\Delta$ is not thin in $K$, that is $K$ is not $\Cat{}{0}$.
 
 \parit{``If'' part.}
 Since $K$ is simply connected,
@@ -415,19 +408,11 @@ The following exercise shows that analogous statement does not hold in higher di
 
 \begin{thm}{Exercise}\label{ex:two-planes}
 Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at single point.
-Consider the complement $\Omega=\EE^4\backslash(\Pi_1\cup\Pi_2)$
-equipped with induced length metric
-denote by $K$ the completion of universal metric cover of $\Omega$.
+Consider the double cover $K$ of $\EE^4$ branching along $\Pi_1$ and $\Pi_2$ and equip it with induced length metric.
 
 Show that 
-
-\begin{subthm}{}
-$\Omega$ is two-convex.
-\end{subthm}
-
-\begin{subthm}{}
 $K$ is a $\Cat{}{0}$ space if and only if $\Pi_1\perp\Pi_2$.
-\end{subthm}
+
 \end{thm}
 
 Before coming to the proof of Shefel's theorem, 
@@ -728,7 +713,11 @@ and $W'=\iota(W)$ for some motion $\iota\:\EE^4\to\EE^4$.
 Show that $K$ is always two-convex and one can choose $\iota$ so that $K$  with the induced length metric is not $\Cat{}{0}$.
 \end{thm}
 
-
+\begin{thm}{Exercise}\label{ex:branching-cover} 
+Let $\spc{U}$ be a $\Cat{}{0}$ proper length space.
+Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
+Show that $\tilde{\spc{U}}$ is a $\Cat{}{0}$ space.
+\end{thm}
 
 
 

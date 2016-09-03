@@ -55,7 +55,7 @@ then we say that the space $\spc{X}$ is $\Cat{}{\kappa}$.
 Note that in order to check $\Cat{}{\kappa}$ comparison, it sufficient to know 6 distances between all the pairs of points in the quadruple.
 The latter observation implies the following.
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:cat-limit}
 The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is $\Cat{}{\kappa}$.
 \end{thm}
 
@@ -107,7 +107,7 @@ is called \emph{spherically thin}\index{spherically thin} if
 the natural map from the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$ to $\trig{x^1}{x^2}{x^3}$ is short.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:thin=cat}
 Show that a geodesic space is $\Cat{}{0}$ 
 (correspondingly $\Cat{}{1}$) 
 if and only if 
@@ -138,6 +138,27 @@ Since both these triangles are thin, we get
 
 Hence continuity and uniqueness in the $\Cat{}{0}$ case follows.
 The $\Cat{}{1}$ case is done essentially the same way.
+\qeds
+
+
+\begin{thm}{Corollary}\label{cor:contractible-cat}
+Any $\Cat{}{0}$ proper length space is contactable.
+
+Analogously, any $\Cat{}{1}$ proper length space with diameter $<\tfrac\pi2$ is contractible.
+\end{thm}
+
+\parit{Proof.} Let $\spc{U}$ be a $\Cat{}{0}$ proper length space.
+Fix a point $p\in \spc{U}$ in the space.
+
+For each point $x$ consider the geodesic path $\gamma_x\:[0,1]\to \spc{U}$ from $p$ to $x$.
+Consider the map 
+$h_t\:x\mapsto \gamma_x(t)$  for each $t$.
+By uniqueness of geodesics (\ref{thm:cat-unique}) the map 
+$(t,x)\mapsto h_t(x)$ is continuous.
+
+It remains to note that $h_1(x)=x$ and $h_0(x)=p$ for any $x$.
+
+The proof of the $\Cat{}{1}$ case is identical.
 \qeds
 
 
@@ -377,12 +398,6 @@ Assume $\spc{U}$ is a $\Cat{}{0}$ proper length space
 and $\gamma^1,\gamma^2$ be two rays in $\spc{U}$
 starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\Cat{}{0}$ space.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:branching-cover} 
-Let $\spc{U}$ be a $\Cat{}{0}$ proper length space.
-Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
-Show that $\tilde{\spc{U}}$ is a $\Cat{}{0}$ space.
 \end{thm}
 
 \section{Reshetnyak's puff pastry}\label{sec:puff-pastry}

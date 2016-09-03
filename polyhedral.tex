@@ -381,7 +381,7 @@ Then $\spc{P}$ is $\Cat{}{1}$ if and only if $\spc{P}$ and every link of any sim
 
 In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}).
 
-\begin{thm}{Corollary} Any locally $\Cat{}{0}$ compact space which contains no closed geodesics is $\Cat{}{0}$.
+\begin{thm}{Corollary}\label{cor:closed-geod-cat} Any locally $\Cat{}{0}$ compact space which contains no closed geodesics is $\Cat{}{0}$.
  
 Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geodesics of length smaller than $2\cdot\pi$ is $\Cat{}{1}$.
 \end{thm}
@@ -392,13 +392,22 @@ Assume contrary.
 Fix a nontrivial homotopy class of closed curves.
 
 Denote by $\ell$ the exact lower bound for the lengths of curves in the class.
-Note that $\ell>0$. %%%???MORE???
+Note that $\ell>0$;
+otherwise there would be a closed noncontractable curve in a $\Cat{}{0}$ spherical neighborhood of some poin which contradicts Corollary \ref{cor:contractible-cat}.
 
 Since the space is compact the class contains a length minimizing curve
 which has to be a closed geodesic. 
 
 The $\Cat{}{1}$ is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:geod-circle}
+In the assumptions of Corollary~\ref{cor:closed-geod-cat},
+prove that the space contains \emph{geodesic circle}; 
+that is a simple closed curve $\gamma$ such that 
+for any two points $p,q\in\gamma$ one the arcs of with endpoints $p$ and $q$ forms a minimizing geodesic. 
+\end{thm}
+
 
 
 \parit{Proof of Theorem~\ref{thm:PL-CAT}.}
@@ -491,7 +500,7 @@ and so on we get that $\spc{S}$ is flag.
 \qeds
 
 
-\parbf{All-right triangulation.} %???right-angled triangulation???
+\parbf{All-right triangulation.}
 A triangulation of a spherical polyhedral space 
 is called an  \emph{all-right triangulation} 
 if each simplex of the triangulation is isometric 
@@ -786,7 +795,7 @@ $\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
 
 Indeed, according to Proposition \ref{prob:cubical-analog},
 $\tilde{\spc{Q}}$ is $\Cat{}{0}$.
-By Exercise \ref{ex:locally-convex}???,
+By Exercise \ref{ex:locally-convex},
 it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
 or equivalently $G$ is locally convex in $\spc{Q}$.
 
