@@ -1,11 +1,11 @@
 \part{Curvature bounded above}
 \chapter{Gluing theorem and billiards}
 
-In this chapter we define $\Cat{}{}$ spaces and give the first application to the billiards.
+In this chapter we define $\Cat{}{}$ spaces and give the first application, to billiards.
 
 \section{4-point condition}
 
-Given a quadrouple of points $p,q,x,y$ in a metric space $\spc{X}$,
+Given a quadruple of points $p,q,x,y$ in a metric space $\spc{X}$,
 consider two model triangles in the plane 
 $\trig{\~p}{\~x}{\~y}=\modtrig{}(pxy)_{\EE^2}$ 
 and 
@@ -27,11 +27,11 @@ holds for any point $\~z\in [\~x\~y]$ then we say that
 the quadruple $p,q,x,y$ \emph{satisfies $\Cat{}{0}$ comparison}.
 
 
-If one does the same for spherical model triangles  
+If we do the same for spherical model triangles  
 $\trig{\~p}{\~x}{\~y}=\modtrig{}(pxy)_{\SS^2}$ 
 and 
-$\trig{\~q}{\~x}{\~y}=\modtrig{}(qxy)_{\SS^2}$
-then he arrives to the definition of $\Cat{}{1}$ comparison.
+$\trig{\~q}{\~x}{\~y}=\modtrig{}(qxy)_{\SS^2}$,
+then we arrive at the definition of $\Cat{}{1}$ comparison.
 If one of the spherical model triangles is undefined\footnote{ that is, if 
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi
 \quad
@@ -42,7 +42,7 @@ then it is assumed that $\Cat{}{1}$ comparison automatically holds for this quad
 
 We can do the same for the model plane with curvature $\kappa$;
 that is a sphere if $\kappa>0$, Euclidean plane if $\kappa=0$ and  Lobachevsky plane if $\kappa<0$.
-In this case we will arrive to a definition of $\Cat{}{\kappa}$ comparison.
+In this case we arrive at the definition of $\Cat{}{\kappa}$ comparison.
 However in these notes we will consider mostly $\Cat{}{0}$ comparison and occasionally $\Cat{}{1}$ comparison;
 so, if you see $\Cat{}{\kappa}$, you can assume that $\kappa$ is $0$ or $1$.
 
@@ -59,15 +59,17 @@ The latter observation implies the following.
 The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is $\Cat{}{\kappa}$.
 \end{thm}
 
-In fact it does not even matter which definition of convergence for metric spaces you use as far as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
+In fact it does not even matter which definition of convergence for metric spaces you use, as long as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
 
 \begin{thm}{Exercise}\label{ex:cone+susp}
 Let $\spc{V}$ be a space and $\spc{U}=\Cone\spc{V}$.
-Show that $\spc{U}$ is a $\Cat{}{0}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
+Show that $\spc{U}$ is  $\Cat{}{0}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 
 Analogously, if $\spc{U}=\Susp\spc{V}$ then 
-$\spc{U}$ is a $\Cat{}{1}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
+$\spc{U}$ is  $\Cat{}{1}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 \end{thm}
+
+The cone and suspension constructions are defined in Section \ref{sec:constructions}.
 
 The following exercise is bit simpler, but can be proved essentially the same way.
 
@@ -81,40 +83,37 @@ Show that the product space $\spc{U}\times\spc{V}$ is $\Cat{}{0}$.
 
 
 The inheritance lemma \ref{lem:inherit-angle} proved below 
-plays the central role in the theory;
-it will lead to two fundamental constructions: patchwork globalization  (\ref{thm:alex-patch}) 
-and Reshetnyak gluing (\ref{thm:gluing})
-which in turn used to prove 
+plays the central role in the theory.  It will lead to two fundamental constructions: patchwork globalization  (\ref{thm:alex-patch}) 
+and Reshetnyak gluing (\ref{thm:gluing}),
+which in turn are used to prove 
 the globalization theorem (\ref{thm:hadamard-cartan}).
 
 \medskip
 
-Recall that \emph{triangle} $\trig {x^1}{x^2}{x^3}$ in a space $\spc{X}$ 
+Recall that a \emph{triangle} $\trig {x^1}{x^2}{x^3}$ in a space $\spc{X}$ 
 is a triple of minimizing geodesics $[x^1x^2]$, $[{x^2}{x^3}]$ and $[{x^3}{x^1}]$.
 Consider the  model triangle $\trig{\~x^1}{\~x^2}{\~x^3}=\modtrig{}({x^1}{x^2}{x^3})_{\EE^2}$ in the Euclidean plane.
 The  \emph{natural map}\index{natural map} $\trig{\~x^1}{\~x^2}{\~x^3}\to \trig{x^1}{x^2}{x^3}$ 
 sends a point $\~z\in[\~x^i\~x^j]$ to the corresponding point $z\in[x^ix^j]$;
 that is, $z$ is the point such that $\dist{\~x^i}{\~z}{}=\dist{x^i}{z}{}$ and therefore $\dist{\~x^j}{\~z}{}=\dist{x^j}{z}{}$.
 
-The same way natural map can be defined by the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$.
+In the same way, a natural map can be defined by the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$.
  
 \begin{thm}{Definition of thin triangles}\label{def:k-thin}
 A triangle $\trig{x^1}{x^2}{x^3}$ in the space $\spc{X}$ 
 is called \emph{thin}\index{thin} if the natural map $\modtrig{}({x^1}{x^2}{x^3})_{\EE^2}\to \trig{x^1}{x^2}{x^3}$ is short.
 
-Analogously triangle $\trig{x^1}{x^2}{x^3}$ in the space $\spc{X}$ 
+Analogously, triangle $\trig{x^1}{x^2}{x^3}$ in the space $\spc{X}$ 
 is called \emph{spherically thin}\index{spherically thin} if
 the natural map from the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$ to $\trig{x^1}{x^2}{x^3}$ is short.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:thin=cat}
 Show that a geodesic space is $\Cat{}{0}$ 
-(correspondingly $\Cat{}{1}$) 
+(respectively $\Cat{}{1}$) 
 if and only if 
-all its triangles are thin (or correspondingly spherically thin).
+all its triangles are thin (respectively spherically thin).
 \end{thm}
-
-The cone and suspension are defined in Section \ref{sec:constructions}.
 
 \begin{thm}{Uniqueness of geodesics}\label{thm:cat-unique}
 In a $\Cat{}{0}$ proper length space, pairs of points are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
@@ -142,7 +141,7 @@ The $\Cat{}{1}$ case is done essentially the same way.
 
 
 \begin{thm}{Corollary}\label{cor:contractible-cat}
-Any $\Cat{}{0}$ proper length space is contactable.
+Any $\Cat{}{0}$ proper length space is contractible.
 
 Analogously, any $\Cat{}{1}$ proper length space with diameter $<\tfrac\pi2$ is contractible.
 \end{thm}
@@ -207,7 +206,8 @@ Now let us formulate the main result of this section.
 
 \begin{thm}{Inheritance lemma}
 \label{lem:inherit-angle} 
-Assume that a triangle $\trig p x y$ is \emph{decomposed}\index{decomposed triangle} 
+Assume that a triangle $\trig p x y$ 
+in a metric space is \emph{decomposed}\index{decomposed triangle} 
 into two triangles $\trig p x z$ and $\trig p y z$;
 that is, $\trig p x z$ and $\trig p y z$ have common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
 
@@ -235,7 +235,7 @@ Let us show that
 \ge
 \pi.
 \eqlbl{eq:<+<>=pi}\]
-Suppose contrary, that is
+Suppose the contrary, that is
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 <
 \pi.\]
@@ -250,8 +250,7 @@ contradicting the triangle inequality.
 Now consider the set 
 \[\dot D=\Conv\trig {\dot p}{\dot x}{\dot z}\cup \Conv\trig {\dot p} {\dot y} {\dot z}.\]
 By \ref{eq:<+<>=pi}, there is a short map $F$ that sends 
-$\trig{\~ p}{\~ x}{\~ y}$ to
-in such a way that 
+$\trig{\~ p}{\~ x}{\~ y}$ to $\dot D$ in such a way that 
 \begin{align*}
 \~p&\mapsto \dot p,
 &
@@ -304,7 +303,7 @@ The defined closest-point projection $p\mapsto p^*$ is short.
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ are proper length spaces 
+$\spc{U}^1$ and $\spc{U}^2$ is proper length spaces 
 with isometric closed convex sets $A^i\subset\spc{U}^i$ and $\iota\:A^1\to A^2$ be an isometry.
 Consider the space $\spc{W}$ of all equivalence classes on $\spc{U}^1\sqcup\spc{U}^2$ for the equivalence relation such that $a\sim\iota(a)$ for any $a\in A^1$.
 
@@ -318,10 +317,10 @@ It is straightforward to see that $\spc{W}$ forms a proper length space if equip
 \\
 &\text{if}\quad x\in \spc{U}^1\quad\text{and}\quad y\in \spc{U}^2.
 \end{align*}
-Abusing notation, we denoted by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
+Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
 
 The obtained space $\spc{W}$ is called the \emph{gluing} of of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$.
-If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and identity map $\iota\:A\to A$, then the obtained space is called \emph{doubling} of $\spc{U}$ in $A$.
+If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and identity map $\iota\:A\to A$, then the obtained space is called the \emph{doubling} of $\spc{U}$ in $A$.
 
 We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
 this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by $A$.
@@ -338,7 +337,7 @@ with isometric
 closed 
  convex
 sets $A^i\subset\spc{U}^i$, and $\iota\:A^1\to A^2$ is an isometry.
-Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is $\Cat{}{0}$ proper length space.
+Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is a $\Cat{}{0}$ proper length space.
 \end{thm}
 
 \parit{Proof.} 
@@ -348,8 +347,7 @@ By construction of the gluing space, the statement can be reformulated the follo
 Let $\spc{W}$ be a 
 proper length space which has two closed 
 convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
-$\spc{U}^1\cup\spc{U}^1=\spc{W}$,
-$A=\spc{U}^1\cap \spc{U}^2$ is complete, 
+$\spc{U}^1\cup\spc{U}^1=\spc{W}$
 and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
 Then $\spc{W}$ is a $\Cat{}{0}$ space.
 \end{thm}
@@ -375,7 +373,7 @@ This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\s
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}^1$ and $x^1,x^2\in\spc{U}^2$.
 
 Choose points $z^1,z^2\in A$ 
-which lie correspondingly on the sides $[x^0x^1], [x^0x^2]$.
+that lie respectively on the sides $[x^0x^1], [x^0x^2]$.
 Note that
 
 \begin{itemize}
@@ -391,11 +389,11 @@ and consequently $\trig {x^0}{x^1}{x^2}$ is thin.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:two-rays}
-Let $Q$ be the nonconvex subset of the plane 
+Let $Q$ be a nonconvex subset of the plane 
 bounded by two rays $\tilde\gamma^1$ and $\tilde\gamma^2$
 with common starting point and angle $\alpha$ between them.
 Assume $\spc{U}$ is a $\Cat{}{0}$ proper length space
-and $\gamma^1,\gamma^2$ be two rays in $\spc{U}$
+and let $\gamma^1,\gamma^2$ be two rays in $\spc{U}$ with common 
 starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\Cat{}{0}$ space.
 \end{thm}
