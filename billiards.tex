@@ -41,28 +41,29 @@ If one of the spherical model triangles is undefined\footnote{ that is, if
 then it is assumed that $\Cat{}{1}$ comparison automatically holds for this quadruple.
 
 We can do the same for the model plane with curvature $\kappa$;
-that is a sphere if $\kappa>0$, Euclidean plane if $\kappa=0$ and  Lobachevsky plane if $\kappa<0$.
+that is a sphere if $\kappa>0$, 
+Euclidean plane if $\kappa=0$ 
+and Lobachevsky plane if $\kappa<0$.
 In this case we arrive at the definition of $\Cat{}{\kappa}$ comparison.
 However in these notes we will consider mostly $\Cat{}{0}$ comparison and occasionally $\Cat{}{1}$ comparison;
 so, if you see $\Cat{}{\kappa}$, you can assume that $\kappa$ is $0$ or $1$.
 
 
-If  
-all quadruples of the metric space $\spc{X}$
-satisfy $\Cat{}{\kappa}$ comparison 
-then we say that the space $\spc{X}$ is $\Cat{}{\kappa}$.
+If all quadruples in a metric space $\spc{X}$ satisfy $\Cat{}{\kappa}$ comparison then we say that the space $\spc{X}$ is $\Cat{}{\kappa}$.
+(Note that $\Cat{}{\kappa}$ is an adjective.)
 
-Note that in order to check $\Cat{}{\kappa}$ comparison, it sufficient to know 6 distances between all the pairs of points in the quadruple.
+Note that in order to check $\Cat{}{\kappa}$ comparison, it is sufficient to know 6 distances between all the pairs of points in the quadruple.
 The latter observation implies the following.
 
 \begin{thm}{Proposition}\label{prop:cat-limit}
 The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is $\Cat{}{\kappa}$.
 \end{thm}
 
-In fact it does not even matter which definition of convergence for metric spaces you use, as long as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
+In fact it does not matter which definition of convergence for metric spaces you use, 
+as long as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
 
 \begin{thm}{Exercise}\label{ex:cone+susp}
-Let $\spc{V}$ be a space and $\spc{U}=\Cone\spc{V}$.
+Let $\spc{V}$ be a metric space and $\spc{U}=\Cone\spc{V}$.
 Show that $\spc{U}$ is  $\Cat{}{0}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 
 Analogously, if $\spc{U}=\Susp\spc{V}$ then 
@@ -71,7 +72,8 @@ $\spc{U}$ is  $\Cat{}{1}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 
 The cone and suspension constructions are defined in Section \ref{sec:constructions}.
 
-The following exercise is bit simpler, but can be proved essentially the same way.
+The following exercise is bit simpler, 
+but can be proved in essentially the same way.
 
 \begin{thm}{Exercise}\label{ex:product}
 Assume $\spc{U}$ and $\spc{V}$ are $\Cat{}{0}$ spaces.
@@ -82,8 +84,9 @@ Show that the product space $\spc{U}\times\spc{V}$ is $\Cat{}{0}$.
 \section{Thin triangles} \label{sec:thin-triangle}
 
 
-The inheritance lemma \ref{lem:inherit-angle} proved below 
-plays the central role in the theory.  It will lead to two fundamental constructions: patchwork globalization  (\ref{thm:alex-patch}) 
+The inheritance lemma \ref{lem:inherit-angle} proved below plays a central role in the theory.  
+It will lead to two fundamental constructions: 
+patchwork globalization  (\ref{thm:alex-patch}) 
 and Reshetnyak gluing (\ref{thm:gluing}),
 which in turn are used to prove 
 the globalization theorem (\ref{thm:hadamard-cartan}).
@@ -100,10 +103,10 @@ that is, $z$ is the point such that $\dist{\~x^i}{\~z}{}=\dist{x^i}{z}{}$ and th
 In the same way, a natural map can be defined by the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$.
  
 \begin{thm}{Definition of thin triangles}\label{def:k-thin}
-A triangle $\trig{x^1}{x^2}{x^3}$ in the space $\spc{X}$ 
-is called \emph{thin}\index{thin} if the natural map $\modtrig{}({x^1}{x^2}{x^3})_{\EE^2}\to \trig{x^1}{x^2}{x^3}$ is short.
+A triangle $\trig{x^1}{x^2}{x^3}$ in the metric space $\spc{X}$ 
+is called \emph{thin}\index{thin} if the natural map $\modtrig{}({x^1}{x^2}{x^3})_{\EE^2}\to \trig{x^1}{x^2}{x^3}$ is short (that is, a distance nonincreasing map).
 
-Analogously, triangle $\trig{x^1}{x^2}{x^3}$ in the space $\spc{X}$ 
+Analogously, triangle $\trig{x^1}{x^2}{x^3}$ 
 is called \emph{spherically thin}\index{spherically thin} if
 the natural map from the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$ to $\trig{x^1}{x^2}{x^3}$ is short.
 \end{thm}
@@ -143,7 +146,7 @@ The $\Cat{}{1}$ case is done essentially the same way.
 \begin{thm}{Corollary}\label{cor:contractible-cat}
 Any $\Cat{}{0}$ proper length space is contractible.
 
-Analogously, any $\Cat{}{1}$ proper length space with diameter $<\tfrac\pi2$ is contractible.
+Analogously, any $\Cat{}{1}$ proper length space with diameter $<\pi$ is contractible.
 \end{thm}
 
 \parit{Proof.} Let $\spc{U}$ be a $\Cat{}{0}$ proper length space.
@@ -185,10 +188,11 @@ Further choose $b>a$ so that $\gamma$ is minimizing on $[a,b]$.
 
 Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin, we have
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
-for all small $\eps>0$,
+for all small $\eps>0$.
+That is, $\gamma$ is not minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
 a contradiction.
 
-The spherical case is done the same way.
+The spherical case is done in the same way.
 \qeds
 
 
@@ -209,11 +213,12 @@ Now let us formulate the main result of this section.
 Assume that a triangle $\trig p x y$ 
 in a metric space is \emph{decomposed}\index{decomposed triangle} 
 into two triangles $\trig p x z$ and $\trig p y z$;
-that is, $\trig p x z$ and $\trig p y z$ have common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
+that is, $\trig p x z$ and $\trig p y z$ have a common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
 
-If both triangles $\trig p x z$ and $\trig p y z$ are thin, then triangle $\trig p x y$ is thin.
+If both triangles $\trig p x z$ and $\trig p y z$ are thin, 
+then the triangle $\trig p x y$ is also thin.
 
-Analogously, if $\trig p x y$ has perimeter $<2\cdot\varpi\kappa$ and both triangles $\trig p x z$ and $\trig p y z$ are spherically thin, then triangle $\trig p x y$ is spherically thin.
+Analogously, if $\trig p x y$ has perimeter $<2\cdot\pi$ and both triangles $\trig p x z$ and $\trig p y z$ are spherically thin, then triangle $\trig p x y$ is spherically thin.
 \end{thm} 
 
 \parit{Proof.}
@@ -247,8 +252,7 @@ Since $\trig p x z$ and $\trig p y z$ are thin, we have
 \[\dist{x}{w}{}+\dist{w}{y}{}<\dist{x}{y}{},\]
 contradicting the triangle inequality. 
 
-Now consider the set 
-\[\dot D=\Conv\trig {\dot p}{\dot x}{\dot z}\cup \Conv\trig {\dot p} {\dot y} {\dot z}.\]
+Let us denote by $\dot D$ the union of two solid triangles $\trig {\dot p}{\dot x}{\dot z}$ and $\trig {\dot p} {\dot y} {\dot z}$.
 By \ref{eq:<+<>=pi}, there is a short map $F$ that sends 
 $\trig{\~ p}{\~ x}{\~ y}$ to $\dot D$ in such a way that 
 \begin{align*}
@@ -262,7 +266,7 @@ $\trig{\~ p}{\~ x}{\~ y}$ to $\dot D$ in such a way that
 \end{align*}
 
 \begin{thm}{Exercise}\label{ex:short-map}
-Prove the last statement. 
+Use Alexandrov's lemma (\ref{lem:alex}) to prove the last statement. 
 \end{thm}
 
 
@@ -289,12 +293,12 @@ Let  $\spc{U}$ be a $\Cat{}0$ proper length space
 and $K\subset \spc{U}$ be a closed convex set.
 Show that 
 
-\begin{subthm}{}
+\begin{subthm}{ex:closest-point:a}
 For each point $p\in \spc{U}$ there is unique point $p^*\in K$ which minimize the distance $\dist{p}{p^*}{}$.
 \end{subthm}
 
 \begin{subthm}{}
-The defined closest-point projection $p\mapsto p^*$ is short. 
+The closest-point projection $p\mapsto p^*$ defined by (\ref{SHORT.ex:closest-point:a}) is short. 
 \end{subthm}
 
 \end{thm}
