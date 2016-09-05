@@ -131,10 +131,20 @@ By Crofton's formula we have that
 \parbf{Exercise~\ref{ex:cone+susp}.}
 \parbf{Exercise~\ref{ex:product}.}
 
-\parbf{Exercise~\ref{ex:thin=cat}.}
+\parbf{Exercise~\ref{ex:thin=cat}.} 
+To prove if part,
+apply thinness of triangles $\trig pxy$ and $\trig qxy$, where $p$, $q$, $x$ and $y$ as in the definition of $\Cat{}{\kappa}$ comparison,
+see page \pageref{page:CAT-comparison}.
 
-\begin{wrapfigure}[6]{r}{27mm}
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/resh(1)}
+\parit{Only-if part.} Fix a triangle $\trig pxy$ 
+and two points $\bar x\in [px]$, $\bar y\in [py]$.
+Apply the $\Cat{}{\kappa}$ comparison to the quadruples
+$(\bar x, x, p, y)$ and 
+and $(\bar x, \bar y, p, x)$ together with Alexandrov's lemma (\ref{lem:alex}).
+
+
+\begin{wrapfigure}[7]{r}{39mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/resh(1)}
 \lbl[t]{17.5,.5;$\~p$}
 \lbl[b]{2,27.5;$\~x$}
 \lbl[b]{30,27.5;$\~y$}
@@ -287,8 +297,40 @@ Hence the result follows.
 \parbf{``If'' part of Theorem~\ref{thm:PL-CAT}.}
 
 \parbf{Exercise~\ref{ex:geod-circle}.}
+The following proof works for any compact locally simply connected metric space;
+by uniqueness of geodesics (\ref{thm:cat-unique}) 
+this class of spaces includes compact locally $\Cat{}{\kappa}$ length spaces.
+
+Consider a shortest noncontractible closed curve $\gamma$ in the space.
+(Note that it exists.)
+
+Assume that $\gamma$ is not a geodesic circle,
+that is  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
+is shorter then the length of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to $q$.
+Consider the joints, say $\gamma_1$ and $\gamma_2$
+of $[qp]$ with $\alpha_1$ and $\alpha_2$.
+Note that
+\begin{itemize}
+ \item  $\gamma_1$ or $\gamma_2$ is noncontractible,
+ \item $\length\gamma_1, \length\gamma_2<\length \gamma$,
+\end{itemize}
+a contradiction.
+
 
 \parbf{Exercise~\ref{ex:unique-geod=CAT}.}
+Assume $\spc{P}$ is not $\Cat{}{0}$ then
+by Theorem~\ref{thm:PL-CAT} there a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
+Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$
+parametrized by $[-\ell,\ell]$
+
+Fix small $\delta>0$ and 
+consider two curves in $\Cone\Sigma$ written in the polar coordinates as 
+\[\gamma_i(t)=(\alpha_i(\tan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
+Note that both form geodesics in $\Cone\Sigma$ and they have common ends.
+
+Finally note that small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into $\spc{P}$.
+Hence the statement follows.
+
 
 
 
