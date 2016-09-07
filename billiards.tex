@@ -308,9 +308,9 @@ The closest-point projection $p\mapsto p^*$ defined by (\ref{SHORT.ex:closest-po
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ is proper length spaces 
+$\spc{U}^1$ and $\spc{U}^2$ are proper length spaces 
 with isometric closed convex sets $A^i\subset\spc{U}^i$ and $\iota\:A^1\to A^2$ be an isometry.
-Consider the space $\spc{W}$ of all equivalence classes on $\spc{U}^1\sqcup\spc{U}^2$ for the equivalence relation such that $a\sim\iota(a)$ for any $a\in A^1$.
+Consider the space $\spc{W}$ of all equivalence classes on $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$.
 
 It is straightforward to see that $\spc{W}$ forms a proper length space if equipped with the following metric
 \begin{align*}
@@ -324,8 +324,8 @@ It is straightforward to see that $\spc{W}$ forms a proper length space if equip
 \end{align*}
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
 
-The obtained space $\spc{W}$ is called the \emph{gluing} of of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$.
-If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and identity map $\iota\:A\to A$, then the obtained space is called the \emph{doubling} of $\spc{U}$ in $A$.
+The obtained space $\spc{W}$ is called the \emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$.
+If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and identity map $\iota\:A\to A$, then the obtained space is called the \emph{doubling} of $\spc{U}$ along $A$.
 
 We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
 this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by $A$.
@@ -333,7 +333,7 @@ Note that $A=\spc{U}^1\cap \spc{U}^2\subset \spc{W}$,
 therefore $A$ is also a convex set in $\spc{W}$.
 
 The following theorem was proved by Reshetnyak in \cite{reshetnyak:glue}.
-Recall, that once you see $\Cat{}{\kappa}$, you may read $\Cat{}{0}$ or $\Cat{}{1}$.
+
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
@@ -393,16 +393,6 @@ we get that $\trig {x^0}{x^1}{z^2}$
 and consequently $\trig {x^0}{x^1}{x^2}$ is thin.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:two-rays}
-Let $Q$ be a nonconvex subset of the plane 
-bounded by two rays $\tilde\gamma^1$ and $\tilde\gamma^2$
-with common starting point and angle $\alpha$ between them.
-Assume $\spc{U}$ is a $\Cat{}{0}$ proper length space
-and let $\gamma^1,\gamma^2$ be two rays in $\spc{U}$ with common 
-starting point and angle $\alpha$ between them.
-Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\Cat{}{0}$ space.
-\end{thm}
-
 \section{Reshetnyak's puff pastry}\label{sec:puff-pastry}
 
 In this section we introduce \emph{Reshetnyak's puff pastry}, 
@@ -412,7 +402,7 @@ Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in the Euclidean 
 Consider an array of $N+1$ copies of $\EE^m$.
 Assume that the space $\spc{R}$ is 
 obtained by
-gluing successive pairs of spaces in the array  
+gluing successive pairs of spaces along the array  
 along $A^1,\dots,A^N$ respectively.
 
 \begin{wrapfigure}{r}{58mm}
@@ -540,7 +530,7 @@ if $D$ contains $X$ and the edge of $D$ contains $p$.
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
 Let $A$ and $B$ be two convex sets in $\EE^m$.
-Assume that any dihedral angle supporting $A\cap B$ at some point has measure at least $\alpha$.
+Assume that any dihedral angle supporting $A\cap B$ at some point has angle measure at least $\alpha$.
 Then the Reshetnyak's puff pastry for the array
 \[(\underbrace{A,B,A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
 is end-to-end convex. 
@@ -552,7 +542,7 @@ which we formulate as a sublemma.
 
 \begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
 Let $\ddot A$ and $\ddot B$ be two  
-half-planes in $\EE^2$, where $\ddot A\cap \ddot B$ is an angle with angle measure $\alpha$.
+half-planes in $\EE^2$, where $\ddot A\cap \ddot B$ is a dihedral angle with measure $\alpha$.
 Then the Reshetnyak's puff pastry for the array \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}})\]
 is end-to-end convex. 
 \end{thm}
@@ -575,7 +565,7 @@ the long arcs have length $\pi-\alpha$,
 so making a circuit along any path will take $2\cdot\pi$.
 
 Observe that end-to-end convexity of $\ddot{\spc{R}}$
-is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on inner and outer circles lies completely in these two circles.
+is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on inner and outer circles lies completely in the union of these two circles.
 
 The latter holds if the zigzag line has length at least $\pi$.
 This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ each.
@@ -601,7 +591,7 @@ Without loss of generality we can assume that $z\in\partial A\cap\partial B$.
 Indeed, since the puff pastry for 1-array $(B)$ is end-to-end convex,
 Proposition~\ref{prop:A-check-A} together with Observation~\ref{obs:end-to-end-convex}
 imply \ref{clm:z in xy} in  case $z$ lies in the interior of $A$.
-The same way we can treat the case, $z$ lies in the interior of $B$.
+In the same way we can treat the case, $z$ lies in the interior of $B$.
 
 \begin{wrapfigure}{r}{35mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
@@ -618,7 +608,11 @@ The same way we can treat the case, $z$ lies in the interior of $B$.
 Further we will use the following exercise in convex geometry
 
 \begin{thm}{Exercise}\label{ex:supporting-planes}
-There are half-spaces $\dot A$ and $\dot B$ such that
+Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
+Given two point $x,y\in \EE^m$ consider a point $z\in A\cap B$
+which minimize the sum 
+\[\dist{x}{z}{}+\dist{y}{z}{}.\] 
+Show that there are half-spaces $\dot A$ and $\dot B$ such that
 $\dot A\supset A$ and $\dot B\supset B$
 and 
 \[\dist{x}{z}{}+\dist{y}{z}{}\] 
@@ -657,7 +651,9 @@ By Proposition~\ref{prop:A-check-A},
 the image of $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ 
 under the map $\dot x^\kay\mapsto x^\kay$
 is the geodesic $[x^0 y^N]_{\spc{R}}$.
-Hence Claim~\ref{clm:z in xy} follows.
+Hence Claim~\ref{clm:z in xy} 
+and the
+Lemma follow.
 \qeds
 
 The proof of the following proposition is based on Lemma \ref{lem:end-to-end-convex},
@@ -711,8 +707,7 @@ Let us exchange each occurrence of $n$ by the alternating string
 Applying Lemma \ref{lem:end-to-end-convex}, 
 we get that the obtained array meets the conditions of the proposition.
 
-The upper bound on $N$ follows directly from the construction
-and it can be improved easily.
+The upper bound on $N$ follows directly from the construction.
 \qeds
 
 

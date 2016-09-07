@@ -105,31 +105,76 @@ the sequence $q_n$ has partial limit, say $q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
 assuming the latter is defined.
 
+\parbf{Exercise~\ref{ex:cone+susp}.}
+Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
+and by $|x|$ the distance from $x$ to the tip of the cone;
+if $x$ is the tip then $|x|=0$ and we can take any point of $\spc{U}$ as $x'$.
 
-\parbf{Exercise~\ref{exr-crofton}.}
-Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
-By approximation it's clearly enough to prove this for  smooth curves of length $< 2\cdot\pi$ with transverse self-intersections. 
-
-Given $v\in \SS^2$, denote by $v^\perp$ the equator in $\SS^2$ with the pole at $v$.
-Further, $\# X$ will denote the number of points in the set $X$.
-
-Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. 
-Note that $\#(\alpha\cap v^\perp)$ is even for almost all $v$.
-
-Therefore, if $\alpha$ does not lie in a hemisphere then
-$\#(\alpha\cap v^\perp) \ge 2$ for almost all $v\in\SS^2$.  
-
-By Crofton's formula we have that
+Let $p$, $q$, $x$, $y$
+be a quadruple in $\Cone\spc{U}$.
+Assume that the spherical model triangles $\trig{\~p'}{\~x'}{\~y'}=\modtrig(p'x'y')_{\SS^2}$ and $\trig{\~q'}{\~x'}{\~y'}=\modtrig(q'x'y')_{\SS^2}$ are defined.
+Consider the following points in $\EE^3=\Cone\SS^2$: 
 \begin{align*}
-\length(\alpha)
-&=\frac 1 4\cdot \int\limits_{\SS^2}\#(\alpha\cap v^\perp)\cdot \d_v\area\ge
-\\
-&\ge2\cdot\pi.
+\~p&=|p|\cdot\~p',
+&
+\~q&=|q|\cdot\~q',
+&
+\~x&=|x|\cdot\~x',
+&
+\~y&=|y|\cdot\~y'.
 \end{align*}
 
+Note that
+$\trig{\~p}{\~x}{\~y}\iso\modtrig(pxy)_{\EE^2}$
+and
+$\trig{\~q}{\~x}{\~y}\iso\modtrig(qxy)_{\EE^2}$.
+Further note that if $\~z\in [\~x\~y]$ then
+$\~z'=\~z/|\~z|$ lies on the geodesic $[\~x'\~y']$ in $\SS^2$.
+???
 
-\parbf{Exercise~\ref{ex:cone+susp}.}
 \parbf{Exercise~\ref{ex:product}.}
+Fix a quadruple 
+\begin{align*}
+p&=(p_1,p_2),
+&
+q&=(q_1,q_2), 
+&
+x&=(x_1,x_2),
+&
+y&=(y_1,y_2)
+\end{align*}
+in $\spc{U}\times \spc{V}$.
+For the quadruple $p_1,q_1,x_1,y_1$ in $\spc{U}$,
+construct two model triangles $\trig{\~p_1}{\~x_1}{\~y_1}=\modtrig(p_1x_1y_1)_{\EE^2}$ 
+and $\trig{\~q_1}{\~x_1}{\~y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$ 
+Similarly, for the quadruple $p_2,q_2,x_2,y_2$ in $\spc{V}$
+construct two model triangles $\trig{\~p_2}{\~x_2}{\~y_2}$ and $\trig{\~q_2}{\~x_2}{\~y_2}$.
+
+Consider four points in $\EE^4=\EE^2\times\EE^2$ 
+\begin{align*}
+\~p&=(\~p_1,\~p_2),
+&
+\~q&=(\~q_1,\~q_2),
+&
+\~x&=(\~x_1,\~x_2),
+&
+\~y&=(\~y_1,\~y_2).
+\end{align*}
+Note that the triangles $\trig{\~p}{\~x}{\~y}$ and $\trig{\~q}{\~x}{\~y}$ in $\EE^4$ are isometric to the model triangles 
+$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$.
+
+If $\~z=(\~z_1,\~z_2)\in [\~x\~y]$ we have then $\~z_1\in [\~x_1\~y_1]$ and $\~z_2\in [\~x_2\~y_2]$ and
+\begin{align*}
+\dist[2]{\~z}{\~p}{\EE^4}&=\dist[2]{\~z_1}{\~p_1}{\EE^2}+\dist[2]{\~z_2}{\~p_2}{\EE^2},
+\\
+\dist[2]{\~z}{\~q}{\EE^4}&=\dist[2]{\~z_1}{\~q_1}{\EE^2}+\dist[2]{\~z_2}{\~q_2}{\EE^2},
+\\
+\dist[2]{p}{q}{\spc{U}\times\spc{V}}&=\dist[2]{p_1}{q_1}{\spc{U}}+\dist[2]{p_2}{q_2}{\spc{V}}.
+\end{align*}
+Therefore $\Cat{}{0}$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
+and 
+$p_2,q_2,x_2,y_2$ in $\spc{U}$ implies the 
+$\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}$.
 
 \parbf{Exercise~\ref{ex:thin=cat}.} 
 To prove if part,
@@ -233,20 +278,6 @@ assuming that the left hand sides are defined.
 Hence 
 \[\dist{\~p}{\~q}{}\ge \dist{\~p^*}{\~q^*}{}.\]
 The latter is equivalent to \ref{eq:short-p-p}.
-
-\parbf{Exercise~\ref{ex:two-rays}.}
-Consider the angle $A$ in the plane of measure $\pi-\alpha$.
-Note that $A$ is $\Cat{}{0}$.
-Therefore by Reshetnyak gluing theorem \ref{thm:gluing},
-by gluing a side of $A$ to $\gamma_1$ in $\spc{U}$ we obtain a $\Cat{}{0}$ space, say $\spc{U}'$.
-
-Note that $\gamma_2$ together with the other side of $A$ forms a both sides infinite geodesic, say $\gamma$ in $\spc{U}'$.
-In particular, $\gamma$ is a convex set isometric to $\RR$.
-
-Glue a half-plane along its boundary to $\gamma$.
-By Reshetnyak gluing theorem \ref{thm:gluing} the obtained space is $\Cat{}{0}$.
-
-It remains to note that this space can be obtained directly by gluing $\spc{U}$ to with $Q$ along $\gamma_1$ and $\gamma_2$.
 
 \parbf{Exercise~\ref{ex:supporting-planes}.}
 By approximation, it is sufficient to consider the case when 
@@ -470,6 +501,39 @@ gave a complete answer to the analogous question for three planes.
 In particular they show that if a covering space of $\EE^4$
 branching at three planes through one origin is $\Cat{}{0}$ then these all are complex planes for some complex structure on $\EE^4$.
 
+\parbf{Exercise~\ref{ex:hemisphere}.}
+Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
+
+Assume $\ell<\pi$.
+Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
+Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
+Let $z$ be the midpoint of  $[pq]$.  
+We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
+If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
+Without loss of generality we may assume that $r\in\check\alpha$. 
+The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which passes through $r$ and its antipodal point $r'$.
+Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
+
+\parit{A solution via Crofton formula.}
+Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
+By approximation it's clearly enough to prove this for  smooth curves of length $< 2\cdot\pi$ with transverse self-intersections. 
+
+Given $v\in \SS^2$, denote by $v^\perp$ the equator in $\SS^2$ with the pole at $v$.
+Further, $\# X$ will denote the number of points in the set $X$.
+
+Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. 
+Note that $\#(\alpha\cap v^\perp)$ is even for almost all $v$.
+
+Therefore, if $\alpha$ does not lie in a hemisphere then
+$\#(\alpha\cap v^\perp) \ge 2$ for almost all $v\in\SS^2$.  
+
+By Crofton's formula we have that
+\begin{align*}
+\length(\alpha)
+&=\frac 1 4\cdot \int\limits_{\SS^2}\#(\alpha\cap v^\perp)\cdot \d_v\area\ge
+\\
+&\ge2\cdot\pi.
+\end{align*}
 
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
@@ -522,7 +586,7 @@ and therefore $K'$ and consequently $K$ are not $\Cat{}{0}$.
 \parbf{Exercise~\ref{ex:branching-cover}.}
 Consider a $\eps$-neighborhood $A$ of the geodesic.
 Note that $A_\eps$ forms a convex set.
-By Reshetnyak gluing theorem the doubling $\spc{W}_\eps$ of $\spc{U}$ in $A_\eps$ is a $\Cat{}{0}$ space.
+By Reshetnyak gluing theorem the doubling $\spc{W}_\eps$ of $\spc{U}$ along $A_\eps$ is a $\Cat{}{0}$ space.
 
 Consider the other space $\spc{W}'_\eps$ obtained by double covering of $\spc{U}\backslash A_\eps$ and gluing back $A_\eps$.
 
