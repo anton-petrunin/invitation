@@ -1,6 +1,6 @@
 \chapter{Globalization and asphericity}
 
-In this chapter we introduce locally $\Cat{}{0}$ spaces and show that universal cover of locally $\Cat{}{0}$ proper length space forms a $\Cat{}{0}$ proper length space. 
+In this chapter we introduce locally $\Cat{}{\kappa}$ spaces and show that universal cover of proper locally $\Cat{}{0}$ length space forms a $\Cat{}{0}$ space. 
 The latter implies that any locally $\Cat[0]$ proper length space is aspherical; 
 that is its universal cover is contractible.
 
@@ -25,11 +25,11 @@ The proof goes along the same lines as Exercise \ref{ex:convex-balls}.
 
 \section{Space of local geodesics}\label{sec:geod-space}
 
-In this section we will study behavior of local geodesics in the locally $\Cat{}{}$  spaces.  
+In this section we will study behavior of local geodesics in the locally $\Cat{}{\kappa}$  spaces.  
 The proved statements will be used in the proof of Globalization theorem (\ref{thm:hadamard-cartan}).
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
-Let $\spc{U}$ be a locally $\Cat{}{0}$ or locally $\Cat{}{1}$ proper length space.
+Let $\spc{U}$ be a proper locally $\Cat{}{\kappa}$ length space.
 
 Assume $\gamma_n\:[0,1]\to\spc{U}$ be a sequence of local geodesic paths converging to a path $\gamma_\infty\:[0,1]\to\spc{U}$.
 Then $\gamma_\infty$ is a local geodesic path.
@@ -38,7 +38,7 @@ Moreover
 as $n\to\infty$.
 \end{thm}
 
-\parit{Proof.} 
+\parit{Proof; $\Cat{}{0}$ case.} 
 Fix $t\in[0,1]$.  
 Let $R>0$ be the value such that $\cBall[\gamma_\infty(t),R]$ 
 forms a $\Cat{}{0}$ proper length space.
@@ -47,13 +47,15 @@ A local geodesic segment  with length $<R/2$, and intersecting $\oBall(\gamma_\i
 In particular, for all sufficiently large $n$, any subsegment  of $\gamma_n$ through $\gamma_n(t)$  with length $<R/2$ is a geodesic.
 
 
-Since $\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ proper length space, by Theorem~\ref{thm:cat-unique},
+Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ proper length space, by Theorem~\ref{thm:cat-unique},
 geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 which contains a neighborhood of $t$ in $[0,1]$
-and such that $\gamma_n|\II$ is minimizing for all large $n$.
+and such that the arc $\gamma_n|\II$ is minimizing for all large $n$.
 It follows that $\gamma_\infty|\II$ is a geodesic,
 and therefore $\gamma_\infty$ is a local geodesic.
+
+$\Cat{}{1}$ case is done the same way, but one has to assume in addition that $R<\pi$.
 \qeds
 
 
@@ -115,7 +117,7 @@ and Theorem on uniqueness of geodesics~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:discrete-paths}
 If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ is discrete;
-that is for any local geodesic path $\gamma$ connecting $p$ to $q$ there is $\eps>0$ such that for any other geodesic path $\delta$ from $p$ to $q$ we have
+that is, for any local geodesic path $\gamma$ connecting $p$ to $q$ there is $\eps>0$ such that for any other geodesic path $\delta$ from $p$ to $q$ we have
 $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
 
 Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
@@ -173,7 +175,7 @@ Busemann see \cite{busemann-CBA},
 Rinow see \cite{rinow},
 Gromov  \cite[p.119]{gromov:hyp-groups}. 
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Alexander and Bishop in \cite{ballmann:cartan-hadamard}
-and generalized further \cite{a-b:h-c}.  
+and generalized further in \cite{a-b:h-c}.  
 
 For $\Cat{}{1}$ spaces, the globalization theorem was proved by Bowditch in \cite{bowditch}.
 
@@ -189,19 +191,18 @@ Then $\spc{U}$ is a $\Cat{}{1}$ space.
 \end{thm}
 
 \begin{wrapfigure}{r}{39mm}
-\begin{lpic}[t(0mm),b(-0mm),r(0mm),l(0mm)]{pics/cat-1(1)}
+\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(0mm)]{pics/cat-1(1)}
 \end{lpic}
 \end{wrapfigure}
 
 The surface of revolution showed on the diagram, 
 is an example of simply connected space which is locally $\Cat{}{1}$ but not $\Cat{}{1}$.
-To contract the marked curve one has to increase its length to $2\cdot\pi$ or more. 
+To contract the marked curve one has to increase its length to $2\cdot\pi$ or more;
+in particular the surface does not satisfy the assumption of the globalization theorem.
 
 
 The proof of globalization theorem relies on the following theorem, 
 which essentially is \cite[Satz 9]{alexandrov:devel}.  
-The proof use a thin-triangle decompositions, 
-and the inheritance lemma (\ref{lem:inherit-angle}). 
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
 A locally $\Cat{}{0}$ proper length space $\spc{U}$ is $\Cat{}{0}$
@@ -211,9 +212,9 @@ Analogously, a locally $\Cat{}{1}$ proper length space $\spc{U}$ is $\Cat{}{1}$
 if and only if the pairs of points in $\spc{U}$ at distance less $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
-The proof of Patchwork globalization uses the following construction:
+The proof use a thin-triangle decompositions with the inheritance lemma (\ref{lem:inherit-angle}) and the following construction:
 
-\begin{thm}{Line-of-sight map} \label{def:sight}
+\begin{thm}{Definition of line-of-sight map} \label{def:sight}
 Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
 Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic from $p$ to $\bar\alpha(t)$, we say 
 \[[
@@ -225,8 +226,13 @@ is a \emph{line-of-sight map from $p$ to $\alpha$} .
 \parit{Proof of Patchwork globalization theorem (\ref{thm:alex-patch}).} 
 Note that the implication the ``only if'' part is already proved in  Theorem~\ref{thm:cat-unique}; it only remains to prove ``if'' part.
 
+Fix a triangle $[p x y]$  in $\spc{U}$. 
+We need to show that $\trig p x y$ is thin.
+
+By the assumptions the line-of-sight map (\ref{def:sight}) $(t,\tau)\mapsto\gamma_t(\tau)$ for  $[x y]$ from $p$ is uniquely defied and continuous.    
+
 \begin{center}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/cba-globalization-net(1)}
+\begin{lpic}[t(1mm),b(1mm),r(0mm),l(0mm)]{pics/cba-globalization-net(1)}
 \lbl[lb]{29,46;$p=x^{0,0}=\dots=x^{N,0}$}
 \lbl[rb]{23,37;$x^{0,1}$}
 \lbl[lb]{39,37;$x^{N,1}$}
@@ -238,13 +244,6 @@ Note that the implication the ``only if'' part is already proved in  Theorem~\re
 \lbl[lt]{69,0;$y=x^{N,N}$}
 \end{lpic}
 \end{center}
-
-Fix a triangle $[p x y]$  in $\spc{U}$. 
-We need to show that $\trig p x y$ is thin.
-
-By the assumptions the line-of-sight map (\ref{def:sight}) 
-\[(t,\tau)\mapsto\gamma_t(\tau)\]
-for  $[x y]$ from $p$ is uniquely defied and continuous.    
 
 Fix a fine a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\] 
 set $x^{i,j}=\gamma_{t^i}(t^j)$. 
@@ -296,7 +295,7 @@ such that an every simplex in $\tau$ is isometric to a simplex in a Euclidean sp
 Analogousely, a length space $\spc{P}$ is called  
 \emph{spherical polyhedral space} 
 if it admits a finite triangulation $\tau$ 
-such that an every simplex in $\tau$ is isometric to a simplex in a unit sphere of appropriate dimension.
+such that every simplex in $\tau$ is isometric to a simplex in a unit sphere of appropriate dimension.
 
 By a 
 \index{triangulation of a polyhedral space}\emph{triangulation of a polyhedral space} 
@@ -313,7 +312,7 @@ any point of which admits a closed neighborhood isometric to a polyhedral space.
 The latter class of spaces includes in particular the infinite covers of polyhedral spaces.
 
 The dimension of a polyhedral space $\spc{P}$
-is defined as the maximal dimension of the simplex 
+is defined as the maximal dimension of the simplexes 
 in one (and therefore any) triangulation of $\spc{P}$.
 
 \parbf{Links.}
@@ -333,7 +332,7 @@ The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
 formed by all the simplices $\sigma'$ 
 such that $\sigma\cap\sigma'=\emptyset$ 
-but both $\sigma$ and $\sigma'$ are faces of the same simplex.
+but both $\sigma$ and $\sigma'$ are faces of a simplex of $\tau$.
 
 The points in $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in its interior.
 The angle metric between directions makes  $\Link_\sigma$ into a spherical polyhedral space.
@@ -343,10 +342,10 @@ We will always consider the link with this metric.
 Let $\spc{P}$ be a polyhedral space and let  $\tau$ be a triangulation of $\spc{P}$.
 If a point $p\in \spc{P}$ 
 lies in the interior of a $\kay$-simplex $\sigma$ of $\tau$ 
-then the tangent space $\T_p\spc{P}$
+then the tangent space $\T_p=\T_p\spc{P}$
 is  naturally isometric to
 \[\EE^\kay\times(\Cone\Link_\sigma).\]
-Equivalently, the space of directions $\Sigma_p$
+Equivalently, the space of directions $\Sigma_p=\Sigma_p\spc{P}$
 can be isometrically identified with the 
 $\kay$-th spherical suspension over $\Link_\sigma$;
 that is, 
@@ -440,9 +439,9 @@ The $\Cat{}{0}$ case is different only in the last step, where we need to use th
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
-Show that if in a polyhedral space $\spc{P}$
-any two points can be connected by a unique geodesic 
-then $\spc{P}$ is a $\Cat{}{0}$ space.
+Assume in a polyhedral space $\spc{P}$
+any two points can be connected by a unique geodesic.
+Show that $\spc{P}$ is a $\Cat{}{0}$ space.
 \end{thm}
 
 \section{Flag complexes}
@@ -472,7 +471,7 @@ Conclude that any finite simplicial complex is homeomorphic to a $\Cat{}{1}$ pro
 \begin{thm}{Proposition}\label{prop:no-trig}
 A simplicial complex $\mathcal{S}$ is flag if and only if 
 $\mathcal{S}$ as well as all the links of all its simplices
-satisfies the no-triangle condition.
+satisfy the no-triangle condition.
 \end{thm}
 
 From the definition of flag complex 
@@ -576,11 +575,12 @@ spends time $\pi$ on every visit to $\Star_v$.
 
 After leaving $\Star_v$,
 the local geodesic $\gamma$ has to enter another simplex, 
-say $\sigma'$, 
-which has a vertex $v'$ not joined to $v$ by an edge.
+say $\sigma'$.
+Since $\tau$ is flag, the simplex $\sigma'$
+has a vertex $v'$ not joined to $v$ by an edge;
+that is 
+\[\Star_v\cap\Star_{v'}=\emptyset\]
 
-Since $\tau$ is flag, we have that the stars $\Star_v$ and $\Star_{v'}$
-do not overlap.
 The same argument as above shows that $\gamma$ spends time $\pi$ on every visit to $\Star_{v'}$.
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
@@ -623,7 +623,8 @@ To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with en
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the lengh of an edge is $0$, we assume that edge degenerates;
 such a tree can be also decribed using a different topological tree $\tau'$.
-The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with a convex closed cone in  $\mathbb{R}^{2\cdot n-3}$.
+The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with the ocotant
+\[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the legth metric on $\spc{T}_n$ induced by these metrics.
 
 \begin{thm}{Exercise}\label{ex:tree}
@@ -649,11 +650,8 @@ Note that according to this definition,
 any cubical complex is finite,
 that is, contains a finite number of cubes.
 
-The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \emph{underlying space};
-it will be denoted by $\spc{Q}$ or by $\ushort{\spc{Q}}$ 
-if we need to emphasize that we are talking about a set, 
-not a complex.
-A homeomorphism from $\ushort{\spc{Q}}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of} $\spc{X}$.
+The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \emph{underlying space}.
+A homeomorphism from the underlying space of $\spc{Q}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of} $\spc{X}$.
 
 The underlying space of a cubical complex $\spc{Q}$ will be always considered with the length metric
 induced from $\RR^N$.
@@ -661,9 +659,9 @@ In particular, with this metric,
 each cube of $\spc{Q}$ is isometric to the unit cube of the same dimension.
 
 It is straightforward to construct a triangulation 
-of $\ushort{\spc{Q}}$ 
+of the underlying space of $\spc{Q}$ 
 such that each simplex is isometric to a Euclidean simplex.
-In particular $\ushort{\spc{Q}}$ is a Euclidean polyhedral space.
+In particular the underlying space of $\spc{Q}$ is a Euclidean polyhedral space.
 
 The link of each cube in a cubical complex admits a natural 
 all-right triangulation; 
@@ -689,12 +687,10 @@ it will be called
 the \index{cubical analog}\emph{cubical analog} of $\spc{S}$
 and will be denoted as $\square_\spc{S}$.
 
-Note that if a simplicial complex is connected then so is its cubical analog.
-
 \begin{thm}{Proposition}\label{prob:cubical-analog}
 Let $\spc{S}$ be a connected simplicial complex
 and $\spc{Q}=\square_{\spc{S}}$ be its cubical analog.
-Then $\ushort{\spc{Q}}$ is connected 
+Then the underlying space of $\spc{Q}$ is connected 
 and the link of any vertex of $\spc{Q}$
 is isometric to  ${\spc{S}}$
 equipped with the spherical right-angled metric.
@@ -750,7 +746,7 @@ is null-homotopic in  $\spc X\backslash K$.
 Recall that path connected spaces are not empty by definition.
 Therefore compact spaces are not simply connected at infinity.
 
-The following statement was proved by Michael Davis in \cite{davis-noneuclidean}.
+The following example was proved by Michael Davis in \cite{davis-noneuclidean}.
 
 \begin{thm}{Proposition}\label{prop:aspherical}
 For any  $m\ge 4$ there is a closed aspherical 
@@ -792,13 +788,6 @@ Note that
 $\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
 \end{clm}
 
-
-Indeed, according to Proposition \ref{prob:cubical-analog},
-$\tilde{\spc{Q}}$ is $\Cat{}{0}$.
-By Exercise \ref{ex:locally-convex},
-it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
-or equivalently $G$ is locally convex in $\spc{Q}$.
-
 \begin{wrapfigure}[5]{r}{30mm}
 \begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/gamma-in-S(1)}
 \lbl[t]{15,5;$\xi$}
@@ -806,6 +795,12 @@ or equivalently $G$ is locally convex in $\spc{Q}$.
 \lbl[r]{14.5,10.5;$e$}
 \end{lpic}
 \end{wrapfigure}
+
+Indeed, according to Proposition \ref{prob:cubical-analog},
+$\tilde{\spc{Q}}$ is $\Cat{}{0}$.
+By Exercise \ref{ex:locally-convex},
+it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
+or equivalently, $G$ is locally convex in $\spc{Q}$.
 
 The latter can only fail if $\gamma$ passes through two vertices, say $\xi$ to $\zeta$ in $\spc{S}$,
 which are joined by an edge not in $\gamma$; 
@@ -888,9 +883,10 @@ The same holds for
 the universal cover $\tilde{\spc{M}}$ of $\spc{M}$.
 The later follows since homotopy equivalences 
 $f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ 
-lift to proper maps 
+lift to \emph{proper maps} 
 $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
-and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$. 
+and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$;
+that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\spc{M}}$ the invese images $\tilde g^{-1}(A)$ and $\tilde f^{-1}(b)$ are compact.
 \qeds
 
 
