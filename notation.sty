@@ -250,8 +250,6 @@
 %{{\~\mangle}}
 
 \newcommand*{\mc}[1]{^{#1}}%{^{\scriptscriptstyle{#1}}}
-\let\oldvarpi\varpi\newcommand*\newvarpi[1]{\oldvarpi{}^{{#1}}}\let\varpi\newvarpi
-%\def\varpi{{\scriptstyle\Pi}\mc}
 \newcommand*{\trig}[3]
 {\settowidth{\zhaba}{${#1}{#2}{#3}$}%
 \ifthenelse{\lengthtest{\zhaba<2.3em}}

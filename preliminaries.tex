@@ -425,9 +425,9 @@ in the latter case  we assume in addition that the model triangle $\modtrig(p q 
 
 \begin{wrapfigure}[6]{r}{28mm}
 \begin{lpic}[t(-4mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
-\lbl[lb]{10,23;$p$}
-\lbl[rt]{1.5,.5;$q$}
-\lbl[bl]{25,7.5;$r$}
+\lbl[lb]{10,23;$x$}
+\lbl[rt]{1.5,.5;$p$}
+\lbl[bl]{25,7.5;$y$}
 \lbl[lb]{17,15;$z$}
 \end{lpic}
 \end{wrapfigure}
@@ -436,70 +436,83 @@ in the latter case  we assume in addition that the model triangle $\modtrig(p q 
 \index{Alexandrov's lemma}
 \index{lemma!Alexandrov's lemma}
 \label{lem:alex}  
-Let $p,q,r,z$ be distinct points in a metric space such that $z\in \l]p r\r[$.
+Let $p,x,y,z$ be distinct points in a metric space such that $z\in \l]x y\r[$.
 Then 
 the following expressions have the same sign:
 \begin{subthm}{lem-alex-difference}
-$\angk p q z
--\angk p q r$,
+$\angk x p z
+-\angk x p y$,
 \end{subthm} 
 
 \begin{subthm}{lem-alex-angle}
-$\angk z q p
-+\angk z q r -\pi$.
+$\angk z p x
++\angk z p y -\pi$.
 \end{subthm}
 
 Moreover,
-\[\angk q p r \ge \angk q p z +  \angk q z r,\]
+\[\angk p x y \ge \angk p x z +  \angk p z y,\]
 with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
 
-The same holds for hyperbolic and spherical model angles, but in the latter case one has to assume in addition that
-\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
+The same holds for hyperbolic and spherical model angles, 
+but in the latter case one has to assume in addition that
+\[\dist{p}{z}{}+\dist{p}{y}{}+\dist{x}{y}{}< 2\cdot\pi.\]
+
 \end{thm}
 
-\parit{Proof.} By the triangle inequality, 
-\[
-\dist{p}{q}{}+\dist{q}{z}{}+\dist{z}{p}{}\le \dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.
-\]
-Therefore the model triangle $\trig{\~p}{\~q}{\~z}=\modtrig(p q z)_{\EE^2}$ is defined.
+\parit{Proof.} 
+Consider the model triangle $\trig{\~x}{\~p}{\~z}=\modtrig(x p z)_{\EE^2}$.
 Take 
-a point $\~r$ on the extension of 
-$[\~p \~z]$ beyond $\~z$ so that $\dist{\~p}{\~r}{}=\dist{p}{r}{}$ (and therefore $\dist{\~p}{\~z}{}=\dist{p}{z}{}$). 
+a point $\~y$ on the extension of 
+$[\~x \~z]$ beyond $\~z$ so that $\dist{\~x}{\~y}{}=\dist{x}{y}{}$ (and therefore $\dist{\~x}{\~z}{}=\dist{x}{z}{}$). 
+
+\begin{wrapfigure}[6]{r}{23mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/alex-lemma-proof(1)}
+\lbl[br]{0,3;$\~x$}
+\lbl[lt]{22,1;$\~p$}
+\lbl[bl]{18,22;$\~y$}
+\lbl[bl]{8,13;$\~z$}
+\end{lpic}
+\end{wrapfigure}
 
 Since the increasing the opposite side in the plane triangle increase the corresponding angle, 
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
-\item $\mangle\hinge{\~p}{\~q}{\~r}-\angk{p}{q}{r}$;
-\item $\dist{\~p}{\~r}{}-\dist{p}{r}{}$;
-\item $\mangle\hinge{\~z}{\~q}{\~r}-\angk{z}{q}{r}$.
+\item $\mangle\hinge{\~x}{\~p}{\~y}-\angk{x}{p}{y}$;
+\item $\dist{\~p}{\~y}{}-\dist{p}{y}{}$;
+\item $\mangle\hinge{\~z}{\~p}{\~y}-\angk{z}{p}{y}$.
 \end{enumerate}
 Since 
-\[\mangle\hinge{\~p}{\~q}{\~r}=\mangle\hinge{\~p}{\~q}{\~z}=\angk{p}{q}{z}\]
+\[\mangle\hinge{\~x}{\~p}{\~y}=\mangle\hinge{\~x}{\~p}{\~z}=\angk{x}{p}{z}\]
 and
-\[ \mangle\hinge{\~z}{\~q}{\~r}
-=\pi-\mangle\hinge{\~z}{\~p}{\~q}
-=\pi-\angk{z}{p}{q},\]
+\[ \mangle\hinge{\~z}{\~p}{\~y}
+=\pi-\mangle\hinge{\~z}{\~x}{\~p}
+=\pi-\angk{z}{x}{p},\]
 the first statement follows.
 
-For the second statement, construct $\trig{\~q}{\~z}{\~r'}=\modtrig(qzr)_{\EE^2}$ on the opposite side of $[\~q\~z]$ from $\trig{\~p}{\~q}{\~z}$.  
-Since
-\[\dist{\~p}{\~r'}{}\le \dist{\~p}{\~z}{} + \dist{\~z}{\~r'}{}=\dist{p}{z}{}+\dist{z}{r}{}=\dist{p}{r}{},\]
-then 
+For the second statement, construct a model triangle $\trig{\~p}{\~z}{\~y'}\z=\modtrig(pzy)_{\EE^2}$ on the opposite side of $[\~p\~z]$ from $\trig{\~x}{\~p}{\~z}$.  
+Note that 
 \begin{align*}
-\angk{q}{p}{z} + \angk{q}{z}{r} 
+\dist{\~x}{\~y'}{}
+&\le \dist{\~x}{\~z}{} + \dist{\~z}{\~y'}{}=
+\\
+&=\dist{x}{z}{}+\dist{z}{y}{}=
+\\
+&=\dist{x}{y}{}.
+\intertext{Therefore}
+\angk{p}{x}{z} + \angk{p}{z}{y} 
 &
 = 
-\mangle\hinge{\~q}{\~p}{\~z}+ \mangle\hinge{\~q}{\~z}{\~r'} 
+\mangle\hinge{\~p}{\~x}{\~z}+ \mangle\hinge{\~p}{\~z}{\~y'} 
 =
 \\
 &
 = 
-\mangle\hinge{\~q}{\~p}{\~r'}
+\mangle\hinge{\~p}{\~x}{\~y'}
 \le
 \\
-&\le  \angk q p r.
+&\le  \angk p x y.
 \end{align*}
-Equality holds if and only  if $\dist{\~p}{\~r'}{}=\dist{p}{r}{}$, 
+Equality holds if and only  if $\dist{\~x}{\~y'}{}=\dist{x}{y}{}$, 
 as required.
 \qeds
 
@@ -731,10 +744,10 @@ The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
 
 \begin{thm}{Hemisphere lemma}
 \label{lem:hemisphere}
-For $\kappa>0$, any closed path of length $<2\cdot \varpi\kappa$ (respectively, $\le2\cdot \varpi\kappa$) in $\Lob2\kappa$ lies in an open (respectively, closed) hemisphere. 
+Any closed path of length $<2\cdot \pi$ (respectively, $\le2\cdot \pi$) in the units sphere $\SS^2$ lies in an open (respectively, closed) hemisphere. 
 \end{thm}
 
-\parit{Proof.} By rescaling, we may assume that $\kappa=1$ and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\SS^2$.
+\parit{Proof.} 
 Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
 
 Assume $\ell<\pi$.

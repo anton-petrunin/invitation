@@ -129,7 +129,75 @@ By Crofton's formula we have that
 
 
 \parbf{Exercise~\ref{ex:cone+susp}.}
+Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
+and by $|x|$ the distance from $x$ to the tip of the cone;
+if $x$ is the tip then $|x|=0$ and we can take any point of $\spc{U}$ as $x'$.
+
+Let $p$, $q$, $x$, $y$
+be a quadruple in $\Cone\spc{U}$.
+Assume that the spherical model triangles $\trig{\~p'}{\~x'}{\~y'}=\modtrig(p'x'y')_{\SS^2}$ and $\trig{\~q'}{\~x'}{\~y'}=\modtrig(q'x'y')_{\SS^2}$ are defined.
+Consider the following points in $\EE^3=\Cone\SS^2$: 
+\begin{align*}
+\~p&=|p|\cdot\~p',
+&
+\~q&=|q|\cdot\~q',
+&
+\~x&=|x|\cdot\~x',
+&
+\~y&=|y|\cdot\~y'.
+\end{align*}
+
+Note that
+$\trig{\~p}{\~x}{\~y}\iso\modtrig(pxy)_{\EE^2}$
+and
+$\trig{\~q}{\~x}{\~y}\iso\modtrig(qxy)_{\EE^2}$.
+Further note that if $\~z\in [\~x\~y]$ then
+$\~z'=\~z/|\~z|$ lies on the geodesic $[\~x'\~y']$ in $\SS^2$.
+???
+
 \parbf{Exercise~\ref{ex:product}.}
+Fix a quadruple 
+\begin{align*}
+p&=(p_1,p_2),
+&
+q&=(q_1,q_2), 
+&
+x&=(x_1,x_2),
+&
+y&=(y_1,y_2)
+\end{align*}
+in $\spc{U}\times \spc{V}$.
+For the quadruple $p_1,q_1,x_1,y_1$ in $\spc{U}$,
+construct two model triangles $\trig{\~p_1}{\~x_1}{\~y_1}=\modtrig(p_1x_1y_1)_{\EE^2}$ 
+and $\trig{\~q_1}{\~x_1}{\~y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$ 
+Similarly, for the quadruple $p_2,q_2,x_2,y_2$ in $\spc{V}$
+construct two model triangles $\trig{\~p_2}{\~x_2}{\~y_2}$ and $\trig{\~q_2}{\~x_2}{\~y_2}$.
+
+Consider four points in $\EE^4=\EE^2\times\EE^2$ 
+\begin{align*}
+\~p&=(\~p_1,\~p_2),
+&
+\~q&=(\~q_1,\~q_2),
+&
+\~x&=(\~x_1,\~x_2),
+&
+\~y&=(\~y_1,\~y_2).
+\end{align*}
+Note that the triangles $\trig{\~p}{\~x}{\~y}$ and $\trig{\~q}{\~x}{\~y}$ in $\EE^4$ are isometric to the model triangles 
+$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$.
+
+If $\~z=(\~z_1,\~z_2)\in [\~x\~y]$ we have then $\~z_1\in [\~x_1\~y_1]$ and $\~z_2\in [\~x_2\~y_2]$ and
+\begin{align*}
+\dist[2]{\~z}{\~p}{\EE^4}&=\dist[2]{\~z_1}{\~p_1}{\EE^2}+\dist[2]{\~z_2}{\~p_2}{\EE^2},
+\\
+\dist[2]{\~z}{\~q}{\EE^4}&=\dist[2]{\~z_1}{\~q_1}{\EE^2}+\dist[2]{\~z_2}{\~q_2}{\EE^2},
+\\
+\dist[2]{p}{q}{\spc{U}\times\spc{V}}&=\dist[2]{p_1}{q_1}{\spc{U}}+\dist[2]{p_2}{q_2}{\spc{V}}.
+\end{align*}
+Therefore $\Cat{}{0}$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
+and 
+$p_2,q_2,x_2,y_2$ in $\spc{U}$ implies the 
+$\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}$.
 
 \parbf{Exercise~\ref{ex:thin=cat}.} 
 To prove if part,
