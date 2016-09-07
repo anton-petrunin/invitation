@@ -105,29 +105,6 @@ the sequence $q_n$ has partial limit, say $q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
 assuming the latter is defined.
 
-
-\parbf{Exercise~\ref{exr-crofton}.}
-Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
-By approximation it's clearly enough to prove this for  smooth curves of length $< 2\cdot\pi$ with transverse self-intersections. 
-
-Given $v\in \SS^2$, denote by $v^\perp$ the equator in $\SS^2$ with the pole at $v$.
-Further, $\# X$ will denote the number of points in the set $X$.
-
-Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. 
-Note that $\#(\alpha\cap v^\perp)$ is even for almost all $v$.
-
-Therefore, if $\alpha$ does not lie in a hemisphere then
-$\#(\alpha\cap v^\perp) \ge 2$ for almost all $v\in\SS^2$.  
-
-By Crofton's formula we have that
-\begin{align*}
-\length(\alpha)
-&=\frac 1 4\cdot \int\limits_{\SS^2}\#(\alpha\cap v^\perp)\cdot \d_v\area\ge
-\\
-&\ge2\cdot\pi.
-\end{align*}
-
-
 \parbf{Exercise~\ref{ex:cone+susp}.}
 Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
 and by $|x|$ the distance from $x$ to the tip of the cone;
@@ -524,6 +501,39 @@ gave a complete answer to the analogous question for three planes.
 In particular they show that if a covering space of $\EE^4$
 branching at three planes through one origin is $\Cat{}{0}$ then these all are complex planes for some complex structure on $\EE^4$.
 
+\parbf{Exercise~\ref{ex:hemisphere}.}
+Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
+
+Assume $\ell<\pi$.
+Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
+Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
+Let $z$ be the midpoint of  $[pq]$.  
+We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
+If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
+Without loss of generality we may assume that $r\in\check\alpha$. 
+The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which passes through $r$ and its antipodal point $r'$.
+Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
+
+\parit{A solution via Crofton formula.}
+Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
+By approximation it's clearly enough to prove this for  smooth curves of length $< 2\cdot\pi$ with transverse self-intersections. 
+
+Given $v\in \SS^2$, denote by $v^\perp$ the equator in $\SS^2$ with the pole at $v$.
+Further, $\# X$ will denote the number of points in the set $X$.
+
+Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. 
+Note that $\#(\alpha\cap v^\perp)$ is even for almost all $v$.
+
+Therefore, if $\alpha$ does not lie in a hemisphere then
+$\#(\alpha\cap v^\perp) \ge 2$ for almost all $v\in\SS^2$.  
+
+By Crofton's formula we have that
+\begin{align*}
+\length(\alpha)
+&=\frac 1 4\cdot \int\limits_{\SS^2}\#(\alpha\cap v^\perp)\cdot \d_v\area\ge
+\\
+&\ge2\cdot\pi.
+\end{align*}
 
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}

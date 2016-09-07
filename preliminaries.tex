@@ -738,39 +738,3 @@ The completion of $\T'_p$ is therefore  natuaral isometric to $\T_p$.
 The elements of $\T_p$ will be called tangent vector at $p$,
 despite that $\T_p$ is only cone --- not a vector space.
 The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
-
-\section{Hemisphere lemma}\label{curves-in-model}
-
-
-\begin{thm}{Hemisphere lemma}
-\label{lem:hemisphere}
-Any closed path of length $<2\cdot \pi$ (respectively, $\le2\cdot \pi$) in the units sphere $\SS^2$ lies in an open (respectively, closed) hemisphere. 
-\end{thm}
-
-\parit{Proof.} 
-Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
-
-Assume $\ell<\pi$.
-Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
-Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
-Let $z$ be the midpoint of  $[pq]$.  
-We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
-If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
-Without loss of generality we may assume that $r\in\check\alpha$. 
-The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which passes through $r$ and its antipodal point $r'$.
-Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
-
-If $\ell=\pi$, then either $\alpha$ is a local geodesic, and hence a great circle, 
-or $\alpha$ may be strictly shortened by substituting a geodesic arc for a subarc of $\alpha$ 
-whose endpoints $p^1,p^2$ are arbitrarily close to some point $p$ on  $\alpha$.
-In the latter case,  $\alpha$ lies in a closed hemisphere obtained as a limit of closures of open hemispheres  containing the shortened curves as $p^1,p^2$ approach $p$.
-\qeds
-
-
-
-%\begin{thm}{Lemma}\label{lem:proj-to-conv}Let $K\subset\Lob2\kappa$ be a convex closed set.Then there is a short map $\map\:\Lob2\kappa\to K$ such that $\map(x)=x$ for any $x\in K$. \end{thm}
-
-\begin{thm}{Exercise}\label{exr-crofton}
-Build a proof of Hemisphere lemma
-\ref{lem:hemisphere} based on Crofton's formula.
-\end{thm}
