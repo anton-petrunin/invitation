@@ -1,0 +1,61 @@
+\part{Curvature bounded above}
+
+In this chapter we define $\CBB{}{\kappa}$ spaces and give the first application.
+
+\section{4-point condition}
+
+A quadruple of points $p,x,y,z$ in a metric space $\spc{X}$ satisfies 
+$\CBB{}{0}$ comparison if
+\[\angk pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}\le 2\cdot\pi.\]
+If $p$ coincides with one of the points $x$, $y$ or $z$ then the left hand side is undefined;
+in this case we assume that $\CBB{}{0}$ comparison holds automatically.
+
+Taking hyperbolic plane $\HH^2$ or sphere $\SS^2$ instead of the Eulcidean plane $\EE^2$,
+one defines $\CBB{}{\mp1}$ comparison.
+
+Namely, $p,x,y,z$  satisfies 
+$\CBB{}{-1}$ comparison if 
+\[\angk pxy_{\HH^2}+\angk pyz_{\HH^2}+\angk pzx_{\HH^2}\le 2\cdot\pi.\]
+
+Further, $p,x,y,z$ satisfies $\CBB{}{1}$ comparison if 
+\[\angk pxy_{\SS^2}+\angk pyz_{\SS^2}+\angk pzx_{\SS^2}\le 2\cdot\pi.\]
+In the latter case the left hand side is undefined if $p$ coincides with 
+one of $x$, $y$ or $z$ or one of the comparison triangles $\modtrig(pxy)_{\SS^2}$, $\modtrig(pyz)_{\SS^2}$ or $\modtrig(pzx)_{\SS^2}$ is undefined\footnote{That is 
+\begin{align*}
+\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}&\ge2\cdot\pi,\quad\text{or}
+\\
+\dist{p}{y}{}+\dist{p}{z}{}+\dist{y}{z}{}&\ge2\cdot\pi,\quad\text{or}
+\\
+\dist{p}{z}{}+\dist{p}{x}{}+\dist{z}{x}{}&\ge2\cdot\pi.
+\end{align*}
+};
+in this case we also assume that $\CBB{}{0}$ comparison holds automatically.
+
+
+
+\section{Semiconvex functions}
+
+Let 
+
+\section{Gradient}
+
+Let $f$ be a function defined on metric space $\spc{X}$.
+Given a point $p\in \spc{X}$ set
+\[|\nabla|_pf|\limsup \]
+
+\begin{thm}{Definition-proposition}
+Let $f$ be a semiconcave function defined on an open set $\Omega$ in a  $\CBB{}{\kappa}$ proper length space $\spc{L}$.
+Then for any $p\in \Omega$ there is unique tangent vector $w\in\T_p$ such that
+\begin{align*}
+\<w,w\>&=(\d_pf)(w)
+\\
+\<w,x\>&\ge(\d_pf)(x)
+\end{align*}
+for any $x\in \T_p$.
+
+The vector $w$ is called \emph{gradient of $f$ at $p$} and denoted as $\nabla_pf$.
+\end{thm}
+
+A curve $\alpha$ is called $f$-gradient if 
+\[\alpha^+(t)=\nabla_{\alpha(t)}f\]
+for any $t$.
