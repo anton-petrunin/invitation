@@ -122,7 +122,7 @@ all its triangles are thin (respectively spherically thin).
 \begin{thm}{Uniqueness of geodesics}\label{thm:cat-unique}
 In a $\Cat{}{0}$ proper length space, pairs of points are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 
-Analogously, in a $\Cat{}{1}$ proper length space, pairs of points on distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+Analogously, in a $\Cat{}{1}$ proper length space, pairs of points at distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 \parit{Proof.} 
@@ -139,8 +139,8 @@ Since both these triangles are thin, we get
 \dist{\geodpath_{[p^1q^1]}(t)}{\geodpath_{[p^2q^2]}(t)}{\spc{U}}&\le \max\{\dist{p^1}{p^2}{\spc{U}},\dist{q^1}{q^2}{\spc{U}}\}.
 \end{align*}
 
-Hence continuity and uniqueness in the $\Cat{}{0}$ case follows.
-The $\Cat{}{1}$ case is done essentially the same way.
+Hence continuity and uniqueness in
+ the $\Cat{}{0}$ case.  The $\Cat{}{1}$ case is done essentially the same way.
 \qeds
 
 
@@ -151,7 +151,7 @@ Analogously, any $\Cat{}{1}$ proper length space with diameter $<\pi$ is contrac
 \end{thm}
 
 \parit{Proof.} Let $\spc{U}$ be a $\Cat{}{0}$ proper length space.
-Fix a point $p\in \spc{U}$ in the space.
+Fix a point $p\in \spc{U}$.
 
 For each point $x$ consider the geodesic path $\gamma_x\:[0,1]\to \spc{U}$ from $p$ to $x$.
 Consider the map 
@@ -167,16 +167,16 @@ The proof of the $\Cat{}{1}$ case is identical.
 
 \begin{thm}{Proposition}\label{cor:loc-geod-are-min}
 Suppose $\spc{U}$ is a $\Cat{}{0}$ proper length space.  
-Then any local geodesic in $\spc{U}$ is a minimizing geodesic.
+Then any local geodesic in $\spc{U}$ is a geodesic.
 
-Analogously, if $\spc{U}$ is a $\Cat{}{1}$ proper length space then any local geodesic with length $<\pi$ in $\spc{U}$ is a minimizing geodesic.
+Analogously, if $\spc{U}$ is a $\Cat{}{1}$ proper length space then any local geodesic with length $<\pi$ in $\spc{U}$ is a geodesic.
 \end{thm}
 
 \parit{Proof.}
-Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic  that is not minimizing.
+Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic  that is not a geodesic.
 Choose $a$ to be the maximal value 
-such that $\gamma$ is minimizing on $[0,a]$.
-Further choose $b>a$ so that $\gamma$ is minimizing on $[a,b]$.
+such that $\gamma$ is a geodesic on $[0,a]$.
+Further choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 
 
 \begin{wrapfigure}{r}{21mm}
@@ -277,16 +277,16 @@ By composition,  the natural map from $\trig{\~ p}{\~ x}{\~ y}$ to $\trig p y z$
 The spherical case is done along the same lines.
 \qeds
 
-Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\Omega\ni p$ such that any geodesic with the ends in $A$ which lie in $\Omega$ lies in $A$. 
+Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in $A$. 
 
 \begin{thm}{Exercise}\label{ex:convex-balls}
 Any ball in a $\Cat{}{0}$ proper length space forms a convex set.
 
-Analogousely, any ball in a $\Cat{}{1}$ proper length space of radius $R<\tfrac\pi2$ forms a convex set.
+Analogously, any ball of radius $R<\tfrac\pi2$ in a $\Cat{}{1}$ proper length space  forms a convex set.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:locally-convex}
-Show that in any $\Cat{}{0}$ proper length space any closed connected locally convex set is convex.
+Show that in any $\Cat{}{0}$ proper length space, any closed, connected, locally convex set is convex.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:closest-point}
@@ -295,7 +295,7 @@ and $K\subset \spc{U}$ be a closed convex set.
 Show that 
 
 \begin{subthm}{ex:closest-point:a}
-For each point $p\in \spc{U}$ there is unique point $p^*\in K$ which minimize the distance $\dist{p}{p^*}{}$.
+For each point $p\in \spc{U}$ there is unique point $p^*\in K$ that minimizes the distance $\dist{p}{p^*}{}$.
 \end{subthm}
 
 \begin{subthm}{}
