@@ -51,15 +51,22 @@ Let $\spc{Y}_k$ be the set of vertices of $\spc{X}_k$ with the induced metric. B
 
 Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\spc{Y}=\bar {\spc{Y}}_\infty$ be its metric completion. Then $\spc{Y}$ is a length space since it satisfies the almost midpoint property. But it is not hard to see that no two distinct points in $\spc{Y}$ can be connected by a shortest geodesic. \qeds
 
-AN OTHER SOLUTION from here http://mathoverflow.net/q/15720
-if we want it, I can ask fedya.???
 
-Well, the unit ball in $c_0$ is almost what you want (there is no unique shortest curve between points). 
-All we need now is to enhance "bypasses" and to give disadvantage to "straight lines". 
-This can easily be done by taking the distance element to be \[(2+\sum_n 2^{-n}x_n)^{-1}\|dx\|_\infty,\] 
-which is never less than the usual distance element in $c_0$ and never greater than 3 times it in the unit ball. Now, if we have any continuous finite length curve $x(t)$ from $y$ to $z$ parametrized by the arclength, we can easily shorten it by replacing the $m$-th position by the maximum of the actual value of $x_m(t)$ and 
-\[y_m+t(z_m-y_m)/d+\frac 12 \min(t,d-t),\] 
-where $d$ is the length of $x(t)$, which will work if $m$ is large enough since $\max_t|x_m(t)|\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.
+\parit{Alternative solution.}
+Consider the space $c_0$ of all sequences converging to zero equipped with supnorm.
+The unit ball in $c_0$ is almost what you want --- there is no unique shortest curve between points. 
+All we need now is to enhance \emph{bypasses} and to give disadvantage to emph{bstraight lines}. 
+
+This can be done by taking the distance element to be 
+\[\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots}\cdot\|dx\|_\infty,\] 
+which is never less than the usual distance element in $c_0$ and never greater than 3 times it in the unit ball.
+
+If we have any continuous finite length curve $x(t)=(x_1(t),x_2(t),\dots)$ from $y$ to $z$ parametrized by the arclength, we can shorten it by replacing $x_m(t)$ by the maximum of the actual value of $x_m(t)$ and 
+\[y_m+\tfrac td(z_m-y_m)+\tfrac 12 \min\{t,d-t\},\] 
+where $d$ is the length of $x(t)$. 
+This will work if $m$ is large enough since $\max_t\{|x_m(t)|\}\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.
+
+The above solution was given by Fedor Nazarov, see \cite{nazarov}.
 
 \parbf{Exercise~\ref{exercise from BH}.}
 The following example is taken from the book of Bridson and Haefliger \cite{BH}.
