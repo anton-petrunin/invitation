@@ -287,11 +287,11 @@ but one needs to use Exercise~\ref{ex:null-homotopic}. \qeds
 
 \begin{thm}{Definition}\label{def:poly}
 A length space $\spc{P}$ is called  
-\emph{polyhedral space} 
+a \emph{polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that an every simplex in $\tau$ is isometric to a simplex in a Euclidean space of appropriate dimension.
 
-Analogousely, a length space $\spc{P}$ is called  
+Analogously, a length space $\spc{P}$ is called  a 
 \emph{spherical polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that every simplex in $\tau$ is isometric to a simplex in a unit sphere of appropriate dimension.
@@ -325,7 +325,7 @@ If $m$ is  the dimension of $\sigma$
 then the set of vertices of $\Link_\sigma$
 is formed by the $(m+1)$-simplices which contain $\sigma$;
 the set of its edges are formed by the $(m+2)$-simplices 
-which contain $\sigma$, and so on.
+which contain $\sigma$; and so on.
 
 The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
@@ -377,7 +377,7 @@ Analogously, if $\spc{P}$ be a spherical polyhedral space and $\tau$ be a its tr
 Then $\spc{P}$ is $\Cat{}{1}$ if and only if $\spc{P}$ and every link of any simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
 \end{thm}
 
-In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}).
+In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}.
 
 \begin{thm}{Corollary}\label{cor:closed-geod-cat} Any locally $\Cat{}{0}$ compact space which contains no closed geodesics is $\Cat{}{0}$.
  
@@ -385,35 +385,35 @@ Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geod
 \end{thm}
 
 \parit{Proof.}
-By Globalization theorem (\ref{thm:hadamard-cartan}), we need to show that the space is simply connected.
-Assume contrary. 
+By Globalization theorem \ref{thm:hadamard-cartan}, we need to show that the space is simply connected.
+Assume the contrary. 
 Fix a nontrivial homotopy class of closed curves.
 
 Denote by $\ell$ the exact lower bound for the lengths of curves in the class.
 Note that $\ell>0$;
-otherwise there would be a closed noncontractable curve in a $\Cat{}{0}$ spherical neighborhood of some poin which contradicts Corollary \ref{cor:contractible-cat}.
+otherwise there would be a closed noncontractible curve in a $\Cat{}{0}$ spherical neighborhood of some point, contradicting Corollary \ref{cor:contractible-cat}.
 
-Since the space is compact the class contains a length minimizing curve
-which has to be a closed geodesic. 
+Since the space is compact, the class contains a length minimizing curve, 
+which must be a closed geodesic. 
 
-The $\Cat{}{1}$ is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
+The $\Cat{}{1}$ case is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:geod-circle}
-In the assumptions of Corollary~\ref{cor:closed-geod-cat},
-prove that the space contains \emph{geodesic circle}; 
-that is a simple closed curve $\gamma$ such that 
-for any two points $p,q\in\gamma$ one the arcs of with endpoints $p$ and $q$ forms a minimizing geodesic. 
+Under the assumptions of Corollary~\ref{cor:closed-geod-cat},
+prove that the space contains a \emph{geodesic circle}; 
+that is, a simple closed curve $\gamma$ such that 
+for any two points $p,q\in\gamma$, one of the arcs of $\gamma$ with endpoints $p$ and $q$ forms a minimizing geodesic. 
 \end{thm}
 
 
 
 \parit{Proof of Theorem~\ref{thm:PL-CAT}.}
-We prove ``only if'' part and leave ``if'' part as an exercise.
+We prove the  ``only if'' part and leave the ``if'' part as an exercise.
 
 We apply induction on $\dim\spc{P}$.
 The base case $\dim\spc{P}=0$ is evident.
-Let us start with $\Cat{}{1}$ case.
+Let us start with the $\Cat{}{1}$ case.
 
 \parit{Step.}
 Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
@@ -431,15 +431,15 @@ it is sufficient to show that
 Note that $\Sigma_p$ is a spherical polyhedral space 
 and its  links are isometric to  links of $\spc{P}$. 
 By the  induction hypothesis, $\Sigma_p$ is $\Cat{}{1}$.
-Applying Grolbalization (\ref{thm:hadamard-cartan}),
+Applying Globalization theorem \ref{thm:hadamard-cartan},
 we get the statement.
 
 The $\Cat{}{0}$ case is different only in the last step, where we need to use the first part of Exercise~\ref{ex:cone+susp}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
-Assume in a polyhedral space $\spc{P}$
-any two points can be connected by a unique geodesic.
+Let $\spc{P}$
+be a polyhedral space such that any two points can be connected by a unique geodesic.
 Show that $\spc{P}$ is a $\Cat{}{0}$ space.
 \end{thm}
 
@@ -527,7 +527,7 @@ Note that in this case
 $$\mangle\hinge{v^1}{v^2}{v^3}=\mangle\hinge{v^2}{v^3}{v^1}=\mangle\hinge{v^3}{v^1}{v^1}=\pi.$$
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
-The join of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
+The product of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
 forms a locally geodesic loop in $\spc{P}$. 
 \end{clm}
 
@@ -618,9 +618,9 @@ The following construction is given by Billera, Holmes and Vogtmann in \cite{BHV
 
 Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
 labeled by $a^1,\dots,a^n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other verices of degree 3 
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other verices of degree 3, 
 and prescribe the lengths of $2\cdot n-3$ edges.
-If the lengh of an edge is $0$, we assume that edge degenerates;
+If the length of an edge is $0$, we assume that edge degenerates;
 such a tree can be also decribed using a different topological tree $\tau'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with the ocotant
 \[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
@@ -726,10 +726,10 @@ if and only if its cubical analog is aspherical.
 \section{Exotic aspherical manifolds}
 
 
-By Globalization theorem (\ref{thm:hadamard-cartan})
+By Globalization theorem \ref{thm:hadamard-cartan},
 any $\Cat{}{0}$ proper length space is contractible.
-Therefore any complete locally $\Cat{}{0}$ proper length space 
-is \emph{aspherical};
+Therefore all complete, locally $\Cat{}{0}$ proper length spaces 
+are \emph{aspherical};
 that is, they have contractible universal covers.
 This observation can be used to construct examples of aspherical spaces. 
 
@@ -891,14 +891,14 @@ that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\sp
 
 \section{Comments}
 
-The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting thins; 
-some of them discussed in the survey \cite{davis-survey} by Michael Davis.
+The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting things,  
+some of which are discussed in the survey \cite{davis-survey} by Michael Davis.
 
 The following Proposition was proved by Fredric Ancel, Michael Davis and Craig Guilbault in \cite{ADG}. 
 
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
-Given $m\ge 5$ there is a Euclidean polyhedral space $\spc{P}$ such that
+Given $m\ge 5$, there is a Euclidean polyhedral space $\spc{P}$ such that:
 \begin{subthm}{}
 $\spc{P}$ is homeomorphic to a closed $m$-dimensional manifold.
 \end{subthm}
@@ -923,19 +923,19 @@ and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 \end{thm}
 
 
-It worth to note that any complete simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
+It is noteworthy that any complete, simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
 In fact by Globalization theorem
-(\ref{thm:hadamard-cartan}), 
-the exponential map at one point of such manifold is a homeomorphism.
-In particular there is no Riemannian analog of the proposition.
+\ref{thm:hadamard-cartan}, 
+the exponential map at a point of such a manifold is a homeomorphism.
+In particular, there is no Riemannian analog of the proposition.
 Moreover, according to a theorem of Stone, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the proposition; 
 that is the homeomorphism to a manifold in Proposition~\ref{prop:loc-CAT-mnfld} 
 can not be made piecewise linear. 
 
 A similar construction was used by Michael Davis, Tadeusz Januszkiewicz and Jean-Fran\c{c}ois Lafont \cite{davis-januszkiewicz-lafont}
-to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that (1) $M$ admits a polyhedral metric which is locally $\Cat{}{0}$ but it does not admit a Riemannian metric with nonpositive sectional curvature.
+to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
 
-The construction described in this chapter also lead to so called \emph{hyperbolization}, a flexible tool to construct a aspherical spaces;
+The construction described in this chapter also leads to so-called \emph{hyperbolization}, a flexible tool to construct a aspherical spaces;
 \cite{charney-davis} is a good survey in the subject.
 
 
