@@ -13,7 +13,7 @@ We say that space $\spc{U}$ is \emph{locally $\Cat{}{0}$} (or \emph{locally $\Ca
 a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$  space (or $\Cat{}{1}$ space, respectively).
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so $\SS^1$ is locally $\Cat{}{0}$.
-On the other hand, $\SS^1$ is not $\Cat{}{0}$ since the closed geodesic in $\SS^1$ is not minimizing, so $\SS^1$ does not satisfy Theorem~\ref{thm:cat-unique}.
+On the other hand, $\SS^1$ is not $\Cat{}{0}$, since the closed geodesic in $\SS^1$ is not minimizing, so $\SS^1$ does not satisfy Theorem~\ref{thm:cat-unique}.
 
 This definition is equivalent to saying that each point $p\in \spc{U}$ admits an open neighborhood $\Omega$
 such that 
@@ -27,6 +27,11 @@ The proof goes along the same lines as Exercise \ref{ex:convex-balls}.
 
 In this section we will study behavior of local geodesics in locally $\Cat{}{}$  spaces.  
 The results will be used in the proof of the Globalization theorem (\ref{thm:hadamard-cartan}).
+
+Recall that \emph{path} denotes a curve parametrized by $[0,1]$.  The space of paths in $\spc{U}$ comes with the natural metric
+\[\dist{\alpha}{\beta}{}
+=
+\sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.\]
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
 Let $\spc{U}$ be a proper locally $\Cat{}{\kappa}$ length space.
@@ -59,13 +64,13 @@ The $\Cat{}{1}$ case is done the same way, but one has to assume in addition tha
 
 
 The following lemma and its proof were suggested to us by Alexander Lytchak.  
-This lemma will allow us to move a local geodesic path 
-so that its endpoints follow given trajectories.
+This lemma allows  a local geodesic path 
+to be moved so that its endpoints follow given trajectories, a procedure obtained by a different method in \cite{a-b:cbc}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
 Let $\spc{U}$ be a locally $\Cat{}{\kappa}$  proper length space, 
-and $\gamma\:[0,1]\to\spc{U}$ be a locally geodesic path.
+and $\gamma\:[0,1]\to\spc{U}$ be a path.
 
 Then there is a $\Cat{}{\kappa}$ proper length space $\spc{N}$,
 an open set $\hat\Omega\subset \spc{N}$,
@@ -111,46 +116,42 @@ $\hat\gamma$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of  the lemma
 \qeds
 
 The following two corollaries follow from Patchwork along a curve
-(\ref{lem:patch}) 
+(\ref{lem:patch}), Proposition \ref{cor:loc-geod-are-min} (stating that in $\Cat{}{}$ spaces, local geodesics are geodesics), 
 and Theorem on uniqueness of geodesics~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:discrete-paths}
-If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ is discrete;
-that is, for any local geodesic path $\gamma$ connecting $p$ to $q$ there is $\eps>0$ such that for any other geodesic path $\delta$ from $p$ to $q$ we have
+If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space, then for any pair of points $p,q\in\spc{U}$ , the space of all locally geodesic paths from $p$ to $q$ is discrete;
+that is, for any local geodesic path $\gamma$ connecting $p$ to $q$, there is $\eps>0$ such that for any other geodesic path $\delta$ from $p$ to $q$ we have
 $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
 
-Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space than for any pair of points $p,q\in\spc{U}$  the space of all locally geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
+Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space, then for any pair of points $p,q\in\spc{U}$,  the space of all locally geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
 \end{thm}
-
-Recall that \emph{path} denotes a curve parametrized by $[0,1]$.
-The spaces of paths in $\spc{U}$ comes with the natural metric
-\[\dist{\alpha}{\beta}{}
-=
-\sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.\]
 
 \begin{thm}{Corollary}\label{cor:path-geod}
 If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space, then 
-for any path $\alpha$ there is a choice of local geodesic path $\gamma$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma=\alpha$. 
+for any path $\alpha$ there is a choice of local geodesic path $\gamma_\alpha$  connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$. 
 
 Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space, then 
 for any path $\alpha$ with length less than $\pi$,  
-there is a choice of local geodesic path $\gamma$ with length less than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma=\alpha$.
+there is a choice of local geodesic path $\gamma_\alpha$ with length less than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$.
 \end{thm}
+
+\parit{Proof of Corollary \ref{cor:path-geod}; $\Cat{}{0}$ case.} Patchwork allows us to  construct a continuous family of local geodesic paths $\gamma_{\alpha|[0,t]}$, where the length of $\gamma_{\alpha|[0,t]}$ is at most that of  $\alpha|[0,t]$.  Thus the process may be continued to $t=1$. If $\alpha$ is a local geodesic path then $\gamma_\alpha|[0,t]=\alpha|[0,t]$. Continuity of the construction follows from Patchwork. \qeds
 
 Given a path $\alpha\:[0,1]\to\spc{U}$,
 we denote by $\bar\alpha$ the same path traveled in the opposite direction;
 that is,
 \[\bar\alpha(t)=\alpha(1-t).\]
-Join of two paths will be denoted with ``$*$'';
-if two paths $\alpha$ and $\beta$ connect the same pair of points then the joint $\bar\alpha*\beta$ forms a closed curve.
+The \emph{product} of two paths  will be denoted with ``$*$'';
+if two paths $\alpha$ and $\beta$ connect the same pair of points then the product $\bar\alpha*\beta$ forms a closed curve.
 
 \begin{thm}{Exercise}\label{ex:null-homotopic}
-Assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space and the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary \ref{cor:path-geod}.
+Assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space and consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary \ref{cor:path-geod}.
 
-Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$,
-each has lengths less than $\pi$ 
-and the joint 
-$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$ then $\gamma_\alpha=\gamma_\beta$.
+Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
+each has length less than $\pi$ 
+and the product  
+$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$.  Then $\gamma_\alpha=\gamma_\beta$.
 \end{thm}
 
 
@@ -158,29 +159,29 @@ $\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length s
 
 \section{Globalization}\label{sec:Hadamard--Cartan}
 
-The original formulation of \emph{Globalization theorem}, or \emph{Hadamard--Cartan theorem} states that if $M$ is a complete Riemannian manifold with sectional curvature $\le 0$ 
-then
+The original formulation of \emph{Globalization theorem}, or \emph{Hadamard--Cartan theorem} states that if $M$ is a complete Riemannian manifold with sectional curvature $\le 0$,  
+then the 
 exponential map at any point $p\in M$ is a covering;
 in particular it implies that universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
 
 In this generality, theorem appeared in the lectures of Cartan, see \cite{cartan}.
-For surfaces in the Euclidean plane, 
-this theroem was proved by
-Hans von Mangoldt see \cite{mangoldt} 
-and few years later independently by Hadamard \cite{hadamard}.
+This theorem was proved for surfaces in  Euclidean $3$-space 
+ by
+Hans von Mangoldt \cite{mangoldt},  
+and few years later independently for $2$-dimensional Riemannian manifolds by Hadamard \cite{hadamard}.
 
 Formulations for metric spaces of different generality were proved by 
 Busemann see \cite{busemann-CBA},
 Rinow see \cite{rinow},
 Gromov  \cite[p.119]{gromov:hyp-groups}. 
-A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Alexander and Bishop in \cite{ballmann:cartan-hadamard}
+A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Ballmann in \cite{ballmann:cartan-hadamard}
 and generalized further in \cite{a-b:h-c}.  
 
-For $\Cat{}{1}$ spaces, the globalization theorem was proved by Bowditch in \cite{bowditch}.
+For  $\Cat{}{1}$ proper spaces, the globalization theorem was proved by Bowditch in \cite{bowditch}.
 
 \begin{thm}{Globalization theorem}
 \label{thm:hadamard-cartan}
-Any simply connected locally $\Cat{}{0}$ proper length space 
+Any simply connected, locally $\Cat{}{0}$ proper length space 
 is $\Cat{}{0}$.
 
 Analogously, assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space
@@ -194,8 +195,8 @@ Then $\spc{U}$ is a $\Cat{}{1}$ space.
 \end{lpic}
 \end{wrapfigure}
 
-The surface of revolution showed on the diagram, 
-is an example of simply connected space which is locally $\Cat{}{1}$ but not $\Cat{}{1}$.
+The surface of revolution illustrated in the diagram 
+is an example of a simply connected space that  is locally $\Cat{}{1}$ but not $\Cat{}{1}$.
 To contract the marked curve one has to increase its length to $2\cdot\pi$ or more;
 in particular the surface does not satisfy the assumption of the globalization theorem.
 
@@ -208,10 +209,10 @@ A locally $\Cat{}{0}$ proper length space $\spc{U}$ is $\Cat{}{0}$
 if and only if the pairs of points in $\spc{U}$  are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 
 Analogously, a locally $\Cat{}{1}$ proper length space $\spc{U}$ is $\Cat{}{1}$ 
-if and only if the pairs of points in $\spc{U}$ at distance less $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+if and only if the pairs of points in $\spc{U}$ at distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
-The proof use a thin-triangle decompositions with the inheritance lemma (\ref{lem:inherit-angle}) and the following construction:
+The proof uses a thin-triangle decompositions with the inheritance lemma (\ref{lem:inherit-angle}) and the following construction:
 
 \begin{thm}{Definition of line-of-sight map} \label{def:sight}
 Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
@@ -223,12 +224,12 @@ is a \emph{line-of-sight map from $p$ to $\alpha$} .
 \end{thm}
 
 \parit{Proof of Patchwork globalization theorem (\ref{thm:alex-patch}).} 
-Note that the implication the ``only if'' part is already proved in  Theorem~\ref{thm:cat-unique}; it only remains to prove ``if'' part.
+Note that the implication ``only if'' is already proved in  Theorem~\ref{thm:cat-unique}; it only remains to prove ``if'' part.
 
 Fix a triangle $[p x y]$  in $\spc{U}$. 
 We need to show that $\trig p x y$ is thin.
 
-By the assumptions the line-of-sight map (\ref{def:sight}) $(t,\tau)\mapsto\gamma_t(\tau)$ for  $[x y]$ from $p$ is uniquely defied and continuous.    
+By the assumptions, the line-of-sight map  $(t,\tau)\mapsto\gamma_t(\tau)$ from $p$ to   $[x y]$ is uniquely defined and continuous.    
 
 \begin{center}
 \begin{lpic}[t(1mm),b(1mm),r(0mm),l(0mm)]{pics/cba-globalization-net(1)}
@@ -244,11 +245,10 @@ By the assumptions the line-of-sight map (\ref{def:sight}) $(t,\tau)\mapsto\gamm
 \end{lpic}
 \end{center}
 
-Fix a fine a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\] 
-set $x^{i,j}=\gamma_{t^i}(t^j)$. 
+Fix  a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\] 
+and set $x^{i,j}=\gamma_{t^i}(t^j)$. 
 Since the line-of-sight map is continuous and $\spc{U}$ is locally $\Cat{}{0}$, we may assume that each triangle 
-\[\trig{x^{i,j}}{x^{i,j+1}}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}}{x^{i+1,j}}{x^{i+1,j+1}}\] 
-are thin.
+\[\trig{x^{i,j}}{x^{i,j+1}}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}}{x^{i+1,j}}{x^{i+1,j+1}}\] is thin.
 
 Now we show that the thin property propagates to $\trig p x y$ by repeated application of the inheritance lemma (\ref{lem:inherit-angle}):
 \begin{itemize}
@@ -269,29 +269,29 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is thin.
 \qeds
 
 \parit{Proof of Globalization theorem; $\Cat{}{0}$ case.}
-Given a path $\alpha\:[0,1]\to\spc{U}$ denote by $\gamma_\alpha$ the local geodesic provided by Corollary \ref{cor:path-geod}.
+Given a path $\alpha\:[0,1]\to\spc{U}$, denote by $\gamma_\alpha$ the local geodesic provided by Corollary \ref{cor:path-geod}.
 Since the map $\alpha\mapsto\gamma_\alpha$ is continuous,
-we have $\gamma_\alpha=\gamma_\beta$ for any pair of  paths $\alpha$ and $\beta$  homotopic rel. to the ends.
+we have $\gamma_\alpha=\gamma_\beta$ for any pair of  paths $\alpha$ and $\beta$  homotopic relative to the ends.
 
-Since $\spc{U}$ is simply connected any pair of paths with common ends are homotopic.
-It follows that for any two points $p,q\in\spc{U}$ are joint by unique local geodesic.
+Since $\spc{U}$ is simply connected, any pair of paths with common ends are homotopic.
+It follows that any two points $p,q\in\spc{U}$ are joined by a unique local geodesic.
 
 It remains to apply the patchwork globalization theorem (\ref{thm:alex-patch}).
 
 \parit{$\Cat{}{1}$ case.}
 The proof goes along the same lines, 
-but one need to use Exercise~\ref{ex:null-homotopic}. \qeds
+but one needs to use Exercise~\ref{ex:null-homotopic}. \qeds
 
 
 \section{Polyhedral spaces}
 
 \begin{thm}{Definition}\label{def:poly}
 A length space $\spc{P}$ is called  
-\emph{polyhedral space} 
+a \emph{polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that an every simplex in $\tau$ is isometric to a simplex in a Euclidean space of appropriate dimension.
 
-Analogousely, a length space $\spc{P}$ is called  
+Analogously, a length space $\spc{P}$ is called  a 
 \emph{spherical polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that every simplex in $\tau$ is isometric to a simplex in a unit sphere of appropriate dimension.
@@ -325,7 +325,7 @@ If $m$ is  the dimension of $\sigma$
 then the set of vertices of $\Link_\sigma$
 is formed by the $(m+1)$-simplices which contain $\sigma$;
 the set of its edges are formed by the $(m+2)$-simplices 
-which contain $\sigma$, and so on.
+which contain $\sigma$; and so on.
 
 The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
@@ -377,7 +377,7 @@ Analogously, if $\spc{P}$ be a spherical polyhedral space and $\tau$ be a its tr
 Then $\spc{P}$ is $\Cat{}{1}$ if and only if $\spc{P}$ and every link of any simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
 \end{thm}
 
-In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}).
+In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}.
 
 \begin{thm}{Corollary}\label{cor:closed-geod-cat} Any locally $\Cat{}{0}$ compact space which contains no closed geodesics is $\Cat{}{0}$.
  
@@ -385,35 +385,35 @@ Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geod
 \end{thm}
 
 \parit{Proof.}
-By Globalization theorem (\ref{thm:hadamard-cartan}), we need to show that the space is simply connected.
-Assume contrary. 
+By Globalization theorem \ref{thm:hadamard-cartan}, we need to show that the space is simply connected.
+Assume the contrary. 
 Fix a nontrivial homotopy class of closed curves.
 
 Denote by $\ell$ the exact lower bound for the lengths of curves in the class.
 Note that $\ell>0$;
-otherwise there would be a closed noncontractable curve in a $\Cat{}{0}$ spherical neighborhood of some poin which contradicts Corollary \ref{cor:contractible-cat}.
+otherwise there would be a closed noncontractible curve in a $\Cat{}{0}$ spherical neighborhood of some point, contradicting Corollary \ref{cor:contractible-cat}.
 
-Since the space is compact the class contains a length minimizing curve
-which has to be a closed geodesic. 
+Since the space is compact, the class contains a length minimizing curve, 
+which must be a closed geodesic. 
 
-The $\Cat{}{1}$ is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
+The $\Cat{}{1}$ case is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:geod-circle}
-In the assumptions of Corollary~\ref{cor:closed-geod-cat},
-prove that the space contains \emph{geodesic circle}; 
-that is a simple closed curve $\gamma$ such that 
-for any two points $p,q\in\gamma$ one the arcs of with endpoints $p$ and $q$ forms a minimizing geodesic. 
+Under the assumptions of Corollary~\ref{cor:closed-geod-cat},
+prove that the space contains a \emph{geodesic circle}; 
+that is, a simple closed curve $\gamma$ such that 
+for any two points $p,q\in\gamma$, one of the arcs of $\gamma$ with endpoints $p$ and $q$ forms a minimizing geodesic. 
 \end{thm}
 
 
 
 \parit{Proof of Theorem~\ref{thm:PL-CAT}.}
-We prove ``only if'' part and leave ``if'' part as an exercise.
+We prove the  ``only if'' part and leave the ``if'' part as an exercise.
 
 We apply induction on $\dim\spc{P}$.
 The base case $\dim\spc{P}=0$ is evident.
-Let us start with $\Cat{}{1}$ case.
+Let us start with the $\Cat{}{1}$ case.
 
 \parit{Step.}
 Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
@@ -431,15 +431,15 @@ it is sufficient to show that
 Note that $\Sigma_p$ is a spherical polyhedral space 
 and its  links are isometric to  links of $\spc{P}$. 
 By the  induction hypothesis, $\Sigma_p$ is $\Cat{}{1}$.
-Applying Grolbalization (\ref{thm:hadamard-cartan}),
+Applying Globalization theorem \ref{thm:hadamard-cartan},
 we get the statement.
 
 The $\Cat{}{0}$ case is different only in the last step, where we need to use the first part of Exercise~\ref{ex:cone+susp}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
-Assume in a polyhedral space $\spc{P}$
-any two points can be connected by a unique geodesic.
+Let $\spc{P}$
+be a polyhedral space such that any two points can be connected by a unique geodesic.
 Show that $\spc{P}$ is a $\Cat{}{0}$ space.
 \end{thm}
 
@@ -527,7 +527,7 @@ Note that in this case
 $$\mangle\hinge{v^1}{v^2}{v^3}=\mangle\hinge{v^2}{v^3}{v^1}=\mangle\hinge{v^3}{v^1}{v^1}=\pi.$$
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
-The join of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
+The product of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
 forms a locally geodesic loop in $\spc{P}$. 
 \end{clm}
 
@@ -618,9 +618,9 @@ The following construction is given by Billera, Holmes and Vogtmann in \cite{BHV
 
 Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
 labeled by $a^1,\dots,a^n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other verices of degree 3 
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other verices of degree 3, 
 and prescribe the lengths of $2\cdot n-3$ edges.
-If the lengh of an edge is $0$, we assume that edge degenerates;
+If the length of an edge is $0$, we assume that edge degenerates;
 such a tree can be also decribed using a different topological tree $\tau'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with the ocotant
 \[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
@@ -726,10 +726,10 @@ if and only if its cubical analog is aspherical.
 \section{Exotic aspherical manifolds}
 
 
-By Globalization theorem (\ref{thm:hadamard-cartan})
+By Globalization theorem \ref{thm:hadamard-cartan},
 any $\Cat{}{0}$ proper length space is contractible.
-Therefore any complete locally $\Cat{}{0}$ proper length space 
-is \emph{aspherical};
+Therefore all complete, locally $\Cat{}{0}$ proper length spaces 
+are \emph{aspherical};
 that is, they have contractible universal covers.
 This observation can be used to construct examples of aspherical spaces. 
 
@@ -891,14 +891,14 @@ that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\sp
 
 \section{Comments}
 
-The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting thins; 
-some of them discussed in the survey \cite{davis-survey} by Michael Davis.
+The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting things,  
+some of which are discussed in the survey \cite{davis-survey} by Michael Davis.
 
 The following Proposition was proved by Fredric Ancel, Michael Davis and Craig Guilbault in \cite{ADG}. 
 
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
-Given $m\ge 5$ there is a Euclidean polyhedral space $\spc{P}$ such that
+Given $m\ge 5$, there is a Euclidean polyhedral space $\spc{P}$ such that:
 \begin{subthm}{}
 $\spc{P}$ is homeomorphic to a closed $m$-dimensional manifold.
 \end{subthm}
@@ -923,19 +923,19 @@ and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 \end{thm}
 
 
-It worth to note that any complete simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
+It is noteworthy that any complete, simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
 In fact by Globalization theorem
-(\ref{thm:hadamard-cartan}), 
-the exponential map at one point of such manifold is a homeomorphism.
-In particular there is no Riemannian analog of the proposition.
+\ref{thm:hadamard-cartan}, 
+the exponential map at a point of such a manifold is a homeomorphism.
+In particular, there is no Riemannian analog of the proposition.
 Moreover, according to a theorem of Stone, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the proposition; 
 that is the homeomorphism to a manifold in Proposition~\ref{prop:loc-CAT-mnfld} 
 can not be made piecewise linear. 
 
 A similar construction was used by Michael Davis, Tadeusz Januszkiewicz and Jean-Fran\c{c}ois Lafont \cite{davis-januszkiewicz-lafont}
-to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that (1) $M$ admits a polyhedral metric which is locally $\Cat{}{0}$ but it does not admit a Riemannian metric with nonpositive sectional curvature.
+to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
 
-The construction described in this chapter also lead to so called \emph{hyperbolization}, a flexible tool to construct a aspherical spaces;
+The construction described in this chapter also leads to so-called \emph{hyperbolization}, a flexible tool to construct a aspherical spaces;
 \cite{charney-davis} is a good survey in the subject.
 
 
