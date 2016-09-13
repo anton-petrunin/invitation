@@ -738,3 +738,207 @@ The completion of $\T'_p$ is therefore  natuaral isometric to $\T_p$.
 The elements of $\T_p$ will be called tangent vector at $p$,
 despite that $\T_p$ is only cone --- not a vector space.
 The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
+
+\section{Hausdorff convergence}
+
+It seems that Hausdorff convergence was first introduced by Hausdorff in \cite{hausdorff}
+and couple of years later an equivalent definition was given by Blaschke in \cite{blaschke}.
+Further a refinement of this definition was introduced by Frol\'{\i}k in \cite{frolik}
+and then rediscovered by Wijsman in \cite{wijsman},
+however this refinement was a step back to so called \emph{closed convergence} introduced by Hausdorff in the original book. 
+By that reason we call it Hausdorff convergence
+instead of
+\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
+
+
+Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
+We will denote by $\dist{A}{}{}(x)=\dist{A}{}{}(x)_{\spc{X}}$ the distance from $A$ to a point $x$ in $\spc{X}$;
+that is,
+$$\dist{A}{}{}(x)\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
+
+\begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
+Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$ 
+a closed set $A_\infty\subset \spc{X}$ is called Hausdorff limit of $(A_n)_{n=1}^\infty$,
+briefly $A_n\to A_\infty$ if 
+$$\dist{A_n}{}{}(x)\to\dist{A_\infty}{}{}(x)\ \ \t{as}\ \ n\to\infty$$
+for any fixed $x\in \spc{X}$.
+
+In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called \emph{converging} or \emph{converging in the sense of Hausdorff}.
+\end{thm}
+
+\begin{thm}{Selection theorem}
+Let $\spc{X}$ be a proper metric space
+and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in $\spc{X}$.
+Assume that for some (and therefore any) point  $x\in\spc{X}$ 
+the sequence $\dist{A_n}{}{}(x)$ is bounded.
+Then the sequence  $(A_n)_{n=1}^\infty$ has a converging subsequence in the sense of Hausdorff.
+\end{thm}
+
+\parit{Proof.}
+Since $X$ is proper,
+we can choose a countable dense set $\{x_1,x_2,\dots\}$ in $\spc{X}$.
+Note that the sequence $a_n=\dist{A_n}{}{}(x_\kay)$ is bounded for each $\kay$. 
+Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
+we can assume that $\dist{A_n}{}{}(x_\kay)$ is converging as $n\to\infty$ for any fixed $\kay$.
+
+Note that for each $n$, the function $\dist{A_n}{}{}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
+Therefore the sequence $\dist{A_n}{}{}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
+
+Set $A_\infty=f^{-1}(0)$.
+Since $f$ is 1-Lipschitz, 
+\[\dist{A_\infty}{}{}(y)\ge f(y)\] 
+for any $y\in \spc{X}$.
+It remains to show that 
+\[\dist{A_\infty}{}{}(y)\le f(y)\] 
+for any $y$.
+
+Assume contrary;
+that is, 
+\[f(z)<R<\dist{A_\infty}{}{}(z)\] 
+for some $z\in \spc{X}$ and $R>0$.
+Then for any large enough $n$ there is a point $z_n\in A_n$ such that
+$\dist{x}{z_n}{}\le R$.
+Since $\spc{X}$ is proper, we can pass to a partial limit $z_\infty$ of $z_n$ as $n\to\infty$.
+
+Clearly that $f(z_\infty)=0$, that is, $z_\infty\in A_\infty$.
+On the other hand, 
+\begin{align*}
+\dist{A_\infty}{}{}(y)
+&\le
+\dist{z_\infty}{y}{}
+\le R
+<
+\dist{A_\infty}{}{}(y),
+\end{align*}
+a contradiction.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:haudorff-convergence}
+Let $D_n$ be the disc on the coordinate plane 
+centered at $(0,n)$ and radius $n$.
+Show that as $D_n$ converges to the upper half-plane as $n\to\infty$.
+\end{thm}
+
+\section{Gromov--Hausdorff convergence}
+
+\begin{thm}{Definition}\label{def:comp-metr}
+Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
+A metric $\rho$ on the disjoint union
+$$\bm{X}=\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$
+is called \emph{compatible metric}\index{compatible}
+the restriction of $\rho$ to every $\spc{X}_\alpha$ is the original metric on $\spc{X}_\alpha$.
+\end{thm}
+
+\begin{thm}{Definition}\label{def:GH}
+Let $\spc{X}_1,\spc{X}_2,\dots$ 
+and $\spc{X}_\infty$ be proper metric spaces 
+and $\rho$ is a compatible metric on their disjoint union $\bm{X}$.
+Assume that $\spc{X}_n$ forms an open set in 
+$(\bm{X},\rho)$ for each $n\ne\infty$ and 
+$\spc{X}_n\to \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$ in the sense of Hausdorff, see \ref{def:hausdorff-coverge}.
+
+In this case we say that $\rho$ defines a 
+\emph{convergence%
+\footnote{Formally speaking, \emph{convergence} is the topology induced by $\rho$ on $\bm{X}$.} 
+in the sense of Gromov--Hausdorff}%
+\index{convergence in the sense of Gromov--Hausdorff}
+and we write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xto{\rho} \spc{X}_\infty$.
+The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n)$ along $\rho$.
+\end{thm}
+
+Once we write $\spc{X}_n\to \spc{X}_\infty$ we mean that we made a choice of convergence.
+
+Usually Gromov--Hausdorff convergence is defined differently,
+we prefer this definition since it induce convergence for a sequence of points in $\spc{X}_n$ as well as weak convergence of measures  on $\spc{X}_n$ as the convergence in the ambient space $(\bm{X},\rho)$.
+
+Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$ one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xto{\rho} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not to be isometric to each other. 
+
+For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
+one may take $\spc{X}_\infty\iso\RR_{\ge0}$.
+In this case a point in the disjoint union $\bm{X}$ can be thought as a pair $(x,n)\in \RR_{\ge0}\times (\NN\cup \{\infty\})$ 
+and the metric $\rho$ can be defined the following way
+$$\rho\left((x,n),(y,m)\right)\df|\tfrac1n-\tfrac1m|+|x-y|,$$
+where we assume that $0=\tfrac1\infty$.
+On the other hand, one can consider the metric
+\begin{align*}
+\rho\left((x,n),(y,m)\right)
+&=|\tfrac1n-\tfrac1m|+|(x-n)-(y-m)|,
+\\
+\rho\left((x,n),(y,\infty)\right)
+&=\tfrac1n+|(x-n)-y|,
+\\
+\rho\left((x,\infty),(y,\infty)\right)
+&=|x-y|.
+\end{align*}
+where $n, m<\infty$.
+In this case $\spc{X}_\infty'\iso\RR$.
+
+\parbf{Liftings.}
+Given a Gromov--Hausdorff convergence 
+$\spc{X}_n\to \spc{X}_\infty$
+and a point $p_\infty\in\spc{X}_\infty$ any sequence of points $p_n\in\spc{X}_n$ such that $p_n\to p$  will be called \emph{lifting}\index{lifting of a point} of $p_\infty$.
+In this case the point $p_n\in \spc{X}_n$ will be called a lifting of $p_\infty$ in $\spc{X}_n$
+and the distance function $\dist{p_n}{}{}\:\spc{X}_n\to \RR$ 
+is called \emph{lifting}\index{lifting of a distance function} 
+of $\dist{p}{}{}\:\spc{X}\to \RR$ to $\spc{X}_n$.
+
+Note that liftings are not uniquely defined.
+We will be interested in the properties of liftings for sufficiently large $n$.
+
+\begin{thm}{Selection theorem}\label{thm:gromov-selection}
+Let $\spc{X}_n$ be a sequence of proper metric spaces 
+with marked points $x_n\in \spc{X}_n$.
+Assume that for any fixed $R,\eps>0$ there is $N=N(R,\eps)\in\NN$ 
+such that for each $n$
+the ball $\cBall[x_n,R]\subset \spc{X}_n$ admits a finite $\eps$-net with at most $N$ points.
+Then there is a subsequence of $\spc{X}_n$ which admit a Gromov--Hausdorff convergence 
+such that the sequence of marked points $x_n\in\spc{X}_n$ converges.
+\end{thm}
+
+\parit{Proof.}
+Note that there is a sequence of integers $M_1<M_2<\dots$
+such that in each space $\spc{X}_n$
+there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that
+\[\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1\ \ \text{if}\ \ i\le M_\kay\]
+and
+the points $z_{1,n},\dots,z_{M_\kay,n}$ form an $\tfrac1\kay$-net in $\cBall[x_n,\kay]_{\spc{X}_n}$.
+The existence of the sequence $M_1,M_2,\dots$ follows from the main assumption in the theorem.
+
+Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}\] 
+converges for any $i$ and $j$.
+
+Let us consider countable set of points $\spc{W}=\{w_1,w_2,\dots\}$
+equipped with the pseudometric defined as 
+\[\dist{w_i}{w_j}{\spc{W}}
+=
+\lim_{n\to\infty}\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}.\]
+Let $\hat{\spc{W}}$ be the metric space corresponding to $\spc{W}$.
+Denote by
+$\spc{X}_\infty$ the completion of $\hat{\spc{W}}$.
+
+It remains to show that there is a Gromov--Hausdorff convergence 
+$\spc{X}_n\to\spc{X}_\infty$ such that the sequence $x_n\in\spc{X}_n$ converges.
+To prove it, we need to construct a metric $\rho$ on the disjoint union of \[\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots\] 
+satisfies definitions \ref{def:comp-metr} and \ref{def:GH}.
+The metric $\rho$ can be constructed as the maximal compatible metric
+such that 
+\[\rho(z_{i,n},w_i)\le\tfrac1m\]
+for any $n\ge N_m$ and $i<I_m$ for a suitable choice of two sequences 
+$I_m\ge N_m$ with $I_1=N_1=1$.
+\qeds
+
+
+
+\begin{thm}{Exercise}\label{ex:compact-proper-GH}
+Let $\spc{X}_n$ be a sequence of metric spaces which admit 
+two convergences $\spc{X}_n\xto{\rho}\spc{X}_\infty$ and $\spc{X}_n\xto{\rho'}\spc{X}_\infty'$.
+\begin{subthm}{}
+If  $\spc{X}_\infty$ is compact then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+\end{subthm}
+
+\begin{subthm}{}
+If  $\spc{X}_\infty$ is proper and there is a sequence of points $x_n\in \spc{X}_n$ 
+which converges in both convergences 
+ then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+\end{subthm}
+\end{thm}
