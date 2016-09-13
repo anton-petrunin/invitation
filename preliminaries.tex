@@ -804,7 +804,7 @@ Clearly that $f(z_\infty)=0$, that is, $z_\infty\in A_\infty$.
 On the other hand, 
 \begin{align*}
 \dist{A_\infty}{}{}(y)
-&\le
+\le
 \dist{z_\infty}{y}{}
 \le R
 <
@@ -854,24 +854,29 @@ we prefer this definition since it induce convergence for a sequence of points i
 Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$ one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xto{\rho} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not to be isometric to each other. 
 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
-one may take $\spc{X}_\infty\iso\RR_{\ge0}$.
-In this case a point in the disjoint union $\bm{X}$ can be thought as a pair $(x,n)\in \RR_{\ge0}\times (\NN\cup \{\infty\})$ 
-and the metric $\rho$ can be defined the following way
-$$\rho\left((x,n),(y,m)\right)\df|\tfrac1n-\tfrac1m|+|x-y|,$$
-where we assume that $0=\tfrac1\infty$.
-On the other hand, one can consider the metric
-\begin{align*}
-\rho\left((x,n),(y,m)\right)
-&=|\tfrac1n-\tfrac1m|+|(x-n)-(y-m)|,
-\\
-\rho\left((x,n),(y,\infty)\right)
-&=\tfrac1n+|(x-n)-y|,
-\\
-\rho\left((x,\infty),(y,\infty)\right)
-&=|x-y|.
-\end{align*}
-where $n, m<\infty$.
-In this case $\spc{X}_\infty'\iso\RR$.
+there is a convergence with limit $\spc{X}_\infty\iso\RR_{\ge0}$; 
+guess the metric $\rho$ from the diagram.
+
+\begin{center}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/P2P(1)}
+\lbl[b]{55,22;$\spc{X}_1$}
+\lbl[b]{55,12;$\spc{X}_2$}
+\lbl[b]{55,8;$\dots$}
+\lbl[t]{55,0;$\spc{X}_\infty$}
+\end{lpic}
+\end{center}
+
+For an other metric $\rho'$, guess it from the diagram,
+the limit space $\spc{X}_\infty'$ is isometric to the real line.
+
+\begin{center}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/P2R(1)}
+\lbl[b]{55,22;$\spc{X}_1$}
+\lbl[b]{35,12;$\spc{X}_2$}
+\lbl[b]{15,8;$\dots$}
+\lbl[t]{55,0;$\spc{X}_\infty'$}
+\end{lpic}
+\end{center}
 
 \parbf{Liftings.}
 Given a Gromov--Hausdorff convergence 
