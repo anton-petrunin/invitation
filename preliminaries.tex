@@ -201,34 +201,13 @@ We define the \emph{length}\index{length} of $\alpha$ as
 \length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha_{i+1}}{}
 \]
 \end{thm}
-It is easy to see that if $\tau\co [c,d]\to [a,b]$ is monotonic onto function then $\length \alpha=\length(\alpha\circ\tau)$.
 
+Directly from the definition, it follows that if a path $\alpha$ connecting two points $x$ and $y$ then 
+\[\length\alpha\ge \dist{x}{y}{}.\]
 
-Given two points $x$ and $y$ in a metric space $\spc{X}$
-consider the value
-\[\yetdist{x}{y}{}=\inf_{\alpha}\{\length\alpha\},\]
-where infimum is taken for all paths $\alpha$ from $x$ to $y$.
-
-If the value $\yetdist{x}{y}{}$ is finite for any pair of points $x$ and $y$ then $\yetdist{}{}{}$ defines a metric on  $\spc{X}$;
-it will be called the induced \emph{length-metric}\index{length-metric} on $\spc{X}$.
-
-In this book, most of the time we consider length spaces.
-If $\spc{X}$ is length space, 
-and $A\subset \spc{X}$.
-The set $A$ comes with the inherited metric from $\spc{X}$ 
-which might be not a length-metric.
-The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
-
-\begin{thm}{Definition}
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in\spc{X}$  then $\spc{X}$ is called a \emph{length space}\index{length space}.
-\end{thm}
-In other words, a metric space $\spc{X}$ is a
-\emph{length space}
-if for any $\eps>0$ and any two points $x,y\in \spc{X}$  there is a path $\alpha\:[0,1]\to\spc{X}$ connecting%
-\footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.}
- $x$ to $y$
-such that 
-\[\length\alpha<\dist{x}{y}{}+\eps.\]
+If for any $\eps>0$ and any pair of points $x$ and $y$ in the metric space $\spc{X}$ there is a path $\alpha$ connecting\footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} $x$ to $y$ such that
+\[\length\alpha< \dist{x}{y}{}+\eps\]
+then $\spc{X}$ is called length space.
 
 Note that any geodesic space is a length space;
 as you see from the following example, the contrary does not hold.
@@ -684,7 +663,8 @@ Consider the set $\mathfrak{S}_p$
 of all nontrivial unit-speed geodesics  which start at $p$.
 By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
 that is, $(\mathfrak{S}_p,\mangle)$ 
-forms a pseudometric space; that is the angle satisfies all the consitions of metric except the angle between distinct geodesics might vanish.
+forms a pseudometric space; 
+that is the angle satisfies all the conditions of metric except the angle between distinct geodesics might vanish.
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
 and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
@@ -917,7 +897,11 @@ equipped with the pseudometric defined as
 \[\dist{w_i}{w_j}{\spc{W}}
 =
 \lim_{n\to\infty}\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}.\]
-Let $\hat{\spc{W}}$ be the metric space corresponding to $\spc{W}$.
+Let $\hat{\spc{W}}$ be the metric space corresponding to $\spc{W}$;
+that is, points in $\hat{\spc{W}}$ formed by equivalence classes in $\spc{W}$
+for the relation $\sim$ such that $w_i\sim w_j$ if and only it $\dist{w_i}{w_j}{\spc{W}}=0$
+and 
+\[\dist{[w_i]}{[w_j]}{\hat{\spc{W}}}\df\dist{w_i}{w_j}{\spc{W}}.\]
 Denote by
 $\spc{X}_\infty$ the completion of $\hat{\spc{W}}$.
 
