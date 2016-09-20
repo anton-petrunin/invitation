@@ -1,7 +1,8 @@
 \chapter{Preliminaries}
 
 In this chapter we fix some conventions and remind the main definitions.
-For more background in metric geometry, reader advised to read the book of Burgos and Ivanov \cite{BBI}.
+We suggest to skip this chapter and use it as a quick reference while reading the rest.
+To learn the background in metric geometry, reader advised to read the book of Burgos and Ivanov \cite{BBI}.
  
 
 \section{Metric spaces}
@@ -12,7 +13,9 @@ The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be 
 The latter notation is used if we need to emphasize 
 that the distance is taken in the space ${\spc{X}}$.
 
-The function $\dist{x}{}{}\:y\mapsto \dist{x}{y}{}$ is called \emph{distance function}\index{distance function} from $x$. 
+The function 
+\[\dist{x}{}{}\:y\mapsto \dist{x}{y}{}\]
+is called \emph{distance function}\index{distance function} from $x$. 
 
 \begin{itemize}
 \item The \emph{diameter}\index{Diameter} of metric space $\spc{X}$ is defined as
@@ -50,14 +53,11 @@ $\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ in the set $\s
 with the metric defined by formulas
 \[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
 
-Given a metric spaces $\spc{U}$,
-we say that $\spc{V}$ is Euclidean cone over $\spc{U}$
-if the underlying set of $\spc{V}$ is formed 
 
 \parbf{Cone.}
 The \emph{cone} $\spc{V}=\Cone\spc{U}$ over metric space $\spc{U}$
 is defined as the metric space with underlying set formed by the equivalence classes on
-$[0,\infty)\times \spc{U}$ with the minimal equivalence relation ``$\sim$'' such that $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$
+$[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' such that $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$
 and the metric given by cosine rule
 \[
 \dist{(p,s)}{(q,t)}{\spc{V}} 
@@ -77,11 +77,11 @@ and the metric given by spherical cosine rule
 \[
 \cos\dist{(p,s)}{(q,t)}{\Susp\spc{U}} 
 =
-\cos s\cdot\cot t+\sin s\cdot\sin t\cdot\cos\alpha,
+\cos s\cdot\cot t-\sin s\cdot\sin t\cdot\cos\alpha,
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The points in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ is called \emph{north} \emph{south pole} of the suspension.
+The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called \emph{north} \emph{south pole} of the suspension.
 
 \begin{thm}{Exercise}\label{ex:product-cone}
 Let $\spc{U}$ be a metric space.
@@ -99,37 +99,18 @@ are isometric.
 \parbf{Geodesics.}
 Let $\spc{X}$ be a metric space 
 and $\II$\index{$\II$} be a real interval. 
-A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \emph{unit-speed geodesic}\index{unit-speed geodesic}%
+A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \emph{geodesic}\index{geodesic}%
 \footnote{Various authors call it differently: \emph{shortest path}, \emph{minimizing geodesic}.}; 
-in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if 
+in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 for any pair $s,t\in \II$.
 
-A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \emph{ray}\index{ray}.
-
-A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \emph{line}\index{line}.
-
-\begin{thm}{Proposition}\label{prop:busemann}
-Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a ray. 
-Then the \index{Busemann function}\emph{Busemann function} $\bus_\gamma\:\spc{X}\to \RR$ 
-\[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
-is defined
-and $1$-Lipschitz.
-\end{thm}
-
-\parit{Proof.}
-As  follows from the triangle inequality, the function \[t\mapsto\dist{\gamma(t)}{x}{}- t\] is nonincreasing in $t$.  
-Clearly $\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}$.
-Thus the limit in \ref{eq:def:busemann*} is defined.
-\qeds
-
-A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{*}{*}]}$}.
-We assume $\geod_{[p q]}$ is parametrized starting at $p$; 
-that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
-The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \emph{geodesic}\index{geodesic}.
-The term \emph{geodesic}\index{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
-when a confusion is possible we call the latter a \emph{constant-speed geodesic}\index{constantspeed geodesic}.
-With slight abuse of notation, we will use $[p q]$ also for the class of all linear reparametrizations of $\geod_{[p q]}$.
+We say that geodesic $\gamma\:\II\to \spc{X}$ from point $p$ to point $q$ if 
+$\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. 
+In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with a notation abuse we also calle it \emph{geodesic}\index{geodesic}.
+Given $[pq]$ we can parametrize it by distance to $p$;
+this parametrization will be denoted as $\geod_{[p q]}(t)$.
+Clearly $\geod_{[p q]}(t)$ is a geodesic in the sence of the first definition.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
@@ -144,17 +125,17 @@ Also we use the following short-cut notation:
 
 
 
-In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.  However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we made a choice of geodesic.
+In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.  However,  once we write $[p q]$ we mean that we made a choice of geodesic.
 
 A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be jointed by a geodesic. 
 
-A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \emph{geodesic path}\index{geodesic path}.
+A constant-speed reparametirization of geodesic by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
+A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
 
 
 \parbf{Triangles.}
@@ -184,7 +165,7 @@ lies in $A$.
 A set $A\subset\spc{X}$ is called 
 \emph{locally convex}
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
-such that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset \Omega$ lies in $A$.
+such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in $A$.
 
 
 Note that any open set is locally convex by definition.
@@ -224,8 +205,6 @@ Then $\spc{X}$ carries a natural complete length metric  with respect to which $
 Give an example of a complete length space for which no pair of distinct points can be joined by a geodesic.
 \end{thm}
 
-
-\begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
@@ -238,7 +217,6 @@ if
 \[\dist{x}{z}{},\dist{y}{z}{}<\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
 
-\end{thm}
 
 Note that a $0$-midpoint is the same as a midpoint.
 
@@ -254,14 +232,13 @@ Then $\spc{X}$ is a length space.
 
 \begin{subthm}{lem:mid>geod:geod}
 Assume that for any pair of points $x,y\in \spc{X}$ 
-such that $\dist{x}{y}{}<R$
 there is a midpoint $z$.
 Then $\spc{X}$ is a geodesic space.
 \end{subthm}
 \end{thm}
 
 \parit{Proof.}
-Let $x,y\in \spc{X}$ be a pair of points such that $\dist{x}{y}{}<R$.
+Let $x,y\in \spc{X}$ be a pair of points.
 
 Set $\eps_n=\frac\eps{2^{2\cdot n}}$.
 
@@ -401,6 +378,7 @@ $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
 The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
 in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\SS^2}$ is defined.
+We may use notation $\angk p q r$ if it is evident what is the model space $\HH^2$, $\EE^2$ or $\SS^2$.
 
 \begin{wrapfigure}[6]{r}{28mm}
 \begin{lpic}[t(-4mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
@@ -417,7 +395,7 @@ in the latter case  we assume in addition that the model triangle $\modtrig(p q 
 \label{lem:alex}  
 Let $p,x,y,z$ be distinct points in a metric space such that $z\in \l]x y\r[$.
 Then 
-the following expressions have the same sign:
+the following expressions for Euclidean model angles have the same sign:
 \begin{subthm}{lem-alex-difference}
 $\angk x p z
 -\angk x p y$,
@@ -439,7 +417,7 @@ but in the latter case one has to assume in addition that
 \end{thm}
 
 \parit{Proof.} 
-Consider the model triangle $\trig{\~x}{\~p}{\~z}=\modtrig(x p z)_{\EE^2}$.
+Consider the model triangle $\trig{\~x}{\~p}{\~z}=\modtrig(x p z)$.
 Take 
 a point $\~y$ on the extension of 
 $[\~x \~z]$ beyond $\~z$ so that $\dist{\~x}{\~y}{}=\dist{x}{y}{}$ (and therefore $\dist{\~x}{\~z}{}=\dist{x}{z}{}$). 
@@ -505,6 +483,13 @@ follows:\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \df
 \lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y}_{\EE^2},\eqlbl{eq:def-angle}\]
 where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+The angle under the limit can be calculated from the  cosine law:
+\[\cos\angk{p}{x}{y}_{\EE^2}
+=
+\frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
+
+The following lemma implies that 
+the definition of angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
 
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
@@ -523,26 +508,18 @@ For any three points $p,x,y$ in a metric space the following inequalities
 hold whenever the left hand side is defined.
 \end{thm}
 
-The lemma above implies that 
-the definition of angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
-In particular, may use Euclidean plane, 
-so that the angle can be calculated from the  cosine law:
-\[\cos\angk{p}{x}{y}_{\EE^2}
-=
-\frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
 \parit{Proof.}
 Note that 
 \[\angk p{x}{y}_{\HH^2}\le\angk{p}{x}{y}_{\EE^2}\le \angk p{x}{y}_{\SS^2}.\]
 Therefore
 \begin{align*}
-0\le \angk p{x}{y}_{\SS^2}-\angk p{x}{y}_{\HH^2}
-\le& \angk p{x}{y}_{\SS^2}+\angk {x}p{y}_{\SS^2}+\angk {y}p{x}_{\SS^2}-
+0&\le \angk p{x}{y}_{\SS^2}-\angk p{x}{y}_{\HH^2}\le
 \\
-&-\angk p{x}{y}_{\HH^2}-\angk {x}p{y}_{\HH^2}-\angk {y}p{x}_{\HH^2}
+&\le \angk p{x}{y}_{\SS^2}+\angk {x}p{y}_{\SS^2}+\angk {y}p{x}_{\SS^2}-\angk p{x}{y}_{\HH^2}-\angk {x}p{y}_{\HH^2}-\angk {y}p{x}_{\HH^2}
 = 
 \\
-=&\area\modtrig(pxy)_{\SS^2}+\area\modtrig(pxy)_{\HH^2}.
+&=\area\modtrig(pxy)_{\SS^2}+\area\modtrig(pxy)_{\HH^2}.
 \end{align*}
 Thus, \ref{eq:k-K} follows since 
 \begin{align*}
@@ -605,9 +582,8 @@ Hence the result.
 
 To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
 We parametrize each ray by length from the starting point.
-Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be %a 
-the 
-number such that 
+Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
+the number such that 
 $\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}$, 
 so $t,\tau,s$ may be taken sufficiently small.
 \qeds 
@@ -656,7 +632,7 @@ Hence the result.
 \section{Space of directions and tangent space}
 \label{sec:tangent-space+directions}
 
-Let $\spc{X}$ be a metric space with defined angles.
+Assume $\spc{X}$ be a metric space with defined angles for all hinges.
 Fix a point $p\in \spc{X}$. 
 
 Consider the set $\mathfrak{S}_p$ 
@@ -669,7 +645,7 @@ that is the angle satisfies all the conditions of metric except the angle betwee
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
 and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
 The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
-Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
+Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
 for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
 
@@ -684,7 +660,7 @@ for the equivalence relation
 \begin{thm}{Exercise}\label{ex:geod-CBA}
 Assume $\spc{U}$ is a $\Cat{}{\kappa}$ proper length space
  with extendable geodesics;
-that is for any geodesic in $\spc{U}$
+that is, any geodesic in $\spc{U}$
 is an arc in a both-side infinite local geodesic.
 
 Show that the space of geodesic directions 
@@ -713,11 +689,11 @@ defines a pseudometric on $\mathfrak{T}_p$.
 The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
 The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
 \[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
-The completion of $\T'_p$ is therefore  natuaral isometric to $\T_p$.
+The completion of $\T'_p$ is therefore  natuaraly isometric to $\T_p$.
 
-The elements of $\T_p$ will be called tangent vector at $p$,
+The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vector} at $p$,
 despite that $\T_p$ is only cone --- not a vector space.
-The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
+The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vector} at $p$.
 
 \section{Hausdorff convergence}
 
@@ -732,9 +708,9 @@ instead of
 
 
 Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
-We will denote by $\dist{A}{}{}(x)=\dist{A}{}{}(x)_{\spc{X}}$ the distance from $A$ to a point $x$ in $\spc{X}$;
+We will denote by $\dist{A}{}{}(x)$ the distance from $A$ to a point $x$ in $\spc{X}$;
 that is,
-$$\dist{A}{}{}(x)\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
+$$\dist{A}{}{}(x)\df\inf\set{\dist{a}{x}{\spc{X}}}{a\in A}.$$
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
 Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$ 
@@ -743,8 +719,14 @@ briefly $A_n\to A_\infty$ if
 $$\dist{A_n}{}{}(x)\to\dist{A_\infty}{}{}(x)\ \ \t{as}\ \ n\to\infty$$
 for any fixed $x\in \spc{X}$.
 
-In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called \emph{converging} or \emph{converging in the sense of Hausdorff}.
+In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called \emph{converging in the sense of Hausdorff}.
 \end{thm}
+
+\parbf{Example.}
+Let $D_n$ be the disc on the coordinate plane 
+centered at $(0,n)$ and radius $n$.
+Then $D_n$ converges to the upper half-plane as $n\to\infty$.
+
 
 \begin{thm}{Selection theorem}
 Let $\spc{X}$ be a proper metric space
@@ -793,12 +775,6 @@ On the other hand,
 a contradiction.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:haudorff-convergence}
-Let $D_n$ be the disc on the coordinate plane 
-centered at $(0,n)$ and radius $n$.
-Show that as $D_n$ converges to the upper half-plane as $n\to\infty$.
-\end{thm}
-
 \section{Gromov--Hausdorff convergence}
 
 \begin{thm}{Definition}\label{def:comp-metr}
@@ -806,7 +782,7 @@ Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
 A metric $\rho$ on the disjoint union
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$
 is called \emph{compatible metric}\index{compatible}
-the restriction of $\rho$ to every $\spc{X}_\alpha$ is the original metric on $\spc{X}_\alpha$.
+if the restriction of $\rho$ to every $\spc{X}_\alpha$ is the original metric on $\spc{X}_\alpha$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:GH}
@@ -815,7 +791,7 @@ and $\spc{X}_\infty$ be proper metric spaces
 and $\rho$ is a compatible metric on their disjoint union $\bm{X}$.
 Assume that $\spc{X}_n$ forms an open set in 
 $(\bm{X},\rho)$ for each $n\ne\infty$ and 
-$\spc{X}_n\to \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$ in the sense of Hausdorff, see \ref{def:hausdorff-coverge}.
+$\spc{X}_n\to \spc{X}_\infty$ in $(\bm{X},\rho)$ as $n\to\infty$ in the sense of Hausdorff, see Definition~\ref{def:hausdorff-coverge}.
 
 In this case we say that $\rho$ defines a 
 \emph{convergence%
@@ -826,11 +802,13 @@ and we write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xto{\rho} \spc{X}_\inft
 The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n)$ along $\rho$.
 \end{thm}
 
-Once we write $\spc{X}_n\to \spc{X}_\infty$ we mean that we made a choice of convergence.
-
 Usually Gromov--Hausdorff convergence is defined differently,
-we prefer this definition since it induce convergence for a sequence of points in $\spc{X}_n$ as well as weak convergence of measures  on $\spc{X}_n$ as the convergence in the ambient space $(\bm{X},\rho)$.
+we prefer this definition since it induce the convergence for a sequence of points $x_n\in\spc{X}_n$ 
+as well as 
+weak convergence of measures $\mu_n$ on $\spc{X}_n$ and so on
+as the corresponding convergence in the ambient space $(\bm{X},\rho)$.
 
+Once we write $\spc{X}_n\to \spc{X}_\infty$ we mean that we made a choice of convergence.
 Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$ one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xto{\rho} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not to be isometric to each other. 
 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
@@ -846,7 +824,7 @@ guess the metric $\rho$ from the diagram.
 \end{lpic}
 \end{center}
 
-For an other metric $\rho'$, guess it from the diagram,
+For an other metric $\rho'$ --- also guess it from the diagram ---
 the limit space $\spc{X}_\infty'$ is isometric to the real line.
 
 \begin{center}
@@ -858,6 +836,7 @@ the limit space $\spc{X}_\infty'$ is isometric to the real line.
 \end{lpic}
 \end{center}
 
+%???DO WE NEED LIFTINGS???
 \parbf{Liftings.}
 Given a Gromov--Hausdorff convergence 
 $\spc{X}_n\to \spc{X}_\infty$
@@ -881,13 +860,13 @@ such that the sequence of marked points $x_n\in\spc{X}_n$ converges.
 \end{thm}
 
 \parit{Proof.}
-Note that there is a sequence of integers $M_1<M_2<\dots$
-such that in each space $\spc{X}_n$
-there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that
-\[\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1\ \ \text{if}\ \ i\le M_\kay\]
-and
-the points $z_{1,n},\dots,z_{M_\kay,n}$ form an $\tfrac1\kay$-net in $\cBall[x_n,\kay]_{\spc{X}_n}$.
-The existence of the sequence $M_1,M_2,\dots$ follows from the main assumption in the theorem.
+From the main assumption in the theorem,
+in each space $\spc{X}_n$ 
+there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that the following condition hold for a fixed sequence of integers $M_1<M_2<\dots$
+\begin{itemize}
+\item $\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1$ if $i\le M_\kay$;
+\item the points $z_{1,n},\dots,z_{M_\kay,n}$ form an $\tfrac1\kay$-net in $\cBall[x_n,\kay]_{\spc{X}_n}$.
+\end{itemize}
 
 Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}\] 
 converges for any $i$ and $j$.
