@@ -327,19 +327,6 @@
 {\mathop{\rm dist}\nolimits_{#2}^{#1}}}%
 {|{#2}\z-{#3}|_{#4}^{#1}}}
 
-\newcommand*\toshayetdist[4][{}]%
-{\ifthenelse{\isempty{#3}}
-{\ifthenelse{\isempty{#2}}%
-{\|{*}\z-{*}\|_{#4}^{#1}}%
-{\|{#2}\z-{*}\|_{#4}^{#1}}}%
-{\|{#2}\z-{#3}\|_{#4}^{#1}}}
-
-%\newcommand\toshayetdist[4][{}]%
-%{\ifthenelse{\isempty{#1}}%
-%{\ifthenelse{\isempty{#4}}%
-%{{#2}{{\dagger}}{#3}}%
-%{({#2}{{\dagger}}{#3})_{#4}}}%
-%{({#2}{{\dagger}}{#3})_{#4}^{#1}}}%
 
 \newlength{\zhaba}
 \newcommand*\sbadist[4][{}]%
@@ -376,25 +363,4 @@
 %}%
 %}%
 
-\newcommand*\sbayetdist[4][{}]%
-{\settowidth{\zhaba}{${#1}{#2}$}%
-\ifthenelse{\lengthtest{\zhaba<1.7em}}
-{\ifthenelse{\isempty{#2}}%
-{\bm\|{\scriptstyle{*}}{\scriptstyle{*}}\bm\|}%
-{\ifthenelse{\isempty{#3}}%
-{\bm\|{#2}\hskip.1em{\scriptstyle{*}}\bm\|^{#1}_{#4}}%
-{\bm\|{#2}\hskip.1em{#3}\bm\|^{#1}_{#4}}}%
-}%
-{\ifthenelse{\isempty{#2}}%
-{\bm\|{\scriptstyle{*}}{\scriptstyle{*}}\bm\|}%
-{\ifthenelse{\isempty{#3}}%
-{\bm\|{#2}\hskip.1em\scriptstyle{*}\bm\|^{#1}_{#4}}%
-{\bm\|{#2}\ {#3}\bm\|^{#1}_{#4}}}%
-}%
-}%
-
-\IfFileExists{../tosha-book-switch}%
-{\def\dist{\toshadist}%
-\def\yetdist{\toshayetdist}}%
-{\def\dist{\sbadist}%
-\def\yetdist{\sbayetdist}}%
+\def\dist{\toshadist}
