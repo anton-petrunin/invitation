@@ -283,6 +283,27 @@ It remains to apply the patchwork globalization theorem (\ref{thm:alex-patch}).
 The proof goes along the same lines, 
 but one needs to use Exercise~\ref{ex:null-homotopic}. \qeds
 
+\begin{thm}{Corollary}\label{cor:closed-geod-cat} 
+Any compact locally $\Cat{}{0}$ space which contains no closed geodesics is $\Cat{}{0}$.
+ 
+Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geodesics of length smaller than $2\cdot\pi$ is $\Cat{}{1}$.
+\end{thm}
+
+\parit{Proof.}
+By Globalization theorem \ref{thm:hadamard-cartan}, we need to show that the space is simply connected.
+Assume the contrary. 
+Fix a nontrivial homotopy class of closed curves.
+
+Denote by $\ell$ the exact lower bound for the lengths of curves in the class.
+Note that $\ell>0$;
+otherwise there would be a closed noncontractible curve in a $\Cat{}{0}$ spherical neighborhood of some point, contradicting Corollary \ref{cor:contractible-cat}.
+
+Since the space is compact, the class contains a length minimizing curve, 
+which must be a closed geodesic. 
+
+The $\Cat{}{1}$ case is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
+\qeds
+
 
 \section{Polyhedral spaces}
 
@@ -374,27 +395,6 @@ Then $\spc{P}$ is $\Cat{}{1}$ if and only if $\spc{P}$ and every link of any sim
 \end{thm}
 
 In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}.
-
-\begin{thm}{Corollary}\label{cor:closed-geod-cat} 
-Any compact locally $\Cat{}{0}$ space which contains no closed geodesics is $\Cat{}{0}$.
- 
-Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geodesics of length smaller than $2\cdot\pi$ is $\Cat{}{1}$.
-\end{thm}
-
-\parit{Proof.}
-By Globalization theorem \ref{thm:hadamard-cartan}, we need to show that the space is simply connected.
-Assume the contrary. 
-Fix a nontrivial homotopy class of closed curves.
-
-Denote by $\ell$ the exact lower bound for the lengths of curves in the class.
-Note that $\ell>0$;
-otherwise there would be a closed noncontractible curve in a $\Cat{}{0}$ spherical neighborhood of some point, contradicting Corollary \ref{cor:contractible-cat}.
-
-Since the space is compact, the class contains a length minimizing curve, 
-which must be a closed geodesic. 
-
-The $\Cat{}{1}$ case is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
-\qeds
 
 \begin{thm}{Exercise}\label{ex:geod-circle}
 Under the assumptions of Corollary~\ref{cor:closed-geod-cat},
