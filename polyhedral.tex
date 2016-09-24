@@ -474,13 +474,13 @@ From the definition of flag complex
 we get the following.
 
 \begin{thm}{Lemma}\label{lem:link-of-flag}
-Any link of a flag complex is flag.
+Any link of any simplex in a flag complex is flag.
 \end{thm}
 
 
 \parit{Proof of Proposition~\ref{prop:no-trig}.}
 By Lemma~\ref{lem:link-of-flag}, the no-triangle condition holds 
-for any flag complex and all its links.
+for any flag complex and the  links of all its simplices.
 
 Now assume a complex $\spc{S}$ and all its links satisfy 
 the no-triangle condition.
@@ -548,13 +548,16 @@ it is sufficient to show that any closed local geodesic $\gamma$
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
 
 Recall that the  \index{star of vertex}\emph{closed star} of a vertex $v$ (briefly $\overline \Star_v$)
-is formed by all the simplices  containing $v$. Similarly, $\Star_v$,   the open star of $v$, is the union of all simplices containing $v$ with faces opposite $v$ removed.
+is formed by all the simplexes  containing $v$. Similarly, $\Star_v$,   the open star of $v$, is the union of all simplexes containing $v$ with faces opposite $v$ removed.
 
 Choose a simplex $\sigma$ which contains a point of $\gamma$.
 Let $v$ be a vertex of $\sigma$.
 Set $f(t)=\cos\dist{v}{\gamma(t)}{}$.
 Note that 
 \[f''(t)+f(t)=0\] if $f(t)>0$.  
+
+{\color{red}!!! Should this equation be clarified somewhere in the preliminaries?  there is no section on modified distance functions!!!}
+
 Since the zeroes of $f$ are  $\pi$ apart,
 $\gamma$ 
 spends time $\pi$ on every visit to $\Star_v$.
@@ -605,7 +608,7 @@ Assume $\Gamma$ is a finite graph
 with edges labeled by $1,2,\dots, n$.
 Denote by $\spc{U}^\Gamma$ the space obtained by taking 
 a copy of $\spc{U}$ for each vertex of $\Gamma$ and 
-gluing two such copies along $A^i$ if the corresponding vertices are joint by an edge labeled by $i$.
+gluing two such copies along $A^i$ if the corresponding vertices are joined by an edge labeled by $i$.
 
 Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space
 \end{thm}
@@ -615,13 +618,13 @@ The following construction is given by Billera, Holmes and Vogtmann in \cite{BHV
 
 Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
 labeled by $a^1,\dots,a^n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other verices of degree 3, 
+To describe one tree in $\spc{T}_n$ we may fix a topological  trivalent tree $\tau$ with end vertices $a^1,\dots,a^n$ and all the other vertices of degree 3, 
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge is $0$, we assume that edge degenerates;
 such a tree can be also decribed using a different topological tree $\tau'$.
-The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with the ocotant
+The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with the octant
 \[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
-Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the legth metric on $\spc{T}_n$ induced by these metrics.
+Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the length metric on $\spc{T}_n$ induced by these metrics.
 
 \begin{thm}{Exercise}\label{ex:tree}
 Show that $\spc{T}_n$ with the described metric is a $\Cat{}0$ space.
@@ -633,11 +636,11 @@ Show that $\spc{T}_n$ with the described metric is a $\Cat{}0$ space.
 
 The definition of a cubical complex
 mostly repeats the definition of a simplicial complex, 
-with simplices replaced by cubes.
+with simplices {\color{red} !!! it's better use "simplices" everywhere or "simplexes" everywhere. currently it's inconsistent!!!} replaced by cubes.
 
 Formally, a \index{cubical complex}\emph{cubical complex} is defined as a subcomplex 
 of the unit cube in the Euclidean space of large dimension;
-that is, a collection of faces of cube
+that is, a collection of faces of the cube
 such that together with each face it contains all its sub-faces.
 Each cube face in this collection 
 will be called a \emph{cube} of the cubical complex.
@@ -698,14 +701,14 @@ and therefore its universal cover $\tilde{\spc{Q}}$ is a $\Cat{}{0}$ space.
 
 \parit{Proof.}
 The first part of the proposition follows 
-from the construction above.
+from the construction of $\square_{\spc{S}}$.
 
 If ${\spc{S}}$ is flag, 
 then by Flag condition (\ref{thm:flag}) 
 the link of any cube in $\spc{Q}$ is a $\Cat{}{1}$ space.
-Therefore, by cone construction (Exercise \ref{ex:cone+susp})
+Therefore, by cone the construction (Exercise \ref{ex:cone+susp})
 $\spc{Q}$
-is locally $\Cat{}{0}$ space.
+is a locally $\Cat{}{0}$ space.
 It remains to apply Globalization theorem 
 \ref{thm:hadamard-cartan}.
 \qeds
@@ -864,12 +867,16 @@ with a finite number of singularities at its vertices.
 
 
 Removing a small neighborhood of each vertex in $\spc{Q}$,
-we can obtain a piecewise linear manifold 
-which boundary is formed by several copies of $\Sigma$.
+we can obtain a piecewise linear manifold $\spc{N}$
+whose boundary is formed by several copies of $\Sigma$.
 To each copy of $\Sigma$, 
 glue a copy of  $\spc{W}$ along its boundary.
 This results in a  closed piecewise linear manifold 
 $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
+
+{\color{red} Indeed, using contractibility  of $\spc{W}$ it's easy to construct a map  $f\: \spc Q\to \spc M$ which extends the identity map of $\spc{N}$ and maps each small neighbourhood of a vertex in $\spc{Q}$ to the corresponding copy of 
+$\spc{W}$. It's easy to see that this map induces an isomorphism on $\pi_1$ and its lift to the universal covers $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$ induces an isomorphism on homology. This means that $\tilde f$ (and hence $f$) induces an isomorphism on all homotopy groups and therefore is a homotopy equivalence.
+}
 
 Finally, by the Lemma~\ref{lem:example-pi_infty},  
 the universal cover $\tilde{\spc{Q}}$ of $\spc{Q}$
@@ -877,7 +884,7 @@ is not simply connected at infinity.
 
 The same holds for 
 the universal cover $\tilde{\spc{M}}$ of $\spc{M}$.
-The later follows since homotopy equivalences 
+The latter follows since homotopy equivalences 
 $f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ 
 lift to \emph{proper maps} 
 $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
