@@ -328,7 +328,7 @@ any point of which admits a closed neighborhood isometric to a polyhedral space.
 The latter class of spaces includes in particular infinite covers of polyhedral spaces.
 
 The dimension of a polyhedral space $\spc{P}$
-is defined as the maximal dimension of the simplexes 
+is defined as the maximal dimension of the simplices 
 in one (and therefore any) triangulation of $\spc{P}$.
 
 \parbf{Links.}
@@ -489,7 +489,7 @@ Applying the same observation for each edge we get that $\spc{S}$
 includes a 3-simplex for any complete graph with 4 vertices.
 Repeating this observation 
 for triangles, 
-4-simplexes,
+4-simplices,
 5-simplices
 and so on we get that $\spc{S}$ is flag.
 \qeds
@@ -548,19 +548,24 @@ it is sufficient to show that any closed local geodesic $\gamma$
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
 
 Recall that the  \index{star of vertex}\emph{closed star} of a vertex $v$ (briefly $\overline \Star_v$)
-is formed by all the simplexes  containing $v$. Similarly, $\Star_v$,   the open star of $v$, is the union of all simplexes containing $v$ with faces opposite $v$ removed.
+is formed by all the simplices containing $v$. 
+Similarly, $\Star_v$, the open star of $v$, is the union of all simplices containing $v$ with faces opposite $v$ removed.
 
-Choose a simplex $\sigma$ which contains a point of $\gamma$.
+Choose a simplex $\sigma$ which contains a point $\gamma(t_0)$.
 Let $v$ be a vertex of $\sigma$.
-Set $f(t)=\cos\dist{v}{\gamma(t)}{}$.
-Note that 
-\[f''(t)+f(t)=0\] if $f(t)>0$.  
-
-{\color{red}!!! Should this equation be clarified somewhere in the preliminaries?  there is no section on modified distance functions!!!}
-
-Since the zeroes of $f$ are  $\pi$ apart,
-$\gamma$ 
-spends time $\pi$ on every visit to $\Star_v$.
+Consider the maximal arc $\gamma_v$ of $\gamma$ 
+which contains the point $\gamma(t_0)$
+and runs in $\Star_v$.
+Note that the distance $\dist{v}{\gamma_v(t)}{\spc{P}}$ behaves exactly the same way 
+as the distance from north pole to a geodesic in the north hemisphere;
+that is, there is a geodesic $\tilde\gamma_v$ in the north hemisphere of $\mathbb{S}^2$ such that for any $t$ we have
+\[\dist{v}{\gamma_v(t)}{\spc{P}}
+=
+\dist{n}{\tilde\gamma_v(t)}{\mathbb{S}^2},\]
+where $n$ denotes the north pole of $\mathbb{S}^2$.
+In particular, 
+\[\length\gamma_v=\pi;\]
+that is $\gamma$ spends time $\pi$ on every visit to $\Star_v$.
 
 \begin{center}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/two-stars(1)}
@@ -568,7 +573,7 @@ spends time $\pi$ on every visit to $\Star_v$.
 \lbl[bl]{33,11;$v'$}
 \lbl{11,5;$\Star_v$}
 \lbl{32,19;$\Star_{v'}$}
-\lbl[b]{15,18;$\gamma$}
+\lbl[b]{15,18;$\gamma_v$}
 \end{lpic}
 \end{center}
 
@@ -586,7 +591,7 @@ Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 
 \begin{thm}{Exercise}\label{ex:flag>=pi/2}
 Assume that a spherical polyhedral space $\spc{P}$
-admits a triangulation $\tau$ such that all dihedral angles of all simplexes are at least $\tfrac\pi2$.
+admits a triangulation $\tau$ such that all dihedral angles of all simplices are at least $\tfrac\pi2$.
 Show that $\spc{P}$ is a $\Cat{}{1}$ space
 if $\tau$ is flag.
 \end{thm}
@@ -636,7 +641,7 @@ Show that $\spc{T}_n$ with the described metric is a $\Cat{}0$ space.
 
 The definition of a cubical complex
 mostly repeats the definition of a simplicial complex, 
-with simplices {\color{red} !!! it's better use "simplices" everywhere or "simplexes" everywhere. currently it's inconsistent!!!} replaced by cubes.
+with simplices replaced by cubes.
 
 Formally, a \index{cubical complex}\emph{cubical complex} is defined as a subcomplex 
 of the unit cube in the Euclidean space of large dimension;
