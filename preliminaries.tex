@@ -1,8 +1,10 @@
+%%!TEX root = invitation.tex
 \chapter{Preliminaries}
 
 In this chapter we fix some conventions and remind the main definitions.
-We suggest to skip this chapter and use it as a quick reference while reading the rest.
-To learn the background in metric geometry, reader advised to read the book of Burgos and Ivanov \cite{BBI}.
+%We suggest to skip this chapter and use it as a quick reference while reading the rest. !!! I don't like telling the reader to skip something altogether. Not sure how to rephrase this !!!
+
+To learn the background in metric geometry, the reader advised to read the book of Burgos and Ivanov \cite{BBI}.
  
 
 \section{Metric spaces}
@@ -15,7 +17,7 @@ that the distance is taken in the space ${\spc{X}}$.
 
 The function 
 \[\dist{x}{}{}\:y\mapsto \dist{x}{y}{}\]
-is called \emph{distance function}\index{distance function} from $x$. 
+is called the \emph{distance function}\index{distance function} from $x$. 
 
 \begin{itemize}
 \item The \emph{diameter}\index{Diameter} of metric space $\spc{X}$ is defined as
@@ -56,9 +58,9 @@ with the metric defined by formulas
 
 \parbf{Cone.}
 The \emph{cone} $\spc{V}=\Cone\spc{U}$ over metric space $\spc{U}$
-is defined as the metric space with underlying set formed by the equivalence classes on
+is defined as the metric space with the underlying set formed by the equivalence classes in
 $[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' such that $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$
-and the metric given by cosine rule
+and the metric is given by the cosine rule
 \[
 \dist{(p,s)}{(q,t)}{\spc{V}} 
 =
@@ -66,8 +68,8 @@ and the metric given by cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called \emph{tip of the cone} and denoted by $0$ or $0_{\spc{V}}$.
-The distance $\dist{0}{v}{\spc{V}}$ is called norm of $v$ and denoted as $|v|$ or $|v|_{\spc{V}}$.
+The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
+The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted as $|v|$ or $|v|_{\spc{V}}$.
 
 \parbf{Suspension.}
 The \emph{suspension} $\spc{V}=\Susp\spc{U}$ over metric space $\spc{U}$
@@ -81,13 +83,13 @@ and the metric given by spherical cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called \emph{north} \emph{south pole} of the suspension.
+The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \emph{south pole} of the suspension.
 
 \begin{thm}{Exercise}\label{ex:product-cone}
 Let $\spc{U}$ be a metric space.
 Show that the spaces 
 \[\RR\times \Cone\spc{U}\quad\text{and}\quad\Cone[\Susp\spc{U}]\]
-are isometric.
+are  isometric.
 \end{thm}
 
 
@@ -105,12 +107,12 @@ in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 for any pair $s,t\in \II$.
 
-We say that geodesic $\gamma\:\II\to \spc{X}$ from point $p$ to point $q$ if 
+We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if $\gamma$ is a geodesic and 
 $\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. 
-In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with a notation abuse we also calle it \emph{geodesic}\index{geodesic}.
-Given $[pq]$ we can parametrize it by distance to $p$;
+In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \emph{geodesic}\index{geodesic}.
+Given a geodesic $[pq]$ we can parametrize it by distance to $p$;
 this parametrization will be denoted as $\geod_{[p q]}(t)$.
-Clearly $\geod_{[p q]}(t)$ is a geodesic in the sence of the first definition.
+Clearly $\geod_{[p q]}(t)$ is a geodesic in the sense of the first definition.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
@@ -125,31 +127,33 @@ Also we use the following short-cut notation:
 
 
 
-In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.  However,  once we write $[p q]$ we mean that we made a choice of geodesic.
+In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  However,  once we write $[p q]$ we mean that we made a choice of geodesic.
 
-A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be jointed by a geodesic. 
+A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be joined by a geodesic. 
 
-A constant-speed reparametirization of geodesic by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
+A constant-speed reparameterization of a geodesic by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
+A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic. 
+{\color{red} !!! IMO it would be more consistent to call $\gamma$ a local geodesic if it's locally a geodesic in the sense of the original definition (in particular it's unit speed)!!!}
+ If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
 
 
 \parbf{Triangles.}
-For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use short notation 
+For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use the short notation 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
-Again given a triple $p,q,r\in \spc{X}$ it may be no triangle 
-$\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also it maybe many different triangles with these vertexes, any of which can be denoted by $\trig p q r$.
-Once we write $\trig p q r$, it means we made a choice of such a triangle, 
+Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
+$\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also many different triangles with these vertexes may exist, any of which can be denoted by $\trig p q r$.
+Once we write $\trig p q r$, it means that we made a choice of such a triangle, 
 that is, a choice of each $[q r], [r p]$ and $[p q]$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triangle} $\trig p q r$.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \emph{perimeter of the triangle} $\trig p q r$.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
-A pair geodesics $([p x],[p y])$ will be called \emph{hinge}\index{hinge} and briefly, it will be denoted by 
+A pair of geodesics $([p x],[p y])$ will be called  a \emph{hinge}\index{hinge} and it will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
@@ -159,7 +163,7 @@ A set $A\subset\spc{X}$ is called
 \emph{convex}%
 \index{convex set}
 if for every two points $p,q\in A$, 
-every geodesic $[pq]$ of $\spc{X}$ 
+\emph{every} geodesic $[pq]$ of $\spc{X}$ 
 lies in $A$.
 
 A set $A\subset\spc{X}$ is called 
@@ -172,26 +176,26 @@ Note that any open set is locally convex by definition.
 
 \section{Length spaces}\label{sec:intrinsic}
 
-Recall that a curve is a continuous map from a real interval to a space.
+Recall that a path or a  curve is a continuous map from a real interval to a space.
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and
-$\alpha\: \II\to \spc{X}$ is a curve.
+$\alpha\: \II\to \spc{X}$ be a curve.
 We define the \emph{length}\index{length} of $\alpha$ as 
 \[
 \length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha_{i+1}}{}
 \]
 \end{thm}
 
-Directly from the definition, it follows that if a path $\alpha$ connecting two points $x$ and $y$ then 
+Directly from the definition, it follows that if a path $\alpha$ is connecting two points $x$ and $y$ \footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 
-If for any $\eps>0$ and any pair of points $x$ and $y$ in the metric space $\spc{X}$ there is a path $\alpha$ connecting\footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} $x$ to $y$ such that
+If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps\]
-then $\spc{X}$ is called length space.
+then $\spc{X}$ is called a \emph{length space}.
 
 Note that any geodesic space is a length space;
-as you see from the following example, the contrary does not hold.
+as can be seen from the following example, the converse does not hold.
 
 
 \begin{thm}{Example}
@@ -208,11 +212,11 @@ Give an example of a complete length space for which no pair of distinct points 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called a \emph{midpoint} of $x$ and $y$
+\item A point $z\in \spc{X}$ is called a \emph{midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
-A point $z\in \spc{X}$ is called \emph{$\eps$-midpoint} of $x$ and $y$
+A point $z\in \spc{X}$ is called an \emph{$\eps$-midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{},\dist{y}{z}{}<\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
@@ -238,6 +242,7 @@ Then $\spc{X}$ is a geodesic space.
 \end{thm}
 
 \parit{Proof.}
+We first prove (\ref{SHORT.lem:mid>length}).
 Let $x,y\in \spc{X}$ be a pair of points.
 
 Set $\eps_n=\frac\eps{2^{2\cdot n}}$.
@@ -259,7 +264,7 @@ $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 In this way we define $\alpha(t)$ for $t\in W$,
 where $W$ denotes the set of dyadic rationals in $[0,1]$.
 For any $t\in[0,1]$ consider a sequence of $t_n\in W$ such that $t_n\to t$ as $n\to\infty$.
-Note that the sequence $\alpha(t_n)$ converges;
+Note that the sequence $\alpha(t_n)$ is Cauchy and hence it converges;
 define $\alpha(t)$ as its limit.
 It is easy to see that $\alpha(t)$
 does not depend on the choice of the sequence $t_n$
