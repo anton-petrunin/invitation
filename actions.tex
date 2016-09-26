@@ -2,9 +2,36 @@
 
 \chapter{Isometric actions}
 
-\section{Definitions}
-\begin{thm}{Definition}
-\label{df:1+3}
+\section{4-point condition}
+
+A quadruple of points $p,x,y,z$ in a metric space $\spc{X}$ satisfies 
+$\CBB{}{0}$ comparison if
+\[\angk pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}\le 2\cdot\pi.\]
+If $p$ coincides with one of the points $x$, $y$ or $z$ then the left hand side is undefined;
+in this case we assume that $\CBB{}{0}$ comparison holds automatically.
+
+Taking hyperbolic plane $\HH^2$ or sphere $\SS^2$ instead of the Eulcidean plane $\EE^2$,
+one defines $\CBB{}{-1}$ and $\CBB{}{1}$ comparison.
+
+Namely, $p,x,y,z$  satisfies 
+$\CBB{}{-1}$ comparison if 
+\[\angk pxy_{\HH^2}+\angk pyz_{\HH^2}+\angk pzx_{\HH^2}\le 2\cdot\pi.\]
+
+Further, $p,x,y,z$ satisfies $\CBB{}{1}$ comparison if 
+\[\angk pxy_{\SS^2}+\angk pyz_{\SS^2}+\angk pzx_{\SS^2}\le 2\cdot\pi.\]
+In the latter case the left hand side is undefined if $p$ coincides with 
+one of $x$, $y$ or $z$ or one of the comparison triangles $\modtrig(pxy)_{\SS^2}$, $\modtrig(pyz)_{\SS^2}$ or $\modtrig(pzx)_{\SS^2}$ is undefined\footnote{That is 
+\begin{align*}
+\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}&\ge2\cdot\pi,\quad\text{or}
+\\
+\dist{p}{y}{}+\dist{p}{z}{}+\dist{y}{z}{}&\ge2\cdot\pi,\quad\text{or}
+\\
+\dist{p}{z}{}+\dist{p}{x}{}+\dist{z}{x}{}&\ge2\cdot\pi.
+\end{align*}
+};
+in this case we also assume that $\CBB{}{0}$ comparison holds automatically.
+
+
 A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies 
 \emph{(1+3)-point $\kappa$-comparison}%
 \index{(1+3)-point $\kappa$-comparison} 
@@ -13,34 +40,21 @@ if
 +\angk p{x^2}{x^3}
 +\angk p{x^3}{x^1}\le 2\cdot\pi.\eqlbl{Yup-kappa}\]
 or at least one of the model angles $\angk p{x^i}{x^j}$ is not defined.
-\end{thm}
 
-\begin{thm}{Definition}
-\label{df:cbb1+3}
-A space $\spc{L}$ 
-is called an Alexandrov space with curvature $\ge \kappa$ 
-(briefly, $\spc{L}$ is a $\CBB{}{\kappa}$\index{$\CBB{}{}$} space) 
-if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies (1+3)-point comparison.
+We say that a metric space $\spc{L}$ is $\CBB{}{\kappa}$ if all quadruples of points in $\spc{L}$ satisfy $\CBB{}{\kappa}$ komaprison.
 
-We say that $\spc{L}$ an Alexandrov space with curvature bounded below 
-(briefly, $\spc{L}$ is a  $\CBB{}{}$ space) if there is $\kappa\in\RR$ such that $\spc{L}$ is a $\CBB{}{\kappa}$ space.
-\end{thm}
-
-\parbf{Remarks} 
-\begin{itemize}
-\item Alexandrov spaces with curvature bounded below usually will be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
-\item In the definition of spaces with curvature $\ge1$, 
+In the definition of spaces with curvature $\ge1$, 
 most authors assume in addition that $\diam \spc{L}\le \pi$. 
 We do not make this assumption. 
 In particular, we consider the real line to have curvature $\ge 1$.
-\end{itemize}
+
 
 \begin{thm}{Exercise}
 Let $\spc{L}$ be a length space.
 Show that $\spc{L}$ is a $\CBB{}0$ space
 if and only if 
 \[
-\area\modtrig(xyz))_{\EE^2}
+\area\modtrig(xyz)_{\EE^2}
 \le
 \area\modtrig(pxy)_{\EE^2}+\area\modtrig(pyz)_{\EE^2}+\area\modtrig(pzx)_{\EE^2}
 \]
@@ -48,8 +62,8 @@ for any 4 distinct points $p,x,y,z\in\spc{L}$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{mink+alex=euclid} 
-Let $\spc{L}$ be  $\RR^m$ with the metric defined by a norm).
-Show that $\spc{L}$ is a $\CBB{}0$ space if and only if $\spc{L}\iso\EE^m$.
+Assume that the metric $\rho$ on  $\RR^m$ is defined by a norm.
+Show that $(\RR^m,\rho)$ is a $\CBB{}0$ space if and only if it is isometric to the Euclidean space.
 \end{thm}
 
 
@@ -59,7 +73,7 @@ and it has closed orbits.
 Then the orbit space $\spc{L}/G$ is a $\CBB{}\kappa$ space. 
 \end{thm}
 
-\parit{Proof of \ref{thm:submetry-CBB}.}
+\parit{Proof.}
 Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
 Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
 Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
@@ -102,8 +116,53 @@ Since $\eps>0$ is arbitrary we have
 +\angk p{x^3}{x^1}\le 2\cdot\pi;\]
 that is,
 the (1+3)-point $\kappa$-comparison holds in $\spc{M}$.
-It remains to apply Proposition~\ref{prop:submet-length}.
 \qeds
+
+\section{Extremal sets}
+
+Consider a Riemannian manifold $\spc{R}$ with sectional curvature $\ge \kappa$.
+Toponiogov comparison theorem implies that $\spc{R}$ is a $\CBB{}{\kappa}$ space.
+
+Let $G$ is a subgroup of the isometry group of $\spc{R}$.
+We will deniote by $\spc{R}^G$ the set of points fixed by $G$.
+Note that $\spc{R}^G$ is a totally geodesic subset in $\spc{R}$.
+
+Given $p\in \spc{R}$ we will denote by $[p]_G$ the projection of $p$ to the orbit space $\spc{R}/G$.
+
+If $G$ has closed orbits then according to Theorem~\ref{thm:CBB/G}, the orbit space $\spc{R}/G$
+is a therefore  group $\CBB{}{\kappa}$ space.
+It opens a door for applicatuions comming from the isometric group actions.
+
+Note that if the action $G\acts \spc{R}$ is free then the orbit space 
+$\spc{R}/G$ is also a Riemannian manifold.
+A typical action however has orbit space 
+$\spc{R}/G$ with singularities.
+
+Let $\spc{L}$ be a proper length $\CBB{}{\kappa}$ space.
+A closed subset $A\subset\spc{L}$ is called \emph{extremal} if for any point $p\notin A$, 
+any point $q\in A$ which minimize the distance to $p$ 
+and any $x\ne q$ we have
+\[\angk qpx\le \tfrac\pi2.\]
+
+\begin{thm}{Exercise}
+Show that a poin $p$ in a proper length $\CBB{}{\kappa}$ space forms an extremal set if and only if and only if $\diam\Sigma_p\le \tfrac\pi2$.
+\end{thm}
+
+
+\begin{thm}{Theorem}
+Assume $\spc{R}$ is a Riemannian manifold with isometric action by a group $G$ with closed orbits.
+Given a point $p\in \spc{R}$ we denote by $[p]_G$ its orbit in $\spc{R}/G$;
+also given a set $X\subset\spc{R}$ we denote by $[X]$ the subset of all orbits in $\spc{R}/G$ with a point in $X$.
+
+Then $\spc{R}^G/G$ is an extremal set in $\spc{R}/G$.
+\end{thm}
+
+\parit{Proof.}
+Assume contrary; let $p\notin \spc{R}^G/G$, $q\in \spc{R}^G/G$ and $x$ be a triple of points in $\spc{R}/G$ violating the definition of extremal subset.
+
+
+\qeds
+
 
 \section{Erd\H{o}s' problem rediscovered}
 

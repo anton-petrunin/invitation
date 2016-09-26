@@ -1,61 +1,942 @@
 \part{Curvature bounded above}
 
-In this chapter we define $\CBB{}{\kappa}$ spaces and give the first application.
+\chapter{Semiconvex functions}
 
-\section{4-point condition}
+\section{Semiconcave functions}
 
-A quadruple of points $p,x,y,z$ in a metric space $\spc{X}$ satisfies 
-$\CBB{}{0}$ comparison if
-\[\angk pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}\le 2\cdot\pi.\]
-If $p$ coincides with one of the points $x$, $y$ or $z$ then the left hand side is undefined;
-in this case we assume that $\CBB{}{0}$ comparison holds automatically.
+Let $f$ be a locally Lipschitz function defined on an open set $\Omega$ in a metric space.
 
-Taking hyperbolic plane $\HH^2$ or sphere $\SS^2$ instead of the Eulcidean plane $\EE^2$,
-one defines $\CBB{}{\mp1}$ comparison.
-
-Namely, $p,x,y,z$  satisfies 
-$\CBB{}{-1}$ comparison if 
-\[\angk pxy_{\HH^2}+\angk pyz_{\HH^2}+\angk pzx_{\HH^2}\le 2\cdot\pi.\]
-
-Further, $p,x,y,z$ satisfies $\CBB{}{1}$ comparison if 
-\[\angk pxy_{\SS^2}+\angk pyz_{\SS^2}+\angk pzx_{\SS^2}\le 2\cdot\pi.\]
-In the latter case the left hand side is undefined if $p$ coincides with 
-one of $x$, $y$ or $z$ or one of the comparison triangles $\modtrig(pxy)_{\SS^2}$, $\modtrig(pyz)_{\SS^2}$ or $\modtrig(pzx)_{\SS^2}$ is undefined\footnote{That is 
+Given a smooth real-to-real function $\phi$ we say that $f$ satisfies inequality 
+\[f''+\phi(f)\le 0\]
+in the \emph{barrier sense}
+if for any point $p\in \Omega$,
+any geodesic $\gamma$ such that $\gamma(0)=p$ and any $\eps>0$
+there is a smooth function $z(t)$, defined in a small neighborhood of $0$ such that 
 \begin{align*}
-\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}&\ge2\cdot\pi,\quad\text{or}
+z(0)&=f(p),
 \\
-\dist{p}{y}{}+\dist{p}{z}{}+\dist{y}{z}{}&\ge2\cdot\pi,\quad\text{or}
+z(t)&\ge f\circ\gamma(t),
 \\
-\dist{p}{z}{}+\dist{p}{x}{}+\dist{z}{x}{}&\ge2\cdot\pi.
+z''+\phi(z)&\le \eps.
 \end{align*}
-};
-in this case we also assume that $\CBB{}{0}$ comparison holds automatically.
+The function $z$ as above is called \emph{upper barrier} to $f\circ\gamma(t)$ at $0$.
+
+If a locally Lipschitz function $f$ satisfies the inequlaity 
+$f''\le \lambda$ then it is called $\lambda$-concave.
+If for any point $p\in\Omega$ admits a neigborohhood $\Omega'\ni p$
+such that the restriction $f|_{\Omega'}$ is $\lambda$-concave for some real number $\lambda$ then $f$ is called semiconcave.
 
 
+\begin{thm}{Theorem}\label{thm:conc} 
+A proper length space $\spc{L}$ is $\CBB{}{0}$ 
+if and only if 
+for any point $p\in\spc{L}$ the function $f=\tfrac12\dist[2]{p}{}{}$ satisfies the 
+inequality 
+\[f''-1\le 0.\]
 
-\section{Semiconvex functions}
+Analogously a proper length space $\spc{L}$ is $\CBB{}{-1}$ 
+if and only if the function $f=\cosh\dist[2]{p}{}{}$ satisfies the 
+inequality 
+\[f''-f\le 0.\]
 
-Let 
-
-\section{Gradient}
-
-Let $f$ be a function defined on metric space $\spc{X}$.
-Given a point $p\in \spc{X}$ set
-\[|\nabla|_pf|\limsup \]
-
-\begin{thm}{Definition-proposition}
-Let $f$ be a semiconcave function defined on an open set $\Omega$ in a  $\CBB{}{\kappa}$ proper length space $\spc{L}$.
-Then for any $p\in \Omega$ there is unique tangent vector $w\in\T_p$ such that
-\begin{align*}
-\<w,w\>&=(\d_pf)(w)
-\\
-\<w,x\>&\ge(\d_pf)(x)
-\end{align*}
-for any $x\in \T_p$.
-
-The vector $w$ is called \emph{gradient of $f$ at $p$} and denoted as $\nabla_pf$.
+Analogously a proper length space $\spc{L}$ is $\CBB{}{-1}$ 
+if and only if the function $f=\cos\dist[2]{p}{}{}$ satisfies the 
+inequality 
+\[f''+f\ge 0\]
+in $\oBall(p,\pi)$.
 \end{thm}
 
+\section{Differential}
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space with defined angles and
+$f\:\spc{X}\subto\RR$ be a subfunction, 
+$p\in\Dom f$ and $\II$ be a real interval.
+A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
+(briefly $\phi=\d_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:differential}
+Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
+Then differential $\d_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
+\begin{subthm}{prop:differential:lip}
+The differential $\d_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\d_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
+\end{subthm}
+
+\begin{subthm}{prop:differential:homo}
+$\d_pf\:\T_p\to\RR$ is a positive homogenius function;
+that is, for any $\lam\ge 0$ and $v\in\T_p$ we have 
+\[\lam\cdot\d_pf(v)=\d_pf(\lam\cdot v).\]
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Proof.}
+Passing to a subdomain of $f$ if nesessary,
+we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
+
+Take a geodessic $\gamma$ starting at $p$ which lies in $\Dom f$.
+Since $f\circ\gamma$ is semiconcave,
+the rigth derivative $(f\circ\gamma)^+(0)$ is defined.
+Since $f$ is  $\Lip$-Lipschitz, we have
+\[|(f\circ\gamma)^+(0)-(f\circ\gamma_1)^+(0)|
+\le
+\Lip\cdot\dist[{{}}]{\gamma^+(0)}{\gamma_1^+(0)}{}\eqlbl{gam-bargam}\]
+for any other geodesic $\gamma_1$ starting at $p$.
+
+Define $\phi\:\T'_p\to\RR\:\gamma^+(0)\mapsto(f\circ\gamma)^+(0)$.
+From \ref{gam-bargam}, $\phi$ is a $\Lip$-Lipschtz function defined on $\T_p'$.
+Thus, we can extend $\phi$ to a whole $\T_p$ as a $\Lip$-Lipschitz function. 
+
+It remains to show that $\phi$ is differential of $f$ at $p$.
+Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
+Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
+that is, if 
+\[v_n=\gamma^+_n(0)\ \ \t{and}\ \ a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
+then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
+Then 
+\[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 
+\[|f\circ\alpha(t)-f\circ\gamma_n(t)|\le\Lip\cdot\dist[{{}}]{\alpha(t)}{\gamma_n(t)}{}.\]
+Hence 
+\[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
+\qedsf
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Gradient}\label{sec:grad-def}
+
+\begin{thm}{Definition of gradient}\label{def:grad} 
+Let $\spc{L}\in\CBB{}{}$, 
+$f\:\spc{L}\subto\RR$ be a subfunction
+and for a point
+$p\in\Dom f$ the differential $\d_p f\:\T_p\to\RR$ is defined.
+
+A tangent vector $g\in \T_p$ is called a 
+\emph{gradient of $f$ at $p$}\index{gradient} 
+(briefly,  $g=\nabla_p f$\index{$\nabla$}) if
+\begin{subthm}{}
+$(\d_p f)(w)\le \<g,w\>$ for any $w\in \T_p$, and
+\end{subthm}
+
+\begin{subthm}{}
+$(\d_p f)(g) = \<g,g\> .$
+\end{subthm}
+\end{thm}
+
+\begin{thm}{Existence and uniqueness of the gradient}\label{thm:ex-grad} 
+Assume $\spc{L}\in\CBB{}{\kappa}$
+and $f\:\spc{L}\subto\RR$ be 
+locally Lipschitz 
+and 
+semiconcave subfunction.
+Then for any point $p\in \Dom f$, there is unique gradient $\nabla_p f\in \T_p$.
+\end{thm}
+
+\parit{Proof; (uniqueness).} 
+If $g,g'\in \T_p$ are two gradients of $f$
+then 
+\begin{align*}
+\<g,g\>
+&=(\d_p f)(g)\le \<g,g'\>,
+&
+\<g',g'\>
+&=(\d_p f)(g')\le \<g,g'\>.
+\end{align*}
+Therefore,
+\[\dist[2]{g}{g'}{}=\<g,g\>-2\cdot\<g,g'\>+\<g',g'\>=0;\] 
+that is, $g=g'$.
+
+\parit{(Existence).} 
+Note first that if $\d_p f\le 0$ then one can take $\nabla_p f=\0$.
+
+Otherwise, if $s=\sup\set{(\d_p f)(\xi)}{\xi\in\Sigma_p}>0$, 
+it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that 
+\[
+(\d_p f)\l(\overline{\xi}\r)=s.
+\eqlbl{overlinexi}
+\]
+Indeed, if $\overline{\xi}$ exists, then applying Lemma~\ref{lem:ohta} for $u=\overline{\xi}$, $v=\eps\cdot w$ with $\eps\to0+$, 
+we get
+\[(\d_p f)(w)\le \<w,s\cdot\overline{\xi}\>\] 
+for any $w\in\T_p$;
+that is, $s\cdot\overline{\xi}$ is the gradient at $p$.
+
+Take a sequence of directions $\xi_n\in \Sigma_p$, such that $(\d_p f)(\xi_n)\to s$.
+Yet once applying Lemma~\ref{lem:ohta} for $u=\xi_n$, $v=\xi_m$, we get
+\[s
+\ge
+\frac{(\d_p f)(\xi_n)+(\d_p f)(\xi_m)}{\sqrt{2+2\cdot\cos\mangle(\xi_n,\xi_m)}}.\]
+Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
+that is, $(\xi_n)$ is a Cauchy sequence.
+Clearly $\overline{\xi}=\lim_n\xi_n$ is satisfies \ref{overlinexi}.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Calculus of gradient}\label{sec:grad-calculus}
+
+
+
+The next lemma roughly states that the gradient points 
+in the direction of maximal slope; 
+moreover if the slope in the given direction is almost maximal then it is almost direction of the gradient.
+
+\begin{thm}{Lemma}\label{lem:alm-grad}
+Let $\spc{L}\in\CBB{}{\kappa}$,
+$f\:\spc{L}\subto\RR$ be locally Lipschitz and semiconcave 
+and $p\in \Dom f$.
+
+Assume $|\nabla_p f|>0$, 
+set $\overline{\xi}=\tfrac{1}{|\nabla_p f|}\cdot\nabla_p f$ then
+\begin{subthm}{near-grad} If for $v\in\T_p$, we have $|v|\le 1+\eps$ 
+and $(\d_p f)(v) > |\nabla_p f|\cdot(1-\eps)$, then
+\[\dist{\overline{\xi}}{v}{}<100\cdot\sqrt{\eps}.\]
+\end{subthm}
+
+\begin{subthm}{conv-to-grad} 
+If $v_n\in \T_p$ be a sequence of vectors such that 
+\[\limsup_{n\to\infty} |v_n|\le 1\ \  
+\t{and}\ \  \liminf_{n\to\infty}(\d_p f)(v_n)\ge |\nabla_p f|\] 
+then 
+\[\lim_{n\to\infty} v_n=\overline{\xi}.\]
+\end{subthm}
+
+\begin{subthm}{alm-max} $\overline{\xi}$ is the unique maximum direction for the restriction $\d_p f|_{\Sigma_p}$. 
+In particular, 
+\[|\nabla_p f|=\sup\set{\d_p f}{\xi\in\Sigma_p f}.\]
+\end{subthm}
+\end{thm}
+
+\parit{Proof.} According to definition of gradient,
+\begin{align*}
+ |\nabla_p f|\cdot(1-\eps)
+&<
+(\d_p f)(v)
+\le
+\\
+&\le\<v,\nabla_p f\>
+=
+\\
+&=
+|v|\cdot|\nabla_p f|\cdot\cos\mangle(\nabla_p f,v).
+\end{align*}
+Thus 
+$
+|v|>1-\eps$
+and
+$
+\cos\mangle(\nabla_p f,v)>\tfrac{1-\eps}{1+\eps}.
+$
+Hence  (\ref{SHORT.near-grad}).
+
+Statements (\ref{SHORT.conv-to-grad}) and (\ref{SHORT.alm-max}) follow directly from (\ref{SHORT.near-grad}).
+\qeds
+
+As a corollary of the above lemma and Proposition~\ref{prop:conv-comp} we get the following: 
+
+\begin{thm}{Chain rule} %???DO WE NEED IT???
+Let $\spc{L}\in\CBB{}{}$, 
+$f\:\spc{L}\subto \RR$ be a semiconcave function
+and $\phi\:\RR\to\RR$ be a non-decreasing semiconcave function.
+Then $\phi\circ f$ is semiconcave and  $\nabla_x(\phi\circ f)=\phi^+(f(x))\cdot\nabla_x f$ for any $x\in\Dom f$.
+\end{thm}
+
+
+The following inequalities describe an important property of the ``gradient
+vector field'' which will be used throughout this paper.
+
+\begin{thm}{Lemma} 
+\label{lem:grad-lip}
+Let $\spc{L}\in\CBB{}{}$, 
+$f\:\spc{L}\subto\RR$ satisfies $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$, 
+$[p q]\subset \Dom f$ 
+and $\ell=\dist{p}{q}{}$.
+Then
+
+\begin{wrapfigure}{r}{18mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(5mm)]{pics/grad-lip(0.3)}
+\lbl[br]{4,65;$p$}
+\lbl[tr]{3,-1;$q$}
+\lbl[r]{3,50;$\dir pq$}
+%\lbl[tr]{37,9;$\dir qp$}
+\lbl[l]{5,30;$\ell$}
+\lbl[b]{25,62;$\nabla_p f$}
+%\lbl[tl]{55,2;$\nabla_q f$}
+\end{lpic}
+\end{wrapfigure}
+
+\[\<\dir pq,\nabla_p f\>\ge
+\frac
+{{f(q)}-{f(p)\cdot\cs\kappa\ell}-\lambda\cdot\md\kappa\ell}
+{\sn\kappa\ell}.\]
+
+
+In particular, 
+\begin{subthm}{lem:grad-lip:lam=0}
+if $\kappa=0$, 
+\[\<\dir pq,\nabla_p f\>\ge
+{\l({f(q)}-{f(p)}-\tfrac\lambda2\cdot\ell^2\r)}/{\ell};\]
+\end{subthm}
+
+\begin{subthm}{} if $\kappa=1$, $\lambda=0$ we have
+\[\<\dir pq,\nabla_p f\>\ge
+\l(f(q)-f(p)\cdot\cos\ell\r)/\sin\ell;\]
+\end{subthm}
+
+\begin{subthm}{} if $\kappa=-1$, $\lambda=0$ we have
+\[\<\dir pq,\nabla_p f\>\ge
+\l(f(q)-f(p)\cdot\cosh\ell\r)/\sinh\ell;\]
+\end{subthm}
+\end{thm}
+
+\parit{Proof of \ref{lem:grad-lip}.} 
+Note that 
+$\geod_{[p q]}(0)=p$, 
+$\geod_{[p q]}(\ell)=q$, 
+$(\geod_{[p q]})^+(0)=\dir pq$.
+Thus,
+\begin{align*}
+\<\dir pq,\nabla_p f\>
+&\ge 
+d_p f(\dir pq)=
+\\
+&=
+(f\circ\geod_{[p q]})^+(0)
+\ge
+\\
+&\ge
+\frac
+{{f(q)}-{f(p)\cdot\cs\kappa\ell}-\lambda\cdot\md\kappa\ell}
+{\sn\kappa\ell}.
+\end{align*}
+\qedsf
+
+The following corollary states that gradient vector field is monotonic in the sense similar to definition of \emph{monotone operators}; see for example \cite{phelps}.
+
+%???Maybe it is more natural to call this property ``semi-monotonicity or ``$\lambda$-monotonicity'' ???
+
+\begin{thm}{Monotonicity of gradient} 
+\label{cor:grad-lip}
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$f\:\spc{L}\subto\RR$ be locally Lipschitz and $\lambda$-concave 
+and $[p q]\subset \Dom f$.
+Then
+\[
+\<\dir p q,\nabla_p f\>
++
+\<\dir q p,\nabla_q f\>
+\ge 
+-\lambda\cdot\dist[{{}}]{p}{q}{}.
+\]
+
+\end{thm}
+
+\parit{Proof.} Add two inequalities from \ref{lem:grad-lip:lam=0}.
+\qeds
+
+\begin{thm}{Lemma}\label{lem:close-grad}
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$f,g\:\spc{L}\subto\RR$ 
+and $p\in\Dom f\cap\Dom g$.
+
+Then 
+\[\dist[2]{\nabla_p f}{\nabla_p g}{\T_p}
+\le 
+(|\nabla_p f|+|\nabla_p g|)
+\cdot
+\sup\set{|(\d_p f)(\xi)-(\d_p f)(\xi)|}{\xi\in\Sigma_p}.\]
+
+In particular, if $f_n\:\spc{L}\subto\RR$ is a sequence of locally Lipschitz and semiconcave subfunctions,
+$p\in \Dom f_n$ for each $n$ 
+and $\d_p f_n$ converges uniformly on ${\Sigma_p}$ 
+then sequence $\nabla_p f_n\in \T_p$ converges.
+\end{thm}
+
+\parit{Proof.}
+Set 
+\[s
+=
+\sup
+\set{\,|(\d_p f)(\xi)-(\d_p g)(\xi)|}{\xi\in\Sigma_p}.\]
+Clearly for any $v\in \T_p$, we have 
+\[|(\d_p f)(v)-(\d_p g)(v)|\le s\cdot|v|.\]
+From the definition of gradient (\ref{def:grad}) we have:
+\begin{align*}
+&(\d_p f)(\nabla_p g)\le\<\nabla_p f,\nabla_p g\>,
+&&(\d_p g)(\nabla_p f)\le\<\nabla_p f,\nabla_p g\>,
+\\
+&(\d_p f)(\nabla_p f)=\<\nabla_p f,\nabla_p f\>,
+&&(\d_p g)(\nabla_p g)=\<\nabla_p g,\nabla_p g\>.
+\end{align*}
+Therefore,
+\begin{align*}
+\dist[{{}}]{\nabla_pf}{\nabla_pg}{}
+&=\<\nabla_p f,\nabla_p f\>+\<\nabla_p g,\nabla_p g\>-2\cdot\<\nabla_p f,\nabla_p g\>
+\le
+\\
+&\le (\d_p f)(\nabla_p f)+(\d_p g)(\nabla_p g)-(\d_p f)(\nabla_p g)-(\d_p g)(\nabla_p f)
+\le
+\\
+&\le s\cdot(|\nabla_p f|+|\nabla_p g|).
+\end{align*}
+\qedsf
+
+
+\section{Gradient curves}
+
+Let $f$ be a semiconcave function defined on an open set $\Omega$ in a $\CBB{}{\kappa}$ space.
 A curve $\alpha$ is called $f$-gradient if 
 \[\alpha^+(t)=\nabla_{\alpha(t)}f\]
 for any $t$.
+
+\begin{thm}{Proposition}
+A curve $\alpha$ if $f$-gradient if and only if 
+\[|\alpha^+(t)|\le |\nabla_{\alpha(t)}f|
+\quad
+\text{and}
+\quad
+(f\circ\alpha)^+(t)\ge |\nabla_{\alpha(t)}f|^2\]
+for any $t$.
+\end{thm}
+
+\parit{Proof.}??? \qeds
+
+\section{Gradient exponent}
+
+\section{Dimension theorem for CBB spaces}\label{sec:dim>m}
+
+As the main dimension-like invariant, we will use  the linear dimension $\LinDim$; 
+see Definition~\ref{def:lin-dim}.
+We write 
+\begin{align*}
+&\spc{L}\in\CBB{m}{}\ &\text{if}\ &\spc{L}\in\CBB{}{} \ \text{and}\ \LinDim\spc{L}=m\in\ZZ_{\ge0},\\
+&\spc{L}\in\CBB{\infty}{}\ &\text{if}\ &\spc{L}\in\CBB{}{}\ \text{and}\ \LinDim\spc{L}=\infty.
+\end{align*}
+Thus, once we write $\spc{L}\in\CBB m{}$ we automatically assume $m<\infty$.\index{$\CBB{}{}$!$\CBB m{}$}
+
+
+The following theorem is the main result of this section.
+
+
+\begin{thm}{Theorem}\label{thm:dim-infty}
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$q\in \spc{L}$, 
+$R>0$ 
+and $m\in \ZZ_{\ge0}$.
+Then the following statements are equivalent:
+\begin{subthmA}{LinDim}  $\LinDim\spc{L}\ge m$.
+\end{subthmA}
+
+\begin{subthmA}{thm:dim-infty:rank}
+There is a point $p\in\spc{L}$ which admits a $\kappa$-strutting array $(b,a^1,\dots,a^m)\in\spc{L}^{m+1}$.
+\end{subthmA}
+
+\begin{subthmA}{LinDim+} The set 
+\begin{center}
+$\Euk^m=\{p\in \spc{L}\mid$ there is an isometric cone embedding $\EE^m\hookrightarrow \T_p\}$            \end{center} 
+\noi contains a dense G-delta set in $\spc{L}$.
+\end{subthmA}
+
+\begin{subthmA}{TopDim} There is a $C^{\frac{1}{2}}$-embedding, i.e. bi-H\"older with exponent $\tfrac{1}{2}$,
+\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R).\]
+\end{subthmA}.
+
+\begin{subthmA}{pack} 
+\[\pack_\eps \oBall(q,R)>\frac{\Const}{\eps^m}\]
+for some fixed $\Const>0$ and any $\eps>0$.
+\end{subthmA}
+
+\medskip
+
+In particular:
+\begin{enumerate}[(i)]
+\item If $\LinDim\spc{L}=\infty$, then all the statements (\ref{SHORT.LinDim+}), (\ref{SHORT.TopDim}) and (\ref{SHORT.pack}) are satisfied for all $m\in\ZZ_{\ge0}$. 
+\item 
+ If the statement (\ref{SHORT.TopDim}) or (\ref{SHORT.pack}) is satisfied for some choice of $q\in \spc{L}$ and $R>0$, then it also is satisfied for any other choice of $q$ and $R$.
+\end{enumerate}
+\end{thm}
+
+For finite-dimensional spaces, Theorem~\ref{thm:dim-finite} gives a stronger version 
+of the theorem above.
+
+The proof of the above theorem with exception of  statement~(\ref{SHORT.TopDim}) was given in \cite{plaut:dimension}.
+At that time, it was not known whether for any $\spc{L}\in\CBB{}{\kappa}$,
+\[\LinDim\spc{L}=\infty\ \ \Rightarrow\ \ \TopDim\spc{L}=\infty.\]
+Perelman proved this implication, 
+by combining an idea of Plaut with the technique of gradient flow (see \cite{perelman-petrunin:qg}).
+The statement \ref{TopDim} which we prove is somewhat stronger.
+
+
+To prove Theorem \ref{thm:dim-infty}  we will need the following three propositions.
+
+
+\begin{thm}{Proposition}\label{E=T}
+Let $\spc{L}\in\CBB{}{\kappa}$ and $p\in \spc{L}$.
+Assume there is an isometric cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$.  Then either
+\begin{subthm}{}
+ $\Im\iota=\T_p\spc{L}$, or
+\end{subthm}
+
+\begin{subthm}{} there is a point $p'$ arbitrarily close to $p$ such that there is an isometric cone embedding $\iota':\EE^{m+1}\hookrightarrow \T_{p'}\spc{L}$.
+\end{subthm}
+\end{thm}
+
+
+\parit{Proof.}
+Assume $\iota(\EE^{m})$ is a proper subset of $\T_p\spc{L}$.
+Equivalently, there is a direction $\xi \in \Sigma_p\backslash\iota(\SS^{m-1})$,
+where $\SS^{m-1}$ is the unit sphere in  $\EE^{m}$. 
+
+Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\SS^{m-1})$. 
+Choose a \emph{maximal $\eps$-packing} in $\iota(\SS^{m-1})$;
+i.e. an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\SS^{m-1})$ so that $n=\pack_\eps \SS^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
+
+Choose an array of points $x,z^1,z^2,\dots,z^n\in\spc{L}$ so that
+$\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$;
+here write ``$\approx$'' for ``sufficiently close''.
+We can choose this array on such a way that 
+$\angk{\kappa}p x{z^i}>\eps$ for all $i$ 
+and $\angk{\kappa}p{z^i}{z^j}>\eps$ for all $i\not=j$.
+Applying Corollary \ref{cor:euclid-subcone}, we can find a point $p'$ arbitrary close to  $p$ 
+so that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
+belong to an isometric copy of $\SS^{\kay-1}$ in $\Sigma_{p'}$.
+In addition, we can assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa}{p'}{z^i}{z^j}>\eps$.
+From hinge comparison (\ref{angle}),
+$\mangle(\dir{p'}x,\dir{p'}{z^i})>\eps$ 
+and $\mangle(\dir{p'}{z^i},\dir{p'}{z^j})>\eps$;
+i.e. 
+\[\pack_\eps \SS^{\kay-1}\ge n+1>\pack_\eps \SS^{m-1}.\] 
+Hence $\kay>m$.
+\qeds
+
+
+\begin{thm}{Proposition}\label{pack-homogeneus}
+Let $\spc{L}\in\CBB{}{\kappa}$ then 
+ for any two poins $p,\bar p\in \spc{L}$ and any $R,\bar R>0$ there is a contsant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
+\[\pack_{\delta\cdot\eps}\oBall(\bar p,\bar R)\ge \pack_{\eps}\oBall(p,R).\]
+
+\end{thm}
+
+\begin{wrapfigure}{r}{66mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-balls(0.50)}
+\lbl[r b]{22,26;$\bar p$}
+\lbl[r b]{109,26;$p$}
+\lbl[l t]{15,18;$\bar R$}
+\lbl[l t]{101,18;$R$}
+\lbl[l t]{110,42;$x^i$}
+\lbl[t]{33,26;$\bar x^i$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} According to \ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
+
+Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,x^2,\dots, x^n\in\oBall(p,R)$ be a maximal $\eps$-packing;
+i.e., $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+Without loss of generality we can assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
+Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
+Choose factor $s>0$, so that $\bar r>s\cdot(\dist{p}{\bar p}{}+R)$.
+For each $i$, take $\bar x^i\in[\bar p x^i]$ so that 
+$\dist{\bar p}{\bar x^i}{}=s\cdot(\dist{p}{x^i}{})$.
+From \ref{cor:monoton:2-sides},
+\[\angkk\kappa {\bar p}{\bar x^i}{\bar x^j}{}\ge\angk\kappa {\bar p}{x^i}{x^j}.\]
+Applying cosine rule, we get a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
+\[\dist{\bar x^i}{\bar x^j}{}>\delta\cdot(\dist{x^i}{x^j}{})>\delta\cdot\eps\] 
+for all $i\not=j$.
+Hence the statement follows.
+\qeds
+
+
+\begin{thm}{Proposition}\label{E-comeagre} 
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$r<\varpi\kappa$ 
+and $p\in \spc{L}$.
+Assume that 
+\[\pack_{\eps} \oBall(p,r)
+>\pack_{\eps}\cBall[r]_{\Lob{\kay}{\kappa}}
+\eqlbl{eq:pack>pack}\]
+for some $\eps>0$.
+Then there is a G-delta set $A\subset \spc{L}$,
+which is dense in a neighborhood of $p$,
+such that $\dim\Lin_q>m$ for any $q\in A$.
+\end{thm}
+
+\parit{Proof.} 
+Choose a maximal $\eps$-packing in $\oBall(p,r)$;
+i.e. an array of points $x^1,x^2,\dots, x^n\in\oBall(p,r)$ so that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
+Choose a neighborhood $\Omega\ni p$,
+such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
+Set 
+\[A= \Omega\cap\Str(x^1,x^2,\dots,x^n).\]
+According to Theorem \ref{thm:almost.geod},
+$A$ is a G-delta set which is dense in $\Omega$.
+
+Assume $\kay=\dim\Lin_q\le m$ for some $q\in A$.
+Consider an array of vectors $v^1,v^2,\dots,v^n\in \Lin_q$,
+$v^i=\ddir{q}{x^i}$.
+Clearly $|v^i|=\dist{q}{x^i}{}<r$ and from hinge comparison (\ref{angle})
+we have $\side\kappa \hinge o{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps$.
+Note that $\oBall(\0,r)\subset\Lin_q$ equipped with the metric $\rho(v,w)=\side\kappa \hinge o{v}{w}$ is isometric to 
+$\cBall[r]_{\Lob{\kay}{\kappa}}$.
+Thus,
+\[
+\pack_\eps\cBall[r]_{\Lob{\kay}{\kappa}}
+\ge
+\pack_\eps \oBall(p,r),
+\]
+which contradicts $\kay\le m$ and \ref{eq:pack>pack}.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parit{Proof of \ref{thm:dim-infty}.} 
+The proof is essentially done in \ref{E=T}, \ref{pack-homogeneus}, \ref{E-comeagre}, \ref{thm:inverse-function}, \ref{thm:right-inverse-function}; 
+here we only assemble the proof from these parts.
+
+We prove implications 
+\[\textrm{(\ref{SHORT.LinDim+}) $\Rightarrow$ (\ref{SHORT.LinDim}) $\Rightarrow$ (\ref{SHORT.thm:dim-infty:rank}) $\Rightarrow$ (\ref{SHORT.pack}) $\Rightarrow$ (\ref{SHORT.LinDim+}) $\Rightarrow$ (\ref{SHORT.TopDim}) $\Rightarrow$ (\ref{SHORT.pack}).}\]
+
+The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivial.
+The proof of (\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}) is valid for general metric spaces;
+it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$. 
+
+\parit{(\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}).}
+Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
+Clearly one can choose an array of directions $\xi^0,\xi^1,\dots,\xi^m\in\Lin_p$ so that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ for all $i\not=j$.
+Choose an array of points $x^0,x^1,\dots,x^m\in\spc{L}$ so that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
+in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
+Choose points $a^i\in\l]p x^i\r]$ sufficiently close to $p$.
+One can do it so that each $\angk\kappa p{a^i}{a^j}$ is arbitrary close to $\mangle\hinge p{a^i}{a^j}$,
+in particular, $\angk\kappa p{a^i}{a^j}>\tfrac{\pi}{2}$.
+Finally, set $b=a^0$.
+
+
+
+
+\parit{(\ref{SHORT.thm:dim-infty:rank})$\Rightarrow$(\ref{SHORT.pack}).} 
+Let $p\in \spc{L}$ be a point which admits a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$.
+The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
+implies that the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
+\[\dist{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{})\]
+is open in a neighborhood of $p$.
+Since the distance map $\dist{\bm{a}}{}{}$ is Lipschitz, 
+for any $r>0$, there is $\Const>0$ such that
+\[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\]
+Applying \ref{pack-homogeneus}, we get similar inequality for any other ball in $\spc{L}$;
+i.e., for any point $q\in\spc{L}$, $R>0$ there is $\Const'>0$ such that 
+\[\pack_\eps \oBall(q,R)>\frac{\Const'}{\eps^m}.\]
+
+
+\parit{(\ref{SHORT.pack})$\Rightarrow$(\ref{SHORT.LinDim+}).} 
+Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$ we have
+\begin{align*}
+\pack_\eps\oBall(q',R')
+&\ge
+\pack_\eps\oBall(q,R)
+\ge
+\\
+&\ge
+\frac{\Const}{\eps^m}
+>
+\\
+&>
+\pack_\eps\cBall[R']_{\Lob{m-1}{\kappa}}.
+\end{align*}
+for all small enough $\eps>0$.
+Applying \ref{E-comeagre}, we get that
+\begin{center}
+$\Euk^m=\{p\in \spc{L}\mid$ there is an isometric cone embedding $\iota:\EE^m\hookrightarrow \T_p\}$
+\end{center} 
+contains a G-delta set which is dense in a neighborhood of any point $q'\in\spc{L}$.
+
+\parit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim}).} 
+Since $\Euk^m$ contains a dense G-delta set in $\spc{L}$, we can choose $p\in \oBall(q,R)$ with an isometric cone embedding $\iota\:\EE^m\hookrightarrow \T_p$.
+Thus, the same way as in (\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}), 
+we can construct a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
+Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
+we obtain a $C^{\frac{1}{2}}$-submap 
+\[\map\:\RR^m\subto \oBall(q,R)\]
+which is a right inverse for $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and $\map(\dist{\bm{a}}{p}{})=p$.
+In particular, $\map$ is a $C^{\frac{1}{2}}$-embedding of $\Dom\map$.
+
+
+\parit{(\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}).}
+Let $W\subset\oBall(q,R)$ be the image of the embedding.
+Since $\TopDim W=m$,
+Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
+\[\HausMes_m W>0.\]
+Given $\eps>0$, consider a maximal $\eps$-packing of $W$;
+i.e. an array of points $(x^1,x^2,\dots,x^n)$ in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+Note that $W$ is covered by balls $\oBall(x^i,2\cdot\eps)$.
+Thus, for all small $\eps>0$,
+\[\pack_\eps W
+\ge
+\frac{\Const}{\eps^m}\cdot\HausMes_m W.\]
+Thus, (\ref{SHORT.pack}) follows.
+\qedsf
+
+
+
+
+
+
+
+
+\section{Equivalence of dimensions for CBB spaces}\label{sec:dim=m}
+
+In this section we will show that all reasonable notions of dimension coinside on the class of Alexandrov spaces with curvature bounded below.
+
+First we will prove a  stronger version of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
+
+\begin{thm}{Theorem}\label{thm:dim-finite}
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$0<R\le \varpi\kappa$, 
+$q\in \spc{L}$ 
+and $m\in \ZZ_{\ge0}$.
+Then the following statements are equivalent:
+\begin{subthm}{LinDim-f}  $\LinDim\spc{L}= m<\infty$;
+\end{subthm}
+
+\begin{subthm}{thm:dim-finite:rank}
+$m$ is the maximal integer, such that there is a point $p\in\spc{L}$ which admits a $\kappa$-strutting array $b,a^1,\dots,a^m$.
+\end{subthm}
+
+\begin{subthm}{LinDim+-f} $\T_p\iso \EE^m$ for any point $p$ in a dense G-delta set of $\spc{L}$.
+\end{subthm}
+
+\begin{subthm}{TopDim-f} There is an open bi-Lipschitz embedding 
+\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R)\subset \spc{L};\]
+\end{subthm}
+
+\begin{subthm}{pack-f} For any $\eps>0$,
+\[\pack_\eps\cBall[R]_{\Lob{m}{\kappa}} \ge\pack_\eps \oBall(q,R),\]
+moreover, there is $\Const=\Const(q,R)>0$  such that 
+\[\pack_\eps \oBall(q,R)>\frac\Const{\eps^m}.\]
+\end{subthm}
+\end{thm}
+
+The above theorem was essentially proved in \cite{BGP}.
+The next two corollaries follow directly from \ref{pack-f}.
+
+\begin{thm}{Corollary}\label{cor:dim>proper}
+Any space in $\CBB{m}{\kappa}$ is proper and geodesic.
+\end{thm}
+
+
+\begin{thm}{Corollary} Let $\spc{L}_n\in\CBB m\kappa$ and $\spc{L}_n\to \spc{L}$ as $n\to\o$.
+Then $\spc{L}\in\CBB m\kappa$.
+\end{thm}
+
+\begin{thm}{Corollary}\label{dim=dim} 
+Let $\spc{L}\in\CBB{}{\kappa}$. 
+Then for any open $\Omega\subset \spc{L}$, we have
+\[
+\LinDim \spc{L}=
+\LinDim\Omega =
+\TopDim\Omega=
+\HausDim\Omega,
+\]
+where $\TopDim$ and $\HausDim$ denotes  topological dimension (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) correspondingly.
+
+In particular, $\spc{L}$ is dimension homogeneous; i.e. any open set has the same linear dimension.
+\end{thm}
+
+
+
+\parbf{Remark.}
+Using theorems \ref{thm:dim-infty} and \ref{thm:dim-finite}, 
+one can show that linear dimension is equal to many different types of dimensions, such 
+as \emph{small} and \emph{big inductive dimension} 
+and \emph{upper} and \emph{lower Minkowski dimension} 
+(which is also called \emph{rough dimension} and \emph{box counting dimension}), 
+\emph{homological dimension} and so on.
+
+\parit{Proof of \ref{dim=dim}.} 
+The equality
+\[\LinDim \spc{L}= \LinDim\Omega\]
+follows from \ref{LinDim}$\&$\ref{SHORT.LinDim+}.
+
+If $\LinDim \spc{L}=\infty$ then
+applying  \ref{TopDim}, for $\oBall(q,R)\subset \Omega$, we get that there is a compact subset $K\subset \Omega$ with arbitrary large $\TopDim K$ therefore
+\[\TopDim\Omega=\infty.\] 
+From Szpilrajn's theorem (\ref{thm:szpilrajn}),
+$\HausDim K\ge \TopDim K$.
+Thus, we also have 
+\[\HausDim\Omega=\infty.\]
+
+If $\LinDim \spc{L}=m<\infty$ then first inequality in \ref{pack-f} 
+implies that \[\HausDim \oBall(q,R)\le m.\] 
+According to Corollary~\ref{cor:dim>proper}, 
+$\spc{L}$ is proper and in particular it has countable base. 
+Thus applying Szpilrajn theorem  again, we get
+\[\TopDim\Omega\le \HausDim \Omega\le m.\]
+Finally, \ref{TopDim-f} implies that $m\le\TopDim\Omega$.
+\qeds
+
+
+\parit{Proof of Theorem~\ref{thm:dim-finite}.} Note that equivalence (\ref{SHORT.LinDim-f})$\Leftrightarrow$(\ref{SHORT.thm:dim-finite:rank}) follows from \ref{thm:dim-infty}.
+
+\parit{(\ref{SHORT.LinDim-f})$\Rightarrow$(\ref{SHORT.LinDim+-f}).}
+If $\LinDim\spc{L}=m$, then from Theorem~\ref{thm:dim-infty}, 
+we get that $\Euk^m$ contains a dense G-delta set in $\spc{L}$.
+From \ref{E=T}, it follows that $\T_p$ is isometric to $\EE^m$ for any $p\in \Euk^m$.
+
+\parit{(\ref{SHORT.LinDim+-f})$\Rightarrow$(\ref{SHORT.TopDim-f}).} It is proved exactly the same way as implication \textit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim})} of theorem \ref{thm:dim-infty}, 
+but we have to apply existence of distance chart (\ref{thm:inverse-function}) instead of the right-inverse theorem%\ref{thm:right-inverse-function}
+.
+
+\parit{(\ref{SHORT.TopDim-f})$\Rightarrow$(\ref{SHORT.pack-f}).} 
+From (\ref{SHORT.TopDim-f}), it follows that, there is a point $p\in\oBall(q,R)$ and $r>0$ such that
+$\oBall(p,r)\subset \spc{L}$ is bi-Lipschit homeomorphic to a bounded open set of $\EE^m$.
+Thus, there is $\Const>0$ such that 
+\[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\eqlbl{eq:thm:dim-finite*}\]
+Applying \ref{pack-homogeneus}, we get that inequality \ref{eq:thm:dim-finite*}, with different constants, holds for any other ball, in particular for $\oBall(q,R)$.
+
+Applying \ref{E-comeagre}, we get the first inequality.
+
+\parit{(\ref{SHORT.pack-f})$\Rightarrow$(\ref{SHORT.LinDim-f}).} 
+From theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
+Applying theorem \ref{thm:dim-infty} again, we get that if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$
+\[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}},\]
+but
+\[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R),\] 
+for any $\eps>0$,
+a contradiction.
+\qeds
+
+The following exercise was suggested by Alexander Lytchak.
+
+\begin{thm}{Exercise} 
+Let $\spc{L}\in \CBB{}{}$ and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
+Prove that $\spc{L}$ is finite dimensional.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{One-dimensional CBB spaces}
+
+\begin{thm}{Theorem}\label{thm:dim=1.CBB} 
+Let $\spc{L}\in\CBB1\kappa$.
+Then $\spc{L}$ is isometric to a connected complete Riemannian $1$-dimensional manifold with possibly non-empty boundary.
+\end{thm}
+
+
+
+\parit{Proof.}
+Clearly $\spc{L}$ is connected.
+It remains to show the following. 
+\begin{clm}{}\label{clm:1-dim-all}
+For any point $p\in\spc{L}$
+there is $\eps>0$ such that $\oBall(p,\eps)$ 
+is isometric to either $[0,\eps)$ or $(-\eps,\eps)$.
+\end{clm}
+
+First let us show that
+\begin{clm}{}\label{clm:1-dim-mid}
+If $p\in\l]x y\r[$ for some $x$, $y\in\spc{L}$ and $\eps<\min\{\dist{p}{x}{},\dist{p}{y}{}\}$
+then $\oBall(p,\eps)\subset\l]x y\r[$.
+In particular
+$\oBall(p,\eps)\iso(-\eps,\eps)$.
+\end{clm}
+\begin{wrapfigure}{r}{40mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(0.5)}
+\lbl[t]{2,0;$x$}
+\lbl[t]{73,0;$y$}
+\lbl[t]{20,0;$p$}
+\lbl[t]{29,0;$q$}
+\lbl[b]{29,12;$z$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume the contrary;
+i.e., there is 
+$$z\in \oBall(p,\eps)\backslash\l]x y\r[.$$
+Consider a geodesic $[p z]$, let $q\in[p z]\cap[x y]$ be the point which maximizes the distance $\dist{p}{q}{}$.
+At  $q$, we have three distinct directions: 
+to $x$, to $y$ and to $z$.
+Moreover, $\mangle\hinge{q}{x}{y}=\pi$.
+Thus, according to Proposition~\ref{E=T}, 
+$\LinDim\spc{L}>1$, a contradiction.
+
+Now assume there is no geodesic passing though $p$. 
+Since $\LinDim\spc{L}=1$ there is a point $x\not=p$.
+Take a positive $\eps<\dist{p}{x}{}$.
+Let us show that 
+\begin{clm}{}\label{clm:1-dim-end}
+$\oBall(p,\eps)\subset [p x]$;
+in particular $\oBall(p,\eps)\iso[0,\eps)$.
+\end{clm}
+
+\begin{wrapfigure}{r}{40mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(0.5)}
+\lbl[r]{0,1;$p$}
+\lbl[l]{75,1;$y$}
+\lbl[t]{20,0;$w$}
+\lbl[t]{29,0;$q$}
+\lbl[b]{29,12;$z$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume the contrary;
+let $z\in \oBall(p,\eps)\backslash[p y]$.
+Choose a point $w\in \l] p y \r[$ such that $\dist{p}{w}{}+\dist{p}{z}{}<\eps$.
+Consider geodesic $[w z]$, let $q\in[p y]\cap[w z]$  be the point which maximizes the distance $\dist{w}{q}{}$.
+Since no geodesics pass through $p$, we have $p\not=q$.
+As above, $\mangle\hinge{q}{p}{y}=\pi$ 
+and $\dir{q}{z}$ is distinct from $\dir{q}{p}$ and $\dir{q}{p}$.
+Thus, according to Proposition~\ref{E=T}, 
+$\LinDim\spc{L}>1$, a contradiction.
+
+Clearly $\t{\ref{clm:1-dim-mid}}+\t{\ref{clm:1-dim-end}}\Rightarrow\t{\ref{clm:1-dim-all}}$;
+hence the result.
+\qeds
