@@ -367,23 +367,23 @@ $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
 \ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
 \ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
 
-The same way we can define a \emph{hyperbolic} and \emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
-in the hyperbolic plane $\HH^2$ and sphere $\SS^2$.
+In the same way we can define the \emph{hyperbolic} and the \emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
+in the hyperbolic plane $\HH^2$ and the unit sphere $\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case it also exists and unique up to isometry of $\SS^2$.
+In this case it also exists and is unique up to an isometry of $\SS^2$.
 
 If 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
 the angle measure of 
 $\trig{\~p}{\~q}{\~r}$ at $\~p$ 
-will be called \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
+will be called the \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
 $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
-The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
+In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
 in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\SS^2}$ is defined.
-We may use notation $\angk p q r$ if it is evident what is the model space $\HH^2$, $\EE^2$ or $\SS^2$.
+We may use the notation $\angk p q r$ if it is evident what is the model space $\HH^2$, $\EE^2$ or $\SS^2$.
 
 \begin{wrapfigure}[6]{r}{28mm}
 \begin{lpic}[t(-4mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
@@ -400,7 +400,7 @@ We may use notation $\angk p q r$ if it is evident what is the model space $\HH^
 \label{lem:alex}  
 Let $p,x,y,z$ be distinct points in a metric space such that $z\in \l]x y\r[$.
 Then 
-the following expressions for Euclidean model angles have the same sign:
+the following expressions for the Euclidean model angles have the same sign:
 \begin{subthm}{lem-alex-difference}
 $\angk x p z
 -\angk x p y$,
@@ -413,7 +413,7 @@ $\angk z p x
 
 Moreover,
 \[\angk p x y \ge \angk p x z +  \angk p z y,\]
-with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
+with equality holding if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
 
 The same holds for hyperbolic and spherical model angles, 
 but in the latter case one has to assume in addition that
@@ -436,7 +436,7 @@ $[\~x \~z]$ beyond $\~z$ so that $\dist{\~x}{\~y}{}=\dist{x}{y}{}$ (and therefor
 \end{lpic}
 \end{wrapfigure}
 
-Since the increasing the opposite side in the plane triangle increase the corresponding angle, 
+Since increasing the opposite side in a plane triangle increases the corresponding angle, 
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
 \item $\mangle\hinge{\~x}{\~p}{\~y}-\angk{x}{p}{y}$;
@@ -494,7 +494,7 @@ The angle under the limit can be calculated from the  cosine law:
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
 The following lemma implies that 
-the definition of angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
+the definition of the angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
 
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
@@ -544,7 +544,7 @@ Thus, \ref{eq:k-K} follows since
 \label{claim:angle-3angle-inq}
 Let  $[px^1]$, $[px^2]$ and $[px^3]$ %$\gamma^1, \gamma^2, \gamma^3$ 
 be three geodesics in a metric space.
-If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
+If all  the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}.\]
 
 \end{thm}
@@ -567,7 +567,7 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \\
 \intertext{(Below we define 
 $s(t,\tau)$ so that for 
-$s=s(t,\tau)$, this chain of inequalities continues the following way.)}
+$s=s(t,\tau)$, this chain of inequalities can be continued as follows:)}
 \le
 &\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
 \end{align*}
@@ -585,8 +585,8 @@ Hence the result.
 \end{lpic}
 \end{wrapfigure}
 
-To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
-We parametrize each ray by length from the starting point.
+To define $s(t,\tau)$ to satisfy the above inequality, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+We parametrize each ray by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
 $\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}$, 
@@ -597,15 +597,15 @@ so $t,\tau,s$ may be taken sufficiently small.
 Prove that the sum of adjacent angles is at least $\pi$.
 
 More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
-If $p\in \l] x y \r[$, then 
+If $p\in \l] x y \r[$ then 
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
 \end{thm}
 
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
-Assume for hinge $\hinge q p x$ 
-the angle $\alpha=\mangle\hinge q p x$ is defined then
+Assume that for a  hinge $\hinge q p x$ 
+the angle $\alpha=\mangle\hinge q p x$ is defined. Then
 \[\dist{p}{\geod_{[qx]}(t)}{}
 \le
 \dist{q}{p}{}-t\cdot \cos\alpha+o(t).\]
@@ -637,7 +637,7 @@ Hence the result.
 \section{Space of directions and tangent space}
 \label{sec:tangent-space+directions}
 
-Assume $\spc{X}$ be a metric space with defined angles for all hinges.
+Let $\spc{X}$ be a metric space with defined angles for all hinges.
 Fix a point $p\in \spc{X}$. 
 
 Consider the set $\mathfrak{S}_p$ 
@@ -645,11 +645,11 @@ of all nontrivial unit-speed geodesics  which start at $p$.
 By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
 that is, $(\mathfrak{S}_p,\mangle)$ 
 forms a pseudometric space; 
-that is the angle satisfies all the conditions of metric except the angle between distinct geodesics might vanish.
+that is it satisfies all the conditions of a metric space  except the angle between distinct geodesics might vanish.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emph{space of geodesic directions} at $p$
 and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
-The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+Elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
 for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
@@ -666,16 +666,16 @@ for the equivalence relation
 Assume $\spc{U}$ is a $\Cat{}{\kappa}$ proper length space
  with extendable geodesics;
 that is, any geodesic in $\spc{U}$
-is an arc in a both-side infinite local geodesic.
+is an arc in an infinite local geodesic defined on $\RR$.
 
 Show that the space of geodesic directions 
 $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 \end{thm}
 
-The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
-The elements of $\Sigma_p$ are called \emph{directions} at $p$.
+The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+Elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
 To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
@@ -692,13 +692,13 @@ defines a pseudometric on $\mathfrak{T}_p$.
 
 
 The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
-The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
+Elements of $\T'_p$ are formed by the equivalence classes for the realtion 
 \[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore  natuaraly isometric to $\T_p$.
 
-The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vector} at $p$,
-despite that $\T_p$ is only cone --- not a vector space.
-The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vector} at $p$.
+Elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
+even though $\T_p$ is only metric cone and need not be a vector space.
+Elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
 
 \section{Hausdorff convergence}
 
