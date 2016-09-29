@@ -120,24 +120,6 @@ the (1+3)-point $\kappa$-comparison holds in $\spc{M}$.
 
 \section{Extremal sets}
 
-Consider a Riemannian manifold $\spc{R}$ with sectional curvature $\ge \kappa$.
-Toponiogov comparison theorem implies that $\spc{R}$ is a $\CBB{}{\kappa}$ space.
-
-Let $G$ is a subgroup of the isometry group of $\spc{R}$.
-We will deniote by $\spc{R}^G$ the set of points fixed by $G$.
-Note that $\spc{R}^G$ is a totally geodesic subset in $\spc{R}$.
-
-Given $p\in \spc{R}$ we will denote by $[p]_G$ the projection of $p$ to the orbit space $\spc{R}/G$.
-
-If $G$ has closed orbits then according to Theorem~\ref{thm:CBB/G}, the orbit space $\spc{R}/G$
-is a therefore  group $\CBB{}{\kappa}$ space.
-It opens a door for applicatuions comming from the isometric group actions.
-
-Note that if the action $G\acts \spc{R}$ is free then the orbit space 
-$\spc{R}/G$ is also a Riemannian manifold.
-A typical action however has orbit space 
-$\spc{R}/G$ with singularities.
-
 Let $\spc{L}$ be a proper length $\CBB{}{\kappa}$ space.
 A closed subset $A\subset\spc{L}$ is called \emph{extremal} if for any point $p\notin A$, 
 any point $q\in A$ which minimize the distance to $p$ 
@@ -148,20 +130,41 @@ and any $x\ne q$ we have
 Show that a poin $p$ in a proper length $\CBB{}{\kappa}$ space forms an extremal set if and only if and only if $\diam\Sigma_p\le \tfrac\pi2$.
 \end{thm}
 
+Consider a Riemannian manifold $\spc{R}$ with sectional curvature $\ge \kappa$.
+Toponiogov comparison theorem implies that $\spc{R}$ is a $\CBB{}{\kappa}$ space.
+
+Let $G$ be a subgroup of the isometry group of $\spc{R}$.
+We will deniote by $\spc{R}^G$ the set of points fixed by $G$.
+Note that $\spc{R}^G$ is a totally geodesic subset in $\spc{R}$.
+
+Given $p\in \spc{R}$ we will denote by $[p]_G$ the projection of $p$ to the orbit space $\spc{R}/G$.
+
+If $G$ has closed orbits then according to Theorem~\ref{thm:CBB/G}, the orbit space $\spc{R}/G$
+is a $\CBB{}{\kappa}$ space.
+It opens a door for applicatuions comming from the isometric group actions.
+
+Note that if the action $G\acts \spc{R}$ is free then the orbit space 
+$\spc{R}/G$ is also a Riemannian manifold.
+A typical action however has orbit space 
+$\spc{R}/G$ with singularities.
 
 \begin{thm}{Theorem}
 Assume $\spc{R}$ is a Riemannian manifold with isometric action by a group $G$ with closed orbits.
-Given a point $p\in \spc{R}$ we denote by $[p]_G$ its orbit in $\spc{R}/G$;
-also given a set $X\subset\spc{R}$ we denote by $[X]$ the subset of all orbits in $\spc{R}/G$ with a point in $X$.
-
-Then $\spc{R}^G/G$ is an extremal set in $\spc{R}/G$.
+Then for any subgroup $K<G$ the set $E_K=[\spc{R}^K]_G$ is an extremal subset in $\spc{R}/G$.
 \end{thm}
+
+From the construction of $E_K$ we get the following properties.
+\begin{itemize}
+\item If $K<L$ then $E_K\supseteq E_L$.
+\item If $K=a\cdot L\cdot a^{-1}$ for some $a\in G$ then $E_K= E_L$.
+\end{itemize}
+
+
 
 \parit{Proof.}
 Assume contrary; let $p\notin \spc{R}^G/G$, $q\in \spc{R}^G/G$ and $x$ be a triple of points in $\spc{R}/G$ violating the definition of extremal subset.
-
-
 \qeds
+
 
 
 \section{Erd\H{o}s' problem rediscovered}
