@@ -1,8 +1,10 @@
+%%!TEX root = invitation.tex
 \chapter{Preliminaries}
 
 In this chapter we fix some conventions and remind the main definitions.
-We suggest to skip this chapter and use it as a quick reference while reading the rest.
-To learn the background in metric geometry, reader advised to read the book of Burgos and Ivanov \cite{BBI}.
+%We suggest to skip this chapter and use it as a quick reference while reading the rest. !!! I don't like telling the reader to skip something altogether. Not sure how to rephrase this !!!
+
+To learn the background in metric geometry, the reader advised to read the book of Burgos and Ivanov \cite{BBI}.
  
 
 \section{Metric spaces}
@@ -15,7 +17,7 @@ that the distance is taken in the space ${\spc{X}}$.
 
 The function 
 \[\dist{x}{}{}\:y\mapsto \dist{x}{y}{}\]
-is called \emph{distance function}\index{distance function} from $x$. 
+is called the \emph{distance function}\index{distance function} from $x$. 
 
 \begin{itemize}
 \item The \emph{diameter}\index{Diameter} of metric space $\spc{X}$ is defined as
@@ -56,9 +58,9 @@ with the metric defined by formulas
 
 \parbf{Cone.}
 The \emph{cone} $\spc{V}=\Cone\spc{U}$ over metric space $\spc{U}$
-is defined as the metric space with underlying set formed by the equivalence classes on
+is defined as the metric space with the underlying set formed by the equivalence classes in
 $[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' such that $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$
-and the metric given by cosine rule
+and the metric is given by the cosine rule
 \[
 \dist{(p,s)}{(q,t)}{\spc{V}} 
 =
@@ -66,8 +68,8 @@ and the metric given by cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called \emph{tip of the cone} and denoted by $0$ or $0_{\spc{V}}$.
-The distance $\dist{0}{v}{\spc{V}}$ is called norm of $v$ and denoted as $|v|$ or $|v|_{\spc{V}}$.
+The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
+The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted as $|v|$ or $|v|_{\spc{V}}$.
 
 \parbf{Suspension.}
 The \emph{suspension} $\spc{V}=\Susp\spc{U}$ over metric space $\spc{U}$
@@ -81,13 +83,13 @@ and the metric given by spherical cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called \emph{north} \emph{south pole} of the suspension.
+The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \emph{south pole} of the suspension.
 
 \begin{thm}{Exercise}\label{ex:product-cone}
 Let $\spc{U}$ be a metric space.
 Show that the spaces 
 \[\RR\times \Cone\spc{U}\quad\text{and}\quad\Cone[\Susp\spc{U}]\]
-are isometric.
+are  isometric.
 \end{thm}
 
 
@@ -105,12 +107,12 @@ in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 for any pair $s,t\in \II$.
 
-We say that geodesic $\gamma\:\II\to \spc{X}$ from point $p$ to point $q$ if 
+We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if $\gamma$ is a geodesic and 
 $\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. 
-In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with a notation abuse we also calle it \emph{geodesic}\index{geodesic}.
-Given $[pq]$ we can parametrize it by distance to $p$;
+In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \emph{geodesic}\index{geodesic}.
+Given a geodesic $[pq]$ we can parametrize it by distance to $p$;
 this parametrization will be denoted as $\geod_{[p q]}(t)$.
-Clearly $\geod_{[p q]}(t)$ is a geodesic in the sence of the first definition.
+Clearly $\geod_{[p q]}(t)$ is a geodesic in the sense of the first definition.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
@@ -125,31 +127,33 @@ Also we use the following short-cut notation:
 
 
 
-In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.  However,  once we write $[p q]$ we mean that we made a choice of geodesic.
+In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  However,  once we write $[p q]$ we mean that we made a choice of geodesic.
 
-A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be jointed by a geodesic. 
+A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be joined by a geodesic. 
 
-A constant-speed reparametirization of geodesic by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
+A constant-speed reparameterization of a geodesic by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
+A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic. 
+{\color{red} !!! IMO it would be more consistent to call $\gamma$ a local geodesic if it's locally a geodesic in the sense of the original definition (in particular it's unit speed)!!!}
+ If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
 
 
 \parbf{Triangles.}
-For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use short notation 
+For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use the short notation 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
-Again given a triple $p,q,r\in \spc{X}$ it may be no triangle 
-$\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also it maybe many different triangles with these vertexes, any of which can be denoted by $\trig p q r$.
-Once we write $\trig p q r$, it means we made a choice of such a triangle, 
+Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
+$\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also many different triangles with these vertexes may exist, any of which can be denoted by $\trig p q r$.
+Once we write $\trig p q r$, it means that we made a choice of such a triangle, 
 that is, a choice of each $[q r], [r p]$ and $[p q]$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triangle} $\trig p q r$.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \emph{perimeter of the triangle} $\trig p q r$.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
-A pair geodesics $([p x],[p y])$ will be called \emph{hinge}\index{hinge} and briefly, it will be denoted by 
+A pair of geodesics $([p x],[p y])$ will be called  a \emph{hinge}\index{hinge} and it will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
@@ -159,7 +163,7 @@ A set $A\subset\spc{X}$ is called
 \emph{convex}%
 \index{convex set}
 if for every two points $p,q\in A$, 
-every geodesic $[pq]$ of $\spc{X}$ 
+\emph{every} geodesic $[pq]$ of $\spc{X}$ 
 lies in $A$.
 
 A set $A\subset\spc{X}$ is called 
@@ -172,26 +176,26 @@ Note that any open set is locally convex by definition.
 
 \section{Length spaces}\label{sec:intrinsic}
 
-Recall that a curve is a continuous map from a real interval to a space.
+Recall that a path or a  curve is a continuous map from a real interval to a space.
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and
-$\alpha\: \II\to \spc{X}$ is a curve.
+$\alpha\: \II\to \spc{X}$ be a curve.
 We define the \emph{length}\index{length} of $\alpha$ as 
 \[
 \length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha_{i+1}}{}
 \]
 \end{thm}
 
-Directly from the definition, it follows that if a path $\alpha$ connecting two points $x$ and $y$ then 
+Directly from the definition, it follows that if a path $\alpha$ is connecting two points $x$ and $y$ \footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 
-If for any $\eps>0$ and any pair of points $x$ and $y$ in the metric space $\spc{X}$ there is a path $\alpha$ connecting\footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} $x$ to $y$ such that
+If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps\]
-then $\spc{X}$ is called length space.
+then $\spc{X}$ is called a \emph{length space}.
 
 Note that any geodesic space is a length space;
-as you see from the following example, the contrary does not hold.
+as can be seen from the following example, the converse does not hold.
 
 
 \begin{thm}{Example}
@@ -208,11 +212,11 @@ Give an example of a complete length space for which no pair of distinct points 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called a \emph{midpoint} of $x$ and $y$
+\item A point $z\in \spc{X}$ is called a \emph{midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
-A point $z\in \spc{X}$ is called \emph{$\eps$-midpoint} of $x$ and $y$
+A point $z\in \spc{X}$ is called an \emph{$\eps$-midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{},\dist{y}{z}{}<\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
@@ -238,6 +242,7 @@ Then $\spc{X}$ is a geodesic space.
 \end{thm}
 
 \parit{Proof.}
+We first prove (\ref{SHORT.lem:mid>length}).
 Let $x,y\in \spc{X}$ be a pair of points.
 
 Set $\eps_n=\frac\eps{2^{2\cdot n}}$.
@@ -259,7 +264,7 @@ $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 In this way we define $\alpha(t)$ for $t\in W$,
 where $W$ denotes the set of dyadic rationals in $[0,1]$.
 For any $t\in[0,1]$ consider a sequence of $t_n\in W$ such that $t_n\to t$ as $n\to\infty$.
-Note that the sequence $\alpha(t_n)$ converges;
+Note that the sequence $\alpha(t_n)$ is Cauchy and hence it converges;
 define $\alpha(t)$ as its limit.
 It is easy to see that $\alpha(t)$
 does not depend on the choice of the sequence $t_n$
@@ -362,23 +367,23 @@ $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
 \ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
 \ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
 
-The same way we can define a \emph{hyperbolic} and \emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
-in the hyperbolic plane $\HH^2$ and sphere $\SS^2$.
+In the same way we can define the \emph{hyperbolic} and the \emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
+in the hyperbolic plane $\HH^2$ and the unit sphere $\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case it also exists and unique up to isometry of $\SS^2$.
+In this case it also exists and is unique up to an isometry of $\SS^2$.
 
 If 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
 the angle measure of 
 $\trig{\~p}{\~q}{\~r}$ at $\~p$ 
-will be called \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
+will be called the \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
 $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
-The same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
+In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
 in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\SS^2}$ is defined.
-We may use notation $\angk p q r$ if it is evident what is the model space $\HH^2$, $\EE^2$ or $\SS^2$.
+We may use the notation $\angk p q r$ if it is evident what is the model space $\HH^2$, $\EE^2$ or $\SS^2$.
 
 \begin{wrapfigure}[6]{r}{28mm}
 \begin{lpic}[t(-4mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
@@ -395,7 +400,7 @@ We may use notation $\angk p q r$ if it is evident what is the model space $\HH^
 \label{lem:alex}  
 Let $p,x,y,z$ be distinct points in a metric space such that $z\in \l]x y\r[$.
 Then 
-the following expressions for Euclidean model angles have the same sign:
+the following expressions for the Euclidean model angles have the same sign:
 \begin{subthm}{lem-alex-difference}
 $\angk x p z
 -\angk x p y$,
@@ -408,7 +413,7 @@ $\angk z p x
 
 Moreover,
 \[\angk p x y \ge \angk p x z +  \angk p z y,\]
-with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
+with equality holding if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
 
 The same holds for hyperbolic and spherical model angles, 
 but in the latter case one has to assume in addition that
@@ -431,7 +436,7 @@ $[\~x \~z]$ beyond $\~z$ so that $\dist{\~x}{\~y}{}=\dist{x}{y}{}$ (and therefor
 \end{lpic}
 \end{wrapfigure}
 
-Since the increasing the opposite side in the plane triangle increase the corresponding angle, 
+Since increasing the opposite side in a plane triangle increases the corresponding angle, 
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
 \item $\mangle\hinge{\~x}{\~p}{\~y}-\angk{x}{p}{y}$;
@@ -489,7 +494,7 @@ The angle under the limit can be calculated from the  cosine law:
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
 The following lemma implies that 
-the definition of angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
+the definition of the angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
 
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
@@ -539,7 +544,7 @@ Thus, \ref{eq:k-K} follows since
 \label{claim:angle-3angle-inq}
 Let  $[px^1]$, $[px^2]$ and $[px^3]$ %$\gamma^1, \gamma^2, \gamma^3$ 
 be three geodesics in a metric space.
-If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
+If all  the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}.\]
 
 \end{thm}
@@ -562,7 +567,7 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \\
 \intertext{(Below we define 
 $s(t,\tau)$ so that for 
-$s=s(t,\tau)$, this chain of inequalities continues the following way.)}
+$s=s(t,\tau)$, this chain of inequalities can be continued as follows:)}
 \le
 &\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
 \end{align*}
@@ -580,8 +585,8 @@ Hence the result.
 \end{lpic}
 \end{wrapfigure}
 
-To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
-We parametrize each ray by length from the starting point.
+To define $s(t,\tau)$ to satisfy the above inequality, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+We parametrize each ray by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
 $\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}$, 
@@ -592,15 +597,15 @@ so $t,\tau,s$ may be taken sufficiently small.
 Prove that the sum of adjacent angles is at least $\pi$.
 
 More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
-If $p\in \l] x y \r[$, then 
+If $p\in \l] x y \r[$ then 
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
 \end{thm}
 
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
-Assume for hinge $\hinge q p x$ 
-the angle $\alpha=\mangle\hinge q p x$ is defined then
+Assume that for a  hinge $\hinge q p x$ 
+the angle $\alpha=\mangle\hinge q p x$ is defined. Then
 \[\dist{p}{\geod_{[qx]}(t)}{}
 \le
 \dist{q}{p}{}-t\cdot \cos\alpha+o(t).\]
@@ -632,7 +637,7 @@ Hence the result.
 \section{Space of directions and tangent space}
 \label{sec:tangent-space+directions}
 
-Assume $\spc{X}$ be a metric space with defined angles for all hinges.
+Let $\spc{X}$ be a metric space with defined angles for all hinges.
 Fix a point $p\in \spc{X}$. 
 
 Consider the set $\mathfrak{S}_p$ 
@@ -640,11 +645,11 @@ of all nontrivial unit-speed geodesics  which start at $p$.
 By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
 that is, $(\mathfrak{S}_p,\mangle)$ 
 forms a pseudometric space; 
-that is the angle satisfies all the conditions of metric except the angle between distinct geodesics might vanish.
+that is it satisfies all the conditions of a metric space  except the angle between distinct geodesics might vanish.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emph{space of geodesic directions} at $p$
 and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
-The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+Elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
 for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
@@ -661,16 +666,16 @@ for the equivalence relation
 Assume $\spc{U}$ is a $\Cat{}{\kappa}$ proper length space
  with extendable geodesics;
 that is, any geodesic in $\spc{U}$
-is an arc in a both-side infinite local geodesic.
+is an arc in an infinite local geodesic defined on $\RR$.
 
 Show that the space of geodesic directions 
 $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 \end{thm}
 
-The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
-The elements of $\Sigma_p$ are called \emph{directions} at $p$.
+The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+Elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
 To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
@@ -687,13 +692,13 @@ defines a pseudometric on $\mathfrak{T}_p$.
 
 
 The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
-The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
+Elements of $\T'_p$ are formed by the equivalence classes for the realtion 
 \[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore  natuaraly isometric to $\T_p$.
 
-The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vector} at $p$,
-despite that $\T_p$ is only cone --- not a vector space.
-The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vector} at $p$.
+Elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
+even though $\T_p$ is only metric cone and need not be a vector space.
+Elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
 
 \section{Hausdorff convergence}
 
