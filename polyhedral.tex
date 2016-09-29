@@ -871,7 +871,7 @@ It follows that $\spc{Q}$ is a piecewise linear manifold
 with a finite number of singularities at its vertices.
 
 
-Removing a small neighborhood of each vertex in $\spc{Q}$,
+Removing a small contractable neighborhood $V_v$ of each vertex $v$ in $\spc{Q}$,
 we can obtain a piecewise linear manifold $\spc{N}$
 whose boundary is formed by several copies of $\Sigma$.
 To each copy of $\Sigma$, 
@@ -879,9 +879,11 @@ glue a copy of  $\spc{W}$ along its boundary.
 This results in a  closed piecewise linear manifold 
 $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
 
-{\color{red} Indeed, using contractibility  of $\spc{W}$ it's easy to construct a map  $f\: \spc Q\to \spc M$ which extends the identity map of $\spc{N}$ and maps each small neighbourhood of a vertex in $\spc{Q}$ to the corresponding copy of 
-$\spc{W}$. It's easy to see that this map induces an isomorphism on $\pi_1$ and its lift to the universal covers $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$ induces an isomorphism on homology. This means that $\tilde f$ (and hence $f$) induces an isomorphism on all homotopy groups and therefore is a homotopy equivalence.
-}
+Since both $V_v$ and $W$ are contractable, the identity on their common boundary $\Sigma$ can be exteded to the homotopy equivalence between $V_v$ and $W$.
+Therefore the identy map on the $\spc{N}$ extends to homotopy equivalences 
+$f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ .
+
+%{\color{red} Indeed, using contractibility  of $\spc{W}$ it's easy to construct a map  $f\: \spc Q\to \spc M$ which extends the identity map of $\spc{N}$ and maps each small neighbourhood of a vertex in $\spc{Q}$ to the corresponding copy of $\spc{W}$. It's easy to see that this map induces an isomorphism on $\pi_1$ and its lift to the universal covers $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$ induces an isomorphism on homology. This means that $\tilde f$ (and hence $f$) induces an isomorphism on all homotopy groups and therefore is a homotopy equivalence.}
 
 Finally, by the Lemma~\ref{lem:example-pi_infty},  
 the universal cover $\tilde{\spc{Q}}$ of $\spc{Q}$
@@ -889,12 +891,12 @@ is not simply connected at infinity.
 
 The same holds for 
 the universal cover $\tilde{\spc{M}}$ of $\spc{M}$.
-The latter follows since homotopy equivalences 
+The latter follows since the constructed homotopy equivalences 
 $f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ 
 lift to \emph{proper maps} 
 $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
 and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$;
-that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\spc{M}}$ the invese images $\tilde g^{-1}(A)$ and $\tilde f^{-1}(b)$ are compact.
+that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\spc{M}}$ the invese images $\tilde g^{-1}(A)$ and $\tilde f^{-1}(B)$ are compact.
 \qeds
 
 
