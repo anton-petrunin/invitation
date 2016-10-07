@@ -1,10 +1,11 @@
 %%!TEX root = invitation.tex
 \chapter{Preliminaries}
 
-In this chapter we fix some conventions and remind the main definitions.
+In this chapter we fix some conventions and recall the main definitions.
 %We suggest to skip this chapter and use it as a quick reference while reading the rest. !!! I don't like telling the reader to skip something altogether. Not sure how to rephrase this !!!
+The chapter may be used as a quick reference when reading the book.
 
-To learn the background in metric geometry, the reader advised to read the book of Burgos and Ivanov \cite{BBI}.
+To learn background in metric geometry, the reader  may consult the book of Burago, Burago and Ivanov \cite{BBI}.
  
 
 \section{Metric spaces}
@@ -32,8 +33,7 @@ is called the \emph{distance function}\index{distance function} from $x$.
 are called respectively the  \emph{open}\index{open ball} and  the \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
 Again, if we need to emphasize that these balls are taken in the metric space $\spc{X}$,
 we write 
-\[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}\]
-correspondingly.
+\[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}.\]
 \end{itemize}
 
 A metric space $\spc{X}$ is called \emph{proper}\index{proper space} if all closed bounded sets in $\spc{X}$ are compact. 
@@ -57,10 +57,10 @@ with the metric defined by formulas
 
 
 \parbf{Cone.}
-The \emph{cone} $\spc{V}=\Cone\spc{U}$ over metric space $\spc{U}$
-is defined as the metric space with the underlying set formed by the equivalence classes in
-$[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' such that $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$
-and the metric is given by the cosine rule
+The \emph{cone} $\spc{V}=\Cone\spc{U}$ over the metric space $\spc{U}$
+is defined as the metric space whose underlying set consists of  equivalence classes in
+$[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by$(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
+and whose metric is given by the cosine rule
 \[
 \dist{(p,s)}{(q,t)}{\spc{V}} 
 =
@@ -69,13 +69,13 @@ and the metric is given by the cosine rule
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
 The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
-The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted as $|v|$ or $|v|_{\spc{V}}$.
+The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 
 \parbf{Suspension.}
-The \emph{suspension} $\spc{V}=\Susp\spc{U}$ over metric space $\spc{U}$
-is defined as the metric space with underlying set formed by the equivalence classes on
-$[0,\infty]\times \spc{U}$ with the equivalence relation ``$\sim$'' defined by $(0,p)\sim (0,q)$ and $(\pi,p)\sim (\pi,q)$ for any points $p,q\in\spc{U}$
-and the metric given by spherical cosine rule
+The \emph{suspension} $\spc{V}=\Susp\spc{U}$ over the metric space $\spc{U}$
+is defined as the metric space whose underlying set consists of equivalence classes in
+$[0,\infty]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ and $(\pi,p)\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
+and whose metric is given by the  spherical cosine rule
 \[
 \cos\dist{(p,s)}{(q,t)}{\Susp\spc{U}} 
 =
@@ -83,7 +83,7 @@ and the metric given by spherical cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \emph{south pole} of the suspension.
+The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \emph{south poles} of the suspension.
 
 \begin{thm}{Exercise}\label{ex:product-cone}
 Let $\spc{U}$ be a metric space.
@@ -131,7 +131,8 @@ In general, a geodesic between $p$ and $q$ need not exist and if it exists, it n
 
 A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be joined by a geodesic. 
 
-A constant-speed reparameterization of a geodesic by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
+A \emph{constant-speed geodesic} is a  linear reparameterization of a geodesic, say by $at+b$ where $t$ is the geodesic parameter; then $a$ is the   \emph{speed}\index{speed}.
+A constant-speed geodesic parameterized by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
@@ -141,7 +142,7 @@ A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodes
 
 
 \parbf{Triangles.}
-For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use the short notation 
+For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle}; we will use the short notation 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also many different triangles with these vertexes may exist, any of which can be denoted by $\trig p q r$.
@@ -185,11 +186,11 @@ We define the \emph{length}\index{length} of $\alpha$ as
 \]
 \end{thm}
 
-Directly from the definition, it follows that if a path $\alpha$ is connecting two points $x$ and $y$ \footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} then 
+Directly from the definition, it follows that if a path $\alpha$ connects two points $x$ and $y$ \footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 
 If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
-\[\length\alpha< \dist{x}{y}{}+\eps\]
+\[\length\alpha< \dist{x}{y}{}+\eps,\]
 then $\spc{X}$ is called a \emph{length space}.
 
 Note that any geodesic space is a length space;
@@ -197,7 +198,7 @@ as can be seen from the following example, the converse does not hold.
 
 
 \begin{thm}{Example}
-Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $I_i$ of length $1+1/i$ where for each $I_i$ one end is glued to $p=\{0\}$ and the other to $q=\{1\}$.
+Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\II_i$ of length $1+1/i$, where for each $\II_i$ one end is glued to $p=\{0\}$ and the other to $q=\{1\}$.
 Then $\spc{X}$ carries a natural complete length metric  with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
 \end{thm}
 
@@ -247,13 +248,13 @@ Set $\eps_n=\frac\eps{2^{2\cdot n}}$.
 
 Set $\alpha(0)=x$ and $\alpha(1)=y$.
 
-Set $\alpha(\tfrac12)$ to be an $\eps_1$-midpoint of $\alpha(0)$ and $\alpha(1)$.
-Further, set $\alpha(\frac14)$ 
-and $\alpha(\frac34)$ to be $\eps_2$-midpoints 
+Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint of $\alpha(0)$ and $\alpha(1)$.
+Further, let $\alpha(\frac14)$ 
+and $\alpha(\frac34)$ be $\eps_2$-midpoints 
 for the pairs $(\alpha(0),\alpha(\tfrac12)$ 
 and $(\alpha(\tfrac12),\alpha(1)$ respectively.
 Applying the above procedure recursively,
-on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$
+on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$,
 for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, 
 as an $\eps_{n}$-midpoint of the already defined
 $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
@@ -330,12 +331,12 @@ Choose a finite $\tfrac\eps{10}$-net $\{a_1,a_2,\dots,a_n\}$ in $B$.
 The union $W$ of the closed balls $\cBall[a_i,\eps]$ is compact.
 Clearly 
 $\cBall[x,\rho(x)+\frac\eps{10}]\subset W$.
-Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact;
+Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact,
 a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{exercise from BH}
-Construct a geodesic space which is locally compact,
+Construct a geodesic space that is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
 
@@ -369,7 +370,7 @@ In the same way we can define the \emph{hyperbolic} and the \emph{spherical mode
 in the hyperbolic plane $\HH^2$ and the unit sphere $\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case it also exists and is unique up to an isometry of $\SS^2$.
+In this case the model triangle again exists and is unique up to an isometry of $\SS^2$.
 
 If 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
@@ -381,7 +382,7 @@ $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
 In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
 in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\SS^2}$ is defined.
-We may use the notation $\angk p q r$ if it is evident what is the model space $\HH^2$, $\EE^2$ or $\SS^2$.
+We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\SS^2$ is meant.
 
 \begin{wrapfigure}[6]{r}{28mm}
 \begin{lpic}[t(-4mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
@@ -411,7 +412,7 @@ $\angk z p x
 
 Moreover,
 \[\angk p x y \ge \angk p x z +  \angk p z y,\]
-with equality holding if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
+with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
 
 The same holds for hyperbolic and spherical model angles, 
 but in the latter case one has to assume in addition that
@@ -491,8 +492,8 @@ The angle under the limit can be calculated from the  cosine law:
 =
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
-The following lemma implies that 
-the definition of the angle \ref{eq:def-angle} one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
+The following lemma implies that in 
+the angle definition  \ref{eq:def-angle}, one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
 
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
@@ -508,7 +509,7 @@ For any three points $p,x,y$ in a metric space the following inequalities
 \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
 \end{aligned}
 \eqlbl{eq:k-K}\]
-hold whenever the left hand side is defined.
+hold whenever the left-hand side is defined.
 \end{thm}
 
 
@@ -611,7 +612,7 @@ the angle $\alpha=\mangle\hinge q p x$ is defined. Then
 \end{thm}
 
 \parit{Proof.} Take sufficiently small $\eps>0$.
-For all sufficiently small $t>0$, we have that 
+For all sufficiently small $t>0$, we have 
 \begin{align*}
  \dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
 &\le 
@@ -619,7 +620,7 @@ For all sufficiently small $t>0$, we have that
 \\
 &\le \tfrac{t}{\eps} -t\cdot \cos\alpha + t\cdot \eps.
 \end{align*}
-Applying triangle inequality, we get 
+Applying the triangle inequality, we get 
 \begin{align*}
 \dist{p}{\geod_{[qx]}(t)}{}
 &\le \dist{p}{\geod_{[qp]}(t/\eps)}{}+\dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
@@ -639,14 +640,14 @@ Let $\spc{X}$ be a metric space with defined angles for all hinges.
 Fix a point $p\in \spc{X}$. 
 
 Consider the set $\mathfrak{S}_p$ 
-of all nontrivial unit-speed geodesics  which start at $p$.
-By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
+of all nontrivial 
+%unit-speed 
+geodesics  which start at $p$.
+By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
 that is, $(\mathfrak{S}_p,\mangle)$ 
-forms a pseudometric space; 
-that is it satisfies all the conditions of a metric space  except the angle between distinct geodesics might vanish.
+forms a pseudometric space, satisfying all the conditions of a metric space  except that  the angle between distinct geodesics might vanish.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emph{space of geodesic directions} at $p$
-and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
 Elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
 for the equivalence relation 
@@ -670,14 +671,13 @@ Show that the space of geodesic directions
 $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 \end{thm}
 
-The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
 Elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
 
-The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
-To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
-Given $\alpha,\beta\in \mathfrak{T}_p$,
+The tangent space $\T_p$ could also be defined directly, without introducing the space of directions.
+To do so, consider the set $\mathfrak{T}_p$ of all constant-speed geodesics starting at $p$. Given $\alpha,\beta\in \mathfrak{T}_p$,
 set 
 \[\dist{\alpha}{\beta}{\mathfrak{T}_p}
 =
@@ -689,23 +689,22 @@ Since the angles in $\spc{X}$ are defined,
 defines a pseudometric on $\mathfrak{T}_p$.
 
 
-The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
-Elements of $\T'_p$ are formed by the equivalence classes for the realtion 
+The corresponding metric space admits a natural isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
+The elements of $\T'_p$ are  equivalence classes for the relation 
 \[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
-The completion of $\T'_p$ is therefore  natuaraly isometric to $\T_p$.
+The completion of $\T'_p$ is therefore  naturally isometric to $\T_p$.
 
 Elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
-even though $\T_p$ is only metric cone and need not be a vector space.
+even though $\T_p$ is only a metric cone and need not be a vector space.
 Elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
 
 \section{Hausdorff convergence}
 
-It seems that Hausdorff convergence was first introduced by Hausdorff in \cite{hausdorff}
-and couple of years later an equivalent definition was given by Blaschke in \cite{blaschke}.
-Further a refinement of this definition was introduced by Frol\'{\i}k in \cite{frolik}
-and then rediscovered by Wijsman in \cite{wijsman},
-however this refinement was a step back to so called \emph{closed convergence} introduced by Hausdorff in the original book. 
-By that reason we call it Hausdorff convergence
+It seems that Hausdorff convergence was first introduced by Hausdorff in \cite{hausdorff},
+and a couple of years later an equivalent definition was given by Blaschke in \cite{blaschke}.
+A refinement of this definition was introduced by Frol\'{\i}k in \cite{frolik},
+and then rediscovered by Wijsman in \cite{wijsman}.  However, this refinement was a reversion  to  the \emph{closed convergence} introduced by Hausdorff in the original book. 
+For this reason we call it Hausdorff convergence
 instead of
 \emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
 
