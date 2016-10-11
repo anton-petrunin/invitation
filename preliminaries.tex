@@ -721,12 +721,10 @@ Then $D_n$ converges to the upper half-plane as $n\to\infty$.
 
 \begin{thm}{Exercise}\begin{subthm}{}
 \label{ex:hausdorff-conv}
-In a  metric space $\spc{X}$, show that if a sequence of closed sets $(A_n)_{n=1}^\infty$ converges  to  
-a closed set $A_\infty$, then $A_\infty$ is the set of all limits of convergent sequences $(x_n\in A_n)_{n=1}^\infty$.
+In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in\spc{X}_n$.
 \end{subthm}
 \begin{subthm}{}
-Show  the converse holds if  $\spc{X}$ is proper, but may fail otherwise.
-\end{subthm}
+Show  the converse fails, even if  $\spc{X}$ is proper.\end{subthm}
 \end{thm}
 
 
@@ -806,8 +804,10 @@ The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n
 
 Usually Gromov--Hausdorff convergence is defined differently. We prefer this definition since it induces convergence for a sequence of points $x_n\in\spc{X}_n$ (Exercise \ref{ex:hausdorff-conv}),
 as well as 
-weak convergence of measures $\mu_n$ on $\spc{X}_n$ and so on
-as the corresponding convergence in the ambient space $(\bm{X},\rho)$.
+weak convergence of measures $\mu_n$ on $\spc{X}_n$, and so on,
+%as the corresponding
+corresponding to convergence 
+in the ambient space $(\bm{X},\rho)$.
 
 Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we made a choice of convergence.
 Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xto{\rho} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
