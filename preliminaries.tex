@@ -719,12 +719,13 @@ Let $D_n$ be the disc in the coordinate plane
 with center $(0,n)$ and radius $n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$.
 
-\begin{thm}{Exercise}\begin{subthm}{}
-\label{ex:hausdorff-conv}
+\begin{thm}{Exercise}
+\label{ex:hausdorff-conv}\begin{subthm}{}
 In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in\spc{X}_n$.
 \end{subthm}
 \begin{subthm}{}
-Show  the converse fails, even if  $\spc{X}$ is proper.\end{subthm}
+Show  the converse fails.
+\end{subthm}
 \end{thm}
 
 
@@ -879,8 +880,8 @@ equipped with the pseudometric defined as
 \lim_{n\to\infty}\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}.\]
 Let $\hat{\spc{W}}$ be the metric space corresponding to $\spc{W}$;
 that is, points in $\hat{\spc{W}}$ are equivalence classes in $\spc{W}$
-for the relation $\sim$, where $w_i\sim w_j$ if and only it $\dist{w_i}{w_j}{\spc{W}}=0$
-and 
+for the relation $\sim$, where $w_i\sim w_j$ if and only it $\dist{w_i}{w_j}{\spc{W}}=0$, 
+and where 
 \[\dist{[w_i]}{[w_j]}{\hat{\spc{W}}}\df\dist{w_i}{w_j}{\spc{W}}.\]
 Denote by
 $\spc{X}_\infty$ the completion of $\hat{\spc{W}}$.
@@ -898,7 +899,7 @@ $I_m$, $N_m$ with $I_1=N_1=1$.
 
 
 \begin{thm}{Exercise}\label{ex:compact-proper-GH}
-Let $\spc{X}_n$ be a sequence of metric spaces that  admit 
+Let $\spc{X}_n$ be a sequence of metric spaces which  admit 
 two convergences $\spc{X}_n\xto{\rho}\spc{X}_\infty$ and $\spc{X}_n\xto{\rho'}\spc{X}_\infty'$.
 \begin{subthm}{}
 If  $\spc{X}_\infty$ is compact, then $\spc{X}_\infty\iso\spc{X}_\infty'$.
