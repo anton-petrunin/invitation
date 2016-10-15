@@ -132,13 +132,15 @@ In general, a geodesic between $p$ and $q$ need not exist and if it exists, it n
 A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be joined by a geodesic. 
 
 A \emph{constant-speed geodesic} is a  linear reparameterization of a geodesic, say by $at+b$ where $t$ is the geodesic parameter; then $a$ is the   \emph{speed}\index{speed}.
-A constant-speed geodesic parameterized by $[0,1]$ is called a \emph{geodesic path}\index{geodesic path}.
+A \emph{geodesic path}\index{geodesic path} is a constant-speed geodesic parameterized by $[0,1]$.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic. 
+A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic. 
+%S:We need this in 3.2 and 3.3:
+A curve $\gamma\:[0,1]\to \spc{X}$  is called a \emph{local geodesic path}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic. 
 
 
 \parbf{Triangles.}
@@ -159,7 +161,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 \parbf{Convex sets.}\label{def:convex-set}
 Let $\spc{X}$ be a metric space. 
 A set $A\subset\spc{X}$ is called 
-\emph{convex}%
+\emph{convex}
 \index{convex set}
 if for every two points $p,q\in A$, 
 \emph{every} geodesic $[pq]$ of $\spc{X}$ 
@@ -717,7 +719,7 @@ Then the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \emph{converge 
 \parbf{Example.}
 Let $D_n$ be the disc in the coordinate plane 
 with center $(0,n)$ and radius $n$.
-Then $D_n$ converges to the upper half-plane as $n\to\infty$.
+Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
 
 \begin{thm}{Exercise}
 \label{ex:hausdorff-conv}\begin{subthm}{}
@@ -726,8 +728,7 @@ In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \r
 \begin{subthm}{}
 Show  the converse fails.
 \end{subthm}
-\end{thm}
-
+\end{thm} %S:trivial to do but I think  needed for understanding
 
 \begin{thm}{Selection theorem}
 Let $\spc{X}$ be a proper metric space

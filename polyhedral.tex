@@ -13,7 +13,7 @@ We say that space $\spc{U}$ is \emph{locally $\Cat{}{0}$} (or \emph{locally $\Ca
 a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$  space (or $\Cat{}{1}$ space, respectively).
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so $\SS^1$ is locally $\Cat{}{0}$.
-On the other hand, $\SS^1$ is not $\Cat{}{0}$, since the closed geodesic in $\SS^1$ is not minimizing, so $\SS^1$ does not satisfy Theorem~\ref{thm:cat-unique}.
+On the other hand, $\SS^1$ is not $\Cat{}{0}$, since the closed local geodesics in $\SS^1$ are not geodesics, so $\SS^1$ does not satisfy Proposition~\ref{cor:loc-geod-are-min}.
 
 This definition is equivalent to saying that each point $p\in \spc{U}$ admits an open neighborhood $\Omega$
 such that 
@@ -23,7 +23,7 @@ The proof goes along the same lines as Exercise \ref{ex:convex-balls}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Space of local geodesics}\label{sec:geod-space}
+\section{Space of local geodesic paths}\label{sec:geod-space}
 
 In this section we will study behavior of local geodesics in locally $\Cat{}{\kappa}$  spaces.  
 The results will be used in the proof of the Globalization theorem (\ref{thm:hadamard-cartan}).
@@ -50,7 +50,7 @@ forms a $\Cat{}{0}$ proper length space.
 
 Assume a local geodesic $\sigma$  is shorter than $R/2$ and intersects the ball $\oBall(\gamma_\infty(t),R/2)$.
 Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$ 
-and hence is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.  
+and hence is  a geodesic by Corollary~\ref{cor:loc-geod-are-min}.  
 In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less is a geodesic.
 
 Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ proper length space, by Theorem~\ref{thm:cat-unique},
@@ -78,7 +78,7 @@ Then there is a $\Cat{}{\kappa}$ proper length space $\spc{N}$,
 an open set $\hat\Omega\subset \spc{N}$,
 and a geodesic path $\hat\gamma\:[0,1]\to\hat\Omega$,
 such that there is an open locally isometric immersion 
-$\map\:\hat\Omega\looparrowright\spc{U}$ such that
+$\map\:\hat\Omega\looparrowright\spc{U}$ satisfying
 $\map\circ\hat\gamma=\gamma$.
 \end{thm}
 
@@ -117,7 +117,7 @@ It is straightforward to check that $\map$,
 $\hat\gamma$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of  the lemma.
 \qeds
 
-The following two corollaries follow from Patchwork along a curve
+The following two corollaries follow from: Patchwork along a curve
 (\ref{lem:patch}), Proposition \ref{cor:loc-geod-are-min} (stating that in $\Cat{}{}$ spaces, local geodesics are geodesics), 
 and Theorem on uniqueness of geodesics~\ref{thm:cat-unique}.
 
@@ -138,7 +138,7 @@ for any path $\alpha$ with length less than $\pi$,
 there is a choice of local geodesic path $\gamma_\alpha$ with length less than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$.
 \end{thm}
 
-\parit{Proof of Corollary \ref{cor:path-geod}; $\Cat{}{0}$ case.} Patchwork allows us to  construct a continuous family of local geodesic paths $\gamma_{\alpha|[0,t]}$, where the length of $\gamma_{\alpha|[0,t]}$ is at most that of  $\alpha|[0,t]$.  Thus the process may be continued to $t=1$. If $\alpha$ is a local geodesic path then $\gamma_\alpha|[0,t]=\alpha|[0,t]$. Continuity of the construction follows from Patchwork. \qeds
+\parit{Proof of Corollary \ref{cor:path-geod}; $\Cat{}{0}$ case.} Patchwork allows us to  construct a continuous family of local geodesic paths $\gamma_{\alpha|[0,t]}$, where the length of $\gamma_{\alpha|[0,t]}$ is at most that of  $\alpha|[0,t]$.  Thus the process may be continued to $t=1$. If $\alpha$ is a local geodesic path, then $\gamma_\alpha|[0,t]=\alpha|[0,t]$. Continuity of the construction follows from Patchwork. \qeds
 
 Given a path $\alpha\:[0,1]\to\spc{U}$,
 we denote by $\bar\alpha$ the same path traveled in the opposite direction;
@@ -161,7 +161,7 @@ $\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length s
 
 \section{Globalization}\label{sec:Hadamard--Cartan}
 
-The original formulation of the \emph{globalization theorem}, or \emph{Hadamard--Cartan theorem} states that if $M$ is a complete Riemannian manifold with sectional curvature $\le 0$,  
+The original formulation of the \emph{globalization theorem}, or \emph{Hadamard--Cartan theorem}, states that if $M$ is a complete Riemannian manifold with sectional curvature $\le 0$,  
 then the exponential map at any point $p\in M$ is a covering;
 in particular it implies that the universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
 
@@ -187,7 +187,7 @@ is $\Cat{}{0}$.
 
 Analogously, assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space
 such that any closed curve $\gamma\:\SS^1\to \spc{U}$ with length smaller than $2\cdot\pi$
-is null-homotopic in the class of closed curves length smaller than $2\cdot\pi$.
+is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$.
 Then $\spc{U}$ is a $\Cat{}{1}$ space.
 \end{thm}
 
@@ -217,7 +217,7 @@ The proof uses a thin-triangle decompositions with the inheritance lemma (\ref{l
 
 \begin{thm}{Definition of line-of-sight map} \label{def:sight}
 Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
-Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic from $p$ to $\bar\alpha(t)$, we say 
+Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say 
 \[[
 0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)%\eqlbl{eq:line-of-sight}
 \]
@@ -270,7 +270,7 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is thin.
 \qeds
 
 \parit{Proof of the globalization theorem; $\Cat{}{0}$ case.}
-Given a path $\alpha\:[0,1]\to\spc{U}$, denote by $\gamma_\alpha$ the local geodesic provided by Corollary \ref{cor:path-geod}.
+Given a path $\alpha\:[0,1]\to\spc{U}$, denote by $\gamma_\alpha$ the local geodesic path provided by Corollary \ref{cor:path-geod}.
 Since the map $\alpha\mapsto\gamma_\alpha$ is continuous,
 we have $\gamma_\alpha=\gamma_\beta$ for any pair of  paths $\alpha$ and $\beta$  homotopic relative to the ends.
 
@@ -284,9 +284,9 @@ The proof goes along the same lines,
 but one needs to use Exercise~\ref{ex:null-homotopic}. \qeds
 
 \begin{thm}{Corollary}\label{cor:closed-geod-cat} 
-Any compact locally $\Cat{}{0}$ space which contains no closed geodesics is $\Cat{}{0}$.
+Any compact locally $\Cat{}{0}$ space that contains no closed local geodesics is $\Cat{}{0}$.
  
-Analogously, any locally $\Cat{}{1}$ compact space which contains no closed geodesics of length smaller than $2\cdot\pi$ is $\Cat{}{1}$.
+Analogously, any compact locally $\Cat{}{1}$ space that  contains no closed local geodesics of length smaller than $2\cdot\pi$ is $\Cat{}{1}$.
 \end{thm}
 
 \parit{Proof.}
@@ -298,8 +298,8 @@ Denote by $\ell$ the exact lower bound for the lengths of curves in the class.
 Note that $\ell>0$;
 otherwise there would be a closed noncontractible curve in a $\Cat{}{0}$ spherical neighborhood of some point, contradicting Corollary \ref{cor:contractible-cat}.
 
-Since the space is compact, the class contains a length minimizing curve, 
-which must be a closed geodesic. 
+Since the space is compact, the class contains a length-minimizing curve, 
+which must be a closed local geodesic. 
 
 The $\Cat{}{1}$ case is analogous, one only has to consider the homotopy class of closed curves shorter than $2\cdot\pi$.
 \qeds
@@ -355,7 +355,7 @@ The angle metric between directions makes  $\Link_\sigma$ into a spherical polyh
 We will always consider the link with this metric.
 
 \parbf{Tangent space and space of directions.}
-Let $\spc{P}$ be a polyhedral space and let  $\tau$ be a triangulation of $\spc{P}$.
+Let $\spc{P}$ be a polyhedral space and  $\tau$ be its triangulation.
 If a point $p\in \spc{P}$ 
 lies in the interior of a $\kay$-simplex $\sigma$ of $\tau$ 
 then the tangent space $\T_p=\T_p\spc{P}$
@@ -363,7 +363,7 @@ is  naturally isometric to
 \[\EE^\kay\times(\Cone\Link_\sigma).\]
 Equivalently, the space of directions $\Sigma_p=\Sigma_p\spc{P}$
 can be isometrically identified with the 
-$\kay$-th spherical suspension over $\Link_\sigma$;
+$\kay$-times-iterated suspension over $\Link_\sigma$;
 that is, 
 \[\Sigma_p\iso\Susp^{\kay}(\Link_\sigma).\]
 
@@ -375,7 +375,7 @@ of dimension at most $m-1$.
 In particular, 
 for any point $p$ in $\sigma$,
 the isometry class of $\Link_\sigma$ together with $\kay=\dim\sigma$
-determines the isometry class of $\Sigma_p$ 
+determines the isometry class of $\Sigma_p$, 
  and the other way around.
 
 A small neighborhood of $p$ is isometric to a neighborhood of the tip of the $\kappa$-cone over $\Sigma_p$.
@@ -388,10 +388,10 @@ The following theorem provides a combinatorial description of polyhedral spaces 
 
 \begin{thm}{Theorem}\label{thm:PL-CAT}
 Let $\spc{P}$ be a polyhedral space and $\tau$ be its triangulation. 
-Then $\spc{P}$ is locally $\Cat{}{0}$ if and only if the link of any simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
+Then $\spc{P}$ is locally $\Cat{}{0}$ if and only if the link of each simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
 
-Analogously, if $\spc{P}$ be a spherical polyhedral space and $\tau$ be a its triangulation. 
-Then $\spc{P}$ is $\Cat{}{1}$ if and only if $\spc{P}$ and every link of any simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
+Analogously, let $\spc{P}$ be a spherical polyhedral space and $\tau$ be its triangulation. 
+Then $\spc{P}$ is $\Cat{}{1}$ if and only if neither $\spc{P}$ nor  the  link of any simplex in $\tau$ has a closed local geodesic shorter than $2\cdot\pi$.
 \end{thm}
 
 In the proof we will use the following corollary of Globalization theorem \ref{thm:hadamard-cartan}.
@@ -400,7 +400,7 @@ In the proof we will use the following corollary of Globalization theorem \ref{t
 Under the assumptions of Corollary~\ref{cor:closed-geod-cat},
 prove that the space contains a \emph{geodesic circle}; 
 that is, a simple closed curve $\gamma$ such that 
-for any two points $p,q\in\gamma$, one of the arcs of $\gamma$ with endpoints $p$ and $q$ forms a minimizing geodesic. 
+for any two points $p,q\in\gamma$, one of the arcs of $\gamma$ with endpoints $p$ and $q$ is a  geodesic. 
 \end{thm}
 
 
@@ -418,8 +418,8 @@ Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\sp
 
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
-is isometric to the neighborhood of the north pole in the suspension over 
-the $\Sigma_p$.
+is isometric to a neighborhood of the north pole in the suspension over the space of directions 
+$\Sigma_p$.
 
 Note that $\Sigma_p$ is a spherical polyhedral space 
 and its  links are isometric to  links of $\spc{P}$. 
@@ -431,7 +431,7 @@ Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally  $
 Applying the second part of Corlollary~\ref{cor:closed-geod-cat},
 we get the statement.
 
-The $\Cat{}{0}$ case is exactly the same  except we need to use the first part of Exercise~\ref{ex:cone+susp} and the the first part of Corlollary~\ref{cor:closed-geod-cat}.
+The $\Cat{}{0}$ case is exactly the same  except we need to use the first part of Exercise~\ref{ex:cone+susp} and the the first part of Corollary~\ref{cor:closed-geod-cat}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
@@ -450,7 +450,7 @@ is a set of distinct vertices of $\mathcal{S}$
 which are pairwise joined by edges, then the vertexes $v^0,\dots,v^\kay$
 span a $\kay$-simplex in $\mathcal{S}$.
 
-If the above condition is satisfied only for $\kay=2$, 
+If the above condition is satisfied for $\kay=2$, 
 then we say $\mathcal{S}$ satisfies 
 the \emph{no-triangle condition}\index{no-triangle condition}.
 \end{thm}
@@ -850,12 +850,12 @@ the complement $\spc{S}\backslash\{v\}$ is simply connected.
 \end{thm}
 
 \parit{Proof of Proposition~\ref{prop:aspherical}.}
-Let $\Sigma^{m-1}$ be an $(m-1)$-dmensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold $\spc{W}$. 
+Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold $\spc{W}$. 
 
 For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$ follows from \cite{kervaire}. 
 For $m=4$ it follows from the construction in \cite{mazur}.
 
-Pick any smooth triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex which triangulates $\Sigma$.
+Pick any smooth triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates $\Sigma$.
 
 
 We can assume that $\spc{S}$ is flag; 
@@ -879,9 +879,9 @@ glue a copy of  $\spc{W}$ along its boundary.
 This results in a  closed piecewise linear manifold 
 $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
 
-Since both $V_v$ and $W$ are contractable, the identity map of  their common boundary $\Sigma$ can be extended to a homotopy equivalence between $V_v$ and $W$ rel boundary.
-Therefore the identy map on the $\spc{N}$ extends to homotopy equivalences 
-$f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ .
+Since both $V_v$ and $W$ are contractable, the identity map of  their common boundary $\Sigma$ can be extended to a homotopy equivalence relative to the boundary between $V_v$ and $W$.
+Therefore the identy map on $\spc{N}$ extends to homotopy equivalences 
+$f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$.
 
 %{\color{red} Indeed, using contractibility  of $\spc{W}$ it's easy to construct a map  $f\: \spc Q\to \spc M$ which extends the identity map of $\spc{N}$ and maps each small neighbourhood of a vertex in $\spc{Q}$ to the corresponding copy of $\spc{W}$. It's easy to see that this map induces an isomorphism on $\pi_1$ and its lift to the universal covers $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$ induces an isomorphism on homology. This means that $\tilde f$ (and hence $f$) induces an isomorphism on all homotopy groups and therefore is a homotopy equivalence.}
 
@@ -896,13 +896,13 @@ $f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$
 lift to \emph{proper maps} 
 $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
 and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$;
-that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\spc{M}}$ the invese images $\tilde g^{-1}(A)$ and $\tilde f^{-1}(B)$ are compact.
+that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\spc{M}}$, the inverse images $\tilde g^{-1}(A)$ and $\tilde f^{-1}(B)$ are compact.
 \qeds
 
 
 \section{Comments}
 
-The construction used in the proof of  Proposition~\ref{prop:aspherical} admits number of interesting modifications,  
+The construction used in the proof of  Proposition~\ref{prop:aspherical} admits a number of interesting modifications,  
 some of which are discussed in the survey \cite{davis-survey} by Michael Davis.
 
 The following Proposition was proved by Fredric Ancel, Michael Davis and Craig Guilbault in \cite{ADG}. 
@@ -928,7 +928,7 @@ Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of t
 \qeds
 
 \begin{thm}{Exercise}\label{ex:funny-S}
-Given a positive integer $m\ge 5$
+Given a positive integer $m\ge 5$,
 construct an $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
 and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 \end{thm}

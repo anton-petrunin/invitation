@@ -195,7 +195,7 @@ Further choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin, we have
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
 for all small $\eps>0$.
-That is, $\gamma$ is not minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
+That is, $\gamma$ is not length-minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
 a contradiction.
 
 The spherical case is done in the same way.
@@ -317,7 +317,7 @@ $\spc{U}^1$ and $\spc{U}^2$ are proper length spaces
 with isometric closed convex sets $A^i\subset\spc{U}^i$ and $\iota\:A^1\to A^2$ be an isometry.
 Consider the space $\spc{W}$ of all equivalence classes on $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$.
 
-It is straightforward to see that $\spc{W}$ forms a proper length space if equipped with the following metric
+It is straightforward to see that $\spc{W}$ is a proper length space if equipped with the following metric
 \begin{align*}
 \dist{x}{y}{\spc{W}}&=\dist{x}{y}{\spc{U}^i}
 \\
@@ -329,7 +329,7 @@ It is straightforward to see that $\spc{W}$ forms a proper length space if equip
 \end{align*}
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
 
-The obtained space $\spc{W}$ is called the \emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$.
+The  space $\spc{W}$ is called the \emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$.
 If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and identity map $\iota\:A\to A$, then the obtained space is called the \emph{doubling} of $\spc{U}$ along $A$.
 
 We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
@@ -422,7 +422,7 @@ along $A^1,\dots,A^N$ respectively.
 \end{lpic}
 \end{wrapfigure}
 
-The obtained space $\spc{R}$  will be called \emph{Reshetnyak's puff pastry} for the array $\bm{A}$.
+The resulting space $\spc{R}$  will be called \emph{Reshetnyak's puff pastry} for the array $\bm{A}$.
 The copies of $\EE^m$ in the puff pastry $\spc{R}$
 will be called \emph{levels};
 they will be denoted by $\spc{R}^0,\dots,\spc{R}^N$.
@@ -491,7 +491,7 @@ forms a convex set in $\spc{R}$.
 If $\spc{R}$ is the Reshetnyak's puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$
 then $\spc{R}$ is end-to-end convex
 if and only if the union of lower and upper levels
-$\spc{R}^0\cup\spc{R}^N$ is isometric to the doubling of $\EE^m$ in the nonempty intersection $A^1\cap\dots\cap A^N$.
+$\spc{R}^0\cup\spc{R}^N$ is isometric to the doubling of $\EE^m$ along the nonempty intersection $A^1\cap\dots\cap A^N$.
 
 
 \begin{thm}{Observation}\label{obs:end-to-end-convex}
@@ -542,7 +542,7 @@ is end-to-end convex.
 \end{thm}
 
 
-The proof of the lemma is based its partial case
+The proof of the lemma is based on a partial case
 which we formulate as a sublemma.
 
 \begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
@@ -903,20 +903,20 @@ a contradiction.
 
 \section{Comments}
 
-The gluing theorem (\ref{thm:gluing}) holds for the class of $\Cat{}{0}$ geodesic spaces 
+The gluing theorem (\ref{thm:gluing}) extends to the class of $\Cat{}{0}$ geodesic spaces, 
 which by Exercise~\ref{ex:product} includes all $\Cat{}{0}$ complete length spaces.
-It also admits natural generalization to $\Cat{}{\kappa}$ spaces, 
-see our book \cite{AKP} for details.%??? MORE REFS???
+It also admits a natural generalization to $\Cat{}{\kappa}$ spaces;
+see \cite{BH} and our book \cite{AKP} for details.%??? MORE REFS???added BH
 
-The idea described above has number of applications to the billiards.
+The idea described above has a number of applications to billiards.
 In particular, it can be used to bound topological entropy of the billiard flow, see \cite{BFK-2}.
 The lecture \cite{burago-icm} gives a short survey on the subject.
 
 
-Note that the walls in the puff pastry plays a key role in the proof
-despite the fact that that trajectories never come into the walls.
+Note that the walls in the puff pastry play a key role in the proof
+despite the fact that trajectories never go inside the walls.
 In a similar fashion, puff pastry was used by Alexander and Bishop in \cite{a-b:warped}
-to find the upper curvature bound for the warped products.
+to find the upper curvature bound for warped products.
 
 
 
