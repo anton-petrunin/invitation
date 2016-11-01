@@ -2,11 +2,11 @@
 \chapter{Subsets}
 
 In this chapter we give a partial answer to the following question.
-\emph{Which subset of Euclidean space equipped with the induced length-metric form $\Cat{}{0}$ spaces?}
+\emph{Which subsets of Euclidean space, equipped with their induced length-metrics, form  $\Cat{}{0}$ spaces?}
 
 \section{Motivating examples}
 
-Consider three subgraphs of different paraboloids
+Consider three subgraphs of different quadric surfaces:
 \begin{align*}
 A&=\set{(x,y,z)\in\EE^3}{z\le x^2+y^2},
 \\
@@ -16,31 +16,31 @@ C&=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}.
 \end{align*}
 
 \begin{thm}{Question}
-Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, form a $\Cat{}{0}$ space and why?
+Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, forms a $\Cat{}{0}$ space and why?
 \end{thm}
 
-The answers is given below, but it is instructive to think about this question before reading further.
+The answer is given below, but it is instructive to think about this question before reading further.
 
 \parbf{$\bm{A}$.} No, $A$ is not $\Cat{}{0}$.
  
-The boundary $\partial A$ is the paraboloid described by  $z=x^2+y^2$ in particular it bounds an open convex set in $\EE^3$ which complement is $A$.
+The boundary $\partial A$ is the paraboloid described by  $z=x^2+y^2$;  in particular it bounds an open convex set in $\EE^3$ whose complement is $A$.
 The closest point projection of $A\to\partial A$ is short (Exercise~\ref{ex:closest-point}).
-It follows that $\partial A$ is a convex set in $A$ equipped with the induced length metric.
+It follows that $\partial A$ is a convex set in $A$ equipped with its induced length metric.
 
-Therefore if $A$ forms a $\Cat{}{0}$ then so is $\partial A$.
-The latter is not true, $\partial A$ is a smooth convex surface; by Gauss formula it has strictly positive curvature.
+Therefore if $A$ is $\Cat{}{0}$ then so is $\partial A$.
+The latter is not true: $\partial A$ is a smooth convex surface, and has strictly positive curvature by the Gauss formula.
 
 
 \parbf{$\bm{B}$.} Yes, $B$ is $\Cat{}{0}$. 
 
 Evidently $B$ is a convex closed set in $\EE^3$. 
-Therefore length metric on $B$ coincides with Euclidean metric
+Therefore the length metric on $B$ coincides with Euclidean metric
 and $\Cat{}{0}$ comparison holds.
 
 \parbf{$\bm{C}$.} Yes, $C$ is $\Cat{}{0}$, 
 but the proof is not as easy as before.
 We give a sketch here;
-a complete proof of more general statement is given in Section \ref{sec:smooth-bry}.
+a complete proof of a more general statement is given in Section \ref{sec:smooth-bry}.
 
 Consider the one-parameter family of sets 
 \[V_t=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2 -2\cdot (x-t)^2}.\]
@@ -60,14 +60,13 @@ Further note that
 If $a<b<c$ then $V_b\supset V_a\cap V_c$.
 \end{clm}
 
-The inclusion \ref{eq:VcVnV-0} makes possible to apply recursively Reshetnyak gluing theorem \ref{thm:gluing} 
-and show that any finite union of $V_t$ forms a $\Cat{}{0}$ space.
+The inclusion \ref{eq:VcVnV-0} makes it possible to apply recursively Reshetnyak gluing theorem \ref{thm:gluing}, in order to show that any finite union of $V_t$ forms a $\Cat{}{0}$ space.
 By approximation, the $\Cat{}{0}$ comparison holds for any 4 points in $C$;
 that is, $C$ is $\Cat{}{0}$.
 
 \parbf{Remark.}
 The set $C$ is not convex, but it is two-convex as defined in the next section.
-As you will see two-convexity of subsets is closely related to the inheritance of upper curvature bound by a subset.
+As you will see, two-convexity of subsets is closely related to the inheritance of upper curvature bound by a subset.
 
 \section{Two-convexity}
 
@@ -75,9 +74,9 @@ The following definition is closely related to the one given by Gromov in \cite[
 
 \begin{thm}{Definition}\label{def:two-convex}
 We say that a subset $K\subset \EE^m$ is \index{two-convex set}\emph{two-convex}
-if the following condition holds for any plane $W\subset\EE^m$.
+if the following condition holds for any plane $W\subset\EE^m$:
 If $\gamma$ is a closed curve in $W\cap K$ 
-which is null-homotopic in $K$ then it is null-homotopic in $W\cap K$.
+which is null-homotopic in $K$, then it is null-homotopic in $W\cap K$.
 \end{thm}
 
 The following proposition follows immediately from the definition.
