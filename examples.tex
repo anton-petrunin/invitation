@@ -45,6 +45,7 @@ a complete proof of a more general statement is given in Section \ref{sec:smooth
 Consider the one-parameter family of sets 
 \[V_t=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2 -2\cdot (x-t)^2}.\]
 
+
 \begin{wrapfigure}{r}{41mm}
 \begin{lpic}[t(-5mm),b(-1mm),r(0mm),l(0mm)]{pics/K_s-0(1)}
 \lbl{10,23;{\color{white}$V_{a}$}}
@@ -53,20 +54,20 @@ Consider the one-parameter family of sets
 \end{lpic}
 \end{wrapfigure}
 
-Each set $V_t$ is closed, convex and
+Each set $V_t$ is the subgraph of a paraboloid tangent to $\partial C$ along the curve $(t,y,t^2-y^2)$. Thus $V_t$ is closed and convex, and
 \[C=\bigcup_t V_t.\]
 Further note that 
 \begin{clm}{}\label{eq:VcVnV-0}
 If $a<b<c$ then $V_b\supset V_a\cap V_c$.
 \end{clm}
 
-The inclusion \ref{eq:VcVnV-0} makes it possible to apply recursively Reshetnyak gluing theorem \ref{thm:gluing}, in order to show that any finite union of $V_t$ forms a $\Cat{}{0}$ space.
+The inclusion \ref{eq:VcVnV-0} makes it possible to apply Reshetnyak gluing theorem \ref{thm:gluing} recursively, in order to show that any finite union of $V_t$ forms a $\Cat{}{0}$ space.
 By approximation, the $\Cat{}{0}$ comparison holds for any 4 points in $C$;
 that is, $C$ is $\Cat{}{0}$.
 
 \parbf{Remark.}
 The set $C$ is not convex, but it is two-convex as defined in the next section.
-As you will see, two-convexity of subsets is closely related to the inheritance of upper curvature bound by a subset.
+As you will see, two-convexity of subsets is closely related to the inheritance of an upper curvature bound by a subset.
 
 \section{Two-convexity}
 
@@ -85,22 +86,22 @@ The following proposition follows immediately from the definition.
 Any subset in $\EE^2$ is 2-convex.
 \end{thm}
 
-The following proposition describes closed two-convex sets with smooth boundary.
+The next proposition describes the closed two-convex sets with smooth boundary.
 
 \begin{thm}{Proposition}\label{prop:two-cove+smooth}
 Let $K\subset \EE^m$ be a closed subset.
 
 Assume that the boundary of $K$ forms a smooth hypersurface $S$.
-Consider the orthonormal vector field $\nu$ on $S$ which points outside of $K$.
-Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$.
+Consider the unit normal vector field $\nu$ on $S$ that  points outside of $K$.
+Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$ (for example, if $K$ is convex then  $k_1\ge 0$).
 
 Then $K$ is two-convex if and only if $k_2(p)\ge 0$ at any point $p\in S$.
-Moreover, if $k_2(p)<0$ at some point $p$ then $K$ the Definition~\ref{def:two-convex} fails for a curve $\gamma$ forming a triangle in arbitrary neighborhood of $p$.
+Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of $p$.
 \end{thm}
 
 \parit{Proof; ``if'' part.}
 If $k_2(p)<0$ for some $p\in S$,
-consider the plane $W$ through $p$ which spanned by the first two principle directions.
+consider the plane $W$ through $p$  spanned by the first two principle directions.
 Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
 We get a triangle $[xyz]$ which is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $[xyz]$ does not lie in $K$ completely.
@@ -113,13 +114,13 @@ Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} 
 Fix a smooth strongly
 convex function $f\:\EE^m\to\RR$,
 such that the restriction $f|_S$ is a Morse function.
-Note that generic smooth strongly convex function $f\:\EE^m\to\RR$ has this property.
+Note that a generic smooth strongly convex function $f\:\EE^m\to\RR$ has this property.
 
-For a critical point $p$ of $f|_S$ the outer normal vector $\nu(p)$ is parallel to the gradient $\nabla_pf$;
-we say that $p$ is \index{positive critical point}\emph{positive critical point}
-if $\nu(p)$ and $\nabla_p f$ point in the same direction 
+For a critical point $p$ of $f|_S$, the outer normal vector $\nu(p)$ is parallel to the gradient $\nabla_pf$;
+we say that $p$ is a \index{positive critical point}\emph{positive critical point}
+if $\nu(p)$ and $\nabla_p f$ point in the same direction, 
 and \index{negative critical point}\emph{negative} otherwise.
-(If $\nabla_pf=0$, that is $p$ is the minimum point of $f$, then the sign is undefined.)
+(If $\nabla_pf=0$, that is, $p$ is the minimum point of $f$, then the sign is undefined.)
 
 Since $S$ is two-convex and $f$ is convex, 
 the negative critical points of $f|_S$
@@ -129,45 +130,45 @@ Given a real value $s$, set
 \[K_s=\set{x\in K}{f(x)<s}.\]
 Assume  $\phi_0\:\DD\to K$ is a continuous map of the disc $\DD$
 such that $\phi(\partial \DD)\subset K_s$.
-By Morse Lemma, 
+By the Morse Lemma, 
 there is a homotopy $\phi_t\:\DD\to K$ such that 
 $\phi_1(\DD)\subset K_s$.
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
 Note that the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.
-Therefore $f_0$ can be approximated by smooth strongly convex function $f$ such that the restriction $f|_S$ is a Morse function.
-From above the there is a disc in $K$ with boundary $\gamma$
+Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
+From above, there is a disc in $K$ with boundary $\gamma$
 which lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
 \qeds
 
 \begin{thm}{Proposition}\label{prop:two-hull}
-Intersection of arbitrary collection of two-convex sets in $\EE^m$ is two-convex.
+The intersection of an arbitrary collection of two-convex sets in $\EE^m$ is two-convex.
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:two-hull-open}
-Interior of any two-convex set in $\EE^m$ is a two-convex set.
+The interior of any two-convex set in $\EE^m$ is a two-convex set.
 \end{thm}
 
 \parit{Proofs.}
 The Proposition \ref{prop:two-hull} is evident.
 
-To prove Proposition \ref{prop:two-hull-open}, apply the Definition~\ref{def:two-convex} for parallel translations of the curve $\gamma$ by small vectors.
+To prove Proposition \ref{prop:two-hull-open}, apply Definition~\ref{def:two-convex} for parallel translations of the curve $\gamma$ by small vectors.
 \qeds
 
 \begin{thm}{Definition}
-Given a subset $K\subset \EE^m$ define its two-convex hull (briefly $\Conv_2K$) as the intersection of all two-convex subsets containing $K$.
+Given a subset $K\subset \EE^m$, define its two-convex hull (briefly, $\Conv_2K$) as the intersection of all two-convex subsets containing $K$.
 \end{thm}
 
 Note that by Proposition~\ref{prop:two-hull},
-two-convex hull of any set is two-convex.
+the two-convex hull of any set is two-convex.
 Further, 
-by Proposition~\ref{prop:two-hull-open}, 
-two-convex hull of open set is open.
+by Proposition~\ref{prop:two-hull-open}, the
+two-convex hull of an open set is open.
 
 \section{Sets with smooth boundary}\label{sec:smooth-bry}
 
-In this section we characterize the subsets in $\EE^m$ with smooth boundary which form $\Cat{}{0}$ spaces. 
+In this section we characterize the subsets with smooth boundary in $\EE^m$  that form $\Cat{}{0}$ spaces. 
 
 
 \begin{thm}{Theorem}\label{thm:set-with-smooth-bry:CBA}
