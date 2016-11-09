@@ -111,8 +111,8 @@ Therefore $K$ is not two-convex.
 Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is
  positive definite at each point.
 
-Fix a smooth strongly
-convex function $f\:\EE^m\to\RR$,
+Suppose $f\:\EE^m\to\RR$ is a smooth strongly
+convex function 
 such that the restriction $f|_S$ is a Morse function.
 Note that a generic smooth strongly convex function $f\:\EE^m\to\RR$ has this property.
 
@@ -137,8 +137,7 @@ there is a homotopy $\phi_t\:\DD\to K$ such that
 $\phi_1(\DD)\subset K_s$.
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
-Note that the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.
-Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
+Note that by Proposition \ref{prop:convex-2-geos}, the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.  Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
 From above, there is a disc in $K$ with boundary $\gamma$
 which lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
@@ -294,7 +293,7 @@ that is, $k_2(p)>0$ at any point $p\in S$.
 
 It remains to show that $p$ admits a $\Cat{}{0}$ neighborhood in the case $k_2(p)=0$.
 
-Choose a coordinate system $(x_1,\dots,x_n)$ as above,
+Choose a coordinate system $(x_1,\dots,x_m)$ as above,
 so the $(x_1,\dots,x_{m-1})$-coordinate hyperplane is the tangent subspace to $S$ at $p$.
 
 Fix $\eps>0$ so that a neighborhood of $p$ in $S$ 
@@ -356,13 +355,16 @@ Note that it is enough to consider only injective triangles $[xyz]$,
 that is, triangle whose sides $[xy]$, $[yz]$ and $[zx]$ intersect each other only at the common vertices.
 If this is not the case, chopping the overlapping part of sides reduces to the injective case.
 
-Again, the open region, say $\Delta$, bounded by the image of $[xyz]$  has concave sides, otherwise one could shorten the sides by pushing them into $\Omega$.
+Again, the open region, say $\Delta$, bounded by the image of $[xyz]$  has concave sides, since otherwise one could shorten the sides by pushing them into $\Omega$.
 It remains to solve the exercise below.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:concave-triangle}
-Assume $\Delta$ is a solid plane triangle with concave sides.
-Show that $\Delta$ equipped with induced intrinsic metric is thin.
+Assume $\Delta$ is a solid plane 
+region whose boundary is a triangle in the induced intrinsic metric
+
+triangle with concave sides.
+Show that $\Delta$ equipped with induced intrinsic me	tric is thin.
 \end{thm}
 
 
