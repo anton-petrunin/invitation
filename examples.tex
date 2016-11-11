@@ -98,20 +98,26 @@ Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
 Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of $p$.
 \end{thm}
 
-\parit{Proof; The ``Only if'' part.}
+
+\parit{Proof; The ``Only-if'' part.}
+
 If $k_2(p)<0$ for some $p\in S$,
-consider the plane $W$ through $p$  spanned by the first two principle directions.
+consider the plane $W$ through $p$  spanned by the first two principal directions.
 Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
 We get a triangle $[xyz]$ which is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $[xyz]$ does not lie in $K$ completely.
 Therefore $K$ is not two-convex.
 
-\parit{The `` If'' part.}
-Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessinan is
- positive definte at each point.
 
-Fix a smooth strongly
-convex function $f\:\EE^m\to\RR$,
+
+
+\parit{The ``If'' part.}
+Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is
+ positive definite at each point.
+
+
+Suppose $f\:\EE^m\to\RR$ is a smooth strongly
+convex function 
 such that the restriction $f|_S$ is a Morse function.
 Note that a generic smooth strongly convex function $f\:\EE^m\to\RR$ has this property.
 
@@ -121,21 +127,22 @@ if $\nu(p)$ and $\nabla_p f$ point in the same direction,
 and \index{negative critical point}\emph{negative} otherwise.
 (If $\nabla_pf=0$, that is, $p$ is the minimum point of $f$, then the sign is undefined.)
 
-Since $S$ is two-convex and $f$ is convex, 
+Since 
+%$S$ is two-convex 
+$k_2>0$ and $f$ is convex, 
 the negative critical points of $f|_S$
 have index at most $1$.
 
 Given a real value $s$, set 
 \[K_s=\set{x\in K}{f(x)<s}.\]
 Assume  $\phi_0\:\DD\to K$ is a continuous map of the disc $\DD$
-such that $\phi(\partial \DD)\subset K_s$.
+such that $\phi_0(\partial \DD)\subset K_s$.
 By the Morse Lemma, 
-there is a homotopy $\phi_t\:\DD\to K$ such that 
+there is a homotopy $\phi_t\:\DD\to K$ rel $\partial \DD$ such that 
 $\phi_1(\DD)\subset K_s$.
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
-Note that the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.
-Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
+Note that by Proposition \ref{prop:convex-2-geos}, the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.  Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
 From above, there is a disc in $K$ with boundary $\gamma$
 which lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
@@ -152,7 +159,8 @@ The interior of any two-convex set in $\EE^m$ is a two-convex set.
 \parit{Proofs.}
 The Proposition \ref{prop:two-hull} is evident.
 
-To prove Proposition \ref{prop:two-hull-open}, apply Definition~\ref{def:two-convex} for parallel translations of the curve $\gamma$ by small vectors.
+To prove Proposition \ref{prop:two-hull-open}, apply Definition~\ref{def:two-convex} for  translations of the curve $\gamma$ by small vectors.
+{\color{red} I don't understand this argument. what does it prove?}
 \qeds
 
 \begin{thm}{Definition}
@@ -171,16 +179,18 @@ In this section we characterize the subsets with smooth boundary in $\EE^m$  tha
 
 
 \begin{thm}{Theorem}\label{thm:set-with-smooth-bry:CBA}
-Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
+Let $K$ be a closed, simply connected subset in $\EE^m$ equipped with the induced length metric.
 Assume $K$ is bounded by a smooth hypersurface.
 Then 
 $K$ is $\Cat{}{0}$ if and only if $K$ is two-convex.
 \end{thm}
 
-This theorem is a baby case of the main result of \cite{a-b-b:CBA-m-w-b}, which is briefly  discussed at the end of chapter. 
+
+This theorem is a baby case of the main result of \cite{a-b-b:CBA-m-w-b}, which is briefly discussed at the end of the chapter. 
+
 
 \parit{Proof.}
-Denote by $S$  and by $\Omega$ the boundary and the interior of $K$. 
+Denote by $S$  and by $\Omega$ the boundary and the interior of $K$ respectively. 
 Since $K$ is connected and $S$ is smooth, $\Omega$ is also connected.
 
 Denote by $k_1(p)\le\dots\le k_{m-1}(p)$ the principle curvatures of $S$ at $p\in S$ with respect to the normal vector $\nu(p)$ pointing out of $K$.
@@ -199,8 +209,8 @@ Evidently $\Delta$ is not thin in $K$, that is $K$ is not $\Cat{}{0}$.
 
 \parit{``If'' part.}
 Since $K$ is simply connected,
-by Globalization theorem \ref{thm:hadamard-cartan}, 
-it is sufficient to show that any point $p\in K$ admits a $\Cat{}{0}$ neighborhood.
+by Globalization theorem \ref{thm:hadamard-cartan} 
+it suffices to show that any point $p\in K$ admits a $\Cat{}{0}$ neighborhood.
 
 If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$. Hence the statement follows.
 
@@ -261,7 +271,7 @@ equipped with the induced intrinsic metric.
 \end{center}
 
 Note that the array $(s^n)$ can be chosen in such a way that 
-$W^\kay$ is arbitrary close to $K'$.
+$W^\kay$ is arbitrarily close to $K'$.
 
 By Proposition~\ref{prop:cat-limit}, 
 in order to prove \ref{K'-is-CAT}, 
@@ -282,22 +292,22 @@ By Reshetnyak's gluing theorem, $W^{i+1}$ is $\Cat{}{0}$.
 Hence the claim follows.
 \claimqeds
 
-Note that we proved the following
+Note that we have  proved the following
 \begin{clm}{}\label{clm-strong2convex}
-$K$ is a $\Cat{}{0}$ space if $K$ is \index{strongly two-convex set}\emph{strongly two-convex};
-that is $k_2(p)>0$ at any point $p\in S$.
+$K$ is a $\Cat{}{0}$ space if $K$ is \index{strongly two-convex set}\emph{strongly two-convex},
+that is, $k_2(p)>0$ at any point $p\in S$.
 \end{clm}
 
 
 It remains to show that $p$ admits a $\Cat{}{0}$ neighborhood in the case $k_2(p)=0$.
 
-Choose a coordinate system $(x_1,\dots,x_n)$ as above,
-so $(x_1,\dots,x_{m-1})$-coordinate hyperplane forms the tangent subspace to $S$ at $p$.
+Choose a coordinate system $(x_1,\dots,x_m)$ as above,
+so that the $(x_1,\dots,x_{m-1})$-coordinate hyperplane is the tangent subspace to $S$ at $p$.
 
 Fix $\eps>0$ so that a neighborhood of $p$ in $S$ 
-forms a graph
+is the graph
 \[x_m= f(x_1,\dots,x_{m-1})\]
-for a function $f$ defined at the open ball $B$ of radius $\eps$  centered at the origin in the $(x_1,\dots,x_{m-1})$-hyperplane.
+of a function $f$ defined on the open ball $B$ of radius $\eps$  centered at the origin in the $(x_1,\dots,x_{m-1})$-hyperplane.
 Fix a smooth positive strongly convex function $\phi\:B\to \RR_+$
 such that $\phi(x)\to\infty$ as $x$ approaches the boundary $B$.
 Note that for $\delta>0$, the subgraph $K_\delta$ defined by the inequality
@@ -306,26 +316,26 @@ is strongly two-convex.
 By \ref{clm-strong2convex}, $K_\delta$ is $\Cat{}{0}$.
 
 Finally as $\delta\to0$, the closed $\eps$-neighborhoods of $p$ in $K_\delta$ 
-converges to the closed $\eps$-neighborhood of $p$ in $K$.
-That is $\eps$-neighborhoods of $p$ is $\Cat{}{0}$.
+converge to the closed $\eps$-neighborhood of $p$ in $K$.
+That is, $\eps$-neighborhoods of $p$ are $\Cat{}{0}$.
 \qeds
 
 
 
 \section{Open plane sets}
 
-In this section we will consider inheritance of upper curvature bound by subsets of Euclidean plane.
+In this section we  consider inheritance of upper curvature bounds by subsets of the Euclidean plane.
 
 \begin{thm}{Theorem}\label{thm:bishop-plane}
 Let $\Omega$ be an open simply connected subset of $\EE^2$.
-Equip $\Omega$ with induced length metric and denote by 
-by $K$ its completion.
+Equip $\Omega$ with its induced length metric and denote its completion 
+by $K$.
 Then $K$ is $\Cat{}{0}$.
 \end{thm}
 
 The assumption that the set $\Omega$ is open is not critical;
 instead one can assume that the induced length metric takes finite values at all points of $\Omega$.
-We sketch the proof from Bishop's note \cite{bishop:jordan} and suggest to finish the details as an exercise.
+We sketch the proof from Bishop's note \cite{bishop:jordan} and suggest that  the details be finished as an exercise.
 
 
 \parit{Sketch of proof.}
@@ -333,46 +343,47 @@ It is sufficient to show that any triangle in $K$ is thin,
 as defined in \ref{def:k-thin}.
 
 Note that $K$ admits a length-preserving map to $\EE^2$ which extends the embedding $\Omega\hookrightarrow\EE^2$.
-Therefore the triangle $[xyz]$ can be mapped to the plane in a length-preserving way.
-Since $\Omega$ is simply connected, any open region, say $\Delta$, surrounded by the image of $[xyz]$ lies completely in $\Omega$.
+Therefore each triangle $[xyz]$ in $K$ can be mapped to the plane in a length-preserving way.
+Since $\Omega$ is simply connected, any open region, say $\Delta$, that is surrounded by the image of $[xyz]$ lies completely in $\Omega$.
 
 \begin{wrapfigure}{r}{26mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/bishop-triangle(1)}
 \end{lpic}
 \end{wrapfigure}
 
-Note that in each triangle $[xyz]$ in $K$ the sides $[xy]$, $[yz]$ and $[zx]$ intersect each other along a geodesic starting at common vertex; possibly a one-point geodesic.
-In other words, every triangle in $K$ look like one on the diagram. 
+Note that in each triangle $[xyz]$ in $K$, the sides $[xy]$, $[yz]$ and $[zx]$ intersect each other along a geodesic starting at a common vertex, possibly a one-point geodesic.
+In other words, every triangle in $K$ looks like the one in the diagram. 
 
-Assuming contrary, there will be a diangle in $K$;
-that is two minimizing geodesics with common ends, but no other common points.
-The image of this diangle in the plane have to bound an open region of $\Omega$ and both sides of the region have to be concave, otherwise one could shorten the sides by pushing them into $\Omega$.
+Indeed, assuming the contrary, there will be a diangle in $K$,
+that is, two minimizing geodesics with common ends but no other common points.
+The image of this diangle in the plane must bound an open region of $\Omega$ and both sides of the region must be concave, since otherwise one could shorten the sides by pushing them into $\Omega$.
 Evidently, there is no plane diangle with concave sides, a contradiction.
 
-Note that it is enough to consider only injective triangle $[xyz]$;
-that is the sides $[xy]$, $[yz]$ and $[zx]$ intersect each other only at the common vertexes.
+Note that it is enough to consider only injective triangles $[xyz]$, 
+that is, triangle whose sides $[xy]$, $[yz]$ and $[zx]$ intersect each other only at the common vertices.
 If this is not the case, chopping the overlapping part of sides reduces to the injective case.
 
-Again, the open region, say $\Delta$, bounded by the image of $[xyz]$  has concave sides, otherwise one could shorten the sides by pushing them into $\Omega$.
+Again, the open region, say $\Delta$, bounded by the image of $[xyz]$  has concave sides, since otherwise one could shorten the sides by pushing them into $\Omega$.
 It remains to solve the exercise below.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:concave-triangle}
-Assume $\Delta$ is a solid plane triangle with concave sides.
-Show that $\Delta$ equipped with induced intrinsic metric is thin.
+Assume $\Delta$ is a solid plane 
+region whose boundary is a triangle with concave sides.
+Show that $\Delta$ equipped with the  induced length metric is thin.
 \end{thm}
 
 
 
-Here is a spherical analog of above lemma;
+Here is a spherical analog of Theorem \ref{thm:bishop-plane},
 which can be proved along the same lines.
 It will be used in the next section. 
 
 \begin{thm}{Exercise}\label{ex:bishop-sphere}
 Let $\Theta$ be an open connected subset of the unit sphere $\SS^2$ which does not contain a closed hemisphere.
-Equip $\Theta$ with induced length metric.
+Equip $\Theta$ with the induced length metric.
 Let $\tilde \Theta$ be a metric covering of $\Theta$ 
-such that any closed curve in $\tilde \Theta$ of length smaller than $2\cdot\pi$ is contactable.
+such that any closed curve in $\tilde \Theta$ of length smaller than $2\cdot\pi$ is contractable.
 
 Show that the completion of $\tilde \Theta$ is a  $\Cat{}{1}$ space.
 \end{thm}
@@ -387,11 +398,11 @@ Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the fo
 \begin{thm}{Corollary}
 Let $K$ be closed connected subset of Euclidean space 
 equipped with the induced length metric.
-Assume $K$ is bounded by a smooth hypersurface and it forms $\Cat{}{0}$ space. 
-Then any affine transformation of $K$ also forms $\Cat{}{0}$ space.
+Assume $K$ is bounded by a smooth hypersurface and it forms a $\Cat{}{0}$ space. 
+Then any affine transformation of $K$ is also $\Cat{}{0}$.
 \end{thm}
 
-By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in three-dimensional Euclidean space.
+By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in the three-dimensional Euclidean space.
 In higher dimensions this is not longer true.
 
 Here is the main theorem of the section.
@@ -733,7 +744,7 @@ Show that $\tilde{\spc{U}}$ is a $\Cat{}{0}$ space.
 \section{Comments and open problems}
 
 \parbf{Sets with smooth boundary.}
-In \cite{a-b-b:CBA-m-w-b} Alexander, Bishop and Berg gave the exact upper bound on Alexandrov's curvature for the Riemannian manifolds with boundary.
+In \cite{a-b-b:CBA-m-w-b} Alexander, Berg and Bishop gave the exact upper bound on Alexandrov's curvature for the Riemannian manifolds with boundary.
 Namely they show the following.
 
 \begin{thm}{Theorem}
