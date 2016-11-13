@@ -99,7 +99,7 @@ Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} 
 \end{thm}
 
 
-\parit{Proof; The ``Only-if'' part.}
+\parit{Proof;``Only-if'' part.}
 
 If $k_2(p)<0$ for some $p\in S$,
 consider the plane $W$ through $p$  spanned by the first two principal directions.
@@ -111,7 +111,7 @@ Therefore $K$ is not two-convex.
 
 
 
-\parit{The ``If'' part.}
+\parit{``If'' part.}
 Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is
  positive definite at each point.
 
@@ -265,7 +265,7 @@ Given an array of values $s^1<\dots<s^\kay$ in $[-\eps,\eps]$,
 set $V^i=V_{s^i}$ and
 consider the unions 
 \[W^i=V^1\cup\dots\cup V^i\]
-equipped with the induced intrinsic metric.
+equipped with the induced length metric.
 
 \begin{center}
 \begin{lpic}[t(1mm),b(1mm),r(0mm),l(0mm)]{pics/K_s(1)}
@@ -403,7 +403,7 @@ Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the fo
 \begin{thm}{Corollary}
 Let $K$ be closed connected subset of Euclidean space 
 equipped with the induced length metric.
-Assume $K$ is bounded by a smooth hypersurface and it forms a $\Cat{}{0}$ space. 
+Assume $K$ is bounded by a smooth hypersurface and  is a $\Cat{}{0}$ space. 
 Then any affine transformation of $K$ is also $\Cat{}{0}$.
 \end{thm}
 
@@ -413,7 +413,7 @@ In higher dimensions this is no longer true.
 Here is the main theorem of this section.
 
 \begin{thm}{Shefel's Theorem}\label{thm:shefel}
-Let $\Omega$ be an open set $\EE^3$.
+Let $\Omega$ be a connected open set in $\EE^3$.
 Equip $\Omega$ with the induced length metric
 and denote by $K$ the completion of the universal metric cover of $\Omega$.
 Then $K$ is a $\Cat{}0$ space  
@@ -424,7 +424,7 @@ The following exercise shows that the analogous statement does not hold in highe
 
 \begin{thm}{Exercise}\label{ex:two-planes}
 Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at single point.
-Consider the universal cover $K$ of $\EE^4$ infinitely branching along $\Pi_1$ and $\Pi_2$ and equip it with the induced length metric.
+Consider the universal cover $K$ of the space obtained by infinitely branching $\EE^4$ along $\Pi_1$ and $\Pi_2$, and equip $K$ with the induced length metric.
 
 Show that 
 $K$ is a $\Cat{}{0}$ space if and only if $\Pi_1\perp\Pi_2$.
@@ -433,7 +433,7 @@ $K$ is a $\Cat{}{0}$ space if and only if $\Pi_1\perp\Pi_2$.
 
 Before coming to the proof of Shefel's theorem, 
 let us formulate a few corollaries.
-The following corollary is a generalization of Theorem \ref{thm:set-with-smooth-bry:CBA} for the three-dimensional Euclidean space.
+The following corollary is a generalization of Theorem \ref{thm:set-with-smooth-bry:CBA} for  three-dimensional Euclidean space.
 
 \begin{thm}{Corollary}\label{cor:shefel}
 Let $K$ be a closed subset in $\EE^3$ 
@@ -536,7 +536,7 @@ The main step is to show that if $\Omega$ is 2-convex then the completion of the
 Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
 Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
 
-Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertexes. 
+Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices. 
 (For example, let $K=\{-|x|-|y|\le z\le |x|+|y|\}$ and let $p$ be the origin. Then $\Sigma_p$ is not simply connected and $\tilde K\to K$ branches at $p$.)
 
 
@@ -785,7 +785,7 @@ A surface $S$ in $\EE^3$ is called saddle if for any linear function $f\:\spc{X}
 the restriction $f|_S$ has no local maxima or maxima in the interior of $S$.
 
 \begin{thm}{Shefel's conjecture}
-Any saddle hypersurface in $\RR^3$ equipped with the length-metric has curvature $\le 0$ at any point.
+Any saddle surface in $\RR^3$ equipped with the length-metric has curvature $\le 0$ at any point.
 \end{thm} 
 
 From Corollary \ref{cor:shefel}, it follows that if there is a counterexample then arbitrary neighborhood of some point of the surface can not be presented as graph in any coordinate system.
@@ -795,10 +795,9 @@ then it forms a piece of boundary of a two-convex set $\Omega$ with the followin
 There is a point $p\in\partial \Omega$ and $\eps>0$ 
 such that for any $\delta>0$  we have
 \[\oBall(p,\eps)\subset\Conv_2[\Omega\cup \oBall(p,\delta)].\]
-None of such examples of $\Omega$ are known so far.
+No such examples of $\Omega$ are known so far.
 
-A surface $S$ in a metric space.
-We say that $S$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
+We say a surface $S$ in a metric space $S$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
 the restriction $f|_S$ has no local maxima in the interior of $S$.
 
 \begin{thm}{Generalized Shefel's  conjecture}
