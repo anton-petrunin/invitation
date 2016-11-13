@@ -156,11 +156,16 @@ The intersection of an arbitrary collection of two-convex sets in $\EE^m$ is two
 The interior of any two-convex set in $\EE^m$ is a two-convex set.
 \end{thm}
 
-\parit{Proofs.}
+
 The Proposition \ref{prop:two-hull} is evident.
 
-To prove Proposition \ref{prop:two-hull-open}, apply Definition~\ref{def:two-convex} for  translations of the curve $\gamma$ by small vectors.
-{\color{red} I don't understand this argument. what does it prove?}
+\parit{Proof of Proposition \ref{prop:two-hull-open}.}
+Let $K\subset \EE^m$ be two-convex and let $W$ be a 2-plane.
+Let $\gamma\subset \Int K\cap W$ be a closed curve which is contractible in $\Int K$. Without loss of generality we can assume that $\Gamma$ is smooth, regular with finitely many transverse self-intersections in $W$.
+Then $W\backslash \mathrm{image}( \gamma)$ is a union of finitely many connected components $U_i$ where all bounded $U_i$ are diffeomorphic to $\DD^2$. Pick $p_i\in U_i$. Let $U$ be the union of those bounded $U_i$ such that
+$\gamma$ has nonzero index with respect to $p_i$. Since $K$ is 2-convex, $\gamma$ is contractible in $K\cap W$. It's easy to see that $K\cap W$ must contain $U$ and that $\gamma$ is contractible in $\bar U$. Applying small parallel translations to $\gamma$ we see that $\bar U\subset \Int K$ and hence $\Int K$ is 2-convex.
+
+
 \qeds
 
 \begin{thm}{Definition}
@@ -392,7 +397,7 @@ Show that the completion of $\tilde \Theta$ is a  $\Cat{}{1}$ space.
 
 The material below is inspired by work of Samuel Shefel who seems to be very intrigued by survival of metric properties under affine transformation.
 To describe an instance of such phenomena,
-note that two-convexity survives under affine transformations of Euclidean space.
+note that two-convexity survives under affine transformations of a Euclidean space.
 Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the following holds.
 
 \begin{thm}{Corollary}
@@ -403,23 +408,23 @@ Then any affine transformation of $K$ is also $\Cat{}{0}$.
 \end{thm}
 
 By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in the three-dimensional Euclidean space.
-In higher dimensions this is not longer true.
+In higher dimensions this is no longer true.
 
-Here is the main theorem of the section.
+Here is the main theorem of this section.
 
 \begin{thm}{Shefel's Theorem}\label{thm:shefel}
 Let $\Omega$ be an open set $\EE^3$.
-Equipp $\Omega$ with the induced length metric
-and denote by $K$ the completion of universal metric cover of $\Omega$.
+Equip $\Omega$ with the induced length metric
+and denote by $K$ the completion of the universal metric cover of $\Omega$.
 Then $K$ is a $\Cat{}0$ space  
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
-The following exercise shows that analogous statement does not hold in higher dimensions.
+The following exercise shows that the analogous statement does not hold in higher dimensions.
 
 \begin{thm}{Exercise}\label{ex:two-planes}
 Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at single point.
-Consider the universal cover $K$ of $\EE^4$ infinitely branching along $\Pi_1$ and $\Pi_2$ and equip it with induced length metric.
+Consider the universal cover $K$ of $\EE^4$ infinitely branching along $\Pi_1$ and $\Pi_2$ and equip it with the induced length metric.
 
 Show that 
 $K$ is a $\Cat{}{0}$ space if and only if $\Pi_1\perp\Pi_2$.
@@ -427,8 +432,8 @@ $K$ is a $\Cat{}{0}$ space if and only if $\Pi_1\perp\Pi_2$.
 \end{thm}
 
 Before coming to the proof of Shefel's theorem, 
-let us formulate few corollaries.
-The following corollary look more like a generalization of Theorem \ref{thm:set-with-smooth-bry:CBA} for three-dimensional Euclidean space.
+let us formulate a few corollaries.
+The following corollary is a generalization of Theorem \ref{thm:set-with-smooth-bry:CBA} for the three-dimensional Euclidean space.
 
 \begin{thm}{Corollary}\label{cor:shefel}
 Let $K$ be a closed subset in $\EE^3$ 
@@ -444,24 +449,24 @@ $\Omega$ is also simply connected.
 
 Apply Shefel's Theorem to $\Omega$.
 Note that the completion of $\Omega$ equipped with the induced length metric 
-is isometric to $K$ with induced intrinsic metric.
+is isometric to $K$ with the induced intrinsic metric.
 Hence the result follows.
 \qeds
 
 The following corollary is the main statement in Shefel's original paper \cite{shefel-3D}.
-In order to formulate it, we need yet one definition.
+In order to formulate it, we need yet one  more definition.
 
 Let $U$ be an open set in $\RR^2$.
 A continuous function $f\:U\to\RR$ is called \index{saddle function}\emph{saddle} if for any linear function $\ell\:\RR^2\to\RR$ the difference 
 $f-\ell$
-does not have local maxima and minima in $U$.
-Equivalently, open subgraph and epigraph of $f$ 
+does not have local maxima or local minima in $U$.
+Equivalently, the open subgraph and epigraph of $f$ 
 \begin{align*}
 &\set{(x,y,z)\in\EE^3}{z<f(x,y),\ (x,y)\in U},
 \\
 &\set{(x,y,z)\in\EE^3}{z>f(x,y),\ (x,y)\in U}
 \end{align*}
-form a two-convex subsets in $\EE^3$
+form  two-convex subsets in $\EE^3$. 
 
 \begin{thm}{Corollary}
 Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed unit disc $\DD$. 
@@ -487,48 +492,53 @@ It remains to note that as $n\to\infty$ the sequence of space $K_n$ converges to
 
 Now we are back to the proof of Shefel's theorem \ref{thm:shefel}.
 
-Recall, that a subset $P$ of $\EE^m$ is called \index{polytope}\emph{polytope} 
-if it can be presented as a union of finite number of simplices.
+Recall, that a subset $P$ of $\EE^m$ is called a \index{polytope}\emph{polytope} 
+if it can be presented as a union of a  finite number of simplices.
 Similarly,
 a \index{spherical polytope}\emph{spherical polytope}
-is a union of finite number of simplices in $\mathbb{S}^m$.
+is a union of a  finite number of simplices in $\mathbb{S}^m$.
 
 \begin{wrapfigure}{r}{29mm}
 \begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/polytope(1)}
 \end{lpic}
 \end{wrapfigure}
 
-Note any polytope admits a finite triangulation.
-Therefore any polytope equipped with induced intrinsic metric 
+Note that any polytope admits a finite triangulation.
+Therefore any polytope equipped with the induced intrinsic metric 
 forms a Euclidean polyhedral space as defined in \ref{def:poly}.
 
 Let $P$ be a polytope and $\Omega$ its interior,
-both considered with induced intrinsic metric.
-Typically the completion $K$ of $\Omega$ 
+both considered with the induced intrinsic metrics.
+Typically, the completion $K$ of $\Omega$ 
 is isometric to $P$.
 However in general
-we only have locally distance preserving map $K\to P$;
+we only have a locally distance preserving map $K\to P$;
 it does not have to be onto and it may be not injective. 
 An example can be guessed from the picture.
 Nevertheless, is easy to see that $K$ is always a polyhedral spaces.
 
 
 \begin{thm}{Lemma}\label{lem:poly-shefel}
-Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is formed by interior of a polytope.
+Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is formed by the interior of a polytope.
 \end{thm}
 
-The statement might look obvious, but it has an underwater stone.
-The proof use the following exercise.
+The statement might look obvious, but the proof has a hidden obstacle.
+%it has an underwater stone.
+The proof uses the following exercise.
 
 \begin{thm}{Exercise}\label{ex:hemisphere}
 Show that any closed path of length $<2\cdot \pi$  in the units sphere $\SS^2$ lies in an open  hemisphere. 
 \end{thm}
 
-\parit{Proof.}
-Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
-Let $\tilde K$ and $K$ be the completion of $\tilde\Omega$ and  $\Omega$ correspondingly.
+\parit{Proof of Lemma~\ref{lem:poly-shefel}.}
+The main step is to show that if $\Omega$ is 2-convex then the completion of the universal cover of $\Omega$ is $\Cat{}{0}$. Assume that $\Omega$ is 2-convex.
 
-Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertexes.
+Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
+Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
+
+Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertexes. 
+(For example, let $K=\{-|x|-|y|\le z\le |x|+|y|\}$ and let $p$ be the origin. Then $\Sigma_p$ is not simply connected and $\tilde K\to K$ branches at $p$.)
+
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
 denote by $p$ the image of $\tilde p$ in $K$.
@@ -540,20 +550,20 @@ A small neighborhood of $\tilde p$ in $\tilde K$ forms a $\Cat{}{0}$ space.
 
 Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at $\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
-isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
-By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows if 
+is isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
+By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show that
 
 \begin{clm}{}\label{eq:curv=<1}
 $\Sigma_{\tilde p}$ is a $\Cat{}{1}$ space.
 \end{clm}
 
-By  rescaling, we can assume every face of $K$ which does not contain $p$ lies on the distance at least 2 from $p$.
+By  rescaling, we can assume every face of $K$ which does not contain $p$ lies at distance at least 2 from $p$.
 Denote by $\SS^2$ the unit sphere centered at $p$,
 set $\Theta=\SS^2\cap\Omega$.
 Note that $\Sigma_pK$ is isomeric to the completion of $\Theta$
-and $\Sigma_{\tilde p}\tilde K$ is a completion of a regular metric covering $\tilde\Theta$ of $\Theta$ which is induced by universal metric cover $\tilde \Omega\to \Omega$.
+and $\Sigma_{\tilde p}\tilde K$ is the completion of the regular metric covering $\tilde\Theta$ of $\Theta$  induced by the universal metric cover $\tilde \Omega\to \Omega$.
 
-By Exercise \ref{ex:bishop-sphere}, it remains to show that the following.
+By Exercise \ref{ex:bishop-sphere}, it remains to show  the following.
 \begin{clm}{}
 Any closed curve in $\tilde\Theta$ of length less than $2\cdot\pi$ is contactable.
 \end{clm}
@@ -561,27 +571,30 @@ Any closed curve in $\tilde\Theta$ of length less than $2\cdot\pi$ is contactabl
 
 Consider a closed curve $\tilde \gamma$ of length $<2\cdot\pi$ in $\tilde\Theta$.
 Its projection $\gamma$ in $\Theta\subset\SS^2$ has the same length.
-Therefore by Exercise~\ref{ex:hemisphere}, $\gamma$ lies in an open hemisphere.
-Then for a plane $\Pi$ close to $p$,
-the central projection $\gamma'$ of $\gamma$ to $\Pi$ is defined and lies in $\Omega$.
+Therefore, by Exercise~\ref{ex:hemisphere}, $\gamma$ lies in an open hemisphere.
+Then for a plane $\Pi$ almost passing through $p$,
+the central projection $\gamma'$ of $\gamma$ to $\Pi$ is defined and lies in $\Omega$. Moreover, it is contractible in $\Omega$.
+%??? a picture here would be really helpful
 From two-convexity of $\Omega$, the curve $\gamma'$ is contractible in $\Pi\cap \Omega$.
+
+
 It follows that $\gamma$ is contractible in $\Theta$ 
 and therefore $\tilde\gamma$ is contractible in $\tilde\Theta$.
 \qeds
 
 The following proposition 
 describes a construction which was essentially given by Shefel in \cite{shefel-3D}.
-It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
+It produces $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
 
 \begin{thm}{Proposition}\label{prop:2-conv-construction}
 Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
 sequence of planes in $\EE^3$.
 Given an open set $\Omega$ consider 
-the recucevly defined sequence of open sets 
+the recursively  defined sequence of open sets 
 $\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
 such that 
 $\Omega_n$ is the union of $\Omega_{n-1}$ 
-and all the bounded compontnets of 
+and all the bounded components of 
 $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
 Then 
 \[\Conv_2\Omega=\bigcup_n\Omega_n.\]
@@ -591,10 +604,10 @@ Then
 \parit{Proof.}
 Set 
 \[\Omega'=\bigcup_n\Omega_n.\]
-Note that $\Omega'$ is a union of open set, in particular it is open.
+Note that $\Omega'$ is a union of open sets, in particular it is open.
 
-The inclusion $\Conv_2\Omega\supset\Omega'$
-is evident.
+Let us first show that  $\Conv_2\Omega\supset\Omega'$.  Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Then given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$ it touches $\Pi_{n}$ in a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. Then there is a curve $\gamma$ in $W$ encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. Now the claim that $\Conv_2\Omega\supset\Omega'$ follows by induction.
+
 
 It remains to show that $\Omega'$ is two-convex.
 Assume contrary; 
@@ -611,27 +624,27 @@ The latter contradicts the $n$-th step in the construction.
 
 
 \begin{thm}{Key lemma}\label{lem:key-shefel}
-The two-convex hull of the interior of polytope in $\EE^3$
-is an interior of a polytope.
+The two-convex hull of the interior of a polytope in $\EE^3$
+is also the interior of a polytope.
 \end{thm}
 
 \parit{Proof.}
 Fix a polytope $P$ in $\EE^3$.
-Set $\Omega=\Int P$, we can assume that $\Omega$ is dense in $P$
-Denote by $F_1,\dots,F_m$ the facets of $P$.
+Set $\Omega=\Int P$, we can assume that $\Omega$ is dense in $P$.
+Denote by $F_1,\dots,F_m$ the facets of $P$. By subdividing $F_i$ if necessary we can assume that all $F_i$ are convex.
 
 Set $\Omega'=\Conv_2\Omega$ and let $P'$ be the closure of $\Omega'$.
 Further, 
 for each $i$, 
 set $F'_i=F_i\backslash \Omega'$.
 In other words, 
-$F'_i$ is the subset of facet $F_i$ 
-which remains on the boundary of $K'$.
+$F'_i$ is the subset of the facet $F_i$ 
+which remains on the boundary of $P'$.
 
-From the construction of two-convex hull (\ref{prop:2-conv-construction})
+From the construction of the two-convex hull (\ref{prop:2-conv-construction}) we get
 
 \begin{clm}{}\label{clm:F'-convex}
-$F'_i$ is convex subset of $F_i$.
+$F'_i$ is  a convex subset of $F_i$.
 \end{clm}
 
 Further, since $\Omega'$ is two-convex,
@@ -643,7 +656,8 @@ Each connected component of the complement $F_i\backslash F'_i$ is convex.
 
 Indeed, assume a connected component $A$ of $F_i\backslash F'_i$ fails to be convex.
 Then there is a suppoiting line $\ell$ to $F'_i$ touching $F'_i$ at a single point in the interior of $F_i$.
-Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it parallel to cut a hat from the complement of $\Omega$.
+Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it parallel to cut a "cap" from the complement of $\Omega$.  
+%??? a picture here would be very helpful
 The latter means that $\Omega$ is not two-convex, 
 a contradiction.
 \claimqeds
@@ -657,7 +671,7 @@ Consider the complement
 $\EE^3\backslash \Omega$ 
 equipped with the length metric.
 By construction of two-convex hull (\ref{prop:2-conv-construction}), 
-the complement $L=\EE^3\backslash (\Omega'\cup K)$
+the complement $L=\EE^3\backslash (\Omega'\cup P)$
 is locally convex;
 that is, any points of $L$ admits a convex neighborhood.
 
@@ -675,24 +689,28 @@ Prove of the last statement.\qeds
 
 
 \parit{Proof of \ref{thm:shefel}.}
+
+As in the proof of Lemma~\ref{lem:poly-shefel} the only if direction is easy. Let us prove the "if" direction.
+Suppose $\Omega$ is 2-convex. We need to show that $K$ is $\Cat{}{0}$.
+
 Note that it is sufficient to show that
 $\Cat{}{0}$ comparison holds for any
 4 points $x^1,x^2,x^3,x^4\in\Omega$.
 
 Fix $\eps>0$.
-Choose six broken lines connecting all the pairs of points $x^1,x^2,x^3,x^4$ such that length of each at most $\eps$ bigger than 
+Choose six broken lines connecting all the pairs of points $x^1,x^2,x^3,x^4$ such that length of each  broken line is at most $\eps$ bigger than 
 the distance between its ends in the length metric on $\Omega$.
 Choose a polytope $P$ 
 in $\Omega$ such that the interior $\Int P$ is simply connected 
 and  it contains all these six broken lines.
 
 Denote by $\Omega'$ the two-convex hull of the interior of $P$.
-According to Key Lemma (\ref{lem:key-shefel}) $\Omega'$ is an interior of a polytope.
+According to Key Lemma (\ref{lem:key-shefel}) $\Omega'$ is the interior of a polytope.
 
 Equip $\Omega'$ with the induced length metric.
 Consider the universal metric cover $\tilde\Omega'$ of $\Omega'$.
 (The covering $\tilde\Omega'\to\Omega'$ might be nontrivial;
-despite that $\Int P$ is simply connected, its two-convex hull $\Omega'$ might be not simply connected.)
+even though $\Int P$ is simply connected, its two-convex hull $\Omega'$ might be not simply connected.)
 Denote by $\tilde K'$ the completion of $\tilde\Omega'$.
 
 By Lemma~\ref{lem:poly-shefel}, $\tilde K'$ is $\Cat{}0$.
