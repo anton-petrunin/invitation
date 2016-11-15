@@ -2,10 +2,9 @@
 \chapter{Preliminaries}
 
 In this chapter we fix some conventions and recall the main definitions.
-%We suggest to skip this chapter and use it as a quick reference while reading the rest. !!! I don't like telling the reader to skip something altogether. Not sure how to rephrase this !!!
 The chapter may be used as a quick reference when reading the book.
 
-To learn background in metric geometry, the reader  may consult the book of Burago, Burago and Ivanov \cite{BBI}.
+To learn background in metric geometry, the reader  may consult the book of Dmitri Burago, Yuri Burago and Sergei Ivanov \cite{BBI}.
  
 
 \section{Metric spaces}
@@ -58,7 +57,8 @@ with the metric defined by formulas
 
 \parbf{Cone.}
 The \emph{cone} $\spc{V}=\Cone\spc{U}$ over the metric space $\spc{U}$
-is defined as the metric space whose underlying set consists of  equivalence classes in
+is defined as the metric space whose underlying set consists of the %???do we need this ``the''?
+equivalence classes in
 $[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by$(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
 and whose metric is given by the cosine rule
 \[
@@ -107,12 +107,12 @@ in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 for any pair $s,t\in \II$.
 
-We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if $\gamma$ is a geodesic and 
+We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if 
 $\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. 
 In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \emph{geodesic}\index{geodesic}.
 Given a geodesic $[pq]$ we can parametrize it by distance to $p$;
 this parametrization will be denoted as $\geod_{[p q]}(t)$.
-Clearly $\geod_{[p q]}(t)$ is a geodesic in the sense of the first definition.
+
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
@@ -131,8 +131,8 @@ In general, a geodesic between $p$ and $q$ need not exist and if it exists, it n
 
 A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be joined by a geodesic. 
 
-A \emph{constant-speed geodesic} is a  linear reparameterization of a geodesic, say by $at+b$ where $t$ is the geodesic parameter; then $a$ is the   \emph{speed}\index{speed}.
-A \emph{geodesic path}\index{geodesic path} is a constant-speed geodesic parameterized by $[0,1]$.
+
+A \emph{geodesic path}\index{geodesic path} is a geodesic with constant-speed parameterization by $[0,1]$.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
@@ -140,7 +140,7 @@ $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
 A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic. 
 %S:We need this in 3.2 and 3.3:
-A curve $\gamma\:[0,1]\to \spc{X}$  is called a \emph{local geodesic path}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic. 
+A curve $\gamma\:[0,1]\to \spc{X}$  is called a \emph{local geodesic path}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a geodesic with a constant-speed parametrization. 
 
 
 \parbf{Triangles.}
@@ -159,10 +159,8 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
 \parbf{Convex sets.}\label{def:convex-set}
-Let $\spc{X}$ be a metric space. 
-A set $A\subset\spc{X}$ is called 
-\emph{convex}
-\index{convex set}
+A set $A$ in a metric space $\spc{X}$ is called 
+\index{convex set}\emph{convex}
 if for every two points $p,q\in A$, 
 \emph{every} geodesic $[pq]$ of $\spc{X}$ 
 lies in $A$.
@@ -188,7 +186,8 @@ We define the \emph{length}\index{length} of $\alpha$ as
 \]
 \end{thm}
 
-Directly from the definition, it follows that if a path $\alpha$ connects two points $x$ and $y$ \footnote{That is, such that $\alpha(0)=x$ and $\alpha(1)=y$.} then 
+Directly from the definition, it follows that if a path $\alpha\:[0,1]\to\spc{X}$ connects two points $x$ and $y$ 
+(that is, such that $\alpha(0)=x$ and $\alpha(1)=y$) then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 
 If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
@@ -219,7 +218,7 @@ if
 \item Assume $\eps\ge 0$.
 A point $z\in \spc{X}$ is called an \emph{$\eps$-midpoint} between $x$ and $y$
 if 
-\[\dist{x}{z}{},\dist{y}{z}{}<\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
+\[\dist{x}{z}{},\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
 
 
@@ -264,12 +263,7 @@ $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 
 In this way we define $\alpha(t)$ for $t\in W$,
 where $W$ denotes the set of dyadic rationals in $[0,1]$.
-For any $t\in[0,1]$ consider a sequence of $t_n\in W$ such that $t_n\to t$ as $n\to\infty$.
-Note that the sequence $\alpha(t_n)$ is Cauchy and hence it converges;
-define $\alpha(t)$ as its limit.
-It is easy to see that $\alpha(t)$
-does not depend on the choice of the sequence $t_n$
-and $\alpha\:[0,1]\to\spc{X}$ is a path from $x$ to $y$.
+The map $\alpha$ can be extended continuously to $[0,1]$.
 Moreover,
 \[\begin{aligned}
 \length\alpha&\le \dist{x}{y}{}+\sum_{n=1}^\infty 2^{n-1}\cdot\eps_n\le
@@ -353,7 +347,7 @@ $p,q,r\in \spc{X}$.
 Let us define its \emph{model triangle}\index{model triangle} $\trig{\~p}{\~q}{\~r}$ 
 (briefly, 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
-\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ such that
+\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same sides; that is,
 \[\dist{\~p}{\~q}{}=\dist{p}{q}{},
 \ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
 \ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
@@ -362,7 +356,7 @@ In the same way we can define the \emph{hyperbolic} and the \emph{spherical mode
 in the hyperbolic plane $\HH^2$ and the unit sphere $\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case the model triangle again exists and is unique up to an isometry of $\SS^2$.
+In this case the model triangle again exists and is unique up to an motion of $\SS^2$.
 
 If 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
@@ -474,7 +468,7 @@ as required.
 \section{Angles and the first variation.}\label{sec:angles}
 
 Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} as 
-follows:\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
+the limit\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \[\mangle\hinge p x y
 \df
 \lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y}_{\EE^2},\eqlbl{eq:def-angle}\]
@@ -517,7 +511,7 @@ Therefore
 \\
 &=\area\modtrig(pxy)_{\SS^2}+\area\modtrig(pxy)_{\HH^2}.
 \end{align*}
-Thus, \ref{eq:k-K} follows since 
+The inequality \ref{eq:k-K} follows since 
 \begin{align*}
 0
 &\le
@@ -545,7 +539,7 @@ If all  the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then th
 
 \parit{Proof.} 
 Since $\alpha^{13}\le\pi$, we can assume that $\alpha^{12}+\alpha^{23}< \pi$.
-Set $\gamma^i=\geod_{[px^i]}$.
+Set $\gamma^i\z=\geod_{[px^i]}$.
 Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \begin{align*}
 \dist{\gamma^1(t)}{\gamma^3(\tau)}{}
@@ -576,6 +570,7 @@ Hence the result.
 \end{lpic}
 \end{wrapfigure}
 
+%???the next sentence look strange, is it English??? 
 To define $s(t,\tau)$ to satisfy the above inequality, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
 We parametrize each ray by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
@@ -621,7 +616,7 @@ Applying the triangle inequality, we get
 &\le
 \dist{p}{q}{} -t\cdot \cos\alpha + t\cdot \eps
 \end{align*}
-for any $\eps>0$ and all sufficiently small $t$.
+for any fixed $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
@@ -637,7 +632,8 @@ of all nontrivial
 geodesics  which start at $p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
 that is, $(\mathfrak{S}_p,\mangle)$ 
-forms a pseudometric space, satisfying all the conditions of a metric space  except that  the angle between distinct geodesics might vanish.
+forms a \index{pseudometric space}\emph{pseudometric space};
+that is, $\mangle$ satisfies all the conditions of a metric on $\mathfrak{S}_p$, except that  the angle between distinct geodesics might vanish.
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
 Elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
@@ -645,31 +641,14 @@ Each geodesic direction is formed by an equivalence class of geodesics in $\math
 for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
 
-%??? MOVE IT BACK ONCE IF CBB ARE BACK
-%\begin{thm}{Exercise}\label{ex:geod-CBB}
-%Assume $\spc{L}$ is a $\CBB{}{}$ space,  and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
-%Show that 
-%\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
-%
-%\end{thm}
-
-\begin{thm}{Exercise}\label{ex:geod-CBA}
-Assume $\spc{U}$ is a $\Cat{}{\kappa}$ proper length space
- with extendable geodesics;
-that is, any geodesic in $\spc{U}$
-is an arc in an infinite local geodesic defined on $\RR$.
-
-Show that the space of geodesic directions 
-$\Sigma_p'$ is complete for any $p\in \spc{U}$.
-\end{thm}
-
 The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
 Elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could also be defined directly, without introducing the space of directions.
-To do so, consider the set $\mathfrak{T}_p$ of all constant-speed geodesics starting at $p$. Given $\alpha,\beta\in \mathfrak{T}_p$,
+To do so, consider the set $\mathfrak{T}_p$ of all geodesics with constant-speed parameterizations starting at $p$. 
+Given $\alpha,\beta\in \mathfrak{T}_p$,
 set 
 \[\dist{\alpha}{\beta}{\mathfrak{T}_p}
 =
@@ -690,12 +669,31 @@ Elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} a
 even though $\T_p$ is only a metric cone and need not be a vector space.
 Elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
 
+%??? MOVE IT BACK ONCE IF CBB ARE BACK
+%\begin{thm}{Exercise}\label{ex:geod-CBB}
+%Assume $\spc{L}$ is a $\CBB{}{}$ space,  and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
+%Show that 
+%\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
+%
+%\end{thm}
+
+\begin{thm}{Exercise}\label{ex:geod-CBA}
+Assume $\spc{U}$ is a $\Cat{}{\kappa}$ proper length space
+ with extendable geodesics;
+that is, any geodesic in $\spc{U}$
+is an arc in an infinite local geodesic defined on $\RR$.
+
+Show that the space of geodesic directions 
+$\Sigma_p'$ is complete for any $p\in \spc{U}$.
+\end{thm}
+
 \section{Hausdorff convergence}
 
-It seems that Hausdorff convergence was first introduced by Hausdorff in \cite{hausdorff},
-and a couple of years later an equivalent definition was given by Blaschke in \cite{blaschke}.
-A refinement of this definition was introduced by Frol\'{\i}k in \cite{frolik},
-and then rediscovered by Wijsman in \cite{wijsman}.  However, this refinement was a reversion  to  the \emph{closed convergence} introduced by Hausdorff in the original book. 
+It seems that Hausdorff convergence was first introduced by Felix Hausdorff in \cite{hausdorff},
+and a couple of years later an equivalent definition was given by Wilhelm Blaschke in \cite{blaschke}.
+A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
+and then rediscovered by Robert Wijsman in \cite{wijsman}.  
+However, this refinement was a reversion  to  the \emph{closed convergence} introduced by Hausdorff in the original book. 
 For this reason we call it Hausdorff convergence
 instead of
 \emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
@@ -721,13 +719,10 @@ Let $D_n$ be the disc in the coordinate plane
 with center $(0,n)$ and radius $n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
 
-\begin{thm}{Exercise}
-\label{ex:hausdorff-conv}\begin{subthm}{}
+\begin{thm}{Exercise}\label{ex:hausdorff-conv}
 In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in\spc{X}_n$.
-\end{subthm}
-\begin{subthm}{}
-Show  the converse fails.
-\end{subthm}
+
+Show that the converse fails.
 \end{thm} %S:trivial to do but I think  needed for understanding
 
 \begin{thm}{Selection theorem}
@@ -839,25 +834,12 @@ the limit space $\spc{X}_\infty'$ is isometric to the real line.
 \end{lpic}
 \end{center}
 
-%???DO WE NEED LIFTINGS???
-\parbf{Liftings.}
-Given a Gromov--Hausdorff convergence 
-$\spc{X}_n\to \spc{X}_\infty$
-and a point $p_\infty\in\spc{X}_\infty$, any sequence of points $p_n\in\spc{X}_n$ such that $p_n\to p$  will be called a \emph{lifting}\index{lifting of a point} of $p_\infty$.
-In this case the point $p_n\in \spc{X}_n$ will be called a lifting of $p_\infty$ in $\spc{X}_n$, 
-and the distance function $\dist{p_n}{}{}\:\spc{X}_n\to \RR$ 
-will be called a \emph{lifting}\index{lifting of a distance function} 
-of $\dist{p}{}{}\:\spc{X}\to \RR$ to $\spc{X}_n$.
-
-Note that liftings are not uniquely defined.
-We will be interested in the properties of liftings for sufficiently large $n$.
-
 \begin{thm}{Selection theorem}\label{thm:gromov-selection}
 Let $\spc{X}_n$ be a sequence of proper metric spaces 
 with marked points $x_n\in \spc{X}_n$.
 Assume that for any fixed $R,\eps>0$, there is $N=N(R,\eps)\in\NN$ 
 such that for each $n$
-the ball $\cBall[x_n,R]\subset \spc{X}_n$ admits a finite $\eps$-net with at most $N$ points.
+the ball $\cBall[x_n,R]_{\spc{X}_n}$ admits a finite $\eps$-net with at most $N$ points.
 Then there is a subsequence of $\spc{X}_n$ admitting a Gromov--Hausdorff convergence 
 such that the sequence of marked points $x_n\in\spc{X}_n$ converges.
 \end{thm}

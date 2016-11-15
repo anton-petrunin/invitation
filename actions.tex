@@ -31,22 +31,12 @@ one of $x$, $y$ or $z$ or one of the comparison triangles $\modtrig(pxy)_{\SS^2}
 };
 in this case we also assume that $\CBB{}{0}$ comparison holds automatically.
 
-
-A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies 
-\emph{(1+3)-point $\kappa$-comparison}%
-\index{(1+3)-point $\kappa$-comparison} 
-if 
-\[\angk p{x^1}{x^2}
-+\angk p{x^2}{x^3}
-+\angk p{x^3}{x^1}\le 2\cdot\pi.\eqlbl{Yup-kappa}\]
-or at least one of the model angles $\angk p{x^i}{x^j}$ is not defined.
-
 We say that a metric space $\spc{L}$ is $\CBB{}{\kappa}$ if all quadruples of points in $\spc{L}$ satisfy $\CBB{}{\kappa}$ komaprison.
 
-In the definition of spaces with curvature $\ge1$, 
+In the definition of spaces with curvature $\CBB{}{1}$, 
 most authors assume in addition that $\diam \spc{L}\le \pi$. 
 We do not make this assumption. 
-In particular, we consider the real line to have curvature $\ge 1$.
+In particular, the real line is a $\CBB{}{1}$ space for us.
 
 
 \begin{thm}{Exercise}
@@ -66,35 +56,54 @@ Assume that the metric $\rho$ on  $\RR^m$ is defined by a norm.
 Show that $(\RR^m,\rho)$ is a $\CBB{}0$ space if and only if it is isometric to the Euclidean space.
 \end{thm}
 
+\section{Submetries}
 
-\begin{thm}{Theorem}\label{thm:CBB/G}
-Let $\spc{L}$ is a $\CBB{}\kappa$ space and the group $G$ acts on $\spc{L}$ by isometries 
+A map $f\:\spc{X}\to\spc{Y}$ between metric spaces is called \emph{submetry}
+if it is 1-Lipscitz and 1-co-Lipschitz at the same time;
+that is, if 
+\[f(\oBall(x,R)_{\spc{X}})=\oBall(f(x),R)_{\spc{Y}}\]
+for any $x\in \spc{X}$ and any value $R\ge 0$.
+
+Note that according to the definition, any submetry is surjective.
+
+\begin{thm}{Theorem}\label{thm:submetry}
+Let $\spc{L}$ is a proper $\CBB{}\kappa$ space and $f\:\spc{L}\to\spc{N}$ is a submetry then $\spc{N}$ is a $\CBB{}\kappa$ space.
+\end{thm}
+
+Assume a group $G$ acts on a metric space $\spc{L}$ by isometries and each orbit of the action is closed.
+Let us equip the space of $G$-orbits $\spc{L}/G$ with Hausdorff distance.
+Then the quotient map $\spc{L}\to \spc{L}/G$ is a submetry.
+Therfefore we get the following corollary of the theorem above.
+
+\begin{thm}{Corollary}\label{cor:CBB/G}
+Let $\spc{L}$ is a proper $\CBB{}\kappa$ space and the group $G$ acts on $\spc{L}$ by isometries 
 and it has closed orbits.
 Then the orbit space $\spc{L}/G$ is a $\CBB{}\kappa$ space. 
 \end{thm}
 
 \parit{Proof.}
-Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
-Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
-Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
-such that $\sigma(\hat x_i)=x_i$ and
-\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
-\lege
-\dist{p}{x^i}{\spc{M}}\pm\delta\]
+Fix  a quadruple of points $p,x^1,x^2,x^3\in \spc{N}$.
+Choose arbitrary $\hat p\in \spc{L}$ such that $f(\hat{p})=p$.
+
+Since $f$ is a submetry, and $\spc{L}$ is proper,
+we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{L}$.
+such that $f(\hat x_i)=x_i$ and
+\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}=
+\dist{p}{x^i}{\spc{M}}\]
 for all $i$.
 Note that 
 \[\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}
->
-\dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
+\ge
+\dist{x^i}{x^j}{\spc{M}}\]
 for all $i$ and $j$.
-Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
+Therefore 
 \[\angk {\hat{p}}{\hat{x}^1}{\hat{x}^2}
-<
-\angk p{x^1}{x^2}+\eps
+\le
+\angk p{x^1}{x^2}
 \eqlbl{eq:angles-M-L}\]
 holds for all $i$ and $j$.
 
-By (1+3)-point comparison in $\spc{L}$,
+From $\CBB{}{\kappa}$ comparison in $\spc{L}$,
 we have
 \[\angk {\hat{p}}{\hat{x}^1}{\hat{x}^2}
 +\angk {\hat{p}}{\hat{x}^2}{\hat{x}^3}
@@ -107,16 +116,11 @@ we get
 \[\angk p{x^1}{x^2}
 +\angk p{x^2}{x^3}
 +\angk p{x^3}{x^1}
-< 
-2\cdot\pi+3\cdot\eps.\]
+\le
+2\cdot\pi.\]
+\qedsf
 
-Since $\eps>0$ is arbitrary we have 
-\[\angk p{x^1}{x^2}
-+\angk p{x^2}{x^3}
-+\angk p{x^3}{x^1}\le 2\cdot\pi;\]
-that is,
-the (1+3)-point $\kappa$-comparison holds in $\spc{M}$.
-\qeds
+%??? THE PROOF IS NOT CORRECT FOR KAPPA=1 SINCE THE COMPARISON IN L MIGHT HOLD BECAUSE THE PERIMERTER OF ONE TRIANGLE IS TOO BIG???
 
 \section{Extremal sets}
 
@@ -126,8 +130,15 @@ any point $q\in A$ which minimize the distance to $p$
 and any $x\ne q$ we have
 \[\angk qpx\le \tfrac\pi2.\]
 
+The whole space as well as the empty set are always extremal;
+the other extremal sets are called \emph{proper}.
+
 \begin{thm}{Exercise}
 Show that a poin $p$ in a proper length $\CBB{}{\kappa}$ space forms an extremal set if and only if and only if $\diam\Sigma_p\le \tfrac\pi2$.
+\end{thm}
+
+\begin{thm}{Exercise}
+Show that intersection and the union of two extremal sets is extremal. 
 \end{thm}
 
 Consider a Riemannian manifold $\spc{R}$ with sectional curvature $\ge \kappa$.
@@ -139,7 +150,7 @@ Note that $\spc{R}^G$ is a totally geodesic subset in $\spc{R}$.
 
 Given $p\in \spc{R}$ we will denote by $[p]_G$ the projection of $p$ to the orbit space $\spc{R}/G$.
 
-If $G$ has closed orbits then according to Theorem~\ref{thm:CBB/G}, the orbit space $\spc{R}/G$
+If $G$ has closed orbits then according to Corollary~\ref{cor:CBB/G}, the orbit space $\spc{R}/G$
 is a $\CBB{}{\kappa}$ space.
 It opens a door for applicatuions comming from the isometric group actions.
 
@@ -161,6 +172,7 @@ From the construction of $E_K$ we get the following properties.
 
 
 
+
 \parit{Proof.}
 Assume contrary; let $p\notin \spc{R}^G/G$, $q\in \spc{R}^G/G$ and $x$ be a triple of points in $\spc{R}/G$ violating the definition of extremal subset.
 \qeds
@@ -168,6 +180,27 @@ Assume contrary; let $p\notin \spc{R}^G/G$, $q\in \spc{R}^G/G$ and $x$ be a trip
 
 
 \section{Erd\H{o}s' problem rediscovered}
+
+Assume $\Gamma\acts \EE^m$ is a crystallographic action on the Euclidean space.
+Note that every finite subgroup $F<\Gamma$ fix some affine subspace in $\EE^m$.
+It follows that the corresponding extremal subset $E_F$ in $\spc{L}=\EE^m/\Gamma$ is proper --- not the whole space nor the empty set.
+
+If $F$ is a maximal finite subgroup then the corresponging extremal set $E_F$ is primitive;
+that is $E_F$ contains no other extreaml sets except itself and the empty set.
+This disussion leads to the following observation.
+
+\begin{thm}{Observation}
+Let $\Gamma\acts \EE^m$ be a crystallographic action on the Euclidean space.
+Then number $\#(\Gamma)$ of the maximal finite subgroups of $\Gamma$ up to conjugation 
+equals to the number of primitive extreamal sets in the quatient space $\EE^m/\Gamma$.
+\end{thm}
+
+It expected that  $\#(\Gamma)\le 2^m$.
+According to the observation above the latter would follow if 
+the number of primitive extreaml sets in any $m$-dimensional compact length $\CBB{}{0}$ space does not exeed $2^m$.
+
+
+It follows that in order to estimate number of maximal finite subgroups in $\Gamma$ it is sufficient to estimate the number of primitive extremal sets in an $m$-dimensional compact length $\CBB{}{0}$.
 
 The following theorem was proved in ???.
 
@@ -186,7 +219,7 @@ Then number of elements in $F$ can not exeed $2^m$.
 Moreover, if $|F|=2^m$ then $F$ consists of vertexes of right paralelepiped.
 \end{thm}
 
-This problem was posted in \cite{erdos} and solved in \cite{danzer-gruenbaum}.
+This problem was posted by Paul Erd\H{o}s in \cite{erdos} and solved by Ludwig Danzer and Branko Gr\"unbaum in \cite{danzer-gruenbaum}.
 The question of classifing all $\spc{L}$ with the maximal number one-point extremal sets turns out to be more delicate see \cite{lebedeva}.
 Let us describe a class of examples.
 Let $\TT^m$ be standart torus 
@@ -228,7 +261,7 @@ that is, $p_j$ does not form a one-point extremal set.???
 
 
 
-The following result was obtained by Hsiang and Kleiner in \cite{hsiang-kleiner}.
+The following result was obtained by Wu-Yi Hsiang and Bruce Kleiner in \cite{hsiang-kleiner}.
 The original proof used Alexandrov geometry implicitly;
 in fact at the moment 
 Alexandrov spaces with lower curvature bound were defined only in dimension $2$.
@@ -333,7 +366,7 @@ Denote by $y_1,y_2,y_3,y_4,y^5$ their projections in $\spc{L}$.
 \qeds
 
 The result above was used to classify positively and nonnegatively curved mainifolds which admit isometric circle action.
-This classification was improved later by Grove and Wilking in \cite{grove-wilking}.
+This classification was improved later by Karsten Grove and Burkhard Wilking in \cite{grove-wilking}.
 Namely they show the following.
 
 \begin{thm}{Theorem}

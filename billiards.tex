@@ -60,7 +60,8 @@ The latter observation implies the following.
 The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is $\Cat{}{\kappa}$.
 \end{thm}
 
-In fact it does not matter which definition of convergence for metric spaces you use, 
+In the proposition above, 
+it does not matter which definition of convergence for metric spaces you use, 
 as long as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
 
 \begin{thm}{Exercise}\label{ex:cone+susp}
@@ -183,20 +184,19 @@ Then any local geodesic in $\spc{U}$ is a geodesic.
 Analogously, if $\spc{U}$ is a $\Cat{}{1}$ proper length space then any local geodesic with length $<\pi$ in $\spc{U}$ is a geodesic.
 \end{thm}
 
-\parit{Proof.}
-Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic  that is not a geodesic.
-Choose $a$ to be the maximal value 
-such that $\gamma$ is a geodesic on $[0,a]$.
-Further choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
-
-
 \begin{wrapfigure}{r}{21mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/local-geod(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/local-geod(1)}
 \lbl[t]{2.5,1;$\gamma(0)$}
 \lbl[b]{10,14;$\gamma(a)$}
 \lbl[t]{19,8;$\gamma(b)$}
 \end{lpic}
 \end{wrapfigure}
+
+\parit{Proof.}
+Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic  that is not a geodesic.
+Choose $a$ to be the maximal value 
+such that $\gamma$ is a geodesic on $[0,a]$.
+Further choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 
 Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin, we have
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
@@ -233,19 +233,20 @@ then the triangle $\trig p x y$ is also thin.
 Analogously, if $\trig p x y$ has perimeter $<2\cdot\pi$ and both triangles $\trig p x z$ and $\trig p y z$ are spherically thin, then triangle $\trig p x y$ is spherically thin.
 \end{thm} 
 
-\parit{Proof.}
-Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
-and $\trig {\dot p} {\dot y} {\dot z}=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
 \begin{wrapfigure}{r}{32mm}
-\begin{lpic}[t(2mm),b(0mm),r(0mm),l(0mm)]{pics/cat-monoton-ineq(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/cat-monoton-ineq(1)}
 \lbl[b]{14,23;$\dot z$}
 \lbl[t]{10,1;$\dot p$}
 \lbl[r]{1,14;$\dot x$}
-\lbl[l]{30,14;$\dot y$}
+\lbl[l]{30.5,14;$\dot y$}
 \lbl[tl]{13,13;$\dot w$}
 \end{lpic}
 \end{wrapfigure}
+
+\parit{Proof.}
+Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
+and $\trig {\dot p} {\dot y} {\dot z}\z=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
 Let us show that 
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
@@ -343,7 +344,7 @@ this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted furt
 Note that $A=\spc{U}^1\cap \spc{U}^2\subset \spc{W}$,
 therefore $A$ is also a convex set in $\spc{W}$.
 
-The following theorem was proved by Reshetnyak in \cite{reshetnyak:glue}.
+The following theorem was proved by Yuri Reshetnyak in \cite{reshetnyak:glue}.
 
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
@@ -363,7 +364,7 @@ By construction of the gluing space, the statement can be reformulated the follo
 Let $\spc{W}$ be a 
 proper length space which has two closed 
 convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
-$\spc{U}^1\cup\spc{U}^1=\spc{W}$
+$\spc{U}^1\cup\spc{U}^2=\spc{W}$
 and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
 Then $\spc{W}$ is a $\Cat{}{0}$ space.
 \end{thm}
@@ -388,7 +389,7 @@ in $\spc{W}$ is thin.
 This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}^i$.
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}^1$ and $x^1,x^2\in\spc{U}^2$.
 
-Choose points $z^1,z^2\in A$ 
+Choose points $z^1,z^2\in A=\spc{U}^1\cap\spc{U}^2$ 
 that lie respectively on the sides $[x^0x^1], [x^0x^2]$.
 Note that
 
@@ -413,8 +414,7 @@ Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in the Euclidean 
 Consider an array of $N+1$ copies of $\EE^m$.
 Assume that the space $\spc{R}$ is 
 obtained by
-gluing successive pairs of spaces along the array  
-along $A^1,\dots,A^N$ respectively.
+gluing successive pairs of spaces along  $A^1,\dots,A^N$ respectively.
 
 \begin{wrapfigure}{r}{58mm}
 \begin{lpic}[t(0mm),b(4mm),r(0mm),l(0mm)]{pics/puff-pastry-example(1)}
@@ -436,15 +436,16 @@ The point in the $\kay$-th level $\spc{R}^\kay$
 which corresponds to $x\in \EE^m$
 will be denoted by $x^\kay$.
 
-Given $x\in \EE^m$, any point $x^\kay\in\spc{R}$ is called a \emph{lifting} of $x$;
-we also can consider the  liftings of maps to $\EE^m$, 
-in particular the liftings of subsets in $\EE^m$.
+Given $x\in \EE^m$, any point $x^\kay\in\spc{R}$ is called a \emph{lifting} of $x$.
+The map $x\mapsto x^\kay$ defines an isometry $\EE^m\to \spc{R}^\kay$ 
+in particular we can talk about liftings of subsets in $\EE^m$.
 
 Note that 
 \begin{itemize}
 \item The intersection $A^1\cap\dots\cap A^N$ admits a unique lifting in $\spc{R}$.
 \item Moreover, $x^i=x^j$ for some $i<j$
-if and only if $x\in A^{i+1}\cap\dots\cap A^j$.
+if and only if 
+\[x\in A^{i+1}\cap\dots\cap A^j.\]
 \item The restriction $\spc{R}^\kay\to \EE^m$
 of the natural projection $x^\kay\mapsto x$ is an isometry.
 \end{itemize}
@@ -553,13 +554,13 @@ which we formulate as a sublemma.
 
 \begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
 Let $\ddot A$ and $\ddot B$ be two  
-half-planes in $\EE^2$, where $\ddot A\cap \ddot B$ is a dihedral angle with measure $\alpha$.
+half-planes in $\EE^2$, where $\ddot A\cap \ddot B$ is an angle with measure $\alpha$.
 Then the Reshetnyak's puff pastry for the array \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}})\]
 is end-to-end convex. 
 \end{thm}
 
 \begin{wrapfigure}{r}{52mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
 \lbl[t]{23,33,6;$\alpha$}
 \lbl[b]{20,47,6;$\alpha$}
 \lbl[b]{30,3,6;$\alpha$}
@@ -667,10 +668,10 @@ and the
 Lemma follow.
 \qeds
 
-The proof of the following proposition is based on Lemma \ref{lem:end-to-end-convex},
+The proof of the following proposition is based on Lemma~\ref{lem:end-to-end-convex},
 which is essentially the case $n=2$.
 
-We say that a closed convex set $A\subset \EE^m$ has  \emph{$\eps$-wide corners} for given $\epsilon >0$ 
+We say that a closed convex set $A\subset \EE^m$ has  \index{$\eps$-wide corners}\emph{$\eps$-wide corners}\label{page:wide corners} for given $\epsilon >0$ 
 if together with each point $p$
 the set $A$ contains a small right circular cone
 with tip at $p$ and aperture $\eps$.
@@ -687,6 +688,20 @@ the intersection
 $\bigcap_{i\in F}A^i$ 
 has $\eps$-wide corners.
 In this case we may say briefly \emph{all intesections of $A^i$ have $\eps$-wide corners}.
+
+
+\begin{thm}{Exercise}\label{ex:compact-walls}
+Assume that the walls
+of billiard table $T$ 
+are compact, convex and have a common  interior point.
+Show that all the intersections of  walls of $T$ have $\eps$-wide corners for some $\eps>0$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:centrally-simmetric-walls}
+Assume that a billiard table $T$ has
+centrally symmetric convex walls with common center.
+Show that all the intersections of the walls of $T$  have $\eps$-wide corners for some $\eps>0$.
+\end{thm}
 
 \begin{thm}{Proposition}\label{prop:end-to-end-convex}
 Given $\eps>0$ and a positive integer $n$
@@ -743,24 +758,7 @@ at the break points on $\partial A^i$
 The break points of the trajectory will be called \emph{collisions}.
 We assume the trajectory meets only one wall at a time.
 
-Recall that $A\subset \EE^m$ has $\eps$-wide corners
-if together with each point $p$
-the set $A$ contains a small right circular cone
-with tip at $p$ and aperture $\eps$.
-
-
-\begin{thm}{Exercise}\label{ex:compact-walls}
-Assume that the walls
-of billiard table $T$ 
-are compact, convex and have a common  interior point.
-Show that all the intersections of  walls of $T$ have $\eps$-wide corners for some $\eps>0$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:centrally-simmetric-walls}
-Assume that a billiard table $T$ has
-centrally symmetric convex walls with common center.
-Show that all the intersections of the walls of $T$  have $\eps$-wide corners for some $\eps>0$.
-\end{thm}
+Recall that the definition of sets with $\eps$-wide corners is given on page \pageref{page:wide corners}.
 
 \begin{thm}{Collision Theorem}\label{thm:collision}
 Assume $T\subset\EE^m$
@@ -776,7 +774,7 @@ the value $N$ can be found explicitly,
 say one can take 
 \[N=(\lceil\tfrac\pi\eps\rceil+1)^{n^2}.\]
 
-The Collision Theorem was proved by Burago, Ferleger and Kononenko in \cite{BFK};
+The Collision Theorem was proved by Dmitri Burago, Serge Ferleger and Alexey Kononenko in \cite{BFK};
 we present their proof with minor improvements.
 
 Let us formulate and prove a corollary of the  Collision Theorem.
@@ -912,16 +910,16 @@ a contradiction.
 The gluing theorem (\ref{thm:gluing}) extends to the class of $\Cat{}{0}$ geodesic spaces, 
 which by Exercise~\ref{ex:product} includes all $\Cat{}{0}$ complete length spaces.
 It also admits a natural generalization to $\Cat{}{\kappa}$ spaces;
-see \cite{BH} and our book \cite{AKP} for details.%??? MORE REFS???added BH
+see the book of Martin Bridson and  Andr\'e Haefliger \cite{BH} and our book \cite{AKP} for details.
 
 The idea described above has a number of applications to billiards.
-In particular, it can be used to bound topological entropy of the billiard flow, see \cite{BFK-2}.
-The lecture \cite{burago-icm} gives a short survey on the subject.
+In particular, it can be used to bound topological entropy of the billiard flow, see an other paper of Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{BFK-2}.
+The lecture \cite{burago-icm} of Dmitri Burago gives a short survey on the subject.
 
 
 Note that the walls in the puff pastry play a key role in the proof
 despite the fact that trajectories never go inside the walls.
-In a similar fashion, puff pastry was used by Alexander and Bishop in \cite{a-b:warped}
+In a similar fashion, puff pastry was used by Stephanie Alexander and Richard Bishop in \cite{a-b:warped}
 to find the upper curvature bound for warped products.
 
 
