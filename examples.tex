@@ -142,7 +142,8 @@ there is a homotopy $\phi_t\:\DD\to K$ rel $\partial \DD$ such that
 $\phi_1(\DD)\subset K_s$.
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
-Note that by Proposition \ref{prop:convex-2-geos}, the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.  Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
+Note that by Proposition \ref{prop:convex-2-geos}, the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.
+Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
 From above, there is a disc in $K$ with boundary $\gamma$
 which lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
@@ -537,7 +538,7 @@ Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
 Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
 
 Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices. 
-(For example, let $K=\{-|x|-|y|\le z\le |x|+|y|\}$ and let $p$ be the origin. Then $\Sigma_p$ is not simply connected and $\tilde K\to K$ branches at $p$.)
+For example, if $K=\{-|x|-|y|\le z\le |x|+|y|\}$ and $p$ is the origin then $\Sigma_p$ is not simply connected and $\tilde K\to K$ branches at $p$.
 
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
@@ -573,7 +574,8 @@ Consider a closed curve $\tilde \gamma$ of length $<2\cdot\pi$ in $\tilde\Theta$
 Its projection $\gamma$ in $\Theta\subset\SS^2$ has the same length.
 Therefore, by Exercise~\ref{ex:hemisphere}, $\gamma$ lies in an open hemisphere.
 Then for a plane $\Pi$ almost passing through $p$,
-the central projection $\gamma'$ of $\gamma$ to $\Pi$ is defined and lies in $\Omega$. Moreover, it is contractible in $\Omega$.
+the central projection $\gamma'$ of $\gamma$ to $\Pi$ is defined and lies in $\Omega$. 
+Moreover, it is contractible in $\Omega$.
 %??? a picture here would be really helpful
 From two-convexity of $\Omega$, the curve $\gamma'$ is contractible in $\Pi\cap \Omega$.
 
@@ -654,10 +656,17 @@ we get the following.
 Each connected component of the complement $F_i\backslash F'_i$ is convex.
 \end{clm}
 
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/shefel-face(1)}
+\lbl{5,21;$A$}
+\lbl{13,11;$F'$}
+\lbl[lt]{17,28;$\ell$}
+\end{lpic}
+\end{wrapfigure}
+
 Indeed, assume a connected component $A$ of $F_i\backslash F'_i$ fails to be convex.
-Then there is a suppoiting line $\ell$ to $F'_i$ touching $F'_i$ at a single point in the interior of $F_i$.
-Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it parallel to cut a "cap" from the complement of $\Omega$.  
-%??? a picture here would be very helpful
+Then there is a supporting line $\ell$ to $F'_i$ touching $F'_i$ at a single point in the interior of $F_i$.
+Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it parallel to cut a ``cap'' from the complement of $\Omega$.  
 The latter means that $\Omega$ is not two-convex, 
 a contradiction.
 \claimqeds
