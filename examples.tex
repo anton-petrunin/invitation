@@ -129,7 +129,7 @@ and \index{negative critical point}\emph{negative} otherwise.
 
 Since 
 %$S$ is two-convex 
-$k_2>0$ and $f$ is convex, 
+$k_2\ge 0$ and $f$ is strongly convex, 
 the negative critical points of $f|_S$
 have index at most $1$.
 
@@ -142,7 +142,8 @@ there is a homotopy $\phi_t\:\DD\to K$ rel $\partial \DD$ such that
 $\phi_1(\DD)\subset K_s$.
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
-Note that by Proposition \ref{prop:convex-2-geos}, the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.
+Note that by Proposition \ref{prop:convex-2-geos}, the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
+is convex.
 Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
 From above, there is a disc in $K$ with boundary $\gamma$
 which lies arbitrary close to $\Conv\gamma$.
@@ -157,16 +158,19 @@ The intersection of an arbitrary collection of two-convex sets in $\EE^m$ is two
 The interior of any two-convex set in $\EE^m$ is a two-convex set.
 \end{thm}
 
-
-The Proposition \ref{prop:two-hull} is evident.
-
-\parit{Proof of Proposition \ref{prop:two-hull-open}.}
+\parit{Proof of the propositions.}
 Let $K\subset \EE^m$ be two-convex and let $W$ be a 2-plane.
 Let $\gamma\subset \Int K\cap W$ be a closed curve which is contractible in $\Int K$. Without loss of generality we can assume that $\Gamma$ is smooth, regular with finitely many transverse self-intersections in $W$.
-Then $W\backslash \mathrm{image}( \gamma)$ is a union of finitely many connected components $U_i$ where all bounded $U_i$ are diffeomorphic to $\DD^2$. Pick $p_i\in U_i$. Let $U$ be the union of those bounded $U_i$ such that
-$\gamma$ has nonzero index with respect to $p_i$. Since $K$ is 2-convex, $\gamma$ is contractible in $K\cap W$. It's easy to see that $K\cap W$ must contain $U$ and that $\gamma$ is contractible in $\bar U$. Applying small parallel translations to $\gamma$ we see that $\bar U\subset \Int K$ and hence $\Int K$ is 2-convex.
+Then $W\backslash \gamma$ is a union of finitely many connected components $U_i$ where all bounded $U_i$ are diffeomorphic to $\DD^2$. 
 
+Pick $p_i\in U_i$. Let $U$ be the union of those bounded $U_i$ such that
+$\gamma$ has nonzero index with respect to $p_i$. 
+Since $K$ is 2-convex, $\gamma$ is contractible in $K\cap W$. 
+It's easy to see that $K\cap W$ must contain $U$ and that $\gamma$ is contractible in $\bar U$. 
+The latter implies Proposition~\ref{prop:two-hull}.
 
+Applying small parallel translations to $\gamma$ we see that $\bar U\subset \Int K$ and hence $\Int K$ is 2-convex; 
+which proves Proposition~\ref{prop:two-hull-open}
 \qeds
 
 \begin{thm}{Definition}
@@ -199,19 +203,20 @@ This theorem is a baby case of the main result in \cite{a-b-b:CBA-m-w-b}, which 
 Denote by $S$  and by $\Omega$ the boundary and the interior of $K$ respectively. 
 Since $K$ is connected and $S$ is smooth, $\Omega$ is also connected.
 
+Denote by $k_1(p)\le\dots\le k_{m-1}(p)$ the principle curvatures of $S$ at $p\in S$ with respect to the normal vector $\nu(p)$ pointing out of $K$.
+By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2(p)\ge 0$ for any $p\in S$.
+
 \begin{wrapfigure}{r}{35mm}
 \begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/not-two-convex(1)}
 \end{lpic}
 \end{wrapfigure}
 
-Denote by $k_1(p)\le\dots\le k_{m-1}(p)$ the principle curvatures of $S$ at $p\in S$ with respect to the normal vector $\nu(p)$ pointing out of $K$.
-By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2(p)\ge 0$ for any $p\in S$.
-
 \parit{``Only-if'' part.}
 Assume $K$ is not two-convex.
 Then by Proposition~\ref{prop:two-cove+smooth}, there is a triangle $[xyz]$ in $K$ which is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,z\}$ does not lie in $K$ completely.
-Evidently $\Delta$ is not thin in $K$, that is $K$ is not $\Cat{}{0}$.
+Evidently the triangle $[xyz]$ is not thin in $K$; 
+that is, $K$ is not $\Cat{}{0}$.
 
 \parit{``If'' part.}
 Since $K$ is simply connected,
@@ -289,7 +294,7 @@ All $W^i$ form $\Cat{}{0}$ spaces.
 This claim is proved by induction.
 Base: $W^1=V^1$ is $\Cat{}{0}$ as a convex subset in $\EE^m$.
 
-Step: assume that $W^i$ is $\Cat{}{0}$.
+\parit{Step:} Assume that $W^i$ is $\Cat{}{0}$.
 According to \ref{eq:VcVnV}
 \[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
 Moreover, this set forms a convex set in $\EE^m$ 
@@ -374,9 +379,10 @@ It remains to solve the exercise below.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:concave-triangle}
-Assume $\Delta$ is a solid plane 
-region whose boundary is a triangle with concave sides.
-Show that $\Delta$ equipped with the  induced length metric is thin.
+Assume $S$ is a closed plane 
+region whose boundary is a triangle $T$ with concave sides.
+Equip the closure $S$ with the induced length metric.
+Show that the triangle $T$ is thin in $S$.
 \end{thm}
 
 
@@ -467,12 +473,12 @@ Equivalently, the open subgraph and epigraph of $f$
 \\
 &\set{(x,y,z)\in\EE^3}{z>f(x,y),\ (x,y)\in U}
 \end{align*}
-form  two-convex subsets in $\EE^3$. 
+are two-convex. 
 
 \begin{thm}{Corollary}
 Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed unit disc $\DD$. 
 Then the graph
-$z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\Cat{}{0}$ space.
+$z\z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\Cat{}{0}$ space.
 \end{thm}
 
 \parit{Proof.}
@@ -537,8 +543,8 @@ The main step is to show that if $\Omega$ is 2-convex then the completion of the
 Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
 Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
 
-Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices. 
-For example, if $K=\{-|x|-|y|\le z\le |x|+|y|\}$ and $p$ is the origin then $\Sigma_p$ is not simply connected and $\tilde K\to K$ branches at $p$.
+Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices.
+For example, if \[K=\set{(x,y,z)\in\EE^3}{|z|\le |x|+|y|\le 1}\] and $p$ is the origin then $\Sigma_p$ is not simply connected and $\tilde K\to K$ branches at $p$.
 
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
@@ -608,7 +614,13 @@ Set
 \[\Omega'=\bigcup_n\Omega_n.\]
 Note that $\Omega'$ is a union of open sets, in particular it is open.
 
-Let us first show that  $\Conv_2\Omega\supset\Omega'$.  Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Then given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$ it touches $\Pi_{n}$ in a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. Then there is a curve $\gamma$ in $W$ encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. Now the claim that $\Conv_2\Omega\supset\Omega'$ follows by induction.
+Let us first show that  
+\[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]  
+Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Then given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$ it touches $\Pi_{n}$ in a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. Then there is a curve $\gamma$ in $W$ encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. 
+Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
+
+By induction, $\Conv_2\Omega\supset\Omega_n$ for each $n$.
+Since $\Omega'=\bigcup_n\Omega_n$, the inclusion \ref{eq:Conv2>Omega'} follows.
 
 
 It remains to show that $\Omega'$ is two-convex.
@@ -698,8 +710,9 @@ Prove the last statement.\qeds
 
 
 \parit{Proof of \ref{thm:shefel}.}
+The ``only if'' part can be proved the same way as in Theorem~\ref{thm:set-with-smooth-bry:CBA}.
 
-As in the proof of Lemma~\ref{lem:poly-shefel} the only if direction is easy. Let us prove the "if" direction.
+\parit{``If''-part.}
 Suppose $\Omega$ is 2-convex. We need to show that $K$ is $\Cat{}{0}$.
 
 Note that it is sufficient to show that
@@ -794,7 +807,7 @@ A surface $S$ in $\EE^3$ is called saddle if for any linear function $f\:\spc{X}
 the restriction $f|_S$ has no local maxima or maxima in the interior of $S$.
 
 \begin{thm}{Shefel's conjecture}
-Any saddle surface in $\RR^3$ equipped with the length-metric has curvature $\le 0$ at any point.
+Any saddle surface in $\RR^3$ equipped with the length-metric is locally $\Cat{}{0}$.
 \end{thm} 
 
 From Corollary \ref{cor:shefel}, it follows that if there is a counterexample then arbitrary neighborhood of some point of the surface can not be presented as graph in any coordinate system.
@@ -806,11 +819,11 @@ such that for any $\delta>0$  we have
 \[\oBall(p,\eps)\subset\Conv_2[\Omega\cup \oBall(p,\delta)].\]
 No such examples of $\Omega$ are known so far.
 
-We say a surface $S$ in a metric space $S$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
+We say a surface $S$ in a metric space $\spc{X}$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
 the restriction $f|_S$ has no local maxima in the interior of $S$.
 
 \begin{thm}{Generalized Shefel's  conjecture}
-Any 2-dimensional saddle surface in a $\Cat{}{\kappa}$ 
+Any saddle surface in a $\Cat{}{\kappa}$ 
 equipped with the length-metric is locally $\Cat{}{\kappa}$.
 \end{thm}
 
@@ -820,5 +833,5 @@ A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\
 Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\Cat{}{0}$ space? 
 \end{thm}
 
-For more on the subject, read \cite{petrunin-metricmin}, \cite{petrunin-stadler}.
+For more on the subject, read \cite{petrunin-metricmin} and \cite{petrunin-stadler}.
 
