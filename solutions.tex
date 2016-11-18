@@ -40,8 +40,68 @@ This can be easily done deforming $W$ and apply permutation of $x_0$, $x_1$, $x_
 \parbf{Exercise~\ref{ex:convex-set}.}
 The simplest proof we know require proof tangent cones for Alexandrov spaces.
 
+\parbf{Exercise~\ref{ex:non-contracting-map}.}
+Given any pair of point $x_0,y_0\in K$, 
+consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
+such that 
+and $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
 
-\parbf{Exercise~\ref{ex:product-cone}.}
+Since $K$ is compact, 
+we can choose an increasing sequence of integers $n_k$
+such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+converge.
+In particular, both of these sequences  are Cauchy;
+that is,
+\[
+|x_{n_i}-x_{n_j}|_K, |y_{n_i}-y_{n_j}|_K\to 0
+\ \ 
+\text{as}
+\ \ \min\{i,j\}\to\infty.
+\]
+
+
+Since $f$ is non-contracting, we get
+\[
+|x_0-x_{|n_i-n_j|}|
+\le 
+|x_{n_i}-x_{n_j}|.
+\]
+
+It follows that  
+there is a sequence $m_i\to\infty$ such that
+\[
+x_{m_i}\to x_0\ \ \text{and}\ \ y_{m_i}\to y_0\ \ \text{as}\ \ i\to\infty.
+\leqno({*})\]
+
+Set \[\ell_n=|x_n-y_n|_K.\]
+Since $f$ is non-contracting, $(\ell_n)$ is a non-decreasing sequence.
+
+By $({*})$,  $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
+It follows that $(\ell_n)$ is a constant sequence.
+
+In particular 
+\[|x_0-y_0|_K=\ell_0=\ell_1=|f(x_0)-f(y_0)|_K\]
+for any pair of points $(x_0,y_0)$ in $K$.
+That is, $f$ is distance preserving, in particular injective.
+
+From $({*})$, we also get that $f(K)$ is everywhere dense.
+Since $K$ is compact $f\:K\to K$ is surjective. Hence the result follows.\qeds
+
+
+This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[7.3.30]{BBI}.
+The proof presented here is not standard, 
+it was given by Travis Morrison, 
+a students in my MASS class at Penn State, Fall 2011.
+
+
+\parbf{Exercise~\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
+Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
+
+The map 
+$\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defied as
+\[(\rho,\phi,p)\mapsto(\rho\cdot\cos\phi,\rho\cdot\sin\phi,p)\] 
+is the needed isometry.
+
 \parbf{Exercise~\ref{ex:no-geod}.}
 Given a metric graph $\Gamma$ define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$ substitute the edge $[pq]$ by  a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with an inner metric. 
 
@@ -53,9 +113,9 @@ Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\sp
 
 
 \parit{Alternative solution.}
-Consider the space $c_0$ of all sequences converging to zero equipped with supnorm.
+Consider the space $c_0$ of all sequences converging to zero equipped with sup-norm.
 The unit ball in $c_0$ is almost what you want --- there is no unique shortest curve between points. 
-All we need now is to enhance \emph{bypasses} and to give disadvantage to emph{bstraight lines}. 
+All we need now is to enhance {}\emph{bypasses} and to give disadvantage to {}emph{straight lines}. 
 
 This can be done by taking the distance element to be 
 \[\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots}\cdot\|dx\|_\infty,\] 
@@ -96,10 +156,10 @@ we have
 \[\mangle\hinge pxy<\pi\]
 The latter cotradicts the triangle inequality for the triangle $[\bar x p \bar y]$,
 where the points
-$\bar x\in ]px]$ and $\bar y\in ]py]$
+$\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
 are sufficiently close to $p$.
 
-%\parbf{Exercise~\ref{ex:geod-CBB}.}
+
 \parbf{Exercise~\ref{ex:geod-CBA}.}
 Fix sufficiently small $\eps>0$.
 
@@ -113,6 +173,22 @@ It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions
 assuming the latter is defined.
 
 \parbf{Exercise~\ref{ex:hausdorff-conv}.}
+If $x\in A_\infty$ then 
+
+\parbf{Exercise~\ref{ex:compact-proper-GH}.}
+Fix a countable dense set of points $\mathfrak{S}\subset\spc{X}_\infty$.
+For each point $x\in \mathfrak{S}$, choose a sequence 
+of points $x_n\in\spc{X}_n$ such that $x_n\xto{\rho} x$.
+
+Applying diagonal procedure, we can pass to a susequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
+that is, $x_n\xto{\rho'} x'$ for some $x'\in\spc{X}_\infty'$.
+
+This way we get a map $\mathfrak{S}\to\spc{X}_\infty'$ defined as $x\mapsto x'$.
+Note that this map preserves the distances and therefore it can be extended to a distance preserving map $\spc{X}_\infty\to\spc{X}_\infty'$.
+
+The same way we construct a distance preserving map $\spc{X}_\infty'\to\spc{X}_\infty$.
+
+It remains to apply Exercise~\ref{ex:non-contracting-map}.
 
 \parbf{Exercise~\ref{ex:cone+susp}.}
 Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
@@ -248,7 +324,9 @@ The statement follows since the triangle $\trig pxy$ is thin
 and the above condition holds in the Euclidean plane.
 
 In $\Cat{}{1}$ case, the proof is the same, but we need to assume in addition that 
-$\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$
+$\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$.
+
+\parbf{Exercise~\ref{ex:locally-convex}.}
 
 \parbf{Exercise~\ref{ex:closest-point}.}
 Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
