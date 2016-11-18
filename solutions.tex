@@ -40,6 +40,59 @@ This can be easily done deforming $W$ and apply permutation of $x_0$, $x_1$, $x_
 \parbf{Exercise~\ref{ex:convex-set}.}
 The simplest proof we know require proof tangent cones for Alexandrov spaces.
 
+\parbf{Exercise~\ref{ex:non-contracting-map}.}
+Given any pair of point $x_0,y_0\in K$, 
+consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
+such that 
+and $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
+
+Since $K$ is compact, 
+we can choose an increasing sequence of integers $n_k$
+such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+converge.
+In particular, both of these sequences  are Cauchy;
+that is,
+\[
+|x_{n_i}-x_{n_j}|_K, |y_{n_i}-y_{n_j}|_K\to 0
+\ \ 
+\text{as}
+\ \ \min\{i,j\}\to\infty.
+\]
+
+
+Since $f$ is non-contracting, we get
+\[
+|x_0-x_{|n_i-n_j|}|
+\le 
+|x_{n_i}-x_{n_j}|.
+\]
+
+It follows that  
+there is a sequence $m_i\to\infty$ such that
+\[
+x_{m_i}\to x_0\ \ \text{and}\ \ y_{m_i}\to y_0\ \ \text{as}\ \ i\to\infty.
+\leqno({*})\]
+
+Set \[\ell_n=|x_n-y_n|_K.\]
+Since $f$ is non-contracting, $(\ell_n)$ is a non-decreasing sequence.
+
+By $({*})$,  $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
+It follows that $(\ell_n)$ is a constant sequence.
+
+In particular 
+\[|x_0-y_0|_K=\ell_0=\ell_1=|f(x_0)-f(y_0)|_K\]
+for any pair of points $(x_0,y_0)$ in $K$.
+That is, $f$ is distance preserving, in particular injective.
+
+From $({*})$, we also get that $f(K)$ is everywhere dense.
+Since $K$ is compact $f\:K\to K$ is surjective. Hence the result follows.\qeds
+
+
+This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[7.3.30]{BBI}.
+The proof presented here is not standard, 
+it was given by Travis Morrison, 
+a students in my MASS class at Penn State, Fall 2011.
+
 
 \parbf{Exercise~\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
 Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
@@ -135,7 +188,7 @@ Note that this map preserves the distances and therefore it can be extended to a
 
 The same way we construct a distance preserving map $\spc{X}_\infty'\to\spc{X}_\infty$.
 
-It remains to apply ???
+It remains to apply Exercise~\ref{ex:non-contracting-map}.
 
 \parbf{Exercise~\ref{ex:cone+susp}.}
 Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
