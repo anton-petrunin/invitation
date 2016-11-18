@@ -17,10 +17,10 @@ that the distance is taken in the space ${\spc{X}}$.
 
 The function 
 \[\dist{x}{}{}\:y\mapsto \dist{x}{y}{}\]
-is called the \emph{distance function}\index{distance function} from $x$. 
+is called the \index{distance function}\emph{distance function} from $x$. 
 
 \begin{itemize}
-\item The \emph{diameter}\index{Diameter} of metric space $\spc{X}$ is defined as
+\item The \index{diameter}\emph{diameter} of metric space $\spc{X}$ is defined as
 \[\diam \spc{X}=\sup\set{\dist{x}{y}{\spc{X}}}{x,y\in \spc{X}}.\]
 
 \item Given $R\in[0,\infty]$ and $x\in \spc{X}$, the sets
@@ -29,13 +29,13 @@ is called the \emph{distance function}\index{distance function} from $x$.
 \\
 \cBall[x,R]&=\{y\in \spc{X}\mid \dist{x}{y}{}\le R\}
 \end{align*}
-are called respectively the  \emph{open}\index{open ball} and  the \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
+are called respectively the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}   of radius $R$ with center $x$.
 Again, if we need to emphasize that these balls are taken in the metric space $\spc{X}$,
 we write 
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}.\]
 \end{itemize}
 
-A metric space $\spc{X}$ is called \emph{proper}\index{proper space} if all closed bounded sets in $\spc{X}$ are compact. 
+A metric space $\spc{X}$ is called \index{proper space}\emph{proper} if all closed bounded sets in $\spc{X}$ are compact. 
 This condition is equivalent to each of the following statements:
 \begin{enumerate}
 \item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
@@ -49,14 +49,14 @@ is compact.
 \section{Constructions}\label{sec:constructions}
 
 \parbf{Product space.}
-Given two metric spaces $\spc{U}$ and $\spc{V}$, the \emph{product space} 
+Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
 $\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ in the set $\spc{U}\times\spc{V}$ 
 with the metric defined by formulas
 \[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
 
 
 \parbf{Cone.}
-The \emph{cone} $\spc{V}=\Cone\spc{U}$ over the metric space $\spc{U}$
+The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over the metric space $\spc{U}$
 is defined as the metric space whose underlying set consists of the %???do we need this ``the''?
 equivalence classes in
 $[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by$(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
@@ -68,11 +68,11 @@ and whose metric is given by the cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
+The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
 The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 
 \parbf{Suspension.}
-The \emph{suspension} $\spc{V}=\Susp\spc{U}$ over the metric space $\spc{U}$
+The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over the metric space $\spc{U}$
 is defined as the metric space whose underlying set consists of equivalence classes in
 $[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ and $(\pi,p)\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
 and whose metric is given by the  spherical cosine rule
@@ -83,7 +83,7 @@ and whose metric is given by the  spherical cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \emph{south poles} of the suspension.
+The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \index{pole of suspension}\emph{south poles} of the suspension.
 
 \begin{thm}{Exercise}\label{ex:product-cone}
 Let $\spc{U}$ be a metric space.
@@ -101,15 +101,15 @@ are  isometric.
 \parbf{Geodesics.}
 Let $\spc{X}$ be a metric space 
 and $\II$\index{$\II$} be a real interval. 
-A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \emph{geodesic}\index{geodesic}%
-\footnote{Various authors call it differently: \emph{shortest path}, \emph{minimizing geodesic}.}; 
+A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
+\footnote{Various authors call it differently: {}\emph{shortest path}, {}\emph{minimizing geodesic}.}; 
 in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 for any pair $s,t\in \II$.
 
 We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if 
 $\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. 
-In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \emph{geodesic}\index{geodesic}.
+In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \index{geodesic}\emph{geodesic}.
 Given a geodesic $[pq]$ we can parametrize it by distance to $p$;
 this parametrization will be denoted as $\geod_{[p q]}(t)$.
 
@@ -129,32 +129,32 @@ Also we use the following short-cut notation:
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  However,  once we write $[p q]$ we mean that we made a choice of geodesic.
 
-A metric space is called \emph{geodesic}\index{geodesic} if any pair of its points can be joined by a geodesic. 
+A metric space is called \index{geodesic}\emph{geodesic} if any pair of its points can be joined by a geodesic. 
 
 
-A \emph{geodesic path}\index{geodesic path} is a geodesic with constant-speed parameterization by $[0,1]$.
+A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parameterization by $[0,1]$.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic. 
+A curve $\gamma\:\II\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic. 
 %S:We need this in 3.2 and 3.3:
-A curve $\gamma\:[0,1]\to \spc{X}$  is called a \emph{local geodesic path}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a geodesic with a constant-speed parametrization. 
+A curve $\gamma\:[0,1]\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic path}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a geodesic with a constant-speed parametrization. 
 
 
 \parbf{Triangles.}
-For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle}; we will use the short notation 
+For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also many different triangles with these vertexes may exist, any of which can be denoted by $\trig p q r$.
 Once we write $\trig p q r$, it means that we made a choice of such a triangle, 
 that is, a choice of each $[q r], [r p]$ and $[p q]$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \emph{perimeter of the triangle} $\trig p q r$.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
-A pair of geodesics $([p x],[p y])$ will be called  a \emph{hinge}\index{hinge} and it will be denoted by 
+A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and it will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
@@ -162,11 +162,11 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 A set $A$ in a metric space $\spc{X}$ is called 
 \index{convex set}\emph{convex}
 if for every two points $p,q\in A$, 
-\emph{every} geodesic $[pq]$ of $\spc{X}$ 
+{}\emph{every} geodesic $[pq]$ of $\spc{X}$ 
 lies in $A$.
 
 A set $A\subset\spc{X}$ is called 
-\emph{locally convex}
+\index{locally convex}\emph{locally convex}
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
 such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in $A$.
 
@@ -180,7 +180,7 @@ Recall that a path or a  curve is a continuous map from a real interval to a spa
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and
 $\alpha\: \II\to \spc{X}$ be a curve.
-We define the \emph{length}\index{length} of $\alpha$ as 
+We define the \index{length}\emph{length} of $\alpha$ as 
 \[
 \length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha_{i+1}}{}
 \]
@@ -192,7 +192,7 @@ Directly from the definition, it follows that if a path $\alpha\:[0,1]\to\spc{X}
 
 If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
-then $\spc{X}$ is called a \emph{length space}.
+then $\spc{X}$ is called a \index{length space}\emph{length space}.
 
 Note that any geodesic space is a length space;
 as can be seen from the following example, the converse does not hold.
@@ -212,11 +212,11 @@ Give an example of a complete length space for which no pair of distinct points 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called a \emph{midpoint} between $x$ and $y$
+\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
-A point $z\in \spc{X}$ is called an \emph{$\eps$-midpoint} between $x$ and $y$
+A point $z\in \spc{X}$ is called an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{},\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
@@ -344,7 +344,7 @@ but whose completion is neither geodesic nor locally compact.
 
 Let $\spc{X}$ be a metric space, 
 $p,q,r\in \spc{X}$. 
-Let us define its \emph{model triangle}\index{model triangle} $\trig{\~p}{\~q}{\~r}$ 
+Let us define its \index{model triangle}\emph{model triangle} $\trig{\~p}{\~q}{\~r}$ 
 (briefly, 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
 \index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same sides; that is,
@@ -352,7 +352,7 @@ $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
 \ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
 \ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
 
-In the same way we can define the \emph{hyperbolic} and the \emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
+In the same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
 in the hyperbolic plane $\HH^2$ and the unit sphere $\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
@@ -363,7 +363,7 @@ $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
 the angle measure of 
 $\trig{\~p}{\~q}{\~r}$ at $\~p$ 
-will be called the \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
+will be called the \index{model angle}\emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
 $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
 In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
@@ -467,7 +467,7 @@ as required.
 
 \section{Angles and the first variation.}\label{sec:angles}
 
-Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} as 
+Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} as 
 the limit\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \[\mangle\hinge p x y
 \df
@@ -635,14 +635,15 @@ that is, $(\mathfrak{S}_p,\mangle)$
 forms a \index{pseudometric space}\emph{pseudometric space};
 that is, $\mangle$ satisfies all the conditions of a metric on $\mathfrak{S}_p$, except that  the angle between distinct geodesics might vanish.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
-Elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+Elements of $\Sigma'_p$ are called \index{geodesic directions}\emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
 for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
 
-The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
-Elements of $\Sigma_p$ are called \emph{directions} at $p$.
+The completion of $\Sigma'_p$ is called the 
+\index{space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
+Elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
 
@@ -665,9 +666,13 @@ The elements of $\T'_p$ are  equivalence classes for the relation
 \[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore  naturally isometric to $\T_p$.
 
-Elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
+Elements of $\T_p$ will be called 
+\index{tangent vector}\emph{tangent vectors} 
+at $p$,
 even though $\T_p$ is only a metric cone and need not be a vector space.
-Elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
+Elements of $\T'_p$ will be called 
+\index{geodesic tangent vector}\emph{geodesic tangent vectors} 
+at $p$.
 
 %??? MOVE IT BACK ONCE IF CBB ARE BACK
 %\begin{thm}{Exercise}\label{ex:geod-CBB}
@@ -693,10 +698,10 @@ It seems that Hausdorff convergence was first introduced by Felix Hausdorff in \
 and a couple of years later an equivalent definition was given by Wilhelm Blaschke in \cite{blaschke}.
 A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
 and then rediscovered by Robert Wijsman in \cite{wijsman}.  
-However, this refinement was a reversion  to  the \emph{closed convergence} introduced by Hausdorff in the original book. 
+However, this refinement was a reversion  to  the {}\emph{closed convergence} introduced by Hausdorff in the original book. 
 For this reason we call it Hausdorff convergence
 instead of
-\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
+{}\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
 
 
 Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
@@ -711,7 +716,7 @@ briefly $A_n\to A_\infty$, if
 $$\dist{A_n}{}{}(x)\to\dist{A_\infty}{}{}(x)\ \ \t{as}\ \ n\to\infty$$
 for any fixed $x\in \spc{X}$.
 
-Then the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \emph{converge in the sense of Hausdorff}.
+Then the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{converge in the sense of Hausdorff}\emph{converge in the sense of Hausdorff}.
 \end{thm}
 
 \parbf{Example.}
@@ -720,7 +725,7 @@ with center $(0,n)$ and radius $n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
 
 \begin{thm}{Exercise}\label{ex:hausdorff-conv}
-In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in\spc{X}_n$.
+In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in\spc{X}$.
 
 Show that the converse fails.
 \end{thm} %S:trivial to do but I think  needed for understanding
@@ -772,13 +777,13 @@ On the other hand,
 a contradiction.
 \qeds
 
-\section{Gromov--Hausdorff convergence}
+\section{Gromov--Hausdorff nce}
 
 \begin{thm}{Definition}\label{def:comp-metr}
 Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
 A metric $\rho$ on the disjoint union
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$
-is called a  \emph{compatible metric}\index{compatible}
+is called a  \index{compatible metric}\emph{compatible metric}
 if the restriction of $\rho$ to every $\spc{X}_\alpha$ is the original metric on $\spc{X}_\alpha$.
 \end{thm}
 
@@ -791,8 +796,8 @@ $(\bm{X},\rho)$ for each $n\ne\infty$, and
 $\spc{X}_n\to \spc{X}_\infty$ in $(\bm{X},\rho)$ as $n\to\infty$ in the sense of Hausdorff (see Definition~\ref{def:hausdorff-coverge}).
 
 Then we say $\rho$ defines a 
-\emph{convergence%
-\footnote{Formally speaking, \emph{convergence} is the topology induced by $\rho$ on $\bm{X}$.} 
+\index{convergence in the sense of Gromov--Hausdorff}\emph{convergence%
+\footnote{Formally speaking, convergence is the topology induced by $\rho$ on $\bm{X}$.} 
 in the sense of Gromov--Hausdorff}%
 \index{convergence in the sense of Gromov--Hausdorff},
 and write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xto{\rho} \spc{X}_\infty$.

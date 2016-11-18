@@ -4,12 +4,12 @@ In this chapter we introduce locally $\Cat{}{0}$ spaces and show that the univer
 It follows that any locally $\Cat[0]$ proper length space is aspherical; 
 that is, its universal cover is contractible.
 
-The globalization theorem leads to a \emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
+The globalization theorem leads to a {}\emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
 Playing with this toy set, we produce examples of exotic aspherical spaces.
 
 \section{Locally CAT spaces}
 
-We say that space $\spc{U}$ is \emph{locally $\Cat{}{0}$} (or \emph{locally $\Cat{}{1}$}) if
+We say that space $\spc{U}$ is \index{locally $\Cat{}{\kappa}$ space}\emph{locally $\Cat{}{0}$} (or \emph{locally $\Cat{}{1}$}) if
 a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$  space (or $\Cat{}{1}$ space, respectively).
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so $\SS^1$ is locally $\Cat{}{0}$.
@@ -28,7 +28,7 @@ The proof goes along the same lines as Exercise \ref{ex:convex-balls}.
 In this section we will study behavior of local geodesics in locally $\Cat{}{\kappa}$  spaces.  
 The results will be used in the proof of the Globalization theorem (\ref{thm:hadamard-cartan}).
 
-Recall that \emph{path} denotes a curve parametrized by $[0,1]$.  The space of paths in $\spc{U}$ comes with the natural metric
+Recall that \index{path}\emph{path} denotes a curve parametrized by $[0,1]$.  The space of paths in $\spc{U}$ comes with the natural metric
 \[\dist{\alpha}{\beta}{}
 =
 \sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.\]
@@ -147,7 +147,7 @@ Given a path $\alpha\:[0,1]\to\spc{U}$,
 we denote by $\bar\alpha$ the same path traveled in the opposite direction;
 that is,
 \[\bar\alpha(t)=\alpha(1-t).\]
-The \emph{product} of two paths  will be denoted with ``$*$'';
+The \index{product of paths}\emph{product} of two paths  will be denoted with ``$*$'';
 if two paths $\alpha$ and $\beta$ connect the same pair of points then the product $\bar\alpha*\beta$ forms a closed curve.
 
 \begin{thm}{Exercise}\label{ex:null-homotopic}
@@ -165,7 +165,9 @@ $\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length s
 
 \section{Globalization}\label{sec:Hadamard--Cartan}
 
-The original formulation of the \emph{globalization theorem}, or \emph{Hadamard--Cartan theorem}, states that if $M$ is a complete Riemannian manifold with sectional curvature $\le 0$,  
+The original formulation of the 
+\index{globalization theorem}\emph{globalization theorem}, or 
+\index{Hadamard--Cartan theorem}\emph{Hadamard--Cartan theorem}, states that if $M$ is a complete Riemannian manifold with sectional curvature $\le 0$,  
 then the exponential map at any point $p\in M$ is a covering;
 in particular it implies that the universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
 
@@ -224,7 +226,7 @@ Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alp
 \[[
 0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)%\eqlbl{eq:line-of-sight}
 \]
-is a \emph{line-of-sight map from $p$ to $\alpha$} .  
+is a \index{line-of-sight map}\emph{line-of-sight map from $p$ to $\alpha$}.  
 \end{thm}
 
 \parit{Proof of Patchwork globalization theorem (\ref{thm:alex-patch}).} 
@@ -309,7 +311,7 @@ The $\Cat{}{1}$ case is analogous, one only has to consider the homotopy class o
 
 \begin{thm}{Exercise}\label{ex:geod-circle}
 Under the assumptions of Corollary~\ref{cor:closed-geod-cat},
-prove that the space contains a \emph{geodesic circle}; 
+prove that the space contains a \index{geodesic circle}\emph{geodesic circle}; 
 that is, a simple closed curve $\gamma$ such that 
 for any two points $p,q\in\gamma$, one of the arcs of $\gamma$ with endpoints $p$ and $q$ is a  geodesic. 
 \end{thm}
@@ -319,7 +321,7 @@ for any two points $p,q\in\gamma$, one of the arcs of $\gamma$ with endpoints $p
 
 \begin{thm}{Definition}\label{def:poly}
 A length space $\spc{P}$ is called  
-a \emph{(spherical) polyhedral space} 
+a \index{polyhedral space}\emph{(spherical) polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that every simplex in $\tau$ is isometric to a simplex in a Euclidean space (or correspondingly a unit sphere) of appropriate dimension.
 
@@ -346,7 +348,7 @@ Let $\spc{P}$ be a polyhedral space
 and $\sigma$ be a simplex in a triangulation $\tau$ of $\spc{P}$.
 
 The simplices which contain $\sigma$
-form an abstract simplicial complex called the \emph{link} of $\sigma$, 
+form an abstract simplicial complex called the \index{link}\emph{link} of $\sigma$, 
 denoted by $\Link_\sigma$.
 If $m$ is  the dimension of $\sigma$
 then the set of vertices of $\Link_\sigma$
@@ -455,7 +457,7 @@ span a $\kay$-simplex in $\mathcal{S}$.
 
 If the above condition is satisfied for $\kay=2$, 
 then we say $\mathcal{S}$ satisfies 
-the \emph{no-triangle condition}\index{no-triangle condition}.
+the \index{no-triangle condition}\emph{no-triangle condition}.
 \end{thm}
 
 Note that every flag complex is determined by its 1-skeleton.
@@ -500,11 +502,11 @@ and so on we get that $\spc{S}$ is flag.
 
 \parbf{All-right triangulation.}
 A triangulation of a spherical polyhedral space 
-is called an  \emph{all-right triangulation} 
+is called an  \index{all-right triangulation}\emph{all-right triangulation} 
 if each simplex of the triangulation is isometric 
 to a spherical simplex all of whose angles are right.
 Similarly, we say that a simplicial complex 
-is equipped with an  \emph{all-right spherical metric}
+is equipped with an  \index{all-right spherical metric}\emph{all-right spherical metric}
 if it is a length metric and each simplex is isometric 
 to a spherical simplex all of whose angles are right.
 
@@ -653,13 +655,13 @@ of the unit cube in the Euclidean space of large dimension;
 that is, a collection of faces of the cube
 such that together with each face it contains all its sub-faces.
 Each cube face in this collection 
-will be called a \emph{cube} of the cubical complex.
+will be called a \index{cube}\emph{cube} of the cubical complex.
 
 Note that according to this definition, 
 any cubical complex is finite,
 that is, contains a finite number of cubes.
 
-The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \emph{underlying space}.
+The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \index{underlying space}\emph{underlying space}.
 A homeomorphism from the underlying space of $\spc{Q}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of} $\spc{X}$.
 
 The underlying space of a cubical complex $\spc{Q}$ will be always considered with the length metric
@@ -739,7 +741,7 @@ if and only if its cubical analog is aspherical.
 By Globalization theorem \ref{thm:hadamard-cartan},
 any $\Cat{}{0}$ proper length space is contractible.
 Therefore all complete, locally $\Cat{}{0}$ proper length spaces 
-are \emph{aspherical};
+are \index{aspherical}\emph{aspherical};
 that is, they have contractible universal covers.
 This observation can be used to construct examples of aspherical spaces. 
 
@@ -899,7 +901,7 @@ The same holds for
 the universal cover $\tilde{\spc{M}}$ of $\spc{M}$.
 The latter follows since the constructed homotopy equivalences 
 $f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ 
-lift to \emph{proper maps} 
+lift to {}\emph{proper maps} 
 $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
 and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$;
 that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\spc{M}}$, the inverse images $\tilde g^{-1}(A)$ and $\tilde f^{-1}(B)$ are compact.
@@ -956,11 +958,11 @@ and
 Jean-Fran\c{c}ois Lafont in \cite{davis-januszkiewicz-lafont}
 to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
 
-The construction described in this chapter also leads to the so-called \emph{hyperbolization} precedure, a flexible tool to construct  aspherical spaces;
+The construction described in this chapter also leads to the so-called {}\emph{hyperbolization} precedure, a flexible tool to construct  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis}.
 
 All the topic discussed above link Alexandrov geometry with the fundamental group.
-So called \emph{hyperbolic groups} introduced by 
+So called {}\emph{hyperbolic groups} introduced by 
 Mikhael Gromov
 could be considered as further step in this direction, see \cite{gromov:hyp-groups}.
 
