@@ -528,8 +528,7 @@ we only have a locally distance preserving map $K\to P$;
 it does not have to be onto and it may be not injective. 
 An example can be guessed from the picture.
 Nevertheless, is easy to see that $K$ is always a polyhedral space.
-
-
+ 
 \begin{thm}{Lemma}\label{lem:poly-shefel}
 Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is the interior of a polytope.
 \end{thm}
@@ -615,12 +614,17 @@ Then
 \end{thm}
 
 \parit{Proof.}
-Set 
  Note that $\Omega'$ is a union of open sets, in particular it is open.
 
 Let us first show that  
 \[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]  
-Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Then given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$ it touches $\Pi_{n}$ in a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. Then there is a curve $\gamma$ in $W$ encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. 
+Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$, 
+%it touches 
+%["touches" means "intersects"] 
+its boundary intersects $\Pi_{n}$ in
+a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. Then there is a curve $\gamma$ in 
+$W=\Pi_{n}$ 
+encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. 
 Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
 
 By induction, $\Conv_2\Omega\supset\Omega_n$ for each $n$.
