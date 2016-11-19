@@ -236,7 +236,10 @@ and
 $\trig{\~q}{\~x}{\~y}\iso\modtrig(qxy)_{\EE^2}$.
 Further note that if $\~z\in [\~x\~y]$ then
 $\~z'=\~z/|\~z|$ lies on the geodesic $[\~x'\~y']$ in $\SS^2$.
-???
+
+The $\Cat{}{1}$ comparison for $\dist{p'}{q'}{}$ with $\~z'\in[\~x'\~y']$ implies the 
+$\Cat{}{0}$ comparison $\dist{p}{q}{}$ with $\~z\in[\~x\~y]$.
+The converse also holds if the $\Cat{}{0}$ comparison holds for all the quadruple of points $a\cdot p$, $b\cdot q$, $c\cdot x$, $d\cdot y$ for $a,b,c,d\ge 0$.
 
 \parbf{Exercise~\ref{ex:product}.}
 Fix a quadruple 
@@ -363,9 +366,27 @@ $\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$.
 
 \parbf{Exercise~\ref{ex:locally-convex}.}
 Denote by $K$ a closed connected locally convex set.
+Note that $\dist{K}{}{}$ is convex in a neighborhood $\Omega\supset K$.
 
-Note that the distance function $\dist{K}{}{}$ is loally convex in a neighborhood of $K$. 
-???
+Since $K$ is locally convex,
+it is locally path connected.
+Since $K$ is connected and locally path connected it is path connected.
+
+Fix two points $x,y\in K$. 
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
+By Theorem~\ref{thm:cat-unique}, the geodesic $[x\alpha(s)]$ 
+uniquely defined and depends continuously on $s$.
+
+If $[xy]=[x\alpha(1)]$ does not completely lie in $K$ then 
+there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
+lies in $\Omega$,
+but does not completely lie in $K$.
+Therefore $f=\dist{K}{}{}$ is convex on
+along $[x\alpha(s)]$.
+Note that $f(x)=f(\alpha(s))=0$ and $f\ge 0$, 
+therefore $f(x)= 0$ for any $x\in [x\alpha(s)]$;
+that is, $x\in K$, a contradiction.
+
 
 \parbf{Exercise~\ref{ex:closest-point}.}
 Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
@@ -452,9 +473,6 @@ By Corollary~\ref{cor:discrete-paths},
 the construction in Corollary~\ref{cor:path-geod} produces the same result for $\alpha_\tau$ and $\beta_\tau$.
 Hence the result follows.
 
-
-\parbf{``If'' part of Theorem~\ref{thm:PL-CAT}.}
-
 \parbf{Exercise~\ref{ex:geod-circle}.}
 The following proof works for any compact locally simply connected metric space;
 by uniqueness of geodesics (\ref{thm:cat-unique}) 
@@ -530,6 +548,23 @@ It remains to check that the complex is flag
 and apply Exercise~\ref{ex:cone+susp}.
 
 \parbf{Exercise~\ref{ex:flag-aspherical}.}
+If the complex $\mathcal{S}$ is flag then its cubical analog $\square_{\mathcal{S}}$ is locally $\Cat{}{0}$ and therefore aspherical.
+
+Assume now that the complex $\mathcal{S}$ is not flag. 
+Extend it to a flag complex $\mathcal{T}$ by gluing a simplex in every complete subgraph of its 1-skeliton.
+
+Note that the cubical analog $\square_{\mathcal{S}}$ is a proper subcomplex in $\square_{\mathcal{T}}$.
+Since $\mathcal{T}$ is flag,
+$\tilde\square_{\mathcal{T}}$,
+the universal cover of $\square_{\mathcal{T}}$, is $\Cat{}{0}$.
+
+
+Choose a minimal cube $Q$ in $\tilde\square_{\mathcal{T}}$ which is not presented in $\tilde\square_{\mathcal{S}}$.
+By Exercise~\ref{ex:locally-convex}, $Q$ is convex set in $\tilde\square_{\mathcal{T}}$.
+The closest point projection $\tilde\square_{\mathcal{T}}\to Q$ is a retraction.
+It follows that the boundary $\partial Q$ is not contractable in $\tilde\square_{\mathcal{T}}\backslash\Int Q$ and therefore it is also not contractable in $\tilde\square_{\mathcal{S}}$.
+
+
 \parbf{Exercise~\ref{ex:example-pi_infty-new}.}
 Solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}.
 The only difference, the set $G$ formed by squares with the vertexes at the  midpoints of some edges of the cubical analog. 
@@ -610,6 +645,24 @@ To prove the step, apply Alexndrov's lemma (\ref{lem:alex})
 together with the costruction in Exercise~\ref{ex:short-map}.
 
 \parbf{Exercise~\ref{ex:bishop-sphere}.}
+Unlike in the plane, sphere contains loons and triangles with concave sides.
+To adapt the proof of Theorem~\ref{thm:bishop-plane}
+to the spherical case, we need  the following claim; 
+its proof is left to the reader.
+
+\medskip
+
+\parbf{Claim.}
+\textit{Any closed curve shorter than $2\cdot\pi$ in the unit sphere lies in an open hemisphere.}
+
+\medskip
+
+From the claim it follows that such if a concave loon or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
+
+By the assumption, $\Theta$ does not contain a closed hemisphere. 
+Therefore the argument in the proof of Theorem~\ref{thm:bishop-plane} shows that any triangle in $\tilde\Theta$ with perimeter less than $2\cdot\pi$ is spherically thin. 
+
+
 
 \parbf{Exercise~\ref{ex:two-planes}.}
 The space $K$ forms a cone over branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two big circles.
