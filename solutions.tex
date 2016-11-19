@@ -27,7 +27,7 @@ Therefore if $\spc{X}$ is not of type $\mathcal{E}_4$ then $W(v)<0$ for some vec
 From above, the vector $v$ must be transveral to each of 4 faces of $\triangle$.
 Therefore if we project $\triangle$ along $v$ to a plane transveral to $v$ we see one of the folwing two pictures.
 
-It is easy to see that the combinatorics of the picture does not depend on the choice of $v$. 
+Note that the combinatorics of the picture does not depend on the choice of $v$. 
 Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ not connected. 
 
 It remains to show that if the combinatorics of the pictures for two spaces is the same then one can continuousely deform one space into the other.
@@ -173,7 +173,28 @@ It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions
 assuming the latter is defined.
 
 \parbf{Exercise~\ref{ex:hausdorff-conv}.}
-If $x\in A_\infty$ then 
+By the definition of the convergence
+\[p\in A_\infty\quad\iff\quad\dist{A_n}{}{}(p)\to 0\quad\text{as}\quad n\to \infty.\] 
+The latter equivalent to existence of a sequence $p_n\in A_n$ such that
+$\dist{p_n}{p}{}\to0$ as $n\to \infty$;
+or equivalently $p_n\to p$.
+Hence the first statement follows.
+
+To show that contrary does not hold,
+consider alternating sequence of two distinct closed set $A,B,A,B,\dots$;
+note that it is not a converging sequence in the sence of Hausdorff.
+On the other hand, the set of all limit points is well defined and it is formed by the intersection $A\cap B$.
+
+\parit{Remark.} The set $\ushort{A}_\infty$ of all limits  of sequences $p_n\in A_n$ is called \emph{lower closed limit}
+and the set $\bar{A}_\infty$ of all partial limits of such sequences is called \emph{upper closed limit}.
+
+Clearly $\ushort{A}_\infty\subset \bar{A}_\infty$.
+If $\ushort{A}_\infty=\bar{A}_\infty$ then it is called \emph{closed limit} of $A_n$.
+
+For proper metric spaces existence, closed limits coincide with limit in the sense of Hausdorff as we defined it.
+All these notions were introduced by Felix Hausdorff in \cite{hausdorff}.
+
+
 
 \parbf{Exercise~\ref{ex:compact-proper-GH}.}
 Fix a countable dense set of points $\mathfrak{S}\subset\spc{X}_\infty$.
@@ -262,6 +283,20 @@ $p_2,q_2,x_2,y_2$ in $\spc{U}$ implies the
 $\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}$.
 
 \parbf{Exercise~\ref{ex:CAT-geodesic}.}
+According to Lemma~\ref{lem:mid>geod}, it is sufficient to prove existence of midpoint for given two point $x$ and $y$.
+
+For each $n$ choose a $\tfrac1n$-midpoint $z_n$;
+that is a point such that
+\[\dist{x}{z_n}{},\dist{y}{z_n}{}\le \tfrac12\cdot\dist{x}{y}{}+\tfrac1n.\]
+
+From the $\Cat{}{0}$ comparison inequality for the quadruple $x,y,z_n,z_m$ we have that $\dist{z_m}{z_n}{}\to0$ as $n,m\to\infty$;
+that is $z_n$ converges in it self.
+
+Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint for the pair $x$ and $y$. 
+
+
+
+
 
 \parbf{Exercise~\ref{ex:thin=cat}.} 
 To prove if part,
@@ -327,10 +362,14 @@ In $\Cat{}{1}$ case, the proof is the same, but we need to assume in addition th
 $\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$.
 
 \parbf{Exercise~\ref{ex:locally-convex}.}
+Denote by $K$ a closed connected locally convex set.
+
+Note that the distance function $\dist{K}{}{}$ is loally convex in a neighborhood of $K$. 
+???
 
 \parbf{Exercise~\ref{ex:closest-point}.}
 Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
-Hence the existance of $p^*$ follows.
+Hence the existence of $p^*$ follows.
 
 Assume $p^*$ is not uniquely defined;
 that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from $p$.
@@ -499,13 +538,16 @@ The only difference, the set $G$ formed by squares with the vertexes at the  mid
 In the proof we apply the following lemma from \cite{edwards}; 
 it follows from the disjoint discs property.
 
-\begin{thm}{Lemma}\label{lem:homomanifold-characterization}
-Let $\spc{S}$ be a simplicial complex which 
+\medskip
+
+\parbf{Lemma.}
+\textit{Let $\spc{S}$ be a simplicial complex which 
 is an $m$-dimensional homology manifold for some $m\ge 5$.
 Assume all the vertices of
 $\spc{S}$ have simply connected links.
-Then $\spc{S}$ is a topological manifold.
-\end{thm}
+Then $\spc{S}$ is a topological manifold.}
+
+\medskip
 
 
 It is sufficient to construct a simplicial complex $\spc{S}$
