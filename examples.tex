@@ -404,8 +404,9 @@ Show that the completion of $\tilde \Theta$ is a  $\Cat{}{1}$ space.
 \end{thm}
 
 \section{Open space sets}
+The material below was inspired by work of Samuel Shefel, and developed by Anton Petrunin \cite{petrunin-shefel}. 
 
-The material below is inspired by work of Samuel Shefel. Shefel seems very intrigued by the survival of metric properties under affine transformation.
+Shefel seems very intrigued by the survival of metric properties under affine transformation.
 To describe an instance of such phenomena,
 note that two-convexity survives under affine transformations of a Euclidean space.
 Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the following holds.
@@ -533,8 +534,7 @@ Nevertheless, is easy to see that $K$ is always a polyhedral space.
 Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is the interior of a polytope.
 \end{thm}
 
-The statement might look obvious, but the proof has a hidden obstacle.
-%it has an underwater stone.
+The statement might look obvious, but it has an underwater stone.
 The proof uses the following exercise.
 
 \begin{thm}{Exercise}\label{ex:hemisphere}
@@ -618,10 +618,10 @@ Then
 
 Let us first show that  
 \[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]  
-Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$, 
+Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$, its boundary
 %it touches 
 %["touches" means "intersects"] 
-its boundary intersects $\Pi_{n}$ in
+ intersects $\Pi_{n}$ in
 a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. Then there is a curve $\gamma$ in 
 $W=\Pi_{n}$ 
 encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. 
@@ -652,8 +652,8 @@ is also the interior of a polytope.
 
 \parit{Proof.}
 Fix a polytope $P$ in $\EE^3$.
-Set $\Omega=\Int P$, we can assume that $\Omega$ is dense in $P$.
-Denote by $F_1,\dots,F_m$ the facets of $P$. By subdividing $F_i$ if necessary we can assume that all $F_i$ are convex.
+Set $\Omega=\Int P$.  We may assume that  $\Omega$ is dense in $P$.
+Denote by $F_1,\dots,F_m$ the facets of $P$. By subdividing $F_i$ if necessary, we may assume that all $F_i$ are convex.
 
 Set $\Omega'=\Conv_2\Omega$ and let $P'$ be the closure of $\Omega'$.
 Further, 
@@ -686,7 +686,7 @@ Each connected component of the complement $F_i\backslash F'_i$ is convex.
 
 Indeed, assume a connected component $A$ of $F_i\backslash F'_i$ fails to be convex.
 Then there is a supporting line $\ell$ to $F'_i$ touching $F'_i$ at a single point in the interior of $F_i$.
-Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it parallel to cut a ``cap'' from the complement of $\Omega$.  
+Then one could rotate the plane of $F_i$ slightly around $\ell$ and move it parallel to cut a ``cap'' from the complement of $\Omega$.  
 The latter means that $\Omega$ is not two-convex, 
 a contradiction.
 \claimqeds
@@ -699,12 +699,12 @@ From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we get that
 Consider the complement 
 $\EE^3\backslash \Omega$ 
 equipped with the length metric.
-By construction of two-convex hull (\ref{prop:2-conv-construction}), 
+By construction of the two-convex hull (\ref{prop:2-conv-construction}), 
 the complement $L=\EE^3\backslash (\Omega'\cup P)$
 is locally convex;
-that is, any points of $L$ admits a convex neighborhood.
+that is, any point of $L$ admits a convex neighborhood.
 
-Summarizing (1)
+Summarizing: (1)
 $\Omega'$ is a 2-convex open set,
 (2) the boundary $\partial\Omega'$ 
 contains a finite number of polygons $F_i'$
@@ -797,10 +797,16 @@ Namely they show the following.
 
 \begin{thm}{Theorem}
 Let $M$ be a Riemannian manifold with boundary $\partial M$.
-A direction tangent to the boundary will be called concave if there is a short geodesic in this direction which leaves the boundary and goes into interior of $M$.
-A sectional direction will be called concave if all the directions in it are concave.
+A direction tangent to the boundary will be called concave if there is a short geodesic in this direction which leaves the boundary and goes into the interior of $M$.
+A 
+%sectional direction 
+%It seems this use of "section" is not widely understood.  Igor Belegradek sent me an angry e-mail about this.
+2-plane tangent to the boundary
+will be called concave if all the directions in it are concave.
 
-Then $M$ is locally $\Cat{}{\kappa}$, where $\kappa$ is an upper bound of sectional curvatures in $M$ and the sectional curvatures of $\partial M$ in the concave directions.
+Then $M$ is locally $\Cat{}{\kappa}$, where $\kappa$ is an upper bound of sectional curvatures of $M$ and  
+concave 
+sectional curvatures of $\partial M$. %in the concave directions.
 \end{thm}
 
 \begin{thm}{Corollary}
@@ -818,7 +824,7 @@ the restriction $f|_S$ has no local maxima or maxima in the interior of $S$.
 Any saddle surface in $\RR^3$ equipped with the length-metric is locally $\Cat{}{0}$.
 \end{thm} 
 
-From Corollary \ref{cor:shefel}, it follows that if there is a counterexample then arbitrary neighborhood of some point of the surface can not be presented as graph in any coordinate system.
+From Corollary \ref{cor:shefel}, it follows that if there is a counterexample, then an arbitrary neighborhood of some point of the surface can not be presented as a graph in any coordinate system.
 
 Furthermore, if a counterexample exists,
 then it forms a piece of boundary of a two-convex set $\Omega$ with the following property. 
@@ -831,8 +837,8 @@ We say a surface $S$ in a metric space $\spc{X}$ is saddle if for any convex fun
 the restriction $f|_S$ has no local maxima in the interior of $S$.
 
 \begin{thm}{Generalized Shefel's  conjecture}
-Any saddle surface in a $\Cat{}{\kappa}$ 
-equipped with the length-metric is locally $\Cat{}{\kappa}$.
+Any saddle surface, equipped with the length-metric, in a $\Cat{}{\kappa}$ space 
+ is locally $\Cat{}{\kappa}$.
 \end{thm}
 
 A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.
