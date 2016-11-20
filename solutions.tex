@@ -3,7 +3,7 @@
 Let $\spc{X}$ be a 4-point metric space.
 
 Fix a tetrahedron $\triangle$ in $\RR^3$.
-The verices of tetrahedron, 
+The verices of $\triangle$ , 
 say $x_0$, $x_1$, $x_2$, $x_3$ can be identified with the points of $\spc{X}$.
 
 Note that there is unique qadratic form $W$ on $\RR^3$
@@ -12,7 +12,7 @@ such that
 for all $i$ and $j$;
 here $\dist{x_i}{x_j}{\spc{X}}$ denotes the distance beween $x_i$ and $x_j$ in $\spc{X}$.
 
-By triangle inequality $W(v)\ge 0$ 
+By the triangle inequality $W(v)\ge 0$ 
 for any vector $v$ parallel to one of the faces of $\triangle$.
 
 Note that $\spc{X}$ is isometric to a 4-point subset in the Euclidean space
@@ -23,22 +23,22 @@ if and ony if $W(v)\ge 0$ for any vector $v$ in $\RR^3$.
 \end{lpic}
 \end{wrapfigure}
 
-Therefore if $\spc{X}$ is not of type $\mathcal{E}_4$ then $W(v)<0$ for some vector $v$.
-From above, the vector $v$ must be transveral to each of 4 faces of $\triangle$.
+Therefore, if $\spc{X}$ is not of type $\mathcal{E}_4$ then $W(v)<0$ for some vector $v$.
+From above, the vector $v$ must be transveral to each of the 4 faces of $\triangle$.
 Therefore if we project $\triangle$ along $v$ to a plane transveral to $v$ we see one of the folwing two pictures.
 
 Note that the combinatorics of the picture does not depend on the choice of $v$. 
 Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ not connected. 
 
-It remains to show that if the combinatorics of the pictures for two spaces is the same then one can continuousely deform one space into the other.
-This can be easily done deforming $W$ and apply permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessay.
+It remains to show that if the combinatorics of the pictures for two spaces are the same then one can continuously deform one space into the other.
+This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
 
 
 
 
 
 \parbf{Exercise~\ref{ex:convex-set}.}
-The simplest proof we know require proof tangent cones for Alexandrov spaces.
+The simplest proof we know requires the construction of tangent cones for Alexandrov spaces.
 
 \parbf{Exercise~\ref{ex:non-contracting-map}.}
 Given any pair of point $x_0,y_0\in K$, 
@@ -88,11 +88,10 @@ From $({*})$, we also get that $f(K)$ is everywhere dense.
 Since $K$ is compact $f\:K\to K$ is surjective. Hence the result follows.\qeds
 
 
-This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[7.3.30]{BBI}.
+Exercise~\ref{ex:non-contracting-map} is a basic introductory lemma on  Gromov--Hausdorff distance \cite[7.3.30]{BBI}.
 The proof presented here is not standard, 
 it was given by Travis Morrison, 
-a students in my MASS class at Penn State, Fall 2011.
-
+a student in Anton Petrunin's MASS class at Penn State in the  Fall of 2011.
 
 \parbf{Exercise~\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
 Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
@@ -115,7 +114,7 @@ Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\sp
 \parit{Alternative solution.}
 Consider the space $c_0$ of all sequences converging to zero equipped with sup-norm.
 The unit ball in $c_0$ is almost what you want --- there is no unique shortest curve between points. 
-All we need now is to enhance {}\emph{bypasses} and to give disadvantage to {}emph{straight lines}. 
+All we need now is to enhance {}\emph{bypasses} and to give disadvantage to \emph{straight lines}. 
 
 This can be done by taking the distance element to be 
 \[\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots}\cdot\|dx\|_\infty,\] 
@@ -151,24 +150,27 @@ is neither. \qeds
 \parbf{Exercise~\ref{ex:adjacent-angles}.}
 Assume contrary; that is
 \[\mangle\hinge pxz+\mangle\hinge pyz< \pi\]
-By triangle inequality for angles (\ref{claim:angle-3angle-inq})
+By the  triangle inequality for angles (\ref{claim:angle-3angle-inq})
 we have 
 \[\mangle\hinge pxy<\pi\]
-The latter cotradicts the triangle inequality for the triangle $[\bar x p \bar y]$,
+The latter contradicts the triangle inequality for the triangle $[\bar x p \bar y]$,
 where the points
 $\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
 are sufficiently close to $p$.
 
 
 \parbf{Exercise~\ref{ex:geod-CBA}.}
-Fix sufficiently small $\eps>0$.
+Without loss of generality we can assume that $\spc{U}$ is a $\Cat{}{1}$.
+Fix a sufficiently small $0<\eps<\pi$.
+
+Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic in  $\spc{U}$ of length $<\pi$ is a geodesic.
 
 Consider a sequence of directions $\xi_n$ of geodesics $[pq_n]$.
-Since the geodesics are extandable,
-we can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal.
+Since the geodesics are extendable, by above 
+we can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal to $\eps$ for all $n$.
 
 Since $\spc{U}$ is proper,
-the sequence $q_n$ has partial limit, say $q$.
+the sequence $q_n$ has a partial limit, say $q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
 assuming the latter is defined.
 
@@ -181,17 +183,17 @@ or equivalently $p_n\to p$.
 Hence the first statement follows.
 
 To show that contrary does not hold,
-consider alternating sequence of two distinct closed set $A,B,A,B,\dots$;
+consider the alternating sequence of two distinct closed set $A,B,A,B,\dots$;
 note that it is not a converging sequence in the sence of Hausdorff.
 On the other hand, the set of all limit points is well defined and it is formed by the intersection $A\cap B$.
 
-\parit{Remark.} The set $\ushort{A}_\infty$ of all limits  of sequences $p_n\in A_n$ is called \emph{lower closed limit}
-and the set $\bar{A}_\infty$ of all partial limits of such sequences is called \emph{upper closed limit}.
+\parit{Remark.} The set $\ushort{A}_\infty$ of all limits  of sequences $p_n\in A_n$ is called the \emph{lower closed limit}
+and the set $\bar{A}_\infty$ of all partial limits of such sequences is called the \emph{upper closed limit}.
 
 Clearly $\ushort{A}_\infty\subset \bar{A}_\infty$.
-If $\ushort{A}_\infty=\bar{A}_\infty$ then it is called \emph{closed limit} of $A_n$.
+If $\ushort{A}_\infty=\bar{A}_\infty$ then it is called  the \emph{closed limit} of $A_n$.
 
-For proper metric spaces existence, closed limits coincide with limit in the sense of Hausdorff as we defined it.
+For  subsets of a proper metric space closed limits coincide with limits in the sense of Hausdorff as we defined it.
 All these notions were introduced by Felix Hausdorff in \cite{hausdorff}.
 
 
@@ -201,7 +203,7 @@ Fix a countable dense set of points $\mathfrak{S}\subset\spc{X}_\infty$.
 For each point $x\in \mathfrak{S}$, choose a sequence 
 of points $x_n\in\spc{X}_n$ such that $x_n\xto{\rho} x$.
 
-Applying diagonal procedure, we can pass to a susequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
+Applying a diagonal procedure, we can pass to a susequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
 that is, $x_n\xto{\rho'} x'$ for some $x'\in\spc{X}_\infty'$.
 
 This way we get a map $\mathfrak{S}\to\spc{X}_\infty'$ defined as $x\mapsto x'$.
@@ -255,7 +257,7 @@ y&=(y_1,y_2)
 in $\spc{U}\times \spc{V}$.
 For the quadruple $p_1,q_1,x_1,y_1$ in $\spc{U}$,
 construct two model triangles $\trig{\~p_1}{\~x_1}{\~y_1}=\modtrig(p_1x_1y_1)_{\EE^2}$ 
-and $\trig{\~q_1}{\~x_1}{\~y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$ 
+and $\trig{\~q_1}{\~x_1}{\~y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$.  
 Similarly, for the quadruple $p_2,q_2,x_2,y_2$ in $\spc{V}$
 construct two model triangles $\trig{\~p_2}{\~x_2}{\~y_2}$ and $\trig{\~q_2}{\~x_2}{\~y_2}$.
 
@@ -282,18 +284,18 @@ If $\~z=(\~z_1,\~z_2)\in [\~x\~y]$ we have then $\~z_1\in [\~x_1\~y_1]$ and $\~z
 \end{align*}
 Therefore $\Cat{}{0}$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
 and 
-$p_2,q_2,x_2,y_2$ in $\spc{U}$ implies the 
-$\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}$.
+$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies the 
+$\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.
 
 \parbf{Exercise~\ref{ex:CAT-geodesic}.}
-According to Lemma~\ref{lem:mid>geod}, it is sufficient to prove existence of midpoint for given two point $x$ and $y$.
+According to Lemma~\ref{lem:mid>geod}, it is sufficient to prove the existence of a midpoint for given two point $x$ and $y$.
 
 For each $n$ choose a $\tfrac1n$-midpoint $z_n$;
 that is a point such that
 \[\dist{x}{z_n}{},\dist{y}{z_n}{}\le \tfrac12\cdot\dist{x}{y}{}+\tfrac1n.\]
 
 From the $\Cat{}{0}$ comparison inequality for the quadruple $x,y,z_n,z_m$ we have that $\dist{z_m}{z_n}{}\to0$ as $n,m\to\infty$;
-that is $z_n$ converges in it self.
+that is $z_n$ is Cauchy and hence converges.
 
 Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint for the pair $x$ and $y$. 
 
@@ -302,7 +304,7 @@ Since the space is complete the sequence $z_n$ has a limit, say $z$, which is cl
 
 
 \parbf{Exercise~\ref{ex:thin=cat}.} 
-To prove if part,
+To prove the if part,
 apply thinness of triangles $\trig pxy$ and $\trig qxy$, where $p$, $q$, $x$ and $y$ as in the definition of $\Cat{}{\kappa}$ comparison,
 see page \pageref{page:CAT-comparison}.
 
@@ -329,9 +331,9 @@ there are nonoverlapping triangles
 $\trig{\~p}{\~x}{\~z_y}\iso\trig {\dot p}{\dot x}{\dot z}$ 
 and 
 $\trig{\~p}{\~y}{\~z_x}\iso\trig {\dot p}{\dot y}{\dot z}$
- inside triangle $\trig{\~p}{\~x}{\~y}$.
+ inside the  triangle $\trig{\~p}{\~x}{\~y}$.
 
-Connect points in each pair
+Connect  the points in each pair
 $(\~z,\~z_x)$, 
 $(\~z_x,\~z_y)$ 
 and $(\~z_y,\~z)$ 
