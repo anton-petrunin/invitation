@@ -3,20 +3,20 @@
 Let $\spc{X}$ be a 4-point metric space.
 
 Fix a tetrahedron $\triangle$ in $\RR^3$.
-The verices of $\triangle$ , 
-say $x_0$, $x_1$, $x_2$, $x_3$ can be identified with the points of $\spc{X}$.
+The vertices of $\triangle$, 
+say $x_0$, $x_1$, $x_2$, $x_3$, can be identified with the points of $\spc{X}$.
 
-Note that there is unique qadratic form $W$ on $\RR^3$
+Note that there is unique quadratic form $W$ on $\RR^3$
 such that 
 \[W(x_i-x_j)=\dist[2]{x_i}{x_j}{\spc{X}}\]
 for all $i$ and $j$;
 here $\dist{x_i}{x_j}{\spc{X}}$ denotes the distance beween $x_i$ and $x_j$ in $\spc{X}$.
 
-By the triangle inequality $W(v)\ge 0$ 
+By the triangle inequality, $W(v)\ge 0$ 
 for any vector $v$ parallel to one of the faces of $\triangle$.
 
-Note that $\spc{X}$ is isometric to a 4-point subset in the Euclidean space
-if and ony if $W(v)\ge 0$ for any vector $v$ in $\RR^3$.
+Note that $\spc{X}$ is isometric to a 4-point subset in Euclidean space
+if and only if $W(v)\ge 0$ for any vector $v$ in $\RR^3$.
 
 \begin{wrapfigure}{r}{52mm}
 \begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/quad(1)}
@@ -24,11 +24,11 @@ if and ony if $W(v)\ge 0$ for any vector $v$ in $\RR^3$.
 \end{wrapfigure}
 
 Therefore, if $\spc{X}$ is not of type $\mathcal{E}_4$ then $W(v)<0$ for some vector $v$.
-From above, the vector $v$ must be transveral to each of the 4 faces of $\triangle$.
-Therefore if we project $\triangle$ along $v$ to a plane transveral to $v$ we see one of the folwing two pictures.
+From above, the vector $v$ must be transversal to each of the 4 faces of $\triangle$.
+Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of these two pictures.
 
-Note that the combinatorics of the picture does not depend on the choice of $v$. 
-Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ not connected. 
+Note that the combinatorics of the picture do not depend on the choice of $v$. 
+Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ is not connected. 
 
 It remains to show that if the combinatorics of the pictures for two spaces are the same then one can continuously deform one space into the other.
 This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
@@ -49,7 +49,7 @@ We present the proof of Travis Morrison.
 Given any pair of point $x_0,y_0\in K$, 
 consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
 such that 
-and $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
+$x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
 
 Since $K$ is compact, 
 we can choose an increasing sequence of integers $n_k$
@@ -87,24 +87,24 @@ It follows that $(\ell_n)$ is a constant sequence.
 In particular 
 \[|x_0-y_0|_K=\ell_0=\ell_1=|f(x_0)-f(y_0)|_K\]
 for any pair of points $(x_0,y_0)$ in $K$.
-That is, $f$ is distance preserving, in particular injective.
+That is, $f$ is distance preserving, in particular, injective.
 
 From $({*})$, we also get that $f(K)$ is everywhere dense.
-Since $K$ is compact $f\:K\to K$ is surjective. Hence the result follows.\qeds
+Since $K$ is compact, $f\:K\to K$ is surjective. Hence the result follows.\qeds
 
 
 \parbf{Exercise~\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
 Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
 
 The map 
-$\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defied as
+$\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defined as
 \[(\rho,\phi,p)\mapsto(\rho\cdot\cos\phi,\rho\cdot\sin\phi,p)\] 
 is the needed isometry.\qeds
 
 \parbf{Exercise~\ref{ex:no-geod}.}
-Given a metric graph $\Gamma$ define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$ substitute the edge $[pq]$ by  a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with an inner metric. 
+Given a metric graph $\Gamma$,  define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$, substitute for the edge $[pq]$ a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with length metric. 
 
-Let $\spc{X}_0=[0,1]$ and define $\spc{X}_k$ for $k\ge 1$ inductively as $\spc{X}_k=P_k(\spc{X}_{k-1})$.
+Let $\spc{X}_0=[0,1]$ and define $\spc{X}_k$ for $k\ge 1$ inductively by $\spc{X}_k=P_k(\spc{X}_{k-1})$.
 
 Let $\spc{Y}_k$ be the set of vertices of $\spc{X}_k$ with the induced metric. By construction the inclusion $\spc{Y}_k\subset \spc{Y}_{k+1}$ is distance preserving.
 
@@ -114,7 +114,7 @@ Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\sp
 The following solution was given by Fedor Nazarov, see \cite{nazarov}.
 
 \parit{Alternative solution.}
-Consider the space $c_0$ of all sequences converging to zero equipped with sup-norm.
+Consider the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
 The unit ball in $c_0$ is almost what you want --- there is no unique shortest curve between points. 
 All we need now is to enhance {}\emph{bypasses} and to give disadvantage to \emph{straight lines}. 
 
@@ -122,7 +122,7 @@ This can be done by taking the distance element to be
 \[\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots}\cdot\|dx\|_\infty,\] 
 which is never less than the usual distance element in $c_0$ and never greater than 3 times it in the unit ball.
 
-If we have any continuous finite length curve $x(t)=(x_1(t),x_2(t),\dots)$ from $y$ to $z$ parametrized by the arclength, we can shorten it by replacing $x_m(t)$ by the maximum of the actual value of $x_m(t)$ and 
+If we have any continuous finite-length curve $x(t)=(x_1(t),x_2(t),\dots)$ from $y$ to $z$ parametrized by arclength, we can shorten it by replacing $x_m(t)$ by the maximum of the actual value of $x_m(t)$ and 
 \[y_m+\tfrac td(z_m-y_m)+\tfrac 12 \min\{t,d-t\},\] 
 where $d$ is the length of $x(t)$. 
 This will work if $m$ is large enough since $\max_t\{|x_m(t)|\}\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.\qeds
@@ -141,7 +141,7 @@ Consider the following subset of $\R^2$:
 \cup
 \bigl(\bigcup_{n\ge 1}\{1/n\}\times[0,1]\bigr)
 \]
-Consider the induced inner metric on $\spc{X}$. It's obviously locally compact and geodesic.
+Consider the induced length metric on $\spc{X}$. It's obviously locally compact and geodesic.
 However, it's immediate to check that its metric completion \[\bar{\spc{X}}
 =
 \bigl([0,1]\times\{0,1\}\bigr)
@@ -150,11 +150,11 @@ However, it's immediate to check that its metric completion \[\bar{\spc{X}}
 is neither. \qeds 
 
 \parbf{Exercise~\ref{ex:adjacent-angles}.}
-Assume contrary; that is
-\[\mangle\hinge pxz+\mangle\hinge pyz< \pi\]
+Assume the contrary; that is
+\[\mangle\hinge pxz+\mangle\hinge pyz< \pi.\]
 By the  triangle inequality for angles (\ref{claim:angle-3angle-inq})
 we have 
-\[\mangle\hinge pxy<\pi\]
+\[\mangle\hinge pxy<\pi.\]
 The latter contradicts the triangle inequality for the triangle $[\bar x p \bar y]$,
 where the points
 $\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
