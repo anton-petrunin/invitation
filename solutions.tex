@@ -32,7 +32,7 @@ Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ not connected.
 
 It remains to show that if the combinatorics of the pictures for two spaces are the same then one can continuously deform one space into the other.
 This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
-
+\qeds
 
 
 
@@ -41,6 +41,11 @@ This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x
 The simplest proof we know requires the construction of tangent cones for Alexandrov spaces.
 
 \parbf{Exercise~\ref{ex:non-contracting-map}.}
+This exercise is a basic introductory lemma on  Gromov--Hausdorff distance \cite[7.3.30]{BBI}.
+We present the proof of Travis Morrison.
+
+\medskip
+
 Given any pair of point $x_0,y_0\in K$, 
 consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
 such that 
@@ -88,18 +93,13 @@ From $({*})$, we also get that $f(K)$ is everywhere dense.
 Since $K$ is compact $f\:K\to K$ is surjective. Hence the result follows.\qeds
 
 
-Exercise~\ref{ex:non-contracting-map} is a basic introductory lemma on  Gromov--Hausdorff distance \cite[7.3.30]{BBI}.
-The proof presented here is not standard, 
-it was given by Travis Morrison, 
-a student in Anton Petrunin's MASS class at Penn State in the  Fall of 2011.
-
 \parbf{Exercise~\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
 Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
 
 The map 
 $\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defied as
 \[(\rho,\phi,p)\mapsto(\rho\cdot\cos\phi,\rho\cdot\sin\phi,p)\] 
-is the needed isometry.
+is the needed isometry.\qeds
 
 \parbf{Exercise~\ref{ex:no-geod}.}
 Given a metric graph $\Gamma$ define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$ substitute the edge $[pq]$ by  a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with an inner metric. 
@@ -110,6 +110,8 @@ Let $\spc{Y}_k$ be the set of vertices of $\spc{X}_k$ with the induced metric. B
 
 Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\spc{Y}=\bar {\spc{Y}}_\infty$ be its metric completion. Then $\spc{Y}$ is a length space since it satisfies the almost midpoint property. But it is not hard to see that no two distinct points in $\spc{Y}$ can be connected by a shortest geodesic. \qeds
 
+
+The following solution was given by Fedor Nazarov, see \cite{nazarov}.
 
 \parit{Alternative solution.}
 Consider the space $c_0$ of all sequences converging to zero equipped with sup-norm.
@@ -123,12 +125,12 @@ which is never less than the usual distance element in $c_0$ and never greater t
 If we have any continuous finite length curve $x(t)=(x_1(t),x_2(t),\dots)$ from $y$ to $z$ parametrized by the arclength, we can shorten it by replacing $x_m(t)$ by the maximum of the actual value of $x_m(t)$ and 
 \[y_m+\tfrac td(z_m-y_m)+\tfrac 12 \min\{t,d-t\},\] 
 where $d$ is the length of $x(t)$. 
-This will work if $m$ is large enough since $\max_t\{|x_m(t)|\}\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.
-
-The above solution was given by Fedor Nazarov, see \cite{nazarov}.
+This will work if $m$ is large enough since $\max_t\{|x_m(t)|\}\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.\qeds
 
 \parbf{Exercise~\ref{exercise from BH}.}
 The following example is taken from \cite{BH}.
+
+\medskip
 
 Consider the following subset of $\R^2$:
 
@@ -156,23 +158,23 @@ we have
 The latter contradicts the triangle inequality for the triangle $[\bar x p \bar y]$,
 where the points
 $\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
-are sufficiently close to $p$.
+are sufficiently close to $p$.\qeds
 
 
 \parbf{Exercise~\ref{ex:geod-CBA}.}
-Without loss of generality we can assume that $\spc{U}$ is a $\Cat{}{1}$.
+Without loss of generality we can assume that $\kappa=1$.
 Fix a sufficiently small $0<\eps<\pi$.
 
-Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic in  $\spc{U}$ of length $<\pi$ is a geodesic.
+Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic shorter than $\pi$ in  $\spc{U}$ is a geodesic.
 
 Consider a sequence of directions $\xi_n$ of geodesics $[pq_n]$.
-Since the geodesics are extendable, by above 
-we can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal to $\eps$ for all $n$.
+We can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal to $\eps$ for all $n$;
+here we use that the geodesics are extendable as local geodesics and minimizing up to length $\pi$.
 
 Since $\spc{U}$ is proper,
 the sequence $q_n$ has a partial limit, say $q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
-assuming the latter is defined.
+assuming the latter is defined.\qeds
 
 \parbf{Exercise~\ref{ex:hausdorff-conv}.}
 By the definition of the convergence
@@ -185,7 +187,7 @@ Hence the first statement follows.
 To show that contrary does not hold,
 consider the alternating sequence of two distinct closed set $A,B,A,B,\dots$;
 note that it is not a converging sequence in the sence of Hausdorff.
-On the other hand, the set of all limit points is well defined and it is formed by the intersection $A\cap B$.
+On the other hand, the set of all limit points is well defined and it is formed by the intersection $A\cap B$.\qeds
 
 \parit{Remark.} The set $\ushort{A}_\infty$ of all limits  of sequences $p_n\in A_n$ is called the \emph{lower closed limit}
 and the set $\bar{A}_\infty$ of all partial limits of such sequences is called the \emph{upper closed limit}.
@@ -193,7 +195,7 @@ and the set $\bar{A}_\infty$ of all partial limits of such sequences is called t
 Clearly $\ushort{A}_\infty\subset \bar{A}_\infty$.
 If $\ushort{A}_\infty=\bar{A}_\infty$ then it is called  the \emph{closed limit} of $A_n$.
 
-For  subsets of a proper metric space closed limits coincide with limits in the sense of Hausdorff as we defined it.
+For the class of closed subsets of a proper metric space closed limits coincide with limits in the sense of Hausdorff as we defined it.
 All these notions were introduced by Felix Hausdorff in \cite{hausdorff}.
 
 
@@ -212,6 +214,7 @@ Note that this map preserves the distances and therefore it can be extended to a
 The same way we construct a distance preserving map $\spc{X}_\infty'\to\spc{X}_\infty$.
 
 It remains to apply Exercise~\ref{ex:non-contracting-map}.
+\qeds
 
 \parbf{Exercise~\ref{ex:cone+susp}.}
 Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
@@ -241,7 +244,10 @@ $\~z'=\~z/|\~z|$ lies on the geodesic $[\~x'\~y']$ in $\SS^2$.
 
 The $\Cat{}{1}$ comparison for $\dist{p'}{q'}{}$ with $\~z'\in[\~x'\~y']$ implies the 
 $\Cat{}{0}$ comparison $\dist{p}{q}{}$ with $\~z\in[\~x\~y]$.
+
 The converse also holds if the $\Cat{}{0}$ comparison holds for all the quadruple of points $a\cdot p$, $b\cdot q$, $c\cdot x$, $d\cdot y$ for $a,b,c,d\ge 0$.
+%???bit more???
+\qeds
 
 \parbf{Exercise~\ref{ex:product}.}
 Fix a quadruple 
@@ -285,7 +291,7 @@ If $\~z=(\~z_1,\~z_2)\in [\~x\~y]$ we have then $\~z_1\in [\~x_1\~y_1]$ and $\~z
 Therefore $\Cat{}{0}$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
 and 
 $p_2,q_2,x_2,y_2$ in $\spc{V}$ implies the 
-$\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.
+$\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.\qeds
 
 \parbf{Exercise~\ref{ex:CAT-geodesic}.}
 According to Lemma~\ref{lem:mid>geod}, it is sufficient to prove the existence of a midpoint for given two point $x$ and $y$.
@@ -297,7 +303,7 @@ that is a point such that
 From the $\Cat{}{0}$ comparison inequality for the quadruple $x,y,z_n,z_m$ we have that $\dist{z_m}{z_n}{}\to0$ as $n,m\to\infty$;
 that is $z_n$ is Cauchy and hence converges.
 
-Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint for the pair $x$ and $y$. 
+Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint for the pair $x$ and $y$.\qeds 
 
 
 
@@ -312,11 +318,11 @@ see page \pageref{page:CAT-comparison}.
 and two points $\bar x\in [px]$, $\bar y\in [py]$.
 Apply the $\Cat{}{\kappa}$ comparison to the quadruples
 $(\bar x, x, p, y)$ and 
-and $(\bar x, \bar y, p, x)$ together with Alexandrov's lemma (\ref{lem:alex}).
+and $(\bar x, \bar y, p, x)$ together with Alexandrov's lemma (\ref{lem:alex}).\qeds
 
 
 \begin{wrapfigure}[7]{r}{39mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/resh(1)}
+\begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/resh(1)}
 \lbl[t]{17.5,.5;$\~p$}
 \lbl[b]{2,27.5;$\~x$}
 \lbl[b]{30,27.5;$\~y$}
@@ -353,7 +359,7 @@ or $[y z]$ whose distance from the lefthand endpoint of the segment is $r$.
 \item Finally, if $x$ lies in the remaining curvilinear triangle $\~z \~z_x \~z_y$, 
 set $F(x) = z$. 
 \end{itemize}
-By construction, $F$ satisfies the conditions. 
+By construction, $F$ satisfies the conditions. \qeds
 
 \parbf{Exercise~\ref{ex:convex-balls}.}
 It is sufficient to show that 
@@ -364,7 +370,7 @@ The statement follows since the triangle $\trig pxy$ is thin
 and the above condition holds in the Euclidean plane.
 
 In $\Cat{}{1}$ case, the proof is the same, but we need to assume in addition that 
-$\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$.
+$\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$.\qeds
 
 \parbf{Exercise~\ref{ex:locally-convex}.}
 Denote by $K$ a closed connected locally convex set.
@@ -387,7 +393,7 @@ Therefore $f=\dist{K}{}{}$ is convex on
 along $[x\alpha(s)]$.
 Note that $f(x)=f(\alpha(s))=0$ and $f\ge 0$, 
 therefore $f(x)= 0$ for any $x\in [x\alpha(s)]$;
-that is, $x\in K$, a contradiction.
+that is, $x\in K$, a contradiction.\qeds
 
 
 \parbf{Exercise~\ref{ex:closest-point}.}
@@ -428,16 +434,16 @@ By comparison and triangle inequality for angles, we get \ref{claim:angle-3angle
 assuming that the left hand sides are defined. 
 Hence 
 \[\dist{\~p}{\~q}{}\ge \dist{\~p^*}{\~q^*}{}.\]
-The latter is equivalent to \ref{eq:short-p-p}.
+The latter is equivalent to \ref{eq:short-p-p}.\qeds
 
 \parbf{Exercise~\ref{ex:supporting-planes}.}
 By approximation, it is sufficient to consider the case when 
 $A$ and $B$ have smooth boundary.
 In the latter case the choice of $\dot A$ and $\dot B$ is unique;
-and a variation argument shows that it satisfies the condition.
+and a variation argument shows that it satisfies the condition.\qeds
 
-\begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(0mm),b(-00mm),r(0mm),l(0mm)]{pics/compact-walls(1)}
+\begin{wrapfigure}[12]{r}{44mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/compact-walls(1)}
 \lbl[tr]{21,7.5;$0$}
 \lbl[tr]{10,20;$A^i$}
 \lbl[tr]{34,12;$A^j$}
@@ -451,6 +457,7 @@ for each wall $A^i$.
 
 It remains to note that all the intersections of  walls  have $\eps$-wide for
 \[\eps=2\cdot \arcsin\tfrac rR.\]
+\qedsf
 
 \parbf{Exercise~\ref{ex:centrally-simmetric-walls}.}
 Note that there is $R<\infty$
@@ -458,7 +465,7 @@ such that if $X$ is an intersection of arbitrary number of walls
 and then there is an isometry of $X$ 
 which moves any point $p\in X$ to a point in $\oBall(0,R)$.
 
-The rest of the proof goes along the same lines as Exercise~\ref{ex:compact-walls}.
+The rest of the proof goes along the same lines as Exercise~\ref{ex:compact-walls}.\qeds
 
 \parbf{Exercise~\ref{ex:null-homotopic}.}
 Note that the existance of null-homotopy is equivalent to the following.
@@ -473,7 +480,7 @@ such that
 
 By Corollary~\ref{cor:discrete-paths},
 the construction in Corollary~\ref{cor:path-geod} produces the same result for $\alpha_\tau$ and $\beta_\tau$.
-Hence the result follows.
+Hence the result follows.\qeds
 
 \parbf{Exercise~\ref{ex:geod-circle}.}
 The following proof works for any compact locally simply connected metric space;
@@ -493,7 +500,7 @@ Note that
  \item  $\gamma_1$ or $\gamma_2$ is noncontractible,
  \item $\length\gamma_1, \length\gamma_2<\length \gamma$,
 \end{itemize}
-a contradiction.
+a contradiction.\qeds
 
 
 \parbf{Exercise~\ref{ex:unique-geod=CAT}.}
@@ -508,7 +515,7 @@ consider two curves in $\Cone\Sigma$ written in the polar coordinates as
 Note that both form geodesics in $\Cone\Sigma$ and they have common ends.
 
 Finally note that small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into $\spc{P}$.
-Hence the statement follows.
+Hence the statement follows.\qeds
 
 
 
@@ -522,13 +529,14 @@ A set vertices form a simplex in the subdevision,
 if it can be ordered, say as $v_1,\dots,v_\kay$,
 such that the corresponding simplices form a nested sequence
 \[\triangle_{v_1}\subset\dots\subset\triangle_{v_\kay}.\]
-
+\qedsf
 
 
 
 \parbf{Exercise~\ref{ex:flag>=pi/2}.}
 The proof goes along the same lines as the proof of Flag condition~\ref{thm:flag}.
-The only difference that geodesic spends time at least $\pi$ the star of each vertex.
+The only difference that geodesic may spend time \emph{more than} $\pi$ in the star of each vertex.
+\qeds
 
 \parbf{Exercise~\ref{ex:short-retracts}.}
 Start with a copy of $\spc{U}$ for each vertex of $\Gamma$
@@ -538,7 +546,7 @@ At the stage $n$ glue only spaces along $A^n$.
 
 In one step of the stage, choose two connected components of partially glued copies and glue them along the corresponding $A^n$'s.
 Apply Reshetnyak gluing theorem to show that each connected component after the stage is $\Cat{}{0}$ assuming that all connected component were $\Cat{}{0}$ before the step.
-
+\qeds
 
 \parbf{Exercise~\ref{ex:tree}.}
 The space $\spc{T}_n$ has natural cone structure with the vertex formed by completely degenerate tree --- all its edges have zero length.
@@ -548,6 +556,7 @@ with all-right spherical simplicies.
 
 It remains to check that the complex is flag 
 and apply Exercise~\ref{ex:cone+susp}.
+\qeds
 
 \parbf{Exercise~\ref{ex:flag-aspherical}.}
 If the complex $\mathcal{S}$ is flag then its cubical analog $\square_{\mathcal{S}}$ is locally $\Cat{}{0}$ and therefore aspherical.
@@ -560,16 +569,16 @@ Since $\mathcal{T}$ is flag,
 $\tilde\square_{\mathcal{T}}$,
 the universal cover of $\square_{\mathcal{T}}$, is $\Cat{}{0}$.
 
-
 Choose a minimal cube $Q$ in $\tilde\square_{\mathcal{T}}$ which is not presented in $\tilde\square_{\mathcal{S}}$.
 By Exercise~\ref{ex:locally-convex}, $Q$ is convex set in $\tilde\square_{\mathcal{T}}$.
 The closest point projection $\tilde\square_{\mathcal{T}}\to Q$ is a retraction.
 It follows that the boundary $\partial Q$ is not contractable in $\tilde\square_{\mathcal{T}}\backslash\Int Q$ and therefore it is also not contractable in $\tilde\square_{\mathcal{S}}$.
-
+\qeds
 
 \parbf{Exercise~\ref{ex:example-pi_infty-new}.}
 Solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}.
 The only difference, the set $G$ formed by squares with the vertexes at the  midpoints of some edges of the cubical analog. 
+\qeds
 
 \parbf{Exercise~\ref{ex:funny-S}.}
 In the proof we apply the following lemma from \cite{edwards}; 
@@ -635,6 +644,7 @@ Therefore
 =\pi_1\Sigma\ne 0.
 \]
 That is, $\spc{S}$ satisfies the conditions above.
+\qeds
 
 \parbf{Exercise~\ref{ex:concave-triangle}.}
 By approximation,
@@ -645,25 +655,18 @@ The base case of triangle is evident.
 
 To prove the step, apply Alexndrov's lemma (\ref{lem:alex}) 
 together with the costruction in Exercise~\ref{ex:short-map}.
+\qeds
 
 \parbf{Exercise~\ref{ex:bishop-sphere}.}
 Unlike in the plane, sphere contains loons and triangles with concave sides.
 To adapt the proof of Theorem~\ref{thm:bishop-plane}
-to the spherical case, we need  the following claim; 
-its proof is left to the reader.
+we use Exercise~\ref{ex:hemisphere}
 
-\medskip
-
-\parbf{Claim.}
-\textit{Any closed curve shorter than $2\cdot\pi$ in the unit sphere lies in an open hemisphere.}
-
-\medskip
-
-From the claim it follows that such if a concave loon or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
+From the Exercise~\ref{ex:hemisphere}, it follows that such if a concave loon or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
 
 By the assumption, $\Theta$ does not contain a closed hemisphere. 
 Therefore the argument in the proof of Theorem~\ref{thm:bishop-plane} shows that any triangle in $\tilde\Theta$ with perimeter less than $2\cdot\pi$ is spherically thin. 
-
+\qeds
 
 
 \parbf{Exercise~\ref{ex:two-planes}.}
@@ -684,6 +687,7 @@ In \cite{charney-davis-93}, Ruth Charney and Michael Davis
 gave a complete answer to the analogous question for three planes.
 In particular they show that if a covering space of $\EE^4$
 branching at three planes through one origin is $\Cat{}{0}$ then these all are complex planes for some complex structure on $\EE^4$.
+\qeds
 
 \parbf{Exercise~\ref{ex:hemisphere}.}
 Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
@@ -694,9 +698,11 @@ Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.
 Let $z$ be the midpoint of  $[pq]$.  
 We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
 If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
-Without loss of generality we may assume that $r\in\check\alpha$. 
+Without loss of generality we may assume that $r\in\check\alpha$.
+
 The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which passes through $r$ and its antipodal point $r'$.
 Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
+\qeds
 
 \parit{A solution via Crofton formula.}
 Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
@@ -718,7 +724,7 @@ By Crofton's formula we have that
 \\
 &\ge2\cdot\pi.
 \end{align*}
-
+\qedsf
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
 Consider the surface $S$ 
@@ -738,7 +744,7 @@ Show that there is a line segmet of $\partial S$ starting at $x$ or $y$ which li
 From the latter statement and local convexity of $S$, 
 all points of $[pq]$ sufficiently close to $p$ lie in $S$,
 a contradiction.
-
+\qeds
 
 
 \parbf{Exercise~\ref{ex:CAT=>two-convex}.}
@@ -746,6 +752,7 @@ Show that if $K$ is not two-convex then there is a plane triangle $\triangle$ wh
 but its interior contains the points of the complement $\EE^m\backslash K$.
 
 It remains to note that $\triangle$ is not thin in $K$.
+\qeds
 
 \parbf{Exercise~\ref{ex:two-convex-not-a-CAT}.}
 Clearly the set $W$ is two-convex.
@@ -765,7 +772,7 @@ is formed by a joint of 4 copies of $[\xi\zeta]$.
 In particular there is a closed geodesic in $\Sigma$ shorter than $2\cdot\pi$.
 Hence $\Sigma$ is not $\Cat{}{1}$ 
 and therefore $K'$ and consequently $K$ are not $\Cat{}{0}$.
-
+\qeds
 
 \parbf{Exercise~\ref{ex:branching-cover}.}
 Consider a $\eps$-neighborhood $A$ of the geodesic.
@@ -781,5 +788,6 @@ Further note that $\spc{W}'_\eps$ is simply connected.
 By globalization theorem, $\spc{W}'_\eps$ s $\Cat{}{0}$.
 
 It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$ and apply Proposition~\ref{prop:cat-limit}.
+\qeds
 
 
