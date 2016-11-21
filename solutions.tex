@@ -117,8 +117,14 @@ The unit ball in $c_0$ is almost what you want --- there is no unique shortest c
 All we need now is to enhance {}\emph{bypasses} and to give disadvantage to \emph{straight lines}. 
 
 This can be done by taking the distance element to be 
-\[\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots}\cdot\|dx\|_\infty,\] 
-which is never less than the usual distance element in $c_0$ and never greater than 3 times it in the unit ball.
+\[ds:=\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots}\cdot\|dx\|_\infty,\] 
+
+Note that on the unit ball in $c_0$ we obviously have 
+
+\[
+ \frac{1}{3}\|dx\|_\infty \le ds\le \|dx\|_\infty.
+\]
+
 
 If we have any continuous finite length curve $x(t)=(x_1(t),x_2(t),\dots)$ from $y$ to $z$ parametrized by the arclength, we can shorten it by replacing $x_m(t)$ by the maximum of the actual value of $x_m(t)$ and 
 \[y_m+\tfrac td(z_m-y_m)+\tfrac 12 \min\{t,d-t\},\] 
@@ -193,7 +199,7 @@ and the set $\bar{A}_\infty$ of all partial limits of such sequences is called t
 Clearly $\ushort{A}_\infty\subset \bar{A}_\infty$.
 If $\ushort{A}_\infty=\bar{A}_\infty$ then it is called  the \emph{closed limit} of $A_n$.
 
-For  subsets of a proper metric space closed limits coincide with limits in the sense of Hausdorff as we defined it.
+For  subsets of a proper metric space closed limits coincide with limits in the sense of Hausdorff as we defined them.
 All these notions were introduced by Felix Hausdorff in \cite{hausdorff}.
 
 
