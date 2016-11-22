@@ -156,6 +156,12 @@ Suppose $p^1,p^2,q^1,q^2$ are points in a $\Cat{}{0}$ proper length space $\spc{
 is a convex function.
 \end{thm}
 
+\begin{thm}{Corollary}\label{cor:dist-convex}
+Let $K$ be a closed convex subset in a  $\Cat{}{0}$ proper length space $\spc{U}$.
+Then  $\dist{K}{}{}$ is convex on $\spc{U}$.
+\end{thm}
+
+
 \begin{thm}{Corollary}\label{cor:contractible-cat}
 Any $\Cat{}{0}$ proper length space is contractible.
 
@@ -621,15 +627,14 @@ Further we will use the following exercise in convex geometry
 
 \begin{thm}{Exercise}\label{ex:supporting-planes}
 Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
-Given two point $x,y\in \EE^m$ consider a point $z\in A\cap B$
-which minimize the sum 
-\[\dist{x}{z}{}+\dist{y}{z}{}.\] 
+Given two point $x,y\in \EE^m$  let $f(z)=\dist{x}{z}{}+\dist{y}{z}{}$.
+
+Let $z_0\in A\cap B$ be  a point of minimum of $ f|_{A\cap B}$.
+
 Show that there are half-spaces $\dot A$ and $\dot B$ such that
 $\dot A\supset A$ and $\dot B\supset B$
-and 
-\[\dist{x}{z}{}+\dist{y}{z}{}\] 
-takes minimal value
-for all $z\in \dot A\cap \dot B$.
+and $z_0$ is also a point of minimum of $ f|_{\dot A\cap \dot B}$.
+
 \end{thm}
 
 Note that the angle measure of  $\dot A\cap \dot B$ is at least $\alpha$.
@@ -692,9 +697,9 @@ In this case we may say briefly \index{$\eps$-wide corners}\emph{all intesection
 
 \begin{thm}{Exercise}\label{ex:compact-walls}
 Assume that the walls
-of billiard table $T$ 
+of a billiard table $T$ 
 are compact, convex and have a common  interior point.
-Show that all the intersections of  walls of $T$ have $\eps$-wide corners for some $\eps>0$.
+Show that all the intersections of the  walls of $T$ have $\eps$-wide corners for some $\eps>0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:centrally-simmetric-walls}
