@@ -445,10 +445,16 @@ The latter is equivalent to \ref{eq:short-p-p}.\qeds
 
 \parbf{Exercise~\ref{ex:supporting-planes}.}
 By approximation, it is sufficient to consider the case when 
-$A$ and $B$ have smooth boundary. 
-Suppose $z_0\in\partial A\cap\partial B$. Then  set  $\dot A$ ($\dot B$)  to be the uniquely defined supporting hyperspace to $A$ ( $B$) at $z_0$ containing $A$ ($B$). The case of a general $z_0$ is treated similarly.
-The case of general $A, B$ with possibly non-smooth boundaries  follows by 
-and a variation argument.\qeds
+$A$ and $B$ have smooth boundary.   If $[xy]\cap A\cap B\ne \emptyset$ then $z_0\in [xy]$ and $\dot A, \dot B$ can be chosen to be arbitrary half-spaces containing $A$ and $B$ respectively.  
+
+
+
+Suppose $[xy]\cap A\cap B=\emptyset$. Then $z_0\in\partial (A\cap B)$.  Let $C=\{f\le f(z_0)\}$. Note that $C$ is compact, convex and has  smooth boundary. Suppose $z_0\in\partial  A \cap \Int B$. Then $A$ and $C$ touch at $z_0$ and we can set $\dot A$   to be the uniquely defined supporting hyperspace to $A$  at $z_0$ and $\dot B$   to be any hyperspace containing $B$. The case $z_0\in\partial B \cap \Int A$ is treated similarly.
+
+
+Finally, suppose
+ $z_0\in\partial A\cap\partial B$. Then  set  $\dot A$ ($\dot B$)  to be the uniquely defined supporting hyperspace to $A$ ($B$) at $z_0$ containing $A$ ($B$).  
+\qeds
 
 \begin{wrapfigure}[12]{r}{44mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/compact-walls(1)}
