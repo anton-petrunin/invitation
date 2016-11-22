@@ -482,7 +482,7 @@ The rest of the proof goes along the same lines as for  Exercise~\ref{ex:compact
 
 \parbf{Exercise~\ref{ex:null-homotopic}.}
 Note that the existance of null-homotopy is equivalent to the following.
-There are two one-parameter family of paths $\alpha_\tau$ and $\beta_\tau$, $\tau\in[0,1]$ 
+There are two one-parameter families of paths $\alpha_\tau$ and $\beta_\tau$, $\tau\in[0,1]$ 
 such that 
 \begin{itemize}
 \item $\length\alpha_\tau$, $\length\beta_\tau<\pi$ for any $\tau$.
@@ -505,7 +505,7 @@ Consider a shortest noncontractible closed curve $\gamma$ in the space.
 
 Assume that $\gamma$ is not a geodesic circle,
 that is  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
-is shorter then the length of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to $q$.
+is shorter then the lengths of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to $q$.
 Consider the joints, say $\gamma_1$ and $\gamma_2$
 of $[qp]$ with $\alpha_1$ and $\alpha_2$.
 Note that
@@ -522,25 +522,25 @@ by Theorem~\ref{thm:PL-CAT} there a link $\Sigma$ of some simplex contains a clo
 Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$
 parametrized by $[-\ell,\ell]$
 
-Fix small $\delta>0$ and 
+Fix a small $\delta>0$ and 
 consider two curves in $\Cone\Sigma$ written in the polar coordinates as 
 \[\gamma_i(t)=(\alpha_i(\tan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
-Note that both form geodesics in $\Cone\Sigma$ and they have common ends.
+Note that both form geodesics in $\Cone\Sigma$ and  have common ends.
 
-Finally note that small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into $\spc{P}$.
+Finally note that a small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into $\spc{P}$.
 Hence the statement follows.\qeds
 
 
 
 
 \parbf{Exercise~\ref{ex:baricenric-flag}.}
-Checking the flag condition is straightforward once you know the following description of the barycentric subdevision.
+Checking the flag condition is straightforward once we know the following description of the barycentric subdivision.
 
-Each vertexes $v$ of the barycentric subdevision 
+Each vertexes $v$ of the barycentric subdivision 
 corresponds to a simplex $\triangle_v$ of the original triangulation.
-A set vertices form a simplex in the subdevision, 
+A set vertices form a simplex in the subdivision 
 if it can be ordered, say as $v_1,\dots,v_\kay$,
-such that the corresponding simplices form a nested sequence
+so that the corresponding simplices form a nested sequence
 \[\triangle_{v_1}\subset\dots\subset\triangle_{v_\kay}.\]
 \qedsf
 
@@ -548,14 +548,14 @@ such that the corresponding simplices form a nested sequence
 
 \parbf{Exercise~\ref{ex:flag>=pi/2}.}
 The proof goes along the same lines as the proof of Flag condition~\ref{thm:flag}.
-The only difference that geodesic may spend time \emph{more than} $\pi$ in the star of each vertex.
+The only difference is that a geodesic may spend time \emph{more than} $\pi$ in the star of each vertex.
 \qeds
 
 \parbf{Exercise~\ref{ex:short-retracts}.}
 Start with a copy of $\spc{U}$ for each vertex of $\Gamma$
-and glue them recuresevely using the following operation and stages.
+and glue them recuresevely using the following operations and stages.
 
-At the stage $n$ glue only spaces along $A^n$.
+At the stage $n$ only glue  spaces along $A^n$.
 
 In one step of the stage, choose two connected components of partially glued copies and glue them along the corresponding $A^n$'s.
 Apply Reshetnyak gluing theorem to show that each connected component after the stage is $\Cat{}{0}$ assuming that all connected component were $\Cat{}{0}$ before the step.
