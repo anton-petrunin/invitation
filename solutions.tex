@@ -115,23 +115,31 @@ The following solution was given by Fedor Nazarov, see \cite{nazarov}.
 
 \parit{Alternative solution.}
 Consider the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
-The unit ball in $c_0$ is almost what you want --- there is no unique shortest curve between points. 
-All we need now is to enhance {}\emph{bypasses} and to give disadvantage to \emph{straight lines}. 
 
-This can be done by taking the distance element to be 
-\[ds:=\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots}\cdot\|dx\|_\infty,\] 
-
-Note that on the unit ball in $c_0$ we obviously have 
-
-\[
- \frac{1}{3}\|dx\|_\infty \le ds\le \|dx\|_\infty.
-\]
+Consider the length metric on the unit ball in $c_0$ defined by 
+conformal factor
+\[\phi(\bm{x})=\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots},\]
+where $\bm{x}=(x_1,x_2\,\dots)\in c_0$.
+Note that the obtained metric space is bi-Lipschitz to the original unit ball with constants $\tfrac{1}{3}$ and $1$.
 
 
-If we have any continuous finite-length curve $x(t)=(x_1(t),x_2(t),\dots)$ from $y$ to $z$ parametrized by arclength, we can shorten it by replacing $x_m(t)$ by the maximum of the actual value of $x_m(t)$ and 
-\[y_m+\tfrac td(z_m-y_m)+\tfrac 12 \min\{t,d-t\},\] 
-where $d$ is the length of $x(t)$. 
-This will work if $m$ is large enough since $\max_t\{|x_m(t)|\}\to 0$ as $m\to\infty$ and both functions change slower than the distance along the original curve.\qeds
+Consider a continuous finite-length curve parametrized by arclength 
+\[\bm{x}(t)=(x_1(t),x_2(t),\dots)\] 
+from $\bm{y}=(y_1,y_2,\dots)$ to $\bm{z}=(z_1,z_2,\dots)$.
+Set
+\[x_m'(t)=\max\{x_m(t),y_m+\tfrac t\ell\cdot (z_m-y_m)+\tfrac 12\cdot \min\{t,\ell-t\}\},\] 
+where $\ell$ is the length of $x(t)$
+and
+\[\bm{x}'(t)=(x_1(t),\dots,x_{m-1}(t),x_m'(t), x_{m+1}(t)\dots).\]
+
+Note that 
+\[\length \bm{x}'\le \length \bm{x};\]
+moreover, the inequality is strict if $x_m'(t)\ne x_m(t)$ for some $t$.
+
+If $m$ is large enough then $\max_t\{|x_m(t)|\}$ is sufficiently close to $0$.
+Therefore $x_m'(t)\ne x_m(t)$ for some $t$.
+Hence the statement follows.
+\qeds
 
 \parbf{Exercise~\ref{exercise from BH}.}
 The following example is taken from \cite{BH}.
