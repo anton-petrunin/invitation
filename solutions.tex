@@ -114,31 +114,33 @@ Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\sp
 The following solution was given by Fedor Nazarov, see \cite{nazarov}.
 
 \parit{Alternative solution.}
-Consider the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
+Consider the unit ball $(B,d_0)$
+in the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
 
-Consider the length metric on the unit ball in $c_0$ defined by 
-conformal factor
-\[\phi(\bm{x})=\frac1{2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots},\]
-where $\bm{x}=(x_1,x_2\,\dots)\in c_0$.
-Note that the obtained metric space is bi-Lipschitz to the original unit ball with constants $\tfrac{1}{3}$ and $1$.
+Consider an other metric $d_1$ which is differ from $d_0$ by conformal factor
+\[\phi(\bm{x})={2+\frac{x_1}2+\frac{x_2}4+\frac{x_3}8+\dots},\]
+where $\bm{x}=(x_1,x_2\,\dots)\in B$.
+That is, if $\bm{x}(t)$, $t\in[0,\ell]$ is a curve parametrized by $d_0$-length 
+then its $d_1$-length is 
+\[\length_1\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}(t)\cdot dt.\]
+Note that the metric $d_1$ is bi-Lipschitz to $d_0$ with the constants $1$ and $3$.
 
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ be two curves which differ only by $m$-th cooredinate, say $x_m(t)$ and $x_m'(t)$.
+Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
+the function $x'_m(t)$ is locally $\tfrac1{10}$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$ then 
+\[\length_1\bm{x}'\le \length_1\bm{x}.\]
+Moreover the inequality is strict if $x'_m(t)< x_m(t)$ for some $t$.
 
-Consider a continuous finite-length curve parametrized by arclength 
-\[\bm{x}(t)=(x_1(t),x_2(t),\dots)\] 
-from $\bm{y}=(y_1,y_2,\dots)$ to $\bm{z}=(z_1,z_2,\dots)$.
-Set
-\[x_m'(t)=\max\{x_m(t),y_m+\tfrac t\ell\cdot (z_m-y_m)+\tfrac 12\cdot \min\{t,\ell-t\}\},\] 
-where $\ell$ is the length of $x(t)$
-and
-\[\bm{x}'(t)=(x_1(t),\dots,x_{m-1}(t),x_m'(t), x_{m+1}(t)\dots).\]
-
-Note that 
-\[\length \bm{x}'\le \length \bm{x};\]
-moreover, the inequality is strict if $x_m'(t)\ne x_m(t)$ for some $t$.
-
-If $m$ is large enough then $\max_t\{|x_m(t)|\}$ is sufficiently close to $0$.
-Therefore $x_m'(t)\ne x_m(t)$ for some $t$.
-Hence the statement follows.
+Fix a curve $\bm{x}(t)$ parametrized by the arc length, $t\in[0,\ell]$.
+Choose large enough $m$,
+so that $\max_t\{|x_m(t)|\}$ is sufficiently close to $0$.
+Consider an other curve $\bm{x}'(t)$ as above defined by
+\[x'_m(t)=\min\{x_m(t),(1-\tfrac t\ell)\cdot x_m(0)
++\tfrac t\ell\cdot x_m(\ell)
+-\tfrac 1{100}\cdot \min\{t,\ell-t\}\}.\]
+Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points and from above 
+\[\length_1\bm{x}'<\length_1\bm{x}.\]
+It follows that $(B,d_1)$ has no geodesics.
 \qeds
 
 \parbf{Exercise~\ref{exercise from BH}.}
