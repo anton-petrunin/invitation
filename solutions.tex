@@ -123,24 +123,27 @@ where $\bm{x}=(x_1,x_2\,\dots)\in B$.
 That is, if $\bm{x}(t)$, $t\in[0,\ell]$ is a curve parametrized by $d_0$-length 
 then its $d_1$-length is 
 \[\length_1\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}(t)\cdot dt.\]
-Note that the metric $d_1$ is bi-Lipschitz to $d_0$ with the constants $1$ and $3$.
+Note that the metric $d_1$ is bi-Lipschitz to $d_0$.
 
 Assume $\bm{x}(t)$ and $\bm{x}'(t)$ be two curves which differ only by $m$-th cooredinate, say $x_m(t)$ and $x_m'(t)$.
 Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
-the function $x'_m(t)$ is locally $\tfrac1{10}$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$ then 
+the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$ then 
 \[\length_1\bm{x}'\le \length_1\bm{x}.\]
-Moreover the inequality is strict if $x'_m(t)< x_m(t)$ for some $t$.
+Moreover this inequality is strict if $x'_m(t)< x_m(t)$ for some $t$.
 
 Fix a curve $\bm{x}(t)$ parametrized by the arc length, $t\in[0,\ell]$.
-Choose large enough $m$,
-so that $\max_t\{|x_m(t)|\}$ is sufficiently close to $0$.
-Consider an other curve $\bm{x}'(t)$ as above defined by
-\[x'_m(t)=\min\{x_m(t),(1-\tfrac t\ell)\cdot x_m(0)
+We can choose large enough $m$,
+so that $x_m(t)$ is sufficiently close to $0$ for any $t$.
+In particular, for some values $t$, we have $y_m(t)<x_m(t)$, where
+\[y_m(t)=(1-\tfrac t\ell)\cdot x_m(0)
 +\tfrac t\ell\cdot x_m(\ell)
--\tfrac 1{100}\cdot \min\{t,\ell-t\}\}.\]
+-\tfrac 1{100}\cdot \min\{t,\ell-t\}.\]
+Consider the curve $\bm{x}'(t)$ as above with
+\[x'_m(t)=\min\{x_m(t),y_m(t)\}.\]
 Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points and from above 
 \[\length_1\bm{x}'<\length_1\bm{x}.\]
-It follows that $(B,d_1)$ has no geodesics.
+That is for any curve $\bm{x}(t)$ in $(B,d_1)$, we can find a shorter curve $\bm{x}'(t)$ with the same end points.
+In particular, $(B,d_1)$ has no geodesics.
 \qeds
 
 \parbf{Exercise~\ref{exercise from BH}.}
