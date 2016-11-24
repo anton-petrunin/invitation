@@ -102,6 +102,7 @@ $\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defined as
 is the needed isometry.\qeds
 
 \parbf{Exercise~\ref{ex:no-geod}.}
+\begin{comment}
 Given a metric graph $\Gamma$,  define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$, substitute for the edge $[pq]$ a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with length metric. 
 
 Let $\spc{X}_0=[0,1]$ and define $\spc{X}_k$ for $k\ge 1$ inductively by $\spc{X}_k=P_k(\spc{X}_{k-1})$.
@@ -109,11 +110,11 @@ Let $\spc{X}_0=[0,1]$ and define $\spc{X}_k$ for $k\ge 1$ inductively by $\spc{X
 Let $\spc{Y}_k$ be the set of vertices of $\spc{X}_k$ with the induced metric. By construction the inclusion $\spc{Y}_k\subset \spc{Y}_{k+1}$ is distance preserving.
 
 Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\spc{Y}=\bar {\spc{Y}}_\infty$ be its metric completion. Then $\spc{Y}$ is a length space since it satisfies the almost midpoint property. But it is not hard to see that no two distinct points in $\spc{Y}$ can be connected by a shortest geodesic. \qeds
+\end{comment}
 
+The following example is essentially due to Fedor Nazarov, see \cite{nazarov}.
 
-The following solution was given by Fedor Nazarov, see \cite{nazarov}.
-
-\parit{Alternative solution.}
+%\parit{Alternative solution.}
 Consider the unit ball $(B,d_0)$
 in the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
 
@@ -125,7 +126,7 @@ then its $d_1$-length is
 \[\length_1\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}(t)\cdot dt.\]
 Note that the metric $d_1$ is bi-Lipschitz to $d_0$.
 
-Assume $\bm{x}(t)$ and $\bm{x}'(t)$ be two curves which differ only by $m$-th cooredinate, say $x_m(t)$ and $x_m'(t)$.
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves which differ only by $m$-th coordinate, say $x_m(t)$ and $x_m'(t)$.
 Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
 the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$ then 
 \[\length_1\bm{x}'\le \length_1\bm{x}.\]
@@ -142,7 +143,7 @@ Consider the curve $\bm{x}'(t)$ as above with
 \[x'_m(t)=\min\{x_m(t),y_m(t)\}.\]
 Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points and from above 
 \[\length_1\bm{x}'<\length_1\bm{x}.\]
-That is for any curve $\bm{x}(t)$ in $(B,d_1)$, we can find a shorter curve $\bm{x}'(t)$ with the same end points.
+That is, for any curve $\bm{x}(t)$ in $(B,d_1)$, we can find a shorter curve $\bm{x}'(t)$ with the same end points.
 In particular, $(B,d_1)$ has no geodesics.
 \qeds
 
@@ -556,9 +557,9 @@ Hence the statement follows.\qeds
 \parbf{Exercise~\ref{ex:baricenric-flag}.}
 Checking the flag condition is straightforward once we know the following description of the barycentric subdivision.
 
-Each vertexes $v$ of the barycentric subdivision 
+Each vertex $v$ of the barycentric subdivision 
 corresponds to a simplex $\triangle_v$ of the original triangulation.
-A set vertices form a simplex in the subdivision 
+A set of vertices form a simplex in the subdivision 
 if it can be ordered, say as $v_1,\dots,v_\kay$,
 so that the corresponding simplices form a nested sequence
 \[\triangle_{v_1}\subset\dots\subset\triangle_{v_\kay}.\]
@@ -573,7 +574,7 @@ The only difference is that a geodesic may spend time \emph{more than} $\pi$ in 
 
 \parbf{Exercise~\ref{ex:short-retracts}.}
 Start with a copy of $\spc{U}$ for each vertex of $\Gamma$
-and glue them recuresevely using the following operations and stages.
+and glue them recursively using the following operations and stages.
 
 At the stage $n$ only glue  spaces along $A^n$.
 
@@ -582,7 +583,7 @@ Apply Reshetnyak gluing theorem to show that each connected component after the 
 \qeds
 
 \parbf{Exercise~\ref{ex:tree}.}
-The space $\spc{T}_n$ has natural cone structure with the vertex formed by completely degenerate tree --- all its edges have zero length.
+The space $\spc{T}_n$ has a natural cone structure with the vertex formed by the  completely degenerate tree --- all its edges have zero length.
 Note that the space $\Sigma$, 
 over which the cone is taken comes naturally with triangulation 
 with all-right spherical simplicies.
@@ -602,7 +603,7 @@ Since $\mathcal{T}$ is flag,
 $\tilde\square_{\mathcal{T}}$,
 the universal cover of $\square_{\mathcal{T}}$, is $\Cat{}{0}$.
 
-Choose a minimal cube $Q$ in $\tilde\square_{\mathcal{T}}$ which is not presented in $\tilde\square_{\mathcal{S}}$.
+Choose a minimal  cube $Q$ in $\tilde\square_{\mathcal{T}}$ which is not presented in $\tilde\square_{\mathcal{S}}$.
 By Exercise~\ref{ex:locally-convex}, $Q$ is convex set in $\tilde\square_{\mathcal{T}}$.
 The closest point projection $\tilde\square_{\mathcal{T}}\to Q$ is a retraction.
 It follows that the boundary $\partial Q$ is not contractable in $\tilde\square_{\mathcal{T}}\backslash\Int Q$ and therefore it is also not contractable in $\tilde\square_{\mathcal{S}}$.
@@ -610,7 +611,7 @@ It follows that the boundary $\partial Q$ is not contractable in $\tilde\square_
 
 \parbf{Exercise~\ref{ex:example-pi_infty-new}.}
 Solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}.
-The only difference, the set $G$ formed by squares with the vertexes at the  midpoints of some edges of the cubical analog. 
+The only difference is that  the set $G$ formed by the  squares with the vertices at the  midpoints of some edges of the cubical analog. 
 \qeds
 
 \parbf{Exercise~\ref{ex:funny-S}.}
@@ -619,13 +620,14 @@ it follows from the disjoint discs property.
 
 \medskip
 
-\parbf{Lemma.}
-\textit{Let $\spc{S}$ be a simplicial complex which 
+\begin{thm}{Lemma}\label{lem:homomanifold-characterization}
+%\parbf{Lemma\label{lem:homomanifold-characterization}.}
+Let $\spc{S}$ be a simplicial complex which 
 is an $m$-dimensional homology manifold for some $m\ge 5$.
-Assume all the vertices of
+Assume that  all vertices of
 $\spc{S}$ have simply connected links.
-Then $\spc{S}$ is a topological manifold.}
-
+Then $\spc{S}$ is a topological manifold.
+\end{thm}
 \medskip
 
 
@@ -643,7 +645,7 @@ $\spc{R}\z=\Susp\spc{S}$
 is an $m$-dimensional homology manifold with a natural triangulation coming from $\spc{S}$.
 By Lemma~\ref{lem:homomanifold-characterization},
 $\spc{R}$ is a topological manifold.
-According to generalized Poincar\'{e} conjecture,
+According to the generalized Poincar\'{e} conjecture,
 $\spc{R}\simeq\mathbb{S}^m$;
 that is
 $\spc{R}$ is homeomorphic to $\mathbb{S}^m$.
@@ -681,21 +683,21 @@ That is, $\spc{S}$ satisfies the conditions above.
 
 \parbf{Exercise~\ref{ex:concave-triangle}.}
 By approximation,
-it is sufficient to consider the case of poygonalal sides.
+it is sufficient to consider the case when $S$ poygonalal sides.
 
-The latter case can be done by induction on number of sides.
+The latter case can be done by induction on the number of sides.
 The base case of triangle is evident.
 
-To prove the step, apply Alexndrov's lemma (\ref{lem:alex}) 
+To prove the induction step, apply Alexndrov's lemma (\ref{lem:alex}) 
 together with the costruction in Exercise~\ref{ex:short-map}.
 \qeds
 
 \parbf{Exercise~\ref{ex:bishop-sphere}.}
-Unlike in the plane, sphere contains loons and triangles with concave sides.
+Unlike in the plane, the sphere contains diangle and triangles with concave sides.
 To adapt the proof of Theorem~\ref{thm:bishop-plane}
 we use Exercise~\ref{ex:hemisphere}
 
-From the Exercise~\ref{ex:hemisphere}, it follows that such if a concave loon or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
+From  Exercise~\ref{ex:hemisphere}, it follows that such if a concave diangle or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
 
 By the assumption, $\Theta$ does not contain a closed hemisphere. 
 Therefore the argument in the proof of Theorem~\ref{thm:bishop-plane} shows that any triangle in $\tilde\Theta$ with perimeter less than $2\cdot\pi$ is spherically thin. 
@@ -703,15 +705,15 @@ Therefore the argument in the proof of Theorem~\ref{thm:bishop-plane} shows that
 
 
 \parbf{Exercise~\ref{ex:two-planes}.}
-The space $K$ forms a cone over branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two big circles.
+The space $K$ forms a cone over the branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two great circles.
 
 If the planes are not orthogonal then the minimal distance between the circles is less than $\tfrac\pi2$.
 Assume that this distance is realized by a geodesic $[\xi\zeta]$.
-broken line made by four liftings of $[\xi\zeta]$ forms a closed geodesic in $\Sigma$. 
+The broken line made by four liftings of $[\xi\zeta]$ forms a closed geodesic in $\Sigma$. 
 By Corollary~\ref{cor:closed-geod-cat}, $\Sigma$ is not $\Cat{}{1}$.
 Therefore by Exercise~\ref{ex:cone+susp}, $K$ is not $\Cat{}{0}$.
 
-If the planes are orthogonal then the corresponding big circles in $\SS^3$ are formes by subcomplexes of a flag triangulation of $\SS^3$ with all-right simplicies.
+If the planes are orthogonal then the corresponding great circles in $\SS^3$ are formed by subcomplexes of a flag triangulation of $\SS^3$ with all-right simplicies.
 The branching cover is also flag.
 It remains to apply the flag condition \ref{thm:flag}.
 
@@ -781,8 +783,8 @@ a contradiction.
 
 
 \parbf{Exercise~\ref{ex:CAT=>two-convex}.}
-Show that if $K$ is not two-convex then there is a plane triangle $\triangle$ which sides lying completely in $K$, 
-but its interior contains the points of the complement $\EE^m\backslash K$.
+Show that if $K$ is not two-convex then there is a plane triangle $\triangle$ whose sides lie completely in $K$, 
+but its interior contains some points from  the complement $\EE^m\backslash K$.
 
 It remains to note that $\triangle$ is not thin in $K$.
 \qeds
@@ -792,9 +794,9 @@ Clearly the set $W$ is two-convex.
 Therefore $K$ is two-convex as an intersection of two-convex sets.
 
 The set $K$ on large scale looks like the complement of two 3-dimensional half-spaces in $\EE^4$.
-More precisely, the limit $K'$ of $\tfrac1n\cdot K$ is 
+More precisely, the Gromov-Hausdorff limit $K'$ of $\tfrac1n\cdot K$  as $n\to\infty$ is 
 the completion of the complement, equipped with length metric, 
- of the union of half-spaces in two 3-dimensional spaces in $\EE^4$. 
+ of the union of half-spaces in two 3-dimensional spaces in $\EE^4$ passing through $0$. 
 In particular $K'$ is a cone over a space $\Sigma$ which 
 can be obtained as the completion of the sphere $\SS^3$ with  two 2-dimensional hemispheres, say $H_1$ and $H_2$, removed.
 The intersection of these hemispheres is typically formed by a geodesic segment, say $[\xi\zeta]$.
@@ -808,17 +810,17 @@ and therefore $K'$ and consequently $K$ are not $\Cat{}{0}$.
 \qeds
 
 \parbf{Exercise~\ref{ex:branching-cover}.}
-Consider a $\eps$-neighborhood $A$ of the geodesic.
+Consider an $\eps$-neighborhood $A$ of the geodesic.
 Note that $A_\eps$ forms a convex set.
-By Reshetnyak gluing theorem the doubling $\spc{W}_\eps$ of $\spc{U}$ along $A_\eps$ is a $\Cat{}{0}$ space.
+By Reshetnyak's gluing theorem the doubling $\spc{W}_\eps$ of $\spc{U}$ along $A_\eps$ is a $\Cat{}{0}$ space.
 
-Consider the other space $\spc{W}'_\eps$ obtained by double covering of $\spc{U}\backslash A_\eps$ and gluing back $A_\eps$.
+Next, consider the space $\spc{W}'_\eps$ obtained by double covering of $\spc{U}\backslash A_\eps$ and gluing back $A_\eps$.
 
 Note that $\spc{W}'_\eps$ is locally isometric to $\spc{W}_\eps$. 
-That is for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ such that $\delta$-neighborhood of $p$ is isometric to $\delta$-neighborhood of $p$ for all small $\delta>0$.
+That is for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ such that the $\delta$-neighborhood of $p$ is isometric to the $\delta$-neighborhood of $p$ for all small $\delta>0$.
 
 Further note that $\spc{W}'_\eps$ is simply connected.
-By globalization theorem, $\spc{W}'_\eps$ s $\Cat{}{0}$.
+By the globalization theorem, $\spc{W}'_\eps$ s $\Cat{}{0}$.
 
 It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$ and apply Proposition~\ref{prop:cat-limit}.
 \qeds
