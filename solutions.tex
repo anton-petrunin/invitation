@@ -1,4 +1,5 @@
-\chapter*{Semisolutions}
+\backmatter
+\chapter{Semisolutions}
 \parbf{Exercise~\ref{ex:two-components-of-M4}.}
 Let $\spc{X}$ be a 4-point metric space.
 
@@ -164,7 +165,7 @@ Consider the following subset of $\R^2$:
 Consider the induced length metric on $\spc{X}$. It's obviously locally compact and geodesic.
 
 \begin{wrapfigure}{r}{22mm}
-\begin{lpic}[t(-5mm),b(-1mm),r(0mm),l(0mm)]{pics/square(1)}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/square(1)}
 \lbl[r]{3,11;{\tiny $\dots$}}
 \end{lpic}
 \end{wrapfigure}
@@ -273,8 +274,9 @@ $\~z'=\~z/|\~z|$ lies on the geodesic $[\~x'\~y']$ in $\SS^2$.
 The $\Cat{}{1}$ comparison for $\dist{p'}{q'}{}$ with $\~z'\in[\~x'\~y']$ implies the 
 $\Cat{}{0}$ comparison $\dist{p}{q}{}$ with $\~z\in[\~x\~y]$.
 
-The converse also holds if the $\Cat{}{0}$ comparison holds for all the quadruple of points $a\cdot p$, $b\cdot q$, $c\cdot x$, $d\cdot y$ for $a,b,c,d\ge 0$.
-%???bit more???
+The converse also holds if 
+the $\Cat{}{0}$ comparison holds for the quadruple of points $s=a\cdot p$, $q$, $x$, $y$ where $a\ge 0$ is chosen in such a way that the corresponding points 
+$\~s=a\cdot \~p$, $\~q$, $\~x$, $\~y$ lie in one plane.
 \qeds
 
 \parbf{Exercise~\ref{ex:product}.}
@@ -466,11 +468,16 @@ The latter is equivalent to \ref{eq:short-p-p}.\qeds
 
 \parbf{Exercise~\ref{ex:supporting-planes}.}
 By approximation, it is sufficient to consider the case when 
-$A$ and $B$ have smooth boundary.   If $[xy]\cap A\cap B\ne \emptyset$ then $z_0\in [xy]$ and $\dot A, \dot B$ can be chosen to be arbitrary half-spaces containing $A$ and $B$ respectively.  
+$A$ and $B$ have smooth boundary. 
+If $[xy]\cap A\cap B\ne \emptyset$ then $z_0\in [xy]$ and $\dot A, \dot B$ can be chosen to be arbitrary half-spaces containing $A$ and $B$ respectively.  
 
-
-
-Suppose $[xy]\cap A\cap B=\emptyset$. Then $z_0\in\partial (A\cap B)$.  Let $C=\{f\le f(z_0)\}$. Note that $C$ is compact, convex and has  smooth boundary. Suppose $z_0\in\partial  A \cap \Int B$. Then $A$ and $C$ touch at $z_0$ and we can set $\dot A$   to be the uniquely defined supporting half-space to $A$  at $z_0$ and $\dot B$   to be any half-space containing $B$. The case $z_0\in\partial B \cap \Int A$ is treated similarly.
+Suppose $[xy]\cap A\cap B=\emptyset$. 
+Then $z_0\in\partial (A\cap B)$.  
+Let \[C=\set{z\in\EE^m}{f(z)\le f(z_0)}.\] 
+Note that $C$ is compact, convex and has  smooth boundary. 
+Suppose $z_0\in\partial  A \cap \Int B$. 
+Then $A$ and $C$ touch at $z_0$ and we can set $\dot A$ to be the uniquely defined supporting half-space to $A$  at $z_0$ and $\dot B$ to be any half-space containing $B$. 
+The case $z_0\in\partial B \cap \Int A$ is treated similarly.
 
 
 Finally, suppose
