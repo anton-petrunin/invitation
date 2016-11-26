@@ -73,7 +73,7 @@ and whose metric is given by the cosine rule
 =
 \sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
 \]
-where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
+where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
 The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
 The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
@@ -88,7 +88,7 @@ and whose metric is given by the  spherical cosine rule
 =
 \cos s\cdot\cot t-\sin s\cdot\sin t\cdot\cos\alpha,
 \]
-where $\alpha= \max\{\pi, \dist{p}{q}{\spc{U}}\}$.
+where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
 The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \index{pole of suspension}\emph{south poles} of the suspension.
 
@@ -134,7 +134,7 @@ Also we use the following short-cut notation:
 
 
 
-In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  However,  once we write $[p q]$ we mean that we made a choice of geodesic.
+In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  However,  once we write $[p q]$ we mean that we made a choice of a geodesic.
 
 A metric space is called \index{geodesic}\emph{geodesic} if any pair of its points can be joined by a geodesic. 
 
@@ -169,7 +169,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 A set $A$ in a metric space $\spc{X}$ is called 
 \index{convex set}\emph{convex}
 if for every two points $p,q\in A$, 
-{}\emph{every} geodesic $[pq]$ of $\spc{X}$ 
+{}\emph{every} geodesic $[pq]$ in $\spc{X}$ 
 lies in $A$.
 
 A set $A\subset\spc{X}$ is called 
@@ -314,6 +314,7 @@ Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
 the set $\cBall[x,\rho(x)-\eps]$ forms a compact $\eps$-net in $B$.
 Since $B$ is closed and hence complete, it has to be compact.
+{\color{red} ??? I think this is too fast. why is it obvious that a complete space which has a compact $\eps$-net for any $\eps$ is compact?}
 \claimqeds
 
 \begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
@@ -407,7 +408,7 @@ Moreover,
 \[\angk p x y \ge \angk p x z +  \angk p z y,\]
 with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
 
-The same holds for hyperbolic and spherical model angles, 
+The same holds for the hyperbolic and spherical model angles, 
 but in the latter case one has to assume in addition that
 \[\dist{p}{z}{}+\dist{p}{y}{}+\dist{x}{y}{}< 2\cdot\pi.\]
 
@@ -479,7 +480,7 @@ the limit\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \[\mangle\hinge p x y
 \df
 \lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y}_{\EE^2},\eqlbl{eq:def-angle}\]
-where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$, provided the limit exists.
 The angle under the limit can be calculated from the  cosine law:
 \[\cos\angk{p}{x}{y}_{\EE^2}
 =
@@ -605,7 +606,7 @@ the angle $\alpha=\mangle\hinge q p x$ is defined. Then
 
 \end{thm}
 
-\parit{Proof.} Take sufficiently small $\eps>0$.
+\parit{Proof.} Take a sufficiently small $\eps>0$.
 For all sufficiently small $t>0$, we have 
 \begin{align*}
  \dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
@@ -698,7 +699,7 @@ is an arc in an infinite local geodesic defined on $\RR$.
 Show that the space of geodesic directions 
 $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 \end{thm}
-
+{\color{red}??? I think this exercise should be moved to Chapter 2 somewhere.  CAT(k) is not defined yet.}
 \section{Hausdorff convergence}
 
 It seems that Hausdorff convergence was first introduced by Felix Hausdorff in \cite{hausdorff},
