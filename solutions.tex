@@ -402,12 +402,12 @@ In $\Cat{}{1}$ case, the proof is the same, but we need to assume in addition th
 $\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$.\qeds
 
 \parbf{Exercise~\ref{ex:locally-convex}.}
-Denote by $K$ a closed connected locally convex set.
-Note that by Corollary \ref{cor:dist-convex} $\dist{K}{}{}$ is convex in a neighborhood $\Omega\supset K$, i.e. it's convex along any geodesic completely contained in $\Omega$.
+Denote by $K$ a closed, connected, locally convex set.
+Note that by Corollary \ref{cor:dist-convex}, $\dist{K}{}{}$ is convex in a neighborhood $\Omega\supset K$, that is, convex along any geodesic completely contained in $\Omega$.
 
 Since $K$ is locally convex,
 it is locally path connected.
-Since $K$ is connected and locally path connected it is path connected.
+Since $K$ is connected and locally path connected, $K$ is path connected.
 
 Fix two points $x,y\in K$. 
 Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
@@ -435,8 +435,8 @@ Since $K$ is convex, the midpoint $z$ of $[xy]$ lies in $K$.
 
 Note that $\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{}$, a contradiction.
 
-It remains to show that the map $p\mapsto p^*$ is short;
-that is 
+It remains to show that the map $p\mapsto p^*$ is short, 
+that is, 
 \[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\eqlbl{eq:short-p-p}\]
 
 Note that 
@@ -458,9 +458,9 @@ By comparison and triangle inequality for angles \ref{claim:angle-3angle-inq}, w
 \quad
 \text{and}
 \quad
-\mangle\hinge{\~q^*}{\~q}{\~p^*}\ge \mangle\hinge{q^*}{q}{p^*}\ge \tfrac\pi2
+\mangle\hinge{\~q^*}{\~q}{\~p^*}\ge \mangle\hinge{q^*}{q}{p^*}\ge \tfrac\pi2,
 \]
-assuming that the left hand sides are defined. 
+assuming the left hand sides are defined. 
 Hence 
 \[\dist{\~p}{\~q}{}\ge \dist{\~p^*}{\~q^*}{}.\]
 The latter is equivalent to \ref{eq:short-p-p}.\qeds
@@ -496,7 +496,7 @@ Fix $r>0$ and $R<\infty$ so that
 \[\oBall(0,r)\subset A^i\subset \oBall(0,R)\]
 for each wall $A^i$.
 
-It remains to note that all the intersections of  the walls  have $\eps$-wide for
+It remains to note that all the intersections of  the walls  have $\eps$-wide corners for
 \[\eps=2\cdot \arcsin\tfrac rR.\]
 \qedsf
 
@@ -508,7 +508,7 @@ which moves  $p$ to a point in $\oBall(0,R)$.
 The rest of the proof goes along the same lines as for  Exercise~\ref{ex:compact-walls}.\qeds
 
 \parbf{Exercise~\ref{ex:null-homotopic}.}
-Note that the existance of null-homotopy is equivalent to the following.
+Note that the existence of a null-homotopy is equivalent to the following.
 There are two one-parameter families of paths $\alpha_\tau$ and $\beta_\tau$, $\tau\in[0,1]$ 
 such that 
 \begin{itemize}
@@ -531,9 +531,9 @@ Consider a shortest noncontractible closed curve $\gamma$ in the space.
 (Note that it exists.)
 
 Assume that $\gamma$ is not a geodesic circle,
-that is  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
+that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
 is shorter then the lengths of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to $q$.
-Consider the joints, say $\gamma_1$ and $\gamma_2$
+Consider the products, say $\gamma_1$ and $\gamma_2$,
 of $[qp]$ with $\alpha_1$ and $\alpha_2$.
 Note that
 \begin{itemize}
@@ -544,13 +544,13 @@ a contradiction.\qeds
 
 
 \parbf{Exercise~\ref{ex:unique-geod=CAT}.}
-Assume $\spc{P}$ is not $\Cat{}{0}$ then
-by Theorem~\ref{thm:PL-CAT} there a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
+Assume $\spc{P}$ is not $\Cat{}{0}$. Then
+by Theorem~\ref{thm:PL-CAT},  a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
 Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$
 parametrized by $[-\ell,\ell]$
 
 Fix a small $\delta>0$ and 
-consider two curves in $\Cone\Sigma$ written in the polar coordinates as 
+consider two curves in $\Cone\Sigma$ written in polar coordinates as 
 \[\gamma_i(t)=(\alpha_i(\tan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
 Note that both form geodesics in $\Cone\Sigma$ and  have common ends.
 
@@ -585,7 +585,7 @@ and glue them recursively using the following operations and stages.
 At the stage $n$ only glue  spaces along $A^n$.
 
 In one step of the stage, choose two connected components of partially glued copies and glue them along the corresponding $A^n$'s.
-Apply Reshetnyak gluing theorem to show that each connected component after the stage is $\Cat{}{0}$ assuming that all connected component were $\Cat{}{0}$ before the step.
+Apply Reshetnyak gluing theorem to show that each connected component after the step is $\Cat{}{0}$, assuming that all connected components were $\Cat{}{0}$ before the step.
 \qeds
 
 \parbf{Exercise~\ref{ex:tree}.}
@@ -602,22 +602,22 @@ and apply Exercise~\ref{ex:cone+susp}.
 If the complex $\mathcal{S}$ is flag then its cubical analog $\square_{\mathcal{S}}$ is locally $\Cat{}{0}$ and therefore aspherical.
 
 Assume now that the complex $\mathcal{S}$ is not flag. 
-Extend it to a flag complex $\mathcal{T}$ by gluing a simplex in every complete subgraph of its 1-skeliton.
+Extend it to a flag complex $\mathcal{T}$ by gluing a simplex in every complete subgraph of its 1-skeleton.
 
 Note that the cubical analog $\square_{\mathcal{S}}$ is a proper subcomplex in $\square_{\mathcal{T}}$.
 Since $\mathcal{T}$ is flag,
 $\tilde\square_{\mathcal{T}}$,
 the universal cover of $\square_{\mathcal{T}}$, is $\Cat{}{0}$.
 
-Choose a minimal  cube $Q$ in $\tilde\square_{\mathcal{T}}$ which is not presented in $\tilde\square_{\mathcal{S}}$.
-By Exercise~\ref{ex:locally-convex}, $Q$ is convex set in $\tilde\square_{\mathcal{T}}$.
+Choose a minimal  cube $Q$ in $\tilde\square_{\mathcal{T}}$ which is not present in $\tilde\square_{\mathcal{S}}$.
+By Exercise~\ref{ex:locally-convex}, $Q$ is a convex set in $\tilde\square_{\mathcal{T}}$.
 The closest point projection $\tilde\square_{\mathcal{T}}\to Q$ is a retraction.
-It follows that the boundary $\partial Q$ is not contractable in $\tilde\square_{\mathcal{T}}\backslash\Int Q$ and therefore it is also not contractable in $\tilde\square_{\mathcal{S}}$.
+It follows that the boundary $\partial Q$ is not contractible in $\tilde\square_{\mathcal{T}}\backslash\Int Q$ and therefore it is also not contractible in $\tilde\square_{\mathcal{S}}$.
 \qeds
 
 \parbf{Exercise~\ref{ex:example-pi_infty-new}.}
-Solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}.
-The only difference is that  the set $G$ formed by the  squares with the vertices at the  midpoints of some edges of the cubical analog. 
+The solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}.
+The only difference is that  the set $G$ is formed by squares with vertices at the  midpoints of some edges of the cubical analog. 
 \qeds
 
 \parbf{Exercise~\ref{ex:funny-S}.}
@@ -689,21 +689,21 @@ That is, $\spc{S}$ satisfies the conditions above.
 
 \parbf{Exercise~\ref{ex:concave-triangle}.}
 By approximation,
-it is sufficient to consider the case when $S$ poygonalal sides.
+it is sufficient to consider the case when $S$ has polygonal sides.
 
 The latter case can be done by induction on the number of sides.
 The base case of triangle is evident.
 
-To prove the induction step, apply Alexndrov's lemma (\ref{lem:alex}) 
-together with the costruction in Exercise~\ref{ex:short-map}.
+To prove the induction step, apply Alexandrov's lemma (\ref{lem:alex}) 
+together with the construction in Exercise~\ref{ex:short-map}.
 \qeds
 
 \parbf{Exercise~\ref{ex:bishop-sphere}.}
-Unlike in the plane, the sphere contains diangle and triangles with concave sides.
+Unlike in the plane, the sphere contains diangular and triangular regions whose sides are concave in the sphere.
 To adapt the proof of Theorem~\ref{thm:bishop-plane}
-we use Exercise~\ref{ex:hemisphere}
+we use Exercise~\ref{ex:hemisphere}.
 
-From  Exercise~\ref{ex:hemisphere}, it follows that such if a concave diangle or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
+From  Exercise~\ref{ex:hemisphere}, it follows that if such a concave diangle or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
 
 By the assumption, $\Theta$ does not contain a closed hemisphere. 
 Therefore the argument in the proof of Theorem~\ref{thm:bishop-plane} shows that any triangle in $\tilde\Theta$ with perimeter less than $2\cdot\pi$ is spherically thin. 
@@ -715,8 +715,12 @@ The space $K$ forms a cone over the branched covering $\Sigma$ of $\mathbb{S}^3$
 
 If the planes are not orthogonal then the minimal distance between the circles is less than $\tfrac\pi2$.
 Assume that this distance is realized by a geodesic $[\xi\zeta]$.
-The broken line made by four liftings of $[\xi\zeta]$ forms a closed geodesic in $\Sigma$. 
-By Corollary~\ref{cor:closed-geod-cat}, $\Sigma$ is not $\Cat{}{1}$.
+The broken line made by four liftings of $[\xi\zeta]$ forms a closed 
+local
+geodesic in $\Sigma$. 
+By Proposition~\ref{cor:loc-geod-are-min},
+%Corollary~\ref{cor:closed-geod-cat}, 
+$\Sigma$ is not $\Cat{}{1}$.
 Therefore by Exercise~\ref{ex:cone+susp}, $K$ is not $\Cat{}{0}$.
 
 If the planes are orthogonal then the corresponding great circles in $\SS^3$ are formed by subcomplexes of a flag triangulation of $\SS^3$ with all-right simplicies.
