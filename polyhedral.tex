@@ -412,7 +412,8 @@ Then $\spc{P}$ is $\Cat{}{1}$ if and only if neither $\spc{P}$ nor  the  link of
 
 \parit{Proof of Theorem~\ref{thm:PL-CAT}.}
 The ``only if'' part follows from
-Corollary~\ref{cor:closed-geod-cat}
+%Corollary~\ref{cor:closed-geod-cat}
+Proposition~\ref{cor:loc-geod-are-min} 
 and 
 Exercise~\ref{ex:cone+susp}.
 
@@ -437,10 +438,10 @@ By the  induction hypothesis, $\Sigma_p$ is $\Cat{}{1}$.
 Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally  $\Cat{}{1}$.
 
 
-Applying the second part of Corlollary~\ref{cor:closed-geod-cat},
+Applying the second part of Corollary~\ref{cor:closed-geod-cat},
 we get the statement.
 
-The $\Cat{}{0}$ case is exactly the same  except we need to use the first part of Exercise~\ref{ex:cone+susp} and the the first part of Corollary~\ref{cor:closed-geod-cat}.
+The $\Cat{}{0}$ case is exactly the same  except we need to use the first part of Exercise~\ref{ex:cone+susp} and  the first part of Corollary~\ref{cor:closed-geod-cat}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
@@ -621,10 +622,10 @@ Assume $\Gamma$ is a finite graph
 (without loops and multiple edges) 
 with edges labeled by $1,2,\dots, n$.
 Denote by $\spc{U}^\Gamma$ the space obtained by taking 
-a copy of $\spc{U}$ for each vertex of $\Gamma$ and 
+a copy of $\spc{U}$ for each vertex of $\Gamma$, and 
 gluing two such copies along $A^i$ if the corresponding vertices are joined by an edge labeled by $i$.
 
-Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space
+Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space.
 \end{thm}
 
 \parbf{The space of trees.}
@@ -788,7 +789,7 @@ Then $\spc{S}$ is simply connected.
 Assume $\spc{S}$ is not simply connected.
 Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
 
-Note that $\gamma$ forms a 1-dimensional subcompelex of $\spc{S}$ which is a closed local geodesic.
+Note that $\gamma$ forms a 1-dimensional subcomplex of $\spc{S}$ which is a closed local geodesic.
 Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to $\gamma$.
 
 Fix a vertex $v\in G$;
@@ -826,7 +827,7 @@ Each edge of $\spc{S}$ has length $\tfrac\pi2$.
 Therefore each of two circles formed by $e$ and an arc of $\gamma$
 from $\xi$ to $\zeta$ is shorter that $\gamma$.
 Moreover,
-at least one of them is noncontractable 
+at least one of them is noncontractible 
 since $\gamma$ is not.
 That is, 
 $\gamma$ is not a shortest noncontractible circle 
@@ -883,7 +884,7 @@ It follows that $\spc{Q}$ is a piecewise linear manifold
 with a finite number of singularities at its vertices.
 
 
-Removing a small contractable neighborhood $V_v$ of each vertex $v$ in $\spc{Q}$,
+Removing a small contractible neighborhood $V_v$ of each vertex $v$ in $\spc{Q}$,
 we can obtain a piecewise linear manifold $\spc{N}$
 whose boundary is formed by several copies of $\Sigma$.
 To each copy of $\Sigma$, 
@@ -891,7 +892,7 @@ glue a copy of  $\spc{W}$ along its boundary.
 This results in a  closed piecewise linear manifold 
 $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
 
-Since both $V_v$ and $W$ are contractable, the identity map of  their common boundary $\Sigma$ can be extended to a homotopy equivalence relative to the boundary between $V_v$ and $W$.
+Since both $V_v$ and $W$ are contractible, the identity map of  their common boundary $\Sigma$ can be extended to a homotopy equivalence relative to the boundary between $V_v$ and $W$.
 Therefore the identy map on $\spc{N}$ extends to homotopy equivalences 
 $f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$.
 
@@ -965,9 +966,9 @@ to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\t
 The construction described in this chapter also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool to construct  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis}.
 
-All the topic discussed above link Alexandrov geometry with the fundamental group.
-So-called {}\emph{hyperbolic groups} introduced by 
-Mikhael Gromov
+All the topics discussed above link Alexandrov geometry with the fundamental group.
+So-called {}\emph{hyperbolic groups}, introduced by 
+Mikhael Gromov,
 could be considered as a further step in this direction, see \cite{gromov:hyp-groups}.
 
 
