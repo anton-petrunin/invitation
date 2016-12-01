@@ -62,7 +62,7 @@ The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is $\Cat{}{
 
 In the proposition above, 
 it does not matter which definition of convergence for metric spaces you use, 
-as long as any quadruple of points in the limit space can be arbitrary well approximated by the quadruples in the sequence of metric spaces. 
+as long as any quadruple of points in the limit space can be arbitrary well approximated by  quadruples in the sequence of metric spaces. 
 
 \begin{thm}{Exercise}\label{ex:cone+susp}
 Let $\spc{V}$ be a metric space and $\spc{U}=\Cone\spc{V}$.
@@ -307,6 +307,9 @@ The spherical case is done along the same lines.
 Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in $A$. 
 
 \begin{thm}{Exercise}\label{ex:convex-balls}
+Show that the distance function $\dist{p}{}{}$ for any point $p$ in a  $\Cat{}{0}$ proper length space is a convex.
+%??? that's a basic property of CAT(0) spaces. I think we should mention it somewhere. V.
+
 Show that any ball in a $\Cat{}{0}$ proper length space is a convex set.
 
 Analogously, show that any ball of radius $R<\tfrac\pi2$ in a $\Cat{}{1}$ proper length space  is a convex set.
@@ -373,7 +376,7 @@ Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is a $\Cat{}{0}$ p
 \end{thm}
 
 \parit{Proof.} 
-By construction of the gluing space, the statement can be reformulated the following way.
+By construction of the gluing space, the statement can be reformulated in the following way.
 
 \begin{thm}{Reformulation of \ref{thm:gluing}}
 Let $\spc{W}$ be a 
@@ -485,8 +488,8 @@ defined as $x^\kay\mapsto\check x^\kay$ is short.
 Moreover, if  
 \[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\]
 for some $x,y\in \EE^m$ and $i,j\in \{0,\dots,n\}$,
-then the geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
-is the image of geodesic $[x^i y^j]_{\spc{R}}$
+then the unique geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
+is the image of the unique geodesic $[x^i y^j]_{\spc{R}}$
 under the map $x^i\mapsto \check x^i$.
 \end{thm}
 
@@ -506,13 +509,13 @@ Hence the second statement follows.
 \begin{thm}{Definition}
 A Reshetnyak's puff pastry $\spc{R}$ 
 is called \index{end-to-end convex}\emph{end-to-end convex} 
-if the union of lower and upper levels 
+if the union of the lower and the upper levels 
 forms a convex set in $\spc{R}$.
 \end{thm}
 
 If $\spc{R}$ is the Reshetnyak's puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$
 then $\spc{R}$ is end-to-end convex
-if and only if the union of lower and upper levels
+if and only if the union of the lower and the upper levels
 $\spc{R}^0\cup\spc{R}^N$ is isometric to the doubling of $\EE^m$ along the nonempty intersection $A^1\cap\dots\cap A^N$.
 
 
@@ -520,8 +523,8 @@ $\spc{R}^0\cup\spc{R}^N$ is isometric to the doubling of $\EE^m$ along the nonem
 Let $\check{\bm{A}}$ and $\bm{A}$ be arrays of convex bodies in $\EE^m$.
 Assume 
 the  array $\bm{A}$ is
-obtained by inserting in $\check{\bm{A}}$, 
-copies of the bodies which were already listed in $\check{\bm{A}}$.
+obtained by inserting in $\check{\bm{A}}$ 
+several copies of the bodies which were already listed in $\check{\bm{A}}$.
 
 For example, if $\check{\bm{A}}=(A,C,B,C,A)$, by placing $B$ in the second place and $A$ in the fourth place, we can obtain $\bm{A}=(A,B,C,A,B,C,A)$.
 
@@ -552,7 +555,7 @@ It remains to apply Proposition~\ref{prop:A-check-A}.
 Let $X$ be a convex set in a Euclidean space.
 By a \index{dihedral angle}\emph{dihedral angle} we understand an intersection of two half-spaces;
 the intersection of corresponding hyperplanes is called the {}\emph{edge} of the angle.
-We say that a dihedral angle $D$ is supporting $X$ at point $p\in X$ 
+We say that a dihedral angle $D$ is supporting $X$ at a point $p\in X$ 
 if $D$ contains $X$ and the edge of $D$ contains $p$.
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
@@ -592,7 +595,7 @@ the long arcs have length $\pi-\alpha$,
 so making a circuit along any path will take $2\cdot\pi$.
 
 Observe that end-to-end convexity of $\ddot{\spc{R}}$
-is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on inner and outer circles lies completely in the union of these two circles.
+is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on the inner and the outer circles lies completely in the union of these two circles.
 
 The latter holds if the zigzag line has length at least $\pi$.
 This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ each.
@@ -618,7 +621,7 @@ Without loss of generality we can assume that $z\in\partial A\cap\partial B$.
 Indeed, since the puff pastry for 1-array $(B)$ is end-to-end convex,
 Proposition~\ref{prop:A-check-A} together with Observation~\ref{obs:end-to-end-convex}
 imply \ref{clm:z in xy} in  case $z$ lies in the interior of $A$.
-In the same way we can treat the case, $z$ lies in the interior of $B$.
+In the same way we can treat the case when $z$ lies in the interior of $B$.
 
 \begin{wrapfigure}{r}{35mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
@@ -662,7 +665,7 @@ in the array, to get the array
 \[(\underbrace{\dot A,\dot B,\dot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
 The corresponding puff pastry $\dot{\spc{R}}$
 splits as a product of $\EE^{m-2}$ and a puff pastry, 
-say $\ddot{\spc{R}}$,
+call it $\ddot{\spc{R}}$,
 glued from the copies of the plane $\EE^2$ for the array
 \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
 
@@ -727,7 +730,7 @@ and each number $1,\dots,n$ appears in $\bm{j}_\eps$ at least once.
 \end{subthm}
 
 \begin{subthm}{}
-If $A^1,\dots,A^n$ is a collection of closed convex sets in $\EE^m$ with common point 
+If $A^1,\dots,A^n$ is a collection of closed convex sets in $\EE^m$ with a common point 
 and all their intersections have $\eps$-wide corners 
 then the puff pastry for the array
 $(A^{j_1},\dots,A^{j_N})$ is end-to-end convex.
