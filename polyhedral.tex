@@ -1,7 +1,7 @@
 \chapter{Globalization and asphericity}
 
 In this chapter we introduce locally $\Cat{}{0}$ spaces and show that the universal cover of a locally $\Cat{}{0}$ proper length space is a $\Cat{}{0}$ proper length space. 
-It follows that any locally $\Cat[0]$ proper length space is aspherical; 
+It follows that any locally  $\Cat{}{0}$ proper length space is aspherical; 
 that is, its universal cover is contractible.
 
 The globalization theorem leads to a {}\emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
@@ -72,15 +72,17 @@ to be moved so that its endpoints follow given trajectories, a procedure obtaine
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
 Let $\spc{U}$ be a locally $\Cat{}{\kappa}$  proper length space, 
-and $\gamma\:[0,1]\to\spc{U}$ be a path.
+and $\gamma\:[0,1]\to\spc{U}$ be a local geodesic path.
 
 Then there is a $\Cat{}{\kappa}$ proper length space $\spc{N}$,
 an open set $\hat\Omega\subset \spc{N}$,
-and a geodesic path $\hat\gamma\:[0,1]\to\hat\Omega$,
+and a geodesic  path $\hat\gamma\:[0,1]\to\hat\Omega$,
 such that there is an open locally isometric immersion 
 $\map\:\hat\Omega\looparrowright\spc{U}$ satisfying
 $\map\circ\hat\gamma=\gamma$.
 \end{thm}
+
+Note that if $\tilde \gamma$ is a geodesic with the same endpoints as $\hat\gamma$ then $\Phi\circ \tilde \gamma$ is a local geodesic with the same endpoints as $\gamma$.
 
 \parit{Proof.} 
 Fix $r>0$ so that for each $t\in[0,1]$,
@@ -139,9 +141,18 @@ there is a choice of a local geodesic path $\gamma_\alpha$ with length less than
 \end{thm}
 
 \parit{Proof of Corollary \ref{cor:path-geod}; $\Cat{}{0}$ case.} 
-Patchwork allows us to  construct a continuous family of local geodesic paths $\gamma_{\alpha}|_{[0,t]}$, where the length of $\gamma_{\alpha}|_{[0,t]}$ is at most that of  $\alpha|_{[0,t]}$.  
-Thus the process may be continued to $t=1$. If $\alpha$ is a local geodesic path, then $\gamma_\alpha|_{[0,t]}=\alpha|_{[0,t]}$. 
-Continuity of the construction follows from Patchwork. \qeds
+We argue using an open-closed argument. Let $S\subset[0,1]$ be the set of such $t$ so that we can construct a continuous  family of local geodesic paths $\gamma_{\alpha}^t :[0,t]\to \spc{U}$, where the length of $\gamma_{\alpha}^s$ is at most that of  $\alpha|_{[0,s]}$ for all $0\le s \le t$. Since a limit of local geodesics is a local geodesic by Proposition~\ref{prop:geo-complete}, $S$ is closed.
+
+Applying Patchwork \ref{lem:patch} to  $\gamma_{\alpha}^t$ for $t\in S$ it's easy to see that $S$ is also open in $[0,1]$. Hence $S=[0,1]$.
+Continuity of the construction follows from Patchwork.
+
+ Moreover, by construction,  if $\alpha$ is a local geodesic path, then $\gamma_\alpha=\alpha$. 
+
+%Patchwork allows us to  construct a continuous family of local geodesic paths $\gamma_{\alpha}|_{[0,t]}$, where the length of $\gamma_{\alpha}|_{[0,t]}$ is at most that of  $\alpha|_{[0,t]}$.  
+%Thus the process may be continued to $t=1$. If $\alpha$ is a local geodesic path, then $\gamma_\alpha|_{[0,t]}=\alpha|_{[0,t]}$. 
+
+
+ \qeds
 
 Given a path $\alpha\:[0,1]\to\spc{U}$,
 we denote by $\bar\alpha$ the same path traveled in the opposite direction;
@@ -181,7 +192,7 @@ Herbert Busemann in \cite{busemann-CBA},
 Willi Rinow in \cite{rinow},
 Mikhael Gromov in \cite[p.119]{gromov:hyp-groups}. 
 A detailed proof of Gromov's statement was given by Werner Ballmann in \cite{ballmann:cartan-hadamard} when $\spc{U}$ is proper,
-and by Stephanie Alexander and Richard Bishop in \cite{a-b:h-c} more generally.
+and by Stephanie Alexander and Richard Bishop in \cite{a-b:h-c} in more generality.
 
 For  $\Cat{}{1}$ proper spaces, the globalization theorem was proved by Brian Bowditch in \cite{bowditch}.
 
@@ -534,7 +545,7 @@ Note that in this case
 $$\mangle\hinge{v^1}{v^2}{v^3}=\mangle\hinge{v^2}{v^3}{v^1}=\mangle\hinge{v^3}{v^1}{v^1}=\pi.$$
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
-The product %??? or concatination???
+The product
 of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
 forms a locally geodesic loop in $\spc{P}$. 
 \end{clm}
@@ -642,7 +653,7 @@ initial vertex of degree 2,
 and all the other vertices of degree 3, 
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge is $0$, we assume that edge degenerates;
-such a tree can be also decribed using a different topological tree $\tau'$.
+such a tree can be also described using a different topological tree $\tau'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with the octant
 \[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the length metric on $\spc{T}_n$ induced by these metrics.
@@ -897,7 +908,7 @@ This results in a  closed piecewise linear manifold
 $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
 
 Since both $V_v$ and $W$ are contractible, the identity map of  their common boundary $\Sigma$ can be extended to a homotopy equivalence relative to the boundary between $V_v$ and $W$.
-Therefore the identy map on $\spc{N}$ extends to homotopy equivalences 
+Therefore the identity map on $\spc{N}$ extends to homotopy equivalences 
 $f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$.
 
 %{\color{red} Indeed, using contractibility  of $\spc{W}$ it's easy to construct a map  $f\: \spc Q\to \spc M$ which extends the identity map of $\spc{N}$ and maps each small neighbourhood of a vertex in $\spc{Q}$ to the corresponding copy of $\spc{W}$. It's easy to see that this map induces an isomorphism on $\pi_1$ and its lift to the universal covers $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$ induces an isomorphism on homology. This means that $\tilde f$ (and hence $f$) induces an isomorphism on all homotopy groups and therefore is a homotopy equivalence.}
