@@ -118,7 +118,7 @@ is called \index{spherically thin}\emph{spherically thin} if
 the natural map from the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$ to $\trig{x^1}{x^2}{x^3}$ is short.
 \end{thm}
 
-\begin{thm}{Thin triangle definition of $\Cat{}{}$}\label{prop:convex-2-geos}\label{prop:thin=cat}
+\begin{thm}{Proposition}\label{prop:thin=cat}
 A geodesic space is $\Cat{}{0}$ 
 (respectively $\Cat{}{1}$) 
 if and only if 
@@ -162,7 +162,8 @@ Hence continuity and uniqueness in
 \qeds
 
 Adding the first two inequalities of the preceding proof gives:
-\begin{thm}{Proposition}\label{prop:convex-2-geos}
+
+\begin{thm}{Proposition}
 Suppose $p^1,p^2,q^1,q^2$ are points in a $\Cat{}{0}$ proper length space $\spc{U}$.  Then 
 \[ \dist{\geodpath_{[p^1q^1]}(t)}{\geodpath_{[p^2q^2]}(t)}{\spc{U}}\]
 is a convex function.
@@ -440,12 +441,6 @@ and consequently $\trig {x^0}{x^1}{x^2}$ is thin.
 In this section we introduce Reshetnyak's puff pastry, 
 a construction which will be used in the next section to prove Collision Theorem~\ref{thm:collision}.
 
-Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in the Euclidean space $\EE^m$.
-Consider an array of $N+1$ copies of $\EE^m$.
-Assume that the space $\spc{R}$ is 
-obtained by
-gluing successive pairs of spaces along  $A^1,\dots,A^N$ respectively.
-
 \begin{wrapfigure}{r}{58mm}
 \begin{lpic}[t(0mm),b(4mm),r(0mm),l(0mm)]{pics/puff-pastry-example(1)}
 \lbl[b]{18,24;$A$}
@@ -457,6 +452,12 @@ gluing successive pairs of spaces along  $A^1,\dots,A^N$ respectively.
 \lbl[b]{28,-4;Puff pastry for $(A,B,A)$.}
 \end{lpic}
 \end{wrapfigure}
+
+Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in the Euclidean space $\EE^m$.
+Consider an array of $N+1$ copies of $\EE^m$.
+Assume that the space $\spc{R}$ is 
+obtained by
+gluing successive pairs of spaces along  $A^1,\dots,A^N$ respectively.
 
 The resulting space $\spc{R}$  will be called \index{puff pastry}\emph{Reshetnyak's puff pastry} for the array $\bm{A}$.
 The copies of $\EE^m$ in the puff pastry $\spc{R}$
@@ -589,8 +590,8 @@ Then the Reshetnyak's puff pastry for the array \[(\underbrace{\ddot A,\ddot B,\
 is end-to-end convex. 
 \end{thm}
 
-\begin{wrapfigure}{r}{52mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
+\begin{wrapfigure}{o}{52mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
 \lbl[t]{23,33,6;$\alpha$}
 \lbl[b]{20,47,6;$\alpha$}
 \lbl[b]{30,3,6;$\alpha$}
@@ -895,11 +896,7 @@ Consider the array
 The induction hypothesis implies:
 
 \begin{clm}{}\label{clm:collision-induction hypothesis}
-There is a positive integer $M$ 
-such that any $M$ 
-%elements in the raw from
-consecutive elements of
-$\bm{A}_\gamma$ contain each $A^i$ at least once.
+There is a positive integer $M$ such that any $M$ consecutive elements of $\bm{A}_\gamma$ contain each $A^i$ at least once.
 \end{clm}
 
 Let $\spc{R}_\gamma $ be  the  Reshetnyak's puff pastry for  $\bm{A}_\gamma$.

@@ -348,21 +348,4 @@
 }%
 }%
 
-%\newcommand*\toshadist[4][{}]%
-%{\settowidth{\zhaba}{${#1}{#2}$}%
-%\ifthenelse{\lengthtest{\zhaba<1.7em}}
-%{\ifthenelse{\isempty{#2}}%
-%{{*}{*}}%
-%{\ifthenelse{\isempty{#3}}%
-%{({#2}{*})^{#1}_{#4}}%
-%{({#2}{#3})^{#1}_{#4}}}%
-%}%
-%{\ifthenelse{\isempty{#2}}%
-%{{*}{*}}%
-%{\ifthenelse{\isempty{#3}}%
-%{({#2}{*})^{#1}_{#4}}%
-%{({#2}\ {#3})^{#1}_{#4}}}%
-%}%
-%}%
-
 \def\dist{\toshadist}

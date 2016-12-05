@@ -20,7 +20,7 @@ Note that $\spc{X}$ is isometric to a 4-point subset in Euclidean space
 if and only if $W(v)\ge 0$ for any vector $v$ in $\RR^3$.
 
 \begin{wrapfigure}{r}{52mm}
-\begin{lpic}[t(-5mm),b(3mm),r(0mm),l(0mm)]{pics/quad(1)}
+\begin{lpic}[t(-2mm),b(1mm),r(0mm),l(0mm)]{pics/quad(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -103,19 +103,10 @@ $\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defined as
 is the needed isometry.\qeds
 
 \parbf{Exercise~\ref{ex:no-geod}.}
-\begin{comment}
-Given a metric graph $\Gamma$,  define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$, substitute for the edge $[pq]$ a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with length metric. 
-
-Let $\spc{X}_0=[0,1]$ and define $\spc{X}_k$ for $k\ge 1$ inductively by $\spc{X}_k=P_k(\spc{X}_{k-1})$.
-
-Let $\spc{Y}_k$ be the set of vertices of $\spc{X}_k$ with the induced metric. By construction the inclusion $\spc{Y}_k\subset \spc{Y}_{k+1}$ is distance preserving.
-
-Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\spc{Y}=\bar {\spc{Y}}_\infty$ be its metric completion. Then $\spc{Y}$ is a length space since it satisfies the almost midpoint property. But it is not hard to see that no two distinct points in $\spc{Y}$ can be connected by a shortest geodesic. \qeds
-\end{comment}
-
 The following example is essentially due to Fedor Nazarov, see \cite{nazarov}.
 
-%\parit{Alternative solution.}
+\medskip
+
 Consider the unit ball $(B,d_0)$
 in the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
 
@@ -336,19 +327,6 @@ From the $\Cat{}{0}$ comparison inequality for the quadruple $x,y,z_n,z_m$ we ha
 that is, $z_n$ is Cauchy and hence converges.
 
 Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint for the pair $x$ and $y$.\qeds 
-
-
-%\parbf{Exercise~\ref{ex:thin=cat}.} 
-%To prove the ``if'' part,
-%apply thinness of triangles $\trig pxy$ and $\trig qxy$, where $p$, $q$, $x$ and $y$ are as in the definition of $\Cat{}{\kappa}$ comparison,
-%see page \pageref{page:CAT-comparison}.
-%
-%\parit{``Only-if'' part.} Fix a triangle $\trig pxy$ 
-%and two points $\bar x\in [px]$, $\bar y\in [py]$.
-%Apply the $\Cat{}{\kappa}$ comparison to the quadruples
-%$(\bar x, x, p, y)$  
-%and $(\bar x, \bar y, p, x)$ together with Alexandrov's lemma (\ref{lem:alex}).\qeds
-
 
 \parbf{Exercise~\ref{ex:geod-CBA}.}
 Without loss of generality we can assume that $\kappa=1$.
@@ -645,14 +623,13 @@ it follows from the disjoint discs property.
 
 \medskip
 
-\begin{thm}{Lemma}\label{lem:homomanifold-characterization}
-%\parbf{Lemma\label{lem:homomanifold-characterization}.}
-Let $\spc{S}$ be a simplicial complex which 
+\parbf{Lemma.}
+\emph{Let $\spc{S}$ be a simplicial complex which 
 is an $m$-dimensional homology manifold for some $m\ge 5$.
 Assume that  all vertices of
 $\spc{S}$ have simply connected links.
-Then $\spc{S}$ is a topological manifold.
-\end{thm}
+Then $\spc{S}$ is a topological manifold.}
+
 \medskip
 
 
@@ -668,7 +645,7 @@ Indeed, assume such $\spc{S}$ is constructed.
 Then the suspension
 $\spc{R}\z=\Susp\spc{S}$
 is an $m$-dimensional homology manifold with a natural triangulation coming from $\spc{S}$.
-By Lemma~\ref{lem:homomanifold-characterization},
+According to the lemma,
 $\spc{R}$ is a topological manifold.
 According to the generalized Poincar\'{e} conjecture,
 $\spc{R}\simeq\mathbb{S}^m$;
@@ -738,7 +715,7 @@ The broken line made by four liftings of $[\xi\zeta]$ forms a closed
 local
 geodesic in $\Sigma$. 
 By Proposition~\ref{cor:loc-geod-are-min},
-%Corollary~\ref{cor:closed-geod-cat}, 
+(or Corollary~\ref{cor:closed-geod-cat}) 
 $\Sigma$ is not $\Cat{}{1}$.
 Therefore by Exercise~\ref{ex:cone+susp}, $K$ is not $\Cat{}{0}$.
 

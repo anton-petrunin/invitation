@@ -145,9 +145,8 @@ we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic. 
-%S:We need this in 3.2 and 3.3:
-A curve $\gamma\:[0,1]\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic path}, if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a geodesic with a constant-speed parametrization. 
+A curve $\gamma\:\II\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
+A constant speed parametrization of local geodesic by the unit interval $[0,1]$ is called a \index{geodesic!local geodesic}\emph{local geodesic path}. 
 
 
 \parbf{Triangles.}
@@ -313,10 +312,6 @@ Assume the contrary; that is, $\rho(x)<\infty$.
 Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
 the set $\cBall[x,\rho(x)-\eps]$ forms a compact $\eps$-net in $B$. Since $B$ is closed and hence complete, it has to be compact.
-
-
-%
-%??? I think it was too fast before. why is it obvious that a complete space which has a compact $\eps$-net for any $\eps$ is compact?}
 \claimqeds
 
 \begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
@@ -345,10 +340,6 @@ a contradiction.
 Construct a geodesic space that is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Model angles and triangles.}\label{sec:mod-tri/angles}
 
@@ -472,8 +463,6 @@ Note that
 Equality holds if and only  if $\dist{\~x}{\~y'}{}=\dist{x}{y}{}$, 
 as required.
 \qeds
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Angles and the first variation.}\label{sec:angles}
 
@@ -738,7 +727,7 @@ Then $D_n$ converges to the upper half-plane as $n\to\infty$.
 In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in A_n$.
 
 Show that the converse fails.
-\end{thm} %S:trivial to do but I think  needed for understanding
+\end{thm}
 
 \begin{thm}{Selection theorem}
 Let $\spc{X}$ be a proper metric space
@@ -816,10 +805,9 @@ The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n
 
 Usually Gromov--Hausdorff convergence is defined differently. We prefer this definition since it induces convergence for a sequence of points $x_n\in\spc{X}_n$ (Exercise \ref{ex:hausdorff-conv}),
 as well as 
-weak convergence of measures $\mu_n$ on $\spc{X}_n$, and so on,
-%as the corresponding
-corresponding to convergence 
-in the ambient space $(\bm{X},\rho)$.
+weak convergence of measures $\mu_n$ on $\spc{X}_n$, 
+and so on,
+corresponding to convergence in the ambient space $(\bm{X},\rho)$.
 
 Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we made a choice of convergence.
 Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xto{\rho} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 

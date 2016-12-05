@@ -126,9 +126,7 @@ and
 \index{negative critical point}\emph{negative} otherwise.
 (If $\nabla_pf=0$, that is, $p$ is the minimum point of $f$, then the sign is undefined.)
 
-Since 
-%$S$ is two-convex 
-$k_2\ge 0$ and $f$ is strongly convex, 
+Since $k_2\ge 0$ and $f$ is strongly convex, 
 the negative critical points of $f|_S$
 have index at most $1$.
 
@@ -141,7 +139,7 @@ there is a homotopy $\phi_t\:\DD\to K$ rel $\partial \DD$ such that
 $\phi_1(\DD)\subset K_s$.
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
-Note that by Proposition \ref{prop:convex-2-geos}, the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
+Note that the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
 is convex.
 Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
 From above, there is a disc in $K$ with boundary $\gamma$
@@ -401,7 +399,9 @@ Show that the completion of $\tilde \Theta$ is a  $\Cat{}{1}$ space.
 \end{thm}
 
 \section{Open space sets}
-The material below was inspired by work of Samuel Shefel, and developed by Anton Petrunin \cite{petrunin-shefel}. 
+The material below was inspired by work of Samuel Shefel.
+%, and developed by Anton Petrunin \cite{petrunin-shefel}.
+%??? There is a ref to my paper with Stadler in the end of the chapter.
 
 Shefel seems very intrigued by the survival of metric properties under affine transformation.
 To describe an instance of such phenomena,
@@ -539,13 +539,16 @@ Show that any closed path of length $<2\cdot \pi$  in the units sphere $\SS^2$ l
 \end{thm}
 
 \parit{Proof of Lemma~\ref{lem:poly-shefel}.}
-The main step is to show that if $\Omega$ is 2-convex then the completion of the universal cover of $\Omega$ is $\Cat{}{0}$. Assume that $\Omega$ is 2-convex.
-
+Assume that $\Omega$ is 2-convex.
 Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
 Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
 
+The main step is to show that $\tilde K$ is $\Cat{}{0}$. 
+
 Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices.
-For example, if \[K=\set{(x,y,z)\in\EE^3}{|z|\le |x|+|y|\le 1}\] and $p$ is the origin then $\Sigma_p$ is not simply connected and $\tilde K\to K$ branches at $p$.
+For example, if \[K=\set{(x,y,z)\in\EE^3}{|z|\le |x|+|y|\le 1}\] and $p$ is the origin then $\Sigma_p$,
+the space of directions at $p$,
+is not simply connected and $\tilde K\to K$ branches at $p$.
 
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
@@ -553,7 +556,7 @@ denote by $p$ the image of $\tilde p$ in $K$.
 By Globalization theorem (\ref{thm:hadamard-cartan}) it is sufficient to show that 
 
 \begin{clm}{}\label{eq:curv=<0}
-A small neighborhood of $\tilde p$ in $\tilde K$ forms a $\Cat{}{0}$ space.
+A small neighborhood of $\tilde p$ in $\tilde K$ is $\Cat{}{0}$.
 \end{clm}
 
 Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at $\tilde p$.
@@ -562,7 +565,7 @@ is isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
 By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show that
 
 \begin{clm}{}\label{eq:curv=<1}
-$\Sigma_{\tilde p}$ is a $\Cat{}{1}$ space.
+$\Sigma_{\tilde p}$ is $\Cat{}{1}$.
 \end{clm}
 
 By  rescaling, we can assume every face of $K$ which does not contain $p$ lies at distance at least 2 from $p$.
@@ -583,7 +586,6 @@ Therefore, by Exercise~\ref{ex:hemisphere}, $\gamma$ lies in an open hemisphere.
 Then for a plane $\Pi$ almost passing through $p$,
 the central projection $\gamma'$ of $\gamma$ to $\Pi$ is defined and lies in $\Omega$. 
 Moreover, it is contractible in $\Omega$.
-%??? a picture here would be really helpful
 From two-convexity of $\Omega$, the curve $\gamma'$ is contractible in $\Pi\cap \Omega$.
 
 
@@ -615,12 +617,11 @@ Then
 
 Let us first show that  
 \[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]  
-Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. Given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$, its boundary
-%it touches 
-%["touches" means "intersects"] 
- intersects $\Pi_{n}$ in
-a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. Then there is a curve $\gamma$ in 
-$W=\Pi_{n}$ 
+Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. 
+Given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$, its boundary intersects $\Pi_{n}$ in
+a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. 
+Then there is a curve $\gamma$ in 
+$W\z=\Pi_{n}$ 
 encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. 
 Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
 
@@ -797,15 +798,12 @@ Namely they show the following.
 \begin{thm}{Theorem}
 Let $M$ be a Riemannian manifold with boundary $\partial M$.
 A direction tangent to the boundary will be called concave if there is a short geodesic in this direction which leaves the boundary and goes into the interior of $M$.
-A 
-%sectional direction 
-%It seems this use of "section" is not widely understood.  Igor Belegradek sent me an angry e-mail about this.
-2-plane tangent to the boundary
-will be called concave if all the directions in it are concave.
+A sectional direction (that is, a 2-plane) 
+tangent to the boundary 
+will be called \emph{concave} if all the directions in it are concave.
 
 Then $M$ is locally $\Cat{}{\kappa}$, where $\kappa$ is an upper bound of sectional curvatures of $M$ and  
-concave 
-sectional curvatures of $\partial M$. %in the concave directions.
+sectional curvatures of $\partial M$ in the concave sectional directions. 
 \end{thm}
 
 \begin{thm}{Corollary}
