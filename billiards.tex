@@ -172,6 +172,8 @@ is a convex function.
 \begin{thm}{Corollary}\label{cor:dist-convex}
 Let $K$ be a closed convex subset in a  $\Cat{}{0}$ proper length space $\spc{U}$.
 Then  $\dist{K}{}{}$ is convex on $\spc{U}$.
+
+In particular, $\dist{p}{}{}$ is convex for any point $p$ in $\spc{U}$.
 \end{thm}
 
 
@@ -194,7 +196,6 @@ It remains to note that $h_1(x)=x$ and $h_0(x)=p$ for any $x$.
 
 The proof of the $\Cat{}{1}$ case is identical.
 \qeds
-
 
 \begin{thm}{Proposition}\label{cor:loc-geod-are-min}
 Suppose $\spc{U}$ is a $\Cat{}{0}$ proper length space.  
@@ -317,16 +318,17 @@ By composition,  the natural map from $\trig{\~ p}{\~ x}{\~ y}$ to $\trig p y z$
 The spherical case is done along the same lines.
 \qeds
 
-Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in $A$. 
-
 \begin{thm}{Exercise}\label{ex:convex-balls}
-Show that the distance function $\dist{p}{}{}$ for any point $p$ in a  $\Cat{}{0}$ proper length space is a convex.
+%Show that the distance function $\dist{p}{}{}$ for any point $p$ in a  $\Cat{}{0}$ proper length space is convex.
 %??? that's a basic property of CAT(0) spaces. I think we should mention it somewhere. V.
-
+% I mentioned it in Cor 2.2.5 and commented it out here. S.
 Show that any ball in a $\Cat{}{0}$ proper length space is a convex set.
 
 Analogously, show that any ball of radius $R<\tfrac\pi2$ in a $\Cat{}{1}$ proper length space  is a convex set.
 \end{thm}
+%??? Should Exercises 2.2.11 - 2.2.13 be moved up to follow Corollary 2.2.6? S.
+
+Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in $A$. 
 
 \begin{thm}{Exercise}\label{ex:locally-convex}
 Show that in any $\Cat{}{0}$ proper length space, any closed, connected, locally convex set is convex.
