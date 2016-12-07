@@ -58,13 +58,14 @@ Prove that $f$ is an isometry.
 \parbf{Product space.}
 Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
 $\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ in the set $\spc{U}\times\spc{V}$ 
-with the metric defined by formulas
+with the metric defined by formula
 \[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
 
 
 \parbf{Cone.}
-The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over the metric space $\spc{U}$
+The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over a metric space $\spc{U}$
 is defined as the metric space whose underlying set consists of  %???do we need this ``the''?
+%??? sorry, which "the"? In general, please correct the articles when necessary. No need to ask. Vitali
 equivalence classes in
 $[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by$(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
 and whose metric is given by the cosine rule
@@ -79,7 +80,7 @@ The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{
 The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 
 \parbf{Suspension.}
-The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over the metric space $\spc{U}$
+The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over a metric space $\spc{U}$
 is defined as the metric space whose underlying set consists of equivalence classes in
 $[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ and $(\pi,p)\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
 and whose metric is given by the  spherical cosine rule
@@ -570,7 +571,8 @@ Hence the result.
 \end{wrapfigure}
 
 %???the next sentence look strange, is it English??? 
-To define $s(t,\tau)$ satisfying the above inequality, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+To define $s(t,\tau)$ so that it satisfies the above inequality, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+%??? Is this better? V.
 We parametrize each ray by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
