@@ -523,10 +523,11 @@ Hence the second statement follows.
 \qeds
 
 \begin{thm}{Definition}
-A Reshetnyak's puff pastry $\spc{R}$ 
-is called \index{end-to-end convex}\emph{end-to-end convex} 
-if the union of the lower and the upper levels 
-forms a convex set in $\spc{R}$.
+Consider a Reshetnyak's puff pastry $\spc{R}$ with the levels 
+$\spc{R}^0,\dots,\spc{R}^N$.
+We say that $\spc{R}$ is \index{end-to-end convex}\emph{end-to-end convex} 
+if $\spc{R}^0\cup\spc{R}^N$, the union of its lower and the upper levels, 
+forms a convex set in $\spc{R}$. %%%???please check my English and remove this comment.
 \end{thm}
 
 If $\spc{R}$ is the Reshetnyak's puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$
@@ -707,7 +708,8 @@ which is essentially the case $n=2$.
 We say that a closed convex set $A\subset \EE^m$ has  \index{$\eps$-wide corners}\emph{$\eps$-wide corners}\label{page:wide corners} for given $\epsilon >0$ 
 if together with each point $p$
 the set $A$ contains a small right circular cone
-with tip at $p$ and aperture $\eps$.
+with tip at $p$ and aperture $\eps$;
+that is, $\eps$ is the maximum angle between two generatrix lines of the cone.%%%???please check my English and remove this comment
 
 For example, 
 a plane polygon 
@@ -720,20 +722,18 @@ such that for any subset $F\subset\{1,\dots,n\}$
 the intersection
 $\bigcap_{i\in F}A^i$ 
 has $\eps$-wide corners.
-In this case we may say briefly \index{$\eps$-wide corners}\emph{all intesections of $A^i$ have $\eps$-wide corners}.
+In this case we may say briefly \index{$\eps$-wide corners}\emph{all intersections of $A^i$ have $\eps$-wide corners}.
 
 
 \begin{thm}{Exercise}\label{ex:compact-walls}
-Assume that the walls
-of a billiard table $T$ 
-are compact, convex and have a common  interior point.
-Show that all the intersections of the  walls of $T$ have $\eps$-wide corners for some $\eps>0$.
+Assume $A^1,\dots,A^n\subset\EE^m$ are compact, convex sets with a common interior point.
+Show that all intersections of $A^i$ have $\eps$-wide corners for some positive $\eps$.%%%???please check my English and remove this comment
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:centrally-simmetric-walls}
-Assume that a billiard table $T$ has
-centrally symmetric convex walls with common center.
-Show that all the intersections of the walls of $T$  have $\eps$-wide corners for some $\eps>0$.
+Assume $A^1,\dots,A^n\subset\EE^m$ are
+convex sets with nonempty interior which have common center of symmetry.
+Show that all intersections of $A^i$ have $\eps$-wide corners for some positive $\eps$.%%%???please check my English and remove this comment
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:end-to-end-convex}
@@ -759,12 +759,20 @@ Moreover we can assume that $N\le (\lceil\tfrac\pi\eps\rceil+1)^n$.
 The array $(j_1,\dots,j_N)$ is constructed recursively.
 For $n=1$, the array  is $(1)$.
 
-Now assume an array for $n$ is already constructed.
-Let us exchange each occurrence of $n$ by the alternating string 
+Now assume an array $\bm{j}_\eps$ for $n$ is already constructed.
+Let us exchange each occurrence of $n$ in $\bm{j}_\eps$ by the alternating string 
 \[\underbrace{n,n+1,n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}.\]
+Denote the obtained array by $\bm{j}_\eps'$.
 
-Applying Lemma \ref{lem:end-to-end-convex}, 
-we get that the obtained array meets the conditions of the proposition.
+By Lemma \ref{lem:end-to-end-convex},
+the end-to-end convexity of the puff pastry for $\bm{j}_\eps'$
+follows from end-to-end convexity of the puff pastry for the array
+where each string
+\[\underbrace{A^n,A^{n+1},A^n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}\]
+exchanged to $Q=A^n\cap A^{n+1}$.
+The latter follows by assumption on $\bm{j}_\eps$, 
+since all the intersections of $A^1,\dots,A^{n-1},Q$
+have $\eps$-wide corners.%%%???please check my English and remove this comment
 
 The upper bound on $N$ follows directly from the construction.
 \qeds
