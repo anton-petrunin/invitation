@@ -202,7 +202,7 @@ assuming the latter is defined.\qeds
 \parbf{Exercise~\ref{ex:hausdorff-conv}.}
 By the definition of the convergence
 \[p\in A_\infty\quad\iff\quad\dist{A_n}{}{}(p)\to 0\quad\text{as}\quad n\to \infty.\] 
-The latter equivalent to existence of a sequence $p_n\in A_n$ such that
+The latter is equivalent to existence of a sequence $p_n\in A_n$ such that
 $\dist{p_n}{p}{}\to0$ as $n\to \infty$;
 or equivalently $p_n\to p$.
 Hence the first statement follows.
@@ -425,7 +425,7 @@ that is, $x\in K$, a contradiction.\qeds
 
 \parbf{Exercise~\ref{ex:closest-point}.}
 Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
-Hence the existence of $p^*$ follows.
+Hence the existence of at least one point $p^*$ that minimizes the distance from $p$ follows.
 
 Assume $p^*$ is not uniquely defined;
 that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from $p$.
@@ -580,7 +580,7 @@ The only difference is that a geodesic may spend time \emph{more than} $\pi$ in 
 Start with a copy of $\spc{U}$ for each vertex of $\Gamma$
 and glue them recursively using the following operations and stages.
 
-At the stage $n$ only glue  spaces along $A^n$.
+At  stage $n$, only glue  spaces along $A^n$.
 
 In one step of the stage, choose two connected components of partially glued copies and glue them along the corresponding $A^n$'s.
 Apply Reshetnyak gluing theorem to show that each connected component after the step is $\Cat{}{0}$, assuming that all connected components were $\Cat{}{0}$ before the step.
@@ -671,7 +671,7 @@ Attach to it the cone over its boundary $\partial (\Sigma'\times [0,1])$.
 Denote by $\spc{S}$ the obtained simplicial complex
 and by $v$ the tip of the attached cone.
 
-Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$ which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
+Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$, which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
   Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
 
 The complement $\spc{S}\backslash\{v\}$ is homotopy equivalent to $\Sigma'$.
@@ -747,8 +747,8 @@ Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
 \qeds
 
 \parit{A solution via Crofton formula.}
-Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
-By approximation it's clearly enough to prove this for  smooth curves of length $< 2\cdot\pi$ with transverse self-intersections. 
+Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove $\alpha$ is contained in a hemisphere in $\SS^2$.
+By approximation it suffices to prove this for  smooth curves $\alpha$ of length $< 2\cdot\pi$ with transverse self-intersections. 
 
 Given $v\in \SS^2$, denote by $v^\perp$ the equator in $\SS^2$ with the pole at $v$.
 Further, $\# X$ will denote the number of points in the set $X$.
@@ -770,10 +770,10 @@ By Crofton's formula we have that
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
 Consider the surface $S$ 
-formed by closure of the remaining part of the boundary.
+formed by the closure of the remaining part of the boundary.
 Note that the boundary $\partial S$ of $S$ is formed by some number of broken lines.
 
-Assume $S$ is not a piecewise linear.
+Assume $S$ is not piecewise linear.
 Show that there is a line segment $[pq]$ in $\EE^3$ tangent to $S$ at $p$ which has no common points with $S$ except $p$.
 
 Since $S$ is locally concave,
