@@ -320,14 +320,11 @@ The spherical case is done along the same lines.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convex-balls}
-%Show that the distance function $\dist{p}{}{}$ for any point $p$ in a  $\Cat{}{0}$ proper length space is convex.
-%??? that's a basic property of CAT(0) spaces. I think we should mention it somewhere. V.
-% I mentioned it in Cor 2.2.5 and commented it out here. S.
 Show that any ball in a $\Cat{}{0}$ proper length space is a convex set.
 
 Analogously, show that any ball of radius $R<\tfrac\pi2$ in a $\Cat{}{1}$ proper length space  is a convex set.
 \end{thm}
-%??? Should Exercises 2.2.11 - 2.2.13 be moved up to follow Corollary 2.2.6? S.
+%??? Should Exercises 2.2.11 - 2.2.13 be moved up to follow Corollary 2.2.6? S. Move it if you feel so --- I am neutral. A.
 
 Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in $A$. 
 
@@ -756,21 +753,21 @@ Moreover we can assume that $N\le (\lceil\tfrac\pi\eps\rceil+1)^n$.
 \end{thm}
 
 \parit{Proof.}
-The array $(j_1,\dots,j_N)$ is constructed recursively.
+The array $\bm{j}_\eps(n)=(j_1,\dots,j_N)$ from the indexes $1,\dots,n$ is constructed recursively.
 For $n=1$, the array  is $(1)$.
 
-Now assume an array $\bm{j}_\eps$ for $n$ is already constructed.
-Let us exchange each occurrence of $n$ in $\bm{j}_\eps$ by the alternating string 
+Assume that $\bm{j}_\eps(n)$ is constructed.
+Let us exchange each occurrence of $n$ in $\bm{j}_\eps(n)$ by the alternating string 
 \[\underbrace{n,n+1,n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}.\]
-Denote the obtained array by $\bm{j}_\eps'$.
+Denote the obtained array by $\bm{j}_\eps(n+1)$.
 
 By Lemma \ref{lem:end-to-end-convex},
-the end-to-end convexity of the puff pastry for $\bm{j}_\eps'$
+the end-to-end convexity of the puff pastry for $\bm{j}_\eps(n+1)$
 follows from end-to-end convexity of the puff pastry for the array
 where each string
 \[\underbrace{A^n,A^{n+1},A^n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}\]
 exchanged to $Q=A^n\cap A^{n+1}$.
-The latter follows by assumption on $\bm{j}_\eps$, 
+The latter follows by assumption on $\bm{j}_\eps(n)$, 
 since all the intersections of $A^1,\dots,A^{n-1},Q$
 have $\eps$-wide corners.%%%???please check my English and remove this comment
 
@@ -952,7 +949,8 @@ It also admits a natural generalization to $\Cat{}{\kappa}$ spaces;
 see the book of Martin Bridson and  Andr\'e Haefliger \cite{BH} and our book \cite{AKP} for details.
 
 The idea described above has a number of applications to billiards.
-In particular, it can be used to bound topological entropy of the billiard flow, see an other paper of Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{BFK-2}.
+In particular, it can be used to bound topological entropy of the billiard flow; 
+see an other paper of Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{BFK-2}.
 The lecture \cite{burago-icm} of Dmitri Burago gives a short survey on the subject.
 
 
@@ -960,6 +958,12 @@ Note that the walls in the puff pastry play a key role in the proof
 despite the fact that trajectories never go inside the walls.
 In a similar fashion, puff pastry was used by Stephanie Alexander and Richard Bishop in \cite{a-b:warped}
 to find the upper curvature bound for warped products.
+
+In \cite{hass},
+Joel Hass constructed an example of Riemannian metric on 3-ball with negative curvature and concave boundary.
+This example might put off your appetite in generalizing Collision Theorem --- while
+locally such 3-ball looks as good as the billiards table in the theorem, the number of collisions is obviously infinite.%%%???please check my English and remove this comment.
+
 
 
 
