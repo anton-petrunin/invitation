@@ -735,7 +735,7 @@ Show that all intersections of an arbitrary number of sets $A^i$ have $\eps$-wid
 
 \begin{thm}{Proposition}\label{prop:end-to-end-convex}
 Given $\eps>0$ and a positive integer $n$
-there is an array of integers $\bm{j}_\eps=(j_1,\dots,j_N)$ 
+there is an array of integers $\bm{j}_\eps(n)=(j_1,\dots,j_N)$ 
 such that 
 
 \begin{subthm}{} For each $\kay$ we have $1\le j_\kay\le n$
@@ -753,7 +753,7 @@ Moreover we can assume that $N\le (\lceil\tfrac\pi\eps\rceil+1)^n$.
 \end{thm}
 
 \parit{Proof.}
-The array $\bm{j}_\eps(n)=(j_1,\dots,j_N)$ from the indexes $1,\dots,n$ is constructed recursively.
+The array $\bm{j}_\eps(n)=(j_1,\dots,j_N)$  is constructed recursively.
 For $n=1$, the array  is $(1)$.
 
 Assume that $\bm{j}_\eps(n)$ is constructed.
@@ -762,7 +762,7 @@ Let us exchange each occurrence of $n$ in $\bm{j}_\eps(n)$ by the alternating st
 Denote the obtained array by $\bm{j}_\eps(n+1)$.
 
 By Lemma \ref{lem:end-to-end-convex},
-the end-to-end convexity of the puff pastry for $\bm{j}_\eps(n+1)$
+end-to-end convexity of the puff pastry for $\bm{j}_\eps(n+1)$
 follows from end-to-end convexity of the puff pastry for the array
 where each string
 \[\underbrace{A^n,A^{n+1},A^n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}\]
@@ -950,7 +950,7 @@ see the book of Martin Bridson and  Andr\'e Haefliger \cite{BH} and our book \ci
 
 The idea described above has a number of applications to billiards.
 In particular, it can be used to bound topological entropy of the billiard flow; 
-see an other paper of Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{BFK-2}.
+see another paper of Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{BFK-2}.
 The lecture \cite{burago-icm} of Dmitri Burago gives a short survey on the subject.
 
 
@@ -960,10 +960,9 @@ In a similar fashion, puff pastry was used by Stephanie Alexander and Richard Bi
 to find the upper curvature bound for warped products.
 
 In \cite{hass},
-Joel Hass constructed an example of Riemannian metric on 3-ball with negative curvature and concave boundary.
-This example might put off your appetite in generalizing Collision Theorem --- while
-locally such 3-ball looks as good as the billiards table in the theorem, the number of collisions is obviously infinite.%%%???please check my English and remove this comment.
-
+Joel Hass constructed an example of a Riemannian metric on the 3-ball with negative curvature and concave boundary.
+This example might decrease your appetite for generalizing the Collision Theorem --- while
+locally such a 3-ball looks as good as the billiards table in the theorem, the number of collisions is obviously infinite.
 
 
 
