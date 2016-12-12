@@ -15,11 +15,10 @@ a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$  
 For example, $\SS^1$ is locally isometric to $\RR$, and so $\SS^1$ is locally $\Cat{}{0}$.
 On the other hand, $\SS^1$ is not $\Cat{}{0}$, since the closed local geodesics in $\SS^1$ are not geodesics, so $\SS^1$ does not satisfy Proposition~\ref{cor:loc-geod-are-min}.
 
-This definition is equivalent to saying that each point $p\in \spc{U}$ admits an open neighborhood $\Omega$
-such that 
-$\Omega$ is geodesic and 
-any triangle in $\Omega$ is thin (or spherically thin, respectively).
-The proof goes along the same lines as Exercise \ref{ex:convex-balls}.
+If $\spc{U}$ is a proper length space then it is locally $\Cat{}{0}$ (or locally $\Cat{}{1}$) 
+if and only if 
+each point $p\in \spc{U}$ admits an open neighborhood $\Omega$ which is geodesic and any triangle in $\Omega$ is thin (or spherically thin, respectively).
+The proof goes along the same lines as Exercise \ref{ex:convex-balls}.%%%???please check my English and remove this comment.
 
 \section{Space of local geodesic paths}\label{sec:geod-space}
 
@@ -492,7 +491,9 @@ Note that every flag complex is determined by its 1-skeleton.
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
 
-Conclude that any finite simplicial complex is homeomorphic to a $\Cat{}{1}$ proper length space.
+Use Flag condition (see \ref{thm:flag} below)
+to conclude that any finite simplicial complex is homeomorphic to a $\Cat{}{1}$ proper length space.
+%???please check my English and remove this comment.
 \end{thm}
 
 
@@ -627,27 +628,6 @@ Assume that a spherical polyhedral space $\spc{P}$
 admits a triangulation $\tau$ such that all dihedral angles of all simplices are at least $\tfrac\pi2$.
 Show that $\spc{P}$ is a $\Cat{}{1}$ space
 if $\tau$ is flag.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:short-retracts}
-Let $\spc{U}\in \Cat{}{0}$
-and $\phi^1,\phi^2,\dots,\phi^k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
-that is 
-\begin{itemize}
-\item $\phi^i\circ\phi^i=\phi^i$ for each $i$;
-\item $\phi^i\circ\phi^j=\phi^j\circ\phi^i$ for any $i$ and $j$;
-\item $\dist{\phi^i(x)}{\phi^i(y)}{\spc{U}}\le \dist{x}{y}{\spc{U}}$ for each $i$ and any $x,y\in\spc{U}$.
-\end{itemize}
-Set $A^i=\Im \phi^i$ for all $i$.
-
-Assume $\Gamma$ is a finite graph 
-(without loops and multiple edges) 
-with edges labeled by $1,2,\dots, n$.
-Denote by $\spc{U}^\Gamma$ the space obtained by taking 
-a copy of $\spc{U}$ for each vertex of $\Gamma$, and 
-gluing two such copies along $A^i$ if the corresponding vertices are joined by an edge labeled by $i$.
-
-Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space.
 \end{thm}
 
 \parbf{The space of trees.}
@@ -820,11 +800,10 @@ Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to $\gamma$.
 
 Fix a vertex $v\in G$;
 let $G_v$ be the connected component of $G$ containing $v$.
-Let $\tilde G$ be 
-the inverse image 
-of $G_v$ in $\tilde{\spc{Q}}$
+Let $\tilde G$ be a connect component of the inverse image of $G_v$ in $\tilde{\spc{Q}}$
 for the universal cover $\tilde{\spc{Q}}\to \spc{Q}$.
 Fix a point $\tilde v\in\tilde G$ in the inverse image of $v$.
+
  
 Note that 
 \begin{clm}{}\label{tilde-G-convex}
@@ -845,7 +824,7 @@ By Exercise \ref{ex:locally-convex},
 it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
 or equivalently, $G$ is locally convex in $\spc{Q}$.
 
-The latter can only fail if $\gamma$ passes through two vertices, say $\xi$ to $\zeta$ in $\spc{S}$,
+Note that the latter can only fail if $\gamma$ passes through two vertices, say $\xi$ to $\zeta$ in $\spc{S}$,
 which are joined by an edge not in $\gamma$; 
 denote this edge by $e$.
 
@@ -961,6 +940,9 @@ The universal cover of $\spc{P}$ is not simply connected at infinity.
 \end{subthm}
 \end{thm}
 
+There are no 3-dimensional examples of that type, see \cite{rolfsen} by Dale Rolfsen.
+In \cite{thurston}, Paul Thurston conjectured that the same holds in 4-dimensional case.%%%???please check my English and remove this comment.
+
 \parit{Proof.}
 Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of the simplicial complex $\spc{S}$ provided by Exercise~\ref{ex:funny-S}.
 \qeds
@@ -976,13 +958,14 @@ Tadeusz Januszkiewicz
 and 
 Jean-Fran\c{c}ois Lafont in \cite{davis-januszkiewicz-lafont}
 to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
+An other example of that type was constructed by Stephan Stadler, see \cite{stadler}.
 
 It is noteworthy that any complete, simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
 In fact by Globalization theorem
 \ref{thm:hadamard-cartan}, 
 the exponential map at a point of such a manifold is a homeomorphism.
 In particular, there is no Riemannian analog of Proposition~\ref{prop:loc-CAT-mnfld}.
-Moreover, according to Stone's theorem, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the proposition; 
+Moreover, according to Stone's theorem, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the proposition; %???Check ref???
 that is the homeomorphism to a manifold in Proposition~\ref{prop:loc-CAT-mnfld} 
 can not be made piecewise linear.
 
@@ -990,7 +973,9 @@ The construction described in this chapter also leads to the so-called {}\emph{h
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis}.
 
 All the topics discussed above link Alexandrov geometry with the fundamental group.
-So-called {}\emph{hyperbolic groups}, introduced by 
+The theory of {}\emph{hyperbolic groups}, 
+a branch of \emph{geometric group theory}, 
+introduced by 
 Mikhael Gromov,
 could be considered as a further step in this direction, see \cite{gromov:hyp-groups}.
 

@@ -1,3 +1,37 @@
+\begin{thm}{Exercise}\label{ex:short-retracts}
+Let $\spc{U}\in \Cat{}{0}$
+and $\phi^1,\phi^2,\dots,\phi^k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
+that is 
+\begin{itemize}
+\item $\phi^i\circ\phi^i=\phi^i$ for each $i$;
+\item $\phi^i\circ\phi^j=\phi^j\circ\phi^i$ for any $i$ and $j$;
+\item $\dist{\phi^i(x)}{\phi^i(y)}{\spc{U}}\le \dist{x}{y}{\spc{U}}$ for each $i$ and any $x,y\in\spc{U}$.
+\end{itemize}
+Set $A^i=\Im \phi^i$ for all $i$.
+
+Assume $\Gamma$ is a finite graph 
+(without loops and multiple edges) 
+with edges labeled by $1,2,\dots, n$.
+Denote by $\spc{U}^\Gamma$ the space obtained by taking 
+a copy of $\spc{U}$ for each vertex of $\Gamma$, and 
+gluing two such copies along $A^i$ if the corresponding vertices are joined by an edge labeled by $i$.
+
+Show that $\spc{U}^\Gamma$ is a $\Cat{}{0}$ space.
+\end{thm}
+
+\parbf{Exercise~\ref{ex:short-retracts}.}
+Start with a copy of $\spc{U}$ for each vertex of $\Gamma$
+and glue them recursively using the following operations and stages.
+
+At  stage $n$, only glue  spaces along $A^n$.
+
+In one step of the stage, choose two connected components of partially glued copies and glue them along the corresponding $A^n$'s.
+Apply Reshetnyak gluing theorem to show that each connected component after the step is $\Cat{}{0}$, assuming that all connected components were $\Cat{}{0}$ before the step.
+\qeds
+
+%???remove
+
+
 
 Given a metric graph $\Gamma$,  define $P_k(\Gamma)$ as follows. Let $\Gamma^b$ be the barycentric subdivision of $\Gamma$ with the natural metric. For any two adjacent vertices $p,q\in\Gamma^b$, substitute for the edge $[pq]$ a countable collection of intervals $\{I_i\}_{i\ge 1}$ of length $\dist{p}{q}{}+\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$. Note that the resulting space $P_k(\Gamma)$ is again a metric graph  with length metric. 
 
