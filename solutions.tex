@@ -49,7 +49,7 @@ We present the proof of Travis Morrison.
 \medskip
 
 Given any pair of point $x_0,y_0\in K$, 
-consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
+consider two sequences $(x_n)$ and $(y_n)$
 such that 
 $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
 
@@ -324,7 +324,7 @@ For each $n$ choose a $\tfrac1n$-midpoint $z_n$;
 that is, a point such that
 \[\dist{x}{z_n}{},\dist{y}{z_n}{}\le \tfrac12\cdot\dist{x}{y}{}+\tfrac1n.\]
 
-From the $\Cat{}{0}$ comparison inequality for the quadruple $x,y,z_n,z_m$ we have that $\dist{z_m}{z_n}{}\to0$ as $n,m\to\infty$;
+From the $\Cat{}{0}$ comparison inequality for the quadruple $x$, $y$, $z_n$, $z_m$ we have that $\dist{z_m}{z_n}{}\to0$ as $n,m\to\infty$;
 that is, $z_n$ is Cauchy and hence converges.
 
 Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint for the pair $x$ and $y$.\qeds 
