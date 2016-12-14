@@ -76,12 +76,13 @@ The following definition is closely related to the one given by Mikhael Gromov i
 \begin{thm}{Definition}\label{def:two-convex}
 We say that a subset $K\subset \EE^m$ is \index{two-convex set}\emph{two-convex}
 if the following condition holds for any plane $W\subset\EE^m$:
-If $\gamma$ is a closed curve in $W\cap K$ 
-which is null-homotopic in $K$, then it is null-homotopic in $W\cap K$.
+If $\gamma$ is a simple closed curve in $W\cap K$ 
+which is null-homotopic in $K$, 
+then the disc in $W$ bounded by $\gamma$ lies in $K$.
 \end{thm}
 
 Note that two-convex set does not have to be connected, nor simply connected. 
-The following proposition follows immediately from the definition.
+The following two propositions follow immediately from the definition.
 
 \begin{thm}{Proposition}
 Any subset in $\EE^2$ is 2-convex.
@@ -96,19 +97,16 @@ The intersection of an arbitrary collection of two-convex sets in $\EE^m$ is two
 The interior of any two-convex set in $\EE^m$ is a two-convex set.
 \end{thm}
 
-\parit{Proof of \ref{prop:two-hull} and \ref{prop:two-hull-open}.}
+\parit{Proof.}
 Let $K\subset \EE^m$ be two-convex and let $W$ be a 2-plane.
-Let $\gamma\subset \Int K\cap W$ be a closed curve which is contractible in $\Int K$. Without loss of generality we can assume that $\Gamma$ is smooth, regular with finitely many transverse self-intersections in $W$.
-Then $W\backslash \gamma$ is a union of finitely many connected components $U_i$ where all bounded $U_i$ are diffeomorphic to $\DD^2$. 
+Fix a closed simple plane curve $\gamma$ 
+which is contractible in the interior of $K$.
 
-Pick $p_i\in U_i$. Let $U$ be the union of those bounded $U_i$ such that
-$\gamma$ has nonzero index with respect to $p_i$. 
-Since $K$ is 2-convex, $\gamma$ is contractible in $K\cap W$. 
-It's easy to see that $K\cap W$ must contain $U$ and that $\gamma$ is contractible in $\bar U$. 
-The latter implies Proposition~\ref{prop:two-hull}.
-
-Applying small parallel translations to $\gamma$ we see that $\bar U\subset \Int K$ and hence $\Int K$ is 2-convex; 
-which proves Proposition~\ref{prop:two-hull-open}
+Since $K$ is two-convex,
+the plane disc $D$ bounded by $\gamma$ lies in $K$.
+The same holds for the translations of $D$ by small vectors.
+Therefore $D$ lies in the interior of $K$.
+Hence the statement follows.
 \qeds
 
 \begin{thm}{Definition}
@@ -134,8 +132,11 @@ Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
 Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of $p$.
 \end{thm}
 
+The proof is taken from \cite[\S\textonehalf]{gromov:SaGMC}, but we through in some details.
+%???added
 
-\parit{Proof;``Only-if'' part.}
+%???this ``if'' and ``only-if'' parts --- I am not sure what is the best way to call it. Maybe Stephanie can decide and make it uniform???
+\parit{Proof; ``only-if'' part.}
 If $k_2(p)<0$ for some $p\in S$,
 consider the plane $W$ through $p$  spanned by the first two principal directions.
 Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
@@ -188,6 +189,39 @@ which lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
 \qeds
 
+Note that the ``if'' part proves a bit stronger statement.
+Namely for any plane curve $\gamma$ (not necessary simple) which is contractible in $K$ is contractible in the intersection of $K$ with the plane of $\gamma$.
+The latter condition does not hold for the complement 
+of two planes in $\EE^4$ which is two convex by Proposition~\ref{prop:two-hull};
+see also Exercise~\ref{ex:two-planes} below.
+The following proposition shows that there are no such examples in $\EE^3$.
+
+\begin{thm}{Proposition}\label{prop:3d-strong-2-convexity}
+Let $\Omega\subset\EE^3$ be an open two-convex subset.
+Then for any plane $W\subset\EE^3$
+any closed curve in $W\cap \Omega$ 
+which is null-homotopic in $\Omega$, 
+then is null-homotopic in $\Omega\cap W$.
+\end{thm}
+
+\parit{Proof.}
+Fix a closed plane curve which is null-homotopic in $\Omega$.
+Since $\Omega$ is open we can assume that $\gamma$ as well as the disc $D$ which shrinks $\gamma$ in $\Omega$ lie in general position.
+In particular $D$ intersects $W$ transvesally at all its interior points.
+
+The plane $W$ cuts $D$ into components.
+Note that one of these components, say $D'$, is a disc;
+it lies on one side from $W$.
+
+If the boundary of $D'$ is not contratable in $W$ then by loop theorem (see \cite{???}), there is an embedded disc in $\Omega$ with the same property --- it lies in $\Omega$,
+its boundary lies in $W\cap\Omega$
+and is not null-homotopic in $W\cap\Omega$.
+The latter contradicts Definition~\ref{def:two-convex}.
+\qeds
+
+
+
+
 \section{Sets with smooth boundary}\label{sec:smooth-bry}
 
 In this section we characterize the subsets with smooth boundary in $\EE^m$  that form $\Cat{}{0}$ spaces. 
@@ -212,7 +246,7 @@ Denote by $k_1(p)\le\dots\le k_{m-1}(p)$ the principle curvatures of $S$ at $p\i
 By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2(p)\ge 0$ for any $p\in S$.
 
 \begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/not-two-convex(1)}
+\begin{lpic}[t(-4mm),b(-3mm),r(0mm),l(0mm)]{pics/not-two-convex(1)}
 \end{lpic}
 \end{wrapfigure}
 
@@ -500,7 +534,8 @@ are two-convex.
 \begin{thm}{Corollary}
 Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed unit disc $\DD$. 
 Then the graph
-$z\z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\Cat{}{0}$ space.
+\[\Gamma=\set{(x,y,z)\in \EE^3}{z=f(x,y)},\] 
+equipped with induced length metric is a $\Cat{}{0}$ space.
 \end{thm}
 
 \parit{Proof.}
@@ -553,7 +588,7 @@ Nevertheless, is easy to see that $K$ is always a polyhedral space.
 Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is the interior of a polytope.
 \end{thm}
 
-The statement might look obvious, but there is an underwater stone. %%%???please check English and remove this note
+The statement might look obvious, but there is an underwater stone in the proof. %%%???please check English and remove this note
 The proof uses the following exercises.
 
 \begin{thm}{Exercise}\label{ex:hemisphere}
@@ -601,7 +636,7 @@ By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show that
 $\Sigma_{\tilde p}$ is $\Cat{}{1}$.
 \end{clm}
 
-By  rescaling, we can assume every face of $K$ which does not contain $p$ lies at distance at least 2 from $p$.
+By  rescaling, we can assume that every face of $K$ which does not contain $p$ lies at distance at least 2 from $p$.
 Denote by $\SS^2$ the unit sphere centered at $p$,
 set $\Theta=\SS^2\cap\Omega$.
 Note that $\Sigma_pK$ is isometric to the completion of $\Theta$
@@ -612,14 +647,15 @@ By Exercise \ref{ex:bishop-sphere}, it remains to show  the following.
 Any closed curve in $\tilde\Theta$ of length less than $2\cdot\pi$ is contractible.
 \end{clm}
 
-
-Consider a closed curve $\tilde \gamma$ of length $<2\cdot\pi$ in $\tilde\Theta$.
+Fix a closed curve $\tilde \gamma$ of length $<2\cdot\pi$ in $\tilde\Theta$.
 Its projection $\gamma$ in $\Theta\subset\SS^2$ has the same length.
 Therefore, by Exercise~\ref{ex:hemisphere}, $\gamma$ lies in an open hemisphere.
 Then for a plane $\Pi$ almost passing through $p$,
 the central projection $\gamma'$ of $\gamma$ to $\Pi$ is defined and lies in $\Omega$. 
 Moreover, it is contractible in $\Omega$.
-From two-convexity of $\Omega$, the curve $\gamma'$ is contractible in $\Pi\cap \Omega$.
+From two-convexity of $\Omega$
+and Proposition~\ref{prop:3d-strong-2-convexity},
+the curve $\gamma'$ is contractible in $\Pi\cap \Omega$.
 
 
 It follows that $\gamma$ is contractible in $\Theta$ 
