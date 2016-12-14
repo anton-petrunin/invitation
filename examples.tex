@@ -80,73 +80,13 @@ If $\gamma$ is a closed curve in $W\cap K$
 which is null-homotopic in $K$, then it is null-homotopic in $W\cap K$.
 \end{thm}
 
+Note that two-convex set does not have to be connected, nor simply connected. 
 The following proposition follows immediately from the definition.
 
 \begin{thm}{Proposition}
 Any subset in $\EE^2$ is 2-convex.
 \end{thm}
 
-The next proposition describes the closed two-convex sets with smooth boundary.
-
-\begin{thm}{Proposition}\label{prop:two-cove+smooth}
-Let $K\subset \EE^m$ be a closed subset.
-
-Assume that the boundary of $K$ forms a smooth hypersurface $S$.
-Consider the unit normal vector field $\nu$ on $S$ that  points outside of $K$.
-Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$ (for example, if $K$ is convex then  $k_1\ge 0$).
-
-Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
-Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of $p$.
-\end{thm}
-
-
-\parit{Proof;``Only-if'' part.}
-
-If $k_2(p)<0$ for some $p\in S$,
-consider the plane $W$ through $p$  spanned by the first two principal directions.
-Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
-We get a triangle $[xyz]$ which is null-homotopic in $K$,
-but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $[xyz]$ does not lie in $K$ completely.
-Therefore $K$ is not two-convex.
-
-\parit{``If'' part.}
-Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is
- positive definite at each point.
-
-
-Suppose $f\:\EE^m\to\RR$ is a smooth strongly
-convex function 
-such that the restriction $f|_S$ is a Morse function.
-Note that a generic smooth strongly convex function $f\:\EE^m\to\RR$ has this property.
-
-For a critical point $p$ of $f|_S$, the outer normal vector $\nu(p)$ is parallel to the gradient $\nabla_pf$;
-we say that $p$ is a 
-\index{positive critical point}\emph{positive critical point}
-if $\nu(p)$ and $\nabla_p f$ point in the same direction, 
-and 
-\index{negative critical point}\emph{negative} otherwise.
-(If $\nabla_pf=0$, that is, $p$ is the minimum point of $f$, then the sign is undefined.)
-
-Since $k_2\ge 0$ and $f$ is strongly convex, 
-the negative critical points of $f|_S$
-have index at most $1$.
-
-Given a real value $s$, set 
-\[K_s=\set{x\in K}{f(x)<s}.\]
-Assume  $\phi_0\:\DD\to K$ is a continuous map of the disc $\DD$
-such that $\phi_0(\partial \DD)\subset K_s$.
-By the Morse Lemma, 
-there is a homotopy $\phi_t\:\DD\to K$ rel $\partial \DD$ such that 
-$\phi_1(\DD)\subset K_s$.
-
-Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
-Note that the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
-is convex.
-Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
-From above, there is a disc in $K$ with boundary $\gamma$
-which lies arbitrary close to $\Conv\gamma$.
-Since $K$ is closed, the statement follows.
-\qeds
 
 \begin{thm}{Proposition}\label{prop:two-hull}
 The intersection of an arbitrary collection of two-convex sets in $\EE^m$ is two-convex.
@@ -156,7 +96,7 @@ The intersection of an arbitrary collection of two-convex sets in $\EE^m$ is two
 The interior of any two-convex set in $\EE^m$ is a two-convex set.
 \end{thm}
 
-\parit{Proof of the propositions.}
+\parit{Proof of \ref{prop:two-hull} and \ref{prop:two-hull-open}.}
 Let $K\subset \EE^m$ be two-convex and let $W$ be a 2-plane.
 Let $\gamma\subset \Int K\cap W$ be a closed curve which is contractible in $\Int K$. Without loss of generality we can assume that $\Gamma$ is smooth, regular with finitely many transverse self-intersections in $W$.
 Then $W\backslash \gamma$ is a union of finitely many connected components $U_i$ where all bounded $U_i$ are diffeomorphic to $\DD^2$. 
@@ -180,6 +120,73 @@ the two-convex hull of any set is two-convex.
 Further, 
 by Proposition~\ref{prop:two-hull-open}, the
 two-convex hull of an open set is open.
+
+The next proposition describes the closed two-convex sets with smooth boundary.
+
+\begin{thm}{Proposition}\label{prop:two-cove+smooth}
+Let $K\subset \EE^m$ be a closed subset.
+
+Assume that the boundary of $K$ forms a smooth hypersurface $S$.
+Consider the unit normal vector field $\nu$ on $S$ that  points outside of $K$.
+Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$ (for example, if $K$ is convex then  $k_1\ge 0$).
+
+Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
+Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of $p$.
+\end{thm}
+
+
+\parit{Proof;``Only-if'' part.}
+If $k_2(p)<0$ for some $p\in S$,
+consider the plane $W$ through $p$  spanned by the first two principal directions.
+Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
+We get a triangle $[xyz]$ which is null-homotopic in $K$,
+but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $[xyz]$ does not lie in $K$ completely.
+Therefore $K$ is not two-convex.
+
+\parit{``If'' part.}
+Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is
+ positive definite at each point.
+
+
+Suppose $f\:\EE^m\to\RR$ is a smooth strongly
+convex function 
+such that the restriction $f|_S$ is a Morse function.
+Note that a generic smooth strongly convex function $f\:\EE^m\to\RR$ has this property.
+
+For a critical point $p$ of $f|_S$, the outer normal vector $\nu(p)$ is parallel to the gradient $\nabla_pf$;
+we say that $p$ is a 
+\index{positive critical point}\emph{positive critical point}
+if $\nu(p)$ and $\nabla_p f$ point in the same direction, 
+and 
+\index{negative critical point}\emph{negative} otherwise.
+Since $f$ is generic, we can assume that the sign is defined for all critical point's;
+that is, $\nabla_pf\ne0$ for any critical point $p$ of $f|_S$.
+
+Since $k_2\ge 0$ and $f$ is strongly convex, 
+the negative critical points of $f|_S$
+have index at most $1$.
+
+Given a real value $s$, set 
+\[K_s=\set{x\in K}{f(x)<s}.\]
+Assume  $\phi_0\:\DD\to K$ is a continuous map of the disc $\DD$
+such that $\phi_0(\partial \DD)\subset K_s$.
+By the Morse Lemma, 
+there is a homotopy $\phi_t\:\DD\to K$ rel $\partial \DD$ such that 
+$\phi_1(\DD)\subset K_s$.
+
+Indeed, we can construct a homotopy $\phi_t\:\DD\to K$ which decrease the maximum of $f\circ\phi$ on $\DD$ until in hangs on a critical point of $f|_S$.
+This point can not be negative, otherwise its index would be at least 2.
+If this point a positive then it is easy decrease the maximum a little by pushing disc from $S$.%%%???please check English and remove this comment
+
+
+Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
+Note that the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
+is convex.
+Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
+From above, there is a disc in $K$ with boundary $\gamma$
+which lies arbitrary close to $\Conv\gamma$.
+Since $K$ is closed, the statement follows.
+\qeds
 
 \section{Sets with smooth boundary}\label{sec:smooth-bry}
 
@@ -346,6 +353,15 @@ Then $K$ is $\Cat{}{0}$.
 The assumption that the set $\Omega$ is open is not critical;
 instead one can assume that the induced length metric takes finite values at all points of $\Omega$.
 We sketch the proof from the note \cite{bishop:jordan} by Richard Bishop and suggest that  the details be finished as an exercise.
+A generalization of this result is proved by 
+Alexander Lytchak and Stefan Wenger
+\cite[Proposition 12.1]{lytchak-wenger};
+this paper also contains a far leading application.
+
+%???Sasha suggests to include exercise
+%If in a prper length space all simple triangles are thin then all triangles are thin.
+%Here simple triangle is triangle which sides intesect only at the common vertices.
+%This exercise might go naturally into the section on thin triangles, or might stay here...
 
 
 \parit{Sketch of proof.}
@@ -402,9 +418,10 @@ Show that the completion of $\tilde \Theta$ is a  $\Cat{}{1}$ space.
 \section{Open space sets}
 The material below was inspired by work of Samuel Shefel.
 %, and developed by Anton Petrunin \cite{petrunin-shefel}.
-%??? There is a ref to my paper with Stadler in the end of the chapter.
+% There is a ref to my paper with Stadler in the end of the chapter.
 
 Shefel seems very intrigued by the survival of metric properties under affine transformation.
+%???Sasha says it is not English --- I am not sure, is it better to writ in the past since Shefel is dead???
 To describe an instance of such phenomena,
 note that two-convexity survives under affine transformations of a Euclidean space.
 Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the following holds.
@@ -417,7 +434,8 @@ Then any affine transformation of $K$ is also $\Cat{}{0}$.
 \end{thm}
 
 By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in the three-dimensional Euclidean space.
-In higher dimensions this is no longer true.
+In higher dimensions this is no longer true, 
+see Exercise~\ref{ex:two-convex-not-a-CAT}.
 
 Here is the main theorem of this section.
 
@@ -493,7 +511,10 @@ Consider the sequence of sets
 \[K_n
 =
 \set{(x,y,z)\in \EE^3}{z\lege f(x,y)\pm\tfrac1n,\ (x,y)\in \DD}.\]
-Note that each $K_n$ is closed, simply connected and two-convex. Moreover the boundary of $K_n$ forms a Lipschitz surface.
+Note that each $K_n$ is closed, simply connected.
+Directly from definition, it follows that $K$ is also two-convex. 
+%%%???please check English and remove this note
+Moreover the boundary of $K_n$ forms a Lipschitz surface.
 
 Equip $K_n$ with the induced length metric.
 By Corollary~\ref{cor:shefel},
@@ -532,14 +553,25 @@ Nevertheless, is easy to see that $K$ is always a polyhedral space.
 Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is the interior of a polytope.
 \end{thm}
 
-The statement might look obvious, but it has an underwater stone.
-The proof uses the following exercise.
+The statement might look obvious, but there is an underwater stone. %%%???please check English and remove this note
+The proof uses the following exercises.
 
 \begin{thm}{Exercise}\label{ex:hemisphere}
 Show that any closed path of length $<2\cdot \pi$  in the units sphere $\SS^2$ lies in an open  hemisphere. 
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:inner-support}
+Assume $\Omega$ is an open subset in $\EE^3$
+which is not two-convex.
+Show that there is a plane $W$ such that the complement 
+$W\backslash \Omega$ contains an isolated point.%%%???please check English and remove this note
+\end{thm}
+
 \parit{Proof of Lemma~\ref{lem:poly-shefel}.}
+The ``only if'' part can be proved the same way as in Theorem~\ref{thm:set-with-smooth-bry:CBA} with additional use of Exercise~\ref{ex:inner-support}.%%%???please check English and remove this note
+
+
+\parit{``If'' part.}
 Assume that $\Omega$ is 2-convex.
 Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
 Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
@@ -614,21 +646,28 @@ Then
 \end{thm}
 
 \parit{Proof.}
- Note that $\Omega'$ is a union of open sets, in particular it is open.
+Set 
+\[\Omega'=\bigcup_n\Omega_n.\eqlbl{eq:Omega'}\]
+Note that $\Omega'$ is a union of open sets, in particular it is open.
 
 Let us first show that  
 \[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]  
 Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. 
-Given a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$, its boundary intersects $\Pi_{n}$ in
-a bounded component  $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. 
+Fix a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
+Assume its boundary intersects $\Pi_{n}$ in
+a bounded component $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. 
 Then there is a curve $\gamma$ in 
 $W\z=\Pi_{n}$ 
 encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. 
 Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
 
-By induction, $\Conv_2\Omega\supset\Omega_n$ for each $n$.
-Since $\Omega'=\bigcup_n\Omega_n$, the inclusion \ref{eq:Conv2>Omega'} follows.
+In general, the boundary of $U$ may not intersect $\Pi_n$.
+(It may happen only on the first step --- in the construction of $\Omega_1$ form $\Omega_0$, but we do not use it.)
+In this case one has to apply the same argument for a plane $W$ supporting the closure of $U$ at one point.
+%???please check English and remove this note
 
+By induction, $\Conv_2\Omega\supset\Omega_n$ for each $n$.
+Therefore \ref{eq:Omega'} implies \ref{eq:Conv2>Omega'}.
 
 It remains to show that $\Omega'$ is two-convex.
 Assume the contrary; 
@@ -719,7 +758,7 @@ Prove the last statement.\qeds
 
 
 \parit{Proof of \ref{thm:shefel}.}
-The ``only if'' part can be proved the same way as in Theorem~\ref{thm:set-with-smooth-bry:CBA}.
+The ``only if'' part can be proved the same way as in Theorem~\ref{thm:set-with-smooth-bry:CBA} with additional use of Exercise~\ref{ex:inner-support}.
 
 \parit{``If''-part.}
 Suppose $\Omega$ is 2-convex. We need to show that $K$ is $\Cat{}{0}$.
