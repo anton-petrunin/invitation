@@ -77,11 +77,11 @@ The following definition is closely related to the one given by Mikhael Gromov i
 We say that a subset $K\subset \EE^m$ is \index{two-convex set}\emph{two-convex}
 if the following condition holds for any plane $W\subset\EE^m$:
 If $\gamma$ is a simple closed curve in $W\cap K$ 
-which is null-homotopic in $K$, 
-then the disc in $W$ bounded by $\gamma$ lies in $K$.
+which is null-homotopic in $K$,  
+then it is null-homotopic in $W\cap K$, in particular the disc in $W$ bounded by $\gamma$ lies in $K$.
 \end{thm}
 
-Note that two-convex set does not have to be connected, nor simply connected. 
+Note that two-convex sets does not have to be connected nor simply connected. 
 The following two propositions follow immediately from the definition.
 
 \begin{thm}{Proposition}
@@ -119,7 +119,7 @@ Further,
 by Proposition~\ref{prop:two-hull-open}, the
 two-convex hull of an open set is open.
 
-The next proposition describes the closed two-convex sets with smooth boundary.
+The next proposition describes  closed two-convex sets with smooth boundary.
 
 \begin{thm}{Proposition}\label{prop:two-cove+smooth}
 Let $K\subset \EE^m$ be a closed subset.
@@ -132,7 +132,7 @@ Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
 Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of $p$.
 \end{thm}
 
-The proof is taken from \cite[\S\textonehalf]{gromov:SaGMC}, but we through in some details.
+The proof is taken from \cite[\S\textonehalf]{gromov:SaGMC}, but we added  some details.
 %???added
 
 %???this ``if'' and ``only-if'' parts --- I am not sure what is the best way to call it. Maybe Stephanie can decide and make it uniform???
@@ -160,7 +160,7 @@ we say that $p$ is a
 if $\nu(p)$ and $\nabla_p f$ point in the same direction, 
 and 
 \index{negative critical point}\emph{negative} otherwise.
-Since $f$ is generic, we can assume that the sign is defined for all critical point's;
+Since $f$ is generic, we can assume that the sign is defined for all critical points;
 that is, $\nabla_pf\ne0$ for any critical point $p$ of $f|_S$.
 
 Since $k_2\ge 0$ and $f$ is strongly convex, 
@@ -175,9 +175,9 @@ By the Morse Lemma,
 there is a homotopy $\phi_t\:\DD\to K$ rel $\partial \DD$ such that 
 $\phi_1(\DD)\subset K_s$.
 
-Indeed, we can construct a homotopy $\phi_t\:\DD\to K$ which decrease the maximum of $f\circ\phi$ on $\DD$ until in hangs on a critical point of $f|_S$.
+Indeed, we can construct a homotopy $\phi_t\:\DD\to K$ which decreases the maximum of $f\circ\phi$ on $\DD$ until in hangs on a critical point $p$ of $f|_S$.
 This point can not be negative, otherwise its index would be at least 2.
-If this point a positive then it is easy decrease the maximum a little by pushing disc from $S$.%%%???please check English and remove this comment
+If this critical point is positive then it is easy to decrease the maximum a little by pushing the disc from $S$ into $K$ in the direction of $-\nabla f_p$.%%%???this is what you meant, right? V.
 
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
@@ -189,8 +189,8 @@ which lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
 \qeds
 
-Note that the ``if'' part proves a bit stronger statement.
-Namely for any plane curve $\gamma$ (not necessary simple) which is contractible in $K$ is contractible in the intersection of $K$ with the plane of $\gamma$.
+Note that the ``if'' part proves a somewhat stronger statement.
+Namely, for any plane curve $\gamma$ (\emph{not necessary simple}) which is contractible in $K$ is contractible in the intersection of $K$ with the plane of $\gamma$.
 The latter condition does not hold for the complement 
 of two planes in $\EE^4$ which is two convex by Proposition~\ref{prop:two-hull};
 see also Exercise~\ref{ex:two-planes} below.
@@ -200,23 +200,25 @@ The following proposition shows that there are no such examples in $\EE^3$.
 Let $\Omega\subset\EE^3$ be an open two-convex subset.
 Then for any plane $W\subset\EE^3$
 any closed curve in $W\cap \Omega$ 
-which is null-homotopic in $\Omega$, 
-then is null-homotopic in $\Omega\cap W$.
+which is null-homotopic in $\Omega$ is also null-homotopic in $\Omega\cap W$.
 \end{thm}
 
 \parit{Proof.}
-Fix a closed plane curve which is null-homotopic in $\Omega$.
-Since $\Omega$ is open we can assume that $\gamma$ as well as the disc $D$ which shrinks $\gamma$ in $\Omega$ lie in general position.
-In particular $D$ intersects $W$ transvesally at all its interior points.
+Fix a closed plane curve $\gamma$ in $W\cap \Omega$ which is null-homotopic in $\Omega$. Suppose $\gamma$ is not contractible in  $W\cap \Omega$.
 
-The plane $W$ cuts $D$ into components.
-Note that one of these components, say $D'$, is a disc;
-it lies on one side from $W$.
+Let $\phi\co D\to\Omega$ be a disk that bounds $\gamma$.
 
-If the boundary of $D'$ is not contratable in $W$ then by loop theorem (see \cite{???}), there is an embedded disc in $\Omega$ with the same property --- it lies in $\Omega$,
-its boundary lies in $W\cap\Omega$
-and is not null-homotopic in $W\cap\Omega$.
-The latter contradicts Definition~\ref{def:two-convex}.
+Since $\Omega$ is open we can first change  $\phi$  slightly so that $\phi(x)\notin W$ for $1-\eps<|x|<1$ for some small $\eps>0$.
+By further changing $\phi$ slightly we can assume that it is transversal to $W$ and agrees with the previous map near $\partial D$.
+
+
+This means that $ \phi^{-1} (W)\cap \Int D$ consists of finitely many simple closed curves which cut $D$ into several components. 
+Consider one of the "innermost" components. It is a disk $D'$ with boundary $c'$. Then  $\phi(c')$ is a closed curve in $W$. Note that by construction  $\phi(D')$  completely lies in one of the two half-spaces  with boundary $W$. Let's denote that half-space by $H$.
+If $\phi(c')$ is not contractible in $W\cap \Omega$ then applying the Loop Theorem to $M^3=H\cap \Omega$ we conclude that  there exists a \emph{simple} closed curve $\gamma'\subset \Omega\cap W$ which is not contractible in $\Omega\cap W$ but is contractible in $\Omega\cap H$. This contradicts 2-convexity of $\Omega$. Hence $\phi(c')$ is contractible in $W\cap \Omega$. Therefore we can easily change the map $\phi$ on a small neighborhood of $D'$ to get a new map 
+ $\hat\phi\co D\to \Omega $ so that it remains the same near $\partial D$ and  $ \hat \phi^{-1} (W)\cap \Int D= \phi^{-1} W\cap \Int D\backslash \{c'\}$.
+Repeating this process several times we  arrive at the situation where $ \hat \phi^{-1} (W)\cap \Int D=\emptyset$. This means that $\phi(D)$ lies entirely in one of the half-spaces bounded by $W$.
+
+Again applying the Loop Theorem we obtain a simple closed curve in $W\cap \Omega$ which is not contractible in $W\cap \Omega$ but is contractible in $\Omega$. This again contradicts 2-convexity of $\Omega$. Hence $\gamma$ is contractible in  $W\cap \Omega$ as claimed.
 \qeds
 
 
@@ -588,7 +590,7 @@ Nevertheless, is easy to see that $K$ is always a polyhedral space.
 Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is the interior of a polytope.
 \end{thm}
 
-The statement might look obvious, but there is an underwater stone in the proof. %%%???please check English and remove this note
+The statement might look obvious, but there is a hidden obstacle in the proof. %there is an underwater stone in the proof. 
 The proof uses the following exercises.
 
 \begin{thm}{Exercise}\label{ex:hemisphere}
@@ -599,11 +601,11 @@ Show that any closed path of length $<2\cdot \pi$  in the units sphere $\SS^2$ l
 Assume $\Omega$ is an open subset in $\EE^3$
 which is not two-convex.
 Show that there is a plane $W$ such that the complement 
-$W\backslash \Omega$ contains an isolated point.%%%???please check English and remove this note
+$W\backslash \Omega$ contains an isolated point.
 \end{thm}
 
 \parit{Proof of Lemma~\ref{lem:poly-shefel}.}
-The ``only if'' part can be proved the same way as in Theorem~\ref{thm:set-with-smooth-bry:CBA} with additional use of Exercise~\ref{ex:inner-support}.%%%???please check English and remove this note
+The ``only if'' part can be proved in the same way as in Theorem~\ref{thm:set-with-smooth-bry:CBA} with additional use of Exercise~\ref{ex:inner-support}.
 
 
 \parit{``If'' part.}
@@ -698,9 +700,9 @@ encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be 
 Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
 
 In general, the boundary of $U$ may not intersect $\Pi_n$.
-(It may happen only on the first step --- in the construction of $\Omega_1$ form $\Omega_0$, but we do not use it.)
+(This may happen only on the first step --- in the construction of $\Omega_1$ from $\Omega_0$, but we do not use it.)
 In this case one has to apply the same argument for a plane $W$ supporting the closure of $U$ at one point.
-%???please check English and remove this note
+
 
 By induction, $\Conv_2\Omega\supset\Omega_n$ for each $n$.
 Therefore \ref{eq:Omega'} implies \ref{eq:Conv2>Omega'}.
@@ -708,7 +710,7 @@ Therefore \ref{eq:Omega'} implies \ref{eq:Conv2>Omega'}.
 It remains to show that $\Omega'$ is two-convex.
 Assume the contrary; 
 that is, there is a plane $\Pi$ 
-and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
+and a simple closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
 which is null-homotopic in $\Omega'$,
 but not null-homotopic in $\Pi\cap\Omega'$.
 
