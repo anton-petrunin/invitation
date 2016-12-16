@@ -85,7 +85,7 @@ Note that two-convex sets does not have to be connected nor simply connected.
 The following two propositions follow immediately from the definition.
 
 \begin{thm}{Proposition}
-Any subset in $\EE^2$ is 2-convex.
+Any subset in $\EE^2$ is two-convex.
 \end{thm}
 
 
@@ -160,7 +160,7 @@ we say that $p$ is a
 if $\nu(p)$ and $\nabla_p f$ point in the same direction, 
 and 
 \index{negative critical point}\emph{negative} otherwise.
-Since $f$ is generic, we can assume that the sign is defined for all critical points;
+If $f$ is generic, then we can assume that the sign is defined for all critical points;
 that is, $\nabla_pf\ne0$ for any critical point $p$ of $f|_S$.
 
 Since $k_2\ge 0$ and $f$ is strongly convex, 
@@ -177,24 +177,23 @@ $\phi_1(\DD)\subset K_s$.
 
 Indeed, we can construct a homotopy $\phi_t\:\DD\to K$ which decreases the maximum of $f\circ\phi$ on $\DD$ until in hangs on a critical point $p$ of $f|_S$.
 This point can not be negative, otherwise its index would be at least 2.
-If this critical point is positive then it is easy to decrease the maximum a little by pushing the disc from $S$ into $K$ in the direction of $-\nabla f_p$.%%%???this is what you meant, right? V.
-
+If this critical point is positive then it is easy to decrease the maximum a little by pushing the disc from $S$ into $K$ in the direction of $-\nabla f_p$.
 
 Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
 Note that the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
 is convex.
-Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ such that the restriction $f|_S$ is a Morse function.
+Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ in general position.
 From above, there is a disc in $K$ with boundary $\gamma$
 which lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
 \qeds
 
 Note that the ``if'' part proves a somewhat stronger statement.
-Namely, for any plane curve $\gamma$ (\emph{not necessary simple}) which is contractible in $K$ is contractible in the intersection of $K$ with the plane of $\gamma$.
+Namely, for any plane curve $\gamma$ (\emph{not necessary simple}) which is also contractible in $K$ is contractible in the intersection of $K$ with the plane of $\gamma$.
 The latter condition does not hold for the complement 
 of two planes in $\EE^4$ which is two convex by Proposition~\ref{prop:two-hull};
 see also Exercise~\ref{ex:two-planes} below.
-The following proposition shows that there are no such examples in $\EE^3$.
+The following proposition shows that there are no such open examples in $\EE^3$.
 
 \begin{thm}{Proposition}\label{prop:3d-strong-2-convexity}
 Let $\Omega\subset\EE^3$ be an open two-convex subset.
@@ -202,6 +201,9 @@ Then for any plane $W\subset\EE^3$
 any closed curve in $W\cap \Omega$ 
 which is null-homotopic in $\Omega$ is also null-homotopic in $\Omega\cap W$.
 \end{thm}
+
+In the proof we use Papakyriakopoulos' Loop theorem,
+a proof can be found in \cite{hatcher}.
 
 \parit{Proof.}
 Fix a closed plane curve $\gamma$ in $W\cap \Omega$ which is null-homotopic in $\Omega$. Suppose $\gamma$ is not contractible in  $W\cap \Omega$.
@@ -212,13 +214,24 @@ Since $\Omega$ is open we can first change  $\phi$  slightly so that $\phi(x)\no
 By further changing $\phi$ slightly we can assume that it is transversal to $W$ and agrees with the previous map near $\partial D$.
 
 
-This means that $ \phi^{-1} (W)\cap \Int D$ consists of finitely many simple closed curves which cut $D$ into several components. 
-Consider one of the "innermost" components. It is a disk $D'$ with boundary $c'$. Then  $\phi(c')$ is a closed curve in $W$. Note that by construction  $\phi(D')$  completely lies in one of the two half-spaces  with boundary $W$. Let's denote that half-space by $H$.
-If $\phi(c')$ is not contractible in $W\cap \Omega$ then applying the Loop Theorem to $M^3=H\cap \Omega$ we conclude that  there exists a \emph{simple} closed curve $\gamma'\subset \Omega\cap W$ which is not contractible in $\Omega\cap W$ but is contractible in $\Omega\cap H$. This contradicts 2-convexity of $\Omega$. Hence $\phi(c')$ is contractible in $W\cap \Omega$. Therefore we can easily change the map $\phi$ on a small neighborhood of $D'$ to get a new map 
- $\hat\phi\co D\to \Omega $ so that it remains the same near $\partial D$ and  $ \hat \phi^{-1} (W)\cap \Int D= \phi^{-1} W\cap \Int D\backslash \{c'\}$.
-Repeating this process several times we  arrive at the situation where $ \hat \phi^{-1} (W)\cap \Int D=\emptyset$. This means that $\phi(D)$ lies entirely in one of the half-spaces bounded by $W$.
+This means that $\phi^{-1} (W)\cap \Int D$ consists of finitely many simple closed curves which cut $D$ into several components. 
+Consider one of the ``innermost'' components. 
+It is a disk $D'$ with boundary $c'$. 
+Then  $\phi(c')$ is a closed curve in $W$. 
 
-Again applying the Loop Theorem we obtain a simple closed curve in $W\cap \Omega$ which is not contractible in $W\cap \Omega$ but is contractible in $\Omega$. This again contradicts 2-convexity of $\Omega$. Hence $\gamma$ is contractible in  $W\cap \Omega$ as claimed.
+Note that by construction  $\phi(D')$  completely lies in one of the two half-spaces  with boundary $W$. 
+Let's denote that half-space by $H$.
+If $\phi(c')$ is not contractible in $W\cap \Omega$ then applying the Loop Theorem to $M^3=H\cap \Omega$ we conclude that  there exists a \emph{simple} closed curve $\gamma'\subset \Omega\cap W$ which is not contractible in $\Omega\cap W$ but is contractible in $\Omega\cap H$. 
+This contradicts two-convexity of $\Omega$. 
+
+Hence $\phi(c')$ is contractible in $W\cap \Omega$. Therefore $\phi$ can be changed in a small neighborhood $U$ of $D'$ so that the new map $\hat\phi$ maps $U$ to one side of $W$. 
+In particular, the set $\hat\phi^{-1}(W)$ consists from the same curves as $\phi^{-1} (W)$ with the exception of $c'$.
+
+Repeating this process several times we reduce the problem to the case where $\phi^{-1} (W)\cap \Int D=\emptyset$. This means that $\phi(D)$ lies entirely in one of the half-spaces bounded by $W$.
+
+Again applying the Loop Theorem we obtain a simple closed curve in $W\cap \Omega$ which is not contractible in $W\cap \Omega$ but is contractible in $\Omega$. 
+This again contradicts two-convexity of $\Omega$. 
+Hence $\gamma$ is contractible in  $W\cap \Omega$ as claimed.
 \qeds
 
 
@@ -609,7 +622,7 @@ The ``only if'' part can be proved in the same way as in Theorem~\ref{thm:set-wi
 
 
 \parit{``If'' part.}
-Assume that $\Omega$ is 2-convex.
+Assume that $\Omega$ is two-convex.
 Denote by $\tilde\Omega$ the universal metric cover of $\Omega$.
 Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
 
@@ -696,7 +709,7 @@ Assume its boundary intersects $\Pi_{n}$ in
 a bounded component $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. 
 Then there is a curve $\gamma$ in 
 $W\z=\Pi_{n}$ 
-encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by 2-convexity of  $\Conv_2\Omega$. 
+encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by two-convexity of  $\Conv_2\Omega$. 
 Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
 
 In general, the boundary of $U$ may not intersect $\Pi_n$.
@@ -783,7 +796,7 @@ is locally convex;
 that is, any point of $L$ admits a convex neighborhood.
 
 Summarizing: (1)
-$\Omega'$ is a 2-convex open set,
+$\Omega'$ is a two-convex open set,
 (2) the boundary $\partial\Omega'$ 
 contains a finite number of polygons $F_i'$
 and the remaining part is locally concave.
@@ -799,7 +812,8 @@ Prove the last statement.\qeds
 The ``only if'' part can be proved the same way as in Theorem~\ref{thm:set-with-smooth-bry:CBA} with additional use of Exercise~\ref{ex:inner-support}.
 
 \parit{``If''-part.}
-Suppose $\Omega$ is 2-convex. We need to show that $K$ is $\Cat{}{0}$.
+Suppose $\Omega$ is two-convex. 
+We need to show that $K$ is $\Cat{}{0}$.
 
 Note that it is sufficient to show that
 $\Cat{}{0}$ comparison holds for any
@@ -894,7 +908,7 @@ A surface $S$ in $\EE^3$ is called saddle if for any linear function $f\:\spc{X}
 the restriction $f|_S$ has no local maxima or maxima in the interior of $S$.
 
 \begin{thm}{Shefel's conjecture}
-Any saddle surface in $\RR^3$ equipped with the length-metric is locally $\Cat{}{0}$.
+Any saddle surface in $\EE^3$ equipped with the length-metric is locally $\Cat{}{0}$.
 \end{thm} 
 
 From Corollary \ref{cor:shefel}, it follows that if there is a counterexample, then an arbitrary neighborhood of some point of the surface can not be presented as a graph in any coordinate system.
