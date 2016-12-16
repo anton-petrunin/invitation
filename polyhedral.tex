@@ -10,11 +10,11 @@ Playing with this toy set, we produce examples of exotic aspherical spaces.
 
 \section{Locally CAT spaces}
 
-We say that space $\spc{U}$ is \index{locally $\Cat{}{\kappa}$ space}\emph{locally $\Cat{}{0}$} (or \emph{locally $\Cat{}{1}$}) if
+We say that a space $\spc{U}$ is \index{locally $\Cat{}{\kappa}$ space}\emph{locally $\Cat{}{0}$} (or \emph{locally $\Cat{}{1}$}) if
 a small closed ball centered at any point $p$ in $\spc{U}$ forms a $\Cat{}{0}$  space (or $\Cat{}{1}$ space, respectively).
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so $\SS^1$ is locally $\Cat{}{0}$.
-On the other hand, $\SS^1$ is not $\Cat{}{0}$, since the closed local geodesics in $\SS^1$ are not geodesics, so $\SS^1$ does not satisfy Proposition~\ref{cor:loc-geod-are-min}.
+On the other hand, $\SS^1$ is not $\Cat{}{0}$, since closed local geodesics in $\SS^1$ are not geodesics, so $\SS^1$ does not satisfy Proposition~\ref{cor:loc-geod-are-min}.
 
 If $\spc{U}$ is a proper length space then it is locally $\Cat{}{0}$ (or locally $\Cat{}{1}$) 
 if and only if 
@@ -24,7 +24,7 @@ The proof goes along the same lines as in Exercise \ref{ex:convex-balls}.
 \section{Space of local geodesic paths}\label{sec:geod-space}
 
 In this section we will study behavior of local geodesics in locally $\Cat{}{\kappa}$  spaces.  
-The results will be used in the proof of the Globalization theorem (\ref{thm:hadamard-cartan}).
+The results will be used in the proof of  Globalization theorem (\ref{thm:hadamard-cartan}).
 
 Recall that \index{path}\emph{path} denotes a curve parametrized by $[0,1]$.  The space of paths in $\spc{U}$ comes with the natural metric
 \[\dist{\alpha}{\beta}{}
@@ -85,7 +85,7 @@ $\map\circ\hat\gamma=\gamma$.
 
 If $\length\gamma<\pi$,
 then the same holds in $\Cat{}{1}$ case.
-Namely we assume that $\spc{U}$ is a $\Cat{}{1}$ proper length space and construct a $\Cat{}{1}$ proper length space $\spc{N}$ with property as above.
+Namely we assume that $\spc{U}$ is a $\Cat{}{1}$ proper length space and construct a $\Cat{}{1}$ proper length space $\spc{N}$ with the same property as above.
 \end{thm}
 
 \parit{Proof.} 
@@ -236,10 +236,10 @@ which essentially is \cite[Satz 9]{alexandrov:devel}.
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
 A locally $\Cat{}{0}$ proper length space $\spc{U}$ is $\Cat{}{0}$
-if and only if the pairs of points in $\spc{U}$  are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+if and only if all pairs of points in $\spc{U}$  are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 
 Analogously, a locally $\Cat{}{1}$ proper length space $\spc{U}$ is $\Cat{}{1}$ 
-if and only if the pairs of points in $\spc{U}$ at distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+if and only if all pairs of points in $\spc{U}$ at distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 The proof uses a thin-triangle decomposition with the inheritance lemma (\ref{lem:inherit-angle}) and the following construction:
@@ -495,7 +495,7 @@ Show that the barycentric subdivision of any simplicial complex is a flag comple
 
 Use Flag condition (see \ref{thm:flag} below)
 to conclude that any finite simplicial complex is homeomorphic to a $\Cat{}{1}$ proper length space.
-%???please check my English and remove this comment.
+
 \end{thm}
 
 
