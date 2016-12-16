@@ -202,8 +202,13 @@ any closed curve in $W\cap \Omega$
 which is null-homotopic in $\Omega$ is also null-homotopic in $\Omega\cap W$.
 \end{thm}
 
-In the proof we use Papakyriakopoulos' Loop theorem,
-a proof can be found in \cite{hatcher}.
+In the proof we use Papakyriakopoulos' Loop theorem.
+It states that for any 3-dimensional manifold $M$ with nonempty boundary $\partial M$, if 
+$f\: (D^2,\partial D^2)\to (M,\partial M)$
+is a continuous map from disc $D$ such that $f|\partial D^2$ not null-homotopic in $\partial M$, then there is an embedding 
+$h\: (D^2,\partial D^2)\to (M,\partial M)$ 
+with the same property.
+A proof can be found in \cite{hatcher}.
 
 \parit{Proof.}
 Fix a closed plane curve $\gamma$ in $W\cap \Omega$ which is null-homotopic in $\Omega$. Suppose $\gamma$ is not contractible in  $W\cap \Omega$.
@@ -883,16 +888,6 @@ Show that $\tilde{\spc{U}}$ is a $\Cat{}{0}$ space.
 
 \section{Comments and open problems}
 
-Two-convex sets could be defined using homology instead of homotopy, as in the formulation of Leftschetz theorem in \cite[\S\textonehalf]{gromov:SaGMC}.
-
-Namely, we can say that $K$ is two-convex if the following condition holds: if a 1-dimensional cycle $z$ has support in the intersection of $K$ with a plane $W$ and bound in $K$ then it bounds in $K\cap W$.
-
-The resulting definition is equivalent to the one used above.
- But unlike our definition it can be generalized to define $k$-convex sets in $\EE^m$ for $k>2$.
-With this homological definition one can also avoid the use of Papakyriakopoulos' Loop theorem, whose proof is quite involved.
-Nevertheless, we chose the definition using homotopies  since it is easier to visualize.
-
-
 In \cite{a-b-b:CBA-m-w-b} Stephanie Alexander, David Berg and Richard Bishop gave the exact upper bound on Alexandrov's curvature for the Riemannian manifolds with boundary.
 Namely they show the following.
 
@@ -914,22 +909,40 @@ Assume all the sectional curvatures of $M$ and $\partial M$ are bounded from abo
 Then $M$ is locally $\Cat{}{\kappa}$.
 \end{thm}
 
-A surface $S$ in $\EE^3$ is called saddle if for any linear function $f\:\spc{X}\to\RR$,
-the restriction $f|_S$ has no local maxima or maxima in the interior of $S$.
+Two-convex sets could be defined using homology instead of homotopy, as in the formulation of Leftschetz theorem in \cite[\S\textonehalf]{gromov:SaGMC}.
+
+Namely, we can say that $K$ is two-convex if the following condition holds: if a 1-dimensional cycle $z$ has support in the intersection of $K$ with a plane $W$ and bound in $K$ then it bounds in $K\cap W$.
+
+The resulting definition is equivalent to the one used above.
+ But unlike our definition it can be generalized to define $k$-convex sets in $\EE^m$ for $k>2$.
+With this homological definition one can also avoid the use of Papakyriakopoulos' Loop theorem, whose proof is quite involved.
+Nevertheless, we chose the definition using homotopies  since it is easier to visualize.
+
+We use our definition only to the open sets, for general sets it would be more natural to use \v{C}ech cohomoly instead. 
+
+If a surface $S$ in $\EE^3$ forms a two-convex set 
+then it regarded as a \emph{saddle surface}.
+In other words $S$ is saddle if each connected component which any plane cuts from $S$ contains a point on the boundary of $S$ or goes to infinity.  
 
 \begin{thm}{Shefel's conjecture}
 Any saddle surface in $\EE^3$ equipped with the length-metric is locally $\Cat{}{0}$.
 \end{thm} 
 
+The conjecture is open even for surfaces peresented by a bi-Lipschitz embedding of the disc.
+
 From Corollary \ref{cor:shefel}, it follows that if there is a counterexample, then an arbitrary neighborhood of some point on the surface can not be presented as a graph in any coordinate system.
 
-Furthermore, if a counterexample exists,
-then it forms a piece of the boundary of a two-convex set $\Omega$ with the following property. 
+Further, from the proof of Corollary \ref{cor:shefel},
+it follows that if a two-convex set $S$ can be presented as an intersection of a nested sequence of simply connected open two-convex sets then $S$ equipped with the length-metric is locally $\Cat{}{0}$.
 
-There is a point $p\in\partial \Omega$ and $\eps>0$ 
-such that for any $\delta>0$  we have
-\[\oBall(p,\eps)\subset\Conv_2[\Omega\cup \oBall(p,\delta)].\]
-No such examples of $\Omega$ are known so far.
+So far there is no known examples 
+of saddle surfaces which can not be presented this way.
+If an example of such surface $S$ would exist, 
+then it should have a point $p$ in its interior 
+and an open set $\Omega$ such that 
+for any  $\eps>0$, we have
+\[\Omega\subset\Conv_2[\Omega\cup \oBall(p,\eps)].\]
+
 
 We say that a surface $S$ in a metric space $\spc{X}$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
 the restriction $f|_S$ has no local maxima in the interior of $S$.
