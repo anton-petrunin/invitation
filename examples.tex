@@ -213,7 +213,7 @@ A proof can be found in \cite{hatcher}.
 \parit{Proof.}
 Fix a closed plane curve $\gamma$ in $W\cap \Omega$ which is null-homotopic in $\Omega$. Suppose $\gamma$ is not contractible in  $W\cap \Omega$.
 
-Let $\phi\co D\to\Omega$ be a disk that bounds $\gamma$.
+Let $\phi\co D\to\Omega$ be a map of the disk that bounds $\gamma$.
 
 Since $\Omega$ is open we can first change  $\phi$  slightly so that $\phi(x)\notin W$ for $1-\eps<|x|<1$ for some small $\eps>0$.
 By further changing $\phi$ slightly we can assume that it is transversal to $W$ and agrees with the previous map near $\partial D$.
@@ -286,7 +286,7 @@ If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$. 
 
 Fix $p\in S$.
 Assume that $k_2(p)>0$.
-Fix sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
+Fix a sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
 Let us show that 
 \begin{clm}{}\label{K'-is-CAT}
 $K'$ is a $\Cat{}{0}$ space.
@@ -341,7 +341,7 @@ equipped with the induced length metric.
 \end{center}
 
 Note that the array $(s^n)$ can be chosen in such a way that 
-$W^\kay$ is arbitrarily close to $K'$.
+$W^\kay$ is arbitrarily Hausdorff close to $K'$.
 
 By Proposition~\ref{prop:cat-limit}, 
 in order to prove \ref{K'-is-CAT}, 
@@ -406,11 +406,11 @@ Then $K$ is $\Cat{}{0}$.
 
 The assumption that the set $\Omega$ is open is not critical;
 instead one can assume that the induced length metric takes finite values at all points of $\Omega$.
-We sketch the proof from the note \cite{bishop:jordan} by Richard Bishop and suggest that  the details be finished as an exercise.
+We sketch the proof from the note \cite{bishop:jordan} by Richard Bishop and leave the details be finished as an exercise.
 A generalization of this result is proved by 
 Alexander Lytchak and Stefan Wenger
 \cite[Proposition 12.1]{lytchak-wenger};
-this paper also contains a far leading application.
+this paper also contains a far reaching application.
 
 %???Sasha suggests to include exercise
 %If in a prper length space all simple triangles are thin then all triangles are thin.
@@ -474,8 +474,10 @@ The material below was inspired by work of Samuel Shefel.
 %, and developed by Anton Petrunin \cite{petrunin-shefel}.
 % There is a ref to my paper with Stadler in the end of the chapter.
 
-Shefel seems very intrigued by the survival of metric properties under affine transformation.
-%???Sasha says it is not English --- I am not sure, is it better to writ in the past since Shefel is dead???
+Shefel seemed very intrigued by the survival of metric properties under affine transformation.
+%???Sasha says it is not English --- I am not sure, is it better to writ in the past since Shefel is dead
+% past tense is better here then but I'll leave it for Stephanie to reword the whole thing if necessary. V.
+%???
 To describe an instance of such phenomena,
 note that two-convexity survives under affine transformations of a Euclidean space.
 Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the following holds.
@@ -567,8 +569,7 @@ Consider the sequence of sets
 =
 \set{(x,y,z)\in \EE^3}{z\lege f(x,y)\pm\tfrac1n,\ (x,y)\in \DD}.\]
 Note that each $K_n$ is closed, simply connected.
-Directly from definition, it follows that $K$ is also two-convex. 
-%%%???please check English and remove this note
+Directly from the definition, it follows that $K$ is also two-convex. 
 Moreover the boundary of $K_n$ forms a Lipschitz surface.
 
 Equip $K_n$ with the induced length metric.
