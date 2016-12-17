@@ -410,13 +410,6 @@ Alexander Lytchak and Stefan Wenger
 \cite[Proposition 12.1]{lytchak-wenger};
 this paper also contains a far reaching application.
 
-%???Sasha suggests to include exercise
-%If in a prper length space all simple triangles are thin then all triangles are thin.
-%Here simple triangle is triangle which sides intesect only at the common vertices.
-%This exercise might go naturally into the section on thin triangles, or might stay here...
-%??? I don't quite see the point of this exercise. isn't it just about nonexistence of simple diangles which implies that all triangles are simple?V.
-%??? I had the same reaction as Vitali to Sasha's exercise, was going to put it in and decided against it. But maybe its statement is sufficiently interesting to justify it. S.
-
 
 \parit{Sketch of proof.}
 It is sufficient to show that any triangle in $K$ is thin,
@@ -477,11 +470,6 @@ and developed by Anton Petrunin.
 % but that does not treat 3-d case, so is misleading for the reader.  S.
 
 Shefel seems very intrigued by the survival of metric properties under affine transformation.
-%???Sasha says it is not English --- I am not sure, is it better to writ in the past since Shefel is dead
-% past tense is better here then but I'll leave it for Stephanie to reword the whole thing if necessary. V.
-%actually people do use the present tense in this way, i.e. to describe the impression you get from reading a text. Both ways are fine, but "seems" puts more energy into the sentence so I slightly prefer it. Vitali, please change back if you aren't persuaded!!!
-%%??? Fine with me. V.
-
 To describe an instance of such phenomena,
 note that two-convexity survives under affine transformations of a Euclidean space.
 Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the following holds.
@@ -923,19 +911,22 @@ The resulting definition is equivalent to the one used above.
 With this homological definition one can also avoid the use of Papakyriakopoulos' Loop theorem, whose proof is quite involved.
 Nevertheless, we chose the definition using homotopies  since it is easier to visualize.
 
-We use our definition only for the open sets, for general sets it would be more natural to use \v{C}ech cohomology instead. %??? I don't get that. cohomology?!  how does one define two-convexity using Chech cohomology? V.
+We use our definition only for the open sets, for general sets it would be more natural to use \v{C}ech cohomology instead. %??? I don't get that. cohomology?!  how does one define two-convexity using Chech cohomology? V. I am not sure how to formulate it, maybe just say ``proper homology theory'' --- in principle it can be done with cohomology, but it is not the point I want to make. A.
 
-If a surface $S$ in $\EE^3$ forms a two-convex set 
-then it is regarded as a \emph{saddle surface}.
-In other words $S$ is saddle if each connected component which any plane cuts from $S$ contains a point on the boundary of $S$ or goes to infinity.  
+If a surface $S$ in $\EE^3$ is saddle if each connected bounded component which any plane cuts from $S$ contains a point on the boundary of $S$.
+If $S$ is locally described by a Lipschitz embedding then 
+this condition equivalent to saying that $S$ is two-convex.
 
 \begin{thm}{Shefel's conjecture}
 Any saddle surface in $\EE^3$ equipped with the length-metric is locally $\Cat{}{0}$.
 \end{thm} 
 
-The conjecture is open even for surfaces represented by a bi-Lipschitz embedding of a disc.
+The conjecture is open even for the surfaces described by a bi-Lipschitz embedding of a disc.
 
 From Corollary \ref{cor:shefel}, it follows that if there is a counterexample, then an arbitrary neighborhood of some point on the surface can not be presented as a graph in any coordinate system.
+
+Also a counterexample could not admit an approximation by smooth saddle surfaces. 
+Examples which do not admit such approximation are not known so far.
 
 Further, from the proof of Corollary \ref{cor:shefel},
 it follows that if a two-convex set $S$ can be presented as an intersection of a nested sequence of simply connected open two-convex sets then $S$ equipped with the length-metric is locally $\Cat{}{0}$.
@@ -948,20 +939,12 @@ and an open set $\Omega$ such that
 for any  $\eps>0$, we have
 \[\Omega\subset\Conv_2[\Omega\cup \oBall(p,\eps)].\]
 
-
-We say that a surface $S$ in a metric space $\spc{X}$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
-the restriction $f|_S$ has no local maxima in the interior of $S$.
-
-\begin{thm}{Generalized Shefel's  conjecture}
-A saddle surface in a $\Cat{}{\kappa}$ space, 
-equipped with the length-metric, is locally $\Cat{}{\kappa}$.
-\end{thm}
-
 A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.
 
 \begin{thm}{Question}
 Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\Cat{}{0}$ space? 
 \end{thm}
 
-For more on the subject, read \cite{petrunin-metricmin} and \cite{petrunin-stadler} by Anton Petrunin and Stephan Stadler.
+For more on the subject, read \cite{petrunin-metricmin} and \cite{petrunin-stadler} by Anton Petrunin and Stephan Stadler;
+it discuss a variation of Shefel's conjecture with $\Cat{}{0}$ ambient space and also related Shefel's result in dimension 2. 
 
