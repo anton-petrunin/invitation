@@ -54,7 +54,7 @@ such that
 $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
 
 Since $K$ is compact, 
-we can choose an increasing sequence of integers $n_k$
+we can choose an increasing sequence of integers $n_i$
 such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
 converge.
 In particular, both of these sequences  are Cauchy;
@@ -119,15 +119,14 @@ then its $d_1$-length is
 \[\length_1\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}(t)\cdot dt.\]
 Note that the metric $d_1$ is bi-Lipschitz to $d_0$.
 
-Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves which differ only by $m$-th coordinate, say $x_m(t)$ and $x_m'(t)$.
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves which differ only in the $m$-th coordinate, say $x_m(t)$ and $x_m'(t)$.
 Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
 the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$ then 
 \[\length_1\bm{x}'\le \length_1\bm{x}.\]
 Moreover this inequality is strict if $x'_m(t)< x_m(t)$ for some $t$.
 
-Fix a curve $\bm{x}(t)$ parametrized by the arc length, $t\in[0,\ell]$.
-We can choose large enough $m$,
-so that $x_m(t)$ is sufficiently close to $0$ for any $t$.
+Fix a curve $\bm{x}(t)$ parametrized by  arc-length $t\in[0,\ell]$.
+We can choose $m$ large enough that $x_m(t)$ is sufficiently close to $0$ for any $t$.
 In particular, for some values $t$, we have $y_m(t)<x_m(t)$, where
 \[y_m(t)=(1-\tfrac t\ell)\cdot x_m(0)
 +\tfrac t\ell\cdot x_m(\ell)
@@ -154,7 +153,7 @@ Consider the following subset of $\R^2$:
 \cup
 \bigl(\bigcup_{n\ge 1}\{\tfrac1n\}\times[0,1]\bigr)
 \]
-Consider the induced length metric on $\spc{X}$. It's obviously locally compact and geodesic.
+Consider the induced length metric on $\spc{X}$. It is obviously locally compact and geodesic.
 
 \begin{wrapfigure}{r}{22mm}
 \begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/square(1)}
@@ -162,7 +161,7 @@ Consider the induced length metric on $\spc{X}$. It's obviously locally compact 
 \end{lpic}
 \end{wrapfigure}
 
-However, it's immediate to check that its metric completion \[\bar{\spc{X}}
+However, it is immediate to check that the metric completion \[\bar{\spc{X}}
 =
 \bigl([0,1]\times\{0,1\}\bigr)
 \cup
@@ -229,7 +228,7 @@ Fix a countable dense set of points $\mathfrak{S}\subset\spc{X}_\infty$.
 For each point $x\in \mathfrak{S}$, choose a sequence 
 of points $x_n\in\spc{X}_n$ such that $x_n\xto{\rho} x$.
 
-Applying a diagonal procedure, we can pass to a susequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
+Applying a diagonal procedure, we can pass to a subsequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
 that is, $x_n\xto{\rho'} x'$ for some $x'\in\spc{X}_\infty'$.
 
 This way we get a map $\mathfrak{S}\to\spc{X}_\infty'$ defined as $x\mapsto x'$.
@@ -386,8 +385,8 @@ set $F(x) = z$.
 By construction, $F$ satisfies the conditions. \qeds
 
 \parbf{Exercise~\ref{ex:convex-balls}.}
-For    $\Cat{}{0}$ the statement follow from convexity of distance functions to points in $\EE^2$ and thinness of triangles.
-For  $\Cat{}{1}$  the statement  follows from the thinness of triangles and convexity of balls of radius $<\pi/2$ in $\SS^2$.
+For    $\Cat{}{0}$, the statement follows from convexity of distance functions to points in $\EE^2$, and thinness of triangles.
+For  $\Cat{}{1}$,  the statement  follows from  thinness of triangles and convexity of balls of radius $<\pi/2$ in $\SS^2$.
 \begin{comment}
 It is sufficient to show that 
 \[\dist{p}{z}{}\le \max\{\dist{p}{x}{},\dist{p}{y}{}\}\]
@@ -451,7 +450,7 @@ $\trig{\~p}{\~p^*}{\~q^*}$ and $\trig{\~p}{\~q}{\~q^*}$
 of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
 the points $\~p^*$ and $\~q$ lie on the opposite sides from $[{\~p}{\~q^*}]$.
 
-By comparison and triangle inequality for angles \ref{claim:angle-3angle-inq}, we get 
+By comparison and the triangle inequality for angles \ref{claim:angle-3angle-inq}, we get 
 \[\mangle\hinge{\~p^*}{\~p}{\~q^*}\ge \mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2
 \quad
 \text{and}
@@ -563,7 +562,7 @@ Checking the flag condition is straightforward once we know the following descri
 
 Each vertex $v$ of the barycentric subdivision 
 corresponds to a simplex $\triangle_v$ of the original triangulation.
-A set of vertices form a simplex in the subdivision 
+A set of vertices forms a simplex in the subdivision 
 if it can be ordered, say as $v_1,\dots,v_\kay$,
 so that the corresponding simplices form a nested sequence
 \[\triangle_{v_1}\subset\dots\subset\triangle_{v_\kay}.\]
@@ -579,7 +578,7 @@ The only difference is that a geodesic may spend time \emph{more than} $\pi$ in 
 \parbf{Exercise~\ref{ex:tree}.}
 The space $\spc{T}_n$ has a natural cone structure with the vertex formed by the  completely degenerate tree --- all its edges have zero length.
 Note that the space $\Sigma$, 
-over which the cone is taken comes naturally with triangulation 
+over which the cone is taken comes naturally with a triangulation 
 with all-right spherical simplicies.
 
 It remains to check that the complex is flag 
@@ -654,15 +653,15 @@ we get
 
 Let us construct $\spc{S}$.
 Fix an $(m-2)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
-An example of that type exists for any $m\ge 5$, a proof is given in \cite{kervaire}.
+An example of that type exists for any $m\ge 5$; a proof is given in \cite{kervaire}.
 
 Remove from $\Sigma$ one $(m-2)$-simplex.
-Denote the obtained complex by $\Sigma'$.
+Denote the resulting complex by $\Sigma'$.
 Since $m\ge 5$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
 
 Consider the product $\Sigma'\times [0,1]$. 
 Attach to it the cone over its boundary $\partial (\Sigma'\times [0,1])$.
-Denote by $\spc{S}$ the obtained simplicial complex
+Denote by $\spc{S}$ the resulting simplicial complex
 and by $v$ the tip of the attached cone.
 
 Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$, which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
@@ -763,29 +762,23 @@ By Crofton's formula we have that
 \qedsf
 
 \parbf{Exercise~\ref{ex:inner-support}.}
-Assume $\Omega$ is not two-convex.
-Then, by the definition, there is a curve $\gamma$ which lies in the intesection of a plane $W_0$ and $\Omega$
-which is contactable in $\Omega$ but not contractable in $\Omega\cap W_0$.
+Since  $\Omega$ is not two-convex, then by definition there is a curve $\gamma$ which lies in the intersection of a plane $W_0$ and $\Omega$, 
+and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
 
-Since $\Omega$ is open,
-the disc shrinking $\gamma$ 
-as well as $\gamma$ can be taken in general position.
-So we can assume that the disc with the plane $W_0$ cuts from the space $\EE^3$ finite number of bounded domains.
+Since $\Omega$ is open, both $\gamma$ and 
+the image of the homotopy that shrinks $\gamma$ 
+can be taken in general position.
+Thus we can assume that the image together with the plane $W_0$ cuts from the space $\EE^3$ a finite number of bounded domains.
 
-Since $\gamma$ is not contactable in $\Omega\cap W_0$,
+Since $\gamma$ is not contractible in $\Omega\cap W_0$,
 one of these domains, say $Q$, contains a point from the complement of $\Omega$.
-By general position argument we can assume that $Q$ such point lies in the interior of $Q$.
+By a general position argument, we can assume that such a point lies in the interior of $Q$.
 
-Fix circle $\Gamma$ in $W_0$ which has $Q\cap W_0$ inside.
-Consider the smallest spherical dome with boundary $\Gamma$ which includes the set $R=Q\backslash\Omega$.
+Fix a circle $\Gamma$ in $W_0$ which has $Q\cap W_0$ inside.
+Since $Q$ lies in a half-space with boundary $W_0$, there is a
+smallest spherical dome with boundary $\Gamma$ which includes the set $R=Q\backslash\Omega$.
 The dome has to touch $R$ at some point $p$;
 the plane tangent to the dome at this point has the required property.
-%%%???this solution is new please check and remove this note
-
-
-
-If $\Omega$ is not two-convex then 
-by definition there is a map $\phi$ form disc $\DD$ to $\Omega$, which boundary maps to a plane curve which is
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
 Consider the surface $S$ 
@@ -845,10 +838,10 @@ Next, consider the space $\spc{W}'_\eps$ obtained by doubly covering $\spc{U}\ba
 Note that $\spc{W}'_\eps$ is locally isometric to $\spc{W}_\eps$. 
 That is, for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ such that the $\delta$-neighborhood of $p'$ is isometric to the $\delta$-neighborhood of $p$ for all small $\delta>0$.
 
-Further note that $\spc{W}'_\eps$ is simply connected since it admits a deformation retraction onto $A_\eps$ which is contractible.
+Further note that $\spc{W}'_\eps$ is simply connected since it admits a deformation retraction onto $A_\eps$, which is contractible.
 By the globalization theorem, $\spc{W}'_\eps$ is $\Cat{}{0}$.
 
-It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$ and apply Proposition~\ref{prop:cat-limit}.
+It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$, and apply Proposition~\ref{prop:cat-limit}.
 \qeds
 
 
