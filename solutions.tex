@@ -761,28 +761,34 @@ By Crofton's formula we have that
 \end{align*}
 \qedsf
 
+
+\begin{wrapfigure}{r}{43mm}
+\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(0mm)]{pics/inner-support(1)}
+\lbl[t]{40,.5;$W_0$}
+\lbl[t]{27,.5;$\Gamma$}
+\lbl[br]{12,12;$p$}
+\lbl{15,6;$R$}
+\lbl[tl]{27,17;$\Pi$}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{Exercise~\ref{ex:inner-support}.}
-Since  $\Omega$ is not two-convex, then by definition there is a simple closed curve $\gamma$ which lies in the intersection of a plane $W_0$ and $\Omega$, 
+Since  $\Omega$ is not two-convex, 
+by definition there is a simple closed curve $\gamma$ which lies in the intersection of a plane $W_0$ and $\Omega$, 
 and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
 
-Since $\Omega$ is open, both $\gamma$ and 
-the image of the homotopy that shrinks $\gamma$ 
-can be taken in general position.
-%Thus we can assume that the image together with the plane $W_0$ cuts from the space $\EE^3$ a finite number of bounded domains.
-%???This part is not clear to me. We are not working with an embedded disk here. V. I've modified the proof to take care of this issue. It does use the Loop theorem but I think the argument is clean now.
+Let $\phi\:\DD\to \Omega$ be a disc which shrinks $\gamma$.
+Applying Loop Theorem (arguing as in the proof of Proposition~\ref{prop:3d-strong-2-convexity}) we can assume that $\phi$ is an embedding and $\phi(\DD)$ lies on one side from $W_0$.
 
-By arguing  as in the proof of Proposition~\ref{prop:3d-strong-2-convexity} using the Loop Theorem, by possibly changing  $\gamma$ and the homotopy, we can arrange it so that we have a map $\phi\co D\to \Omega$ such that $\phi|_{\partial D}=\gamma$, $\phi$ is an \emph{embedding} and its image lies entirely in one of the two half-spaces bounded by $W_0$.
+Let $Q$ be the bounded domain cut from $\EE^3$ by $\phi(\DD)$ and $W_0$. 
+By assumption it contains a point which is not is $\Omega$. 
+Changing $W_0,\gamma$ and $\phi$ slightly, we can assume that such a point lies in the interior of $Q$.
 
-%Since $\gamma$ is not contractible in $\Omega\cap W_0$,
-%one of these domains, say $Q$, contains a point from the complement of $\Omega$.
-
-Let $Q$ be the bounded domain cut from $\EE^3$ by $\phi(D)$ and $W_0$. By assumption it contains a point which is not is $\Omega$. By a changing $W_0,\gamma$ and $\phi$ slightly, we can assume that such a point lies in the interior of $Q$.
-
-Fix a circle $\Gamma$ in $W_0$ which has $Q\cap W_0$ inside.
+Fix a circle $\Gamma$ in $W_0$ which surrounds $Q\cap W_0$.
 Since $Q$ lies in a half-space with boundary $W_0$, there is a
 smallest spherical dome with boundary $\Gamma$ which includes the set $R=Q\backslash\Omega$.
-The dome has to touch $R$ at some point $p$;
-the plane tangent to the dome at this point has the required property.
+The dome has to touch $R$ at some point $p$.
+The plane $\Pi$ tangent to the dome at $p$ has the required property.\qeds
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
 Consider the surface $S$ 
