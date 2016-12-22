@@ -705,9 +705,11 @@ Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$.
 Fix a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
 Assume its boundary intersects $\Pi_{n}$ in
 a bounded component $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. 
-Then there is a curve $\gamma$ in 
+Then there is a simple closed curve $\gamma$ in 
 $W\z=\Pi_{n}$ 
-encircling  $\hat U$ and contractible in $\Omega_{n-1}$. Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by two-convexity of  $\Conv_2\Omega$. 
+encircling  $\hat U$ and contractible in $\Omega_{n-1}$.
+%%??? Is this obvious? I can see why it's true but I wouldn't want to write a careful proof. V.
+ Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by two-convexity of  $\Conv_2\Omega$. 
 Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
 
 In general, the boundary of $U$ may not intersect $\Pi_n$.
@@ -727,7 +729,12 @@ but not null-homotopic in $\Pi\cap\Omega'$.
 
 By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
 and that $\gamma$ lies in $\Omega_{n-1}$.
-The latter contradicts the $n$-th step in the construction. 
+By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the Loop Theorem we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. 
+
+%Hence
+%The latter contradicts the $n$-th step in the construction. 
+
+%??? I am not sure what was written before was  obvious without using the Loop theorem. V
 \qeds
 
 
