@@ -125,7 +125,7 @@ the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x
 \[\length_1\bm{x}'\le \length_1\bm{x}.\]
 Moreover this inequality is strict if $x'_m(t)< x_m(t)$ for some $t$.
 
-Fix a curve $\bm{x}(t)$ parametrized by  arc-length $t\in[0,\ell]$.
+Fix a curve $\bm{x}(t)$ parametrized by  arc-length $t\in[0,\ell]$ with respect to $d_0$.
 We can choose $m$ large enough that $x_m(t)$ is sufficiently close to $0$ for any $t$.
 In particular, for some values $t$, we have $y_m(t)<x_m(t)$, where
 \[y_m(t)=(1-\tfrac t\ell)\cdot x_m(0)
@@ -357,9 +357,9 @@ assuming the latter is defined.\qeds
 \parbf{Exercise~\ref{ex:short-map}.}
 By Alexandrov's lemma (\ref{lem:alex}), 
 there are nonoverlapping triangles 
-$\trig{\~p}{\~x}{\~z_y}\iso\trig {\dot p}{\dot x}{\dot z}$ 
+$\trig{\~p}{\~x}{\~z_x}\iso\trig {\dot p}{\dot x}{\dot z}$ 
 and 
-$\trig{\~p}{\~y}{\~z_x}\iso\trig {\dot p}{\dot y}{\dot z}$
+$\trig{\~p}{\~y}{\~z_y}\iso\trig {\dot p}{\dot y}{\dot z}$
  inside the  triangle $\trig{\~p}{\~x}{\~y}$.
 
 Connect  the points in each pair
@@ -370,8 +370,8 @@ with arcs of circles centered at
 $\~y$, $\~p$, and $\~x$ respectively. 
 Define $F$ as follows.
 \begin{itemize}
-\item Map  $\Conv\trig{\~p}{\~x}{\~z_y}$ isometrically onto  $\Conv\trig {\dot p}{\dot x}{\dot y}$;
-similarly map $\Conv \trig{\~p}{\~y}{\~z_x}$ onto $\Conv \trig {\dot p}{\dot y}{\dot z}$.
+\item Map  $\Conv\trig{\~p}{\~x}{\~z_x}$ isometrically onto  $\Conv\trig {\dot p}{\dot x}{\dot z}$;
+similarly map $\Conv \trig{\~p}{\~y}{\~z_y}$ onto $\Conv \trig {\dot p}{\dot y}{\dot z}$.
 \end{itemize}
 
 \begin{itemize}
