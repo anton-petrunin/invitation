@@ -699,23 +699,22 @@ Set
 \[\Omega'=\bigcup_n\Omega_n.\eqlbl{eq:Omega'}\]
 Note that $\Omega'$ is a union of open sets, in particular it is open.
 
-Let us first show that  
+Let us show that  
 \[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]  
 Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. 
-Fix a bounded component  $U$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
-Assume its boundary intersects $\Pi_{n}$ in
-a bounded component $\hat U$ of $\Pi_{n}\backslash \Omega_{n-1}$. 
-Then there is a simple closed curve $\gamma$ in 
-$W\z=\Pi_{n}$ 
-encircling  $\hat U$ and contractible in $\Omega_{n-1}$.
-%%??? Is this obvious? I can see why it's true but I wouldn't want to write a careful proof. V.
- Hence $\hat U$ must be entirely contained in $\Conv_2\Omega$ by two-convexity of  $\Conv_2\Omega$. 
-Applying the same argument to planes parallel to $W$ we see that all of $U$ must lie in $\Conv_2\Omega$. 
+Fix a bounded component $\mathfrak{C}$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
+It is sufficient to show that $\mathfrak{C}\subset\Conv_2\Omega$
 
-In general, the boundary of $U$ may not intersect $\Pi_n$.
-(This may happen only on the first step, namely in the construction of $\Omega_1$ from $\Omega_0$, but we do not use this fact.)
-In this case one has to apply the same argument for a plane $W$ supporting the closure of $U$ at one point.
+By Proposition~\ref{prop:two-hull-open}, $\Conv_2\Omega$ is open.
+Therefore, if $\mathfrak{C}\not\subset\Conv_2\Omega$,
+then there is a point $p\in \mathfrak{C}\backslash\Conv_2\Omega$ lying on the maximal distance from $\Pi_n$.
+Denote by $W_p$ the plane through $p$ parallel to $\Pi_n$.
 
+Note that $p$ lies in a bounded component of $W_p\backslash \Conv_2\Omega$.
+In particular it can be surrounded by a simple closed curve $\gamma$ in $W_p\cap\Conv_2\Omega$.
+Since $p$ lies on the maximal distance from $\Pi_n$,
+the curve $\gamma$ is null-homotopic in $\Conv_2\Omega$.
+Therefore $p\in \Conv_2\Omega$, a contradiction.
 
 By induction, $\Conv_2\Omega\supset\Omega_n$ for each $n$.
 Therefore \ref{eq:Omega'} implies \ref{eq:Conv2>Omega'}.
@@ -729,15 +728,7 @@ but not null-homotopic in $\Pi\cap\Omega'$.
 
 By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
 and that $\gamma$ lies in $\Omega_{n-1}$.
-By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the Loop Theorem we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. 
-
-%Hence
-%The latter contradicts the $n$-th step in the construction. 
-
-%??? I am not sure what was written before was  obvious without using the Loop theorem. V
-\qeds
-
-
+By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the Loop Theorem we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. \qeds
 
 \begin{thm}{Key lemma}\label{lem:key-shefel}
 The two-convex hull of the interior of a polytope in $\EE^3$
