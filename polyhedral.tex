@@ -67,7 +67,7 @@ The $\Cat{}{1}$ case is done the same way, but one has to assume in addition tha
 
 The following lemma and its proof were suggested to us by Alexander Lytchak.  
 This lemma allows  a local geodesic path 
-to be moved so that its endpoints follow given trajectories, a procedure obtained by a different method in \cite{a-b:cbc}.
+to be moved continuously so that its endpoints follow given trajectories, a procedure obtained by a different method in \cite{a-b:cbc}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -125,9 +125,9 @@ $\hat\gamma$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of  the lemma
 The $\Cat{}{1}$ case is proved the same way.
 \qeds
 
-The following two corollaries follow from 
-(1) the patchwork (\ref{lem:patch}),
-(2) Proposition \ref{cor:loc-geod-are-min}, which states that local geodesics are geodesics in any $\Cat{}{}$ space, 
+The following two corollaries follow from:
+(1) the patchwork (\ref{lem:patch});
+(2) Proposition \ref{cor:loc-geod-are-min}, which states that local geodesics are geodesics in any $\Cat{}{}$ space; 
 and (3) Theorem \ref{thm:cat-unique} on uniqueness of geodesics.
 
 \begin{thm}{Corollary}\label{cor:discrete-paths}
@@ -259,7 +259,7 @@ Note that the implication ``only if'' is already proved in  Theorem~\ref{thm:cat
 Fix a triangle $[p x y]$  in $\spc{U}$. 
 We need to show that $\trig p x y$ is thin.
 
-By the assumptions, the line-of-sight map  $(t,\tau)\mapsto\gamma_t(\tau)$ from $p$ to   $[x y]$ is uniquely defined and continuous.    
+By the assumptions, the line-of-sight map  $(t,s)\mapsto\gamma_t(s)$ from $p$ to   $[x y]$ is uniquely defined and continuous.    
 
 \begin{center}
 \begin{lpic}[t(1mm),b(1mm),r(0mm),l(0mm)]{pics/cba-globalization-net(1)}
@@ -299,15 +299,15 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is thin.
 \qeds
 
 \parit{Proof of the globalization theorem; $\Cat{}{0}$ case.}
+Let $\spc{U}$ be a simply connected, locally $\Cat{}{0}$ proper length space.
 Given a path $\alpha$ in $\spc{U}$, 
 denote by $\gamma_\alpha$ the local geodesic path provided by Corollary \ref{cor:path-geod}.
-Since the map $\alpha\mapsto\gamma_\alpha$ is continuous,
+Since the map $\alpha\mapsto\gamma_\alpha$ is continuous, by Corollary \ref{cor:discrete-paths}
 we have $\gamma_\alpha=\gamma_\beta$ for any pair of  paths $\alpha$ and $\beta$  homotopic relative to the ends.
 
-Since $\spc{U}$ is simply connected, any pair of paths with common ends are homotopic.
-It follows that any two points $p,q\in\spc{U}$ are joined by a unique local geodesic.
-
-It remains to apply the patchwork globalization theorem (\ref{thm:alex-patch}).
+Since $\spc{U}$ is simply connected, any pair of paths with common ends are homotopic.  In particular, if $\alpha$ and $\beta$ are local geodesics from $p$ to $q$, then $\alpha =\gamma_\alpha=\gamma_\beta=\beta$ by Corollary \ref{cor:path-geod}.
+It follows that any two points $p,q\in\spc{U}$ are joined by a unique local geodesic that depends continuously on $(p,q)$.
+Since $\spc{U}$ is geodesic, it remains to apply the patchwork globalization theorem (\ref{thm:alex-patch}).
 
 \parit{$\Cat{}{1}$ case.}
 The proof goes along the same lines, 
