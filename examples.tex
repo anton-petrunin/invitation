@@ -126,7 +126,8 @@ Let $K\subset \EE^m$ be a closed subset.
 
 Assume that the boundary of $K$ forms a smooth hypersurface $S$.
 Consider the unit normal vector field $\nu$ on $S$ that  points outside of $K$.
-Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$ (for example, if $K$ is convex then  $k_1\ge 0$).
+Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$ (by this we mean that  if $K$ is convex then  $k_1\ge 0$).
+% (i.e. we mean the opposite of the usual definition)
 
 Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
 Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of $p$.
@@ -343,7 +344,7 @@ $W^\kay$ is arbitrarily Hausdorff close to $K'$.
 
 By Proposition~\ref{prop:cat-limit}, 
 in order to prove \ref{K'-is-CAT}, 
-it is sufficient to show the following.
+it is sufficient to show the following:
 \begin{clm}{}
 All $W^i$ form $\Cat{}{0}$ spaces.
 \end{clm}
@@ -360,7 +361,7 @@ By Reshetnyak's gluing theorem, $W^{i+1}$ is $\Cat{}{0}$.
 Hence the claim follows.
 \claimqeds
 
-Note that we have  proved the following
+Note that we have  proved the following:
 \begin{clm}{}\label{clm-strong2convex}
 $K$ is a $\Cat{}{0}$ space if $K$ is 
 \index{strongly two-convex set}\emph{strongly two-convex},
@@ -572,7 +573,7 @@ It remains to note that as $n\to\infty$ the sequence of space $K_n$ converges to
 
 Now we are back to the proof of Shefel's theorem \ref{thm:shefel}.
 
-Recall, that a subset $P$ of $\EE^m$ is called a \index{polytope}\emph{polytope} 
+Recall that a subset $P$ of $\EE^m$ is called a \index{polytope}\emph{polytope} 
 if it can be presented as a union of a  finite number of simplices.
 Similarly,
 a \index{spherical polytope}\emph{spherical polytope}
@@ -593,7 +594,7 @@ Typically, the completion $K$ of $\Omega$
 is isometric to $P$.
 However in general
 we only have a locally distance preserving map $K\to P$;
-it does not have to be onto and it may be not injective. 
+it does not have to be onto and it may not be injective. 
 An example can be guessed from the picture.
 Nevertheless, is easy to see that $K$ is always a polyhedral space.
  
@@ -634,7 +635,7 @@ is not simply connected and $\tilde K\to K$ branches at $p$.
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
 denote by $p$ the image of $\tilde p$ in $K$.
-By Globalization theorem (\ref{thm:hadamard-cartan}) it is sufficient to show that 
+By Globalization theorem (\ref{thm:hadamard-cartan}) it is sufficient to show:
 
 \begin{clm}{}\label{eq:curv=<0}
 A small neighborhood of $\tilde p$ in $\tilde K$ is $\Cat{}{0}$.
@@ -643,7 +644,7 @@ A small neighborhood of $\tilde p$ in $\tilde K$ is $\Cat{}{0}$.
 Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at $\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
 is isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
-By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show that
+By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show 
 
 \begin{clm}{}\label{eq:curv=<1}
 $\Sigma_{\tilde p}$ is $\Cat{}{1}$.
@@ -655,7 +656,7 @@ set $\Theta=\SS^2\cap\Omega$.
 Note that $\Sigma_pK$ is isometric to the completion of $\Theta$
 and $\Sigma_{\tilde p}\tilde K$ is the completion of the regular metric covering $\tilde\Theta$ of $\Theta$  induced by the universal metric cover $\tilde \Omega\to \Omega$.
 
-By Exercise \ref{ex:bishop-sphere}, it remains to show  the following.
+By Exercise \ref{ex:bishop-sphere}, it remains to show  the following:
 \begin{clm}{}
 Any closed curve in $\tilde\Theta$ of length less than $2\cdot\pi$ is contractible.
 \end{clm}
@@ -700,18 +701,19 @@ Set
 Note that $\Omega'$ is a union of open sets, in particular it is open.
 
 Let us show that  
+\[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]
  Suppose we already know that  $\Conv_2\Omega\supset\Omega_{n-1}$. 
 Fix a bounded component $\mathfrak{C}$ of $\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
-It is sufficient to show that $\mathfrak{C}\subset\Conv_2\Omega$
+It is sufficient to show that $\mathfrak{C}\subset\Conv_2\Omega$.
 
 By Proposition~\ref{prop:two-hull-open}, $\Conv_2\Omega$ is open.
 Therefore, if $\mathfrak{C}\not\subset\Conv_2\Omega$,
-then there is a point $p\in \mathfrak{C}\backslash\Conv_2\Omega$ lying on the maximal distance from $\Pi_n$.
+then there is a point $p\in \mathfrak{C}\backslash\Conv_2\Omega$ lying at maximal distance from $\Pi_n$.
 Denote by $W_p$ the plane through $p$ parallel to $\Pi_n$.
 
 Note that $p$ lies in a bounded component of $W_p\backslash \Conv_2\Omega$.
 In particular it can be surrounded by a simple closed curve $\gamma$ in $W_p\cap\Conv_2\Omega$.
-Since $p$ lies on the maximal distance from $\Pi_n$,
+Since $p$ lies at maximal distance from $\Pi_n$,
 the curve $\gamma$ is null-homotopic in $\Conv_2\Omega$.
 Therefore $p\in \Conv_2\Omega$, a contradiction.
 
@@ -727,7 +729,7 @@ but not null-homotopic in $\Pi\cap\Omega'$.
 
 By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
 and that $\gamma$ lies in $\Omega_{n-1}$.
-By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the Loop Theorem we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. \qeds
+By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the Loop Theorem, we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction, the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. \qeds
 
 \begin{thm}{Key lemma}\label{lem:key-shefel}
 The two-convex hull of the interior of a polytope in $\EE^3$
@@ -749,14 +751,13 @@ In other words,
 $F'_i$ is the subset of the facet $F_i$ 
 which remains on the boundary of $P'$.
 
-From the construction of the two-convex hull (\ref{prop:2-conv-construction}) we get
+From the construction of the two-convex hull (\ref{prop:2-conv-construction}) we have:
 
 \begin{clm}{}\label{clm:F'-convex}
 $F'_i$ is  a convex subset of $F_i$.
 \end{clm}
 
-Further, since $\Omega'$ is two-convex,
-we get the following.
+Further, since $\Omega'$ is two-convex we obtain the following:
 
 \begin{clm}{}\label{clm:complement-of-F'-convex}
 Each connected component of the complement $F_i\backslash F'_i$ is convex.
@@ -777,8 +778,7 @@ The latter means that $\Omega$ is not two-convex,
 a contradiction.
 \claimqeds
 
-From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we get that 
-
+From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we conclude
 \begin{clm}{}$F'_i$ is a convex polygon for each $i$.
 \end{clm}
 
@@ -903,7 +903,7 @@ Under the name \emph{$(n-2)$-convex sets},
 two-convex sets in $\EE^n$ were introduced by Mikhael Gromov in \cite{gromov:SaGMC}.
 In addition to the inheritance of upper curvature bound by two-convex sets discussed in this chapter, 
 these sets appear as the maximal open sets with vanishing curvature in  Riemannian manifolds with non-negative or non-positive sectional curvature.
-It was first observed by Sergei Buyalo for nonpositive curvature \cite[Lemma 5.8]{buyalo} 
+This observation was first made by Sergei Buyalo for nonpositive curvature \cite[Lemma 5.8]{buyalo}, 
 and extended by Dmitri Panov and Anton Petrunin in \cite{panov-petrunin:sweeping}.
 
 Two-convex sets could be defined using homology instead of homotopy, as in the formulation of Leftschetz theorem in \cite[\S\textonehalf]{gromov:SaGMC}.
@@ -952,6 +952,5 @@ A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\
 Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\Cat{}{0}$ space? 
 \end{thm}
 
-For more on the subject, read \cite{petrunin-metricmin} and \cite{petrunin-stadler} by Anton Petrunin and Stephan Stadler;
-it discusses a variation of Shefel's conjecture with a $\Cat{}{0}$ ambient space and also a related result of Shefel in dimension~2. 
+For more on the subject, read \cite{petrunin-metricmin} and \cite{petrunin-stadler} by Anton Petrunin and Stephan Stadler, where a variation of Shefel's conjecture with a $\Cat{}{0}$ ambient space is discussed, and also a related result of Shefel in dimension~2. 
 
