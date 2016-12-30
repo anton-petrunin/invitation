@@ -201,7 +201,7 @@ any closed curve in $W\cap \Omega$
 which is null-homotopic in $\Omega$ is also null-homotopic in $W\cap \Omega$.
 \end{thm}
 
-In the proof we use Papakyriakopoulos' Loop theorem.
+In the proof we use Papakyriakopoulos' loop theorem.
 It states that for any 3-dimensional manifold $M$ with nonempty boundary $\partial M$, if 
 $f\: (D^2,\partial D^2)\to (M,\partial M)$
 is a continuous map from disc $D$ such that $f|\partial D^2$ is not null-homotopic in $\partial M$, then there is an embedding 
@@ -225,7 +225,7 @@ Then  $\phi(c')$ is a closed curve in $W$.
 
 Note that by construction  $\phi(D')$  completely lies in one of the two half-spaces  with boundary $W$. 
 We denote that half-space by $H$.
-If $\phi(c')$ is not contractible in $W\cap \Omega$,  then applying the Loop Theorem to $M^3=H\cap \Omega$ we conclude that  there exists a \emph{simple} closed curve $\gamma'\subset \Omega\cap W$ which is not contractible in $\Omega\cap W$ but is contractible in $\Omega\cap H$. 
+If $\phi(c')$ is not contractible in $W\cap \Omega$,  then applying the loop theorem to $M^3=H\cap \Omega$ we conclude that  there exists a \emph{simple} closed curve $\gamma'\subset \Omega\cap W$ which is not contractible in $\Omega\cap W$ but is contractible in $\Omega\cap H$. 
 This contradicts two-convexity of $\Omega$. 
 
 Hence $\phi(c')$ is contractible in $W\cap \Omega$. Therefore $\phi$ can be changed in a small neighborhood $U$ of $D'$ so that the new map $\hat\phi$ maps $U$ to one side of $W$. 
@@ -233,7 +233,7 @@ In particular, the set $\hat\phi^{-1}(W)$ consists of the same curves as $\phi^{
 
 Repeating this process several times we reduce the problem to the case where $\phi^{-1} (W)\cap \Int D=\emptyset$. This means that $\phi(D)$ lies entirely in one of the half-spaces bounded by $W$.
 
-Again applying the Loop Theorem we obtain a simple closed curve in $W\cap \Omega$ which is not contractible in $W\cap \Omega$ but is contractible in $\Omega$. 
+Again applying the loop theorem, we obtain a simple closed curve in $W\cap \Omega$ which is not contractible in $W\cap \Omega$ but is contractible in $\Omega$. 
 This again contradicts two-convexity of $\Omega$. 
 Hence $\gamma$ is contractible in  $W\cap \Omega$ as claimed.
 \qeds
@@ -278,7 +278,7 @@ that is, $K$ is not $\Cat{}{0}$.
 
 \parit{``If'' part.}
 Since $K$ is simply connected,
-by Globalization theorem \ref{thm:hadamard-cartan} 
+by the globalization theorem (\ref{thm:hadamard-cartan})
 it suffices to show that any point $p\in K$ admits a $\Cat{}{0}$ neighborhood.
 
 If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$. Hence the statement follows.
@@ -488,7 +488,7 @@ see Exercise~\ref{ex:two-convex-not-a-CAT}.
 
 Here is the main theorem of this section.
 
-\begin{thm}{Shefel's Theorem}\label{thm:shefel}
+\begin{thm}{Two-convexity theorem}\label{thm:shefel}
 Let $\Omega$ be a connected open set in $\EE^3$.
 Equip $\Omega$ with the induced length metric
 and denote by $K$ the completion of the universal metric cover of $\Omega$.
@@ -507,7 +507,7 @@ $K$ is a $\Cat{}{0}$ space if and only if $\Pi_1\perp\Pi_2$.
 
 \end{thm}
 
-Before coming to the proof of Shefel's theorem, 
+Before coming to the proof of the two-convexity theorem, 
 let us formulate a few corollaries.
 The following corollary is a generalization of Theorem \ref{thm:set-with-smooth-bry:CBA} for  three-dimensional Euclidean space.
 
@@ -523,7 +523,7 @@ Set $\Omega=\Int K$.
 Since $K$ is simply connected and bounded by a surface, 
 $\Omega$ is also simply connected.
 
-Apply Shefel's Theorem to $\Omega$.
+Apply the two-convexity theorem to $\Omega$.
 Note that the completion of $\Omega$ equipped with the induced length metric 
 is isometric to $K$ with the induced length metric.
 Hence the result follows.
@@ -571,7 +571,7 @@ $K_n$ is a $\Cat{}{0}$ space.
 It remains to note that as $n\to\infty$ the sequence of space $K_n$ converges to $\Gamma$ in the sense of Gromov--Hausdorff, and apply Proposition~\ref{prop:cat-limit}.
 \qeds
 
-Now we are back to the proof of Shefel's theorem \ref{thm:shefel}.
+Now we are back to the proof of the two-convexity theorem (\ref{thm:shefel}).
 
 Recall that a subset $P$ of $\EE^m$ is called a \index{polytope}\emph{polytope} 
 if it can be presented as a union of a  finite number of simplices.
@@ -599,7 +599,7 @@ An example can be guessed from the picture.
 Nevertheless, is easy to see that $K$ is always a polyhedral space.
  
 \begin{thm}{Lemma}\label{lem:poly-shefel}
-Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is the interior of a polytope.
+The two-convexity theorem (\ref{thm:shefel}) holds if the set $\Omega$ is the interior of a polytope.
 \end{thm}
 
 The statement might look obvious, but there is a hidden obstacle in the proof. %there is an underwater stone in the proof. 
@@ -635,7 +635,7 @@ is not simply connected and $\tilde K\to K$ branches at $p$.
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
 denote by $p$ the image of $\tilde p$ in $K$.
-By Globalization theorem (\ref{thm:hadamard-cartan}) it is sufficient to show:
+By the globalization theorem (\ref{thm:hadamard-cartan}), it is sufficient to show:
 
 \begin{clm}{}\label{eq:curv=<0}
 A small neighborhood of $\tilde p$ in $\tilde K$ is $\Cat{}{0}$.
@@ -698,7 +698,7 @@ Then
 \parit{Proof.}
 Set 
 \[\Omega'=\bigcup_n\Omega_n.\eqlbl{eq:Omega'}\]
-Note that $\Omega'$ is a union of open sets, in particular it is open.
+Note that $\Omega'$ is a union of open sets, in particular $\Omega'$ is open.
 
 Let us show that  
 \[\Conv_2\Omega\supset\Omega'.\eqlbl{eq:Conv2>Omega'}\]
@@ -729,7 +729,7 @@ but not null-homotopic in $\Pi\cap\Omega'$.
 
 By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
 and that $\gamma$ lies in $\Omega_{n-1}$.
-By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the Loop Theorem, we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction, the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. \qeds
+By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the loop theorem, we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction, the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. \qeds
 
 \begin{thm}{Key lemma}\label{lem:key-shefel}
 The two-convex hull of the interior of a polytope in $\EE^3$
@@ -903,15 +903,15 @@ Under the name \emph{$(n-2)$-convex sets},
 two-convex sets in $\EE^n$ were introduced by Mikhael Gromov in \cite{gromov:SaGMC}.
 In addition to the inheritance of upper curvature bound by two-convex sets discussed in this chapter, 
 these sets appear as the maximal open sets with vanishing curvature in  Riemannian manifolds with non-negative or non-positive sectional curvature.
-This observation was first made by Sergei Buyalo for nonpositive curvature \cite[Lemma 5.8]{buyalo}, 
+This observation was made first by Sergei Buyalo for nonpositive curvature \cite[Lemma 5.8]{buyalo}, 
 and extended by Dmitri Panov and Anton Petrunin in \cite{panov-petrunin:sweeping}.
 
-Two-convex sets could be defined using homology instead of homotopy, as in the formulation of Leftschetz theorem in \cite[\S\textonehalf]{gromov:SaGMC}.
+Two-convex sets could be defined using homology instead of homotopy, as in the formulation of the Leftschetz theorem in \cite[\S\textonehalf]{gromov:SaGMC}.
 Namely, we can say that $K$ is two-convex if the following condition holds: if a 1-dimensional cycle $z$ has support in the intersection of $K$ with a plane $W$ and bounds in $K$, then it bounds in $K\cap W$.
 
 The resulting definition is equivalent to the one used above.
  But unlike our definition it can be generalized to define $k$-convex sets in $\EE^m$ for $k>2$.
-With this homological definition one can also avoid the use of Papakyriakopoulos' Loop theorem, whose proof is quite involved.
+With this homological definition one can also avoid the use of Papakyriakopoulos' loop theorem, whose proof is quite involved.
 Nevertheless, we chose the definition using homotopies  since it is easier to visualize.
 
 We use our definition only for the open sets, for general sets one should be able to give a similar definition using  an appropriate  homology theory.
@@ -951,7 +951,7 @@ and an open set $\Omega$ such that
 for any  $\eps>0$, we have
 \[\Omega\subset\Conv_2[\Omega\cup \oBall(p,\eps)].\]
 
-A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.
+A subset $K$ is called \emph{strongly two-convex} if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.
 
 \begin{thm}{Question}
 Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\Cat{}{0}$ space? 
