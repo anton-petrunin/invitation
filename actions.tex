@@ -1,5 +1,3 @@
-\part{Curvature bounded below}
-
 \chapter{Isometric actions}
 
 \section{4-point condition}
@@ -29,9 +27,9 @@ one of $x$, $y$ or $z$ or one of the comparison triangles $\modtrig(pxy)_{\SS^2}
 \dist{p}{z}{}+\dist{p}{x}{}+\dist{z}{x}{}&\ge2\cdot\pi.
 \end{align*}
 };
-in this case we also assume that $\CBB{}{0}$ comparison holds automatically.
+in these cases we also assume that $\CBB{}{0}$ comparison holds automatically.
 
-We say that a metric space $\spc{L}$ is $\CBB{}{\kappa}$ if all quadruples of points in $\spc{L}$ satisfy $\CBB{}{\kappa}$ komaprison.
+We say that a metric space $\spc{L}$ is $\CBB{}{\kappa}$ if all quadruples of points in $\spc{L}$ satisfy $\CBB{}{\kappa}$ comparison.
 
 In the definition of spaces with curvature $\CBB{}{1}$, 
 most authors assume in addition that $\diam \spc{L}\le \pi$. 
@@ -126,9 +124,9 @@ we get
 
 Let $\spc{L}$ be a proper length $\CBB{}{\kappa}$ space.
 A closed subset $A\subset\spc{L}$ is called \index{extremal set}\emph{extremal} if for any point $p\notin A$, 
-any point $q\in A$ which minimize the distance to $p$ 
-and any $x\ne q$ we have
-\[\angk qpx\le \tfrac\pi2.\]
+any point $q\in A$ which minimize the distance to $p$ we have
+\[\angk qpx\le \tfrac\pi2\]
+for any $x\ne q$.
 
 The whole space as well as the empty set are always extremal;
 the other extremal sets are called \index{proper extremal set}\emph{proper}.
@@ -138,14 +136,14 @@ Show that a poin $p$ in a proper length $\CBB{}{\kappa}$ space forms an extremal
 \end{thm}
 
 \begin{thm}{Exercise}
-Show that intersection and the union of two extremal sets is extremal. 
+Show that intersection and the union of two extremal sets are extremal. 
 \end{thm}
 
 Consider a Riemannian manifold $\spc{R}$ with sectional curvature $\ge \kappa$.
 Toponiogov comparison theorem implies that $\spc{R}$ is a $\CBB{}{\kappa}$ space.
 
 Let $G$ be a subgroup of the isometry group of $\spc{R}$.
-We will deniote by $\spc{R}^G$ the set of points fixed by $G$.
+We will denote by $\spc{R}^G$ the set of points fixed by $G$.
 Note that $\spc{R}^G$ is a totally geodesic subset in $\spc{R}$.
 
 Given $p\in \spc{R}$ we will denote by $[p]_G$ the projection of $p$ to the orbit space $\spc{R}/G$.
@@ -338,7 +336,7 @@ Assume the circle action has 4 isolated points.
 Denote by $y_1,y_2,y_3,y_4$ their projections in $\spc{L}$.
 
 According to ???, $\spc{L}$ is a $\CBB{}\kappa$ space for some $\kappa>0$.
-According to Claim~{clm:Sigma=<sphere/2},
+According to Claim~\ref{clm:Sigma=<sphere/2},
 \[\mangle \hinge{y_i}{y_j}{y_k}\le\tfrac\pi2\]
 for any distinct $i$, $j$ and $k$.
 In particular non of 4 triangles $\trig{y^1}{y^2}{y^3}$,
@@ -362,8 +360,30 @@ The later contradicts \ref{eq:omega>4pi}.
 \parit{(\ref{SHORT.thm:keliner:nonneg}).}
 Assume there are 5 fixed points of the circle action.
 Denote by $y_1,y_2,y_3,y_4,y^5$ their projections in $\spc{L}$.
-
 \qeds
+
+Let $x\in \spc{R}$ be a fixed point of the $\SS^1$-action.
+Denote by $\bar x$ the projection of $x$ in the orbit space $\spc{X}=\spc{R}/\SS^1$.
+The space of direction $\Sigma_{\bar x}\spc{X}$ is isometric to a quotient space $\SS^3/\SS^1$.
+The group $\SS^1$ belongs to a maximal torus in $\SO(4)$,
+which has dimension $2$ and after appropriate identification of $\RR^4$ with $\CC^2$ is formed by diagonal matixes
+$\left(\begin{smallmatrix}
+        z^p&0
+        \\
+        0&z^q
+       \end{smallmatrix}
+\right)$, 
+where $p$ and $q$ are relatively prime nonnegative integers;
+without loss of generality we may assume that $p<q$.
+
+If $p>0$ then $x$ is an isolated fixed point of the $\SS^1$-action;
+otherwise, if $p=0$ then $x$ leis in a 2-dimensional submanifold fixed by $\SS^1$.
+
+In the first case $\Sigma_{\bar x}\spc{X}$ is isometric to a hemisphere.
+
+
+
+\section{Comments}
 
 The result above was used to classify positively and nonnegatively curved mainifolds which admit isometric circle action.
 This classification was improved later by Karsten Grove and Burkhard Wilking in \cite{grove-wilking}.
