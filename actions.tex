@@ -10,13 +10,14 @@ in this case we assume that $\CBB{}{0}$ comparison holds automatically.
 
 Taking hyperbolic plane $\HH^2$ or sphere $\SS^2$ instead of the Eulcidean plane $\EE^2$,
 one defines $\CBB{}{-1}$ and $\CBB{}{1}$ comparison.
-
-Namely, $p,x,y,z$  satisfies 
+\begin{itemize}
+\item We say that a quadruple $p,x,y,z$ in $\spc{X}$ satisfies 
 $\CBB{}{-1}$ comparison if 
 \[\angk pxy_{\HH^2}+\angk pyz_{\HH^2}+\angk pzx_{\HH^2}\le 2\cdot\pi.\]
-
-Further, $p,x,y,z$ satisfies $\CBB{}{1}$ comparison if 
+\item We say that a quadruple $p,x,y,z$ in $\spc{X}$ satisfies
+$\CBB{}{1}$ comparison if 
 \[\angk pxy_{\SS^2}+\angk pyz_{\SS^2}+\angk pzx_{\SS^2}\le 2\cdot\pi.\]
+\end{itemize}
 In the latter case the left hand side is undefined if $p$ coincides with 
 one of $x$, $y$ or $z$ or one of the comparison triangles $\modtrig(pxy)_{\SS^2}$, $\modtrig(pyz)_{\SS^2}$ or $\modtrig(pzx)_{\SS^2}$ is undefined\footnote{That is 
 \begin{align*}
@@ -120,6 +121,9 @@ we get
 
 %??? THE PROOF IS NOT CORRECT FOR KAPPA=1 SINCE THE COMPARISON IN L MIGHT HOLD BECAUSE THE PERIMERTER OF ONE TRIANGLE IS TOO BIG???
 
+The Corollary~\ref{cor:CBB/G} opens a door for applicatuions comming from the isometric group actions.
+
+
 \section{Extremal sets}
 
 Let $\spc{L}$ be a proper length $\CBB{}{\kappa}$ space.
@@ -132,7 +136,7 @@ The whole space as well as the empty set are always extremal;
 the other extremal sets are called \index{proper extremal set}\emph{proper}.
 
 \begin{thm}{Exercise}
-Show that a poin $p$ in a proper length $\CBB{}{\kappa}$ space forms an extremal set if and only if and only if $\diam\Sigma_p\le \tfrac\pi2$.
+Show that one-point set $\{p\}$ in a proper length $\CBB{}{\kappa}$ space forms an extremal set if and only if and only if the space of directions $\Sigma_p$ has diameter at most $\tfrac\pi2$.
 \end{thm}
 
 \begin{thm}{Exercise}
@@ -147,10 +151,6 @@ We will denote by $\spc{R}^G$ the set of points fixed by $G$.
 Note that $\spc{R}^G$ is a totally geodesic subset in $\spc{R}$.
 
 Given $p\in \spc{R}$ we will denote by $[p]_G$ the projection of $p$ to the orbit space $\spc{R}/G$.
-
-If $G$ has closed orbits then according to Corollary~\ref{cor:CBB/G}, the orbit space $\spc{R}/G$
-is a $\CBB{}{\kappa}$ space.
-It opens a door for applicatuions comming from the isometric group actions.
 
 Note that if the action $G\acts \spc{R}$ is free then the orbit space 
 $\spc{R}/G$ is also a Riemannian manifold.
@@ -381,7 +381,34 @@ otherwise, if $p=0$ then $x$ leis in a 2-dimensional submanifold fixed by $\SS^1
 
 In the first case $\Sigma_{\bar x}\spc{X}$ is isometric to a hemisphere.
 
+Consider the 3-sphere $\SS^3$ as a unit sphere in the complex 2-space $\CC^2$.
+Given integers $p$ and $q$ 
+consider the action of $\SS^1$ on $\SS^3$
+given by matrices
+$\left(\begin{smallmatrix}
+        z^p&0
+        \\
+        0&z^q
+       \end{smallmatrix}
+\right)$ for  $z\in\SS^1\subset\CC$.
+Denote by $\SS^1_{p,q}$ the induced action on $\SS^3$.
+Let us denote by $\Sigma_{p,q}$ the quatient space $\SS^3/\SS^1_{p,q}$.
 
+Note that the action $\SS^1_{p,q}$ is faithful if and only if
+$p$ and $q$ are relatevely prime.
+
+Assume $0\le p\le q$.
+Note that if $p=0$ then $\Sigma_{p,q}$ is ismoetric to the two-dimensional unit hemisphere and if $p>0$ then $\Sigma_{p,q}$ is homeomorphic to a sphere and has rotational simmetry.
+
+
+\begin{thm}{Lemma}
+Any faithful isometric $\SS^1$-action on $\SS^3$ is conjugate to $\SS^1_{p,q}$ for some integers $p$ and $q$ such that $0\le p\le q$.
+\end{thm}
+
+Let $\spc{R}$ be a 4-dimensional Riemannian manifold with an isometric $\SS^1$-action.
+Consider the quotient space $\spc{X}=\spc{R}/\SS^1$.
+Let $A\subset \spc{X}$ be a one component of the boundary.
+Then the doubling of $\spc{X}$ with respect to $A$ is a $\CBB{}{1}$ space.
 
 \section{Comments}
 
