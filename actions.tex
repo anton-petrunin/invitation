@@ -1,59 +1,6 @@
 \chapter{Isometric actions}
 
-\section{4-point condition}
 
-A quadruple of points $p,x,y,z$ in a metric space $\spc{X}$ satisfies 
-$\CBB{}{0}$ comparison if
-\[\angk pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}\le 2\cdot\pi.\]
-If $p$ coincides with one of the points $x$, $y$ or $z$ then the left hand side is undefined;
-in this case we assume that $\CBB{}{0}$ comparison holds automatically.
-
-Taking hyperbolic plane $\HH^2$ or sphere $\SS^2$ instead of the Eulcidean plane $\EE^2$,
-one defines $\CBB{}{-1}$ and $\CBB{}{1}$ comparison.
-\begin{itemize}
-\item We say that a quadruple $p,x,y,z$ in $\spc{X}$ satisfies 
-$\CBB{}{-1}$ comparison if 
-\[\angk pxy_{\HH^2}+\angk pyz_{\HH^2}+\angk pzx_{\HH^2}\le 2\cdot\pi.\]
-\item We say that a quadruple $p,x,y,z$ in $\spc{X}$ satisfies
-$\CBB{}{1}$ comparison if 
-\[\angk pxy_{\SS^2}+\angk pyz_{\SS^2}+\angk pzx_{\SS^2}\le 2\cdot\pi.\]
-\end{itemize}
-In the latter case the left hand side is undefined if $p$ coincides with 
-one of $x$, $y$ or $z$ or one of the comparison triangles $\modtrig(pxy)_{\SS^2}$, $\modtrig(pyz)_{\SS^2}$ or $\modtrig(pzx)_{\SS^2}$ is undefined\footnote{That is 
-\begin{align*}
-\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}&\ge2\cdot\pi,\quad\text{or}
-\\
-\dist{p}{y}{}+\dist{p}{z}{}+\dist{y}{z}{}&\ge2\cdot\pi,\quad\text{or}
-\\
-\dist{p}{z}{}+\dist{p}{x}{}+\dist{z}{x}{}&\ge2\cdot\pi.
-\end{align*}
-};
-in these cases we also assume that $\CBB{}{0}$ comparison holds automatically.
-
-We say that a metric space $\spc{L}$ is $\CBB{}{\kappa}$ if all quadruples of points in $\spc{L}$ satisfy $\CBB{}{\kappa}$ comparison.
-
-In the definition of spaces with curvature $\CBB{}{1}$, 
-most authors assume in addition that $\diam \spc{L}\le \pi$. 
-We do not make this assumption. 
-In particular, the real line is a $\CBB{}{1}$ space for us.
-
-
-\begin{thm}{Exercise}
-Let $\spc{L}$ be a length space.
-Show that $\spc{L}$ is a $\CBB{}0$ space
-if and only if 
-\[
-\area\modtrig(xyz)_{\EE^2}
-\le
-\area\modtrig(pxy)_{\EE^2}+\area\modtrig(pyz)_{\EE^2}+\area\modtrig(pzx)_{\EE^2}
-\]
-for any 4 distinct points $p,x,y,z\in\spc{L}$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{mink+alex=euclid} 
-Assume that the metric $\rho$ on  $\RR^m$ is defined by a norm.
-Show that $(\RR^m,\rho)$ is a $\CBB{}0$ space if and only if it is isometric to the Euclidean space.
-\end{thm}
 
 \section{Submetries}
 
