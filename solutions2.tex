@@ -1,0 +1,23 @@
+%%!TEX root = invitation.tex
+\backmatter
+\chapter{Semisolutions}
+
+\parbf{Exercise~\ref{lem:alm-min}.}
+Assume the statement is wrong. 
+Then for any $x\in \oBall(p,\tfrac{1}{\eps^2}\cdot r(p))$ with $r(x)\le r(p)$, there is a point $x'\in \spc{X}$ such that 
+\[\dist{x}{x'}{}<\tfrac{1}\eps\cdot r(x)
+\ \ \text{and}\ \ 
+r(x')\le (1-\eps)\cdot r(x).\]
+Take $x_0=p$ and consider a sequence of points $(x_n)$ such that $x_{n+1}=x_n'$.
+Clearly 
+\[\dist{x_{n+1}}{x_n}{}
+\le
+\tfrac{r(p)}{\eps}\cdot(1-\eps)^n
+\ \ \hbox{and}\ \ 
+r(x_n)\le r(p)\cdot(1-\eps)^n.\] 
+In particular, $\dist{p}{x_n}{}<\tfrac{1}{\eps^2}\cdot r(p)$.
+Therefore $(x_n)$ is a Cauchy sequence,
+$x_n\to x\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$
+and
+$\lim_{n}r(x_n)=0$, a contradiction.
+\qeds
