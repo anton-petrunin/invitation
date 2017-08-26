@@ -57,7 +57,7 @@ Prove that $f$ is an isometry.
 
 \parbf{Product space.}
 Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
-$\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ in the set $\spc{U}\times\spc{V}$ 
+$\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ where $u\in\spc{U}$ and $v\in \spc{V}$ 
 with the metric defined by formula
 \[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
 
@@ -81,7 +81,7 @@ The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by 
 \parbf{Suspension.}
 The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over a metric space $\spc{U}$
 is defined as the metric space whose underlying set consists of equivalence classes in
-$[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ and $(\pi,p)\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
+$[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\z\sim (0,q)$ and $(\pi,p)\z\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
 and whose metric is given by the  spherical cosine rule
 \[
 \cos\dist{(p,s)}{(q,t)}{\Susp\spc{U}} 
@@ -153,11 +153,16 @@ A constant speed parametrization of local geodesic by the unit interval $[0,1]$ 
 \parbf{Triangles.}
 For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+
 Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
-$\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
-Once we write $\trig p q r$, it means that we made a choice of such a triangle, 
-that is, a choice of each $[q r], [r p]$ and $[p q]$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
+$\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic.
+Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
+However, if we write $\trig p q r$, it means that we made a choice of such a triangle, 
+that is, we fixed a choice of the geodesics $[q r], [r p]$ and $[p q]$.
+
+The value 
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\]
+will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
@@ -177,12 +182,12 @@ A set $A\subset\spc{X}$ is called
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
 such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in $A$.
 
-
-Note that any open set is locally convex by definition.
+Note that any open set is locally convex by the definition.
 
 \section{Length spaces}\label{sec:intrinsic}
 
-Recall that a path or a  curve is a continuous map from a real interval to a space.
+A \emph{curve} is defined as a continuous map from a real interval to a space.
+If the real interval is $[0,1]$ then curve is called \emph{path}.
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and
@@ -194,20 +199,20 @@ We define the \index{length}\emph{length} of $\alpha$ as
 \end{thm}
 
 Directly from the definition, it follows that if a path $\alpha\:[0,1]\to\spc{X}$ connects two points $x$ and $y$ 
-(that is, such that $\alpha(0)=x$ and $\alpha(1)=y$) then 
+(that is, $\alpha(0)=x$ and $\alpha(1)=y$) then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 
 If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
 then $\spc{X}$ is called a \index{length space}\emph{length space}.
 
-Note that any geodesic space is a length space;
-as can be seen from the following example, the converse does not hold.
+Note that any geodesic space is a length space.
+As can be seen from the following example, the converse does not hold.
 
 
 \begin{thm}{Example}
-Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\II_i$ of length $1+1/i$, where for each $\II_i$ one end is glued to $p=\{0\}$ and the other to $q=\{1\}$.
-Then $\spc{X}$ carries a natural complete length metric  with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
+Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\{\II_n\}$ of length $1+\tfrac1n$, where for each $\II_n$ the left end is glued to $p$ and the right end to $q$.
+Then $\spc{X}$ carries a natural complete length metric with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
 \end{thm}
 
 
@@ -225,7 +230,7 @@ if
 \item Assume $\eps\ge 0$.
 A point $z\in \spc{X}$ is called an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} between $x$ and $y$
 if 
-\[\dist{x}{z}{},\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
+\[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
 
 
@@ -252,7 +257,7 @@ Then $\spc{X}$ is a geodesic space.
 We first prove (\ref{SHORT.lem:mid>length}).
 Let $x,y\in \spc{X}$ be a pair of points.
 
-Set $\eps_n=\frac\eps{2^{2\cdot n}}$.
+Set $\eps_n=\frac\eps{4^n}$.
 
 Set $\alpha(0)=x$ and $\alpha(1)=y$.
 
@@ -312,7 +317,7 @@ Assume the contrary; that is, $\rho(x)<\infty$.
 
 Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
-the set $\cBall[x,\rho(x)-\eps]$ forms a compact $\eps$-net in $B$. Since $B$ is closed and hence complete, it has to be compact.
+the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in $B$. Since $B$ is closed and hence complete, it has to be compact.
 \claimqeds
 
 \begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
@@ -344,15 +349,15 @@ but whose completion is neither geodesic nor locally compact.
 
 \section{Model angles and triangles.}\label{sec:mod-tri/angles}
 
-Let $\spc{X}$ be a metric space, 
+Let $\spc{X}$ be a metric space and 
 $p,q,r\in \spc{X}$. 
 Let us define its \index{model triangle}\emph{model triangle} $\trig{\~p}{\~q}{\~r}$ 
 (briefly, 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
 \index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same sides; that is,
 \[\dist{\~p}{\~q}{}=\dist{p}{q}{},
-\ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
-\ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
+\quad\dist{\~q}{\~r}{}=\dist{q}{r}{},
+\quad\dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
 
 In the same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
 in the hyperbolic plane $\HH^2$ and the unit sphere $\SS^2$.
@@ -472,14 +477,15 @@ the limit\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \[\mangle\hinge p x y
 \df
 \lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y}_{\EE^2},\eqlbl{eq:def-angle}\]
-where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$, provided the limit exists.
-The angle under the limit can be calculated from the  cosine law:
+where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+(The angle $\mangle\hinge p x y$ is defined if the limit exists.)
+
+The value under the limit can be calculated from the  cosine law:
 \[\cos\angk{p}{x}{y}_{\EE^2}
 =
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
-The following lemma implies that in 
-the angle definition  \ref{eq:def-angle}, one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
+The following lemma implies that in \ref{eq:def-angle}, one can use $\angk p{\bar x}{\bar y}_{\SS^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
 
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
@@ -550,15 +556,15 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \\
 &+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha^{23}+\eps)}\le
 \\
-\intertext{(Below we define 
+\intertext{Below we define 
 $s(t,\tau)$ so that for 
-$s=s(t,\tau)$, this chain of inequalities can be continued as follows:)}
+$s=s(t,\tau)$, this chain of inequalities can be continued as follows:}
 \le
 \ &\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
 \end{align*}
 Thus for any $\eps>0$, 
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
-Hence the result.
+Hence the result follows.
 
 \begin{wrapfigure}[12]{r}{25mm}
 \begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/s-choice(1)}
@@ -571,7 +577,7 @@ Hence the result.
 \end{wrapfigure}
 
 
-To define $s(t,\tau)$ so that it satisfies the above inequality, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
 We parametrize each ray by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
@@ -689,7 +695,7 @@ It seems that Hausdorff convergence was first introduced by Felix Hausdorff in \
 and a couple of years later an equivalent definition was given by Wilhelm Blaschke in \cite{blaschke}.
 A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
 and then rediscovered by Robert Wijsman in \cite{wijsman}.  
-However, this refinement was a reversion  to  the {}\emph{closed convergence} introduced by Hausdorff in the original book. 
+However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence} introduced by Hausdorff in the same book. 
 For this reason we call it Hausdorff convergence
 instead of
 {}\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
@@ -707,7 +713,7 @@ briefly $A_n\to A_\infty$, if
 $$\dist{A_n}{}{}(x)\to\dist{A_\infty}{}{}(x)\ \ \t{as}\ \ n\to\infty$$
 for any fixed $x\in \spc{X}$.
 
-Then the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{converge in the sense of Hausdorff}\emph{converge in the sense of Hausdorff}.
+In this case, the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{converge in the sense of Hausdorff}\emph{converge in the sense of Hausdorff}.
 \end{thm}
 
 \parbf{Example.}
@@ -716,7 +722,7 @@ with center $(0,n)$ and radius $n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
 
 \begin{thm}{Exercise}\label{ex:hausdorff-conv}
-In a  metric space $\spc{X}$, show that if $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in A_n$.
+Let $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}, then $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in A_n$.
 
 Show that the converse fails.
 \end{thm}
@@ -775,7 +781,7 @@ Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
 A metric $\rho$ on the disjoint union
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$
 is called a  \index{compatible metric}\emph{compatible metric}
-if the restriction of $\rho$ to every $\spc{X}_\alpha$ is the original metric on $\spc{X}_\alpha$.
+if the restriction of $\rho$ to every $\spc{X}_\alpha$ coincides with the original metric on $\spc{X}_\alpha$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:GH}
@@ -792,7 +798,7 @@ Then we say $\rho$ defines a
 in the sense of Gromov--Hausdorff}%
 \index{convergence in the sense of Gromov--Hausdorff},
 and write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xto{\rho} \spc{X}_\infty$.
-The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n)$ along $\rho$.
+The space $\spc{X}_\infty$ is called the \emph{limit space} of the sequence $(\spc{X}_n)$ \emph{along} $\rho$.
 \end{thm}
 
 Usually Gromov--Hausdorff convergence is defined differently. We prefer this definition since it induces convergence for a sequence of points $x_n\in\spc{X}_n$ (Exercise \ref{ex:hausdorff-conv}),
@@ -871,7 +877,7 @@ The metric $\rho$ can be constructed as the maximal compatible metric
 such that 
 \[\rho(z_{i,n},w_i)\le\tfrac1m\]
 for any $n\ge N_m$ and $i<I_m$ for a suitable choice of two sequences 
-$I_m$, $N_m$ with $I_1=N_1=1$.
+$(I_m)$ and $(N_m)$ with $I_1=N_1=1$.
 \qeds
 
 
