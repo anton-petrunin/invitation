@@ -137,7 +137,7 @@ The proof is taken from \cite[\S\textonehalf]{gromov:SaGMC}, but we added  some 
 
 \parit{Proof; ``Only-if'' part.}
 If $k_2(p)<0$ for some $p\in S$,
-consider the plane $W$ through $p$  spanned by the first two principal directions.
+consider the plane $W$ containing $p$ and spanned by the first two principal directions at $p$.
 Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
 We get a triangle $\trig xyz$ which is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $\trig xyz$ does not lie in $K$ completely.
@@ -433,7 +433,7 @@ that is, two minimizing geodesics with common ends but no other common points.
 The image of this diangle in the plane must bound an open region of $\Omega$ and both sides of the region must be concave in the plane, since otherwise one could shorten the sides by pushing them into $\Omega$.
 Evidently, there is no such plane diangle with concave sides, a contradiction.
 
-Note that it is enough to consider only simple triangles $\trig xyz$, 
+Note that it is sufficient to consider only simple triangles $\trig xyz$, 
 that is, triangles whose sides $[xy]$, $[yz]$ and $[zx]$ intersect each other only at the common vertices.
 If this is not the case, chopping the overlapping part of sides reduces to the injective case.
 
@@ -664,7 +664,7 @@ Any closed curve in $\tilde\Theta$ of length less than $2\cdot\pi$ is contractib
 Fix a closed curve $\tilde \gamma$ of length $<2\cdot\pi$ in $\tilde\Theta$.
 Its projection $\gamma$ in $\Theta\subset\SS^2$ has the same length.
 Therefore, by Exercise~\ref{ex:hemisphere}, $\gamma$ lies in an open hemisphere.
-Then for a plane $\Pi$ almost passing through $p$,
+Then for a plane $\Pi$ passing close to $p$,
 the central projection $\gamma'$ of $\gamma$ to $\Pi$ is defined and lies in $\Omega$.
 By construction of $\tilde\Theta$, the curve $\gamma$ and therefore $\gamma'$ are contractible in $\Omega$.
 From two-convexity of $\Omega$
@@ -709,7 +709,7 @@ It is sufficient to show that $\mathfrak{C}\subset\Conv_2\Omega$.
 By Proposition~\ref{prop:two-hull-open}, $\Conv_2\Omega$ is open.
 Therefore, if $\mathfrak{C}\not\subset\Conv_2\Omega$,
 then there is a point $p\in \mathfrak{C}\backslash\Conv_2\Omega$ lying at maximal distance from $\Pi_n$.
-Denote by $W_p$ the plane through $p$ parallel to $\Pi_n$.
+Denote by $W_p$ the plane containing $p$ which is parallel to $\Pi_n$.
 
 Note that $p$ lies in a bounded component of $W_p\backslash \Conv_2\Omega$.
 In particular it can be surrounded by a simple closed curve $\gamma$ in $W_p\cap\Conv_2\Omega$.
@@ -727,8 +727,7 @@ and a simple closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$
 which is null-homotopic in $\Omega'$,
 but not null-homotopic in $\Pi\cap\Omega'$.
 
-By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
-and that $\gamma$ lies in $\Omega_{n-1}$.
+By approximation we can assume that $\Pi=\Pi_n$ for a large $n$ and that $\gamma$ lies in $\Omega_{n-1}$.
 By the same argument as in the proof of Proposition ~\ref{prop:3d-strong-2-convexity} using the loop theorem, we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by $\Pi$.  By the $n$-step of the construction, the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$. \qeds
 
 \begin{thm}{Key lemma}\label{lem:key-shefel}
@@ -826,8 +825,8 @@ According to Key Lemma (\ref{lem:key-shefel}), $\Omega'$ is the interior of a po
 
 Equip $\Omega'$ with the induced length metric.
 Consider the universal metric cover $\tilde\Omega'$ of $\Omega'$.
-(The covering $\tilde\Omega'\to\Omega'$ might be nontrivial;
-even though $\Int P$ is simply connected, its two-convex hull $\Omega'$ might not be simply connected.)
+(The covering $\tilde\Omega'\to\Omega'$ might be nontrivial ---
+despite that $\Int P$ is simply connected, its two-convex hull $\Omega'$ might not be simply connected.)
 Denote by $\tilde K'$ the completion of $\tilde\Omega'$.
 
 By Lemma~\ref{lem:poly-shefel}, $\tilde K'$ is $\Cat{}0$.
