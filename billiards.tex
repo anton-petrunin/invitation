@@ -58,7 +58,8 @@ Note that in order to check $\Cat{}{\kappa}$ comparison, it is sufficient to kno
 The latter observation implies the following.
 
 \begin{thm}{Proposition}\label{prop:cat-limit}
-The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is $\Cat{}{\kappa}$.
+The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is always a $\Cat{}{\kappa}$ space. 
+%???I wanted to say ``for any convergence'', but it might bring more confusion. A.
 \end{thm}
 
 In the proposition above, 
@@ -134,7 +135,8 @@ Applying $\Cat{}{0}$ comparison to a quadruple $p,q,x,y$ with $q\in [xy]$ shows 
 
 Now consider triangle $\trig{x^1}{x^2}{x^3}$, with $y\in [x^1x^2]$ and $z\in [x^1x^3]$.
 Let $\~y$, $\~z$ be the corresponding points on the sides of the model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\EE^2}$.
-Applying point-side comparison first to triangle $\trig{x^1}{x^2}{x^3}$ with $y\in [x^1x^2]$, and then to triangle $\trig{x^1}{y}{x^3}$  with $z\in [x^1x^3]$,  implies that model angles satisfy $\angk {x^1} {x^2} {x^3}_{\EE^2} \ge \angk {x^1} y {x^3}_{\EE^2} \ge \angk {x^1} y z _{\EE^2}.$
+Applying point-side comparison first to triangle $\trig{x^1}{x^2}{x^3}$ with $y\in [x^1x^2]$, and then to triangle $\trig{x^1}{y}{x^3}$  with $z\in [x^1x^3]$,  implies that model angles satisfy 
+\[\angk {x^1} {x^2} {x^3}_{\EE^2} \ge \angk {x^1} y {x^3}_{\EE^2} \ge \angk {x^1} y z _{\EE^2}.\]
 Therefore $ \dist{\~y}{\~z}{\EE^2}\ge \dist{y}{z}{}$.
 
 The $\Cat{}{1}$ argument is the same.
@@ -160,8 +162,9 @@ Since both these triangles are thin, we get
 \dist{\geodpath_{[p^1q^1]}(t)}{\geodpath_{[p^2q^2]}(t)}{\spc{U}}&\le \max\{\dist{p^1}{p^2}{\spc{U}},\dist{q^1}{q^2}{\spc{U}}\}.
 \end{align*}
 
-Hence continuity and uniqueness in
- the $\Cat{}{0}$ case.  The $\Cat{}{1}$ case is done essentially the same way.
+Hence continuity and uniqueness in the $\Cat{}{0}$ case.  
+ 
+The $\Cat{}{1}$ case is done essentially the same way.
 \qeds
 
 Adding the first two inequalities of the preceding proof gives:
@@ -190,10 +193,11 @@ Analogously, any $\Cat{}{1}$ proper length space with diameter $<\pi$ is contrac
 Fix a point $p\in \spc{U}$.
 
 For each point $x$ consider the geodesic path $\gamma_x\:[0,1]\to \spc{U}$ from $p$ to $x$.
-Consider the map 
-$h_t\:x\mapsto \gamma_x(t)$  for each $t$.
+Consider the one parameter family of maps 
+$h_t\:x\mapsto \gamma_x(t)$ for $t\in [0,1]$.
 By uniqueness of geodesics (\ref{thm:cat-unique}) the map 
-$(t,x)\mapsto h_t(x)$ is continuous.
+$(t,x)\mapsto h_t(x)$ is continuous;
+the family $h_t$ is called \index{geodesic homotopy}\emph{geodesic homotopy}.
 
 It remains to note that $h_1(x)=x$ and $h_0(x)=p$ for any $x$.
 
@@ -204,7 +208,7 @@ The proof of the $\Cat{}{1}$ case is identical.
 Suppose $\spc{U}$ is a $\Cat{}{0}$ proper length space.  
 Then any local geodesic in $\spc{U}$ is a geodesic.
 
-Analogously, if $\spc{U}$ is a $\Cat{}{1}$ proper length space then any local geodesic with length $<\pi$ in $\spc{U}$ is a geodesic.
+Analogously, if $\spc{U}$ is a $\Cat{}{1}$ proper length space then any local geodesic in $\spc{U}$ which is shorter than $\pi$ is a geodesic.
 \end{thm}
 
 \begin{wrapfigure}{r}{21mm}
@@ -327,7 +331,7 @@ Show that any ball in a $\Cat{}{0}$ proper length space is a convex set.
 Analogously, show that any ball of radius $R<\tfrac\pi2$ in a $\Cat{}{1}$ proper length space  is a convex set.
 \end{thm}
 
-Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is a open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in $A$. 
+Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in $A$. 
 
 \begin{thm}{Exercise}\label{ex:locally-convex}
 Show that in any $\Cat{}{0}$ proper length space, any closed, connected, locally convex set is convex.
@@ -358,13 +362,13 @@ Consider the space $\spc{W}$ of all equivalence classes on $\spc{U}^1\sqcup\spc{
 
 It is straightforward to see that $\spc{W}$ is a proper length space if equipped with the following metric
 \begin{align*}
-\dist{x}{y}{\spc{W}}&=\dist{x}{y}{\spc{U}^i}
+\dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}^i}
 \\
-&\text{if}\quad x,y\in \spc{U}^i,\quad\text{and}
+&\quad\text{if}\quad x,y\in \spc{U}^i,\quad\text{and}
 \\
-\dist{x}{y}{\spc{W}}&=\min\set{\dist{x}{a}{\spc{U}^1}+\dist{y}{\iota(a)}{\spc{U}^2}}{a\in A^1}
+\dist{x}{y}{\spc{W}}&\df\min\set{\dist{x}{a}{\spc{U}^1}+\dist{y}{\iota(a)}{\spc{U}^2}}{a\in A^1}
 \\
-&\text{if}\quad x\in \spc{U}^1\quad\text{and}\quad y\in \spc{U}^2.
+&\quad\text{if}\quad x\in \spc{U}^1\quad\text{and}\quad y\in \spc{U}^2.
 \end{align*}
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
 
@@ -618,7 +622,7 @@ Hence the sublemma follows.
 
 
 
-\parit{Proof of Lemma~\ref{lem:end-to-end-convex}.}
+\parit{Proof of \ref{lem:end-to-end-convex}.}
 Fix arbitrary $x,y\in \EE^m$.
 Choose a point $z\in A\cap B$
 for which the sum 
@@ -637,18 +641,6 @@ Proposition~\ref{prop:A-check-A} together with Observation~\ref{obs:end-to-end-c
 imply \ref{clm:z in xy} in  case $z$ lies in the interior of $A$.
 In the same way we can treat the case when $z$ lies in the interior of $B$.
 
-\begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
-\lbl[br]{13,35;$x$}
-\lbl[bl]{25,37;$y$}
-\lbl[t]{18,28;$z$}
-\lbl{8,22;$A$}
-\lbl[t]{25,23;$B$}
-\lbl[t]{3,33;$\dot A$}
-\lbl[t]{31,29;$\dot B$}
-\end{lpic}
-\end{wrapfigure}
-
 Further we will use the following exercise in convex geometry
 
 \begin{thm}{Exercise}\label{ex:supporting-planes}
@@ -659,11 +651,21 @@ Let $z_0\in A\cap B$ be  a point of minimum of $ f|_{A\cap B}$.
 
 Show that there are half-spaces $\dot A$ and $\dot B$ such that
 $\dot A\supset A$ and $\dot B\supset B$
-and $z_0$ is also a point of minimum of $ f|_{\dot A\cap \dot B}$.
+and $z_0$ is also a point of minimum of the restriction $f|_{\dot A\cap \dot B}$.
 
 \end{thm}
 
-Note that the angle measure of  $\dot A\cap \dot B$ is at least $\alpha$.
+\begin{wrapfigure}{r}{35mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
+\lbl[br]{13,35;$x$}
+\lbl[bl]{25,37;$y$}
+\lbl[b]{17.7,26.5;$z$}
+\lbl{8,22;$A$}
+\lbl[t]{25,23;$B$}
+\lbl[t]{3,33;$\dot A$}
+\lbl[t]{31,29;$\dot B$}
+\end{lpic}
+\end{wrapfigure}
 
 Note that $\EE^{m}$ admits isometric splitting $\EE^{m-2}\times \EE^2$ 
 such that 
@@ -683,7 +685,8 @@ call it $\ddot{\spc{R}}$,
 glued from the copies of the plane $\EE^2$ for the array
 \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
 
-
+Note that the dihedral angle $\dot A\cap \dot B$ is at least $\alpha$.
+Therefore the angle measure of  $\ddot A\cap \ddot B$ is also at least $\alpha$
 According to Sublemma~\ref{sublem:end-to-end-convex} and Observation~\ref{obs:end-to-end-convex}, $\ddot{\spc{R}}$ is end-to-end convex.
 
 Since $\dot{\spc{R}}\iso\EE^{m-2}\times\ddot{\spc{R}}$, 
@@ -695,12 +698,10 @@ the image of $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$
 under the map $\dot x^\kay\mapsto x^\kay$
 is the geodesic $[x^0 y^N]_{\spc{R}}$.
 Hence Claim~\ref{clm:z in xy} 
-and the
-Lemma follow.
+and the lemma follow.
 \qeds
 
-The proof of the following proposition is based on Lemma~\ref{lem:end-to-end-convex},
-which is essentially the case $n=2$.
+\section{Wide corners}
 
 We say that a closed convex set $A\subset \EE^m$ has  \index{$\eps$-wide corners}\emph{$\eps$-wide corners}\label{page:wide corners} for given $\epsilon >0$ 
 if together with each point $p$
@@ -732,6 +733,9 @@ Assume $A^1,\dots,A^n\subset\EE^m$ are
 convex sets with nonempty interior which have a common center of symmetry.
 Show that all intersections of an arbitrary number of sets $A^i$ have $\eps$-wide corners for some positive $\eps$.
 \end{thm}
+
+The proof of the following proposition is based on Lemma~\ref{lem:end-to-end-convex};
+this lemma is essentially the case $n=2$ in the proposition.
 
 \begin{thm}{Proposition}\label{prop:end-to-end-convex}
 Given $\eps>0$ and a positive integer $n$
@@ -787,6 +791,15 @@ $$T=\overline{\EE^m\backslash \bigcup_{i} A^i}.$$
 The sets $A^i$ will be called {}\emph{walls} of the table $T$ 
 and the billiards described above will be called {}\emph{billiards with convex walls}.
 
+
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/billiards(1)}
+\lbl{19,27;$A_1$}
+\lbl{35,32;$A_2$}
+\lbl{42,21.6;$A_3$}
+\end{lpic}
+\end{center}
+
 A {}\emph{billiard trajectory} 
 on the table $T$ is a unit-speed broken line $\gamma$ 
 which follows  the
@@ -799,18 +812,16 @@ We assume the trajectory meets only one wall at a time.
 Recall that the definition of sets with $\eps$-wide corners is given on page \pageref{page:wide corners}.
 
 \begin{thm}{Collision theorem}\label{thm:collision}
-Assume $T\subset\EE^m$
-is a billiard table with convex walls.
-Assume that the walls of $T$ have common interior point 
-and all their intersections have $\eps$-wide corners.
+Assume $T\subset\EE^m$ is a billiard table with $n$ convex walls.
+Assume that the walls of $T$ have common interior point  and all their intersections have $\eps$-wide corners.
 Then the number of collisions of any trajectory in  $T$  is bounded
-by a number $N$ which depends only on the number $n$ of walls and $\eps$.
+by a number $N$ which depends only on $n$ and $\eps$.
 \end{thm}
 
 As we will see from the proof,
-the value $N$ can be found explicitly,
-say one can take 
-\[N=(\lceil\tfrac\pi\eps\rceil+1)^{n^2}.\]
+the value $N$ can be found explicitly;
+\[N=(\lceil\tfrac\pi\eps\rceil+1)^{n^2}\]
+will do.
 
 The collision theorem was proved by Dmitri Burago, Serge Ferleger and Alexey Kononenko in \cite{BFK};
 we present their proof with minor improvements.
@@ -845,7 +856,7 @@ Consider the corresponding point in $\RR^{3\cdot N}$
 
 The $i$-th and $j$-th ball intersect if 
 $$|a_i - a_j | \le R_i+R_j,$$
-where $R_i$ denoted the radius of the $i$-th ball.
+where $R_i$ denotes the radius of the $i$-th ball.
 These inequalities define $\tfrac{n\cdot(n-1)}{2}$ cylinders 
 \[C_{i,j}=\set{(a_1, a_2 , \dots , a_n )\in\RR^{3\cdot n}} {|a_i - a_j |\le R_i+R_j}.\] 
 The closure of the complement
@@ -887,7 +898,7 @@ It remains to apply the collision theorem (\ref{thm:collision}).
 Now we present the proof of the collision theorem (\ref{thm:collision})
 based on the results developed in the previous section.
 
-\parit{Proof of Theorem \ref{thm:collision}.}
+\parit{Proof of \ref{thm:collision}.}
 Let us apply induction on $n$.
 
 \parit{Base: $n=1$.}
@@ -912,15 +923,11 @@ Let $\spc{R}_\gamma $ be  the  Reshetnyak's puff pastry for  $\bm{A}_\gamma$.
 Consider the lift of $\gamma$ to $\spc{R}_\gamma$
 defined as 
 $\bar\gamma(t)=\gamma^\kay(t)\in \spc{R}_\gamma$ 
-for any moment of time $t$ between $\kay$ and $(\kay+1)$-th collisions.  
-Since $\gamma$ follows  the
-standard law of billiards 
-at break points 
---- in particular, 
-the angle of reflection is equal to the angle of incidence --- 
-the lift $\bar\gamma$ is locally a geodesic in $\spc{R}_\gamma$.
-Since $\spc{R}_\gamma$ is a $\Cat{}{0}$ proper length space (see Observation~\ref{obs:puff pastry is CAT}),
-$\bar\gamma$ is a geodesic.
+for any moment of time $t$ between $\kay$-th and $(\kay+1)$-th collisions.  
+Since $\gamma$ follows  the standard law of billiards at break points, the lift $\bar\gamma$ is locally a geodesic in $\spc{R}_\gamma$.
+By Observation~\ref{obs:puff pastry is CAT},
+the puff pastry $\spc{R}_\gamma$ is a $\Cat{}{0}$ proper length space.
+Therefore $\bar\gamma$ is a geodesic.
 
 Since $\gamma$ does not pass $A^1\cap\dots\cap A^n$,
 the lift $\bar\gamma$ does not lie in  $\spc{R}_\gamma^0\cup \spc{R}_\gamma^N$.
@@ -950,13 +957,12 @@ length
 spaces;
 see the book of Martin Bridson and  Andr\'e Haefliger \cite{BH} and our book \cite{AKP} for details.
 
-The idea described above has a number of applications to billiards.
+The idea in the proof of the collision theorem has a number of applications to billiards.
 In particular, it can be used to bound topological entropy of the billiard flow; 
 see another paper of Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{BFK-2}.
 The lecture \cite{burago-icm} of Dmitri Burago gives a short survey on the subject.
 
-
-Note that the walls in the puff pastry play a key role in the proof
+Note that the interior points of the walls play a key role in the proof
 despite the fact that trajectories never go inside the walls.
 In a similar fashion, puff pastry was used by Stephanie Alexander and Richard Bishop in \cite{a-b:warped}
 to find the upper curvature bound for warped products.
