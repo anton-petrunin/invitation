@@ -1,11 +1,13 @@
 %%!TEX root = invitation.tex
 \chapter{Globalization and asphericity}\label{chapter:globalization}
 
-In this chapter we introduce locally $\Cat{}{0}$ spaces and show that the universal cover of a locally $\Cat{}{0}$ proper length space is a $\Cat{}{0}$ proper length space. 
+In this chapter we introduce locally $\Cat{}{0}$ spaces and prove the globalization theorem which provides a sufficient condition for locally $\Cat{}{0}$ spaces to be globally $\Cat{}{0}$.
+
+The theorem implies in particular, that the universal cover of a locally $\Cat{}{0}$ proper length space is a $\Cat{}{0}$ proper length space. 
 It follows that any locally  $\Cat{}{0}$ proper length space is aspherical; 
 that is, its universal cover is contractible.
 
-This globalization theorem leads to a {}\emph{construction toy set}, described by Flag condition~\ref{thm:flag}.
+This globalization theorem leads to a {}\emph{construction toy set}, described by the flag condition (\ref{thm:flag}).
 Playing with this toy set, we produce examples of exotic aspherical spaces.
 
 \section{Locally CAT spaces}
@@ -26,7 +28,8 @@ The proof goes along the same lines as in Exercise \ref{ex:convex-balls}.
 In this section we will study behavior of local geodesics in locally $\Cat{}{\kappa}$  spaces.  
 The results will be used in the proof of the globalization theorem (\ref{thm:hadamard-cartan}).
 
-Recall that \index{path}\emph{path} denotes a curve parametrized by $[0,1]$.  The space of paths in $\spc{U}$ comes with the natural metric
+Recall that \index{path}\emph{path} is a curve parametrized by $[0,1]$.
+The space of paths in metric space $\spc{U}$ comes with the natural metric
 \[\dist{\alpha}{\beta}{}
 =
 \sup\set{\dist{\alpha(t)}{\beta(t)}{\spc{U}}}{t\in[0,1]}.
@@ -49,8 +52,8 @@ Let $R>0$ be the value such that $\cBall[\gamma_\infty(t),R]$
 forms a $\Cat{}{0}$ proper length space.
 
 Assume a local geodesic $\sigma$  is shorter than $R/2$ and intersects the ball $\oBall(\gamma_\infty(t),R/2)$.
-Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$ 
-and hence is  a geodesic by Proposition~\ref{cor:loc-geod-are-min}.  
+Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$.
+Hence, by Proposition~\ref{cor:loc-geod-are-min}, $\sigma$ is a geodesic.  
 In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less is a geodesic.
 
 Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ proper length space, by Theorem~\ref{thm:cat-unique},
@@ -66,7 +69,8 @@ The $\Cat{}{1}$ case is done the same way, but one has to assume in addition tha
 
 The following lemma and its proof were suggested to us by Alexander Lytchak.  
 This lemma allows  a local geodesic path 
-to be moved continuously so that its endpoints follow given trajectories;  such a lemma was originally obtained by Stephanie Alexander and Richard Bishop by a different method in \cite{a-b:h-c}.
+to be moved continuously so that its endpoints follow given trajectories.
+This statement was originally proved by the first author and Richard Bishop using a different method; see \cite{a-b:h-c}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -174,7 +178,7 @@ we denote by $\bar\alpha$ the same path traveled in the opposite direction;
 that is,
 \[\bar\alpha(t)=\alpha(1-t).\]
 The \index{product of paths}\emph{product} of two paths  will be denoted with ``$*$'';
-if two paths $\alpha$ and $\beta$ connect the same pair of points then the product $\bar\alpha*\beta$ forms a closed curve.
+if two paths $\alpha$ and $\beta$ connect the same pair of points then the product $\bar\alpha*\beta$ is a closed curve.
 
 \begin{thm}{Exercise}\label{ex:null-homotopic}
 Assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space. 
@@ -204,13 +208,13 @@ Herbert Busemann in \cite{busemann-CBA},
 Willi Rinow in \cite{rinow},
 Mikhael Gromov in \cite[p.119]{gromov:hyp-groups}. 
 A detailed proof of Gromov's statement was given by Werner Ballmann in \cite{ballmann:cartan-hadamard} when $\spc{U}$ is proper,
-and by Stephanie Alexander and Richard Bishop in \cite{a-b:h-c} in more generality;  also see references in our book \cite{AKP}.
+and by the first author and Richard Bishop in \cite{a-b:h-c} in more generality;  also see references in our book \cite{AKP}.
 
 For  $\Cat{}{1}$ proper spaces, the globalization theorem was proved by Brian Bowditch in \cite{bowditch}.
 
 \begin{thm}{Globalization theorem}
 \label{thm:hadamard-cartan}
-Any simply connected, locally $\Cat{}{0}$ proper length space 
+Any simply connected proper locally $\Cat{}{0}$ length space 
 is $\Cat{}{0}$.
 
 Analogously, assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space
@@ -243,7 +247,7 @@ if and only if all pairs of points in $\spc{U}$ at distance less than $\pi$ are 
 
 The proof uses a thin-triangle decomposition with the inheritance lemma (\ref{lem:inherit-angle}) and the following construction:
 
-\begin{thm}{Definition of line-of-sight map} \label{def:sight}
+\begin{thm}{Line-of-sight map} \label{def:sight}
 Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
 Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  
 If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say 
@@ -277,8 +281,9 @@ By the assumptions, the line-of-sight map  $(t,s)\mapsto\gamma_t(s)$ from $p$ to
 
 Fix  a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\] 
 and set $x^{i,j}=\gamma_{t^i}(t^j)$. 
-Since the line-of-sight map is continuous and $\spc{U}$ is locally $\Cat{}{0}$, we may assume that each triangle 
-\[\trig{x^{i,j}}{x^{i,j+1}}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}}{x^{i+1,j}}{x^{i+1,j+1}}\] is thin.
+Since the line-of-sight map is continuous and $\spc{U}$ is locally $\Cat{}{0}$, we may assume that the triangles 
+\[\trig{x^{i,j}}{x^{i,j+1}}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}}{x^{i+1,j}}{x^{i+1,j+1}}\] 
+are thin for each pair $i$, $j$.
 
 Now we show that the thin property propagates to $\trig p x y$ by repeated application of the inheritance lemma (\ref{lem:inherit-angle}):
 \begin{itemize}
@@ -307,6 +312,7 @@ we have $\gamma_\alpha=\gamma_\beta$ for any pair of  paths $\alpha$ and $\beta$
 
 Since $\spc{U}$ is simply connected, any pair of paths with common ends are homotopic.  In particular, if $\alpha$ and $\beta$ are local geodesics from $p$ to $q$, then $\alpha =\gamma_\alpha=\gamma_\beta=\beta$ by Corollary \ref{cor:path-geod}.
 It follows that any two points $p,q\in\spc{U}$ are joined by a unique local geodesic that depends continuously on $(p,q)$.
+
 Since $\spc{U}$ is geodesic, it remains to apply the patchwork globalization theorem (\ref{thm:alex-patch}).
 
 \parit{$\Cat{}{1}$ case.}
@@ -338,7 +344,8 @@ The $\Cat{}{1}$ case is analogous, one only has to consider a homotopy class of 
 Prove that any compact locally $\Cat{}{0}$ space that is not $\Cat{}{0}$  contains a \index{geodesic circle}\emph{geodesic circle}, 
 that is, a simple closed curve $\gamma$ such that 
 for any two points $p,q\in\gamma$, one of the arcs of $\gamma$ with endpoints $p$ and $q$ is a  geodesic.
-Prove the analogous statement  for  $\Cat{}{1}$.
+
+Formulate and prove the analogous statement  for  $\Cat{}{1}$ spaces.
 \end{thm}
 
 \section{Polyhedral spaces}
@@ -414,7 +421,8 @@ the isometry class of $\Link_\sigma$ together with $\kay=\dim\sigma$
 determines the isometry class of $\Sigma_p$, 
  and the other way around.
 
-A small neighborhood of $p$ is isometric to a neighborhood of the tip of the cone over $\Sigma_p$ (or, for the spherical polyhedral space, the north pole in the spherical suspension over $\Sigma_p$).
+A small neighborhood of $p$ is isometric to a neighborhood of the tip of $\Cone\Sigma_p$. 
+(If $\spc{P}$ is a spherical polyhedral space, then a small neighborhood of $p$ is isometric to a neighborhood of the north pole in $\Susp\Sigma_p$.)
 In fact, if this property holds at any point of a compact length space $\spc{P}$,
 then  $\spc{P}$ is a polyhedral space, 
 see \cite{lebedeva-petrunin-poly} by Nina Lebedeva and the third author.
@@ -464,7 +472,7 @@ Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally  $
 Applying the second part of Corollary~\ref{cor:closed-geod-cat},
 we get the statement.
 
-The $\Cat{}{0}$ case is exactly the same  except we need to use the first part of Exercise~\ref{ex:cone+susp} and  the first part of Corollary~\ref{cor:closed-geod-cat}.
+The $\Cat{}{0}$ case is done exactly the same way except we need to use the first part of Exercise~\ref{ex:cone+susp} and  the first part of Corollary~\ref{cor:closed-geod-cat} on the last step.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
@@ -474,8 +482,8 @@ Show that $\spc{P}$ is a $\Cat{}{0}$ space.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:S3}
-Construct a polyhedral metric on $\mathbb{S}^3$
-such that the total angle around each edge is at least $2\cdot \pi$.
+Construct a Euclidean polyhedral metric on $\mathbb{S}^3$
+such that the total angle around each edge in its triangulation is at least $2\cdot \pi$.
 \end{thm}
 
 
@@ -499,7 +507,7 @@ Note that every flag complex is determined by its 1-skeleton.
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
 
-Use Flag condition (see \ref{thm:flag} below)
+Use the flag condition (see \ref{thm:flag} below)
 to conclude that any finite simplicial complex is homeomorphic to a $\Cat{}{1}$ proper length space.
 
 \end{thm}
@@ -643,13 +651,13 @@ Let $\spc{T}_n$ be the set of all metric trees with
 one initial vertex and 
 $n$ end vertices
 labeled by $a^1,\dots,a^n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological  trivalent tree $\tau$ with end vertices $a^1,\dots,a^n$,
+To describe one tree in $\spc{T}_n$ we may fix a topological  trivalent tree $t$ with end vertices $a^1,\dots,a^n$,
 initial vertex of degree 2, 
 and all  other vertices of degree 3; 
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge is $0$, we assume that this edge degenerates;
-such a tree can be also described using a different topological tree $\tau'$.
-The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with the octant
+such a tree can be also described using a different topological tree $t'$.
+The subset of $\spc{T}_n$ corresponding to the given topological tree $t$ can be identified with the octant
 \[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the length metric on $\spc{T}_n$ induced by these metrics.
 
@@ -731,9 +739,9 @@ The first part of the proposition follows
 from the construction of $\square_{\spc{S}}$.
 
 If ${\spc{S}}$ is flag, 
-then by Flag condition (\ref{thm:flag}) 
+then by the flag condition (\ref{thm:flag}) 
 the link of any cube in $\spc{Q}$ is a $\Cat{}{1}$ space.
-Therefore, by cone the construction (Exercise \ref{ex:cone+susp})
+Therefore, by the cone construction (Exercise \ref{ex:cone+susp})
 $\spc{Q}$
 is a locally $\Cat{}{0}$ space.
 It remains to apply the globalization theorem 
@@ -804,14 +812,14 @@ Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to $\gamma$.
 
 Fix a vertex $v\in G$;
 let $G_v$ be the connected component of $G$ containing $v$.
-Let $\tilde G$ be a connect component of the inverse image of $G_v$ in $\tilde{\spc{Q}}$
+Let $\tilde G$ be a connected component of the inverse image of $G_v$ in $\tilde{\spc{Q}}$
 for the universal cover $\tilde{\spc{Q}}\to \spc{Q}$.
 Fix a point $\tilde v\in\tilde G$ in the inverse image of $v$.
 
  
 Note that 
 \begin{clm}{}\label{tilde-G-convex}
-$\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
+$\tilde G$ is a convex set in $\tilde{\spc{Q}}$.
 \end{clm}
 
 \begin{wrapfigure}[4]{r}{30mm}
@@ -865,6 +873,9 @@ lies outside of any compact set $K'$ in $\tilde{\spc{Q}}$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
 \qeds
 
+The proof of the following exercise is analogous.
+It will be used latter in the proof of Proposition~\ref{prop:loc-CAT-mnfld} --- a more geometric version of Proposition~\ref{prop:aspherical}.
+
 \begin{thm}{Exercise}\label{ex:example-pi_infty-new}
 Under the assumptions of Lemma~\ref{lem:example-pi_infty}, 
 for any vertex $v$ in $\spc{S}$
@@ -877,7 +888,7 @@ Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere which is not
 For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$ follows from \cite{kervaire}. 
 For $m=4$ it follows from the construction in \cite{mazur}.
 
-Pick any smooth triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates $\Sigma$.
+Pick any  $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates $\Sigma$.
 
 
 We can assume that $\spc{S}$ is flag; 
@@ -896,8 +907,8 @@ with a finite number of singularities at its vertices.
 Removing a small contractible neighborhood $V_v$ of each vertex $v$ in $\spc{Q}$,
 we can obtain a piecewise linear manifold $\spc{N}$
 whose boundary is formed by several copies of $\Sigma$.
-To each copy of $\Sigma$, 
-glue a copy of  $\spc{W}$ along its boundary.
+
+Let us glue a copy of  $\spc{W}$ along its boundary to each copy of $\Sigma$ in the boundary of $\spc{N}$.
 This results in a  closed piecewise linear manifold 
 $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
 
@@ -929,18 +940,21 @@ but in fact, it is hard to check even in the very simple cases.
 For example the description of those coverings of $\SS^3$ branching at three 
 great circles which are $\Cat{}{1}$ requires quite a bit of work;
 see \cite{charney-davis-93} --- try to guess the answer before reading.
-Another example is the space $\spc{B}_4$ which is the universal cover of $\CC^4$ infinitely branching in the complex planes $z_i=z_j$ with the induced length metric.
-So far it is not known if $\spc{B}_4$ is $\Cat{}{0}$. This space could be helpful to study the braid group on 4 strings;
+
+Another example is the space $\spc{B}_4$ which is the universal cover of $\CC^4$ infinitely branching in six complex planes $z_i=z_j$ with the induced length metric.
+So far it is not known if $\spc{B}_4$ is $\Cat{}{0}$.
+Understanding this space could be helpful to study the braid group on 4 strings;
 read \cite{panov-petrunin:ramification} 
 by Dmitri Panov and the third author for more on it.
 This circle of questions is closely related to the generalization of the flag condition (\ref{thm:flag}) to the spherical simplices with few acute dihedral angles.
 
 
 The construction used in the proof of  Proposition~\ref{prop:aspherical} admits a number of interesting modifications,  
-some of which are discussed in the survey \cite{davis-survey} by Michael Davis.
+number of which are discussed in the survey \cite{davis-survey} by Michael Davis.
 
 The following Proposition was proved by Fredric Ancel, 
-Michael Davis and Craig Guilbault in \cite{ADG}. 
+Michael Davis and Craig Guilbault in \cite{ADG};
+it could be considered as a more geometric version of Proposition~\ref{prop:aspherical}.
 
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
@@ -986,10 +1000,10 @@ Moreover, according to Stone's theorem, see \cite{stone, davis-januszkiewicz}, t
 that is the homeomorphism to a manifold in Proposition~\ref{prop:loc-CAT-mnfld} 
 can not be made piecewise linear.
 
-The construction described in this chapter also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool to construct  aspherical spaces;
+The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool to construct  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis}.
 
-All the topics discussed above link Alexandrov geometry with the fundamental group.
+All the topics discussed in this chapter link Alexandrov geometry with the fundamental group.
 The theory of {}\emph{hyperbolic groups}, 
 a branch of \emph{geometric group theory}, 
 introduced by 
