@@ -3,7 +3,7 @@
 \chapter{Semisolutions}
 
 \section*{Introduction}
-\parbf{Exercise~\ref{ex:two-components-of-M4}.}
+\parbf{Exercise~\ref{ex:two-components-of-M4}.} 
 Let $\spc{X}$ be a 4-point metric space.
 
 Fix a tetrahedron $\triangle$ in $\RR^3$.
@@ -13,8 +13,7 @@ say $x_0$, $x_1$, $x_2$, $x_3$, can be identified with the points of $\spc{X}$.
 Note that there is unique quadratic form $W$ on $\RR^3$
 such that 
 \[W(x_i-x_j)=\dist[2]{x_i}{x_j}{\spc{X}}\]
-for all $i$ and $j$;
-here $\dist{x_i}{x_j}{\spc{X}}$ denotes the distance beween $x_i$ and $x_j$ in $\spc{X}$.
+for all $i$ and $j$.
 
 By the triangle inequality, $W(v)\ge 0$ 
 for any vector $v$ parallel to one of the faces of $\triangle$.
@@ -31,28 +30,35 @@ Therefore, if $\spc{X}$ is not of type $\mathcal{E}_4$ then $W(v)<0$ for some ve
 From above, the vector $v$ must be transversal to each of the 4 faces of $\triangle$.
 Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of these two pictures.
 
-Note that the combinatorics of the picture do not depend on the choice of $v$. 
+Note that the set of vectors $v$ such that $W(v)<0$ has two connected components;
+the opposite vectors $v$ and $-v$ lie in the different components.
+If one moves $v$ continuously keeping $W(v)<0$,
+then the corresponding projection moves continuously and the projections of 4 triangles can not degenerate. 
+It follows that the combinatorics of the picture do not depend on the choice of $v$. 
+
+Indeed the set of vectors $v$ such that $W(v)<0$
 Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ is not connected. 
 
 It remains to show that if the combinatorics of the pictures for two spaces are the same then one can continuously deform one space into the other.
 This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
 \qeds
 
-
+The solution is taken from \cite{petrunin-quest}.
 
 
 \parbf{Exercise~\ref{ex:convex-set}.}
-The simplest proof we know requires the construction of tangent cones for Alexandrov spaces.
+The simplest proof we know requires the construction of tangent cones for Alexandrov spaces with nonnegative curvature.
+%???it is not a semisolution should we add more or simply give no solution here???
 
 \section*{Preliminaries}
 
 \parbf{Exercise~\ref{ex:non-contracting-map}.}
-This exercise is a basic introductory lemma on  Gromov--Hausdorff distance \cite[7.3.30]{BBI}.
-We present the proof of Travis Morrison.
+This exercise is a basic introductory lemma on  Gromov--Hausdorff distance (see for example \cite[7.3.30]{BBI}).
+The following proof is not quite standard, it was suggested by Travis Morrison.
 
 \medskip
 
-Given any pair of point $x_0,y_0\in K$, 
+Given any pair of points $x_0,y_0\in K$, 
 consider two sequences $(x_n)$ and $(y_n)$
 such that 
 $x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each $n$.
@@ -61,7 +67,7 @@ Since $K$ is compact,
 we can choose an increasing sequence of integers $n_i$
 such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
 converge.
-In particular, both of these sequences  are Cauchy;
+In particular, both of these sequences  are converging in itself;
 that is,
 \[
 |x_{n_i}-x_{n_j}|_K, |y_{n_i}-y_{n_j}|_K\to 0
@@ -92,7 +98,7 @@ It follows that $(\ell_n)$ is a constant sequence.
 
 In particular 
 \[|x_0-y_0|_K=\ell_0=\ell_1=|f(x_0)-f(y_0)|_K\]
-for any pair of points $(x_0,y_0)$ in $K$.
+for any pair $x_0$ and $y_0$.
 That is, $f$ is distance preserving, in particular, injective.
 
 From $({*})$, we also get that $f(K)$ is everywhere dense.
@@ -108,7 +114,7 @@ $\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defined as
 is the needed isometry.\qeds
 
 \parbf{Exercise~\ref{ex:no-geod}.}
-The following example is essentially due to Fedor Nazarov, see \cite{nazarov}.
+The following example is due to Fedor Nazarov, see \cite{nazarov}.
 
 \medskip
 
@@ -123,7 +129,7 @@ then its $d_1$-length is
 \[\length_1\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}(t)\cdot dt.\]
 Note that the metric $d_1$ is bi-Lipschitz to $d_0$.
 
-Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves which differ only in the $m$-th coordinate, say $x_m(t)$ and $x_m'(t)$.
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $d_0$-length which differ only in the $m$-th coordinate, denoted as $x_m(t)$ and $x_m'(t)$ correspondingly.
 Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
 the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$ then 
 \[\length_1\bm{x}'\le \length_1\bm{x}.\]
@@ -148,8 +154,16 @@ The following example is taken from \cite{BH}.
 
 \medskip
 
-Consider the following subset of $\R^2$:
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(2mm)]{pics/square(1)}
+\lbl[r]{3,11;{$\dots$}}
+\lbl[r]{-.5,1;{$p$}}
+\lbl[r]{-.5,21;{$q$}}
+\lbl[l]{12,11;{$\spc{X}$}}
+\end{lpic}
+\end{wrapfigure}
 
+Consider the following subset of $\R^2$ equipped with the induced length metric
 \[
 \spc{X}
 =
@@ -157,20 +171,13 @@ Consider the following subset of $\R^2$:
 \cup
 \bigl(\bigcup_{n\ge 1}\{\tfrac1n\}\times[0,1]\bigr)
 \]
-Consider the induced length metric on $\spc{X}$. It is obviously locally compact and geodesic.
+Note that $\spc{X}$ locally compact and geodesic.
 
-\begin{wrapfigure}{r}{22mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/square(1)}
-\lbl[r]{3,11;{\tiny $\dots$}}
-\end{lpic}
-\end{wrapfigure}
+Its completion $\bar{\spc{X}}$ is isometric to the closure of $\spc{X}$ equipped with the induced length metric;
+$\bar{\spc{X}}$ is obtained from $\spc{X}$ by adding two points $p=(0,0)$ and $q=(0,1)$.
 
-However, it is immediate to check that the metric completion \[\bar{\spc{X}}
-=
-\bigl([0,1]\times\{0,1\}\bigr)
-\cup
-\bigl(\bigcup_{n\ge 1}\{\tfrac1n\}\times[0,1]\bigr)\] 
-is neither. \qeds 
+The point $p$ admits no compact neighborhood in $\bar{\spc{X}}$ 
+and there is no geodesic connecting $p$ to $q$ in $\bar{\spc{X}}$. \qeds 
 
 \parbf{Exercise~\ref{ex:adjacent-angles}.}
 Assume the contrary; that is
@@ -232,7 +239,7 @@ Fix a countable dense set of points $\mathfrak{S}\subset\spc{X}_\infty$.
 For each point $x\in \mathfrak{S}$, choose a sequence 
 of points $x_n\in\spc{X}_n$ such that $x_n\xto{\rho} x$.
 
-Applying a diagonal procedure, we can pass to a subsequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
+Applying the diagonal procedure, we can pass to a subsequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
 that is, $x_n\xto{\rho'} x'$ for some $x'\in\spc{X}_\infty'$.
 
 This way we get a map $\mathfrak{S}\to\spc{X}_\infty'$ defined as $x\mapsto x'$.
@@ -270,11 +277,12 @@ $\trig{\~q}{\~x}{\~y}\iso\modtrig(qxy)_{\EE^2}$.
 Further note that if $\~z\in [\~x\~y]$ then
 $\~z'=\~z/|\~z|$ lies on the geodesic $[\~x'\~y']$ in $\SS^2$.
 
-The $\Cat{}{1}$ comparison for $\dist{p'}{q'}{}$ with $\~z'\in[\~x'\~y']$ implies the 
-$\Cat{}{0}$ comparison for $\dist{p}{q}{}$ with $\~z\in[\~x\~y]$.
+The $\Cat{}{1}$ comparison for $\dist{p'}{q'}{}$ with $\~z'\in[\~x'\~y']_{\SS^2}$ implies the 
+$\Cat{}{0}$ comparison for $\dist{p}{q}{}$ with $\~z\in[\~x\~y]_{\EE^3}$.
 
-The converse statement also holds, where 
-the $\Cat{}{0}$ comparison is applied to a quadruple of points $s=a\cdot p$, $q$, $x$, $y$ with $a\ge 0$ chosen so  that the corresponding points 
+The converse holds as well.
+In the proof we need to apply 
+the $\Cat{}{0}$ comparison to a quadruple $s=a\cdot p$, $q$, $x$, $y$ with $a\ge 0$ chosen so  that the corresponding points 
 $\~s=a\cdot \~p$, $\~q$, $\~x$, $\~y$ lie in one plane.
 \qeds
 
@@ -349,6 +357,8 @@ the sequence $q_n$ has a partial limit, say $q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
 assuming the latter is defined.\qeds
 
+Note that the unit disc in the plane with attached half-line to each point is a complete $\Cat{}{0}$ length spaces with extendable geodesics but the space of geodesic directions on the boundary of the disc is not complete.
+
 
 \begin{wrapfigure}{r}{39mm}
 \begin{lpic}[t(-2mm),b(0mm),r(0mm),l(0mm)]{pics/resh(1)}
@@ -376,23 +386,24 @@ with arcs of circles centered at
 $\~y$, $\~p$, and $\~x$ respectively. 
 Define $F$ as follows.
 \begin{itemize}
+
 \item Map  $\Conv\trig{\~p}{\~x}{\~z_x}$ isometrically onto  $\Conv\trig {\dot p}{\dot x}{\dot z}$;
 similarly map $\Conv \trig{\~p}{\~y}{\~z_y}$ onto $\Conv \trig {\dot p}{\dot y}{\dot z}$.
-\end{itemize}
 
-\begin{itemize}
-\item If $x$ is in one of the three circular sectors, say at distance $r$ from center of the circle, let $F(x)$ be the point on the corresponding segment 
+\item If $x$ is in one of the three circular sectors, on the distance $r$ from its center, set $F(x)$ to be the point on the corresponding segment 
 $[p z]$, 
 $[x z]$ 
 or $[y z]$ whose distance from the lefthand endpoint of the segment is $r$.
+
 \item Finally, if $x$ lies in the remaining curvilinear triangle $\~z \~z_x \~z_y$, 
 set $F(x) = z$. 
 \end{itemize}
 By construction, $F$ satisfies the conditions. \qeds
 
 \parbf{Exercise~\ref{ex:convex-balls}.}
-For    $\Cat{}{0}$, the statement follows from convexity of distance functions to points in $\EE^2$, and thinness of triangles.
-For  $\Cat{}{1}$,  the statement  follows from  thinness of triangles and convexity of balls of radius $<\pi/2$ in $\SS^2$.
+For $\Cat{}{0}$ case, the statement follows from convexity of distance functions to points in $\EE^2$, and thinness of triangles.
+
+For $\Cat{}{1}$ case,  the statement  follows from  thinness of triangles and convexity of balls of radius $<\tfrac\pi2$ in $\SS^2$.
 \begin{comment}
 It is sufficient to show that 
 \[\dist{p}{z}{}\le \max\{\dist{p}{x}{},\dist{p}{y}{}\}\]
@@ -405,17 +416,28 @@ In $\Cat{}{1}$ case, the proof is the same, but we need to assume in addition th
 $\max\{\dist{p}{x}{},\dist{p}{y}{}\}\le \tfrac\pi2$.\qeds
 \end{comment}
 \parbf{Exercise~\ref{ex:locally-convex}.}
-Denote by $K$ a closed, connected, locally convex set.
-Note that by Corollary \ref{cor:dist-convex}, $\dist{K}{}{}$ is convex in a neighborhood $\Omega\supset K$, that is, convex along any geodesic completely contained in $\Omega$.
+Fix a closed, connected, locally convex set $K$.
+Note that by Corollary \ref{cor:dist-convex}, $\dist{K}{}{}$ is convex in a neighborhood $\Omega\supset K$; that is, $\dist{K}{}{}$ is convex along any geodesic completely contained in $\Omega$.
 
 Since $K$ is locally convex,
 it is locally path connected.
-Since $K$ is connected and locally path connected, $K$ is path connected.
+Since $K$ is connected and the latter implies that $K$ is path connected.
 
 Fix two points $x,y\in K$. 
 Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
 By Theorem~\ref{thm:cat-unique}, the geodesic $[x\alpha(s)]$ 
 is uniquely defined and depends continuously on $s$.
+
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/loc-convex(1)}
+\lbl{25,15;$K$}
+\lbl{82,8;$\Omega$}
+\lbl[r]{28.5,8;$x$}
+\lbl[l]{72,11;$y$}
+\lbl[bl]{58,20;$\alpha(s)$}
+\lbl[br]{42,19;$\alpha$}
+\end{lpic}
+\end{center}
 
 If $[xy]=[x\alpha(1)]$ does not completely lie in $K$ then 
 there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
@@ -436,20 +458,21 @@ Assume $p^*$ is not uniquely defined;
 that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from $p$.
 Since $K$ is convex, the midpoint $z$ of $[xy]$ lies in $K$.
 
-Note that $\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{}$, a contradiction.
+Note that 
+\[\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{},\] 
+a contradiction.
 
 It remains to show that the map $p\mapsto p^*$ is short, 
 that is, 
 \[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\eqlbl{eq:short-p-p}\]
+for any $p,q\in \spc{U}$.
 
-Note that 
-\[\mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2
+Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
+In this case
+\[\mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2,
 \quad
-\text{and}
-\quad
-\mangle\hinge{q^*}{p}{p^*}\ge \tfrac\pi2,\] 
-if the lefthand sides are defined. 
-
+\mangle\hinge{q^*}{q}{p^*}\ge \tfrac\pi2,\] 
+and both angles are defined. 
 
 Construct the model triangles 
 $\trig{\~p}{\~p^*}{\~q^*}$ and $\trig{\~p}{\~q}{\~q^*}$
@@ -466,41 +489,61 @@ By comparison and the triangle inequality for angles \ref{claim:angle-3angle-inq
 assuming the left hand sides are defined. 
 Hence 
 \[\dist{\~p}{\~q}{}\ge \dist{\~p^*}{\~q^*}{}.\]
-The latter is equivalent to \ref{eq:short-p-p}.\qeds
+The latter is equivalent to \ref{eq:short-p-p}.
+
+In the remaining cases; the \ref{eq:short-p-p} holds automatically if (1) $p^*= q^*$ or (2) $p= p^*$ and $q= q^*$.
+
+It remains to consider the case $p= p^*$, $q\ne q^*$ and $p^*\ne q^*$.
+In this case 
+\[
+\mangle\hinge{q^*}{q}{p}\ge \tfrac\pi2,\]
+and \ref{eq:short-p-p} follows by comparison.
+\qeds
 
 \parbf{Exercise~\ref{ex:supporting-planes}.}
 By approximation, it is sufficient to consider the case when 
 $A$ and $B$ have smooth boundary. 
+
 If $[xy]\cap A\cap B\ne \emptyset$ then $z_0\in [xy]$ and $\dot A, \dot B$ can be chosen to be arbitrary half-spaces containing $A$ and $B$ respectively.  
 
-Suppose $[xy]\cap A\cap B=\emptyset$. 
-Then $z_0\in\partial (A\cap B)$.  
-Let \[C=\set{z\in\EE^m}{f(z)\le f(z_0)}.\] 
+In the remaining case $[xy]\cap A\cap B=\emptyset$. 
+we have $z_0\in\partial (A\cap B)$.  
+Consider the solid ellipsoid
+\[C=\set{z\in\EE^m}{f(z)\le f(z_0)}.\] 
 Note that $C$ is compact, convex and has  smooth boundary. 
+
 Suppose $z_0\in\partial  A \cap \Int B$. 
 Then $A$ and $C$ touch at $z_0$ and we can set $\dot A$ to be the uniquely defined supporting half-space to $A$  at $z_0$ and $\dot B$ to be any half-space containing $B$. 
 The case $z_0\in\partial B \cap \Int A$ is treated similarly.
 
 
-Finally, suppose
- $z_0\in\partial A\cap\partial B$. Then  set  $\dot A$ ($\dot B$)  to be the uniquely defined supporting half-space to $A$ ($B$) at $z_0$ containing $A$ ($B$).  
+Finally, suppose $z_0\in\partial A\cap\partial B$. 
+Then the set  $\dot A$ ($\dot B$) is defined as the unique supporting half-space to $A$ ($B$) at $z_0$ containing $A$ ($B$).
+
+Suppose $f(z)<f(z_0)$ for some $z\in \dot A\cap\dot B$.
+Since $f$ is concave,
+$f(\bar z)<f(z_0)$ for any $\bar z \in \left[zz_0\right[$.
+Since $\left[zz_0\right[\cap A\cap B\ne\emptyset$,
+the latter contradicts that $z_0$ is minimum point of $f$ on $A\cap B$.
 \qeds
 
-\begin{wrapfigure}[12]{r}{44mm}
+\begin{wrapfigure}{r}{44mm}
 \begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/compact-walls(1)}
-\lbl[tr]{21,7.5;$0$}
+\lbl{21.5,9.5;{\color{white}$B_1$}}
+\lbl{27,27;$B_2$}
 \lbl[tr]{10,20;$A^i$}
 \lbl[tr]{34,12;$A^j$}
 \end{lpic}
 \end{wrapfigure}
 
 \parbf{Exercise~\ref{ex:compact-walls}.}
-Fix $r>0$ and $R<\infty$ so that 
-\[\oBall(0,r)\subset A^i\subset \oBall(0,R)\]
+Fix $0<r_1<r_2<\infty$ such that 
+\[B_1=\oBall(0,r_1)\subset A^i\subset \oBall(0,r_2)=B_2\]
 for each wall $A^i$.
 
-It remains to note that all the intersections of  the walls  have $\eps$-wide corners for
-\[\eps=2\cdot \arcsin\tfrac rR.\]
+Note that all the intersections of  the walls  have $\eps$-wide corners for
+\[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
+The proof can be guessed from the diagram.
 \qedsf
 
 \parbf{Exercise~\ref{ex:centrally-simmetric-walls}.}
@@ -530,10 +573,26 @@ Hence the result follows.\qeds
 \parbf{Exercise~\ref{ex:geod-circle}.}
 The following proof works for compact locally simply connected metric spaces;
 by uniqueness of geodesics (\ref{thm:cat-unique}) 
-this class of spaces includes compact locally $\Cat{}{\kappa}$ length spaces.  In this setting, one assumes there is  a nontrivial homotopy class of curves (shorter than $2\pi$ in the $\Cat{}{1}$ case).
+this class of spaces includes compact locally $\Cat{}{\kappa}$ length spaces. 
 
-Consider a shortest noncontractible closed curve $\gamma$ in the space.
-(Note that it exists.)
+\medskip
+
+
+Assume there is  a nontrivial homotopy class of curves.
+
+Consider a shortest noncontractible closed curve $\gamma$ in the space;
+note that it exists.
+
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/geod-circle(1)}
+\lbl[tr]{5,0;$p$}
+\lbl[bl]{21,17;$q$}
+\lbl[tl]{5,18;$\alpha_1$}
+\lbl[tl]{19,3;$\alpha_2$}
+\end{lpic}
+\end{wrapfigure}
+
+
 
 Assume that $\gamma$ is not a geodesic circle,
 that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
@@ -545,7 +604,25 @@ Note that
  \item  $\gamma_1$ or $\gamma_2$ is noncontractible,
  \item $\length\gamma_1, \length\gamma_2<\length \gamma$,
 \end{itemize}
-a contradiction.\qeds
+a contradiction.
+
+The $\Cat{}{0}$ case is done the same way, but we need to consider the homotopy classes of curves shorter than $2\cdot \pi$.\qeds
+
+\parbf{Exercise~\ref{ex:branching-cover}.}
+Consider an $\eps$-neighborhood $A$ of the geodesic.
+Note that $A_\eps$ is convex.
+By Reshetnyak's gluing theorem the doubling $\spc{W}_\eps$ of $\spc{U}$ along $A_\eps$ is a $\Cat{}{0}$ space.
+
+Next, consider the space $\spc{W}'_\eps$ obtained by doubly covering $\spc{U}\backslash A_\eps$ and gluing back $A_\eps$.
+
+Note that $\spc{W}'_\eps$ is locally isometric to $\spc{W}_\eps$. 
+That is, for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ such that the $\delta$-neighborhood of $p'$ is isometric to the $\delta$-neighborhood of $p$ for all small $\delta>0$.
+
+Further note that $\spc{W}'_\eps$ is simply connected since it admits a deformation retraction onto $A_\eps$, which is contractible.
+By the globalization theorem, $\spc{W}'_\eps$ is $\Cat{}{0}$.
+
+It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$, and apply Proposition~\ref{prop:cat-limit}.
+\qeds
 
 
 \parbf{Exercise~\ref{ex:unique-geod=CAT}.}
@@ -557,20 +634,22 @@ parametrized by $[-\ell,\ell]$
 Fix a small $\delta>0$ and 
 consider two curves in $\Cone\Sigma$ written in polar coordinates as 
 \[\gamma_i(t)=(\alpha_i(\tan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
-Note that both form geodesics in $\Cone\Sigma$ and  have common ends.
+Note that both curves $\gamma_1$ and $\gamma_2$ are geodesics in $\Cone\Sigma$ and  have common ends.
 
 Finally note that a small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into $\spc{P}$.
 Hence the statement follows.\qeds
 
 \parbf{Advanced exercise~\ref{ex:S3}.}
-It is sufficient to construct a polyhedral space $\spc{P}$ homeomorphic to the 3-disc such that (1) $\spc{P}$ is locally $\Cat{}{0}$ in its interior and (2) the boundary of $\spc{P}$ is locally concave; in particular, each edge on the boundary of $\spc{P}$ has angle at least $\pi$.
-Once $\spc{P}$ is constructed, taking the double of $\spc{P}$ along its boundary produces the needed metric on $\mathbb{S}^3$.
+Note that it is sufficient to construct a polyhedral space $\spc{P}$ homeomorphic to the 3-disc such that (1) $\spc{P}$ is locally $\Cat{}{0}$ in its interior and (2) the boundary of $\spc{P}$ is locally concave; in particular, each edge on the boundary of $\spc{P}$ has angle at least $\pi$.
+
+Indeed, once $\spc{P}$ is constructed, taking the double of $\spc{P}$ along its boundary produces the needed metric on $\mathbb{S}^3$.
 
 The construction of $\spc{P}$ goes along the same lines as the construction of a Riemannian metric on the 3-disc with concave boundary and negative sectional curvature. 
 This construction is given by Joel Hass in \cite{hass}.
 \qeds
 
-By the globalization theorem (\ref{thm:hadamard-cartan}) the obtained metric on $\mathbb{S}^3$ is not locally $\Cat{}{0}$.
+It might be worth mentioning that by the globalization theorem (\ref{thm:hadamard-cartan}) the obtained metric on $\mathbb{S}^3$ is not locally $\Cat{}{0}$.
+
 This problem originated from a discussion 
 in Oberwolfach
 between
@@ -599,7 +678,7 @@ Use induction to prove that if in a spherical simplex $\triangle$ every edge is 
 all dihedral angles of $\triangle$ are at least~$\tfrac\pi2$.
 
 The rest of the proof goes along the same lines as the proof of the flag condition (\ref{thm:flag}).
-The only difference is that a geodesic may spend time \emph{more than} $\pi$ in the star of each vertex.
+The only difference is that a geodesic may spends time \emph{at least} $\pi$ on each visit in the star.
 \qeds
 
 Note that it is not sufficient to assume only that the all dihedral angles of the simplices are at least $\tfrac\pi2$. 
@@ -614,10 +693,15 @@ Note that the space $\Sigma$,
 over which the cone is taken comes naturally with a triangulation 
 with all-right spherical simplicies.
 
-It remains to check that the complex is flag 
-and apply 
-the flag condition (\ref{thm:flag}) with Exercise~\ref{ex:cone+susp}.
-%%%???please check English and remove this note
+Note that link of any simplex of this triangulation satisfies no-triangle condition (\ref{def:flag}).
+Indeed, fix a simplex $\triangle$ of the complex;
+it can be described by combinatorics of a possibly degenerate tree.
+A triangle in the link can be described by tree ways to resolve degeneracy of one edge,
+such that any pair of these resolutions can be done simultaniousely, but all theree can not be done together.
+Direct inspection shows that the latter is impossible.
+
+Therefore, by Proposition~\ref{prop:no-trig} our complex is flag.
+It remains to apply the flag condition (\ref{thm:flag}) and then Exercise~\ref{ex:cone+susp}.
 \qeds
 
 \parbf{Exercise~\ref{ex:flag-aspherical}.}
@@ -631,10 +715,11 @@ Since $\mathcal{T}$ is flag,
 $\tilde\square_{\mathcal{T}}$,
 the universal cover of $\square_{\mathcal{T}}$, is $\Cat{}{0}$.
 
-Choose a minimal  cube $Q$ in $\tilde\square_{\mathcal{T}}$ which is not present in $\tilde\square_{\mathcal{S}}$.
+Choose a cube $Q$ with minimal dimension in $\tilde\square_{\mathcal{T}}$ which is not present in $\tilde\square_{\mathcal{S}}$.
 By Exercise~\ref{ex:locally-convex}, $Q$ is a convex set in $\tilde\square_{\mathcal{T}}$.
 The closest point projection $\tilde\square_{\mathcal{T}}\to Q$ is a retraction.
-It follows that the boundary $\partial Q$ is not contractible in $\tilde\square_{\mathcal{T}}\backslash\Int Q$ and therefore it is also not contractible in $\tilde\square_{\mathcal{S}}$.
+It follows that the boundary $\partial Q$ is not contractible in $\tilde\square_{\mathcal{T}}\backslash\Int Q$.
+Therefore the spheroid $\partial Q$ is not contractible in $\tilde\square_{\mathcal{S}}$.
 \qeds
 
 \parbf{Exercise~\ref{ex:example-pi_infty-new}.}
@@ -646,7 +731,7 @@ It has to be made from the squares parallel to the squares of the cubical comple
 
 \parbf{Exercise~\ref{ex:funny-S}.}
 In the proof we apply the following lemma from \cite{edwards}; 
-it follows from the disjoint discs property.
+it follows from the .
 
 \medskip
 
@@ -660,7 +745,7 @@ Then $\spc{S}$ is a topological manifold.}
 \medskip
 
 
-It is sufficient to construct a simplicial complex $\spc{S}$
+Note that it is sufficient to construct a simplicial complex $\spc{S}$
 such that 
 \begin{itemize}
 \item $\spc{S}$ is a closed $(m-1)$-dimensional homology manifold;
@@ -684,11 +769,11 @@ for any point $p\in \mathbb{S}^m$
 we get 
 \[\Cone \spc{S}\simeq\EE^m.\]
 
-Let us construct $\spc{S}$.
+It remains to construct $\spc{S}$.
 Fix an $(m-2)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
 An example of that type exists for any $m\ge 5$; a proof is given in \cite{kervaire}.
 
-Remove from $\Sigma$ one $(m-2)$-simplex.
+Remove from $\Sigma$ the interior of one $(m-2)$-simplex.
 Denote the resulting complex by $\Sigma'$.
 Since $m\ge 5$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
 
@@ -712,7 +797,9 @@ That is, $\spc{S}$ satisfies the conditions above.
 
 \section*{Subsets}
 
-\parbf{Exercise~\ref{ex:chopping-triangle}.}???
+\parbf{Exercise~\ref{ex:chopping-triangle}.} 
+Note that triangle $[pqx$ is degenerate, in particular it is thin.
+It remains to apply the inheritance lemma (\ref{lem:inherit-angle}).
 
 \parbf{Exercise~\ref{ex:concave-triangle}.}
 By approximation,
@@ -728,7 +815,9 @@ together with the construction in Exercise~\ref{ex:short-map}.
 \parbf{Exercise~\ref{ex:bishop-sphere}.}
 Unlike in the plane, the sphere contains diangular and triangular regions whose sides are concave in the sphere.
 To adapt the proof of Theorem~\ref{thm:bishop-plane}
-we use Exercise~\ref{ex:hemisphere}.
+we will use Exercise~\ref{ex:hemisphere}.
+
+\medskip
 
 From  Exercise~\ref{ex:hemisphere}, it follows that if such a concave diangle or triangle has perimeter smaller then $2\cdot\pi$ then it contains a closed hemisphere in its interior.
 
@@ -738,7 +827,7 @@ Therefore the argument in the proof of Theorem~\ref{thm:bishop-plane} shows that
 
 
 \parbf{Exercise~\ref{ex:two-planes}.}
-The space $K$ forms a cone over the branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two great circles.
+The space $K$ is a cone over the branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two great circles.
 
 If the planes are not orthogonal then the minimal distance between the circles is less than $\tfrac\pi2$.
 Assume that this distance is realized by a geodesic $[\xi\zeta]$.
@@ -750,16 +839,16 @@ By Proposition~\ref{cor:loc-geod-are-min},
 $\Sigma$ is not $\Cat{}{1}$.
 Therefore by Exercise~\ref{ex:cone+susp}, $K$ is not $\Cat{}{0}$.
 
-If the planes are orthogonal then the corresponding great circles in $\SS^3$ are formed by subcomplexes of a flag triangulation of $\SS^3$ with all-right simplicies.
+If the planes are orthogonal then the corresponding great circles in $\SS^3$ are subcomplexes of a flag triangulation of $\SS^3$ with all-right simplicies.
 The branching cover is also flag.
-It remains to apply the flag condition \ref{thm:flag}.
+It remains to apply the flag condition \ref{thm:flag}.\qeds
 
 \parit{Comments.}
 In \cite{charney-davis-93}, Ruth Charney and Michael Davis
 gave a complete answer to the analogous question for three planes.
 In particular they show that if a covering space of $\EE^4$
 branching at three planes passing the origin is $\Cat{}{0}$ then these all are complex planes for some complex structure on $\EE^4$.
-\qeds
+
 
 \parbf{Exercise~\ref{ex:hemisphere}.}
 Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
@@ -767,9 +856,11 @@ Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
 Assume $\ell<\pi$.
 Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
 Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
-Let $z$ be the midpoint of  $[pq]$.  
+Let $z$ be the midpoint of  $[pq]$. 
+
 We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
-If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
+
+Assume contrary, then $\alpha$ intersects the boundary  great circle in a point, say $r$.
 Without loss of generality we may assume that $r\in\check\alpha$.
 
 The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which passes $r$ and its antipodal point $r'$.
@@ -800,7 +891,7 @@ By Crofton's formula we have that
 
 
 \begin{wrapfigure}{r}{43mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/inner-support(1)}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/inner-support(1)}
 \lbl[t]{40,.5;$W_0$}
 \lbl[t]{27,.5;$\Gamma$}
 \lbl[br]{12,12;$p$}
@@ -811,7 +902,7 @@ By Crofton's formula we have that
 
 \parbf{Exercise~\ref{ex:inner-support}.}
 Since  $\Omega$ is not two-convex, 
-by definition there is a simple closed curve $\gamma$ which lies in the intersection of a plane $W_0$ and $\Omega$, 
+we can fix a simple closed curve $\gamma$ which lies in the intersection of a plane $W_0$ and $\Omega$, 
 and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
 
 Let $\phi\:\DD\to \Omega$ be a disc which shrinks $\gamma$.
@@ -828,22 +919,27 @@ The dome has to touch $R$ at some point $p$.
 The plane $W$ tangent to the dome at $p$ has the required property --- the point $p$ is an isolated point of the complement $W\backslash \Omega$.\qeds
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
-Consider the surface $S$ 
-formed by the closure of the remaining part of the boundary.
-Note that the boundary $\partial S$ of $S$ is formed by some number of broken lines.
+Despite that the statement has simple visual proof, it is quite hard to write it formally in a nontedious way;
+by that reason we give only a sketch.
 
-Assume $S$ is not piecewise linear.
-Show that there is a line segment $[pq]$ in $\EE^3$ tangent to $S$ at $p$ which has no common points with $S$ except $p$.
+\medskip %???+PIC
 
-Since $S$ is locally concave,
+Consider the surface $\bar S$ 
+formed by the closure of the remaining part $S$ of the boundary.
+Note that the boundary $\partial S$ of $\bar S$ is a collection of closed polygonal lines.
+
+Assume $\bar S$ is not piecewise linear.
+Show that there is a line segment $[pq]$ in $\EE^3$ tangent to $\bar S$ at $p$ which has no common points with $\bar S$ except~$p$.
+
+Since $\bar S$ is locally concave,
 there is a local inner supporting plane $\Pi$ at $p$ which contains the segment $[pq]$.
 
-Note that $\Pi\cap S$ contains a segment $[xy]$ passing $p$ with the ends at $\partial S$.
+Note that $\Pi\cap \bar S$ contains a segment $[xy]$ passing $p$ with the ends at $\partial \bar S$.
 
-Show that there is a line segment of $\partial S$ starting at $x$ or $y$ which lies in $\Pi$.
+Show that there is a line segment of $\partial \bar S$ starting at $x$ or $y$ which lies in $\Pi$.
 
-From the latter statement and local convexity of $S$, 
-all points of $[pq]$ sufficiently close to $p$ lie in $S$,
+From the latter statement and local convexity of $\bar S$, 
+all points of $[pq]$ sufficiently close to $p$ lie in $\bar S$,
 a contradiction.
 \qeds
 
@@ -867,6 +963,8 @@ In particular $K'$ is a cone over a space $\Sigma$ which
 can be obtained as the completion of the sphere $\SS^3$ with  two 2-dimensional hemispheres, say $H_1$ and $H_2$, removed.
 The intersection of these hemispheres is typically formed by a geodesic segment, say $[\xi\zeta]$.
 
+%???+PIC
+
 Consider  hemispheres $H_1$ and $H_2$ for which $[\xi\zeta]$ is orthogonal to the boundary spheres and has length less than $\tfrac\pi2$.
 Then the projection of a closed geodesic in $\Sigma$ to $\SS^3$
 is formed by a product of four copies of $[\xi\zeta]$.
@@ -875,20 +973,5 @@ Hence $\Sigma$ is not $\Cat{}{1}$
 and therefore $K'$ and consequently $K$ are not $\Cat{}{0}$.
 \qeds
 
-\parbf{Exercise~\ref{ex:branching-cover}.}
-Consider an $\eps$-neighborhood $A$ of the geodesic.
-Note that $A_\eps$ forms a convex set.
-By Reshetnyak's gluing theorem the doubling $\spc{W}_\eps$ of $\spc{U}$ along $A_\eps$ is a $\Cat{}{0}$ space.
-
-Next, consider the space $\spc{W}'_\eps$ obtained by doubly covering $\spc{U}\backslash A_\eps$ and gluing back $A_\eps$.
-
-Note that $\spc{W}'_\eps$ is locally isometric to $\spc{W}_\eps$. 
-That is, for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ such that the $\delta$-neighborhood of $p'$ is isometric to the $\delta$-neighborhood of $p$ for all small $\delta>0$.
-
-Further note that $\spc{W}'_\eps$ is simply connected since it admits a deformation retraction onto $A_\eps$, which is contractible.
-By the globalization theorem, $\spc{W}'_\eps$ is $\Cat{}{0}$.
-
-It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$, and apply Proposition~\ref{prop:cat-limit}.
-\qeds
 
 
