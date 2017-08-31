@@ -730,8 +730,8 @@ is not a subcomplex of the cubical analog.
 It has to be made from the squares parallel to the squares of the cubical complex which meet the edges of the complex orthogonally at their midpoints. \qeds
 
 \parbf{Exercise~\ref{ex:funny-S}.}
-In the proof we apply the following lemma from \cite{edwards}; 
-it follows from the .
+In the proof we apply the following lemma; 
+it follows from the disjoint discs property, see \cite{edwards, daverman}.
 
 \medskip
 
@@ -890,6 +890,11 @@ By Crofton's formula we have that
 \qedsf
 
 
+\parbf{Exercise~\ref{ex:inner-support}.}
+Since  $\Omega$ is not two-convex, 
+we can fix a simple closed curve $\gamma$ which lies in the intersection of a plane $W_0$ and $\Omega$, 
+and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
+
 \begin{wrapfigure}{r}{43mm}
 \begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/inner-support(1)}
 \lbl[t]{40,.5;$W_0$}
@@ -899,11 +904,6 @@ By Crofton's formula we have that
 \lbl[tl]{27,17;$W$}
 \end{lpic}
 \end{wrapfigure}
-
-\parbf{Exercise~\ref{ex:inner-support}.}
-Since  $\Omega$ is not two-convex, 
-we can fix a simple closed curve $\gamma$ which lies in the intersection of a plane $W_0$ and $\Omega$, 
-and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
 
 Let $\phi\:\DD\to \Omega$ be a disc which shrinks $\gamma$.
 Applying the loop theorem (arguing as in the proof of Proposition~\ref{prop:3d-strong-2-convexity}), we can assume that $\phi$ is an embedding and $\phi(\DD)$ lies on one side of $W_0$.
@@ -919,7 +919,7 @@ The dome has to touch $R$ at some point $p$.
 The plane $W$ tangent to the dome at $p$ has the required property --- the point $p$ is an isolated point of the complement $W\backslash \Omega$.\qeds
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
-Despite that the statement has simple visual proof, it is quite hard to write it formally in a nontedious way;
+Despite that the proof is simple and visual, it is quite hard to write it formally in a nontedious way;
 by that reason we give only a sketch.
 
 \medskip %???+PIC
@@ -931,15 +931,34 @@ Note that the boundary $\partial S$ of $\bar S$ is a collection of closed polygo
 Assume $\bar S$ is not piecewise linear.
 Show that there is a line segment $[pq]$ in $\EE^3$ tangent to $\bar S$ at $p$ which has no common points with $\bar S$ except~$p$.
 
+
+
+\begin{wrapfigure}{r}{41mm}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/shefel-last-step(1)}
+\lbl[t]{21,7;$p$}
+\lbl[r]{15,21;$q$}
+\lbl[r]{2,9;$x$}
+\lbl[l]{39.5,9;$y$}
+\lbl[r]{4,17;$z$}
+\lbl[lt]{4,25;$\partial \bar S$}
+\lbl[tr]{32.5,25;$\partial \bar S$}
+\end{lpic}
+\end{wrapfigure}
+
+
+
 Since $\bar S$ is locally concave,
 there is a local inner supporting plane $\Pi$ at $p$ which contains the segment $[pq]$.
 
 Note that $\Pi\cap \bar S$ contains a segment $[xy]$ passing $p$ with the ends at $\partial \bar S$.
+Denote by $\Pi^+$ the half-plane in $\Pi$ which contains $[pq]$ has $[xy]$ in its boundary.
 
-Show that there is a line segment of $\partial \bar S$ starting at $x$ or $y$ which lies in $\Pi$.
+Use that $[pq]$ is tangent to $S$ to show that there is a point $z$ such that the line segment $[xz]$ or $[yz]$ lies in $\partial \bar S\cap\Pi^+$.
+ 
 
 From the latter statement and local convexity of $\bar S$, 
-all points of $[pq]$ sufficiently close to $p$ lie in $\bar S$,
+it follows that the solid triangle $[xyz]$ lies in $\bar S$.
+In particular, all points on $[pq]$ sufficiently close to $p$ lie in $\bar S$,
 a contradiction.
 \qeds
 
@@ -963,7 +982,16 @@ In particular $K'$ is a cone over a space $\Sigma$ which
 can be obtained as the completion of the sphere $\SS^3$ with  two 2-dimensional hemispheres, say $H_1$ and $H_2$, removed.
 The intersection of these hemispheres is typically formed by a geodesic segment, say $[\xi\zeta]$.
 
-%???+PIC
+%\begin{center}
+\begin{wrapfigure}{o}{55mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/halph-spheres(1)}
+\lbl[r]{20,12;$\xi$}
+\lbl[l]{34,12;$\zeta$}
+\lbl{10,12;$H_1$}
+\lbl{45,12;$H_2$}
+\end{lpic}
+\end{wrapfigure}
+%\end{center}
 
 Consider  hemispheres $H_1$ and $H_2$ for which $[\xi\zeta]$ is orthogonal to the boundary spheres and has length less than $\tfrac\pi2$.
 Then the projection of a closed geodesic in $\Sigma$ to $\SS^3$
