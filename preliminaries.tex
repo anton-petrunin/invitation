@@ -4,7 +4,7 @@
 In this chapter we fix some conventions and recall the main definitions.
 The chapter may be used as a quick reference when reading the book.
 
-To learn background in metric geometry, the reader  may consult the book of Dmitri Burago, Yuri Burago and Sergei Ivanov \cite{BBI}.
+To learn background in metric geometry, the reader  may consult the book of Dmitri Burago, Yuri Burago and Sergei Ivanov~\cite{BBI}.
  
 
 \section{Metric spaces}
@@ -13,11 +13,11 @@ To learn background in metric geometry, the reader  may consult the book of Dmit
 
 The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
 The latter notation is used if we need to emphasize 
-that the distance is taken in the space ${\spc{X}}$.
+that the distance is taken in the space~${\spc{X}}$.
 
 The function 
 \[\dist{x}{}{}\:y\mapsto \dist{x}{y}{}\]
-is called the \index{distance function}\emph{distance function} from $x$. 
+is called the \index{distance function}\emph{distance function} from~$x$. 
 
 \begin{itemize}
 \item The \index{diameter}\emph{diameter} of metric space $\spc{X}$ is defined as
@@ -29,7 +29,7 @@ is called the \index{distance function}\emph{distance function} from $x$.
 \\
 \cBall[x,R]&=\{y\in \spc{X}\mid \dist{x}{y}{}\le R\}
 \end{align*}
-are called respectively the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}   of radius $R$ with center $x$.
+are called respectively the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}   of radius $R$ with center~$x$.
 Again, if we need to emphasize that these balls are taken in the metric space $\spc{X}$,
 we write 
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}.\]
@@ -165,7 +165,7 @@ The value
 will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
 
 \parbf{Hinges.}
-Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
+Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
 A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and it will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
@@ -175,12 +175,12 @@ A set $A$ in a metric space $\spc{X}$ is called
 \index{convex set}\emph{convex}
 if for every two points $p,q\in A$, 
 {}\emph{every} geodesic $[pq]$ in $\spc{X}$ 
-lies in $A$.
+lies in~$A$.
 
 A set $A\subset\spc{X}$ is called 
 \index{locally convex}\emph{locally convex}
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
-such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in $A$.
+such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in~$A$.
 
 Note that any open set is locally convex by the definition.
 
@@ -211,8 +211,8 @@ As can be seen from the following example, the converse does not hold.
 
 
 \begin{thm}{Example}
-Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\{\II_n\}$ of length $1+\tfrac1n$, where for each $\II_n$ the left end is glued to $p$ and the right end to $q$.
-Then $\spc{X}$ carries a natural complete length metric with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
+Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\{\II_n\}$ of length $1+\tfrac1n$, where for each $\II_n$ the left end is glued to $p$ and the right end to~$q$.
+Then $\spc{X}$ carries a natural complete length metric with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to~$q$.
 \end{thm}
 
 
@@ -242,13 +242,13 @@ Let $\spc{X}$ be a complete metric space.
 \begin{subthm}{lem:mid>length}
 Assume that for any pair of points $x,y\in \spc{X}$  
  and any $\eps>0$
-there is a $\eps$-midpoint $z$.
+there is a $\eps$-midpoint~$z$.
 Then $\spc{X}$ is a length space.
 \end{subthm}
 
 \begin{subthm}{lem:mid>geod:geod}
 Assume that for any pair of points $x,y\in \spc{X}$ 
-there is a midpoint $z$.
+there is a midpoint~$z$.
 Then $\spc{X}$ is a geodesic space.
 \end{subthm}
 \end{thm}
@@ -312,12 +312,13 @@ It is sufficient to show that $\rho(x)=\infty$ for some (and therefore any) poin
 
 Assume the contrary; that is, $\rho(x)<\infty$.
 
-\begin{clm}{} $B=\cBall[x,\rho(x)]$ is compact for any $x$.
+\begin{clm}{} $B=\cBall[x,\rho(x)]$ is compact for any~$x$.
 \end{clm}
 
 Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
-the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in $B$. Since $B$ is closed and hence complete, it has to be compact.
+the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in~$B$.
+Since $B$ is closed and hence complete, it has to be compact.
 \claimqeds
 
 \begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
@@ -360,10 +361,10 @@ $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
 \quad\dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
 
 In the same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SS^2}$
-in the hyperbolic plane $\HH^2$ and the unit sphere $\SS^2$.
+in the hyperbolic plane $\HH^2$ and the unit sphere~$\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case the model triangle again exists and is unique up to an motion of $\SS^2$.
+In this case the model triangle again exists and is unique up to an motion of~$\SS^2$.
 
 If 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
@@ -586,7 +587,7 @@ Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \qeds 
 
 \begin{thm}{Exercise}\label{ex:adjacent-angles}
-Prove that the sum of adjacent angles is at least $\pi$.
+Prove that the sum of adjacent angles is at least~$\pi$.
 
 More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
 If $p\in \l] x y \r[$ then 
@@ -622,7 +623,7 @@ Applying the triangle inequality, we get
 &\le
 \dist{p}{q}{} -t\cdot \cos\alpha + t\cdot \eps
 \end{align*}
-for any fixed $\eps>0$ and all sufficiently small $t$.
+for any fixed $\eps>0$ and all sufficiently small~$t$.
 Hence the result.
 \qeds
 
@@ -635,7 +636,7 @@ Fix a point $p\in \spc{X}$.
 Consider the set $\mathfrak{S}_p$ 
 of all nontrivial 
 %unit-speed 
-geodesics  which start at $p$.
+geodesics  which start at~$p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 so
  $(\mathfrak{S}_p,\mangle)$ 
@@ -643,19 +644,19 @@ forms a \index{pseudometric space}\emph{pseudometric space};
 that is, $\mangle$ satisfies all the conditions of a metric on $\mathfrak{S}_p$, except that  the angle between distinct geodesics might vanish.
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
-Elements of $\Sigma'_p$ are called \index{geodesic directions}\emph{geodesic directions} at $p$.
+Elements of $\Sigma'_p$ are called \index{geodesic directions}\emph{geodesic directions} at~$p$.
 Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
 for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
 
 The completion of $\Sigma'_p$ is called the 
 \index{space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
-Elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
+Elements of $\Sigma_p$ are called \index{direction}\emph{directions} at~$p$.
 
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could also be defined directly, without introducing the space of directions.
-To do so, consider the set $\mathfrak{T}_p$ of all geodesics with constant-speed parameterizations starting at $p$. 
+To do so, consider the set $\mathfrak{T}_p$ of all geodesics with constant-speed parameterizations starting at~$p$. 
 Given $\alpha,\beta\in \mathfrak{T}_p$,
 set 
 \[\dist{\alpha}{\beta}{\mathfrak{T}_p}
@@ -671,7 +672,7 @@ defines a pseudometric on $\mathfrak{T}_p$.
 The corresponding metric space admits a natural isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
 The elements of $\T'_p$ are  equivalence classes for the relation 
 \[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
-The completion of $\T'_p$ is therefore  naturally isometric to $\T_p$.
+The completion of $\T'_p$ is therefore  naturally isometric to~$\T_p$.
 
 Elements of $\T_p$ will be called 
 \index{tangent vector}\emph{tangent vectors} 
@@ -679,14 +680,14 @@ at $p$,
 despite that $\T_p$ is only a metric cone and need not be a vector space.
 Elements of $\T'_p$ will be called 
 \index{geodesic tangent vector}\emph{geodesic tangent vectors} 
-at $p$.
+at~$p$.
 
 \section{Hausdorff convergence}
 
 It seems that Hausdorff convergence was first introduced by Felix Hausdorff in \cite{hausdorff},
-and a couple of years later an equivalent definition was given by Wilhelm Blaschke in \cite{blaschke}.
+and a couple of years later an equivalent definition was given by Wilhelm Blaschke in~\cite{blaschke}.
 A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
-and then rediscovered by Robert Wijsman in \cite{wijsman}.  
+and then rediscovered by Robert Wijsman in~\cite{wijsman}.  
 However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence} introduced by Hausdorff in the same book. 
 For this reason we call it Hausdorff convergence
 instead of
@@ -710,7 +711,7 @@ In this case, the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index
 
 \parbf{Example.}
 Let $D_n$ be the disc in the coordinate plane 
-with center $(0,n)$ and radius $n$.
+with center $(0,n)$ and radius~$n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
 
 \begin{thm}{Exercise}\label{ex:hausdorff-conv}
@@ -721,7 +722,7 @@ Show that the converse fails.
 
 \begin{thm}{Selection theorem}
 Let $\spc{X}$ be a proper metric space
-and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in $\spc{X}$.
+and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in~$\spc{X}$.
 Assume that for some (and therefore any) point  $x\in\spc{X}$, 
 the sequence $\dist{A_n}{}{}(x)$ is bounded.
 Then the sequence  $(A_n)_{n=1}^\infty$ has a convergent subsequence in the sense of Hausdorff.
@@ -729,10 +730,10 @@ Then the sequence  $(A_n)_{n=1}^\infty$ has a convergent subsequence in the sens
 
 \parit{Proof.}
 Since $X$ is proper,
-there is a countable dense set $\{x_1,x_2,\dots\}$ in $\spc{X}$.
-Note that the sequence $a_n=\dist{A_n}{}{}(x_\kay)$ is bounded for each $\kay$. 
+there is a countable dense set $\{x_1,x_2,\dots\}$ in~$\spc{X}$.
+Note that the sequence $a_n=\dist{A_n}{}{}(x_\kay)$ is bounded for each~$\kay$. 
 Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
-we can assume that $\dist{A_n}{}{}(x_\kay)$ converges as $n\to\infty$ for any fixed $\kay$.
+we can assume that $\dist{A_n}{}{}(x_\kay)$ converges as $n\to\infty$ for any fixed~$\kay$.
 
 Note that for each $n$, the function $\dist{A_n}{}{}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
 Therefore the sequence $\dist{A_n}{}{}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
@@ -743,7 +744,7 @@ Since $f$ is 1-Lipschitz,
 for any $y\in \spc{X}$.
 It remains to show that 
 \[\dist{A_\infty}{}{}(y)\le f(y)\] 
-for any $y$.
+for any~$y$.
 
 Assume the contrary;
 that is, 
@@ -773,20 +774,20 @@ Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
 A metric $\rho$ on the disjoint union
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$
 is called a  \index{compatible metric}\emph{compatible metric}
-if the restriction of $\rho$ to every $\spc{X}_\alpha$ coincides with the original metric on $\spc{X}_\alpha$.
+if the restriction of $\rho$ to every $\spc{X}_\alpha$ coincides with the original metric on~$\spc{X}_\alpha$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:GH}
 Let $\spc{X}_1,\spc{X}_2,\dots$ 
 and $\spc{X}_\infty$ be proper metric spaces 
-and $\rho$ be a compatible metric on their disjoint union $\bm{X}$.
+and $\rho$ be a compatible metric on their disjoint union~$\bm{X}$.
 Assume that $\spc{X}_n$ is an open set in 
 $(\bm{X},\rho)$ for each $n\ne\infty$, and 
 $\spc{X}_n\to \spc{X}_\infty$ in $(\bm{X},\rho)$ as $n\to\infty$ in the sense of Hausdorff (see Definition~\ref{def:hausdorff-coverge}).
 
 Then we say $\rho$ defines a 
 \index{convergence in the sense of Gromov--Hausdorff}\emph{convergence%
-\footnote{Formally speaking, convergence is the topology induced by $\rho$ on $\bm{X}$.} 
+\footnote{Formally speaking, convergence is the topology induced by $\rho$ on~$\bm{X}$.} 
 in the sense of Gromov--Hausdorff}%
 \index{convergence in the sense of Gromov--Hausdorff},
 and write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xto{\rho} \spc{X}_\infty$.
@@ -847,7 +848,7 @@ there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that the following cond
 \end{itemize}
 
 Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}\] 
-converges for any $i$ and $j$.
+converges for any $i$ and~$j$.
 
 Consider a countable set of points $\spc{W}=\{w_1,w_2,\dots\}$
 equipped with the pseudometric defined as 
@@ -860,11 +861,11 @@ for the relation $\sim$, where $w_i\sim w_j$ if and only it $\dist{w_i}{w_j}{\sp
 and where 
 \[\dist{[w_i]}{[w_j]}{\hat{\spc{W}}}\df\dist{w_i}{w_j}{\spc{W}}.\]
 Denote by
-$\spc{X}_\infty$ the completion of $\hat{\spc{W}}$.
+$\spc{X}_\infty$ the completion of~$\hat{\spc{W}}$.
 
 It remains to show that there is a Gromov--Hausdorff convergence 
 $\spc{X}_n\to\spc{X}_\infty$ such that the sequence $x_n\in\spc{X}_n$ converges.
-To prove it, we need to construct a metric $\rho$ on the disjoint union of \[\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots\]  satisfying definitions \ref{def:comp-metr} and \ref{def:GH}.
+To prove it, we need to construct a metric $\rho$ on the disjoint union of \[\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots\]  satisfying definitions \ref{def:comp-metr} and~\ref{def:GH}.
 The metric $\rho$ can be constructed as the maximal compatible metric
 such that 
 \[\rho(z_{i,n},w_i)\le\tfrac1m\]

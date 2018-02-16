@@ -21,7 +21,7 @@ On the other hand, $\SS^1$ is not $\Cat{}{0}$, since closed local geodesics in $
 If $\spc{U}$ is a proper length space then it is locally $\Cat{}{0}$ (or locally $\Cat{}{1}$) 
 if and only if 
 each point $p\in \spc{U}$ admits an open neighborhood $\Omega$ which is geodesic and any triangle in $\Omega$ is thin (or spherically thin, respectively).
-The proof goes along the same lines as in Exercise \ref{ex:convex-balls}.
+The proof goes along the same lines as in Exercise~\ref{ex:convex-balls}.
 
 \section{Space of local geodesic paths}\label{sec:geod-space}
 
@@ -60,7 +60,7 @@ Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ proper length space,
 geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 which contains a neighborhood of $t$ in $[0,1]$
-and such that the arc $\gamma_n|_\II$ is minimizing for all large $n$.
+and such that the arc $\gamma_n|_\II$ is minimizing for all large~$n$.
 It follows that $\gamma_\infty|_\II$ is a geodesic,
 and therefore $\gamma_\infty$ is a local geodesic.
 
@@ -70,7 +70,7 @@ The $\Cat{}{1}$ case is done the same way, but one has to assume in addition tha
 The following lemma and its proof were suggested to us by Alexander Lytchak.  
 This lemma allows  a local geodesic path 
 to be moved continuously so that its endpoints follow given trajectories.
-This statement was originally proved by the first author and Richard Bishop using a different method; see \cite{a-b:h-c}.
+This statement was originally proved by the first author and Richard Bishop using a different method; see~\cite{a-b:h-c}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -110,18 +110,18 @@ Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ so that
 \[\oBall(\gamma(t^i),r)\supset \gamma([t^{i-1},t^i])\] for all $n>i>0$.
 Set $\spc{B}^i=\cBall[\gamma(t^i),r]$.
 
-Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i$.
-Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along $\sim$.
+Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all~$i$.
+Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along~$\sim$.
 
 Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
 we conclude that $\spc{N}$ is a $\Cat{}{0}$ proper length space.
 
-For $t\in[t^{i-1},t^i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in $\spc{N}$.
+For $t\in[t^{i-1},t^i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in~$\spc{N}$.
 Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\gamma$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\gamma(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
 
 Define $\map\:\hat\Omega\to\spc{U}$
-by sending the equivalence class of $(i,x)$ to $x$.
+by sending the equivalence class of $(i,x)$ to~$x$.
 It is straightforward to check that $\map$, 
 $\hat\gamma$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of  the lemma.
 
@@ -156,7 +156,7 @@ the $\Cat{}{1}$ case is analogous.
 
 Consider the maximal interval $\II\subset[0,1]$ containing $0$,
 such that there is a continuous one-parameter family of 
-local geodesic paths $\gamma_t$ for $t\in \II$ connecting $\alpha(0)$ to $\alpha(t)$ with $\gamma_t(0)=\gamma_0(t)=\alpha(0)$ for any $t$. 
+local geodesic paths $\gamma_t$ for $t\in \II$ connecting $\alpha(0)$ to $\alpha(t)$ with $\gamma_t(0)=\gamma_0(t)=\alpha(0)$ for any~$t$. 
 
 By Proposition~\ref{prop:geo-complete}, $\II$ is closed,
 so we can assume $\II=[0,s]$ for some $s\in [0,1]$.
@@ -182,12 +182,13 @@ if two paths $\alpha$ and $\beta$ connect the same pair of points then the produ
 
 \begin{thm}{Exercise}\label{ex:null-homotopic}
 Assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space. 
-Consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary \ref{cor:path-geod}.
+Consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary~\ref{cor:path-geod}.
 
 Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
 each has length less than $\pi$ 
 and the product  
-$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$.  Then $\gamma_\alpha=\gamma_\beta$.
+$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$.
+Then $\gamma_\alpha=\gamma_\beta$.
 \end{thm}
 
 \section{Globalization}\label{sec:Hadamard--Cartan}
@@ -198,19 +199,19 @@ The original formulation of the
 then the exponential map at any point $p\in M$ is a covering;
 in particular it implies that the universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
 
-In this generality, this theorem appeared in the lectures of Elie Cartan, see \cite{cartan}.
+In this generality, this theorem appeared in the lectures of Elie Cartan, see~\cite{cartan}.
 This theorem was proved for surfaces in Euclidean $3$-space 
 by Hans von Mangoldt \cite{mangoldt},  
-and a few years later independently for $2$-dimensional Riemannian manifolds by Jacques Hadamard \cite{hadamard}.
+and a few years later independently for two-dimensional Riemannian manifolds by Jacques Hadamard \cite{hadamard}.
 
 Formulations for metric spaces of different generality were proved by 
 Herbert Busemann in \cite{busemann-CBA},
 Willi Rinow in \cite{rinow},
 Mikhael Gromov in \cite[p.119]{gromov:hyp-groups}. 
 A detailed proof of Gromov's statement was given by Werner Ballmann in \cite{ballmann:cartan-hadamard} when $\spc{U}$ is proper,
-and by the first author and Richard Bishop in \cite{a-b:h-c} in more generality;  also see references in our book \cite{AKP}.
+and by the first author and Richard Bishop in \cite{a-b:h-c} in more generality;  also see references in our book~\cite{AKP}.
 
-For  $\Cat{}{1}$ proper spaces, the globalization theorem was proved by Brian Bowditch in \cite{bowditch}.
+For  $\Cat{}{1}$ proper spaces, the globalization theorem was proved by Brian Bowditch in~\cite{bowditch}.
 
 \begin{thm}{Globalization theorem}
 \label{thm:hadamard-cartan}
@@ -248,8 +249,8 @@ if and only if all pairs of points in $\spc{U}$ at distance less than $\pi$ are 
 The proof uses a thin-triangle decomposition with the inheritance lemma (\ref{lem:inherit-angle}) and the following construction:
 
 \begin{thm}{Line-of-sight map} \label{def:sight}
-Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
-Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  
+Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space~$\spc{X}$. 
+Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of~$\alpha$.  
 If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say 
 \[
 [0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)%\eqlbl{eq:line-of-sight}
@@ -283,7 +284,7 @@ Fix  a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\]
 and set $x^{i,j}=\gamma_{t^i}(t^j)$. 
 Since the line-of-sight map is continuous and $\spc{U}$ is locally $\Cat{}{0}$, we may assume that the triangles 
 \[\trig{x^{i,j}}{x^{i,j+1}}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}}{x^{i+1,j}}{x^{i+1,j+1}}\] 
-are thin for each pair $i$, $j$.
+are thin for each pair $i$,~$j$.
 
 Now we show that the thin property propagates to $\trig p x y$ by repeated application of the inheritance lemma (\ref{lem:inherit-angle}):
 \begin{itemize}
@@ -307,7 +308,7 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is thin.
 Let $\spc{U}$ be a simply connected, locally $\Cat{}{0}$ proper length space.
 Given a path $\alpha$ in $\spc{U}$, 
 denote by $\gamma_\alpha$ the local geodesic path provided by Corollary \ref{cor:path-geod}.
-Since the map $\alpha\mapsto\gamma_\alpha$ is continuous, by Corollary \ref{cor:discrete-paths}
+Since the map $\alpha\mapsto\gamma_\alpha$ is continuous, by Corollary~\ref{cor:discrete-paths}
 we have $\gamma_\alpha=\gamma_\beta$ for any pair of  paths $\alpha$ and $\beta$  homotopic relative to the ends.
 
 Since $\spc{U}$ is simply connected, any pair of paths with common ends are homotopic.  In particular, if $\alpha$ and $\beta$ are local geodesics from $p$ to $q$, then $\alpha =\gamma_\alpha=\gamma_\beta=\beta$ by Corollary \ref{cor:path-geod}.
@@ -378,11 +379,11 @@ The latter class of spaces includes in particular infinite covers of polyhedral 
 
 The dimension of a polyhedral space $\spc{P}$
 is defined as the maximal dimension of the simplices 
-in one (and therefore any) triangulation of $\spc{P}$.
+in one (and therefore any) triangulation of~$\spc{P}$.
 
 \parbf{Links.}
 Let $\spc{P}$ be a polyhedral space
-and $\sigma$ be a simplex in a triangulation $\tau$ of $\spc{P}$.
+and $\sigma$ be a simplex in a triangulation $\tau$ of~$\spc{P}$.
 
 The simplices which contain $\sigma$
 form an abstract simplicial complex called the \index{link}\emph{link} of $\sigma$, 
@@ -397,7 +398,7 @@ The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
 formed by all the simplices $\sigma'$ 
 such that $\sigma\cap\sigma'=\emptyset$ 
-but both $\sigma$ and $\sigma'$ are faces of a simplex of $\tau$.
+but both $\sigma$ and $\sigma'$ are faces of a simplex of~$\tau$.
 
 The points in $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in its interior.
 The angle metric between directions makes  $\Link_\sigma$ into a spherical polyhedral space.
@@ -465,11 +466,10 @@ Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\sp
 
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
-is isometric to a neighborhood of the north pole in the suspension over the space of directions 
-$\Sigma_p$.
+is isometric to a neighborhood of the north pole in the suspension over the space of directions~$\Sigma_p$.
 
 Note that $\Sigma_p$ is a spherical polyhedral space 
-and its  links are isometric to  links of $\spc{P}$. 
+and its  links are isometric to  links of~$\spc{P}$. 
 By the  induction hypothesis, $\Sigma_p$ is $\Cat{}{1}$.
 
 Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally  $\Cat{}{1}$.
@@ -501,14 +501,14 @@ A simplicial complex $\mathcal{S}$
 is called \index{flag complex}\emph{flag} if whenever $\{v^0,\z\dots,v^\kay\}$
 is a set of distinct vertices of $\mathcal{S}$
 which are pairwise joined by edges, then the vertices $v^0,\dots,v^\kay$
-span a $\kay$-simplex in $\mathcal{S}$.
+span a $\kay$-simplex in~$\mathcal{S}$.
 
 If the above condition is satisfied for $\kay=2$, 
 then we say $\mathcal{S}$ satisfies 
 the \index{no-triangle condition}\emph{no-triangle condition}.
 \end{thm}
 
-Note that every flag complex is determined by its 1-skeleton.
+Note that every flag complex is determined by its one-skeleton.
 
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
@@ -566,7 +566,7 @@ discovered by Mikhael Gromov \cite[p. 122]{gromov:hyp-groups}.
 
 \begin{thm}{Flag condition}\label{thm:flag}
 Assume that a spherical polyhedral space $\spc{P}$
-admits an all-right triangulation $\tau$.
+admits an all-right triangulation~$\tau$.
 Then $\spc{P}$ is a $\Cat{}{1}$ space
 if and only if $\tau$ is flag.
 \end{thm}
@@ -581,13 +581,13 @@ Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
 The product
 of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
-forms a locally geodesic loop in $\spc{P}$. 
+forms a locally geodesic loop in~$\spc{P}$. 
 \end{clm}
 
 Now assume that $\spc{P}$ is a $\Cat{}{1}$ space.
 Then by Theorem~\ref{thm:PL-CAT},
 $\Link_\sigma\spc{P}$ is a $\Cat{}{1}$ space for every simplex $\sigma$ 
-in $\tau$. 
+in~$\tau$. 
 
 Each of these links is an all-right spherical complex and by Theorem \ref{thm:PL-CAT}, none of these links can contain a geodesic circle of length less than $2\cdot\pi$. 
 
@@ -600,11 +600,11 @@ it is sufficient to show that any closed local geodesic $\gamma$
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
 
 Recall that the  \index{star of vertex}\emph{closed star} of a vertex $v$ (briefly $\overline \Star_v$)
-is formed by all the simplices containing $v$. 
+is formed by all the simplices containing~$v$. 
 Similarly, $\Star_v$, the open star of $v$, is the union of all simplices containing $v$ with faces opposite $v$ removed.
 
 Choose a simplex $\sigma$ which contains a point $\gamma(t_0)$.
-Let $v$ be a vertex of $\sigma$.
+Let $v$ be a vertex of~$\sigma$.
 Consider the maximal arc $\gamma_v$ of $\gamma$ 
 which contains the point $\gamma(t_0)$
 and runs in $\Star_v$.
@@ -614,7 +614,7 @@ that is, there is a geodesic $\tilde\gamma_v$ in the north hemisphere of $\mathb
 \[\dist{v}{\gamma_v(t)}{\spc{P}}
 =
 \dist{n}{\tilde\gamma_v(t)}{\mathbb{S}^2},\]
-where $n$ denotes the north pole of $\mathbb{S}^2$.
+where $n$ denotes the north pole of~$\mathbb{S}^2$.
 In particular, 
 \[\length\gamma_v=\pi;\]
 that is, $\gamma$ spends time $\pi$ on every visit to $\Star_v$.
@@ -631,19 +631,19 @@ that is, $\gamma$ spends time $\pi$ on every visit to $\Star_v$.
 
 After leaving $\Star_v$,
 the local geodesic $\gamma$ has to enter another simplex, 
-say $\sigma'$.
+say~$\sigma'$.
 Since $\tau$ is flag, the simplex $\sigma'$
 has a vertex $v'$ not joined to $v$ by an edge;
 that is 
 \[\Star_v\cap\Star_{v'}=\emptyset\]
 
 The same argument as above shows that $\gamma$ spends time $\pi$ on every visit to $\Star_{v'}$.
-Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
+Therefore the total length of $\gamma$ is at least~$2\cdot\pi$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:flag>=pi/2}
 Assume that a spherical polyhedral space $\spc{P}$
-admits a triangulation $\tau$ such that all sides of all simplices are at least $\tfrac\pi2$.
+admits a triangulation $\tau$ such that all sides of all simplices are at least~$\tfrac\pi2$.
 Show that $\spc{P}$ is a $\Cat{}{1}$ space
 if $\tau$ is flag.
 \end{thm}
@@ -651,7 +651,7 @@ if $\tau$ is flag.
 \parbf{The space of trees.}
 The following construction is given by
 Louis Billera, Susan Holmes and  Karen Vogtmann
- in \cite{BHV}.
+ in~\cite{BHV}.
 
 Let $\spc{T}_n$ be the set of all metric trees with 
 one initial vertex and 
@@ -662,7 +662,7 @@ initial vertex of degree 2,
 and all  other vertices of degree 3; 
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge is $0$, we assume that this edge degenerates;
-such a tree can be also described using a different topological tree $t'$.
+such a tree can be also described using a different topological tree~$t'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $t$ can be identified with the octant
 \[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the length metric on $\spc{T}_n$ induced by these metrics.
@@ -691,10 +691,10 @@ any cubical complex is finite,
 that is, contains a finite number of cubes.
 
 The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \index{underlying space}\emph{underlying space}.
-A homeomorphism from the underlying space of $\spc{Q}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of} $\spc{X}$.
+A homeomorphism from the underlying space of $\spc{Q}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of}~$\spc{X}$.
 
 The underlying space of a cubical complex $\spc{Q}$ will be always considered with the length metric
-induced from $\RR^N$.
+induced from~$\RR^N$.
 In particular, with this metric, 
 each cube of $\spc{Q}$ is isometric to the unit cube of the same dimension.
 
@@ -803,7 +803,7 @@ The proof requires the following lemma.
 \begin{thm}{Lemma}\label{lem:example-pi_infty}
 Let $\spc{S}$ be a finite flag complex,
 $\spc{Q}=\square_{\spc{S}}$ be its cubical analog
-and $\tilde{\spc{Q}}$ be the universal cover of $\spc{Q}$.
+and $\tilde{\spc{Q}}$ be the universal cover of~$\spc{Q}$.
 
 Assume  $\tilde{\spc{Q}}$ is simply connected at infinity.
 Then $\spc{S}$ is simply connected.
@@ -811,21 +811,21 @@ Then $\spc{S}$ is simply connected.
 
 \parit{Proof.}
 Assume $\spc{S}$ is not simply connected. Equip $\spc{S}$ with an all-right spherical metric.
-Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
+Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of~$\spc{S}$.
 
-Note that $\gamma$ forms a 1-dimensional subcomplex of $\spc{S}$ which is a closed local geodesic.
-Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to $\gamma$.
+Note that $\gamma$ forms a one-dimensional subcomplex of $\spc{S}$ which is a closed local geodesic.
+Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to~$\gamma$.
 
 Fix a vertex $v\in G$;
-let $G_v$ be the connected component of $G$ containing $v$.
+let $G_v$ be the connected component of $G$ containing~$v$.
 Let $\tilde G$ be a connected component of the inverse image of $G_v$ in $\tilde{\spc{Q}}$
 for the universal cover $\tilde{\spc{Q}}\to \spc{Q}$.
-Fix a point $\tilde v\in\tilde G$ in the inverse image of $v$.
+Fix a point $\tilde v\in\tilde G$ in the inverse image of~$v$.
 
  
 Note that 
 \begin{clm}{}\label{tilde-G-convex}
-$\tilde G$ is a convex set in $\tilde{\spc{Q}}$.
+$\tilde G$ is a convex set in~$\tilde{\spc{Q}}$.
 \end{clm}
 
 \begin{wrapfigure}[4]{r}{30mm}
@@ -840,15 +840,15 @@ Indeed, according to Proposition \ref{prob:cubical-analog},
 $\tilde{\spc{Q}}$ is $\Cat{}{0}$.
 By Exercise \ref{ex:locally-convex},
 it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
-or equivalently, $G$ is locally convex in $\spc{Q}$.
+or equivalently, $G$ is locally convex in~$\spc{Q}$.
 
 Note that the latter can only fail if $\gamma$ passes two vertices, say $\xi$ to $\zeta$ in $\spc{S}$,
 which are joined by an edge not in $\gamma$; 
-denote this edge by $e$.
+denote this edge by~$e$.
 
-Each edge of $\spc{S}$ has length $\tfrac\pi2$.
+Each edge of $\spc{S}$ has length~$\tfrac\pi2$.
 Therefore each of two circles formed by $e$ and an arc of $\gamma$
-from $\xi$ to $\zeta$ is shorter that $\gamma$.
+from $\xi$ to $\zeta$ is shorter that~$\gamma$.
 Moreover,
 at least one of them is noncontractible 
 since $\gamma$ is not.
@@ -860,14 +860,14 @@ $\gamma$ is not a shortest noncontractible circle
 Further, note that 
 $\tilde G$ is homeomorphic to the plane, 
 since $\tilde G$ is 
-a 2-dimensional manifold without boundary which 
+a two-dimensional manifold without boundary which 
 by the above is $\Cat{}{0}$ and hence is contractible.
 
-Denote by $C_R$ the circle of radius $R$ in $\tilde G$ centered at $\tilde v$.
+Denote by $C_R$ the circle of radius $R$ in $\tilde G$ centered at~$\tilde v$.
 All $C_R$ are homotopic to each other in $\tilde G\backslash\{\tilde v\}$ and therefore in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
 
 Note that the map $\tilde{\spc{Q}}\backslash \{\tilde v\}\to \spc{S}$
-which returns the direction of $[{\tilde v}{x}]$  for any $x\ne \tilde v$, maps $C_R$ to a circle homotopic to $\gamma$.
+which returns the direction of $[{\tilde v}{x}]$  for any $x\ne \tilde v$, maps $C_R$ to a circle homotopic to~$\gamma$.
 Therefore $C_R$ is not contractible in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
 
 In particular, 
@@ -875,7 +875,7 @@ $C_R$ is not contactable in $\tilde{\spc{Q}}\backslash K$
 if $K\supset \tilde v$.
 If $R$ is large, 
 the circle $C_R$  
-lies outside of any compact set $K'$ in $\tilde{\spc{Q}}$.
+lies outside of any compact set $K'$ in~$\tilde{\spc{Q}}$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
 \qeds
 
@@ -889,12 +889,12 @@ the complement $\spc{S}\backslash\{v\}$ is simply connected.
 \end{thm}
 
 \parit{Proof of \ref{prop:aspherical}.}
-Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold $\spc{W}$. 
+Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold~$\spc{W}$. 
 
 For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$ follows from \cite{kervaire}. 
 For $m=4$ it follows from the construction in \cite{mazur}.
 
-Pick any  $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates $\Sigma$.
+Pick any  $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates~$\Sigma$.
 
 
 We can assume that $\spc{S}$ is flag; 
@@ -902,7 +902,7 @@ otherwise pass to the barycentric subdivision
 of $\tau$ and apply Exercise~\ref{ex:baricenric-flag}.
 
 
-Let $\spc{Q}=\square_{\spc{S}}$ be the cubical analog of $\spc{S}$.
+Let $\spc{Q}=\square_{\spc{S}}$ be the cubical analog of~$\spc{S}$.
 
 By Proposition~\ref{prob:cubical-analog},
 $\spc{Q}$ is a homology manifold.
@@ -912,11 +912,11 @@ with a finite number of singularities at its vertices.
 
 Removing a small contractible neighborhood $V_v$ of each vertex $v$ in $\spc{Q}$,
 we can obtain a piecewise linear manifold $\spc{N}$
-whose boundary is formed by several copies of $\Sigma$.
+whose boundary is formed by several copies of~$\Sigma$.
 
-Let us glue a copy of  $\spc{W}$ along its boundary to each copy of $\Sigma$ in the boundary of $\spc{N}$.
+Let us glue a copy of  $\spc{W}$ along its boundary to each copy of $\Sigma$ in the boundary of~$\spc{N}$.
 This results in a  closed piecewise linear manifold 
-$\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
+$\spc{M}$ which is homotopically equivalent to~$\spc{Q}$.
 
 Indeed, since both $V_v$ and $W$ are contractible, the identity map of  their common boundary $\Sigma$ can be extended to a homotopy equivalence relative to the boundary between $V_v$ and $W$.
 Therefore the identity map on $\spc{N}$ extends to homotopy equivalences 
@@ -978,8 +978,8 @@ The universal cover of $\spc{P}$ is not simply connected at infinity.
 \end{subthm}
 \end{thm}
 
-There are no 3-dimensional examples of that type, see \cite{rolfsen} by Dale Rolfsen.
-In \cite{thurston}, Paul Thurston conjectured that the same holds in the 4-dimensional case.
+There are no three-dimensional examples of that type, see \cite{rolfsen} by Dale Rolfsen.
+In \cite{thurston}, Paul Thurston conjectured that the same holds in the four-dimensional case.
 \parit{Proof.}
 Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of the simplicial complex $\spc{S}$ provided by Exercise~\ref{ex:funny-S}.
 \qeds
@@ -987,15 +987,15 @@ Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of t
 \begin{thm}{Exercise}\label{ex:funny-S}
 Given an integer $m\ge 5$,
 construct a finite $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
-and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
+and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in~$\spc{S}$.
 \end{thm} 
 
 A similar construction was used by Michael Davis, 
 Tadeusz Januszkiewicz 
 and 
 Jean-Fran\c{c}ois Lafont in \cite{davis-januszkiewicz-lafont}
-to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
-Another example of that type was constructed by Stephan Stadler, see \cite{stadler}.
+to construct a closed smooth four-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
+Another example of that type was constructed by Stephan Stadler, see~\cite{stadler}.
 
 It is noteworthy that any complete, simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
 In fact, by the globalization theorem
