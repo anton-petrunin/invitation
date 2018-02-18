@@ -115,7 +115,7 @@ in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if
 for any pair $s,t\in \II$.
 
 We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if 
-$\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. 
+$\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. %??? do we need ``a'' point or ``the'' point???
 In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \index{geodesic}\emph{geodesic}.
 Given a geodesic $[pq]$ we can parametrize it by distance to $p$;
 this parametrization will be denoted as $\geod_{[p q]}(t)$.
@@ -225,7 +225,7 @@ Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
 \item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} between $x$ and $y$
-if 
+if %???midpoint between or midpoint of???
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
 A point $z\in \spc{X}$ is called an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} between $x$ and $y$
@@ -257,9 +257,7 @@ Then $\spc{X}$ is a geodesic space.
 We first prove (\ref{SHORT.lem:mid>length}).
 Let $x,y\in \spc{X}$ be a pair of points.
 
-Set $\eps_n=\frac\eps{4^n}$.
-
-Set $\alpha(0)=x$ and $\alpha(1)=y$.
+Set $\eps_n=\frac\eps{4^n}$, $\alpha(0)=x$ and $\alpha(1)=y$.
 
 Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint of $\alpha(0)$ and $\alpha(1)$.
 Further, let $\alpha(\frac14)$ 
@@ -292,7 +290,7 @@ taking midpoints instead of $\eps_n$-midpoints.
 In this case \ref{eq:eps-midpoint} holds for $\eps_n=\eps=0$.
 \qeds
 
-Since in a compact space a sequence of $1/n$-midpoints $z_n$ contains a convergent subsequence, Lemma~\ref{lem:mid>geod} immediately implies
+Since in a compact space a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence, Lemma~\ref{lem:mid>geod} immediately implies
 
 \begin{thm}{Proposition}\label{prop:length+proper=>geodesic}
 A proper length space is geodesic.
@@ -331,7 +329,7 @@ Then
 $\cBall[x,\rho(x)+\eps]$ is a closed subset of $\cBall[y,\rho(y)]$ for some $\eps>0$.
 Then  compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$, a contradiction.\claimqeds
 
-Set $\eps=\min_{y\in B}\{\rho(y)\}$; 
+Set $\eps=\min\set{\rho(y)}{y\in B}$; 
 the minimum is defined since $B$ is compact.
 From \ref{eq:rho>0}, we have $\eps>0$.
 
@@ -376,6 +374,7 @@ $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
 In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
 in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\SS^2}$ is defined.
+
 We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\SS^2$ is meant.
 
 \begin{wrapfigure}[6]{r}{28mm}
@@ -546,6 +545,7 @@ If all  the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined, then t
 
 \parit{Proof.} 
 Since $\alpha^{13}\le\pi$, we can assume that $\alpha^{12}+\alpha^{23}< \pi$.
+
 Set $\gamma^i\z=\geod_{[px^i]}$.
 Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \begin{align*}
@@ -565,7 +565,7 @@ $s=s(t,\tau)$, this chain of inequalities can be continued as follows:}
 \end{align*}
 Thus for any $\eps>0$, 
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
-Hence the result follows.
+Hence the result.
 
 \begin{wrapfigure}[12]{r}{25mm}
 \begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/s-choice(1)}
@@ -801,7 +801,7 @@ and so on,
 corresponding to convergence in the ambient space $(\bm{X},\rho)$.
 
 Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we made a choice of convergence.
-Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xto{\rho} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
+Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xto{\rho}} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
 there is a convergence with limit $\spc{X}_\infty\iso\RR_{\ge0}$; 
