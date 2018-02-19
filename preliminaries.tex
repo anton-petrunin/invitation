@@ -20,7 +20,7 @@ The function
 is called the \index{distance function}\emph{distance function} from~$x$. 
 
 \begin{itemize}
-\item The \index{diameter}\emph{diameter} of metric space $\spc{X}$ is defined as
+\item The \index{diameter}\emph{diameter} of a metric space $\spc{X}$ is defined as
 \[\diam \spc{X}=\sup\set{\dist{x}{y}{\spc{X}}}{x,y\in \spc{X}}.\]
 
 \item Given $R\in[0,\infty]$ and $x\in \spc{X}$, the sets
@@ -49,7 +49,7 @@ is compact.
 \begin{thm}{Exercise}\label{ex:non-contracting-map}
 Let $K$  be a compact metric space and
 \[f\:K\z\to K\] 
-be a non-contracting map.
+be a non-contracting map. {\color{red}???I think it's better to say distance non-decreasing rather than non-contracting. V.}
 Prove that $f$ is an isometry.
 \end{thm}
 
@@ -123,7 +123,7 @@ this parametrization will be denoted as $\geod_{[p q]}(t)$.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
-Also we use the following short-cut notation:
+We also use the following short-cut notation:
 \begin{align*}
 \l] p q \r[&=[pq]\backslash\{p,q\},
 &
@@ -135,12 +135,12 @@ Also we use the following short-cut notation:
 
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  
-However,  once we write $[p q]$ we mean that we made a choice of a geodesic.
+However,  once we write $[p q]$ we mean that we have  made a choice of a geodesic.
 
 A metric space is called \index{geodesic}\emph{geodesic} if any pair of its points can be joined by a geodesic. 
 
 
-A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parameterization by $[0,1]$.
+A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parametrization by $[0,1]$.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is,
@@ -157,8 +157,8 @@ $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic.
 Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
-However, if we write $\trig p q r$, it means that we made a choice of such a triangle, 
-that is, we fixed a choice of the geodesics $[q r], [r p]$ and $[p q]$.
+However, if we write $\trig p q r$, it means that we have made a choice of such a triangle, 
+that is, we have  fixed a choice of the geodesics $[q r], [r p]$ and $[p q]$.
 
 The value 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\]
@@ -182,12 +182,12 @@ A set $A\subset\spc{X}$ is called
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
 such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in~$A$.
 
-Note that any open set is locally convex by the definition.
+Note that any open set is locally convex by  definition.
 
 \section{Length spaces}\label{sec:intrinsic}
 
 A \emph{curve} is defined as a continuous map from a real interval to a space.
-If the real interval is $[0,1]$ then curve is called \emph{path}.
+If the real interval is $[0,1]$ then the curve is called a \emph{path}.
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and
@@ -283,7 +283,7 @@ $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 
 In this way we define $\alpha(t)$ for $t\in W$,
 where $W$ denotes the set of dyadic rationals in $[0,1]$.
-The map $\alpha$ can be extended continuously to $[0,1]$.
+Since $\spc{X}$ is complete, the map $\alpha$ can be extended continuously to $[0,1]$.
 Moreover,
 \[\begin{aligned}
 \length\alpha&\le \dist{x}{y}{}+\sum_{n=1}^\infty 2^{n-1}\cdot\eps_n\le
@@ -360,7 +360,7 @@ but whose completion is neither geodesic nor locally compact.
 
 Let $\spc{X}$ be a metric space and 
 $p,q,r\in \spc{X}$. 
-Let us define its \index{model triangle}\emph{model triangle} $\trig{\~p}{\~q}{\~r}$ 
+Let us define the \index{model triangle}\emph{model triangle} $\trig{\~p}{\~q}{\~r}$ 
 (briefly, 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
 \index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same sides; that is,
@@ -372,14 +372,14 @@ In the same way we can define the \index{hyperbolic model triangle}\emph{hyperbo
 in the hyperbolic plane $\HH^2$ and the unit sphere~$\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case the model triangle again exists and is unique up to an motion of~$\SS^2$.
+In this case the model triangle again exists and is unique up to a motion of~$\SS^2$.
 
 If 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
 the angle measure of 
 $\trig{\~p}{\~q}{\~r}$ at $\~p$ 
-will be called the \index{model angle}\emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
+will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and it will be denoted by
 $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
 In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
@@ -666,7 +666,7 @@ Elements of $\Sigma_p$ are called \index{direction}\emph{directions} at~$p$.
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could also be defined directly, without introducing the space of directions.
-To do so, consider the set $\mathfrak{T}_p$ of all geodesics with constant-speed parameterizations starting at~$p$. 
+To do so, consider the set $\mathfrak{T}_p$ of all geodesics with constant-speed parametrizations starting at~$p$. 
 Given $\alpha,\beta\in \mathfrak{T}_p$,
 set 
 \[\dist{\alpha}{\beta}{\mathfrak{T}_p}
@@ -741,14 +741,14 @@ Then the sequence  $(A_n)_{n=1}^\infty$ has a convergent subsequence in the sens
 \parit{Proof.}
 Since $X$ is proper,
 there is a countable dense set $\{x_1,x_2,\dots\}$ in~$\spc{X}$.
-Note that the sequence $a_n=\dist{A_n}{}{}(x_\kay)$ is bounded for each~$\kay$. 
+Note that the sequence $d_n=\dist{A_n}{}{}(x_\kay)$ is bounded for each~$\kay$. 
 Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
 we can assume that $\dist{A_n}{}{}(x_\kay)$ converges as $n\to\infty$ for any fixed~$\kay$.
 
 Note that for each $n$, the function $\dist{A_n}{}{}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
 Therefore the sequence $\dist{A_n}{}{}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
 
-Set $A_\infty=f^{-1}(0)$.
+Set $A_\infty=f^{-1}(0)$. {\color{red} Let $a_n\in A_n$. Since $\spc{X}$ is proper and  $\dist{A_n}{}{}(x)$ is bounded by passing to a subsequence we can assume that $a_n\to a$. Clearly $a\in A_\infty$ and hence $A_\infty$ is non-empty.} 
 Since $f$ is 1-Lipschitz, 
 \[\dist{A_\infty}{}{}(y)\ge f(y)\] 
 for any $y\in \spc{X}$.
@@ -780,7 +780,7 @@ a contradiction.
 \section{Gromov--Hausdorff convergence}
 
 \begin{thm}{Definition}\label{def:comp-metr}
-Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
+Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a collection of metric spaces.
 A metric $\rho$ on the disjoint union
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$
 is called a  \index{compatible metric}\emph{compatible metric}
@@ -810,7 +810,7 @@ weak convergence of measures $\mu_n$ on $\spc{X}_n$,
 and so on,
 corresponding to convergence in the ambient space $(\bm{X},\rho)$.
 
-Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we made a choice of convergence.
+Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we have  made a choice of convergence.
 Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xto{\rho}} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
