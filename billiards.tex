@@ -161,7 +161,7 @@ Since both these triangles are thin, we get
 \\
 \dist{\geodpath_{[p^2q^1]}(t)}{\geodpath_{[p^2q^2]}(t)}{\spc{U}}
 &\le t\cdot \dist{q^1}{q^2}{\spc{U}}.
-\intertext{It follows that}
+\intertext{By the triangle inequality,}
 \dist{\geodpath_{[p^1q^1]}(t)}{\geodpath_{[p^2q^2]}(t)}{\spc{U}}&\le \max\{\dist{p^1}{p^2}{\spc{U}},\dist{q^1}{q^2}{\spc{U}}\}.
 \end{align*}
 
@@ -306,9 +306,9 @@ Since $\trig p x z$ and $\trig p y z$ are thin, we have
 \[\dist{x}{w}{}+\dist{w}{y}{}<\dist{x}{y}{},\]
 contradicting the triangle inequality. 
 
-Let us denote by $\dot D$ the union of two solid triangles $\trig {\dot p}{\dot x}{\dot z}$ and $\trig {\dot p} {\dot y} {\dot z}$.
-By \ref{eq:<+<>=pi}, there is a short map $F$ that sends 
-$\trig{\~ p}{\~ x}{\~ y}$ to $\dot D$ in such a way that 
+Denote by $\dot D$ the union of two solid triangles $\trig {\dot p}{\dot x}{\dot z}$ and $\trig {\dot p} {\dot y} {\dot z}$.
+Further, denote by $\~D$ the solid triangle $\trig{\~ p}{\~ x}{\~ y}=\modtrig(p x y)_{\EE^2}$.
+By \ref{eq:<+<>=pi}, there is a short map $F\:\~D\to \dot D$ that sends 
 \begin{align*}
 \~p&\mapsto \dot p,
 &
@@ -434,11 +434,11 @@ that lie respectively on the sides $[x^0x^1], [x^0x^2]$.
 Note that
 
 \begin{itemize}
-\item triangle $\trig{x^0}{z^1}{z^2}$ lies in $\spc{U}^1$,
+\item the triangle $\trig{x^0}{z^1}{z^2}$ lies in $\spc{U}^1$,
 \item both triangles $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ lie in~$\spc{U}^2$.
 \end{itemize}
 In particular each triangle $\trig{x^0}{z^1}{z^2}$,
-$\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is thin.
+$\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is thin. %???is it good English???
 
 Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice 
 we get that $\trig {x^0}{x^1}{z^2}$ 
@@ -508,7 +508,7 @@ Then the map $\spc{R}\to\check{\spc{R}}$
 defined as $x^\kay\mapsto\check x^\kay$ is short.
 
 Moreover, if  
-\[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\]
+\[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\eqlbl{eq:dist=dist}\]
 for some $x,y\in \EE^m$ and $i,j\in \{0,\dots,n\}$,
 then the unique geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
 is the image of the unique geodesic $[x^i y^j]_{\spc{R}}$
@@ -523,7 +523,8 @@ By Observation~\ref{obs:puff pastry is CAT},
 $\spc{R}$  and  $\check{\spc{R}}$ are $\Cat{}{0}$ proper length spaces, 
 hence $[x^i y^j]_{\spc{R}}$ 
 and $[\check x^i \check y^j]_{\check{\spc{R}}}$ are unique.  
-Since the map $\spc{R}\to\check{\spc{R}}$ is short, the image of $[x^i y^j]_{\spc{R}}$
+By \ref{eq:dist=dist}, since the map $\spc{R}\to\check{\spc{R}}$ is short, 
+the image of $[x^i y^j]_{\spc{R}}$
 is a geodesic of $\check{\spc{R}}$ joining $\check x^i$ to~$\check y^j$.
 Hence the second statement follows.
 \qeds
@@ -536,7 +537,7 @@ if $\spc{R}^0\cup\spc{R}^N$, the union of its lower and upper levels,
 forms a convex set in~$\spc{R}$.
 \end{thm}
 
-If $\spc{R}$ is the Reshetnyak's puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$
+Note that if $\spc{R}$ is the Reshetnyak's puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$
 then $\spc{R}$ is end-to-end convex
 if and only if the union of the lower and the upper levels
 $\spc{R}^0\cup\spc{R}^N$ is isometric to the doubling of $\EE^m$ along the nonempty intersection $A^1\cap\dots\cap A^N$.
@@ -622,7 +623,7 @@ is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on 
 
 The latter holds if the zigzag line has length at least $\pi$.
 This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ each.
-Hence the sublemma follows.
+Hence the sublemma.
 \qeds
 
 
@@ -691,7 +692,7 @@ glued from the copies of the plane $\EE^2$ for the array
 \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
 
 Note that the dihedral angle $\dot A\cap \dot B$ is at least~$\alpha$.
-Therefore the angle measure of  $\ddot A\cap \ddot B$ is also at least $\alpha$
+Therefore the angle measure of  $\ddot A\cap \ddot B$ is also at least $\alpha$.
 According to Sublemma~\ref{sublem:end-to-end-convex} and Observation~\ref{obs:end-to-end-convex}, $\ddot{\spc{R}}$ is end-to-end convex.
 
 Since $\dot{\spc{R}}\iso\EE^{m-2}\times\ddot{\spc{R}}$, 
@@ -736,7 +737,7 @@ Show that all intersections of $A^i$ have $\eps$-wide corners for some positive~
 \begin{thm}{Exercise}\label{ex:centrally-simmetric-walls}
 Assume $A^1,\dots,A^n\subset\EE^m$ are
 convex sets with nonempty interior which have a common center of symmetry.
-Show that all intersections of an arbitrary number of sets $A^i$ have $\eps$-wide corners for some positive~$\eps$.
+Show that all intersections of $A^i$ have $\eps$-wide corners for some positive~$\eps$.
 \end{thm}
 
 The proof of the following proposition is based on Lemma~\ref{lem:end-to-end-convex};
@@ -763,7 +764,7 @@ Moreover we can assume that $N\le (\lceil\tfrac\pi\eps\rceil+1)^n$.
 
 \parit{Proof.}
 The array $\bm{j}_\eps(n)=(j_1,\dots,j_N)$  is constructed recursively.
-For $n=1$, the array  is~$(1)$.
+For $n=1$, we can take $\bm{j}_\eps(1)=(1)$.
 
 Assume that $\bm{j}_\eps(n)$ is constructed.
 Let us exchange each occurrence of $n$ in $\bm{j}_\eps(n)$ by the alternating string 
@@ -886,9 +887,7 @@ where $|a_i|=\sqrt{x_i^2+y_i^2+z_i^2}$
 and $M_i$ denotes the mass of the $i$-th ball.
 In the metric defined by $\lVert {*}\rVert$,
 the collisions follow the
-standard law of billiards: 
-the angle of reflection is equal to the angle
-of incidence. 
+standard law of billiards. 
 
 By construction, the number of collisions of hard balls that we need to estimate 
 is the same as the number of collisions of the corresponding billiard trajectory on the table $T$ with $C_{i,j}$ as the walls.
