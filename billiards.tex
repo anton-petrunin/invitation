@@ -181,7 +181,8 @@ is a convex function.
 
 \begin{thm}{Corollary}\label{cor:dist-convex}
 Let $K$ be a closed convex subset in a  $\Cat{}{0}$ proper length space~$\spc{U}$.
-Then  $\dist{K}{}{}$ is convex on~$\spc{U}$.
+Then $\dist{K}{}{}\:\spc{U}\to\RR$ is \index{convex function}\emph{convex};
+that is, the function $t\mapsto\dist{K}{}{}\circ\gamma$ is convex for any geodesic $\gamma$ in $\spc{U}$.
 
 In particular, $\dist{p}{}{}$ is convex for any point $p$ in~$\spc{U}$.
 \end{thm}
@@ -636,7 +637,7 @@ To show the end-to-end convexity of  $\spc{R}$,
 it is sufficient to prove the following:
 
 \begin{clm}{}\label{clm:z in xy}
-The geodesic $[x^0y^N]_\spc{R}$ passes $z^0=z^N\in \spc{R}$.
+The geodesic $[x^0y^N]_\spc{R}$ contains $z^0=z^N\in \spc{R}$.
 \end{clm}
 
 Without loss of generality we can assume that $z\in\partial A\cap\partial B$.
@@ -696,7 +697,7 @@ According to Sublemma~\ref{sublem:end-to-end-convex} and Observation~\ref{obs:en
 Since $\dot{\spc{R}}\iso\EE^{m-2}\times\ddot{\spc{R}}$, 
 the puff pastry $\dot{\spc{R}}$ is also end-to-end convex.
 
-It follows that the geodesic $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ passes $\dot z^0=\dot z^N\in\dot{\spc{R}}$.
+It follows that the geodesic $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ contains $\dot z^0=\dot z^N\in\dot{\spc{R}}$.
 By Proposition~\ref{prop:A-check-A}, 
 the image of $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ 
 under the map $\dot x^\kay\mapsto x^\kay$
@@ -933,7 +934,7 @@ By Observation~\ref{obs:puff pastry is CAT},
 the puff pastry $\spc{R}_\gamma$ is a $\Cat{}{0}$ proper length space.
 Therefore $\bar\gamma$ is a geodesic.
 
-Since $\gamma$ does not pass $A^1\cap\dots\cap A^n$,
+Since $\gamma$ does not meet $A^1\cap\dots\cap A^n$,
 the lift $\bar\gamma$ does not lie in  $\spc{R}_\gamma^0\cup \spc{R}_\gamma^N$.
 In particular, $\spc{R}_\gamma$ is not end-to-end convex.
 
