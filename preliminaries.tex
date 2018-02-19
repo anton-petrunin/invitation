@@ -202,6 +202,16 @@ Directly from the definition, it follows that if a path $\alpha\:[0,1]\to\spc{X}
 (that is, $\alpha(0)=x$ and $\alpha(1)=y$) then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 
+Let $A$ be a subset of a metric space $\spc{X}$.
+Given two points $x,y\in A$,
+consider the value
+\[\dist{x}{y}{A}=\inf_{\alpha}\{\length\alpha\},\]
+where infimum is taken for all paths $\alpha$ from $x$ to $y$ in $A$.
+
+If $\dist{x}{y}{A}$ takes finite value for each pair $x,y\in A$,
+then $\dist{x}{y}{A}$ defines a metric on  $A$;
+this metric will be called the \index{induced length metric}\emph{induced length metric} on $A$.
+
 If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
 then $\spc{X}$ is called a \index{length space}\emph{length space}.
