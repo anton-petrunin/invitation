@@ -138,7 +138,7 @@ If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space, then for any pair of 
 that is, for any local geodesic path $\gamma$ connecting $p$ to $q$, there is $\eps>0$ such that for any other local geodesic path $\delta$ from $p$ to $q$ we have
 $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
 
-Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space, then for any pair of points $p,q\in\spc{U}$,  the space of all local geodesic paths from $p$ to $q$ with length less than $\pi$ is discrete.
+Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space, then for any pair of points $p,q\in\spc{U}$,  the space of all local geodesic paths shorter than $\pi$ from $p$ to $q$ is discrete.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:path-geod}
@@ -185,9 +185,9 @@ Assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space.
 Consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary~\ref{cor:path-geod}.
 
 Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
-each has length less than $\pi$ 
+each is shorter than $\pi$ 
 and the product  
-$\bar\alpha*\beta$ is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$.
+$\bar\alpha*\beta$ is null-homotopic in the class of closed curves shorter than $2\cdot\pi$.
 Then $\gamma_\alpha=\gamma_\beta$.
 \end{thm}
 
@@ -219,8 +219,8 @@ Any simply connected proper locally $\Cat{}{0}$ length space
 is $\Cat{}{0}$.
 
 Analogously, assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space
-such that any closed curve $\gamma\:\SS^1\to \spc{U}$ with length smaller than $2\cdot\pi$
-is null-homotopic in the class of closed curves with length smaller than $2\cdot\pi$.
+such that any closed curve $\gamma\:\SS^1\to \spc{U}$ shorter than $2\cdot\pi$
+is null-homotopic in the class of closed curves shorter than $2\cdot\pi$.
 Then $\spc{U}$ is a $\Cat{}{1}$ space.
 \end{thm}
 
@@ -229,7 +229,7 @@ Then $\spc{U}$ is a $\Cat{}{1}$ space.
 \end{lpic}
 \end{wrapfigure}
 
-The surface of revolution illustrated in the diagram 
+The surface on the diagram 
 is an example of a simply connected space that  is locally $\Cat{}{1}$ but not $\Cat{}{1}$.
 To contract the marked curve one has to increase its length to $2\cdot\pi$ or more;
 in particular the surface does not satisfy the assumption of the globalization theorem.
@@ -250,8 +250,8 @@ The proof uses a thin-triangle decomposition with the inheritance lemma (\ref{le
 
 \begin{thm}{Line-of-sight map} \label{def:sight}
 Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space~$\spc{X}$. 
-Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parametrization of~$\alpha$.  
-If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say 
+Let $\mathring\alpha:[0,1]\to\spc{U}$ be the constant-speed parametrization of~$\alpha$.  
+If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\mathring\alpha(t)$, we say 
 \[
 [0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)%\eqlbl{eq:line-of-sight}
 \]
@@ -267,7 +267,7 @@ We need to show that $\trig p x y$ is thin.
 By the assumptions, the line-of-sight map  $(t,s)\mapsto\gamma_t(s)$ from $p$ to   $[x y]$ is uniquely defined and continuous.    
 
 \begin{center}
-\begin{lpic}[t(1mm),b(1mm),r(0mm),l(0mm)]{pics/cba-globalization-net(1)}
+\begin{lpic}[t(3mm),b(3mm),r(0mm),l(0mm)]{pics/cba-globalization-net(1)}
 \lbl[lb]{29,46;$p=x^{0,0}=\dots=x^{N,0}$}
 \lbl[rb]{23,37;$x^{0,1}$}
 \lbl[lb]{39,37;$x^{N,1}$}
@@ -291,15 +291,15 @@ Now we show that the thin property propagates to $\trig p x y$ by repeated appli
 \item 
 For fixed $i$, 
 sequentially applying the lemma shows that the triangles 
-$\trig{x}{x^{i,1}}{x^{i+1,2}}$, 
-$\trig{x}{x^{i,2}}{x^{i+1,2}}$, 
-$\trig{x}{x^{i,2}}{x^{i+1,3}}$,
+$\trig{p}{x^{i,1}}{x^{i+1,2}}$, 
+$\trig{p}{x^{i,2}}{x^{i+1,2}}$, 
+$\trig{p}{x^{i,2}}{x^{i+1,3}}$,
 and so on are thin. 
 \end{itemize}
-In particular, for each $i$, the long triangle $\trig{x}{x^{i,N}}{x^{i+1,N}}$ is thin.
+In particular, for each $i$, the long triangle $\trig{p}{x^{i,N}}{x^{i+1,N}}$ is thin.
 \begin{itemize} 
 \item 
-Applying the same lemma again shows that the  triangles $\trig{x}{x^{0,N}}{x^{2,N}}$, $\trig{x}{x^{0,N}}{x^{3,N}}$, and so on are thin. 
+Applying the same lemma again shows that the  triangles $\trig{p}{x^{0,N}}{x^{2,N}}$, $\trig{p}{x^{0,N}}{x^{3,N}}$, and so on are thin. 
 \end{itemize}
 In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is thin.
 \qeds
@@ -323,7 +323,7 @@ but one needs to use Exercise~\ref{ex:null-homotopic}. \qeds
 \begin{thm}{Corollary}\label{cor:closed-geod-cat} 
 Any compact locally $\Cat{}{0}$ space that contains no closed local geodesics is $\Cat{}{0}$.
  
-Analogously, any compact locally $\Cat{}{1}$ space that  contains no closed local geodesics of length smaller than $2\cdot\pi$ is $\Cat{}{1}$.
+Analogously, any compact locally $\Cat{}{1}$ space that  contains no closed local geodesics shorter than $2\cdot\pi$ is $\Cat{}{1}$.
 \end{thm}
 
 \parit{Proof.}
@@ -377,7 +377,7 @@ that is, complete length spaces,
 any point of which admits a closed neighborhood isometric to a polyhedral space.
 The latter class of spaces includes in particular infinite covers of polyhedral spaces.
 
-The dimension of a polyhedral space $\spc{P}$
+The \index{dimension of a polyhedral space}\emph{dimension} of a polyhedral space $\spc{P}$
 is defined as the maximal dimension of the simplices 
 in one (and therefore any) triangulation of~$\spc{P}$.
 
@@ -425,8 +425,8 @@ of dimension at most $m-1$.
 In particular, 
 for any point $p$ in $\sigma$,
 the isometry class of $\Link_\sigma$ together with $\kay=\dim\sigma$
-determines the isometry class of $\Sigma_p$, 
- and the other way around.
+determine the isometry class of $\Sigma_p$, 
+ and the other way around --- $\Sigma_p$ and $k$ determine the isometry class of $\Link_\sigma$.
 
 A small neighborhood of $p$ is isometric to a neighborhood of the tip of $\Cone\Sigma_p$. 
 (If $\spc{P}$ is a spherical polyhedral space, then a small neighborhood of $p$ is isometric to a neighborhood of the north pole in $\Susp\Sigma_p$.)
@@ -471,7 +471,6 @@ is isometric to a neighborhood of the north pole in the suspension over the spac
 Note that $\Sigma_p$ is a spherical polyhedral space 
 and its  links are isometric to  links of~$\spc{P}$. 
 By the  induction hypothesis, $\Sigma_p$ is $\Cat{}{1}$.
-
 Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally  $\Cat{}{1}$.
 
 
@@ -509,6 +508,8 @@ the \index{no-triangle condition}\emph{no-triangle condition}.
 \end{thm}
 
 Note that every flag complex is determined by its one-skeleton.
+Moreover, for any graph, its \index{clique}\emph{cliques} (that is, complete subgraphs) define a flag complex.
+By that reason flag complex also called \index{clique complex}\emph{clique complex}.
 
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
@@ -528,13 +529,13 @@ satisfy the no-triangle condition.
 From the definition of flag complex 
 we get the following.
 
-\begin{thm}{Lemma}\label{lem:link-of-flag}
+\begin{thm}{Observation}\label{obs:link-of-flag}
 Any link of any simplex in a flag complex is flag.
 \end{thm}
 
 
 \parit{Proof of \ref{prop:no-trig}.}
-By Lemma~\ref{lem:link-of-flag}, the no-triangle condition holds 
+By Observation~\ref{obs:link-of-flag}, the no-triangle condition holds 
 for any flag complex and the  links of all its simplices.
 
 Now assume a complex $\spc{S}$ and all its links satisfy 
@@ -546,7 +547,7 @@ Repeating this observation
 for triangles, 
 4-simplices,
 5-simplices
-and so on we get that $\spc{S}$ is flag.
+and so on, we get that $\spc{S}$ is flag.
 \qeds
 
 
@@ -574,14 +575,19 @@ if and only if $\tau$ is flag.
 \parit{Proof; ``Only-if'' part.} 
 Assume there are three vertices $v^1,v^2$ and $v^3$ of $\tau$
 that are pairwise joined by edges 
-but do not span a simplex.
+but do not span a triangle.
 Note that in this case 
-$$\mangle\hinge{v^1}{v^2}{v^3}=\mangle\hinge{v^2}{v^3}{v^1}=\mangle\hinge{v^3}{v^1}{v^1}=\pi.$$
+\[
+\mangle\hinge{v^1}{v^2}{v^3}=
+\mangle\hinge{v^2}{v^3}{v^1}=
+\mangle\hinge{v^3}{v^1}{v^2}=
+\pi.
+\]
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
 The product
 of the geodesics $[v^1v^2]$, $[v^2v^3]$ and $[v^3v^1]$
-forms a locally geodesic loop in~$\spc{P}$. 
+forms a locally geodesic loop in~$\spc{P}$ of length $\tfrac32\cdot\pi$.
 \end{clm}
 
 Now assume that $\spc{P}$ is a $\Cat{}{1}$ space.
@@ -589,13 +595,13 @@ Then by Theorem~\ref{thm:PL-CAT},
 $\Link_\sigma\spc{P}$ is a $\Cat{}{1}$ space for every simplex $\sigma$ 
 in~$\tau$. 
 
-Each of these links is an all-right spherical complex and by Theorem \ref{thm:PL-CAT}, none of these links can contain a geodesic circle of length less than $2\cdot\pi$. 
+Each of these links is an all-right spherical complex and by Theorem \ref{thm:PL-CAT}, none of these links can contain a geodesic circle shorter than $2\cdot\pi$. 
 
 Therefore Proposition~\ref{prop:no-trig} and \ref{clm:3pi/2} 
 imply the ``only-if'' part.
 
 \parit{``If'' part.} 
-By Lemma~\ref{lem:link-of-flag} and Theorem~\ref{thm:PL-CAT},
+By Observation~\ref{obs:link-of-flag} and Theorem~\ref{thm:PL-CAT},
 it is sufficient to show that any closed local geodesic $\gamma$ 
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
 
@@ -634,7 +640,7 @@ the local geodesic $\gamma$ has to enter another simplex,
 say~$\sigma'$.
 Since $\tau$ is flag, the simplex $\sigma'$
 has a vertex $v'$ not joined to $v$ by an edge;
-that is 
+that is, 
 \[\Star_v\cap\Star_{v'}=\emptyset\]
 
 The same argument as above shows that $\gamma$ spends time $\pi$ on every visit to $\Star_{v'}$.
@@ -654,14 +660,12 @@ Louis Billera, Susan Holmes and  Karen Vogtmann
  in~\cite{BHV}.
 
 Let $\spc{T}_n$ be the set of all metric trees with 
-one initial vertex and 
 $n$ end vertices
 labeled by $a^1,\dots,a^n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological  trivalent tree $t$ with end vertices $a^1,\dots,a^n$,
-initial vertex of degree 2, 
+To describe one tree in $\spc{T}_n$ we may fix a topological  trivalent tree $t$ with end vertices $a^1,\dots,a^n$ 
 and all  other vertices of degree 3; 
 and prescribe the lengths of $2\cdot n-3$ edges.
-If the length of an edge is $0$, we assume that this edge degenerates;
+If the length of an edge vanish, we assume that this edge degenerates;
 such a tree can be also described using a different topological tree~$t'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $t$ can be identified with the octant
 \[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
@@ -687,8 +691,7 @@ Each cube face in this collection
 will be called a \index{cube}\emph{cube} of the cubical complex.
 
 Note that according to this definition, 
-any cubical complex is finite,
-that is, contains a finite number of cubes.
+any cubical complex is finite.
 
 The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \index{underlying space}\emph{underlying space}.
 A homeomorphism from the underlying space of $\spc{Q}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of}~$\spc{X}$.
@@ -704,8 +707,7 @@ such that each simplex is isometric to a Euclidean simplex.
 In particular the underlying space of $\spc{Q}$ is a Euclidean polyhedral space.
 
 The link of each cube in a cubical complex admits a natural 
-all-right triangulation; 
-each simplex corresponds to an adjusted cube.
+all-right triangulation --- each simplex corresponds to an adjusted cube.
 
 \parbf{Cubical analog of a simplicial complex.}
 Let $\spc{S}$ be a finite simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its vertices.
@@ -817,7 +819,7 @@ Note that $\gamma$ forms a one-dimensional subcomplex of $\spc{S}$ which is a cl
 Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to~$\gamma$.
 
 Fix a vertex $v\in G$;
-let $G_v$ be the connected component of $G$ containing~$v$.
+let $G_v$ be the connected component of $v$ in~$G$.
 Let $\tilde G$ be a connected component of the inverse image of $G_v$ in $\tilde{\spc{Q}}$
 for the universal cover $\tilde{\spc{Q}}\to \spc{Q}$.
 Fix a point $\tilde v\in\tilde G$ in the inverse image of~$v$.
@@ -894,7 +896,7 @@ Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere which is not
 For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$ follows from \cite{kervaire}. 
 For $m=4$ it follows from the construction in \cite{mazur}.
 
-Pick any  $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates~$\Sigma$.
+Pick any triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates~$\Sigma$.
 
 
 We can assume that $\spc{S}$ is flag; 
@@ -937,27 +939,6 @@ that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\sp
 \qeds
 
 
-\section{Comments}
-
-In the globalization theorem (\ref{thm:hadamard-cartan}) properness can be weakened to completeness, see our book \cite{AKP} and the references therein.
-
-The condition on polyhedral $\Cat{}{\kappa}$ spaces given in Theorem~\ref{thm:PL-CAT} might look easy to use, 
-but in fact, it is hard to check even in the very simple cases.
-For example the description of those coverings of $\SS^3$ branching at three 
-great circles which are $\Cat{}{1}$ requires quite a bit of work;
-see \cite{charney-davis-93} --- try to guess the answer before reading.
-
-Another example is the space $\spc{B}_4$ which is the universal cover of $\CC^4$ infinitely branching in six complex planes $z_i=z_j$ with the induced length metric.
-So far it is not known if $\spc{B}_4$ is $\Cat{}{0}$.
-Understanding this space could be helpful to study the braid group on 4 strings;
-read \cite{panov-petrunin:ramification} 
-by Dmitri Panov and the third author for more on it.
-This circle of questions is closely related to the generalization of the flag condition (\ref{thm:flag}) to the spherical simplices with few acute dihedral angles.
-
-
-The construction used in the proof of  Proposition~\ref{prop:aspherical} admits a number of interesting modifications,  
-number of which are discussed in the survey \cite{davis-survey} by Michael Davis.
-
 The following Proposition was proved by Fredric Ancel, 
 Michael Davis and Craig Guilbault in \cite{ADG};
 it could be considered as a more geometric version of Proposition~\ref{prop:aspherical}.
@@ -990,11 +971,33 @@ construct a finite $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\
 and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in~$\spc{S}$.
 \end{thm} 
 
-A similar construction was used by Michael Davis, 
+
+\section{Comments}
+
+In the globalization theorem (\ref{thm:hadamard-cartan}) properness can be weakened to completeness, see our book \cite{AKP} and the references therein.
+
+The condition on polyhedral $\Cat{}{\kappa}$ spaces given in Theorem~\ref{thm:PL-CAT} might look easy to use, 
+but in fact, it is hard to check even in the very simple cases.
+For example the description of those coverings of $\SS^3$ branching at three 
+great circles which are $\Cat{}{1}$ requires quite a bit of work;
+see \cite{charney-davis-93} --- try to guess the answer before reading.
+
+Another example is the space $\spc{B}_4$ which is the universal cover of $\CC^4$ infinitely branching in six complex planes $z_i=z_j$ with the induced length metric.
+So far it is not known if $\spc{B}_4$ is $\Cat{}{0}$.
+Understanding this space could be helpful to study the braid group on 4 strings;
+read \cite{panov-petrunin:ramification} 
+by Dmitri Panov and the third author for more on it.
+This circle of questions is closely related to the generalization of the flag condition (\ref{thm:flag}) to the spherical simplices with few acute dihedral angles.
+
+
+The construction used in the proof of  Proposition~\ref{prop:aspherical} admits a number of interesting modifications,  
+number of which are discussed in the survey \cite{davis-survey} by Michael Davis.
+
+A similar argument was used by Michael Davis, 
 Tadeusz Januszkiewicz 
 and 
-Jean-Fran\c{c}ois Lafont in \cite{davis-januszkiewicz-lafont}
-to construct a closed smooth four-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
+Jean-Fran\c{c}ois Lafont in \cite{davis-januszkiewicz-lafont}.
+They constructed a closed smooth four-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that $M$ admits a polyhedral metric which is locally $\Cat{}{0}$, but does not admit a Riemannian metric with nonpositive sectional curvature.
 Another example of that type was constructed by Stephan Stadler, see~\cite{stadler}.
 
 It is noteworthy that any complete, simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
@@ -1013,8 +1016,8 @@ All the topics discussed in this chapter link Alexandrov geometry with the funda
 The theory of {}\emph{hyperbolic groups}, 
 a branch of \emph{geometric group theory}, 
 introduced by 
-Mikhael Gromov,
-could be considered as a further step in this direction, see \cite{gromov:hyp-groups}.
+Mikhael Gromov \cite{gromov:hyp-groups},
+could be considered as a further step in this direction.
 
 
 
