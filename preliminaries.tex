@@ -748,13 +748,9 @@ we can assume that $\dist{A_n}{}{}(x_\kay)$ converges as $n\to\infty$ for any fi
 Note that for each $n$, the function $\dist{A_n}{}{}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
 Therefore the sequence $\dist{A_n}{}{}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
 
-Set $A_\infty=f^{-1}(0)$. {\color{red} Let $a_n\in A_n$. Since $\spc{X}$ is proper and  $\dist{A_n}{}{}(x)$ is bounded by passing to a subsequence we can assume that $a_n\to a$. Clearly $a\in A_\infty$ and hence $A_\infty$ is non-empty.} 
-Since $f$ is 1-Lipschitz, 
-\[\dist{A_\infty}{}{}(y)\ge f(y)\] 
-for any $y\in \spc{X}$.
-It remains to show that 
+Set $A_\infty=f^{-1}(0)$. Let us show that 
 \[\dist{A_\infty}{}{}(y)\le f(y)\] 
-for any~$y$.
+for any~$y$, which in particular it implies that $A\ne \emptyset$.
 
 Assume the contrary;
 that is, 
@@ -775,6 +771,12 @@ On the other hand,
 \dist{A_\infty}{}{}(y),
 \end{align*}
 a contradiction.
+
+On the other hand, since $f$ is 1-Lipschitz,  $\dist{A_\infty}{}{}(y)\ge f(y)$.
+Therefore
+\[\dist{A_\infty}{}{}(y)= f(y)\]
+for any $y\in \spc{X}$.
+Hence the result.
 \qeds
 
 \section{Gromov--Hausdorff convergence}
