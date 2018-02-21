@@ -6,7 +6,7 @@ In this chapter we define $\Cat{}{\kappa}$ spaces and give the first application
 Here ``$\Cat{}{}$'' is an acronym for Cartan, Alexandrov and Toponogov.
 It was was coined by Michael Gromov in 1987.
 Originally, Alexandrov called these spaces ``$\mathfrak{R}_\kappa$ domain'';
-this term still in use.
+this term is still in use.
 
 \section{4-point condition}
 
@@ -46,12 +46,12 @@ If one of the spherical model triangles is undefined\footnote{ that is, if
 \dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
 then it is assumed that $\Cat{}{1}$ comparison automatically holds for this quadruple.
 
-We can do the same for the model plane with curvature $\kappa$;
+We can do the same for the model plane of curvature $\kappa$;
 that is a sphere if $\kappa>0$, 
 Euclidean plane if $\kappa=0$ 
 and Lobachevsky plane if $\kappa<0$.
 In this case we arrive at the definition of $\Cat{}{\kappa}$ comparison.
-However in these notes we will consider mostly $\Cat{}{0}$ comparison and occasionally $\Cat{}{1}$ comparison;
+However in these notes we will mostly consider  $\Cat{}{0}$ comparison and occasionally $\Cat{}{1}$ comparison;
 so, if you see $\Cat{}{\kappa}$, you can assume that $\kappa$ is $0$ or~$1$.
 
 
@@ -62,7 +62,7 @@ Note that in order to check $\Cat{}{\kappa}$ comparison, it is sufficient to kno
 The latter observation implies the following.
 
 \begin{thm}{Proposition}\label{prop:cat-limit}
-The Gromov--Hausdorff limit of a sequence of $\Cat{}{\kappa}$ spaces is always a $\Cat{}{\kappa}$ space. 
+The Gromov--Hausdorff limit {\color{red}??? Should it be "a Gromov-Hausdorff limit" here? With our definition Gromov-Hausdorff limits are not unique.}of a sequence of $\Cat{}{\kappa}$ spaces is always a $\Cat{}{\kappa}$ space. 
 \end{thm}
 
 In the proposition above, 
@@ -96,7 +96,7 @@ Show that any complete length $\Cat{}{0}$ space is geodesic.
 \section{Thin triangles} \label{sec:thin-triangle}
 
 
-The inheritance lemma \ref{lem:inherit-angle} proved below plays a central role in the theory.  
+The inheritance lemma \ref{lem:inherit-angle} proved below plays a central role in the theory of $\Cat{}{\kappa}$ spaces.
 It will lead to two fundamental constructions: 
 patchwork globalization  (\ref{thm:alex-patch}) 
 and Reshetnyak gluing (\ref{thm:gluing}),
@@ -112,7 +112,7 @@ The  \index{natural map}\emph{natural map} $\trig{\~x^1}{\~x^2}{\~x^3}\to \trig{
 sends a point $\~z\in[\~x^i\~x^j]$ to the corresponding point $z\in[x^ix^j]$;
 that is, $z$ is the point such that $\dist{\~x^i}{\~z}{}=\dist{x^i}{z}{}$ and therefore $\dist{\~x^j}{\~z}{}=\dist{x^j}{z}{}$.
 
-In the same way, a natural map can be defined by the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$.
+In the same way, the natural map can be defined for the spherical model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\SS^2}$.
  
 \begin{thm}{Definition of thin triangles}\label{def:k-thin}
 A triangle $\trig{x^1}{x^2}{x^3}$ in the metric space $\spc{X}$ 
@@ -136,9 +136,9 @@ Apply  the triangle inequality and thinness of triangles $\trig pxy$ and $\trig 
 \parit{``Only-if'' part.} 
 Applying $\Cat{}{0}$ comparison to a quadruple $p,q,x,y$ with $q\in [xy]$ shows that any triangle satisfies \emph{point-side comparison}, that is, the distance from a vertex to a  point on the opposite side is no greater than the corresponding distance in the Euclidean model triangle.  
 
-Now consider triangle $\trig{x^1}{x^2}{x^3}$, with $y\in [x^1x^2]$ and $z\in [x^1x^3]$.
+Now consider a triangle $\trig{x^1}{x^2}{x^3}$ and let $y\in [x^1x^2]$ and $z\in [x^1x^3]$.
 Let $\~y$, $\~z$ be the corresponding points on the sides of the model triangle $\modtrig{}({x^1}{x^2}{x^3})_{\EE^2}$.
-Applying point-side comparison first to triangle $\trig{x^1}{x^2}{x^3}$ with $y\in [x^1x^2]$, and then to triangle $\trig{x^1}{y}{x^3}$  with $z\in [x^1x^3]$,  implies that model angles satisfy 
+Applying point-side comparison first to the triangle $\trig{x^1}{x^2}{x^3}$ with $y\in [x^1x^2]$, and then to the triangle $\trig{x^1}{y}{x^3}$  with $z\in [x^1x^3]$,  implies that model angles satisfy 
 \[\angk {x^1} {x^2} {x^3}_{\EE^2} \ge \angk {x^1} y {x^3}_{\EE^2} \ge \angk {x^1} y z _{\EE^2}.\]
 Therefore $ \dist{\~y}{\~z}{\EE^2}\ge \dist{y}{z}{}$.
 
@@ -154,7 +154,7 @@ Analogously, in a $\Cat{}{1}$ proper length space, pairs of points at distance l
 \parit{Proof.} 
 Given 4 points $p^1,p^2,q^1,q^2$ in a $\Cat{}{0}$ proper length space $\spc{U}$, 
 consider two triangles $\trig{p^1}{q^1}{p^2}$ and $\trig{p^2}{q^2}{q^1}$.
-Since both these triangles are thin, we get 
+Since both of these triangles are thin, we get 
 \begin{align*}
 \dist{\geodpath_{[p^1q^1]}(t)}{\geodpath_{[p^2q^1]}(t)}{\spc{U}}
 &\le (1-t)\cdot \dist{p^1}{p^2}{\spc{U}},
@@ -167,7 +167,7 @@ Since both these triangles are thin, we get
 
 Hence continuity and uniqueness in the $\Cat{}{0}$ case.  
  
-The $\Cat{}{1}$ case is done essentially the same way.
+The $\Cat{}{1}$ case is done in essentially the same way.
 \qeds
 
 Adding the first two inequalities of the preceding proof gives:
@@ -286,7 +286,7 @@ Analogously, if $\trig p x y$ has perimeter $<2\cdot\pi$ and both triangles $\tr
 \end{wrapfigure}
 
 \parit{Proof.}
-Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
+Construct  the model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
 and $\trig {\dot p} {\dot y} {\dot z}\z=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
 Let us show that 
@@ -318,7 +318,7 @@ By \ref{eq:<+<>=pi}, there is a short map $F\:\~D\to \dot D$ that sends
 &
 \~y&\mapsto \dot y.
 \end{align*}
-
+\qeds
 \begin{thm}{Exercise}\label{ex:short-map}
 Use Alexandrov's lemma (\ref{lem:alex}) to prove the last statement. 
 \end{thm}
@@ -339,7 +339,7 @@ Analogously, show that any ball of radius $R<\tfrac\pi2$ in a $\Cat{}{1}$ proper
 Recall that a set $A$ in a metric space $\spc{U}$ is called locally convex if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in~$A$. 
 
 \begin{thm}{Exercise}\label{ex:locally-convex}
-Show that in any $\Cat{}{0}$ proper length space, any closed, connected, locally convex set is convex.
+Show that in any $\Cat{}{0}$ proper length space{\color{red} ??? I don't think this is  correct sequence of adjectives in English. I think it should be "proper length $\Cat{}{0}$ space" V.}, any closed, connected, locally convex set is convex.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:closest-point}
@@ -362,10 +362,10 @@ The closest-point projection $p\mapsto p^*$ defined by (\ref{SHORT.ex:closest-po
 
 Suppose 
 $\spc{U}^1$ and $\spc{U}^2$ are proper length spaces 
-with isometric closed convex sets $A^i\subset\spc{U}^i$ and $\iota\:A^1\to A^2$ be an isometry.
-Consider the space $\spc{W}$ of all equivalence classes on $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$.
+with isometric closed convex sets $A^i\subset\spc{U}^i$ and let $\iota\:A^1\to A^2$ be an isometry.
+Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$.
 
-It is straightforward to see that $\spc{W}$ is a proper length space if equipped with the following metric
+It is straightforward to see that $\spc{W}$ is a proper length space when equipped with the following metric
 \begin{align*}
 \dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}^i}
 \\
@@ -378,7 +378,7 @@ It is straightforward to see that $\spc{W}$ is a proper length space if equipped
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
 
 The  space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
-If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and identity map $\iota\:A\to A$, then the obtained space is called the \index{doubling}\emph{doubling} of $\spc{U}$ along~$A$.
+If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{doubling}\emph{doubling} of $\spc{U}$ along~$A$.
 
 We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
 this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by~$A$.
@@ -530,7 +530,7 @@ Hence the second statement follows.
 \qeds
 
 \begin{thm}{Definition}
-Consider a Reshetnyak's puff pastry $\spc{R}$ with the levels 
+Consider a Reshetnyak's puff pastry {\color{red}??? Would it be better English to call it "Reshetnyak puff pastry" here and everywhere?V.} $\spc{R}$ with the levels 
 $\spc{R}^0,\dots,\spc{R}^N$.
 We say that $\spc{R}$ is \index{end-to-end convex}\emph{end-to-end convex} 
 if $\spc{R}^0\cup\spc{R}^N$, the union of its lower and upper levels, 
@@ -767,7 +767,7 @@ The array $\bm{j}_\eps(n)=(j_1,\dots,j_N)$  is constructed recursively.
 For $n=1$, we can take $\bm{j}_\eps(1)=(1)$.
 
 Assume that $\bm{j}_\eps(n)$ is constructed.
-Let us exchange each occurrence of $n$ in $\bm{j}_\eps(n)$ by the alternating string 
+Let us replace each occurrence of $n$ in $\bm{j}_\eps(n)$ by the alternating string 
 \[\underbrace{n,n+1,n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}.\]
 Denote the obtained array by $\bm{j}_\eps(n+1)$.
 
@@ -776,8 +776,8 @@ end-to-end convexity of the puff pastry for $\bm{j}_\eps(n\z+1)$
 follows from end-to-end convexity of the puff pastry for the array
 where each string
 \[\underbrace{A^n,A^{n+1},A^n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}\]
-exchanged to $Q=A^n\cap A^{n+1}$.
-The latter follows by assumption on $\bm{j}_\eps(n)$, 
+is replaced by  $Q=A^n\cap A^{n+1}$.
+End-to-end convexity of the latter follows by the assumption on $\bm{j}_\eps(n)$, 
 since all the intersections of $A^1,\dots,A^{n-1},Q$
 have $\eps$-wide corners.
 
@@ -961,7 +961,7 @@ length
 spaces;
 see the book of Martin Bridson and  Andr\'e Haefliger \cite{BH} and our book \cite{AKP} for details.
 
-The idea in the proof of the collision theorem has a number of applications to billiards.
+The idea of the proof of the collision theorem has a number of applications to billiards.
 In particular, it can be used to bound topological entropy of the billiard flow; 
 see another paper of Dmitri Burago, Serge Ferleger and Alexey Kononenko~\cite{BFK-2}.
 The lecture \cite{burago-icm} of Dmitri Burago gives a short survey on the subject.
