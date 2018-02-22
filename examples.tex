@@ -6,7 +6,7 @@ In this chapter we give a partial answer to the question:
 
 \smallskip
 
-{}\emph{Which subsets of Euclidean space, equipped with their induced length-metrics, form  $\Cat{}{0}$ spaces?}
+{}\emph{Which subsets of Euclidean space, equipped with their induced length-metrics, are  $\Cat{}{0}$?}
 
 
 
@@ -23,7 +23,7 @@ C&=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}.
 \end{align*}
 
 \begin{thm}{Question}
-Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, forms a $\Cat{}{0}$ space and why?
+Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, are $\Cat{}{0}$ and why?
 \end{thm}
 
 The answers are given below, but it is instructive to think about these questions before reading further.
@@ -61,7 +61,8 @@ Consider the one-parameter family of sets
 \end{lpic}
 \end{wrapfigure}
 
-Each set $V_t$ is the subgraph of a paraboloid tangent to $\partial C$ along the curve $(t,y,t^2-y^2)$. Thus $V_t$ is closed and convex, and
+Each set $V_t$ is the subgraph of a paraboloid tangent to $\partial C$ along the parabola $y\mapsto(t,y,t^2-y^2)$.
+The set $V_t$ is closed and convex for any $t$, and
 \[C=\bigcup_t V_t.\]
 Further note that 
 \begin{clm}{}\label{eq:VcVnV-0}
@@ -107,14 +108,16 @@ The interior of any two-convex set in $\EE^m$ is a two-convex set.
 \end{thm}
 
 \parit{Proof.}
-Fix a  two-convex set $K\subset \EE^m$, a 2-plane $W$ be a 2-plane and a closed simple plane curve $\gamma$ in $W\cap \Int K$ 
+Fix a  two-convex set $K\subset \EE^m$ and a 2-plane $W$;
+denote by \index{$\Int$}$\Int K$ the interior of $K$.
+Let $\gamma$ be a closed simple curve in $W\cap \Int K$ 
 which is contractible in the interior of~$K$.
 
 Since $K$ is two-convex,
 the plane disc $D$ bounded by $\gamma$ lies in~$K$.
 The same holds for the translations of $D$ by small vectors.
-Therefore $D$ lies in the interior of~$K$.
-Hence the statement follows.
+Therefore $D$ lies in $\Int K$;
+that is, $\Int K$ is two-convex.
 \qeds
 
 \begin{thm}{Definition}
@@ -142,7 +145,7 @@ Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} 
 
 The proof is taken from \cite[\S\textonehalf]{gromov:SaGMC}, but we added  some details.
 
-\parit{Proof; ``Only-if'' part.}
+\parit{Proof; ``only-if'' part.}
 If $k_2(p)<0$ for some $p\in S$,
 consider the plane $W$ containing $p$ and spanned by the first two principal directions at~$p$.
 Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
@@ -197,7 +200,7 @@ Namely,  any plane curve $\gamma$ (\emph{not necessary simple}) which is  contra
 The latter condition does not hold for the complement 
 of two planes in $\EE^4$, which is two-convex by Proposition~\ref{prop:two-hull};
 see also Exercise~\ref{ex:two-planes} below.
-The following proposition shows that there are no such open examples in~$\EE^3$.
+The following proposition shows that there are no such examples in~$\EE^3$.
 
 \begin{thm}{Proposition}\label{prop:3d-strong-2-convexity}
 Let $\Omega\subset\EE^3$ be an open two-convex subset.
@@ -206,13 +209,18 @@ any closed curve in $W\cap \Omega$
 which is null-homotopic in $\Omega$ is also null-homotopic in $W\cap \Omega$.
 \end{thm}
 
-In the proof we use Papakyriakopoulos' loop theorem.
-It states that for any three-dimensional manifold $M$ with nonempty boundary $\partial M$, if 
+In the proof we use the following classical result:
+
+\begin{thm}{Loop theorem}
+Let $M$ be a three-dimensional manifold with nonempty boundary $\partial M$.
+Assume 
 $f\: (\DD,\partial \DD)\to (M,\partial M)$
-is a continuous map from disc $\DD$ such that $f|\partial \DD$ is not null-homotopic in $\partial M$, then there is an embedding 
+is a continuous map from disc $\DD$ such that the boundary curve $f|_{\partial \DD}$ is not null-homotopic in $\partial M$, then there is an embedding 
 $h\: (\DD,\partial \DD)\to (M,\partial M)$ 
 with the same property.
-A proof can be found in \cite{hatcher}.
+\end{thm}
+
+The theorem is due to Christos Papakyriakopoulos, a proof can be found in \cite{hatcher}. 
 
 \parit{Proof.}
 Fix a closed plane curve $\gamma$ in $W\cap \Omega$ which is null-homotopic in $\Omega$. Suppose $\gamma$ is not contractible in  $W\cap \Omega$.
@@ -286,15 +294,14 @@ Since $K$ is simply connected,
 by the globalization theorem (\ref{thm:hadamard-cartan})
 it suffices to show that any point $p\in K$ admits a $\Cat{}{0}$ neighborhood.
 
-If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$.
-Hence the statement follows.
+If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$ which is $\Cat{}0$.
 
 Fix $p\in S$.
 Assume that $k_2(p)>0$.
 Fix a sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
 Let us show that 
 \begin{clm}{}\label{K'-is-CAT}
-$K'$ is a $\Cat{}{0}$ space.
+$K'$ is $\Cat{}{0}$.
 \end{clm}
 
 Consider the coordinate system with the origin at $p$
@@ -308,9 +315,9 @@ can be described as a subgraph
 {x_m\le f(x_1,\dots,x_{m-1}}.\]
 
 Fix $s\in[-\eps,\eps]$.
-Since $\eps$ is small and $k_2(p)>0$, the function 
-\[(x_2,\dots,x_{m-1})\mapsto f(s,x_2,\dots,x_{m-1})\]
-is concave for $|x_i|<2\cdot\eps$ for each $i$
+Since $\eps$ is small and $k_2(p)>0$, the restriction 
+$f|_{x_1=s}$
+is concave in the $(m-2)$-dimensional cube defined by the inequalities $|x_i|<2\cdot\eps$ for $2\le i\le m-1$.
 
 Fix a negative real value $\lambda<k_1(p)$.
 Given $s\in (-\eps,\eps)$,
@@ -347,13 +354,13 @@ equipped with the induced length metric.
 \end{center}
 
 Note that the array $(s^n)$ can be chosen in such a way that 
-$W^\kay$ is arbitrarily Hausdorff close to~$K'$.
+$W^\kay$ is arbitrarily close to~$K'$ in the sense of Hausdorff.
 
 By Proposition~\ref{prop:cat-limit}, 
 in order to prove \ref{K'-is-CAT}, 
 it is sufficient to show the following:
 \begin{clm}{}
-All $W^i$ form $\Cat{}{0}$ spaces.
+All $W^i$ are $\Cat{}{0}$.
 \end{clm}
 
 This claim is proved by induction.
@@ -364,13 +371,13 @@ According to \ref{eq:VcVnV}
 \[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
 Moreover, this is a convex set in $\EE^m$ 
 and therefore it is a convex set in $W^i$ and in $V^{i+1}$.
-By Reshetnyak's gluing theorem, $W^{i+1}$ is $\Cat{}{0}$.
+By Reshetnyak gluing theorem, $W^{i+1}$ is $\Cat{}{0}$.
 Hence the claim follows.
 \claimqeds
 
 Note that we have  proved the following:
 \begin{clm}{}\label{clm-strong2convex}
-$K'$ is a $\Cat{}{0}$ space if $K$ is 
+$K'$ is $\Cat{}{0}$ if $K$ is 
 \index{strongly two-convex set}\emph{strongly two-convex},
 that is, $k_2(p)>0$ at any point $p\in S$.
 \end{clm}
@@ -394,7 +401,7 @@ By \ref{clm-strong2convex}, $K_\delta$ is $\Cat{}{0}$.
 
 Finally as $\delta\to0$, the closed $\eps$-neighborhoods of $p$ in $K_\delta$ 
 converge to the closed $\eps$-neighborhood of $p$ in $K$.
-By Proposition~\ref{prop:cat-limit}, the $\eps$-neighborhood of $p$ are $\Cat{}{0}$.
+By Proposition~\ref{prop:cat-limit}, the $\eps$-neighborhood of $p$ is $\Cat{}{0}$.
 \qeds
 
 
@@ -438,7 +445,8 @@ In other words, every triangle in $K$ looks like the one in the diagram.
 Indeed, assuming the contrary, there will be a simple diangle in $K$,
 that is, two minimizing geodesics with common ends but no other common points.
 The image of this diangle in the plane must bound an open region of $\Omega$ and both sides of the region must be concave in the plane, since otherwise one could shorten the sides by pushing them into~$\Omega$.
-Evidently, there is no such plane diangle with concave sides, a contradiction.
+Evidently, there is no plane diangle %???diangle or lune???
+with concave sides, a contradiction.
 
 Note that it is sufficient to consider only simple triangles $\trig xyz$, 
 that is, triangles whose sides $[xy]$, $[yz]$ and $[zx]$ intersect each other only at the common vertices.
@@ -451,7 +459,7 @@ It remains to solve Exercise~\ref{ex:concave-triangle}.
 \begin{thm}{Exercise}\label{ex:chopping-triangle}
 Assume that $[pq]$ is a common part of two sides $[px]$ and $[py]$ of the triangle $[pxy]$.
 Consider the triangle $[qxy]$ which sides are formed by arcs of the sides of~$[pxy]$.
-Show that if $[qxy]$ then so is~$[pxy]$.
+Show that if $[qxy]$ is thin then so is~$[pxy]$.
 \end{thm}
 
 
@@ -474,7 +482,7 @@ Equip $\Theta$ with the induced length metric.
 Let $\tilde \Theta$ be a metric covering of $\Theta$ 
 such that any closed curve in $\tilde \Theta$ shorter than $2\cdot\pi$ is contractible.
 
-Show that the completion of $\tilde \Theta$ is a  $\Cat{}{1}$ space.
+Show that the completion of $\tilde \Theta$ is $\Cat{}{1}$.
 \end{thm}
 
 \section{Shefel's theorem}
@@ -490,7 +498,7 @@ Therefore, as a consequence of the smooth two-convexity theorem (\ref{thm:set-wi
 \begin{thm}{Corollary}
 Let $K$ be closed connected subset of Euclidean space 
 equipped with the induced length metric.
-Assume $K$ is bounded by a smooth hypersurface and  is a $\Cat{}{0}$ space. 
+Assume $K$ is $\Cat{}{0}$ and bounded by a smooth hypersurface. 
 Then any affine transformation of $K$ is also $\Cat{}{0}$.
 \end{thm}
 
@@ -504,7 +512,7 @@ Here is the main theorem of this section.
 Let $\Omega$ be a connected open set in~$\EE^3$.
 Equip $\Omega$ with the induced length metric
 and denote by $K$ the completion of the universal metric cover of~$\Omega$.
-Then $K$ is a $\Cat{}0$ space  
+Then $K$ is $\Cat{}0$  
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
@@ -518,7 +526,7 @@ Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at a single point.
 Consider the universal cover $K$ of the space obtained by infinitely branching $\EE^4$ along $\Pi_1$ and $\Pi_2$, and equip $K$ with the induced length metric.
 
 Show that 
-$K$ is a $\Cat{}{0}$ space if and only if $\Pi_1\perp\Pi_2$.
+$K$ is $\Cat{}{0}$ if and only if $\Pi_1\perp\Pi_2$.
 
 \end{thm}
 
@@ -529,7 +537,7 @@ The following corollary is a generalization of the smooth two-convexity theorem 
 \begin{thm}{Corollary}\label{cor:shefel}
 Let $K$ be a closed subset in $\EE^3$ 
 bounded by a Lipschitz hypersurface.
-Then $K$ with the induced length metric is a $\Cat{}0$ space  
+Then $K$ with the induced length metric is $\Cat{}0$  
 if and only if the interior of $K$ is two-convex and simply connected.
 \end{thm}
 
@@ -565,8 +573,18 @@ are two-convex.
 Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed unit disc~$\DD$. 
 Then the graph
 \[\Gamma=\set{(x,y,z)\in \EE^3}{z=f(x,y)},\] 
-equipped with induced length metric is a $\Cat{}{0}$ space.
+equipped with induced length metric is $\Cat{}{0}$.
 \end{thm}
+
+\begin{wrapfigure}{r}{20mm}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/K-n(1)}
+\lbl{14,18;$K_n$}
+\lbl[br]{10,5;$\nwarrow$}
+\lbl[tl]{10,5;$\Gamma$}
+%\lbl[r]{0.5,14;$\tfrac1n$}
+%\lbl[r]{0.5,4;$\tfrac1n$}
+\end{lpic}
+\end{wrapfigure}
 
 \parit{Proof.}
 Since the function $f$ is Lipschitz,
@@ -582,8 +600,8 @@ Moreover the boundary of $K_n$ is a Lipschitz surface.
 
 Equip $K_n$ with the induced length metric.
 By Corollary~\ref{cor:shefel},
-$K_n$ is a $\Cat{}{0}$ space.
-It remains to note that as $n\to\infty$ the sequence of space $K_n$ converges to $\Gamma$ in the sense of Gromov--Hausdorff, and apply Proposition~\ref{prop:cat-limit}.
+$K_n$ is $\Cat{}{0}$.
+It remains to note that $K_n\to \Gamma$ in the sense of Gromov--Hausdorff, and apply Proposition~\ref{prop:cat-limit}.
 \qeds
 
 \section{Polyhedral case}
@@ -644,11 +662,10 @@ Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ corres
 
 The main step is to show that $\tilde K$ is $\Cat{}{0}$. 
 
-Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices.
-For example, if \[K=\set{(x,y,z)\in\EE^3}{|z|\le |x|+|y|\le 1}\] and $p$ is the origin then $\Sigma_p$,
+Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices.%
+\footnote{For example, if \[K=\set{(x,y,z)\in\EE^3}{|z|\le |x|+|y|\le 1}\] and $p$ is the origin then $\Sigma_p$,
 the space of directions at $p$,
-is not simply connected and $\tilde K\to K$ branches at~$p$.
-
+is not simply connected and $\tilde K\to K$ branches at~$p$.}
 
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
 denote by $p$ the image of $\tilde p$ in~$K$.
@@ -661,7 +678,7 @@ a small neighborhood of $\tilde p$ in $\tilde K$ is $\Cat{}{0}$.
 Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at~$\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
 is isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
-By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show 
+By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show that
 
 \begin{clm}{}\label{eq:curv=<1}
 $\Sigma_{\tilde p}$ is $\Cat{}{1}$.
@@ -696,7 +713,7 @@ and therefore $\tilde\gamma$ is contractible in~$\tilde\Theta$.
 \section{Two-convex hull}
 
 The following proposition 
-describes a construction which produces $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
+describes a construction which produces the two-convex hull $\Conv_2 \Omega$ of an open set $\Omega\subset\EE^3$.
 This construction is very close to the one given by Samuel Shefel in~\cite{shefel-3D}.
 
 
@@ -759,10 +776,8 @@ is also the interior of a polytope.
 \parit{Proof.}
 Fix a polytope $P$ in~$\EE^3$.
 Set $\Omega=\Int P$.  We may assume that  $\Omega$ is dense in~$P$.
-Denote by $F_1,\dots,F_m$ the facets 
-(2-faces)
-of~$P$. 
-By subdividing $F_i$ if necessary, we may assume that all $F_i$ are convex.
+Denote by $F_1,\dots,F_m$ the facets of~$P$. 
+By subdividing $F_i$ if necessary, we may assume that all $F_i$ are convex polygons.
 
 Set $\Omega'=\Conv_2\Omega$ and let $P'$ be the closure of~$\Omega'$.
 Further, 
@@ -784,10 +799,12 @@ Further, since $\Omega'$ is two-convex we obtain the following:
 Each connected component of the complement $F_i\backslash F'_i$ is convex.
 \end{clm}
 
+{
+
 \begin{wrapfigure}{r}{25mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/shefel-face(1)}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/shefel-face(1)}
 \lbl{5,21;$A$}
-\lbl{13,11;$F'$}
+\lbl{13,11;$F'_i$}
 \lbl[lt]{17,28;$\ell$}
 \end{lpic}
 \end{wrapfigure}
@@ -798,6 +815,8 @@ Then one could rotate the plane of $F_i$ slightly around $\ell$ and move it para
 The latter means that $\Omega$ is not two-convex, 
 a contradiction.
 \claimqeds
+
+}
 
 From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we conclude
 \begin{clm}{}$F'_i$ is a convex polygon for each~$i$.
@@ -931,7 +950,7 @@ Namely, we can say that $K$ is two-convex if the following condition holds: if a
 
 The resulting definition is equivalent to the one used above.
 But unlike our definition it can be generalized to define $k$-convex sets in $\EE^m$ for~$k>2$.
-With this homological definition one can also avoid the use of Papakyriakopoulos' loop theorem, whose proof is quite involved.
+With this homological definition one can also avoid the use the loop theorem, whose proof is quite involved.
 Nevertheless, we chose the definition using homotopies  since it is easier to visualize.
 
 Both definitions work well for the open sets, for general sets one should be able to give a similar definition using  an appropriate homotopy/homology theory.
@@ -965,13 +984,13 @@ of a saddle surface which cannot be presented this way.
 If such a surface $S$ existed, 
 then it would have a point $p$ in its interior 
 and an open set $\Omega$ such that 
-for any  $\eps>0$, we have
-\[\Omega\subset\Conv_2[\Omega\cup \oBall(p,\eps)].\]
+\[\Omega\subset\Conv_2[S\cup \oBall(p,\eps)].\]
+for any  $\eps>0$.
 
 Let us call a subset $K\subset \EE^m$ \emph{strongly two-convex} if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.
 
 \begin{thm}{Question}
-Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\Cat{}{0}$ space? 
+Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ is $\Cat{}{0}$? 
 \end{thm}
 
 More on the subject can be found in the papers \cite{petrunin-metricmin,petrunin-stadler-saddle,petrunin-stadler} by  Stephan Stadler and the third author. 
