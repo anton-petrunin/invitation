@@ -187,7 +187,7 @@ Note that any open set is locally convex by  definition.
 \section{Length spaces}\label{sec:intrinsic}
 
 A \emph{curve} is defined as a continuous map from a real interval to a space.
-If the real interval is $[0,1]$ then the curve is called a \emph{path}.
+If the real interval is $[0,1]$, then the curve is called a \emph{path}.
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and
@@ -199,7 +199,7 @@ We define the \index{length}\emph{length} of $\alpha$ as
 \end{thm}
 
 Directly from the definition, it follows that if a path $\alpha\:[0,1]\to\spc{X}$ connects two points $x$ and $y$ 
-(that is, $\alpha(0)=x$ and $\alpha(1)=y$) then 
+(that is, if $\alpha(0)=x$ and $\alpha(1)=y$), then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 
 Let $A$ be a subset of a metric space $\spc{X}$.
@@ -214,12 +214,12 @@ this metric will be called the \index{induced length metric}\emph{induced length
 
 If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
-then $\spc{X}$ is called a \index{length space}\emph{length space}.
+then $\spc{X}$ is called a \index{length space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length metric}\emph{length metric}.\label{page:length metric}
 
 If $f\:\~{\spc{X}}\to\spc{X}$ is a covering,
 then a length metric on $\spc{X}$ can be lifted to $\~{\spc{X}}$
 by declaring 
-\[\length\gamma=\length(f\circ\gamma)\]
+\[\length_{\~{\spc{X}}}\gamma=\length_{\spc{X}}(f\circ\gamma)\]
 for any curve $\gamma$ in $\~{\spc{X}}$.
 The space $\~{\spc{X}}$ with the described metric is called \index{metric cover}\emph{metric cover} of $\spc{X}$.
 
@@ -607,7 +607,7 @@ Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 Prove that the sum of adjacent angles is at least~$\pi$.
 
 More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
-If $p\in \l] x y \r[$ then 
+If $p\in \l] x y \r[$, then 
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
 \end{thm}
@@ -897,11 +897,11 @@ $(I_m)$ and $(N_m)$ with $I_1=N_1=1$.
 \begin{thm}{Exercise}\label{ex:compact-proper-GH}
 Let $\spc{X}_n$ be a sequence of metric spaces which  admits 
 two convergences $\spc{X}_n\xto{\rho}\spc{X}_\infty$ and $\spc{X}_n\xto{\rho'}\spc{X}_\infty'$.
-\begin{subthm}{}
+\begin{subthm}{ex:compact-proper-GH:a}
 If  $\spc{X}_\infty$ is compact, then $\spc{X}_\infty\iso\spc{X}_\infty'$.
 \end{subthm}
 
-\begin{subthm}{}
+\begin{subthm}{ex:compact-proper-GH:b}
 If  $\spc{X}_\infty$ is proper and there is a sequence of points $x_n\in \spc{X}_n$ 
 which converges in both convergences, 
  then $\spc{X}_\infty\iso\spc{X}_\infty'$.
