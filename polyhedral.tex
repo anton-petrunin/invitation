@@ -3,9 +3,9 @@
 
 In this chapter we introduce locally $\Cat{}{0}$ spaces and prove the globalization theorem which provides a sufficient condition for locally $\Cat{}{0}$ spaces to be globally $\Cat{}{0}$.
 
-The theorem implies in particular, that the universal metric cover of a locally $\Cat{}{0}$ proper length space is a $\Cat{}{0}$ proper length space. 
-It follows that any locally  $\Cat{}{0}$ proper length space is aspherical; 
-that is, its universal cover is contractible.
+The theorem implies in particular, that the universal metric cover of a proper length locally $\Cat{}{0}$ space is a proper length $\Cat{}{0}$ space. 
+It follows that any proper length locally $\Cat{}{0}$ space is aspherical; 
+that is, its universal cover is contractible. %??? I do not think "proper length locally $\Cat{}{0}$" is easy to read???
 
 This globalization theorem leads to a {}\emph{construction toy set}, described by the flag condition (\ref{thm:flag}).
 Playing with this toy set, we produce examples of exotic aspherical spaces.
@@ -49,14 +49,14 @@ as $n\to\infty$.
 \parit{Proof; $\Cat{}{0}$ case.} 
 Fix $t\in[0,1]$.  
 Let $R>0$ be the value such that $\cBall[\gamma_\infty(t),R]$ 
-forms a $\Cat{}{0}$ proper length space.
+forms a proper length $\Cat{}{0}$ space.
 
 Assume a local geodesic $\sigma$  is shorter than $R/2$ and intersects the ball $\oBall(\gamma_\infty(t),R/2)$.
 Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$.
 Hence, by Proposition~\ref{cor:loc-geod-are-min}, $\sigma$ is a geodesic.  
 In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less is a geodesic.
 
-Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a $\Cat{}{0}$ proper length space, by Theorem~\ref{thm:cat-unique},
+Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a proper length $\Cat{}{0}$ space, by Theorem~\ref{thm:cat-unique},
 geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 which contains a neighborhood of $t$ in $[0,1]$
@@ -74,7 +74,7 @@ This statement was originally proved by the first author and Richard Bishop usin
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
-Let $\spc{U}$ be a locally $\Cat{}{0}$  proper length space, 
+Let $\spc{U}$ be a proper length locally $\Cat{}{0}$ space, 
 and $\gamma\:[0,1]\to\spc{U}$ be a 
  path.
 
@@ -88,13 +88,13 @@ $\map\circ\hat\gamma=\gamma$.
 
 If $\length\gamma<\pi$,
 then the same holds in $\Cat{}{1}$ case.
-Namely we assume that $\spc{U}$ is a $\Cat{}{1}$ proper length space and construct a $\Cat{}{1}$ proper length space $\spc{N}$ with the same property as above.
+Namely we assume that $\spc{U}$ is a proper length $\Cat{}{1}$ space and construct a proper length $\Cat{}{1}$ space $\spc{N}$ with the same property as above.
 \end{thm}
 
 \parit{Proof.} 
 Fix $r>0$ so that for each $t\in[0,1]$,
 the closed ball
-$\cBall[\gamma(t),r]$ forms a $\Cat{}{\kappa}$ proper length space.
+$\cBall[\gamma(t),r]$ forms a proper length $\Cat{}{\kappa}$ space.
 
 \begin{center}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/patching-balls(1)}
@@ -115,7 +115,7 @@ Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along~$\sim$.
 
 Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
-we conclude that $\spc{N}$ is a $\Cat{}{0}$ proper length space.
+we conclude that $\spc{N}$ is a proper length $\Cat{}{0}$ space.
 
 For $t\in[t^{i-1},t^i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in~$\spc{N}$.
 Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\gamma$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\gamma(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
@@ -134,18 +134,18 @@ The following two corollaries follow from:
 and (3) Theorem \ref{thm:cat-unique} on uniqueness of geodesics.
 
 \begin{thm}{Corollary}\label{cor:discrete-paths}
-If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space, then for any pair of points $p,q\in\spc{U}$, the space of all local geodesic paths from $p$ to $q$ is discrete;
+If $\spc{U}$ is a proper length locally $\Cat{}{0}$ space, then for any pair of points $p,q\in\spc{U}$, the space of all local geodesic paths from $p$ to $q$ is discrete;
 that is, for any local geodesic path $\gamma$ connecting $p$ to $q$, there is $\eps>0$ such that for any other local geodesic path $\delta$ from $p$ to $q$ we have
 $\dist{\gamma(t)}{\delta(t)}{\spc{U}}>\eps$ for some $t\in[0,1]$.
 
-Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space, then for any pair of points $p,q\in\spc{U}$,  the space of all local geodesic paths shorter than $\pi$ from $p$ to $q$ is discrete.
+Analogously, if $\spc{U}$ is a proper length locally $\Cat{}{1}$ space, then for any pair of points $p,q\in\spc{U}$,  the space of all local geodesic paths shorter than $\pi$ from $p$ to $q$ is discrete.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:path-geod}
-If $\spc{U}$ is a locally $\Cat{}{0}$ proper length space, then 
+If $\spc{U}$ is a proper length locally $\Cat{}{0}$ space, then 
 for any path $\alpha$ there is a choice of  a local geodesic path $\gamma_\alpha$  connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path, then $\gamma_\alpha=\alpha$. 
 
-Analogously, if $\spc{U}$ is a locally $\Cat{}{1}$ proper length space, then 
+Analogously, if $\spc{U}$ is a proper length locally $\Cat{}{1}$ space, then 
 for any path $\alpha$ shorter than $\pi$,  
 there is a choice of a local geodesic path $\gamma_\alpha$ shorter than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path, then $\gamma_\alpha=\alpha$.
 \end{thm}
@@ -181,7 +181,7 @@ The \index{product of paths}\emph{product} of two paths  will be denoted with ``
 if two paths $\alpha$ and $\beta$ connect the same pair of points, then the product $\bar\alpha*\beta$ is a closed curve.
 
 \begin{thm}{Exercise}\label{ex:null-homotopic}
-Assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space. 
+Assume $\spc{U}$ is a proper length locally $\Cat{}{1}$ space. 
 Consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary~\ref{cor:path-geod}.
 
 Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
@@ -211,14 +211,14 @@ Mikhael Gromov in \cite[p.119]{gromov:hyp-groups}.
 A detailed proof of Gromov's statement was given by Werner Ballmann in \cite{ballmann:cartan-hadamard} when $\spc{U}$ is proper,
 and by the first author and Richard Bishop in \cite{a-b:h-c} in more generality;  also see references in our book~\cite{AKP}.
 
-For  $\Cat{}{1}$ proper spaces, the globalization theorem was proved by Brian Bowditch in~\cite{bowditch}.
+For proper $\Cat{}{1}$ spaces, the globalization theorem was proved by Brian Bowditch in~\cite{bowditch}.
 
 \begin{thm}{Globalization theorem}
 \label{thm:hadamard-cartan}
-Any simply connected proper locally $\Cat{}{0}$ length space 
+Any simply connected proper length locally $\Cat{}{0}$ space 
 is $\Cat{}{0}$.
 
-Analogously, assume $\spc{U}$ is a locally $\Cat{}{1}$ proper length space
+Analogously, assume $\spc{U}$ is a proper length locally $\Cat{}{1}$ space
 such that any closed curve $\gamma\:\SS^1\to \spc{U}$ shorter than $2\cdot\pi$
 is null-homotopic in the class of closed curves shorter than $2\cdot\pi$.
 Then $\spc{U}$ is $\Cat{}{1}$.
@@ -239,10 +239,10 @@ The proof of the globalization theorem relies on the following theorem,
 which essentially is \cite[Satz 9]{alexandrov:devel}.  
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
-A locally $\Cat{}{0}$ proper length space $\spc{U}$ is $\Cat{}{0}$
+A proper length locally $\Cat{}{0}$ space $\spc{U}$ is $\Cat{}{0}$
 if and only if all pairs of points in $\spc{U}$  are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 
-Analogously, a locally $\Cat{}{1}$ proper length space $\spc{U}$ is $\Cat{}{1}$ 
+Analogously, a proper length locally $\Cat{}{1}$ space $\spc{U}$ is $\Cat{}{1}$ 
 if and only if all pairs of points in $\spc{U}$ at distance less than $\pi$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
@@ -305,7 +305,7 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is thin.
 \qeds
 
 \parit{Proof of the globalization theorem; $\Cat{}{0}$ case.}
-Let $\spc{U}$ be a simply connected, locally $\Cat{}{0}$ proper length space.
+Let $\spc{U}$ be a simply connected, proper length locally $\Cat{}{0}$ space.
 Given a path $\alpha$ in $\spc{U}$, 
 denote by $\gamma_\alpha$ the local geodesic path provided by Corollary \ref{cor:path-geod}.
 Since the map $\alpha\mapsto\gamma_\alpha$ is continuous, by Corollary~\ref{cor:discrete-paths}
@@ -350,7 +350,7 @@ Formulate and prove the analogous statement for $\Cat{}{1}$ spaces.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:branching-cover} 
-Let $\spc{U}$ be a $\Cat{}{0}$ proper length space.
+Let $\spc{U}$ be a proper length $\Cat{}{0}$ space.
 Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric  double covering branching along a geodesic.
 Show that $\tilde{\spc{U}}$ is $\Cat{}{0}$.
 \end{thm}
@@ -515,7 +515,7 @@ By that reason flag complex also called \index{clique complex}\emph{clique compl
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
 
 Use the flag condition (see \ref{thm:flag} below)
-to conclude that any finite simplicial complex is homeomorphic to a $\Cat{}{1}$ proper length space.
+to conclude that any finite simplicial complex is homeomorphic to a proper length $\Cat{}{1}$ space.
 
 \end{thm}
 
@@ -770,8 +770,8 @@ if and only if its cubical analog is aspherical.
 
 
 By the globalization theorem (\ref{thm:hadamard-cartan}),
-any $\Cat{}{0}$ proper length space is contractible.
-Therefore all complete, locally $\Cat{}{0}$ proper length spaces 
+any proper length $\Cat{}{0}$ space is contractible.
+Therefore all complete, proper length locally $\Cat{}{0}$ spaces 
 are \index{aspherical}\emph{aspherical};
 that is, they have contractible universal covers.
 This observation can be used to construct examples of aspherical spaces. 
