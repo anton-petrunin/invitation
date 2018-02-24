@@ -243,8 +243,7 @@ The spherical case is done in the same way.
 \begin{thm}{Exercise}\label{ex:geod-CBA}
 Assume $\spc{U}$ is a proper length $\Cat{}{\kappa}$ space
  with extendable geodesics;
-that is, any geodesic in $\spc{U}$
-is an arc in an infinite local geodesic defined on~$\RR$.
+that is, any geodesic is an arc in local geodesic $\RR\to \spc{U}$.
 
 Show that the space of geodesic directions at any point in $\spc{U}$ is complete.
 \end{thm}
@@ -632,7 +631,35 @@ This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ e
 Hence the sublemma.
 \qeds
 
+{
 
+\begin{wrapfigure}{r}{35mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
+\lbl[br]{13,35;$x$}
+\lbl[bl]{25,37;$y$}
+\lbl[b]{17.7,26.5;$z$}
+\lbl{8,22;$A$}
+\lbl[t]{25,23;$B$}
+\lbl[t]{3,33;$\dot A$}
+\lbl[t]{31,29;$\dot B$}
+\end{lpic}
+\end{wrapfigure}
+
+In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
+
+\begin{thm}{Exercise}\label{ex:supporting-planes}
+Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
+Given two points $x,y\in \EE^m$  let $f(z)=\dist{x}{z}{}+\dist{y}{z}{}$.
+
+Let $z_0\in A\cap B$ be  a point of minimum of $f|_{A\cap B}$.
+
+Show that there are half-spaces $\dot A$ and $\dot B$ such that
+$\dot A\supset A$ and $\dot B\supset B$
+and $z_0$ is also a point of minimum of the restriction $f|_{\dot A\cap \dot B}$.
+
+\end{thm}
+
+}
 
 \parit{Proof of \ref{lem:end-to-end-convex}.}
 Fix arbitrary $x,y\in \EE^m$.
@@ -652,32 +679,6 @@ Indeed, since the puff pastry for 1-array $(B)$ is end-to-end convex,
 Proposition~\ref{prop:A-check-A} together with Observation~\ref{obs:end-to-end-convex}
 imply \ref{clm:z in xy} in  case $z$ lies in the interior of~$A$.
 In the same way we can treat the case when $z$ lies in the interior of~$B$.
-
-Further we will use the following exercise in convex geometry
-
-\begin{thm}{Exercise}\label{ex:supporting-planes}
-Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
-Given two points $x,y\in \EE^m$  let $f(z)=\dist{x}{z}{}+\dist{y}{z}{}$.
-
-Let $z_0\in A\cap B$ be  a point of minimum of $f|_{A\cap B}$.
-
-Show that there are half-spaces $\dot A$ and $\dot B$ such that
-$\dot A\supset A$ and $\dot B\supset B$
-and $z_0$ is also a point of minimum of the restriction $f|_{\dot A\cap \dot B}$.
-
-\end{thm}
-
-\begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
-\lbl[br]{13,35;$x$}
-\lbl[bl]{25,37;$y$}
-\lbl[b]{17.7,26.5;$z$}
-\lbl{8,22;$A$}
-\lbl[t]{25,23;$B$}
-\lbl[t]{3,33;$\dot A$}
-\lbl[t]{31,29;$\dot B$}
-\end{lpic}
-\end{wrapfigure}
 
 Note that $\EE^{m}$ admits 
 an
