@@ -398,6 +398,11 @@ Since $K$ is locally convex,
 it is locally path connected.
 Since $K$ is connected, the latter implies that $K$ is path connected.
 
+Fix two points $x,y\in K$. 
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
+By Theorem~\ref{thm:cat-unique}, the geodesic $[x\alpha(s)]$ 
+is uniquely defined and depends continuously on~$s$.
+
 \begin{center}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/loc-convex(1)}
 \lbl{25,15;$K$}
@@ -408,11 +413,6 @@ Since $K$ is connected, the latter implies that $K$ is path connected.
 \lbl[br]{42,19.5,25;$\alpha$}
 \end{lpic}
 \end{center}
-
-Fix two points $x,y\in K$. 
-Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
-By Theorem~\ref{thm:cat-unique}, the geodesic $[x\alpha(s)]$ 
-is uniquely defined and depends continuously on~$s$.
 
 If $[xy]=[x\alpha(1)]$ does not completely lie in $K$, then 
 there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
@@ -525,20 +525,21 @@ Since $\left[zz_0\right[\cap A\cap B\ne\emptyset$,
 the latter contradicts that $z_0$ is minimum point of $f$ on $A\cap B$.
 \qeds
 
+\parbf{Exercise~\ref{ex:compact-walls}.}
+Fix two open balls $B_1\z=\oBall(0,r_1)$ and $B_2=\oBall(0,r_2)$
+such that 
+\[B_1\subset A^i\subset B_2\]
+for each wall~$A^i$.
+
+
 \begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/compact-walls(1)}
+\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/compact-walls(1)}
 \lbl{21.5,9.5;{\color{white}$B_1$}}
 \lbl{27,27;$B_2$}
 \lbl[tr]{10,20;$A^i$}
 \lbl[tr]{34,12;$A^j$}
 \end{lpic}
 \end{wrapfigure}
-
-\parbf{Exercise~\ref{ex:compact-walls}.}
-Fix two open balls $B_1\z=\oBall(0,r_1)$ and $B_2=\oBall(0,r_2)$
-such that 
-\[B_1\subset A^i\subset B_2\]
-for each wall~$A^i$.
 
 Note that all the intersections of  the walls  have $\eps$-wide corners for
 \[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
@@ -578,12 +579,6 @@ this class of spaces includes compact length locally $\Cat{}{\kappa}$ spaces.
 
 \medskip
 
-
-Assume there is  a nontrivial homotopy class of curves.
-
-Consider a shortest noncontractible closed curve $\gamma$ in the space;
-note that it exists.
-
 \begin{wrapfigure}{r}{25mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/geod-circle(1)}
 \lbl[tr]{5,0;$p$}
@@ -593,7 +588,10 @@ note that it exists.
 \end{lpic}
 \end{wrapfigure}
 
+Assume there is  a nontrivial homotopy class of curves.
 
+Consider a shortest noncontractible closed curve $\gamma$ in the space;
+note that it exists.
 
 Assume that $\gamma$ is not a geodesic circle,
 that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
