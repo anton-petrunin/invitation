@@ -41,7 +41,7 @@ The latter is not true: $\partial A$ is a smooth convex surface, and has strictl
 \parbf{$\bm{B}$.} Yes, $B$ is $\Cat{}{0}$. 
 
 Evidently $B$ is a convex closed set in~$\EE^3$. 
-Therefore the length metric on $B$ coincides with Euclidean metric
+Therefore the length metric on $B$ coincides with the Euclidean metric
 and $\Cat{}{0}$ comparison holds.
 
 \parbf{$\bm{C}$.} Yes, $C$ is $\Cat{}{0}$, 
@@ -137,10 +137,11 @@ Let $K\subset \EE^m$ be a closed subset.
 
 Assume that the boundary of $K$ is a smooth hypersurface~$S$.
 Consider the unit normal vector field $\nu$ on $S$ that  points outside of~$K$.
-Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$ (by this we mean that if $K$ is convex, then  $k_1\ge 0$).
+{\color{red}Denote by $k_1\le \dots\le k_{m-1}$ the principal curvatures of $S$ with respect to $\nu$ (note that if $K$ is convex, then  $k_1\ge 0$)}
+%Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$ (by this we mean that if $K$ is convex, then  $k_1\ge 0$).
 
 Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
-Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary neighborhood of~$p$.
+Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary small neighborhood of~$p$.
 \end{thm}
 
 The proof is taken from \cite[\S\textonehalf]{gromov:SaGMC}, but we added  some details.
@@ -274,7 +275,7 @@ This theorem is a baby case of the main result in \cite{a-b-b:CBA-m-w-b}, which 
 Denote by $S$  and by $\Omega$ the boundary and the interior of $K$ respectively. 
 Since $K$ is connected and $S$ is smooth, $\Omega$ is also connected.
 
-Denote by $k_1(p)\le\dots\le k_{m-1}(p)$ the principle curvatures of $S$ at $p\in S$ with respect to the normal vector $\nu(p)$ pointing out of~$K$.
+Denote by $k_1(p)\le\dots\le k_{m-1}(p)$ the principal curvatures of $S$ at $p\in S$ with respect to the normal vector $\nu(p)$ pointing out of~$K$.
 By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2(p)\ge 0$ for any $p\in S$.
 
 \begin{wrapfigure}{r}{35mm}
@@ -305,7 +306,7 @@ $K'$ is $\Cat{}{0}$.
 \end{clm}
 
 Consider the coordinate system with the origin at $p$
-and the principle directions and $\nu(p)$ as the coordinate directions.
+and the principal directions and $\nu(p)$ as the coordinate directions.
 For small $\eps>0$, the set $K'$ 
 can be described as a subgraph
 \[K'
@@ -455,8 +456,8 @@ It remains to solve Exercise~\ref{ex:concave-triangle}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:chopping-triangle}
-Assume that $[pq]$ is a common part of two sides $[px]$ and $[py]$ of the triangle $[pxy]$.
-Consider the triangle $[qxy]$ which sides are formed by arcs of the sides of~$[pxy]$.
+Assume that $[pq]$ is a common part of the two sides $[px]$ and $[py]$ of the triangle $[pxy]$.
+Consider the triangle $[qxy]$ whose sides are formed by arcs of the sides of~$[pxy]$.
 Show that if $[qxy]$ is thin, then so is~$[pxy]$.
 \end{thm}
 
@@ -477,7 +478,7 @@ It will be used in the next section.
 \begin{thm}{Exercise}\label{ex:bishop-sphere}
 Let $\Theta$ be an open connected subset of the unit sphere $\SS^2$ which does not contain a closed hemisphere.
 Equip $\Theta$ with the induced length metric.
-Let $\tilde \Theta$ be a metric covering of $\Theta$ 
+Let $\tilde \Theta$ be a metric cover of $\Theta$ 
 such that any closed curve in $\tilde \Theta$ shorter than $2\cdot\pi$ is contractible.
 
 Show that the completion of $\tilde \Theta$ is $\Cat{}{1}$.
