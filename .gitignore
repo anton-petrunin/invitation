@@ -20,3 +20,4 @@
 *.bts
 *.blg
 *conflicted copy*
+*.DS_Store
