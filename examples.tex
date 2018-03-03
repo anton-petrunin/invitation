@@ -658,7 +658,7 @@ Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ corres
 The main step is to show that $\tilde K$ is $\Cat{}{0}$. 
 
 Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ extends to a covering map $\tilde K\to K$ which might be branching at some vertices.%
-\footnote{For example, if \[K=\set{(x,y,z)\in\EE^3}{|z|\le |x|+|y|\le 1}\] and $p$ is the origin, then $\Sigma_p$,
+\footnote{For example, if $K=\set{(x,y,z)\in\EE^3}{|z|\le |x|+|y|\le 1}$ and $p$ is the origin, then $\Sigma_p$,
 the space of directions at $p$,
 is not simply connected and $\tilde K\to K$ branches at~$p$.}
 
@@ -669,6 +669,9 @@ By the globalization theorem (\ref{thm:hadamard-cartan}), it is sufficient to sh
 \begin{clm}{}\label{eq:curv=<0}
 a small neighborhood of $\tilde p$ in $\tilde K$ is $\Cat{}{0}$.
 \end{clm}
+
+%Is it obvious that $\tilde (K)$ is simply connected? Also, in the statement of the theorem  the completion of the universal cover of $\Omega$ is denoted by $K$. here it's $\tilde K$. 
+%It's better to use the same notations.
 
 Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at~$\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
@@ -771,6 +774,7 @@ is also the interior of a polytope.
 \parit{Proof.}
 Fix a polytope $P$ in~$\EE^3$.
 Set $\Omega=\Int P$.  We may assume that  $\Omega$ is dense in~$P$.
+%why can we assume this?
 Denote by $F_1,\dots,F_m$ the facets of~$P$. 
 By subdividing $F_i$ if necessary, we may assume that all $F_i$ are convex polygons.
 
@@ -806,7 +810,7 @@ Each connected component of the complement $F_i\backslash F'_i$ is convex.
 
 Indeed, assume a connected component $A$ of $F_i\backslash F'_i$ fails to be convex.
 Then there is a supporting line $\ell$ to $F'_i$ touching $F'_i$ at a single point in the interior of~$F_i$.
-Then one could rotate the plane of $F_i$ slightly around $\ell$ and move it parallel to cut a ``cap'' from the complement of~$\Omega$.  
+Then one could rotate the plane of $F_i$ slightly around $\ell$ and move it parallelly to cut a ``cap'' from the complement of~$\Omega$.  
 The latter means that $\Omega$ is not two-convex, 
 a contradiction.
 \claimqeds
@@ -840,7 +844,7 @@ Prove the last statement.\qeds
 \section{Proof of Shefel's theorem}
 
 \parit{Proof of \ref{thm:shefel}.}
-The ``only if'' part can be proved the same way as in the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}) with additional use of Exercise~\ref{ex:inner-support}.
+The ``only if'' part can be proved in the same way as in the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}) with the additional use of Exercise~\ref{ex:inner-support}.
 
 \parit{``If''-part.}
 Suppose $\Omega$ is two-convex. 
@@ -869,7 +873,7 @@ Denote by $\tilde K'$ the completion of~$\tilde\Omega'$.
 By Lemma~\ref{lem:poly-shefel}, $\tilde K'$ is $\Cat{}0$.
 
 Since $\Int P$ is simply connected, the embedding $\Int P\hookrightarrow \Omega'$
-admits a lifting $\iota\:\Int P\hookrightarrow \tilde K'$.
+admits a lift $\iota\:\Int P\hookrightarrow \tilde K'$.
 By construction, $\iota$ almost preserves the distances between the points $x^1,x^2,x^3,x^4$;
 namely 
 \begin{align*}
@@ -928,13 +932,13 @@ Then $M$ is locally $\Cat{}{\kappa}$.
 
 \begin{thm}{Corollary}
 Let $M$ be a Riemannian manifold with boundary~$\partial M$. 
-Assume all the sectional curvatures of $M$ and $\partial M$ are bounded above by~$\kappa$.
+Assume that all the sectional curvatures of $M$ and $\partial M$ are bounded above by~$\kappa$.
 Then $M$ is locally $\Cat{}{\kappa}$.
 \end{thm}
 
 Under the name \emph{$(n-2)$-convex sets}, 
 two-convex sets in $\EE^n$ were introduced by Mikhael Gromov in~\cite{gromov:SaGMC}.
-In addition to the inheritance of upper curvature bound by two-convex sets discussed in this chapter, 
+In addition to the inheritance of upper curvature bounds by two-convex sets discussed in this chapter, 
 these sets appear as the maximal open sets with vanishing curvature in  Riemannian manifolds with non-negative or non-positive sectional curvature.
 This observation was made first by Sergei Buyalo for nonpositive curvature \cite[Lemma 5.8]{buyalo}, 
 and extended by Dmitri Panov and the third author in~\cite{panov-petrunin:sweeping}.
@@ -969,7 +973,8 @@ By a recent result of Alexander Lytchak and Stefan Wenger \cite{lytchak-wenger},
 From Corollary \ref{cor:shefel}, it follows that if there is a counterexample to Shefel's conjecture, then an arbitrary neighborhood of some point on the surface cannot be presented as a graph in any coordinate system.
 
 Also note that a counterexample could not admit an approximation by smooth saddle surfaces. 
-Examples of saddle surfaces which do not admit such approximation are not known so far.
+Thus far, there are no known examples of saddle surfaces which do not admit such approximation.
+
 
 Note that from the proof of Corollary \ref{cor:shefel},
 it follows that if a two-convex set $S$ can be presented as an intersection of a nested sequence of simply connected open two-convex sets, then $S$ equipped with the length-metric is locally $\Cat{}{0}$.
