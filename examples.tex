@@ -508,8 +508,8 @@ Here is the main theorem of this section.
 \begin{thm}{Two-convexity theorem}\label{thm:shefel}
 Let $\Omega$ be a connected open set in~$\EE^3$.
 Equip $\Omega$ with the induced length metric
-and denote by $K$ the completion of the universal metric cover of~$\Omega$.
-Then $K$ is $\Cat{}0$  
+and denote by $\~K$ the completion of the universal metric cover of~$\Omega$.
+Then $\~K$ is $\Cat{}0$  
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
@@ -520,10 +520,10 @@ The following exercise shows that the analogous statement does not hold in highe
 
 \begin{thm}{Exercise}\label{ex:two-planes}
 Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at a single point.
-Consider the universal cover $K$ of the space obtained by infinitely branching $\EE^4$ along $\Pi_1$ and $\Pi_2$, and equip $K$ with the induced length metric.
+Consider the universal cover $\~K$ of the space obtained by infinitely branching $\EE^4$ along $\Pi_1$ and $\Pi_2$, and equip $\~K$ with the induced length metric.
 
 Show that 
-$K$ is $\Cat{}{0}$ if and only if $\Pi_1\perp\Pi_2$.
+$\~K$ is $\Cat{}{0}$ if and only if $\Pi_1\perp\Pi_2$.
 
 \end{thm}
 
@@ -632,7 +632,7 @@ Nevertheless, is easy to see that $K$ is always a polyhedral space.
 The two-convexity theorem (\ref{thm:shefel}) holds if the set $\Omega$ is the interior of a polytope.
 \end{thm}
 
-The statement might look obvious, but there is a hidden obstacle in the proof. %there is an underwater stone in the proof. 
+The statement might look obvious, but there is a hidden obstacle in the proof.
 The proof uses the following two exercises.
 
 \begin{thm}{Exercise}\label{ex:hemisphere}
@@ -670,8 +670,7 @@ By the globalization theorem (\ref{thm:hadamard-cartan}), it is sufficient to sh
 a small neighborhood of $\tilde p$ in $\tilde K$ is $\Cat{}{0}$.
 \end{clm}
 
-%Is it obvious that $\tilde (K)$ is simply connected? Also, in the statement of the theorem  the completion of the universal cover of $\Omega$ is denoted by $K$. here it's $\tilde K$. 
-%It's better to use the same notations.
+%Is it obvious that $\tilde (K)$ is simply connected? 
 
 Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at~$\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
@@ -773,8 +772,9 @@ is also the interior of a polytope.
 
 \parit{Proof.}
 Fix a polytope $P$ in~$\EE^3$.
-Set $\Omega=\Int P$.  We may assume that  $\Omega$ is dense in~$P$.
-%why can we assume this?
+Set $\Omega=\Int P$.
+We may assume that  $\Omega$ is dense in~$P$
+(if not, redefine $P$ as the closure of $\Omega$).
 Denote by $F_1,\dots,F_m$ the facets of~$P$. 
 By subdividing $F_i$ if necessary, we may assume that all $F_i$ are convex polygons.
 
