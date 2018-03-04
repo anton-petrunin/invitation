@@ -1,0 +1,31 @@
+p.1, "familiarity with any of the above sources." -> sources below
+
+p.5, the vertical bar | for "such that" looks odd when juxtaposed with the distance |x-y|. Change it to a colon instead?
+
+p.8, line 1, "parametrization of local geodesic" -> of a local geodesic.
+
+p.8, line 5, Is there a reason not to start with [pq] in the definition of a triangle? On the last line of page 22 you do.
+
+p.7 and 8, There are two different notations for definitions, three bars and equal sign with "def" above. Pick just one?
+
+p.9, line 3, This appears to be a definition, so this should be indicated in the equal sign. But the notation is conflicting with the distance notation on page 5 in the case A is the whole space. For instance, you could write that a length space is one such that |x-y|_X = |x-y| for every x and y... One way to resolve this is not to emphasize where the distance is measured earlier on. There are places afterwards where this conflicts, e.g. on p.16 in the definition of distance to a set, unless you assume X is a length space.
+
+p.9, " [a] metric cover".
+
+p.9, penultimate line. This can be confusing. I would write both inequalities.
+
+p.11, section 1.5. "same sides" -> same side lengths.
+
+p.16, section 1.8. Shouldn't "Hausdorff convergence" be italicized instead? That's the term that is used.
+
+p.16, defn 1.8.1. "Hausdorff limit" should be emphasized.
+
+p.17, line 1. "any fixed x" should be "every x"
+
+p.17-19. There are two things named "Selection Theorem".
+
+p.21, section 2.1. Add "The" to the title. 2.1 4 looks bad.
+
+p.22, paragraph 3. "know [the] 6 distances between all [] pairs of points in the quadruple"
+
+p.22, exercise 2.1.4. I think that "complete CAT(0) length space" sounds better. Similarly for later occurences.
