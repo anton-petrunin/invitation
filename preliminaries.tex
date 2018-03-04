@@ -1,4 +1,4 @@
-%%!TEX root = invitation.tex
+%%!TEX root = invitation-springer.tex
 \chapter{Preliminaries}\label{prelim}
 
 In this chapter we fix some conventions and recall the main definitions.
@@ -147,7 +147,7 @@ that is,
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
 A curve $\gamma\:\II\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
-A constant speed parametrization of local geodesic by the unit interval $[0,1]$ is called a \index{geodesic!local geodesic}\emph{local geodesic path}. 
+A constant speed parametrization of a local geodesic by the unit interval $[0,1]$ is called a \index{geodesic!local geodesic}\emph{local geodesic path}. 
 
 
 \parbf{Triangles.}
@@ -369,7 +369,7 @@ $p,q,r\in \spc{X}$.
 Let us define the \index{model triangle}\emph{model triangle} $\trig{\~p}{\~q}{\~r}$ 
 (briefly, 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$%
-\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same sides; that is,
+\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same side lengths; that is,
 \[\dist{\~p}{\~q}{}=\dist{p}{q}{},
 \quad\dist{\~q}{\~r}{}=\dist{q}{r}{},
 \quad\dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
@@ -717,10 +717,10 @@ $$\dist{A}{}{}(x)\df\inf\set{\dist{a}{x}{\spc{X}}}{a\in A}.$$
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
 Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$, 
-a closed set $A_\infty\subset \spc{X}$ is called the Hausdorff limit of $(A_n)_{n=1}^\infty$,
+a closed set $A_\infty\subset \spc{X}$ is called the \emph{Hausdorff limit} of $(A_n)_{n=1}^\infty$,
 briefly $A_n\to A_\infty$, if 
 $$\dist{A_n}{}{}(x)\to\dist{A_\infty}{}{}(x)\ \ \t{as}\ \ n\to\infty$$
-for any fixed $x\in \spc{X}$.
+for every $x\in \spc{X}$.
 
 In this case, the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{converge in the sense of Hausdorff}\emph{converge in the sense of Hausdorff}.
 \end{thm}
