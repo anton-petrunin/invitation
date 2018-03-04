@@ -790,23 +790,12 @@ is null-homotopic in  $\spc X\backslash K$.
 Recall that path connected spaces are not empty by definition.
 Therefore compact spaces are not simply connected at infinity.
 
-The following proposition provides an example of exotic aspherical manifold of dimension $m\ge4$.
-It comes with a triangulation of special type; namely the link  of every simplex $\Delta$ is homeomorphic to the sphere of dimension $m-1-\dim\Delta$.
-Manifolds with such triangulations are called \index{piecewise linear manifold}\emph{piecewise linear}.
- 
-It noteworthy that some manifolds admit triangulations which do not describe piecewise linear manifolds.
-For example the sphere $\SS^5$ is homeomorphic to the double suspension over the Poincare sphere $\Sigma^3$.
-A triangulation of $\Sigma^3$ induces a triangulation of $\SS^5$ in which some 1-dimensional simplices have $\Sigma^3$ as link.
-Therefore, with this triangulation, $\SS^5$ is not piecewise linear.
-Manifolds with arbitrary triangulations are considered in Proposition~\ref{prop:loc-CAT-mnfld}
-%%%???please check last two pars; maybe it is a good idea to remove all PL-parts from the proposition and move it to the comments???
-
-
 The following example was constructed by Michael Davis in \cite{davis-noneuclidean}.
 
 \begin{thm}{Proposition}\label{prop:aspherical}
 For any  $m\ge 4$ there is a closed aspherical 
-$m$-dimensional piecewise linear manifold
+$m$-dimensional %piecewise linear 
+manifold
 whose universal cover is not simply connected at infinity.
 
 In particular, the universal cover of this manifold 
@@ -1025,9 +1014,10 @@ In fact, by the globalization theorem
 (\ref{thm:hadamard-cartan}), 
 the exponential map at a point of such a manifold is a homeomorphism.
 In particular, there is no Riemannian analog of Proposition~\ref{prop:loc-CAT-mnfld}.
-Moreover, according to Stone's theorem, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the proposition; 
-that is, the homeomorphism to a manifold in Proposition~\ref{prop:loc-CAT-mnfld} 
-cannot be made piecewise linear.
+
+Recall that a triangulation of $m$-dimensional manifold defines a piecewise linear structure if the link  of every simplex $\Delta$ is homeomorphic to the sphere of dimension $m-1-\dim\Delta$.
+According to Stone's theorem, see \cite{stone, davis-januszkiewicz}, the triangulation of $\spc{P}$ in Proposition~\ref{prop:loc-CAT-mnfld} 
+cannot be made piecewise linear --- despite that $\spc{P}$ is a manifold, its triangulation does not induce a piecewise linear structure.
 
 The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool for constructing  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis}.
