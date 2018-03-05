@@ -151,6 +151,7 @@ Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the d
 We get a triangle $\trig xyz$ which is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $\trig xyz$ does not lie in $K$ completely.
 Therefore $K$ is not two-convex.
+(See  figure in the ``only if'' part of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}).)
 
 \parit{``If'' part.}
 Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is positive definite at each point.
@@ -214,12 +215,12 @@ In the proof we use the following classical result:
 Let $M$ be a three-dimensional manifold with nonempty boundary $\partial M$.
 Assume 
 $f\: (\DD,\partial \DD)\to (M,\partial M)$
-is a continuous map from disc $\DD$ such that the boundary curve $f|_{\partial \DD}$ is not null-homotopic in $\partial M$, then there is an embedding 
+is a continuous map from disc $\DD$ such that the boundary curve $f|_{\partial \DD}$ is not null-homotopic in $\partial M$.  Then there is an embedding 
 $h\: (\DD,\partial \DD)\to (M,\partial M)$ 
 with the same property.
 \end{thm}
 
-The theorem is due to Christos Papakyriakopoulos, a proof can be found in \cite{hatcher}. 
+The theorem is due to Christos Papakyriakopoulos; a proof can be found in \cite{hatcher}. 
 
 \parit{Proof.}
 Fix a closed plane curve $\gamma$ in $W\cap \Omega$ which is null-homotopic in $\Omega$. Suppose $\gamma$ is not contractible in  $W\cap \Omega$.
@@ -293,8 +294,7 @@ Since $K$ is simply connected,
 by the globalization theorem (\ref{thm:hadamard-cartan})
 it suffices to show that any point $p\in K$ admits a $\Cat{}{0}$ neighborhood.
 
-If $p\in\Int K$, then it admits a neighborhood isometric to a subset of $\EE^m$ which is $\Cat{}0$.
-
+If $p\in\Int K$, then it admits a neighborhood isometric to a $\Cat{}0$ subset of $\EE^m$.
 Fix $p\in S$.
 Assume that $k_2(p)>0$.
 Fix a sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
@@ -329,11 +329,11 @@ consider the set
 Note that the function 
 \[(x_1,\dots, x_{m-1})\mapsto f(x_1,\dots,x_{m-1})+\lambda\cdot (x_1-s)^2\]
 is concave near the origin.
-Since $\eps$ is small, we can assume that $V_s$ are a convex subsets of~$\EE^m$.
+Since $\eps$ is small, we can assume that the $V_s$ are a convex subsets of~$\EE^m$.
 
 Further note that 
 \[K'=\bigcup_{s\in[-\eps,\eps]}V_s\]
-and
+and:
 \begin{clm}{}\label{eq:VcVnV}
 If $a<b<c$, then $V_b\supset V_a\cap V_c$.
 \end{clm}
@@ -366,11 +366,11 @@ This claim is proved by induction.
 Base: $W^1=V^1$ is $\Cat{}{0}$ as a convex subset in~$\EE^m$.
 
 \parit{Step:} Assume that $W^i$ is $\Cat{}{0}$.
-According to \ref{eq:VcVnV}
+According to \ref{eq:VcVnV}, 
 \[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
 Moreover, this is a convex set in $\EE^m$ 
 and therefore it is a convex set in $W^i$ and in $V^{i+1}$.
-By Reshetnyak gluing theorem, $W^{i+1}$ is $\Cat{}{0}$.
+By the Reshetnyak gluing theorem, $W^{i+1}$ is $\Cat{}{0}$.
 Hence the claim follows.
 \claimqeds
 
