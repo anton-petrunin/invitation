@@ -154,11 +154,15 @@ Therefore $K$ is not two-convex.
 (See  figure in the ``only if'' part of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}).)
 
 \parit{``If'' part.}
-Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is positive definite at each point.
+Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strictly convex} if its Hessian is positive definite at each point.
+%strongly convex means minimum eigenvalue \ge uniform positive constant.
 
-
-Suppose $f\:\EE^m\to\RR$ is a smooth strongly convex function such that the restriction $f|_S$ is a Morse function.
-Note that a generic smooth strongly convex function $f\:\EE^m\to\RR$ has this property.
+Suppose $f\:\EE^m\to\RR$ is a smooth
+ strictly
+ convex function such that the restriction $f|_S$ is a Morse function.
+Note that a generic smooth 
+strictly 
+convex function $f\:\EE^m\to\RR$ has this property.
 
 For a critical point $p$ of $f|_S$, the outer normal vector $\nu(p)$ is parallel to the gradient $\nabla_pf$;
 we say that $p$ is a 
@@ -169,7 +173,8 @@ and
 If $f$ is generic, then we can assume that the sign is defined for all critical points;
 that is, $\nabla_pf\ne0$ for any critical point $p$ of~$f|_S$.
 
-Since $k_2\ge 0$ and the function $f$ is strongly convex, 
+Since $k_2\ge 0$ and the function $f$ is  strictly
+ convex, 
 the negative critical points of $f|_S$
 have index at most~1.
 
@@ -392,7 +397,9 @@ Fix $\eps>0$ so that a neighborhood of $p$ in $S$
 is the graph
 \[x_m= f(x_1,\dots,x_{m-1})\]
 of a function $f$ defined on the open ball $B$ of radius $\eps$  centered at the origin in the $(x_1,\dots,x_{m-1})$-hyperplane.
-Fix a smooth positive strongly convex function $\phi\:B\to \RR_+$
+Fix a smooth positive 
+strictly 
+convex function $\phi\:B\to \RR_+$
 such that $\phi(x)\to\infty$ as $x$ approaches the boundary of $B$.
 Note that for $\delta>0$, the subgraph $K_\delta$ defined by the inequality
 \[x_m\le f(x_1,\dots,x_{m-1})-\delta\cdot\phi(x_1,\dots,x_{m-1})\]
