@@ -864,15 +864,13 @@ We need to show that $\tilde K$ is $\Cat{}{0}$.
 
 Note that it is sufficient to show that
 $\Cat{}{0}$ comparison holds for any
-4 points $x^1,x^2,x^3,x^4\in\Omega$.
-% I'm confused. The points should be in $\tilde \Omega$, not in $\Omega$. but then the rest of the proof does not make sense. V
+4 points $x^1,x^2,x^3,x^4\in\tilde \Omega$.
 
 Fix $\eps>0$.
 Choose six broken lines connecting all pairs of points $x^1,x^2,x^3,x^4$, where the length of each  broken line is at most $\eps$ bigger than 
-the distance between its ends in the length metric on~$\Omega$.
-Choose a polytope $P$ 
-in $\Omega$ such that the interior $\Int P$ is simply connected 
-and contains all six broken lines.
+the distance between its ends in the length metric on~$\tilde \Omega$;
+Denote by $X$ the union of these broken lines.
+Choose a polytope $P$ in $\Omega$ such that the interior $\Int P$ contains the projections of all six broken lines and discs which contract all the cycles created by them (3 discs is enough).
 
 Denote by $\Omega'$ the two-convex hull of the interior of~$P$.
 According to the key lemma (\ref{lem:key-shefel}), $\Omega'$ is the interior of a polytope.
@@ -880,13 +878,13 @@ According to the key lemma (\ref{lem:key-shefel}), $\Omega'$ is the interior of 
 Equip $\Omega'$ with the induced length metric.
 Consider the universal metric cover $\tilde\Omega'$ of~$\Omega'$.
 (The covering $\tilde\Omega'\to\Omega'$ might be nontrivial ---
-despite that $\Int P$ is simply connected, its two-convex hull $\Omega'$ might not be simply connected.)
+even if $\Int P$ is simply connected, its two-convex hull $\Omega'$ might not be simply connected.)
 Denote by $\tilde K'$ the completion of~$\tilde\Omega'$.
 
 By Lemma~\ref{lem:poly-shefel}, $\tilde K'$ is $\Cat{}0$.
 
-Since $\Int P$ is simply connected, the embedding $\Int P\hookrightarrow \Omega'$
-admits a lift $\iota\:\Int P\hookrightarrow \tilde K'$.
+By construction $\Int P$, the embedding $\Int P\hookrightarrow \Omega'$
+admits a lift $\iota\:X\hookrightarrow \tilde K'$.
 By construction, $\iota$ almost preserves the distances between the points $x^1,x^2,x^3,x^4$;
 namely 
 \begin{align*}
