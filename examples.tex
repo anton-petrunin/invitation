@@ -154,14 +154,14 @@ Therefore $K$ is not two-convex.
 (See  figure in the ``only if'' part of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}).)
 
 \parit{``If'' part.}
-Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strictly convex} if its Hessian is positive definite at each point.
-%strongly convex means minimum eigenvalue \ge uniform positive constant.
+Recall that a smooth function $f\:\EE^m\to\RR$ is called \emph{strongly convex} if its Hessian is positive definite at each point.
+
 
 Suppose $f\:\EE^m\to\RR$ is a smooth
- strictly
+ strongly
  convex function such that the restriction $f|_S$ is a Morse function.
 Note that a generic smooth 
-strictly 
+strongly 
 convex function $f\:\EE^m\to\RR$ has this property.
 
 For a critical point $p$ of $f|_S$, the outer normal vector $\nu(p)$ is parallel to the gradient $\nabla_pf$;
@@ -173,7 +173,7 @@ and
 If $f$ is generic, then we can assume that the sign is defined for all critical points;
 that is, $\nabla_pf\ne0$ for any critical point $p$ of~$f|_S$.
 
-Since $k_2\ge 0$ and the function $f$ is  strictly
+Since $k_2\ge 0$ and the function $f$ is  strongly
  convex, 
 the negative critical points of $f|_S$
 have index at most~1.
@@ -220,14 +220,14 @@ In the proof we use the following classical result:
 Let $M$ be a three-dimensional manifold with nonempty boundary $\partial M$.
 Assume 
 $f\: (\DD,\partial \DD)\to (M,\partial M)$
-is a continuous map from disc $\DD$ such that the boundary curve $f|_{\partial \DD}$ is not null-homotopic in $\partial M$.  Then there is an embedding 
+is a continuous map from the disc $\DD$ such that the boundary curve $f|_{\partial \DD}$ is not null-homotopic in $\partial M$.  Then there is an embedding 
 $h\: (\DD,\partial \DD)\to (M,\partial M)$ 
 with the same property.
 \end{thm}
 
 The theorem is due to Christos Papakyriakopoulos; a proof can be found in \cite{hatcher}. 
 
-\parit{Proof.}
+\parit{Proof of \ref{prop:3d-strong-2-convexity}.}
 Fix a closed plane curve $\gamma$ in $W\cap \Omega$ which is null-homotopic in $\Omega$. Suppose $\gamma$ is not contractible in  $W\cap \Omega$.
 
 Let $\phi\co \DD\to\Omega$ be a map of the disk with the boundary curve~$\gamma$.
@@ -398,7 +398,7 @@ is the graph
 \[x_m= f(x_1,\dots,x_{m-1})\]
 of a function $f$ defined on the open ball $B$ of radius $\eps$  centered at the origin in the $(x_1,\dots,x_{m-1})$-hyperplane.
 Fix a smooth positive 
-strictly 
+strongly 
 convex function $\phi\:B\to \RR_+$
 such that $\phi(x)\to\infty$ as $x$ approaches the boundary of $B$.
 Note that for $\delta>0$, the subgraph $K_\delta$ defined by the inequality
