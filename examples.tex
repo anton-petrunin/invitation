@@ -426,7 +426,7 @@ Then $K$ is $\Cat{}{0}$.
 
 The assumption that the set $\Omega$ is open is not critical;
 instead one can assume that the induced length metric takes finite values at all points of~$\Omega$.
-We sketch the proof given by Richard Bishop in \cite{bishop:jordan} and leave the details be finished as an exercise.
+We sketch the proof given by Richard Bishop in \cite{bishop:jordan} and leave the details to be finished as an exercise.
 A generalization of this result is proved by 
 Alexander Lytchak and Stefan Wenger
 \cite[Proposition 12.1]{lytchak-wenger};
@@ -492,7 +492,7 @@ Show that the completion of $\tilde \Theta$ is $\Cat{}{1}$.
 
 \section{Shefel's theorem}
 
-In this section we will formulate our version of theorem of Samuel Shefel and prove couple of its corollaries.
+In this section we will formulate our version of a theorem of Samuel Shefel and prove a couple of its corollaries.
 
 It seems that Shefel was very intrigued by the survival of metric properties under affine transformation.
 
@@ -522,7 +522,7 @@ if and only if $\Omega$ is two-convex.
 \end{thm}
 
 The proof of this statement will be given in the following three sections.
-First we will prove its polyhedral analog, then we prove some properties of two-convex hull in three-dimensional Euclidean space and only then we prove the general statement. 
+First we prove its polyhedral analog, then we prove some properties of two-convex hulls in three-dimensional Euclidean space and only then do we prove the general statement. 
 
 The following exercise shows that the analogous statement does not hold in higher dimensions.
 
@@ -566,7 +566,7 @@ A continuous function $f\:U\to\RR$ is called
 if for any linear function $\ell\:\RR^2\to\RR$, the difference 
 $f-\ell$
 does not have local maxima or local minima in~$U$.
-Equivalently, the open subgraph and epigraph of $f$ 
+Equivalently, the open subgraph and epigraph of $f$
 \begin{align*}
 &\set{(x,y,z)\in\EE^3}{z<f(x,y),\ (x,y)\in U},
 \\
@@ -598,7 +598,7 @@ Consider the sequence of sets
 =
 \set{(x,y,z)\in \EE^3}{z\lege f(x,y)\pm\tfrac1n,\ (x,y)\in \DD}.\]
 Note that each $K_n$ is closed and simply connected.
-By the definition $K$ is also two-convex. 
+By definition $K$ is also two-convex. 
 Moreover the boundary of $K_n$ is a Lipschitz surface.
 
 Equip $K_n$ with the induced length metric.
@@ -661,7 +661,7 @@ The ``only if'' part can be proved in the same way as in the smooth two-convexit
 \parit{``If'' part.}
 Assume that $\Omega$ is two-convex.
 Denote by $\tilde\Omega$ the universal metric cover of~$\Omega$.
-Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and  $\Omega$ correspondingly.
+Let $\tilde K$ and $K$ be the corresponding completions of $\tilde\Omega$ and  $\Omega$.
 
 The main step is to show that $\tilde K$ is $\Cat{}{0}$. 
 
@@ -719,7 +719,7 @@ It follows that $\gamma$ is contractible in $\Theta$
 and therefore $\tilde\gamma$ is contractible in~$\tilde\Theta$.
 \qeds
 
-\section{Two-convex hull}
+\section{Two-convex hulls}
 
 The following proposition 
 describes a construction which produces the two-convex hull $\Conv_2 \Omega$ of an open set $\Omega\subset\EE^3$.
@@ -758,7 +758,7 @@ then there is a point $p\in \mathfrak{C}\backslash\Conv_2\Omega$ lying at maxima
 Denote by $W_p$ the plane containing $p$ which is parallel to~$\Pi_n$.
 
 Note that $p$ lies in a bounded component of $W_p\backslash \Conv_2\Omega$.
-In particular it can be surrounded by a simple closed curve $\gamma$ in $W_p\cap\Conv_2\Omega$.
+In particular $p$ can be surrounded by a simple closed curve $\gamma$ in $W_p\cap\Conv_2\Omega$.
 Since $p$ lies at maximal distance from $\Pi_n$,
 the curve $\gamma$ is null-homotopic in $\Conv_2\Omega$.
 Therefore $p\in \Conv_2\Omega$, a contradiction.
@@ -773,7 +773,7 @@ and a simple closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$
 which is null-homotopic in $\Omega'$,
 but not null-homotopic in $\Pi\cap\Omega'$.
 
-By approximation we can assume that $\Pi=\Pi_n$ for a large $n$ and that $\gamma$ lies in $\Omega_{n-1}$.
+By approximation we can assume that $\Pi=\Pi_n$ for a large $n$, and that $\gamma$ lies in $\Omega_{n-1}$.
 By the same argument as in the proof of Proposition~\ref{prop:3d-strong-2-convexity} using the loop theorem, we can assume that there is an \emph{embedding} $\phi\co \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by~$\Pi$.
 By the $n$-step of the construction, the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$, a contradiction. \qeds
 
@@ -960,10 +960,10 @@ Namely, we can say that $K$ is two-convex if the following condition holds: if a
 
 The resulting definition is equivalent to the one used above.
 But unlike our definition it can be generalized to define $k$-convex sets in $\EE^m$ for~$k>2$.
-With this homological definition one can also avoid the use the loop theorem, whose proof is quite involved.
+With this homological definition one can also avoid the use of the loop theorem, whose proof is quite involved.
 Nevertheless, we chose the definition using homotopies  since it is easier to visualize.
 
-Both definitions work well for the open sets, for general sets one should be able to give a similar definition using  an appropriate homotopy/homology theory.
+Both definitions work well for open sets; for general sets one should be able to give a similar definition using  an appropriate homotopy/homology theory.
 
 Let $D$ be an embedded closed disc in~$\EE^3$.
 We say that $D$ is \emph{saddle} if each connected bounded component which any plane cuts from $D$ contains a point on the boundary~$\partial D$.
