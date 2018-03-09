@@ -1,4 +1,4 @@
-%%!TEX root = invitation.tex
+%%!TEX root = invitation-springer.tex
 \backmatter
 \chapter*{Semisolutions}
 \addcontentsline{toc}{chapter}{Semisolutions}
@@ -13,7 +13,7 @@ Fix a tetrahedron $\triangle$ in~$\RR^3$.
 The vertices of $\triangle$, 
 say $x_0$, $x_1$, $x_2$, $x_3$, can be identified with the points of~$\spc{X}$.
 
-Note that there is unique quadratic form $W$ on $\RR^3$
+Note that there is a unique quadratic form $W$ on $\RR^3$
 such that 
 \[W(x_i-x_j)=\dist[2]{x_i}{x_j}{\spc{X}}\]
 for all $i$ and~$j$.
@@ -21,7 +21,7 @@ for all $i$ and~$j$.
 By the triangle inequality, $W(v)\ge 0$ 
 for any vector $v$ parallel to one of the faces of~$\triangle$.
 
-Note that $\spc{X}$ is isometric to a 4-point subset in Euclidean space
+Note that $\spc{X}$ is isometric to a 4-point subset in the Euclidean space
 if and only if $W(v)\ge 0$ for any vector $v$ in~$\RR^3$.
 
 \begin{wrapfigure}{r}{52mm}
@@ -31,7 +31,7 @@ if and only if $W(v)\ge 0$ for any vector $v$ in~$\RR^3$.
 
 Therefore, if $\spc{X}$ is not of type $\mathcal{E}_4$, then $W(v)<0$ for some vector~$v$.
 From above, the vector $v$ must be transversal to each of the 4 faces of~$\triangle$.
-Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of these two pictures.
+Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of the two pictures on the right.
 
 Note that the set of vectors $v$ such that $W(v)<0$ has two connected components;
 the opposite vectors $v$ and $-v$ lie in the different components.
@@ -44,7 +44,7 @@ It remains to show that if the combinatorics of the pictures for two spaces are 
 This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
 \qeds
 
-The solution is taken from \cite{petrunin-quest}.
+The above solution is taken from \cite{petrunin-quest}.
 
 
 \parbf{Exercise~\ref{ex:convex-set}.}
@@ -55,7 +55,7 @@ The simplest proof we know requires the construction of tangent cones for Alexan
 
 \parbf{Exercise~\ref{ex:non-contracting-map}.}
 This exercise is a basic introductory lemma on  Gromov--Hausdorff distance (see for example \cite[7.3.30]{BBI}).
-The following proof is not quite standard, it was suggested by Travis Morrison.
+The following proof is not quite standard, it was suggested to the third author by Travis Morrison.
 
 \medskip
 
@@ -68,7 +68,7 @@ Since $K$ is compact,
 we can choose an increasing sequence of integers $n_i$
 such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
 converge.
-In particular, both of these sequences  are converging in itself;
+In particular, both of these sequences  are Cauchy;
 that is,
 \[
 |x_{n_i}-x_{n_j}|_K, |y_{n_i}-y_{n_j}|_K\to 0
@@ -193,14 +193,15 @@ $\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
 are sufficiently close to~$p$.\qeds
 
 \parbf{Exercise~\ref{ex:hausdorff-conv}.}
-By the definition of the convergence
+By definition of Hausdorff convergence
 \[p\in A_\infty\quad\iff\quad\dist{A_n}{}{}(p)\to 0\quad\text{as}\quad n\to \infty.\] 
-The latter is equivalent to existence of a sequence $p_n\in A_n$ such that
+The latter is equivalent to the existence of a sequence $p_n\in A_n$ such that
 $\dist{p_n}{p}{}\to0$ as $n\to \infty$;
 or equivalently $p_n\to p$.
 Hence the first statement follows.
 
-To show that the contrary does not hold,
+%To show that the converse does not hold,
+The converse is false. For example,
 consider the alternating sequence of two distinct closed sets $A,B,A,B,\dots$;
 note that it is not a converging sequence in the sense of Hausdorff.
 On the other hand, the set of all limit points is well defined --- it is the intersection $A\cap B$.\qeds
@@ -211,7 +212,7 @@ Clearly $\ushort{A}_\infty\subset \bar{A}_\infty$.
 If $\ushort{A}_\infty=\bar{A}_\infty$, then it is called  the \emph{closed limit} of~$A_n$.%
 \footnote{All these convergences were introduced by Felix Hausdorff in~\cite{hausdorff}.}
 
-For the class of closed subsets of a proper metric space, closed limits coincide with limits in the sense of Hausdorff as we defined it.
+For the class of closed subsets of a proper metric spaces, closed limits coincide with limits in the sense of Hausdorff as we defined them.
 
 
 
@@ -225,7 +226,7 @@ of points $x_n\in\spc{X}_n$ such that $x_n\xto{\rho} x$.
 Applying the diagonal procedure, we can pass to a subsequence of $ \spc{X}_n$ such that each of the constructed sequences $\rho'$-converge;
 that is, $x_n\xto{\rho'} x'$ for some $x'\in\spc{X}_\infty'$.
 
-This way we get a map $\mathfrak{S}\to\spc{X}_\infty'$ defined as $x\mapsto x'$.
+In this way we get a map $\mathfrak{S}\to\spc{X}_\infty'$ defined as $x\mapsto x'$.
 Note that this map preserves the distances and therefore it can be extended to a distance preserving map $\spc{X}_\infty\to\spc{X}_\infty'$.
 Likewise we construct a distance preserving map $\spc{X}_\infty'\to\spc{X}_\infty$.
 
