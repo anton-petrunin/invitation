@@ -24,6 +24,7 @@ By the triangle inequality, $W(v)\ge 0$
 for any vector $v$ parallel to one of the faces of~$\triangle$.
 
 Note that $\spc{X}$ is isometric to a 4-point subset in the Euclidean space
+%the Euclidean space or just Euclidean space?
 if and only if $W(v)\ge 0$ for any vector $v$ in~$\RR^3$.
 
 \begin{wrapfigure}{r}{52mm}
@@ -243,12 +244,12 @@ but one has to apply Exercise~\ref{ex:non-contracting-map} to closed balls cente
 \section*{Gluing theorem and billiards}
 
 \parbf{Exercise~\ref{ex:cone+susp}.}
-Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
+Given a point $x\in \Cone\spc{V}$, denote by $x'$ its projection to $\spc{V}$
 and by $|x|$ the distance from $x$ to the tip of the cone;
 if $x$ is the tip, then $|x|=0$ and we can take any point of $\spc{U}$ as~$x'$.
 
 Let $p$, $q$, $x$, $y$
-be a quadruple in $\Cone\spc{U}$.
+be a quadruple in $\Cone\spc{V}$.
 Assume that the spherical model triangles $\trig{\~p'}{\~x'}{\~y'}=\modtrig(p'x'y')_{\SS^2}$ and $\trig{\~q'}{\~x'}{\~y'}=\modtrig(q'x'y')_{\SS^2}$ are defined.
 Consider the following points in $\EE^3=\Cone\SS^2$: 
 \begin{align*}
@@ -328,9 +329,10 @@ that is, a point such that
 \[\dist{x}{z_n}{},\dist{y}{z_n}{}\le \tfrac12\cdot\dist{x}{y}{}+\tfrac1n.\]
 
 From the $\Cat{}{0}$ comparison inequality for the quadruple $x$, $y$, $z_n$, $z_m$ we have that $\dist{z_m}{z_n}{}\to0$ as $n,m\to\infty$;
-that is, $z_n$ converges in itself and hence converges.
+that is, $z_n$ is Cauchy and hence converges since the space is complete. 
 
-Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint between $x$ and~$y$.\qeds 
+Let $z$ be the limit of $z_n$ as $n\to\infty$. Clearly $z$ is a midpoint  between $x$ and~$y$.\qeds 
+%Since the space is complete the sequence $z_n$ has a limit, say $z$, which is clearly a midpoint between $x$ and~$y$.\qeds 
 
 \parbf{Exercise~\ref{ex:geod-CBA}.}
 Without loss of generality we can assume that $\kappa=1$.
@@ -351,6 +353,7 @@ assuming the latter is defined.\qeds
 
 Note that the unit disc in the plane with attached half-line to each point is a complete $\Cat{}{0}$ length space with extendable geodesics. 
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
+This provides a counterexample to the statement of the exercise if  $\spc{U}$ is not assumed to be proper.
 
 
 \begin{wrapfigure}{r}{33mm}
@@ -444,7 +447,7 @@ Assume $p^*$ is not uniquely defined;
 that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from~$p$.
 Since $K$ is convex, the midpoint $z$ of $[xy]$ lies in~$K$.
 
-Note that 
+Thinness of triangles implies that
 \[\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{},\] 
 a contradiction.
 
@@ -454,7 +457,7 @@ that is,
 for any $p,q\in \spc{U}$.
 
 Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
-In this case
+In this case, by the First Variation Inequality \eqref{lem:first-var},
 \[\mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2,
 \quad
 \mangle\hinge{q^*}{q}{p^*}\ge \tfrac\pi2,\] 
@@ -501,7 +504,7 @@ and \ref{eq:short-p-p} follows by comparison.
 \qeds
 
 \parit{Comment.}
-The solution leads to 
+This solution leads to 
 %a generalization of arm lemma to
 %this is confusing since arm lemma is not  standard term
 the arm lemma in
@@ -556,11 +559,11 @@ for each wall~$A^i$.
 
 Note that all the intersections of  the walls  have $\eps$-wide corners for
 \[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
-The proof can be guessed from the diagram.
+The proof can be guessed from the picture.
 \qedsf
 
 \parbf{Exercise~\ref{ex:centrally-simmetric-walls}.}
-Note that any centrally symmetric convex closed set in Euclidean space is a product of a compact set and a subspace.
+Note that any centrally symmetric convex closed set in Euclidean space is a product of a compact centrally symmetric convex set and a subspace.
 
 It follows that there is $R<\infty$
 such that if $X$ is an intersection of an arbitrary number of walls, then for any point $p\in X$ there is an isometry of $X$ 
@@ -601,10 +604,11 @@ this class of spaces includes compact length locally $\Cat{}{\kappa}$ spaces.
 \end{lpic}
 \end{wrapfigure}
 
-Assume there is  a nontrivial homotopy class of curves.
+By the globalization theorem there is  a nontrivial homotopy class of closed curves.
 
 Consider a shortest noncontractible closed curve $\gamma$ in the space;
 note that it exists.
+%I feel this is too brief and would like to expand this. perhaps add an exercise that close curved are homotopic? V.
 
 Assume that $\gamma$ is not a geodesic circle,
 that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
@@ -618,7 +622,7 @@ Note that
 \end{itemize}
 a contradiction.
 
-The $\Cat{}{1}$ case is done the same way, but we need to consider the homotopy classes of curves shorter than $2\cdot \pi$.\qeds
+The $\Cat{}{1}$ case is done in the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.\qeds
 
 \parbf{Exercise~\ref{ex:branching-cover}.}
 Consider an $\eps$-neighborhood $A$ of the geodesic.
@@ -708,9 +712,9 @@ with all-right spherical simplicies.
 Note that link of any simplex of this triangulation satisfies no-triangle condition (\ref{def:flag}).
 Indeed, fix a simplex $\triangle$ of the complex;
 it can be described by combinatorics of a possibly degenerate tree.
-A triangle in the link can be described by tree ways to resolve degeneracy by adding one edge of positive length,
+A triangle in the link of  $\triangle$ can be described by three ways to resolve a degeneracy by adding one edge of positive length,
 such that (1) any pair of these resolutions can be done simultaneously, but (2) all three cannot be done simultaneously.
-Direct inspection shows that the latter is impossible.
+Direct inspection shows that this is impossible.
 
 Therefore, by Proposition~\ref{prop:no-trig} our complex is flag.
 It remains to apply the flag condition (\ref{thm:flag}) and then Exercise~\ref{ex:cone+susp}.
