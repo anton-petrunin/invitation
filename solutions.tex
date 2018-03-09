@@ -4,7 +4,9 @@
 \addcontentsline{toc}{chapter}{Semisolutions}
 \chaptermark{Semisolutions}
 
-\section*{Introduction}
+\section*
+%{Introduction}
+{Preface}
 
 \parbf{Exercise~\ref{ex:two-components-of-M4}.} 
 Let $\spc{X}$ be a 4-point metric space.
@@ -35,8 +37,10 @@ Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we s
 
 Note that the set of vectors $v$ such that $W(v)<0$ has two connected components;
 the opposite vectors $v$ and $-v$ lie in the different components.
-If one moves $v$ continuously keeping $W(v)<0$,
-then the corresponding projection moves continuously and the projections of 4 triangles cannot degenerate. 
+If one moves $v$ continuously, keeping $W(v)<0$,
+then the corresponding projection moves continuously and the projections of 
+%4 triangles 
+the 4 faces cannot degenerate. 
 It follows that the combinatorics of the picture do not depend on the choice of~$v$. 
 Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ is not connected. 
 
@@ -126,18 +130,18 @@ in the space $c_0$ of all sequences converging to zero equipped with the sup-nor
 Consider another metric $\rho_1$ which is different from $\rho_0$ by the conformal factor
 \[\phi(\bm{x})=2+\tfrac{1}2\cdot x_1+\tfrac{1}4\cdot x_2+\tfrac{1}8\cdot x_3+\dots,\]
 where $\bm{x}=(x_1,x_2\,\dots)\in B$.
-That is, if $\bm{x}(t)$, $t\in[0,\ell]$ is a curve parametrized by $\rho_0$-length 
+That is, if $\bm{x}(t)$, $t\in[0,\ell]$, is a curve parametrized by $\rho_0$-length 
 then its $\rho_1$-length is 
 \[\length_{\rho_1}\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}.\]
 Note that the metric $\rho_1$ is bi-Lipschitz to~$\rho_0$.
 
-Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $\rho_0$-length which differ only in the $m$-th coordinate, denoted as $x_m(t)$ and $x_m'(t)$ correspondingly.
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $\rho_0$-length which differ only in the $m$-th coordinate, denoted by $x_m(t)$ and $x_m'(t)$ correspondingly.
 Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
 the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$, then 
 \[\length_{\rho_1}\bm{x}'\le \length_{\rho_1}\bm{x}.\]
 Moreover this inequality is strict if $x'_m(t)< x_m(t)$ for some~$t$.
 
-Fix a curve $\bm{x}(t)$, $t\in[0,\ell]$ parametrized by  $\rho_0$-length.
+Fix a curve $\bm{x}(t)$, $t\in[0,\ell]$, parametrized by  $\rho_0$-length.
 We can choose $m$ large, so that $x_m(t)$ is sufficiently close to $0$ for any~$t$.
 In particular, for some values $t$, we have $y_m(t)<x_m(t)$, where
 \[y_m(t)=(1-\tfrac t\ell)\cdot x_m(0)
@@ -145,7 +149,7 @@ In particular, for some values $t$, we have $y_m(t)<x_m(t)$, where
 -\tfrac 1{100}\cdot \min\{t,\ell-t\}.\]
 Consider the curve $\bm{x}'(t)$ as above with
 \[x'_m(t)=\min\{x_m(t),y_m(t)\}.\]
-Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points and from above 
+Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points, and by the above
 \[\length_{\rho_1}\bm{x}'<\length_{\rho_1}\bm{x}.\]
 That is, for any curve $\bm{x}(t)$ in $(B,\rho_1)$, we can find a shorter curve $\bm{x}'(t)$ with the same end points.
 In particular, $(B,\rho_1)$ has no geodesics.
@@ -227,12 +231,12 @@ Applying the diagonal procedure, we can pass to a subsequence of $ \spc{X}_n$ su
 that is, $x_n\xto{\rho'} x'$ for some $x'\in\spc{X}_\infty'$.
 
 In this way we get a map $\mathfrak{S}\to\spc{X}_\infty'$ defined as $x\mapsto x'$.
-Note that this map preserves the distances and therefore it can be extended to a distance preserving map $\spc{X}_\infty\to\spc{X}_\infty'$.
+Note that this map preserves distances and therefore can be extended to a distance preserving map $\spc{X}_\infty\to\spc{X}_\infty'$.
 Likewise we construct a distance preserving map $\spc{X}_\infty'\to\spc{X}_\infty$.
 
 It remains to apply Exercise~\ref{ex:non-contracting-map}.
 
-The proof of part (\ref{SHORT.ex:compact-proper-GH:b}) is  nearly identical;
+The proof of part (\ref{SHORT.ex:compact-proper-GH:b}) is  nearly identical,
 but one has to apply Exercise~\ref{ex:non-contracting-map} to closed balls centered at the limits of $x_n$ in $\spc{X}_\infty$ and $\spc{X}_\infty'$. 
 \qeds
 
@@ -313,7 +317,7 @@ If $\~z=(\~z_1,\~z_2)\in [\~x\~y]$, then $\~z_1\in [\~x_1\~y_1]$ and $\~z_2\in [
 \end{align*}
 Therefore $\Cat{}{0}$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
 and 
-$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies the 
+$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies 
 $\Cat{}{0}$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.\qeds
 
 \parbf{Exercise~\ref{ex:CAT-geodesic}.}
@@ -334,7 +338,9 @@ Fix a sufficiently small $0<\eps<\pi$.
 
 Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic shorter than $\pi$ in  $\spc{U}$ is a geodesic.
 
-Consider a sequence of directions $\xi_n$ of geodesics $[pq_n]$.
+Consider a sequence of directions $\xi_n$ 
+at $p$
+of geodesics $[pq_n]$.
 We can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal to $\eps$ for all $n$;
 here we use that the geodesics are extendable as local geodesics and minimizing up to length~$\pi$.
 
@@ -343,7 +349,7 @@ the sequence $q_n$ has a partial limit, say~$q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
 assuming the latter is defined.\qeds
 
-Note that the unit disc in the plane with attached half-line to each point is a complete $\Cat{}{0}$ length spaces with extendable geodesics. 
+Note that the unit disc in the plane with attached half-line to each point is a complete $\Cat{}{0}$ length space with extendable geodesics. 
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 
 
@@ -377,7 +383,7 @@ Define $F$ as follows:
 \item Map  $\Conv\trig{\~p}{\~x}{\~z_x}$ isometrically onto  $\Conv\trig {\dot p}{\dot x}{\dot z}$;
 similarly map $\Conv \trig{\~p}{\~y}{\~z_y}$ onto $\Conv \trig {\dot p}{\dot y}{\dot z}$.
 
-\item If $x$ is in one of the three circular sectors, on the distance $r$ from its center, set $F(x)$ to be the point on the corresponding segment 
+\item If $x$ is in one of the three circular sectors, say at distance $r$ from its center, set $F(x)$ to be the point on the corresponding segment 
 $[p z]$, 
 $[x z]$ 
 or $[y z]$ whose distance from the left hand endpoint of the segment is~$r$.
@@ -388,9 +394,9 @@ set $F(x) = z$.
 By construction, $F$ satisfies the conditions. \qeds
 
 \parbf{Exercise~\ref{ex:convex-balls}.}
-For $\Cat{}{0}$ case, the statement follows from convexity of distance functions to points in $\EE^2$, and thinness of triangles.
+For the $\Cat{}{0}$ case, the statement follows from convexity of distance functions to points in $\EE^2$, and thinness of triangles.
 
-For $\Cat{}{1}$ case,  the statement  follows from spherical thinness of triangles and convexity of ball of radius $r<\tfrac\pi2$ in~$\SS^2$.
+For the $\Cat{}{1}$ case,  the statement  follows from spherical thinness of triangles and convexity of the ball of radius $r<\tfrac\pi2$ in~$\SS^2$.
 
 \parbf{Exercise~\ref{ex:locally-convex}.}
 Fix a closed, connected, locally convex set~$K$.
@@ -427,12 +433,12 @@ therefore $f(z)= 0$ for any $z\in [x\alpha(s)]$;
 that is, $[x\alpha(s)]\subset K$, a contradiction.\qeds
 
 \parit{Comment.}
-The statement generalizes the theorem of Heinrich Tietze and the presented proof is nearly identical to the original proof given in~\cite{tietze}.
+The statement generalizes a theorem of Heinrich Tietze and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
 
 
 \parbf{Exercise~\ref{ex:closest-point}.}
 Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
-Hence the existence of at least one point $p^*$ that minimizes the distance from $p$ follows.
+The existence of at least one point $p^*$ that minimizes the distance from $p$ follows.
 
 Assume $p^*$ is not uniquely defined;
 that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from~$p$.
@@ -487,17 +493,21 @@ Hence
 \[\dist{\~p}{\~q}{}\ge \dist{\~p^*}{\~q^*}{}.\]
 The latter is equivalent to \ref{eq:short-p-p}.
 
-In the remaining cases; the \ref{eq:short-p-p} holds automatically if (1) $p^*= q^*$ or (2) $p= p^*$ and $q= q^*$.
-
-It remains to consider the case $p= p^*$, $q\ne q^*$ and $p^*\ne q^*$.
-In this case 
+In the remaining cases:  \ref{eq:short-p-p} holds automatically if (1) $p^*= q^*$ or (2) $p= p^*$ and $q= q^*$.
+If $p= p^*$, $q\ne q^*$ and $p^*\ne q^*$, then
 \[
 \mangle\hinge{q^*}{q}{p}\ge \tfrac\pi2,\]
 and \ref{eq:short-p-p} follows by comparison.
 \qeds
 
 \parit{Comment.}
-The solution leads to a generalization of arm lemma to $\Cat{}{\kappa}$ spaces; see our book \cite{AKP}.
+The solution leads to 
+%a generalization of arm lemma to
+%this is confusing since arm lemma is not  standard term
+the arm lemma in
+%
+$\Cat{}{\kappa}$ spaces; see our book \cite{AKP}.
+%
 
 
 
@@ -507,7 +517,7 @@ $A$ and $B$ have smooth boundary.
 
 If $[xy]\cap A\cap B\ne \emptyset$, then $z_0\in [xy]$ and $\dot A, \dot B$ can be chosen to be arbitrary half-spaces containing $A$ and $B$ respectively.  
 
-In the remaining case $[xy]\cap A\cap B=\emptyset$. 
+In the remaining case $[xy]\cap A\cap B=\emptyset$, 
 we have $z_0\in\partial (A\cap B)$.  
 Consider the solid ellipsoid
 \[C=\set{z\in\EE^m}{f(z)\le f(z_0)}.\] 
@@ -525,7 +535,7 @@ Suppose $f(z)<f(z_0)$ for some $z\in \dot A\cap\dot B$.
 Since $f$ is concave,
 $f(\bar z)<f(z_0)$ for any $\bar z \in \left[zz_0\right[$.
 Since $\left[zz_0\right[\cap A\cap B\ne\emptyset$,
-the latter contradicts that $z_0$ is minimum point of $f$ on $A\cap B$.
+the latter contradicts the fact that $z_0$ is minimum point of $f$ on $A\cap B$.
 \qeds
 
 \parbf{Exercise~\ref{ex:compact-walls}.}
@@ -550,11 +560,11 @@ The proof can be guessed from the diagram.
 \qedsf
 
 \parbf{Exercise~\ref{ex:centrally-simmetric-walls}.}
-Note that any centrally symmetric convex closed set in the Euclidean space is a product of a compact set and a subspace.
+Note that any centrally symmetric convex closed set in Euclidean space is a product of a compact set and a subspace.
 
 It follows that there is $R<\infty$
 such that if $X$ is an intersection of an arbitrary number of walls, then for any point $p\in X$ there is an isometry of $X$ 
-which moves  $p$ to a point in the ball $\oBall(0,R)$.
+that moves  $p$ to a point in the ball $\oBall(0,R)$.
 
 It remains to repeat the proof of Exercise~\ref{ex:compact-walls}.\qeds
 
