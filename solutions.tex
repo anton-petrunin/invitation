@@ -458,7 +458,7 @@ that is,
 for any $p,q\in \spc{U}$.
 
 Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
-In this case, by the First Variation Inequality \eqref{lem:first-var},
+In this case, by the first variation inequality \eqref{lem:first-var},
 \[\mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2,
 \quad
 \mangle\hinge{q^*}{q}{p^*}\ge \tfrac\pi2,\] 
@@ -607,9 +607,13 @@ this class of spaces includes compact length, locally $\Cat{}{\kappa}$ spaces.
 
 By the globalization theorem there is  a nontrivial homotopy class of closed curves.
 
-Consider a shortest noncontractible closed curve $\gamma$ in the space;
-note that it exists.
-%I feel this is too brief and would like to expand this. perhaps add an exercise that close curved are homotopic? V.
+Consider a shortest noncontractible closed curve $\gamma$ in  $\spc{X}$;
+note that such a curve exists.
+
+Indeed, let $L$ be the infimum of lengths of all noncontractible closed curves in $\spc{X}$.
+Compactness and local contractibility of $\spc{X}$ imply that any two sufficiently close closed curves in $\spc{X}$ are homotopic.
+Then choosing a sequence of unit speed noncontractible curves whose lengths converge to $L$, an Arzela-Ascoli type of argument shows that these curves subconverge to a noncontractible curve of length $L$.
+%I feel this is too brief and would like to expand this. perhaps add an exercise that close curves are homotopic? V.
 
 Assume that $\gamma$ is not a geodesic circle,
 that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
@@ -623,8 +627,11 @@ Note that
 \end{itemize}
 a contradiction.
 
+
+
 The $\Cat{}{1}$ case is done in the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.\qeds
 
+Note that the statement of the exercise fails if the requirement that $\spc{X}$ be compact is replaced by the assumption that it is proper. For example, the surface of revolution of the graph of $y=e^x$ around the $x$-axis is locally $\Cat{}{0}$ but has no closed geodesics.
 \parbf{Exercise~\ref{ex:branching-cover}.}
 Consider an $\eps$-neighborhood $A$ of the geodesic.
 Note that $A_\eps$ is convex.
@@ -691,7 +698,7 @@ so that the corresponding simplices form a nested sequence
 
 
 \parbf{Exercise~\ref{ex:flag>=pi/2}.}
-Use induction on the  to prove that if in a spherical simplex $\triangle$ every edge is at least $\tfrac\pi2$, then 
+Use induction on the dimension  to prove that if in a spherical simplex $\triangle$ every edge is at least $\tfrac\pi2$, then 
 all dihedral angles of $\triangle$ are at least~$\tfrac\pi2$.
 
 The rest of the proof goes along the same lines as the proof of the flag condition (\ref{thm:flag}).
@@ -814,7 +821,7 @@ That is, $\spc{S}$ satisfies the conditions above.
 \section*{Subsets}
 
 \parbf{Exercise~\ref{ex:chopping-triangle}.} 
-Note that triangle $\trig pqx$ is degenerate, in particular it is thin.
+Note that the triangle $\trig pqx$ is degenerate, in particular it is thin.
 It remains to apply the inheritance lemma (\ref{lem:inherit-angle}).
 
 \parbf{Exercise~\ref{ex:concave-triangle}.}
@@ -839,7 +846,7 @@ It remains to apply the argument in the proof of Theorem~\ref{thm:bishop-plane}.
 
 
 \parbf{Exercise~\ref{ex:two-planes}.}
-The space $K$ is a cone over the branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two great circles.
+The space $\tilde K$ is a cone over the branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two great circles.
 
 If the planes are not orthogonal, then the minimal distance between the circles is less than~$\tfrac\pi2$.
 Assume that this distance is realized by a geodesic $[\xi\zeta]$.
@@ -879,8 +886,8 @@ The arc $\check\alpha$ together with its reflection in $z$ form a closed curve o
 Thus $\ell\z=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
 \qeds
 
-\parit{A solution via Crofton formula.}
-Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove $\alpha$ is contained in a hemisphere in~$\SS^2$.
+\parit{Solution via the Crofton formula.}
+Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\cdot\pi$.  We wish to prove that $\alpha$ is contained in a hemisphere in~$\SS^2$.
 By approximation it suffices to prove this for  smooth curves $\alpha$ of length $< 2\cdot\pi$ with transverse self-intersections. 
 
 Given $v\in \SS^2$, denote by $v^\perp$ the equator in $\SS^2$ with the pole at~$v$.
@@ -892,7 +899,7 @@ Note that $\#(\alpha\cap v^\perp)$ is even for almost all~$v$.
 Therefore, if $\alpha$ does not lie in a hemisphere, then
 $\#(\alpha\cap v^\perp) \ge 2$ for almost all $v\in\SS^2$.  
 
-By Crofton formula we have that
+By the Crofton formula we have that
 \begin{align*}
 \length(\alpha)
 &=\frac 1 4\cdot \int\limits_{\SS^2}\#(\alpha\cap v^\perp)\cdot \d_v\area\ge
@@ -934,7 +941,7 @@ Further, by construction a small circle around $p$ in $W$ is contractible in $\O
 \qeds
 
 \parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
-Despite that the proof is simple and visual, it is quite hard to write it formally in a nontedious way;
+Even though the proof is simple and visual, it is quite hard to write it formally in a non-tedious way;
 for that reason we give only a sketch.
 
 \medskip
@@ -963,7 +970,7 @@ Show that there is a line segment $[pq]$ in $\EE^3$ that is tangent to $\bar S$ 
 Since $\bar S$ is locally concave,
 there is a local inner supporting plane $\Pi$ at $p$ that contains the segment $[pq]$.
 
-Note that $\Pi\cap \bar S$ contains a segment $[xy]\ni p$ with the ends at $\partial \bar S$.
+Note that $\Pi\cap \bar S$ contains a segment $[xy]\ni p$ with the ends in $\partial \bar S$.
 Denote by $\Pi^+$ the half-plane in $\Pi$ that contains $[pq]$ and has $[xy]$ in its boundary.
 
 Use the fact that $[pq]$ is tangent to $S$ to show that there is a point $z\in\partial \bar S$ such that the line segment $[xz]$ or $[yz]$ lies in $\partial \bar S\cap\Pi^+$.
@@ -985,7 +992,7 @@ It remains to note that $\triangle$ is not thin in~$K$.
 
 \parbf{Exercise~\ref{ex:two-convex-not-a-CAT}.}
 Clearly the set $W$ is two-convex.
-Therefore so is $K$ as an intersection of two-convex sets.
+Therefore so is $K$ as the intersection of two two-convex sets.
 
 Consider two $2$-dimensional hemispheres $H_1$ and $H_2$ in $\SS^3$ 
 such that the intersection $H_1\cap H_2$ is a geodesic $[\xi\zeta]$ orthogonal to the boundary equators of $H_1$ and $H_2$ and 
@@ -1008,8 +1015,8 @@ In particular there is a closed geodesic in $\Sigma$ shorter than $2\cdot\pi$.
 Hence $\Sigma$ is not $\Cat{}{1}$ 
 and therefore $K'=\Cone \Sigma$ is not $\Cat{}{0}$.
 
-For suitable choice of the motion $\iota$,
-we have $\tfrac1n\cdot K\to K'$ as $n\to\infty$ in  the sense of Gromov--Hausdorff.
+For a suitable choice of the motion $\iota$,
+we have that $\tfrac1n\cdot K\to K'$ as $n\to\infty$ in  the sense of Gromov--Hausdorff.
 Therefore by Proposition~\ref{prop:cat-limit}, $K$ is not $\Cat{}{0}$.
 \qeds
 
