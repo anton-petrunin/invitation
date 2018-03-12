@@ -55,14 +55,14 @@ Prove that $f$ is an isometry.
 
 \section{Constructions}\label{sec:constructions}
 
-\parbf{Product space.}
+\parbf{Product spaces.}
 Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
 $\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ where $u\in\spc{U}$ and $v\in \spc{V}$ 
 with the metric defined by formula
 \[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
 
 
-\parbf{Cone.}
+\parbf{Cones.}
 The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over a metric space $\spc{U}$
 is defined as the metric space whose underlying set consists of
 equivalence classes in
@@ -78,7 +78,7 @@ where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
 The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
 The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 
-\parbf{Suspension.}
+\parbf{Suspensions.}
 The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over a metric space $\spc{U}$
 is defined as the metric space whose underlying set consists of equivalence classes in
 $[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\z\sim (0,q)$ and $(\pi,p)\z\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
@@ -116,9 +116,10 @@ for any pair $s,t\in \II$.
 
 We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if 
 $\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$. %??? do we need ``a'' point or ``the'' point???
+%Neither, this is fine. S.
 In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \index{geodesic}\emph{geodesic}.
-Given a geodesic $[pq]$ we can parametrize it by distance to $p$;
-this parametrization will be denoted as $\geod_{[p q]}(t)$.
+Given a geodesic $[pq]$, we can parametrize it by distance to $p$;
+this parametrization will be denoted by $\geod_{[p q]}(t)$.
 
 
 We may write $[p q]_{\spc{X}}$ 
@@ -135,7 +136,7 @@ We also use the following short-cut notation:
 
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  
-However,  once we write $[p q]$ we mean that we have  made a choice of a geodesic.
+However,  once we write $[p q]$ we mean that we have  made a choice of  geodesic.
 
 A metric space is called \index{geodesic}\emph{geodesic} if any pair of its points can be joined by a geodesic. 
 
@@ -166,7 +167,7 @@ will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
-A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and it will be denoted by 
+A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
@@ -206,13 +207,13 @@ Let $A$ be a subset of a metric space $\spc{X}$.
 Given two points $x,y\in A$,
 consider the value
 \[\dist{x}{y}{A}=\inf_{\alpha}\{\length\alpha\},\]
-where infimum is taken for all paths $\alpha$ from $x$ to $y$ in $A$.\footnote{Note that while this notation slightly conflicts with the previously defined notation for distance on a general metric space, we will usually work with ambient length spaces where the meaning will be unambiguous.}
+where the infimum is taken for all paths $\alpha$ from $x$ to $y$ in $A$.\footnote{Note that while this notation slightly conflicts with the previously defined notation for distance on a general metric space, we will usually work with ambient length spaces where the meaning will be unambiguous.}
 
 If $\dist{x}{y}{A}$ takes finite value for each pair $x,y\in A$,
 then $\dist{x}{y}{A}$ defines a metric on  $A$;
 this metric will be called the \index{induced length metric}\emph{induced length metric} on $A$.
 
-If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$ there is a path $\alpha$ connecting $x$ to $y$ such that
+If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$, there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
 then $\spc{X}$ is called a \index{length space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length metric}\emph{length metric}.\label{page:length metric}
 
@@ -221,7 +222,7 @@ then a length metric on $\spc{X}$ can be lifted to $\~{\spc{X}}$
 by declaring 
 \[\length_{\~{\spc{X}}}\gamma=\length_{\spc{X}}(f\circ\gamma)\]
 for any curve $\gamma$ in $\~{\spc{X}}$.
-The space $\~{\spc{X}}$ with the described metric is called \index{metric cover}\emph{metric cover} of $\spc{X}$.
+The space $\~{\spc{X}}$ with this metric is called the  \index{metric cover}\emph{metric cover} of $\spc{X}$.
 
 Note that any geodesic space is a length space.
 As can be seen from the following example, the converse does not hold.
@@ -264,7 +265,7 @@ Then $\spc{X}$ is a length space.
 \end{subthm}
 
 \begin{subthm}{lem:mid>geod:geod}
-Assume that for any pair of points $x,y\in \spc{X}$ 
+Assume that for any pair of points $x,y\in \spc{X}$, 
 there is a midpoint~$z$.
 Then $\spc{X}$ is a geodesic space.
 \end{subthm}
@@ -320,7 +321,7 @@ Any complete, locally compact length space is proper.
 Let $\spc{X}$ be a locally compact length space.
 Given $x\in \spc{X}$, denote by $\rho(x)$ the supremum of all $R>0$ such that
 the closed ball $\cBall[x,R]$ is compact.
-Since $\spc{X}$ is locally compact 
+Since $\spc{X}$ is locally compact, 
 $$\rho(x)>0\ \ \text{for any}\ \ x\in \spc{X}.\eqlbl{eq:rho>0}$$
 It is sufficient to show that $\rho(x)=\infty$ for some (and therefore any) point $x\in \spc{X}$.
 
@@ -332,10 +333,10 @@ Assume the contrary; that is, $\rho(x)<\infty$.
 Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
 the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in~$B$.
-Since $B$ is closed and hence complete, it has to be compact.
+Since $B$ is closed and hence complete, it must be compact.
 \claimqeds
 
-\begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
+\begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$;
 in particular $\rho\:\spc{X}\to\RR$ is a continuous function.
 \end{clm}
 
@@ -345,8 +346,7 @@ Then
 $\cBall[x,\rho(x)+\eps]$ is a closed subset of $\cBall[y,\rho(y)]$ for some $\eps>0$.
 Then  compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$, a contradiction.\claimqeds
 
-Set $\eps=\min\set{\rho(y)}{y\in B}$; 
-the minimum is defined since $B$ is compact.
+Set $\eps=\min\set{\rho(y)}{y\in B}$; the minimum is defined since $B$ is compact.
 From \ref{eq:rho>0}, we have $\eps>0$.
 
 Choose a finite $\tfrac\eps{10}$-net $\{a_1,a_2,\dots,a_n\}$ in $B$.
@@ -385,7 +385,7 @@ $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
 the angle measure of 
 $\trig{\~p}{\~q}{\~r}$ at $\~p$ 
-will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and it will be denoted by
+will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
 $\angk p q r_{\EE^2}$%
 \index{$\tangle$!$\angk{{*}}{{*}}{{*}}$}.
 In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\SS^2}$;
@@ -560,7 +560,7 @@ If all  the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined, then t
 
 
 \parit{Proof.} 
-Since $\alpha^{13}\le\pi$, we can assume that $\alpha^{12}+\alpha^{23}< \pi$.
+Since $\alpha^{13}\le\pi$, we may assume that $\alpha^{12}+\alpha^{23}< \pi$.
 
 Set $\gamma^i\z=\geod_{[px^i]}$.
 Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
@@ -643,7 +643,7 @@ for any fixed $\eps>0$ and all sufficiently small~$t$.
 Hence the result.
 \qeds
 
-\section{Space of directions and tangent space}
+\section{Space of directions and tangent spaces}
 \label{sec:tangent-space+directions}
 
 Let $\spc{X}$ be a metric space with defined angles for all hinges.
@@ -652,7 +652,7 @@ Fix a point $p\in \spc{X}$.
 Consider the set $\mathfrak{S}_p$ 
 of all nontrivial 
 %unit-speed 
-geodesics  which start at~$p$.
+geodesics  that start at~$p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 so
  $(\mathfrak{S}_p,\mangle)$ 
@@ -669,7 +669,9 @@ The completion of $\Sigma'_p$ is called the
 \index{space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
 Elements of $\Sigma_p$ are called \index{direction}\emph{directions} at~$p$.
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the tangent space 
+%should this be italicized and indexed?
+at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could also be defined directly, without introducing the space of directions.
 To do so, consider the set $\mathfrak{T}_p$ of all geodesics with constant-speed parametrizations starting at~$p$. 
@@ -693,7 +695,7 @@ The completion of $\T'_p$ is therefore  naturally isometric to~$\T_p$.
 Elements of $\T_p$ will be called 
 \index{tangent vector}\emph{tangent vectors} 
 at $p$,
-despite that $\T_p$ is only a metric cone and need not be a vector space.
+even though $\T_p$ is only a metric cone and need not be a vector space.
 Elements of $\T'_p$ will be called 
 \index{geodesic tangent vector}\emph{geodesic tangent vectors} 
 at~$p$.
@@ -704,7 +706,9 @@ It seems that \emph{Hausdorff convergence} was first introduced by Felix Hausdor
 and a couple of years later an equivalent definition was given by Wilhelm Blaschke in~\cite{blaschke}.
 A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
 and then rediscovered by Robert Wijsman in~\cite{wijsman}.  
-However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence} introduced by Hausdorff in the same book. 
+However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence}, 
+%introduced by Hausdorff in the same book. 
+also introduced by Hausdorff in \cite{hausdorff}.
 For this reason we call it Hausdorff convergence
 instead of
 {}\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
@@ -864,7 +868,7 @@ From the main assumption in the theorem,
 in each space $\spc{X}_n$ 
 there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that the following condition holds for a fixed sequence of integers $M_1<M_2<\dots$
 \begin{itemize}
-\item $\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1$ if $i\le M_\kay$;
+\item $\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1$ if $i\le M_\kay$,
 \item the points $z_{1,n},\dots,z_{M_\kay,n}$ form an $\tfrac1\kay$-net in $\cBall[x_n,\kay]_{\spc{X}_n}$.
 \end{itemize}
 
@@ -872,13 +876,13 @@ Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}
 converges for any $i$ and~$j$.
 
 Consider a countable set of points $\spc{W}=\{w_1,w_2,\dots\}$
-equipped with the pseudometric defined as 
+equipped with the pseudometric defined by 
 \[\dist{w_i}{w_j}{\spc{W}}
 =
 \lim_{n\to\infty}\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}.\]
 Let $\hat{\spc{W}}$ be the metric space corresponding to $\spc{W}$;
 that is, points in $\hat{\spc{W}}$ are equivalence classes in $\spc{W}$
-for the relation $\sim$, where $w_i\sim w_j$ if and only it $\dist{w_i}{w_j}{\spc{W}}=0$, 
+for the relation $\sim$, where $w_i\sim w_j$ if and only if $\dist{w_i}{w_j}{\spc{W}}=0$, 
 and where 
 \[\dist{[w_i]}{[w_j]}{\hat{\spc{W}}}\df\dist{w_i}{w_j}{\spc{W}}.\]
 Denote by
