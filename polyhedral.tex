@@ -1,7 +1,7 @@
 %%!TEX root = invitation-springer.tex
 \chapter{Globalization and asphericity}\label{chapter:globalization}
 
-In this chapter we introduce locally $\Cat{}{0}$ spaces and prove the globalization theorem which provides a sufficient condition for locally $\Cat{}{0}$ spaces to be globally $\Cat{}{0}$.
+In this chapter we introduce locally $\Cat{}{0}$ spaces and prove the globalization theorem that provides a sufficient condition for locally $\Cat{}{0}$ spaces to be globally $\Cat{}{0}$.
 
 The theorem implies in particular that the universal metric cover of a proper 
 length, locally $\Cat{}{0}$ space is a proper length $\Cat{}{0}$ space. 
@@ -21,7 +21,7 @@ On the other hand, $\SS^1$ is not $\Cat{}{0}$, since closed local geodesics in $
 
 If $\spc{U}$ is a proper length space, then it is locally $\Cat{}{0}$ (or locally $\Cat{}{1}$) 
 if and only if 
-each point $p\in \spc{U}$ admits an open neighborhood $\Omega$ which is geodesic and any triangle in $\Omega$ is thin (or spherically thin, respectively).
+each point $p\in \spc{U}$ admits an open neighborhood $\Omega$ that is geodesic and such that any triangle in $\Omega$ is thin (or spherically thin, respectively).
 The proof goes along the same lines as in Exercise~\ref{ex:convex-balls}.
 
 \section{Space of local geodesic paths}\label{sec:geod-space}
@@ -57,10 +57,10 @@ Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$.
 Hence, by Proposition~\ref{cor:loc-geod-are-min}, $\sigma$ is a geodesic.  
 In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less is a geodesic.
 
-Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a proper length $\Cat{}{0}$ space, by Theorem~\ref{thm:cat-unique},
+Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a proper length $\Cat{}{0}$ space, then by Theorem~\ref{thm:cat-unique},
 geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
 Thus there is a subinterval $\II$ of $[0,1]$,
-which contains a neighborhood of $t$ in $[0,1]$
+that  contains a neighborhood of $t$ in $[0,1]$
 and such that the arc $\gamma_n|_\II$ is minimizing for all large~$n$.
 It follows that $\gamma_\infty|_\II$ is a geodesic,
 and therefore $\gamma_\infty$ is a local geodesic.
@@ -108,7 +108,7 @@ $\cBall[\gamma(t),r]$ forms a proper length $\Cat{}{\kappa}$ space.
 \end{lpic}
 \end{center}
 
-Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ so that 
+Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ such that 
 \[\oBall(\gamma(t^i),r)\supset \gamma([t^{i-1},t^i])\] for all $n>i>0$.
 Set $\spc{B}^i=\cBall[\gamma(t^i),r]$.
 
@@ -145,26 +145,26 @@ Analogously, if $\spc{U}$ is a proper length, locally $\Cat{}{1}$ space, then fo
 
 \begin{thm}{Corollary}\label{cor:path-geod}
 If $\spc{U}$ is a proper length, locally $\Cat{}{0}$ space, then 
-for any path $\alpha$ there is a choice of  a local geodesic path $\gamma_\alpha$  connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path, then $\gamma_\alpha=\alpha$. 
+for any path $\alpha$ there is a choice of   local geodesic path $\gamma_\alpha$  connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$. 
 
 Analogously, if $\spc{U}$ is a proper length, locally $\Cat{}{1}$ space, then 
 for any path $\alpha$ shorter than $\pi$,  
-there is a choice of a local geodesic path $\gamma_\alpha$ shorter than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path, then $\gamma_\alpha=\alpha$.
+there is a choice of  local geodesic path $\gamma_\alpha$ shorter than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$.
 \end{thm}
 
 \parit{Proof of \ref{cor:path-geod}.} 
 We do the $\Cat{}{0}$ case;
 the $\Cat{}{1}$ case is analogous.
 
-Consider the maximal interval $\II\subset[0,1]$ containing $0$,
+Consider the maximal interval $\II\subset[0,1]$ containing $0$
 such that there is a continuous one-parameter family of 
-local geodesic paths $\gamma_t$ for $t\in \II$ connecting $\alpha(0)$ to $\alpha(t)$ with $\gamma_t(0)=\gamma_0(t)=\alpha(0)$ for any~$t$. 
+local geodesic paths $\gamma_t$ for $t\in \II$ connecting $\alpha(0)$ to $\alpha(t)$, with $\gamma_t(0)=\gamma_0(t)=\alpha(0)$ for any~$t$. 
 
 By Proposition~\ref{prop:geo-complete}, $\II$ is closed,
-so we can assume $\II=[0,s]$ for some $s\in [0,1]$.
+so we may assume $\II=[0,s]$ for some $s\in [0,1]$.
 
 Applying  patchwork (\ref{lem:patch}) to  $\gamma_{s}$, 
-we get that $\II$ is also open in $[0,1]$. 
+we find that $\II$ is also open in $[0,1]$. 
 Hence $\II=[0,1]$.
 Set $\gamma_\alpha=\gamma_1$.
 
@@ -262,7 +262,7 @@ is a \index{line-of-sight map}\emph{line-of-sight map from $p$ to $\alpha$}.
 \end{thm}
 
 \parit{Proof of the patchwork globalization theorem (\ref{thm:alex-patch}).} 
-Note that the implication ``only if'' is already proved in  Theorem~\ref{thm:cat-unique}; it only remains to prove ``if'' part.
+Note that the implication ``only if'' is already proved in  Theorem~\ref{thm:cat-unique}; it only remains to prove the ``if'' part.
 
 Fix a triangle $\trig p x y$  in $\spc{U}$. 
 We need to show that $\trig p x y$ is thin.
@@ -388,14 +388,14 @@ in one (and therefore any) triangulation of~$\spc{P}$.
 Let $\spc{P}$ be a polyhedral space
 and $\sigma$ be a simplex in a triangulation $\tau$ of~$\spc{P}$.
 
-The simplices which contain $\sigma$
+The simplices that  contain $\sigma$
 form an abstract simplicial complex called the \index{link}\emph{link} of $\sigma$, 
 denoted by $\Link_\sigma$.
 If $m$ is  the dimension of $\sigma$
 then the set of vertices of $\Link_\sigma$
-is formed by the $(m+1)$-simplices which contain $\sigma$;
+is formed by the $(m+1)$-simplices that  contain $\sigma$;
 the set of its edges are formed by the $(m+2)$-simplices 
-which contain $\sigma$; and so on.
+that contain $\sigma$; and so on.
 
 The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
@@ -502,7 +502,7 @@ such that the total angle around each edge in its triangulation is at least $2\c
 A simplicial complex $\mathcal{S}$ 
 is called \index{flag complex}\emph{flag} if whenever $\{v^0,\z\dots,v^\kay\}$
 is a set of distinct vertices of $\mathcal{S}$
-which are pairwise joined by edges, then the vertices $v^0,\dots,v^\kay$
+that are pairwise joined by edges, then the vertices $v^0,\dots,v^\kay$
 span a $\kay$-simplex in~$\mathcal{S}$.
 
 If the above condition is satisfied for $\kay=2$, 
@@ -614,7 +614,7 @@ Similarly, $\Star_v$, the open star of $v$, is the union of all simplices contai
 
 Choose a vertex $v$ such that $\Star_v$ contains a point $\gamma(t_0)$ of $\gamma$.
 Consider the maximal arc $\gamma_v$ of $\gamma$ 
-which contains the point $\gamma(t_0)$
+that contains the point $\gamma(t_0)$
 and runs in $\Star_v$.
 Note that the distance $\dist{v}{\gamma_v(t)}{\spc{P}}$ behaves in exactly the same way 
 as the distance from the north pole in~$\mathbb{S}^2$ to a geodesic in the north hemisphere;
@@ -893,7 +893,7 @@ the complement $\spc{S}\backslash\{v\}$ is simply connected.
 \end{thm}
 
 \parit{Proof of \ref{prop:aspherical}.}
-Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold~$\spc{W}$. 
+Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere that  is not simply connected, and bounds a contractible smooth compact $m$-dimensional manifold~$\spc{W}$. 
 
 For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$ follows from \cite{kervaire}. 
 For $m=4$ it follows from the construction in \cite{mazur}.
@@ -978,7 +978,7 @@ and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in~$\spc{S}$.
 As was mentioned earlier, the motivation for the notion of $\Cat{}{\kappa}$ spaces comes from the fact that a Riemannian manifold is locally  $\Cat{}{\kappa}$ if and only if it has $\sec\le\kappa$.
 This easily follows from Rauch comparison for Jacobi fields and Proposition~\ref{prop:thin=cat}.
 
-In the globalization theorem (\ref{thm:hadamard-cartan}) properness can be weakened to completeness, see our book \cite{AKP} and the references therein.
+In the globalization theorem (\ref{thm:hadamard-cartan}), properness can be weakened to completeness, see our book \cite{AKP} and the references therein.
 
 The condition on polyhedral $\Cat{}{\kappa}$ spaces given in Theorem~\ref{thm:PL-CAT} might look easy to use, 
 but in fact, it is hard to check even in very simple cases.
@@ -986,7 +986,7 @@ For example the description of those coverings of $\SS^3$ branching at three
 great circles which are $\Cat{}{1}$ requires quite a bit of work;
 see \cite{charney-davis-93} --- try to guess the answer before reading.
 
-Another example is the space $\spc{B}_4$ which is the universal cover of $\CC^4$ infinitely branching in six complex planes $z_i=z_j$ with the induced length metric.
+Another example is the space $\spc{B}_4$ that  is the universal cover of $\CC^4$ infinitely branching in six complex planes $z_i=z_j$ with the induced length metric.
 So far it is not known if $\spc{B}_4$ is $\Cat{}{0}$.
 Understanding this space could be helpful for studying the braid group on 4 strings;
 read \cite{panov-petrunin:ramification} 
