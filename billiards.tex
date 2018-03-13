@@ -348,7 +348,7 @@ Show that any closed, connected, locally convex set in $\spc{U}$ is convex.
 \begin{thm}{Exercise}\label{ex:closest-point}
 Let  $\spc{U}$ be a proper length $\Cat{}0$ space 
 and $K\subset \spc{U}$ be a closed convex set.
-Show that 
+Show that: 
 
 \begin{subthm}{ex:closest-point:a}
 For each point $p\in \spc{U}$ there is unique point $p^*\in K$ that minimizes the distance $\dist{p}{p^*}{}$.
@@ -479,7 +479,7 @@ The copies of $\EE^m$ in the puff pastry $\spc{R}$
 will be called {}\emph{levels};
 they will be denoted by $\spc{R}^0,\dots,\spc{R}^N$.
 The point in the $\kay$-th level $\spc{R}^\kay$
-which corresponds to $x\in \EE^m$
+that corresponds to $x\in \EE^m$
 will be denoted by~$x^\kay$.
 
 Given $x\in \EE^m$, any point $x^\kay\in\spc{R}$ is called a {}\emph{lifting} of~$x$.
@@ -511,7 +511,7 @@ Assume $(A^1,\dots,A^N)$ and $(\check A^1,\dots,\check A^N)$ are two arrays of c
 such that $ A^\kay\subset \check A^\kay$ for each~$\kay$.
 Let $\spc{R}$ and $\check{\spc{R}}$ be the corresponding Reshetnyak  puff pastries.
 Then the map $\spc{R}\to\check{\spc{R}}$
-defined as $x^\kay\mapsto\check x^\kay$ is short.
+defined by $x^\kay\mapsto\check x^\kay$ is short.
 
 Moreover, if  
 \[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\eqlbl{eq:dist=dist}\]
@@ -543,7 +543,7 @@ if $\spc{R}^0\cup\spc{R}^N$, the union of its lower and upper levels,
 forms a convex set in~$\spc{R}$.
 \end{thm}
 
-Note that if $\spc{R}$ is the Reshetnyak puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$
+Note that if $\spc{R}$ is the Reshetnyak puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$, 
 then $\spc{R}$ is end-to-end convex
 if and only if the union of the lower and the upper levels
 $\spc{R}^0\cup\spc{R}^N$ is isometric to the double of $\EE^m$ along the nonempty intersection $A^1\cap\dots\cap A^N$.
@@ -565,7 +565,7 @@ If $\check{\spc{R}}$ is end-to-end convex, then so is~$\spc{R}$.
 \end{thm}
 
 \parit{Proof.}
-Without loss of generality we can assume that $\bm{A}$ is 
+Without loss of generality we may assume that $\bm{A}$ is 
 obtained by inserting one element in $\check{\bm{A}}$,
 say at the place number~$\kay$.
 
@@ -599,7 +599,7 @@ is end-to-end convex.
 \end{thm}
 
 
-The proof of the lemma is based on a partial case
+The proof of the lemma is based on a partial case,
 which we formulate as a sublemma.
 
 \begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
@@ -677,8 +677,8 @@ it is sufficient to prove the following:
 The geodesic $[x^0y^N]_\spc{R}$ contains $z^0=z^N\in \spc{R}$.
 \end{clm}
 
-Without loss of generality we can assume that $z\in\partial A\cap\partial B$.
-Indeed, since the puff pastry for 1-array $(B)$ is end-to-end convex,
+Without loss of generality we may assume that $z\in\partial A\cap\partial B$.
+Indeed, since the puff pastry for the 1-array $(B)$ is end-to-end convex,
 Proposition~\ref{prop:A-check-A} together with Observation~\ref{obs:end-to-end-convex}
 imply \ref{clm:z in xy} in  case $z$ lies in the interior of~$A$.
 In the same way we can treat the case when $z$ lies in the interior of~$B$.
@@ -715,7 +715,7 @@ By Proposition~\ref{prop:A-check-A},
 the image of $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ 
 under the map $\dot x^\kay\mapsto x^\kay$
 is the geodesic $[x^0 y^N]_{\spc{R}}$.
-Hence Claim~\ref{clm:z in xy} 
+Hence Claim~\ref{clm:z in xy}, 
 and the lemma follow.
 \qeds
 
@@ -734,7 +734,7 @@ if all its interior angles are at least~$\eps$.
 
 We will consider finite collections of closed convex sets 
 $A^1,\dots,A^n\subset\EE^m$ 
-such that for any subset $F\subset\{1,\dots,n\}$
+such that for any subset $F\subset\{1,\dots,n\}$,
 the intersection
 $\bigcap_{i\in F}A^i$ 
 has $\eps$-wide corners.
@@ -760,7 +760,7 @@ Given $\eps>0$ and a positive integer $n$,
 there is an array of integers $\bm{j}_\eps(n)=(j_1,\dots,j_N)$ 
 such that: 
 
-\begin{subthm}{} For each $\kay$ we have $1\le j_\kay\le n$
+\begin{subthm}{} For each $\kay$ we have $1\le j_\kay\le n$,
 and each number $1,\dots,n$ appears in $\bm{j}_\eps$ at least once.
 \end{subthm}
 
@@ -820,7 +820,7 @@ and the billiards described above will be called {}\emph{billiards with convex w
 
 A {}\emph{billiard trajectory} 
 on the table $T$ is a unit-speed broken line $\gamma$ 
-which follows  the
+that  follows  the
 standard law of billiards 
 at the break points on $\partial A^i$ 
 --- in particular, the angle of reflection is equal to the angle of incidence.
@@ -856,7 +856,7 @@ the new velocities of the two balls are determined by the
 laws of classical mechanics. 
 We assume that only two balls can collide at the same time.
 
-Then the total number of collisions cannot exceed some number $N$ which depends on the radii and masses of the balls.
+Then the total number of collisions cannot exceed some number $N$ that  depends on the radii and masses of the balls.
 If the balls are identical, then $N$ depends only on~$n$.
 \end{thm}
 
@@ -924,7 +924,7 @@ if the trajectory is reflected once in $\partial A^1$,
 then it cannot return to~$A^1$. 
 
 \parit{Step.}
-Assume $\gamma$ is a trajectory which meets the walls in the order $A^{i_1},\dots,A^{i_N}$ for a large integer~$N$.
+Assume $\gamma$ is a trajectory that  meets the walls in the order $A^{i_1},\dots,A^{i_N}$ for a large integer~$N$.
 
 Consider the array 
 \[\bm{A}_\gamma=(A^{i_1},\dots,A^{i_N}).\]
@@ -936,10 +936,10 @@ There is a positive integer $M$ such that any $M$ consecutive elements of $\bm{A
 
 Let $\spc{R}_\gamma $ be  the  Reshetnyak puff pastry for~$\bm{A}_\gamma$.
 
-Consider the lift of $\gamma$ to $\spc{R}_\gamma$
-defined as 
+Consider the lift of $\gamma$ to $\spc{R}_\gamma$,
+defined by 
 $\bar\gamma(t)=\gamma^\kay(t)\in \spc{R}_\gamma$ 
-for any moment of time $t$ between $\kay$-th and $(\kay+1)$-th collisions.  
+for any moment of time $t$ between the $\kay$-th and $(\kay+1)$-th collisions.  
 Since $\gamma$ follows  the standard law of billiards at break points, the lift $\bar\gamma$ is locally a geodesic in~$\spc{R}_\gamma$.
 By Observation~\ref{obs:puff pastry is CAT},
 the puff pastry $\spc{R}_\gamma$ is a proper length $\Cat{}{0}$ space.
