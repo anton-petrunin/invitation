@@ -90,7 +90,7 @@ and whose metric is given by the  spherical cosine rule
 \]
 where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
-The points in $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \index{pole of suspension}\emph{south poles} of the suspension.
+The points in $\spc{V}$ formed by the equivalence classes of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \index{pole of suspension}\emph{south poles} of the suspension.
 
 \begin{thm}{Exercise}\label{ex:product-cone}
 Let $\spc{U}$ be a metric space.
@@ -324,7 +324,7 @@ Since $\spc{X}$ is locally compact,
 $$\rho(x)>0\ \ \text{for any}\ \ x\in \spc{X}.\eqlbl{eq:rho>0}$$
 It is sufficient to show that $\rho(x)=\infty$ for some (and therefore any) point $x\in \spc{X}$.
 
-Assume the contrary; that is, $\rho(x)<\infty$.
+Assume the contrary; that is, $\rho(x)<\infty$. We claim that
 
 \begin{clm}{} $B=\cBall[x,\rho(x)]$ is compact for any~$x$.
 \end{clm}
@@ -334,8 +334,8 @@ therefore for any $\eps>0$,
 the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in~$B$.
 Since $B$ is closed and hence complete, it must be compact.
 \claimqeds
-
-\begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$;
+Next we claim that
+\begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$ for any $x,y\in \spc{X}$;
 in particular $\rho\:\spc{X}\to\RR$ is a continuous function.
 \end{clm}
 
@@ -377,7 +377,8 @@ In the same way we can define the \index{hyperbolic model triangle}\emph{hyperbo
 in the hyperbolic plane $\HH^2$ and the unit sphere~$\SS^2$.
 In the latter case the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case the model triangle again exists and is unique up to a motion of~$\SS^2$.
+In this case the model triangle again exists and is unique up to an isometry of~$\SS^2$.
+%I think "motion" usually means something in the identity component of the isometry group so I changed it to "isometry". V.
 
 If 
 $\trig{\~p}{\~q}{\~r}=\modtrig(p q r)_{\EE^2}$ 
@@ -688,7 +689,7 @@ The completion of $\T'_p$ is therefore  naturally isometric to~$\T_p$.
 
 Elements of $\T_p$ will be called 
 \index{tangent vector}\emph{tangent vectors} 
-at $p$, heedless of the fact that $\T_p$ is only a metric cone and need not be a vector space.
+at $p$, regardless of the fact that $\T_p$ is only a metric cone and need not be a vector space.
 Elements of $\T'_p$ will be called 
 \index{geodesic tangent vector}\emph{geodesic tangent vectors} 
 at~$p$.
@@ -817,7 +818,7 @@ and so on,
 corresponding to convergence in the ambient space $(\bm{X},\rho)$.
 
 Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we have  made a choice of convergence.
-Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xto{\rho}} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
+Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, it might be possible to construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xto{\rho}} \spc{X}_\infty$ and $\spc{X}_n\xto{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
 there is a convergence with limit $\spc{X}_\infty\iso\RR_{\ge0}$; 
@@ -881,7 +882,7 @@ $\spc{X}_\infty$ the completion of~$\hat{\spc{W}}$.
 
 It remains to show that there is a Gromov--Hausdorff convergence 
 $\spc{X}_n\to\spc{X}_\infty$ such that the sequence $x_n\in\spc{X}_n$ converges.
-To prove it, we need to construct a metric $\rho$ on the disjoint union of \[\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots\]  satisfying definitions \ref{def:comp-metr} and~\ref{def:GH}.
+To prove this, we need to construct a metric $\rho$ on the disjoint union of \[\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots\]  satisfying definitions \ref{def:comp-metr} and~\ref{def:GH}.
 The metric $\rho$ can be constructed as the maximal compatible metric
 such that 
 \[\rho(z_{i,n},w_i)\le\tfrac1m\]
