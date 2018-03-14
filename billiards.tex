@@ -82,7 +82,7 @@ $\spc{U}$ is  $\Cat{}{1}$ if and only if $\spc{V}$ is $\Cat{}{1}$.
 
 The cone and suspension constructions are defined in Section~\ref{sec:constructions}.
 
-The following exercise is bit simpler, 
+The following exercise is a bit simpler, 
 but can be proved in essentially the same way.
 
 \begin{thm}{Exercise}\label{ex:product}
@@ -230,7 +230,9 @@ Choose $a$ to be the maximal value
 such that $\gamma$ is a geodesic on $[0,a]$.
 Further choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 
-Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin, we have
+Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin and \\
+$\dist{\gamma(0)}{\gamma(b)}{}<|b|$ we have
+%can this be formatted better? V.
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
 for all small~$\eps>0$.
 That is, $\gamma$ is not length-minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
@@ -551,7 +553,7 @@ $\spc{R}^0\cup\spc{R}^N$ is isometric to the double of $\EE^m$ along the nonempt
 
 \begin{thm}{Observation}\label{obs:end-to-end-convex}
 Let $\check{\bm{A}}$ and $\bm{A}$ be arrays of convex bodies in~$\EE^m$.
-Assume 
+Assume that
 the  array $\bm{A}$ is
 obtained by inserting in $\check{\bm{A}}$ 
 several copies of the bodies which were already listed in~$\check{\bm{A}}$.
@@ -629,7 +631,7 @@ so making a circuit along any path will take~$2\cdot\pi$.
 Observe that end-to-end convexity of $\ddot{\spc{R}}$
 is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on the inner and the outer circles lies completely in the union of these two circles.
 
-The latter holds if the zigzag line has length at least $\pi$.
+The latter holds if the zigzag line in the picture has length at least $\pi$.
 This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ each.
 Hence the sublemma.
 \qeds
