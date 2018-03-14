@@ -217,7 +217,7 @@ Analogously, if $\spc{U}$ is a proper length $\Cat{}{1}$ space, then any local g
 \end{thm}
 
 \begin{wrapfigure}{r}{21mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/local-geod(1)}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/local-geod(1)}
 \lbl[t]{2.5,1;$\gamma(0)$}
 \lbl[b]{10,14;$\gamma(a)$}
 \lbl[t]{19,8;$\gamma(b)$}
@@ -254,7 +254,7 @@ Now let us formulate the main result of this section.
 
 
 \begin{wrapfigure}[6]{r}{28mm}
-\begin{lpic}[t(-6mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
+\begin{lpic}[t(-8mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
 \lbl[lb]{10,23;$y$}
 \lbl[rt]{1.5,.5;$p$}
 \lbl[bl]{25,7.5;$x$}
@@ -277,7 +277,7 @@ Analogously, if $\trig p x y$ has perimeter $<2\cdot\pi$ and both triangles $\tr
 
 
 \begin{wrapfigure}{r}{32mm}
-\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/cat-monoton-ineq(1)}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/cat-monoton-ineq(1)}
 \lbl[b]{14,23;$\dot z$}
 \lbl[t]{10,.5;$\dot p$}
 \lbl[r]{1,14;$\dot x$}
@@ -404,17 +404,8 @@ Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is a $\Cat{}{0}$ p
 \parit{Proof.} 
 By construction of the gluing space, the statement can be reformulated in the following way:
 
-\begin{thm}{Reformulation of \ref{thm:gluing}}
-Let $\spc{W}$ be a 
-proper length space which has two closed 
-convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
-$\spc{U}^1\cup\spc{U}^2=\spc{W}$
-and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
-Then $\spc{W}$ is $\Cat{}{0}$.
-\end{thm}
-
-
-\begin{wrapfigure}[8]{r}{33mm}
+{
+\begin{wrapfigure}{r}{33mm}
 \begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/resh-glue(1)}
 \lbl[b]{13,26;$x^0$}
 \lbl[t]{4,3;$x^1$}
@@ -427,10 +418,21 @@ Then $\spc{W}$ is $\Cat{}{0}$.
 \end{lpic}
 \end{wrapfigure}
 
+\begin{thm}{Reformulation of \ref{thm:gluing}}
+Let $\spc{W}$ be a 
+proper length space which has two closed 
+convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
+$\spc{U}^1\cup\spc{U}^2=\spc{W}$
+and $\spc{U}^1$, $\spc{U}^2$ are $\Cat{}{0}$.
+Then $\spc{W}$ is $\Cat{}{0}$.
+\end{thm}
+
 It suffices to show that any triangle $\trig {x^0}{x^1}{x^2}$ 
 in $\spc{W}$ is thin.
 This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in one of~$\spc{U}^i$.
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}^1$ and $x^1,x^2\in\spc{U}^2$.
+
+}
 
 Choose points $z^1,z^2\in A=\spc{U}^1\cap\spc{U}^2$ 
 that lie respectively on the sides $[x^0x^1], [x^0x^2]$.
@@ -575,7 +577,7 @@ It remains to apply Proposition~\ref{prop:A-check-A}.
 \qeds
 
 \begin{wrapfigure}[7]{r}{32mm}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/dihedral-angle(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/dihedral-angle(1)}
 \lbl[t]{2,5;$p$}
 \lbl{22,12;$X$}
 \lbl{27,23;$D$}
@@ -637,7 +639,7 @@ Hence the sublemma.
 {
 
 \begin{wrapfigure}{r}{35mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/AB-xyz(1)}
 \lbl[br]{13,35;$x$}
 \lbl[bl]{25,37;$y$}
 \lbl[t]{17.7,22.5;{\color{white}$z_0$}}
@@ -804,12 +806,6 @@ Let $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in~$\EE^m$.
 Assume that for each $i$
 the boundary $\partial A^i$ is a smooth hypersurface.
 
-Consider the billiard table formed by the closure of the complement 
-$$T=\overline{\EE^m\backslash \bigcup_{i} A^i}.$$
-The sets $A^i$ will be called {}\emph{walls} of the table $T$ 
-and the billiards described above will be called {}\emph{billiards with convex walls}.
-
-
 \begin{center}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/billiards(1)}
 \lbl{19,27;$A_1$}
@@ -817,6 +813,11 @@ and the billiards described above will be called {}\emph{billiards with convex w
 \lbl{42,21.6;$A_3$}
 \end{lpic}
 \end{center}
+
+Consider the billiard table formed by the closure of the complement 
+$$T=\overline{\EE^m\backslash \bigcup_{i} A^i}.$$
+The sets $A^i$ will be called {}\emph{walls} of the table $T$ 
+and the billiards described above will be called {}\emph{billiards with convex walls}.
 
 A {}\emph{billiard trajectory} 
 on the table $T$ is a unit-speed broken line $\gamma$ 
