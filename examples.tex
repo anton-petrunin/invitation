@@ -21,7 +21,7 @@ B&=\set{(x,y,z)\in\EE^3}{z\le -x^2-y^2},
 C&=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}.
 \end{align*}
 
-\begin{thm}{Question}
+\begin{thm}{Question}\label{CAT(0)?}
 Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, are $\Cat{}{0}$ and why?
 \end{thm}
 
@@ -67,8 +67,9 @@ Further note that
 \begin{clm}{}\label{eq:VcVnV-0}
 If $a<b<c$, then $V_b\supset V_a\cap V_c$.
 \end{clm}
+Indeed,  for any fixed $x,y$ the function $f_{x,y}(t)=x^2-y^2 -2\cdot (x-t)^2$ is strictly concave in $t$ and hence $f_{x,y}(b)>\min\{f_{x,y}(a), f_{x,y}(c)\}$ which immediately implies \ref{eq:VcVnV-0}.
 
-Consider a finite union
+Consider the finite union
 \[C'=V_{t_1}\cup\dots\cup V_{t_n}.\]
 The inclusion \ref{eq:VcVnV-0} makes it possible to apply Reshetnyak gluing theorem \ref{thm:gluing} recursively and show that $C'$ is $\Cat{}{0}$.
 By approximation, the $\Cat{}{0}$ comparison holds for any 4 points in $C$;
@@ -337,11 +338,12 @@ is concave near the origin.
 Since $\eps$ is small, we can assume that the $V_s$ are convex subsets of~$\EE^m$.
 
 Further note that 
-\[K'=\bigcup_{s\in[-\eps,\eps]}V_s\]
-and:
+\[K'=\bigcup_{s\in[-\eps,\eps]}V_s.\]
+
+Also, the same argument as in \ref{CAT(0)?} shows that
 \begin{clm}{}\label{eq:VcVnV}
 If $a<b<c$, then $V_b\supset V_a\cap V_c$.
-%??? should some explanation be given here why this inclusion holds? Add if you feel this way A.
+
 \end{clm}
 
 Given an array of values $s^1<\dots<s^\kay$ in $[-\eps,\eps]$,
