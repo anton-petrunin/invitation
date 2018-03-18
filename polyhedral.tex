@@ -49,15 +49,15 @@ as $n\to\infty$.
 
 \parit{Proof; $\Cat{}{0}$ case.} 
 Fix $t\in[0,1]$.  
-Let $R>0$ be the value such that $\cBall[\gamma_\infty(t),R]$ 
+Let $R>0$ be small enough so that $\cBall[\gamma_\infty(t),R]$ 
 forms a proper length $\Cat{}{0}$ space.
 
 Assume that  a local geodesic $\sigma$  is shorter than $R/2$ and intersects the ball $\oBall(\gamma_\infty(t),R/2)$.
 Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$.
 Hence, by Proposition~\ref{cor:loc-geod-are-min}, $\sigma$ is a geodesic.  
-In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less is a geodesic.
+In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less containing $\gamma_n(t)$ is a geodesic.
 
-Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a proper length $\Cat{}{0}$ space, then by Theorem~\ref{thm:cat-unique},
+Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a proper length $\Cat{}{0}$ space, by Theorem~\ref{thm:cat-unique},
 geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 that  contains a neighborhood of $t$ in $[0,1]$
@@ -186,7 +186,7 @@ if two paths $\alpha$ and $\beta$ connect the same pair of points, then the prod
 Assume $\spc{U}$ is a proper length, locally $\Cat{}{1}$ space. 
 Consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary~\ref{cor:path-geod}.
 
-Assume $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
+Assume that $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
 each is shorter than $\pi$ 
 and the product  
 $\bar\alpha*\beta$ is null-homotopic in the class of closed curves shorter than $2\cdot\pi$.
@@ -336,7 +336,7 @@ Fix a nontrivial homotopy class of closed curves.
 
 Denote by $\ell$ the exact lower bound for the lengths of curves in the class.
 Note that $\ell>0$;
-otherwise there would be a closed noncontractible curve in a $\Cat{}{0}$ spherical neighborhood of some point, contradicting Corollary \ref{cor:contractible-cat}.
+otherwise there would be a closed noncontractible curve in a $\Cat{}{0}$ neighborhood of some point, contradicting Corollary \ref{cor:contractible-cat}.
 
 Since the space is compact, the class contains a length-minimizing curve, 
 which must be a closed local geodesic. 
@@ -408,6 +408,7 @@ The angle metric between directions makes  $\Link_\sigma$ into a spherical polyh
 We will always consider the link with this metric.
 
 \parbf{Tangent space and space of directions.}
+%Should this be plural like in section headings? V.
 Let $\spc{P}$ be a polyhedral space (Euclidean or spherical) and  $\tau$ be its triangulation.
 If a point $p\in \spc{P}$ 
 lies in the interior of a $\kay$-simplex $\sigma$ of $\tau$ 
@@ -458,7 +459,7 @@ Proposition~\ref{cor:loc-geod-are-min}
 and 
 Exercise~\ref{ex:cone+susp}.
 
-To prove ``if'' part,
+To prove the ``if'' part,
 we apply induction on $\dim\spc{P}$.
 The base case $\dim\spc{P}=0$ is evident.
 Let us start with the $\Cat{}{1}$ case.
@@ -512,7 +513,7 @@ the \index{no-triangle condition}\emph{no-triangle condition}.
 
 Note that every flag complex is determined by its one-skeleton.
 Moreover, for any graph, its \index{clique}\emph{cliques} (that is, complete subgraphs) define a flag complex.
-For that reason a flag complex also called a \index{clique complex}\emph{clique complex}.
+For that reason  flag complexes are also called  \index{clique complex}\emph{clique complexes}.
 
 \begin{thm}{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
@@ -541,7 +542,7 @@ Any link of any simplex in a flag complex is flag.
 By Observation~\ref{obs:link-of-flag}, the no-triangle condition holds 
 for any flag complex and the  links of all its simplices.
 
-Now assume a complex $\spc{S}$ and all its links satisfy 
+Now assume that a complex $\spc{S}$ and all its links satisfy 
 the no-triangle condition.
 It follows that $\spc{S}$ includes a 2-simplex for each triangle.
 Applying the same observation for each edge we get that $\spc{S}$ 
@@ -564,7 +565,7 @@ is equipped with an  \index{all-right spherical metric}\emph{all-right spherical
 if it is a length metric and each simplex is isometric 
 to a spherical simplex all of whose angles are right.
 
-Spherical polyhedral $\Cat{}{1}$ spaces glued from of right-angled simplices
+Spherical polyhedral $\Cat{}{1}$ spaces glued from right-angled simplices
 admit the following characterization 
 discovered by Mikhael Gromov \cite[p. 122]{gromov:hyp-groups}.
 
@@ -701,7 +702,9 @@ A homeomorphism from the underlying space of $\spc{Q}$ to a topological space $\
 The underlying space of a cubical complex $\spc{Q}$ will be always considered with the length metric
 induced from~$\RR^N$.
 In particular, with this metric, 
-each cube of $\spc{Q}$ is isometric to the unit cube of the same dimension.
+each cube of $\spc{Q}$ is isometric to the unit cube in $\RR^k$ with $k\le N$.
+%the same dimension.
+%Why should all the cubes have the same dimension?? V.
 
 It is straightforward to construct a triangulation 
 of the underlying space of $\spc{Q}$ 
@@ -709,7 +712,7 @@ such that each simplex is isometric to a Euclidean simplex.
 In particular the underlying space of $\spc{Q}$ is a Euclidean polyhedral space.
 
 The link of a cube in a cubical complex is defined similarly to the link of a simplex in a simplicial complex.
-It admits a natural all-right triangulation --- each simplex corresponds to an adjusted cube.
+It is a simplicial complex that admits a natural all-right triangulation --- each simplex corresponds to an adjusted cube.
 
 \parbf{Cubical analog of a simplicial complex.}
 Let $\spc{S}$ be a finite simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its vertices.
@@ -876,10 +879,10 @@ Therefore $C_R$ is not contractible in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
 
 In particular, 
 $C_R$ is not contractible in $\tilde{\spc{Q}}\backslash K$
-if $K\supset \tilde v$.
+if $K\supset \tilde v$ and $C_R$ is contained in $\tilde{\spc{Q}}\backslash K$.
 If $R$ is large, 
 the circle $C_R$  
-lies outside of any compact set $K'$ in~$\tilde{\spc{Q}}$.
+lies outside of any fixed compact set $K'$ in~$\tilde{\spc{Q}}$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
 \qeds
 
@@ -1013,9 +1016,9 @@ In fact, by the globalization theorem
 the exponential map at a point of such a manifold is a homeomorphism.
 In particular, there is no Riemannian analog of Proposition~\ref{prop:loc-CAT-mnfld}.
 
-Recall that a triangulation of $m$-dimensional manifold defines a piecewise linear structure if the link  of every simplex $\Delta$ is homeomorphic to the sphere of dimension $m-1-\dim\Delta$.
+Recall that a triangulation of an $m$-dimensional manifold defines a piecewise linear structure if the link  of every simplex $\Delta$ is homeomorphic to the sphere of dimension $m-1-\dim\Delta$.
 According to Stone's theorem, see \cite{stone, davis-januszkiewicz}, the triangulation of $\spc{P}$ in Proposition~\ref{prop:loc-CAT-mnfld} 
-cannot be made piecewise linear --- despite that $\spc{P}$ is a manifold, its triangulation does not induce a piecewise linear structure.
+cannot be made piecewise linear --- despite  the fact that $\spc{P}$ is a manifold, its triangulation does not induce a piecewise linear structure.
 
 The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool for constructing  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis}.
