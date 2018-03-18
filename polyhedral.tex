@@ -49,8 +49,7 @@ as $n\to\infty$.
 
 \parit{Proof; $\Cat{}{0}$ case.} 
 Fix $t\in[0,1]$.  
-Let $R>0$ be small enough so that $\cBall[\gamma_\infty(t),R]$ 
-forms a proper length $\Cat{}{0}$ space.
+Let $R$ be a sufficiently small positive value, so that $\cBall[\gamma_\infty(t),R]$ forms a proper length $\Cat{}{0}$ space.
 
 Assume that  a local geodesic $\sigma$  is shorter than $R/2$ and intersects the ball $\oBall(\gamma_\infty(t),R/2)$.
 Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$.
@@ -702,9 +701,9 @@ A homeomorphism from the underlying space of $\spc{Q}$ to a topological space $\
 The underlying space of a cubical complex $\spc{Q}$ will be always considered with the length metric
 induced from~$\RR^N$.
 In particular, with this metric, 
-each cube of $\spc{Q}$ is isometric to the unit cube in $\RR^k$ with $k\le N$.
+each cube of $\spc{Q}$ is isometric to the unit cube of the corresponding dimension.
 %the same dimension.
-%Why should all the cubes have the same dimension?? V.
+%???Why should all the cubes have the same dimension?? V. Is it better? A.???
 
 It is straightforward to construct a triangulation 
 of the underlying space of $\spc{Q}$ 
@@ -877,12 +876,11 @@ Note that the map $\tilde{\spc{Q}}\backslash \{\tilde v\}\to \spc{S}$
 which returns the direction of $[{\tilde v}{x}]$  for any $x\ne \tilde v$, maps $C_R$ to a circle homotopic to~$\gamma$.
 Therefore $C_R$ is not contractible in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
 
-In particular, 
-$C_R$ is not contractible in $\tilde{\spc{Q}}\backslash K$
-if $K\supset \tilde v$ and $C_R$ is contained in $\tilde{\spc{Q}}\backslash K$.
 If $R$ is large, 
 the circle $C_R$  
 lies outside of any fixed compact set $K'$ in~$\tilde{\spc{Q}}$.
+From above $C_R$ is not contractible in $\tilde{\spc{Q}}\backslash K$
+if $K\supset \tilde v$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
 \qeds
 
