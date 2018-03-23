@@ -48,8 +48,9 @@ but the proof is not as easy as before.
 We give a sketch here;
 a complete proof of a more general statement is given in Section~\ref{sec:smooth-bry}.
 
+Set $f_t(x,y)=x^2-y^2 -2\cdot (x-t)^2$.
 Consider the one-parameter family of sets 
-\[V_t=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2 -2\cdot (x-t)^2}.\]
+\[V_t=\set{(x,y,z)\in\EE^3}{z\le f_t(x,y)}.\]
 
 
 \begin{wrapfigure}{r}{41mm}
@@ -60,14 +61,14 @@ Consider the one-parameter family of sets
 \end{lpic}
 \end{wrapfigure}
 
-Each set $V_t$ is the subgraph of a paraboloid tangent to $\partial C$ along the parabola $y\mapsto(t,y,t^2-y^2)$.
+Each set $V_t$ is a solid paraboloid tangent to $\partial C$ along the parabola $y\mapsto(t,y,t^2-y^2)$.
 The set $V_t$ is closed and convex for any $t$, and
 \[C=\bigcup_t V_t.\]
-Further note that 
+Further note that the function $t\mapsto f_t(x,y)$ is concave for any fixed $x,y$.
+Therefore
 \begin{clm}{}\label{eq:VcVnV-0}
-If $a<b<c$, then $V_b\supset V_a\cap V_c$.
+if $a<b<c$, then $V_b\supset V_a\cap V_c$.
 \end{clm}
-Indeed,  for any fixed $x,y$ the function $f_{x,y}(t)=x^2-y^2 -2\cdot (x-t)^2$ is strictly concave in $t$ and hence $f_{x,y}(b)>\min\{f_{x,y}(a), f_{x,y}(c)\}$ which immediately implies \ref{eq:VcVnV-0}.
 
 Consider the finite union
 \[C'=V_{t_1}\cup\dots\cup V_{t_n}.\]
