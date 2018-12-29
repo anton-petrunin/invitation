@@ -1,0 +1,17 @@
+Dear Thirumoorthy,
+
+We have a number of issues with the galley proofs. More than 50% are covered by the comments below. Once the main issues are addressed we can discuss minor corrections. 
+
+1) We would like text to wrapped around the pictures as was in our original file. 
+
+2) In titles of theorems and sections  we don’t want any words except the first ones capitalized. That is, we want "Theorem on thin triangle" but not "Theorem on Thin Triangle" and so on. 
+
+3) We would like the numbers of theorems to be in front, not after the theorems.
+
+4) We don’t want any abbreviations (we want Section instead of Sect.; that is instead of i.e. and so on). We also don’t want Eq. anywhere when referencing equations and formulas. Just equation numbers will suffice.
+
+5) When hyphenating formulas if the first line ends with = or + we want the next line start with = or +. This is how it was done in our original file. Please revert all the hyphenated formulas to that format.
+
+6) The file 463167_1_En_DeltaPDF.pdf didn’t contain all the changes you made. Could you please include all the changes you make in the next version of it. It will make it much easier to proofread.
+
+Yours, ...
