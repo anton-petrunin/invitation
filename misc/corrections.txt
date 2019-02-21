@@ -46,8 +46,12 @@ Line 417: In the displayed formula I would change $\cdots$ to $\ldots$ (or add p
 AQ1: leave the sentence as is.
 
 CHAPTER 2
+ 
+p.18 l.46: 
 
-p.18 l.46: Gluing --> gluing;  Globalization --> globalization
+Gluing --> gluing;  
+
+Globalization --> globalization
 
 p.20 l.92: “Adding the first two inequalities of the preceding proof gives.” The period at the end should be changed back to a colon or removed entirely.
 
@@ -92,7 +96,7 @@ AQ3: please use "only if" everywhere
 
 CHAPTER 4
 
-p.50 l. 36: gluing Theorem -->gluing  theorem
+p.50 l. 36: gluing Theorem --> gluing  theorem
 
 p.59 l.337: a space is missing between “a” and “polytope”.
 
