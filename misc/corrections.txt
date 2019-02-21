@@ -49,6 +49,9 @@ p.20 l.92: “Adding the first two inequalities of the preceding proof gives.”
 
 l.258: please add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
 
+p. 29 I would suggest changing "given on page 27" to "given in section 2.5.
+Hard coding page numbers is a bad idea as they might change in further formatting and/or in the other format editions of the book which were are not seeing.
+
 p.30 l. 435 Collision Theorem --> collision theorem
 
 p.30 l. 436 Collision theorem --> collision theorem
