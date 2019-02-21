@@ -22,6 +22,7 @@ PREFACE
 
 make the sections names as a usual sentence  (with lower letter case as we agreed on before)
 --This seems fixed in the latest version of the proofs? V.
+---No, not in the preface. A.
 
 l.89: Bridson and Haefliger -->  Martin Bridson and André Haefliger
 l.90: Ballmann --> Werner Ballmann
@@ -49,9 +50,15 @@ p.20 l.92: “Adding the first two inequalities of the preceding proof gives.”
 
 l.258: please add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
 
+p.29 l. 401: "Let us formulate and prove a corollary of the P
+ collision theorem." --> "Let us formulate and prove a corollary of the  collision theorem;
+it answers a question formulated by Yakov Sinai \cite{galperin}."
+
 p.30 l. 435 Collision Theorem --> collision theorem
 
 p.30 l. 436 Collision theorem --> collision theorem
+
+p.31 l. 480: add a new paragraph "It was show by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls $\mathbb{R}^3$ grows at least exponentially in $n$."
 
 AQ1: It’s ok to leave the sentence as is or change it to “Hence, continuity and uniqueness in the CAT(0) case follow.”
 
@@ -91,15 +98,38 @@ p. 71 l.140: add = at the begining of the line (to hyphenate the formula) [the c
 
 p.72 l.182: Alexandrov’s  Lemma --> Alexandrov’s  lemma
 
-p78 l.376: Flag --> flag
+p.78 l.376: Flag --> flag
+
+p. 78 l.376: Flag --> flag
 
 p. 79 l.424: Inheritance Lemma --> inheritance lemma
 
 p. 79 l.429: Lemma -->  lemma
 
+ 
+
 REFERENCES
 
-p83-85, l. 15--21 + l.110-111: Font for Russian text is too light please change to a font comparable to the rest of the text. 
+p.83-85, l. 15--21 + l.110-111: Font for Russian text is too light please change to a font comparable to the rest of the text. 
+
+p.83 l.26-27: add a Reference 
+
+\bibitem{burago-ivanov}
+Burago, D., Ivanov, S. 
+\textit{Examples of exponentially many collisions in a hard ball system}.
+\texttt{arXiv:1809.02800 [math.DS]}.
+
+p.84 l.66-67: add a Reference 
+
+\bibitem{galperin} 
+\begin{otherlanguage}{russian} 
+Гальперин, Г.~А.
+\textit{О системах локально взаимодействующих и отталкивающихся частиц, движущихся в~пространстве}
+Тр. ММО
+43
+(1981)
+142--196
+\end{otherlanguage}
 
 p.84 l.72: Reference 39: I would change “a draft available at” to “ a draft is available at”
 
