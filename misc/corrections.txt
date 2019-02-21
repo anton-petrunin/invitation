@@ -1,9 +1,9 @@
 GENERAL
 
-Table of context: make lower letter case (as we agreed on before)
+Table of context: Please use lower letter case (as we agreed on before)
 
 p.13 l.378+p.40 l.2+p43 l.335+p.53 l.142+p.75 l.251+p.75 l.253+p.75 l.264:
-Please change the symbol for empty set --- it seems that you use danish letter Ø, and we prefer the one given by \varnothing
+Please change the symbol for the empty set --- it seems that you use danish letter Ø, and we prefer the one given by $\varnothing$ in the amssymb package.
 
 p.4 l.107+p.41 l.280+p.78 l.381: i.e. --> that is
 
@@ -12,12 +12,16 @@ change “closest point projection” back to “closest-point projection” eve
 
 METADTA
 
-The latex in abstracts is misplaced. We are not sure where it will be used;
-if it is important we can suggest what to do with them
+All the math formulas in Metadate for chapters 2,3 and 4 are typeset slightly above the regular text. Please change them to align with the text.
+
+In metadata for chapters 1, 2 and 3 email addresses for Kapovitch and Petrunin are missing. They are given correctly in metadata for chapter 4.
+
+At the end of the abstract for chapter 4 there should not be a period after ?
 
 PREFACE
 
 make the sections names as a usual sentence  (with lower letter case as we agreed on before)
+--This seems fixed in the latest version of the proofs? V.
 
 l.89: Bridson and Haefliger -->  Martin Bridson and André Haefliger
 l.90: Ballmann --> Werner Ballmann
@@ -27,7 +31,7 @@ AQ1 --- yes, the authors name and location details are correctly included.
 
 CHAPTER 1
 
-p.1-2 l.19-20: Page break between pages 1 and 2  (between lines 19 and 20) in Chapter 1 is awkward. The formula should be on the same as the preceding sentence describing it.
+p.1-2 l.19-20: Page break between pages 1 and 2  (between lines 19 and 20) in Chapter 1 is awkward. The formula should be on the same page as the preceding sentence describing it.
 
 p.10 l.275-287: the picture is too large, please scale it normally.
 
@@ -39,11 +43,11 @@ AQ1: leave the sentence as is.
 
 CHAPTER 2
 
-p.18 l.46: Gluing --> gluing + Globalization --> globalization
+p.18 l.46: Gluing --> gluing;  Globalization --> globalization
 
 p.20 l.92: “Adding the first two inequalities of the preceding proof gives.” The period at the end should be changed back to a colon or removed entirely.
 
-l.258: add = at the beginign of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
+l.258: please add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
 
 p.30 l. 435 Collision Theorem --> collision theorem
 
@@ -65,17 +69,17 @@ p.40 l. 243: there should be no long dash before “determines the isometry clas
 
 p.40 l. 260: I would change “Step” to “Induction Step” at the beginning of the line.
 
-l.331-335: lift the picture up slightly
+p. 43 l.331-335: lift the picture up slightly
 
 AQ1: Either leave the sentence as is or change it to “... but one has to consider a homotopy...”
 
-AQ2: seems to be ok???
+AQ2:  please leave the sentence as is.
 
-AQ3: let us use "only if" everywhere
+AQ3: please use "only if" everywhere
 
 CHAPTER 4
 
-p.50 l. 36: Theorem --> theorem
+p.50 l. 36: gluing Theorem -->gluing  theorem
 
 p.59 l.337: a space is missing between “a” and “polytope”.
 
@@ -83,11 +87,11 @@ APPENDIX
 
 p. 70 l.88:  It should read “Note that $\spc{X}$ is locally compact and geodesic.”
 
-p. 71 l.140: add = at the beginign of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
+p. 71 l.140: add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
+
+p.72 l.182: Alexandrov’s  Lemma --> Alexandrov’s  lemma
 
 p78 l.376: Flag --> flag
-
-p.72 l.182: Lemma -->  lemma
 
 p. 79 l.424: Inheritance Lemma --> inheritance lemma
 
