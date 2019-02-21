@@ -12,7 +12,7 @@ change “closest point projection” back to “closest-point projection” eve
 
 METADTA
 
-All the math formulas in Metadate for chapters 2,3 and 4 are typeset slightly above the regular text. Please change them to align with the text.
+All the math formulas in Metadata for chapters 2,3 and 4 are typeset slightly above the regular text. Please change them to align with the text.
 
 In metadata for chapters 1, 2 and 3 email addresses for Kapovitch and Petrunin are missing. They are given correctly in metadata for chapter 4.
 
@@ -20,9 +20,12 @@ At the end of the abstract for chapter 4 there should not be a period after ?
 
 PREFACE
 
-make the sections names as a usual sentence  (with lower letter case as we agreed on before)
---This seems fixed in the latest version of the proofs? V.
----No, not in the preface. A.
+In section names please only capitalize  the first words and proper names.
+
+Early History of Alexandov Geometry-->Early history of Alexandov geometry
+
+Manifesto of Alexandrov Geometry --> Manifesto of Alexandrov geometry
+
 
 l.89: Bridson and Haefliger -->  Martin Bridson and André Haefliger
 l.90: Ballmann --> Werner Ballmann
