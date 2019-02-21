@@ -22,6 +22,7 @@ PREFACE
 
 make the sections names as a usual sentence  (with lower letter case as we agreed on before)
 --This seems fixed in the latest version of the proofs? V.
+---No, not in the preface. A.
 
 l.89: Bridson and Haefliger -->  Martin Bridson and André Haefliger
 l.90: Ballmann --> Werner Ballmann
