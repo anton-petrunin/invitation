@@ -29,7 +29,7 @@ Manifesto of Alexandrov Geometry --> Manifesto of Alexandrov geometry
 
 l.89: Bridson and Haefliger -->  Martin Bridson and André Haefliger
 l.90: Ballmann --> Werner Ballmann
-l.91: Burago, Burago, and Ivanov --> Dmitri Burago, Yurii Burago, and Sergei Ivanov
+l.91: Burago, Burago, and Ivanov --> Dmitri Burago, Yuri Burago, and Sergei Ivanov
 
 AQ1 --- yes, the authors name and location details are correctly included.
 
@@ -39,7 +39,7 @@ p.1-2 l.19-20: Page break between pages 1 and 2  (between lines 19 and 20) in Ch
 
 p.10 l.275-287: the picture is too large, please scale it normally.
 
-p.13 l.374: “$A\ne\emptyset$” --> “$A_\infty\ne\emptyset$”
+p.13 l.378: “$A\ne\emptyset$).” --> “$A_\infty\ne\emptyset$.)”
 
 Line 417: In the displayed formula I would change $\cdots$ to $\ldots$ (or add period at the end of the sentence).
 
@@ -53,7 +53,7 @@ Gluing --> gluing;
 
 Globalization --> globalization
 
-p.20 l.92: “Adding the first two inequalities of the preceding proof gives.” The period at the end should be changed back to a colon or removed entirely.
+p.20 l.92: “Adding the first two inequalities of the preceding proof gives.” --> “Adding the first two inequalities of the preceding proof gives the following:”
 
 l.258: please add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
 
@@ -88,6 +88,8 @@ p.40 l. 260: I would change “Step” to “Induction Step” at the beginning 
 
 p. 43 l.331-335: lift the picture up slightly
 
+p 47 l. 496: "completeness see" --> "completeness; see"
+
 AQ1: Either leave the sentence as is or change it to “... but one has to consider a homotopy...”
 
 AQ2:  please leave the sentence as is.
@@ -102,11 +104,15 @@ p.59 l.337: a space is missing between “a” and “polytope”.
 
 APPENDIX 
 
+p. 68 l.32: ", e. g." --> "for example"
+
 p. 70 l.88:  It should read “Note that $\spc{X}$ is locally compact and geodesic.”
 
 p. 71 l.140: add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
 
 p.72 l.182: Alexandrov’s  Lemma --> Alexandrov’s  lemma
+
+p. 75 l. 264: the size of brackets in the second [zz_0[ is too large --- use the code "\left[zz_0\right["
 
 p.78 l.376: Flag --> flag
 

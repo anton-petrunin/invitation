@@ -4,7 +4,7 @@
 In this chapter we fix some conventions and recall the main definitions.
 The chapter may be used as a quick reference when reading the book.
 
-To learn background in metric geometry, the reader  may consult the book of Dmitri Burago, Yuri Burago and Sergei Ivanov~\cite{BBI}.
+To learn background in metric geometry, the reader  may consult the book of Dmitri Burago, Yuri Burago, and Sergei Ivanov~\cite{BBI}.
  
 
 \section{Metric spaces}
@@ -29,7 +29,7 @@ is called the \index{distance function}\emph{distance function} from~$x$.
 \\
 \cBall[x,R]&=\{y\in \spc{X}\mid \dist{x}{y}{}\le R\}
 \end{align*}
-are called respectively the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}   of radius $R$ with center~$x$.
+are called, respectively, the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}   of radius $R$ with center~$x$.
 Again, if we need to emphasize that these balls are taken in the metric space $\spc{X}$,
 we write 
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}.\]
@@ -102,7 +102,7 @@ are  isometric.
 
 
 
-\section{Geodesics, triangles and hinges}
+\section{Geodesics, triangles, and hinges}
 \label{sec:geods}
 
 \parbf{Geodesic.}
@@ -123,7 +123,7 @@ this parametrization will be denoted by $\geod_{[p q]}(t)$.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
-We also use the following short-cut notation:
+We also use the following shortcut notation:
 \begin{align*}
 \l] p q \r[&=[pq]\backslash\{p,q\},
 &
@@ -147,7 +147,7 @@ that is,
 $$\geodpath_{[pq]}(t)\z\df\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
 A curve $\gamma\:\II\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
-A constant speed parametrization of a local geodesic by the unit interval $[0,1]$ is called a \index{geodesic!local geodesic}\emph{local geodesic path}. 
+A constant-speed parametrization of a local geodesic by the unit interval $[0,1]$ is called a \index{geodesic!local geodesic}\emph{local geodesic path}. 
 
 
 \parbf{Triangle.}
@@ -157,8 +157,8 @@ $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
 Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
-However, if we write $\trig p q r$, it means that we have made a choice of such a triangle, 
-that is, we have  fixed a choice of the geodesics $[q r], [r p]$ and $[p q]$.
+However, if we write $\trig p q r$, it means that we have made a choice of such a triangle; 
+that is, we have  fixed a choice of the geodesics $[q r]$, $[r p]$, and $[p q]$.
 
 The value 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\]
@@ -361,7 +361,7 @@ Construct a geodesic space that is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
 
-\section{Model angles and triangles.}\label{sec:mod-tri/angles}
+\section{Model angles and triangles}\label{sec:mod-tri/angles}
 
 Let $\spc{X}$ be a metric space and 
 $p,q,r\in \spc{X}$. 
@@ -485,7 +485,7 @@ Equality holds if and only  if $\dist{\~x}{\~y'}{}=\dist{x}{y}{}$,
 as required.
 \qeds
 
-\section{Angles and the first variation.}\label{sec:angles}
+\section{Angles and the first variation}\label{sec:angles}
 
 Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} as 
 the limit\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
@@ -603,7 +603,7 @@ Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \begin{thm}{Exercise}\label{ex:adjacent-angles}
 Prove that the sum of adjacent angles is at least~$\pi$.
 
-More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
+More precisely, let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
 If $p\in \l] x y \r[$, then 
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
@@ -764,7 +764,9 @@ Then for any sufficiently large $n$, there is a point $z_n\in A_n$ such that
 $\dist{x}{z_n}{}\le R$.
 Since $\spc{X}$ is proper, we can pass to a partial limit $z_\infty$ of $z_n$ as $n\to\infty$.
 
-It is clear that $f(z_\infty)=0$, that is, $z_\infty\in A_\infty$. (Note that  this implies that $A_\infty\ne \emptyset$).
+It is clear that $f(z_\infty)=0$;
+that is, $z_\infty\in A_\infty$. 
+(Note that  this implies that $A_\infty\ne \emptyset$.)
 On the other hand, 
 \begin{align*}
 \dist{A_\infty}{}{}(y)
