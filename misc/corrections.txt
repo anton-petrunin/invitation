@@ -53,16 +53,17 @@ Gluing --> gluing;
 
 Globalization --> globalization
 
+p.19 l.64: "(page 17)" --> "(Section 2.1)"
+
 p.20 l.92: “Adding the first two inequalities of the preceding proof gives.” --> “Adding the first two inequalities of the preceding proof gives the following:”
 
 l.258: please add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
 
+p.29 l.391: "on page 27" --> "in Section 2.5"
+
 p.29 l. 401: "Let us formulate and prove a corollary of the P
  collision theorem." --> "Let us formulate and prove a corollary of the  collision theorem;
 it answers a question formulated by Yakov Sinai \cite{galperin}."
-
-p. 29 I would suggest changing "given on page 27" to "given in section 2.5.
-Hard coding page numbers is a bad idea as they might change in further formatting and/or in the other format editions of the book which were are not seeing.
 
 p.30 l. 435 Collision Theorem --> collision theorem
 
