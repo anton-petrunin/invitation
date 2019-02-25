@@ -1,6 +1,6 @@
 GENERAL
 
-Table of context: Please use lower letter case (as we agreed on before)
+Table of contents: Please use lower letter case (as we agreed on before)
 
 p.13 l.378+p.40 l.2+p43 l.335+p.53 l.142+p.75 l.251+p.75 l.253+p.75 l.264:
 Please change the symbol for the empty set --- it seems that you use danish letter Ø, and we prefer the one given by $\varnothing$ in the amssymb package.
