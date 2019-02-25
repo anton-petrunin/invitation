@@ -81,18 +81,12 @@ p.34 l. 23: “apath” --> “a path”
 
 p.35 l. 78:  There is a space missing between “If” and $\mathcal U$
 
-p.40 l. 242: there should be a space around the long dash after “the other way around”
+p.40 l. 242-243:  change "...and the other way around--$\Sigma_p$ and $k$--determines the isometry class..."  to "...and the other way around: $\Sigma_p$ and $k$ determine the isometry..."
+(Please note all the changes: no long dashes, extra colon after "around" and "determines-->determine")
 
-p.40 l. 243: there should be no long dash before “determines the isometry class”
+p.40 l. 260: Please change “Step” to “Induction Step” at the beginning of the line.
 
-V: "it should also be "determine" rather than "determines".  I would change the whole thing to:
-
-"...and the other way around: $\Sigma_p$ and $k$ determine the isometry..."
-
-
-p.40 l. 260: I would change “Step” to “Induction Step” at the beginning of the line.
-
-p. 43 l.331-335: lift the picture up slightly
+p. 43 l.331-335: Lift the picture up slightly
 
 p 47 l. 496: "completeness see" --> "completeness; see"
 
