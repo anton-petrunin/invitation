@@ -101,7 +101,11 @@ CHAPTER 4
 
 p.50 l. 36: gluing Theorem --> gluing  theorem
 
+p.58 l.307: hypersurfaces, for instance Alexander --> hypersurfaces; for instance the Alexander
+
 p.59 l.337: a space is missing between “a” and “polytope”.
+
+p.65 l.552: for the warped —> for warped
 
 APPENDIX 
 
@@ -118,6 +122,8 @@ p. 75 l. 264: the size of brackets in the second [zz_0[ is too large --- use the
 p.78 l.376: Flag --> flag
 
 p. 78 l.376: Flag --> flag
+
+p.78 l.392 lemma; it --> lemma. It
 
 p. 79 l.424: Inheritance Lemma --> inheritance lemma
 
