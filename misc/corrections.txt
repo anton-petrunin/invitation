@@ -41,9 +41,9 @@ p.10 l.275-287: the picture is too large, please scale it normally.
 
 p.13 l.378: “$A\ne\emptyset$).” --> “$A_\infty\ne\emptyset$.)”
 
-Line 417: In the displayed formula I would change $\cdots$ to $\ldots$ (or add period at the end of the sentence).
+Line 417: In the displayed formula please change $\cdots$ to $\ldots$ (or add period at the end of the sentence).
 
-AQ1: leave the sentence as is.
+AQ1: Please leave the sentence as is.
 
 CHAPTER 2
  
@@ -61,7 +61,7 @@ l.258: please add = at the begining of the line (to hyphenate the formula) [the 
 
 p.29 l.391: "on page 27" --> "in Section 2.5"
 
-p.29 l. 401: "Let us formulate and prove a corollary of the P
+p.29 l. 401: "Let us formulate and prove a corollary of the 
  collision theorem." --> "Let us formulate and prove a corollary of the  collision theorem;
 it answers a question formulated by Yakov Sinai \cite{galperin}."
 
@@ -69,7 +69,7 @@ p.30 l. 435 Collision Theorem --> collision theorem
 
 p.30 l. 436 Collision theorem --> collision theorem
 
-p.31 l. 480: add a new paragraph "It was show by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls $\mathbb{R}^3$ grows at least exponentially in $n$."
+p.31 l. 480: add a new paragraph "It was shown by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls $\mathbb{R}^3$ grows at least exponentially in $n$."
 
 AQ1: It’s ok to leave the sentence as is or change it to “Hence, continuity and uniqueness in the CAT(0) case follow.”
 
@@ -85,6 +85,11 @@ p.40 l. 242: there should be a space around the long dash after “the other way
 
 p.40 l. 243: there should be no long dash before “determines the isometry class”
 
+V: "it should also be "determine" rather than "determines".  I would change the whole thing to:
+
+"...and the other way around: $\Sigma_p$ and $k$ determine the isometry..."
+
+
 p.40 l. 260: I would change “Step” to “Induction Step” at the beginning of the line.
 
 p. 43 l.331-335: lift the picture up slightly
@@ -93,9 +98,9 @@ p 47 l. 496: "completeness see" --> "completeness; see"
 
 AQ1: Either leave the sentence as is or change it to “... but one has to consider a homotopy...”
 
-AQ2:  please leave the sentence as is.
+AQ2: Please leave the sentence as is.
 
-AQ3: please use "only if" everywhere
+AQ3: Please use "only if" everywhere
 
 CHAPTER 4
 
@@ -109,7 +114,7 @@ p.65 l.552: for the warped —> for warped
 
 APPENDIX 
 
-p. 68 l.32: ", e. g." --> "for example"
+p. 68 l.32: "see, e. g." --> "see for example"
 
 p. 70 l.88:  It should read “Note that $\spc{X}$ is locally compact and geodesic.”
 
@@ -154,6 +159,6 @@ p.84 l.66-67: add a Reference
 142--196
 \end{otherlanguage}
 
-p.84 l.72: Reference 39: I would change “a draft available at” to “ a draft is available at”
+p.84 l.72: Reference 39: please change “a draft available at” to “ a draft is available at”
 
 p.85, l. 110: Шефелы --> Шефель
