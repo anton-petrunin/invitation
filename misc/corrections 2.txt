@@ -1,0 +1,158 @@
+GENERAL
+
+Table of contents: Please use lower letter case (as we agreed on before)
+
+p.13 l.378+p.40 l.2+p43 l.335+p.53 l.142+p.75 l.251+p.75 l.253+p.75 l.264:
+Please change the symbol for the empty set --- it seems that you use danish letter Ø, and we prefer the one given by $\varnothing$ in the amssymb package.
+
+p.4 l.107+p.41 l.280+p.78 l.381: i.e. --> that is
+
+change “closest point projection” back to “closest-point projection” everywhere
+
+
+METADTA
+
+All the math formulas in Metadata for chapters 2,3 and 4 are typeset slightly above the regular text. Please change them to align with the text.
+
+In metadata for chapters 1, 2 and 3 email addresses for Kapovitch and Petrunin are missing. They are given correctly in metadata for chapter 4.
+
+At the end of the abstract for chapter 4 there should not be a period after ?
+
+PREFACE
+
+In section names please only capitalize  the first words and proper names.
+
+Early History of Alexandov Geometry-->Early history of Alexandov geometry
+
+Manifesto of Alexandrov Geometry --> Manifesto of Alexandrov geometry
+
+
+l.89: Bridson and Haefliger -->  Martin Bridson and André Haefliger
+l.90: Ballmann --> Werner Ballmann
+l.91: Burago, Burago, and Ivanov --> Dmitri Burago, Yuri Burago, and Sergei Ivanov
+
+AQ1 --- yes, the authors name and location details are correctly included.
+
+CHAPTER 1
+
+p.1-2 l.19-20: Page break between pages 1 and 2  (between lines 19 and 20) in Chapter 1 is awkward. The formula should be on the same page as the preceding sentence describing it.
+
+p.10 l.275-287: the picture is too large, please scale it normally.
+
+p.13 l.378: “$A\ne\emptyset$).” --> “$A_\infty\ne\emptyset$.)”
+
+Line 417: In the displayed formula please change $\cdots$ to $\ldots$ (or add period at the end of the sentence).
+
+AQ1: Please leave the sentence as is.
+
+CHAPTER 2
+ 
+p.18 l.46: 
+
+Gluing --> gluing;  
+
+Globalization --> globalization
+
+p.19 l.64: "(page 17)" --> "(Section 2.1)"
+
+p.20 l.92: “Adding the first two inequalities of the preceding proof gives.” --> “Adding the first two inequalities of the preceding proof gives the following:”
+
+l.258: please add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
+
+p.29 l.391: "on page 27" --> "in Section 2.5"
+
+p.29 l. 401: "Let us formulate and prove a corollary of the 
+ collision theorem." --> "Let us formulate and prove a corollary of the  collision theorem;
+it answers a question formulated by Yakov Sinai \cite{galperin}."
+
+p.30 l. 435 Collision Theorem --> collision theorem
+
+p.30 l. 436 Collision theorem --> collision theorem
+
+p.31 l. 480: add a new paragraph "It was shown by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls $\mathbb{R}^3$ grows at least exponentially in $n$."
+
+AQ1: It’s ok to leave the sentence as is or change it to “Hence, continuity and uniqueness in the CAT(0) case follow.”
+
+CHAPTER 3
+
+p.33 l. 5: there should not be a comma after “locally CAT(0) space”
+
+p.34 l. 23: “apath” --> “a path” 
+
+p.35 l. 78:  There is a space missing between “If” and $\mathcal U$
+
+p.40 l. 242-243:  change "...and the other way around--$\Sigma_p$ and $k$--determines the isometry class..."  to "...and the other way around: $\Sigma_p$ and $k$ determine the isometry..."
+(Please note all the changes: no long dashes, extra colon after "around" and "determines-->determine")
+
+p.40 l. 260: Please change “Step” to “Induction Step” at the beginning of the line.
+
+p. 43 l.331-335: Lift the picture up slightly
+
+p 47 l. 496: "completeness see" --> "completeness; see"
+
+AQ1: Either leave the sentence as is or change it to “... but one has to consider a homotopy...”
+
+AQ2: Please leave the sentence as is.
+
+AQ3: Please use "only if" everywhere
+
+CHAPTER 4
+
+p.50 l. 36: gluing Theorem --> gluing  theorem
+
+p.58 l.307: hypersurfaces, for instance Alexander --> hypersurfaces; for instance the Alexander
+
+p.59 l.337: a space is missing between “a” and “polytope”.
+
+p.65 l.552: for the warped —> for warped
+
+APPENDIX 
+
+p. 68 l.32: "see, e. g." --> "see for example"
+
+p. 70 l.88:  It should read “Note that $\spc{X}$ is locally compact and geodesic.”
+
+p. 71 l.140: add = at the begining of the line (to hyphenate the formula) [the code "=\nobreak\discretionary{}{\hbox{$\mathsurround=0pt =$}}{}" does it automatically]
+
+p.72 l.182: Alexandrov’s  Lemma --> Alexandrov’s  lemma
+
+p. 75 l. 264: the size of brackets in the second [zz_0[ is too large --- use the code "\left[zz_0\right["
+
+p.78 l.376: Flag --> flag
+
+p. 78 l.376: Flag --> flag
+
+p.78 l.392 lemma; it --> lemma. It
+
+p. 79 l.424: Inheritance Lemma --> inheritance lemma
+
+p. 79 l.429: Lemma -->  lemma
+
+ 
+
+REFERENCES
+
+p.83-85, l. 15--21 + l.110-111: Font for Russian text is too light please change to a font comparable to the rest of the text. 
+
+p.83 l.26-27: add a Reference 
+
+\bibitem{burago-ivanov}
+Burago, D., Ivanov, S. 
+\textit{Examples of exponentially many collisions in a hard ball system}.
+\texttt{arXiv:1809.02800 [math.DS]}.
+
+p.84 l.66-67: add a Reference 
+
+\bibitem{galperin} 
+\begin{otherlanguage}{russian} 
+Гальперин, Г.~А.
+\textit{О системах локально взаимодействующих и отталкивающихся частиц, движущихся в~пространстве}
+Тр. ММО
+43
+(1981)
+142--196
+\end{otherlanguage}
+
+p.84 l.72: Reference 39: please change “a draft available at” to “ a draft is available at”
+
+p.85, l. 110: Шефелы --> Шефель
