@@ -453,13 +453,6 @@ that is,
 \[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\eqlbl{eq:short-p-p}\]
 for any $p,q\in \spc{U}$.
 
-Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
-In this case, by the first variation inequality (\eqref{lem:first-var}),
-\[\mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2,
-\quad
-\mangle\hinge{q^*}{q}{p^*}\ge \tfrac\pi2,\] 
-and both angles are defined. 
-
 \begin{wrapfigure}{r}{30mm}
 \begin{lpic}[t(-8mm),b(0mm),r(1mm),l(1mm)]{pics/ppqq(1)}
 \lbl[t]{5,1;$\~p^*$}
@@ -469,37 +462,29 @@ and both angles are defined.
 \end{lpic}
 \end{wrapfigure}
 
+Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
 Construct the model triangles 
 $\trig{\~p}{\~p^*}{\~q^*}$ and $\trig{\~p}{\~q}{\~q^*}$
 of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
 the points $\~p^*$ and $\~q$ lie on the opposite sides from $[{\~p}{\~q^*}]$.
 
-By comparison,
-\[\mangle\hinge{\~p^*}{\~p}{\~q^*}\ge \mangle\hinge{p^*}{p}{q^*}\ge \tfrac\pi2.\]
-Further, applying the triangle inequality for angles (\ref{claim:angle-3angle-inq}) and comparison, we get 
-\begin{align*}
-\mangle\hinge{\~q^*}{\~q}{\~p^*}&=\angk{q^*}{q}{p}+\angk{q^*}{p}{p^*}\ge
-\\
-&\ge\mangle\hinge{q^*}{q}{p}+\mangle\hinge{q^*}{p}{p^*}\ge
-\\
-&\ge \mangle\hinge{q^*}{q}{p^*}\ge 
-\\
-&\ge \tfrac\pi2,
-\end{align*}
-assuming the left-hand sides are defined. 
+From thinness of triangles $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$, we get that
+\[\mangle\hinge{\~p^*}{\~p}{\~q^*},\mangle\hinge{\~q^*}{\~p^*}{\~q}\ge \tfrac\pi2.\]
 Hence 
 \[\dist{\~p}{\~q}{}\ge \dist{\~p^*}{\~q^*}{}.\]
 The latter is equivalent to \ref{eq:short-p-p}.
 
 In the remaining cases:  \ref{eq:short-p-p} holds automatically if (1) $p^*= q^*$ or (2) $p= p^*$ and $q= q^*$.
-If $p= p^*$, $q\ne q^*$ and $p^*\ne q^*$, then
+If $p= p^*$, $q\ne q^*$ and $p^*\ne q^*$, then thinness of $\trig{p}{q}{q^*}$ implies that
 \[
-\mangle\hinge{q^*}{q}{p}\ge \tfrac\pi2,\]
-and \ref{eq:short-p-p} follows by comparison.
+\mangle\hinge{\~q^*}{\~q}{\~p}\ge \tfrac\pi2,\]
+and \ref{eq:short-p-p} follows.
 \qeds
 
 \parit{Comment.}
+It is sufficient to assume that the space is complete length and $\Cat{}{0}$.
 This solution leads to the arm lemma in $\Cat{}{\kappa}$ spaces; see our book \cite{AKP}.
+ 
 
 \parbf{Exercise~\ref{ex:supporting-planes}.}
 By approximation, it is sufficient to consider the case when 
