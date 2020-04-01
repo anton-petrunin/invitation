@@ -603,8 +603,9 @@ a contradiction.
 The $\Cat{}{1}$ case is done in the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.\qeds
 
 Note that the statement of the exercise fails if the requirement that $\spc{X}$ be compact is replaced by the assumption that it is proper. For example, the surface of revolution of the graph of $y=e^x$ around the $x$-axis is locally $\Cat{}{0}$ but has no closed geodesics.
+
 \parbf{Exercise~\ref{ex:branching-cover}.}
-Consider an $\eps$-neighborhood $A$ of the geodesic.
+Consider a closed $\eps$-neighborhood $A$ of the geodesic.
 Note that $A_\eps$ is convex.
 By the Reshetnyak gluing theorem, the double $\spc{W}_\eps$ of $\spc{U}$ along $A_\eps$ is $\Cat{}{0}$.
 
@@ -621,18 +622,33 @@ It remains to note that $\~{\spc{U}}$ can be obtained as a limit of $\spc{W}'_\e
 
 
 \parbf{Exercise~\ref{ex:unique-geod=CAT}.}
-Assume $\spc{P}$ is not $\Cat{}{0}$. Then
-by Theorem~\ref{thm:PL-CAT},  a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
-Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$
-parametrized by $[-\ell,\ell]$
+Assume $\spc{P}$ is not $\Cat{}{0}$.
+Then by \ref{thm:PL-CAT}, a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
+We can assume that $\Sigma$ has minimal possible dimension;
+so, by \ref{thm:PL-CAT}, $\Sigma$ is locally $\Cat{}{1}$.
 
+Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$.
+
+Assume $\alpha_1$ and $\alpha_2$ are length minimizing;
+parameterize them by $[-\ell,\ell]$.
 Fix a small $\delta>0$ and 
 consider two curves in $\Cone\Sigma$ written in polar coordinates as 
 \[\gamma_i(t)=(\alpha_i(\tan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
 Observe that both curves $\gamma_1$ and $\gamma_2$ are geodesics in $\Cone\Sigma$ and  have common ends.
 
-Finally observe that a small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into~$\spc{P}$.
-Hence the statement follows.\qeds
+Observe that a small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into~$\spc{P}$.
+Hence we can construct two geodesics $\gamma_1$ and $\gamma_2$ in $\spc{P}$ with common endpoints.
+
+It remains to consider the case when $\alpha_1$ (and therefore $\alpha_2$) is not length minimizing.
+
+Pass to its maximal length minimizing arc $\bar\alpha_1$ of $\alpha_1$.
+Since $\Sigma$ is locally $\CAT(1)$, \ref{cor:discrete-paths} implies that 
+there is another geodesic $\bar\alpha_2$ in $\Sigma_p$ that shares endpoints with $\bar\alpha_1$.
+It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\alpha_2$.
+\qeds
+
+By \ref{ex:CAT-geodesic}, the given condition is a necessary and sufficient.
+
 
 \parbf{Advanced exercise~\ref{ex:S3}.}
 Note that it is sufficient to construct a polyhedral space $\spc{P}$ homeomorphic to the 3-disc such that (1) $\spc{P}$ is locally $\Cat{}{0}$ in its interior and (2) the boundary of $\spc{P}$ is locally concave; in particular, each edge on the boundary of $\spc{P}$ has angle at least~$\pi$.
