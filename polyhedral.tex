@@ -1026,6 +1026,28 @@ cannot be made piecewise linear --- despite  the fact that $\spc{P}$ is a manifo
 The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool for constructing  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis}.
 
+The $\Cat{}{0}$ property of a cube complex admits interesting (and useful) geometric descriptions if one exchanged the $\ell^2$-metric to a natural $\ell^1$ or $\ell^\infty$ on each cube.
+
+\begin{thm}{Theorem}
+The following three conditions are equivalent.
+
+\begin{subthm}{cube-2} A cube complex $Q$ equiped with $\ell^2$-metric is $\Cat{}{0}$.
+\end{subthm}
+
+\begin{subthm}{cube-infty} A cube complex $Q$ equiped with $\ell^\infty$-metric is injective.
+The later means that any short map $f\:A\to (Q,\ell^\infty)$ defined on a subset $A$ of an arbitrary metric space $\spc{X}$ admits a short extension to whole space $\spc{X}$. 
+\end{subthm}
+
+\begin{subthm}{cube-1} A cube complex $Q$ equiped with $\ell^1$-metric is \emph{median}.
+ The later means that for any three points $x,y,z$ there is a \emph{unique} point   $m$ (it is called \emph{median} of $x$, $y$, and $z$) that lies on \emph{some} geodesics $[xy]$, $[xz]$ and $[yz]$.
+\end{subthm}
+\end{thm}
+
+This statement can be extracted from a paper of Brian Bowditch \cite{bowditch-2020}; two easy parts of the theorem are included in the following exercise.
+
+\begin{thm}{Exercise}\label{ex:cube-infty=>cube-2} Prove the implication (\ref{SHORT.cube-infty}) $\Rightarrow$ (\ref{SHORT.cube-2}) and/or (\ref{SHORT.cube-1}) $\Rightarrow$ (\ref{SHORT.cube-2}) in the theorem.
+\end{thm}
+
 All the topics discussed in this chapter link Alexandrov geometry with the fundamental group.
 The theory of {}\emph{hyperbolic groups}, 
 a branch of \emph{geometric group theory}, 

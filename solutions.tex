@@ -343,18 +343,24 @@ of geodesics $[pq_n]$.
 We can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal to $\eps$ for all $n$;
 here we use that the geodesics are extendable as local geodesics and minimizing up to length~$\pi$.
 
+\begin{wrapfigure}{o}{45 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-12}
+\end{wrapfigure}
+
 Since $\spc{U}$ is proper,
 the sequence $q_n$ has a partial limit, say~$q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
 assuming the latter is defined.\qeds
 
+
 Note that the unit disc in the plane with attached half-line to each point is a complete $\Cat{}{0}$ length space with extendable geodesics. 
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 This provides a counterexample to the statement of the exercise if  $\spc{U}$ is not assumed to be proper.
 
-
 \begin{wrapfigure}{r}{33mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/resh(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/resh(1)}
 \lbl[t]{17.5,.5;$\~p$}
 \lbl[b]{2,27.5;$\~x$}
 \lbl[b]{30,27.5;$\~y$}
@@ -363,6 +369,7 @@ This provides a counterexample to the statement of the exercise if  $\spc{U}$ is
 \lbl[b]{21,18;$\~z_y$}
 \end{lpic}
 \end{wrapfigure}
+
 \parbf{Exercise~\ref{ex:short-map}.}
 By Alexandrov's lemma (\ref{lem:alex}), 
 there are nonoverlapping triangles 
@@ -810,6 +817,56 @@ Therefore
 \]
 That is, $\spc{S}$ satisfies the conditions above.
 \qeds
+
+\parbf{Exercise~\ref{ex:cube-infty=>cube-2}}; (\ref{SHORT.cube-infty}) $\Rightarrow$ (\ref{SHORT.cube-2}).
+Since any closed curve can be considered as a short map from a boundary of a disc with some metric, it can be extended to a short map from a disc.
+Therefore any injective space is simply connected.
+
+Therefore the globalization theorem and flag condition (\ref{thm:hadamard-cartan} and \ref{thm:flag}) imply that it is sufficient to show that each link in $Q$ is flag.
+Further, by \ref{prop:no-trig} it is sufficient to show that link of each cube in $Q$ satisfies no-triangle condition.
+
+Arguing by contradiction, we can assume that no-triangle condition does not hold at a vertex $v$; that is, a zero-dimensional cube.
+In this case $v$ is a vertex of there edges $e_x$, $e_y$, and $e_z$;
+each pair of edges belong to one of the squares $s_x$, $s_y$, and $s_z$ with complementary index, but the squares $s_x$, $s_y$, $s_z$ do not belong to one cube.
+For higher dimensional cubes we have a product of this configuration with a cube.
+
+\begin{wrapfigure}{r}{25 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-13}
+\end{wrapfigure}
+
+Let $m_x$, $m_y$ and $m_z$ be the midpoints of $e_x$, $e_y$, and $e_z$ correspondingly.
+Consider 3 balls with centers $m_x$, $m_y$, and $m_z$ and radius $\tfrac14$.
+Observe that each pair of balls have a common point;
+but all three together have no points of intersection.
+It follows that $(Q,\ell^\infty)$ is not an injective space --- it does not contain a point on distance $\tfrac14$ from $m_x$, $m_y$, and $m_z$ --- a contradiction.
+
+
+\parit{(\ref{SHORT.cube-1}) $\Rightarrow$ (\ref{SHORT.cube-2}).}
+Observe that median point $m(x,y,z)$ of depends continuously on triple of points $(x,y,z)$ and $m(x,x,y)=x$.
+
+Given a loop $\gamma\:[0,1]\to Q$ with base at $p=\gamma(0)=\gamma(1)$,
+consider the map $(a,b)\mapsto m(p,\gamma(a),\gamma(b))$ of the triangle $\triangle$ defined by $0\z\le a \z\le b\z\le 1$.
+Note that boundary of triangle runs along $\gamma$.
+It follows that $\gamma$ is null homotopic and therefore $Q$ is simply connected.
+
+\begin{wrapfigure}{r}{25 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-15}
+\end{wrapfigure}
+
+It remains to check that all links of $Q$ satisfy no-triangle condition.
+
+Assume that a link of $Q$ does not satisfy the no-triangle condition.
+The same way as in the previous problem, we can assume that it is a link of a vertex;
+so we have a configuration of three squares $s_x$, $s_y$, and $s_z$, 
+three edges $e_x$, $e_y$, and $e_z$, and one common vertex $v$ as above.
+Observe that the centers $x$, $y$, and $z$ of the squares $s_x$, $s_y$, and $s_z$.
+Observe that that the geodesics $[xy]_{\ell^1}$, $[xz]_{\ell^1}$, and $[yz]_{\ell^1}$ are uniquely defined and they have no common point.
+It follows that the triple $(x,y,z)$ does not have a median; 
+that is, $(Q,\ell^1)$ is not a median space --- a contradiction.
 
 \section*{Subsets}
 
