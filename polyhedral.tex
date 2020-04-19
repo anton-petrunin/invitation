@@ -848,11 +848,25 @@ By Exercise \ref{ex:locally-convex},
 it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
 or equivalently, $G$ is locally convex in~$\spc{Q}$.
 
-Note that the latter can only fail if $\gamma$ contains two vertices, say $\xi$ 
+The latter can only fail if $\gamma$ contains two vertices, say $\xi$ 
 and 
 $\zeta$ in $\spc{S}$,
 which are joined by an edge not in $\gamma$; 
 denote this edge by~$e$.
+
+Indeed, if $G$ is \emph{not} locally convex in~$\spc{Q}$, then $\gamma$ is \emph{not} $\pi$-convex in $\spc{S}$; that is, there are two points $\eta$ 
+and 
+$\theta$ such that $\dist{\eta}{\theta}{\spc{S}}<\pi$, but the geodesic $[\eta\theta]_{\spc{S}}$ is not an arc of $\gamma$.
+We may also assume that $\eta$ or $\theta$ is not a vertex of $\spc{S}$; otherwise $\dist{\eta}{\theta}{\spc{S}}<\pi$ implies $\dist{\eta}{\theta}{\spc{S}}=\tfrac\pi2$, and the problem is solved.
+Without loss of generality assume $\eta$ is not a vertex,
+so it lies inside an edge $[\xi\xi']$ of $\gamma$.
+Further we can assume that only the endpoint of $[\eta\theta]_{\spc{S}}$ lie on $\gamma$.
+Leaving $\eta$ the geodesic $[\eta\theta]_{\spc{S}}$ enters a simplex $\Delta$;
+choose a vertex $\zeta$ in $\Delta$ distinct from $\xi$ and $\xi'$.
+Since geodesic $[\eta\theta]_{\spc{S}}$ is shorter than $\pi$, the same argument as in \ref{thm:flag} shows thar 
+$[\eta\theta]_{\spc{S}}$ spends the rest of its live in the open star $\Star_\xi$.
+In particular the other end $\theta$ lies on an edge from $\xi$.
+It follows that $\xi$ lies on $\gamma$ and we can take $e$ to be $[\xi\zeta]$ or $[\xi\zeta']$.
 
 Each edge of $\spc{S}$ has length~$\tfrac\pi2$.
 Therefore each of two circles formed by $e$ and an arc of $\gamma$
