@@ -73,17 +73,15 @@ This lemma allows  a local geodesic path
 to be moved continuously so that its endpoints follow given trajectories.
 This statement was originally proved by the first author and Richard Bishop using a different method; see~\cite{a-b:h-c}.
 
-\begin{thm}{Patchwork along a curve}
+\begin{thm}{Patchwork along a geodesic}
 \label{lem:patch}
 Let $\spc{U}$ be a proper length, locally $\Cat{}{0}$ space, 
-and $\gamma\:[0,1]\to\spc{U}$ be a 
- path.
+and $\gamma\:[0,1]\to\spc{U}$ be a locally geodesic path.
 
 Then there is a proper length  $\Cat{}{0}$ space   $\spc{N}$,
 an open set $\hat\Omega\subset \spc{N}$,
-and a  
- path $\hat\gamma\:[0,1]\to\hat\Omega$,
-such that there is an open locally isometric immersion 
+and a geodesic path $\hat\gamma\:[0,1]\to\hat\Omega$,
+such that there is an open locally distance-preserving map 
 $\map\:\hat\Omega\looparrowright\spc{U}$ satisfying
 $\map\circ\hat\gamma=\gamma$.
 
@@ -100,27 +98,28 @@ $\cBall[\gamma(t),r]$ forms a proper length $\Cat{}{\kappa}$ space.
 
 \begin{center}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/patching-balls(1)}
-\lbl{7,17;$\spc{B}^0$}
-\lbl{25,4;{$\spc{B}^1$}}
+\lbl{7,17;$\spc{B}_0$}
+\lbl{25,4;{$\spc{B}_1$}}
 \lbl{47,2;$\dots$}
 \lbl{58,2.5,4;$\dots$}
-\lbl{86,17;$\spc{B}^n$}
+\lbl{86,17;$\spc{B}_n$}
 \end{lpic}
 \end{center}
 
-Choose a partition $0\z=t^0<t^1<\dots<t^n\z=1$ such that 
-\[\oBall(\gamma(t^i),r)\supset \gamma([t^{i-1},t^i])\] for all $n>i>0$.
-Set $\spc{B}^i=\cBall[\gamma(t^i),r]$.
+Choose a partition $0\z=t_0<t_1<\dots<t_n\z=1$ such that 
+\[\oBall(\gamma(t_i),r)\supset \gamma([t_{i-1},t_i])\] for all $n>i>0$.
+Set $\spc{B}_i=\cBall[\gamma(t_i),r]$.
+We can assume in addition that $\spc{B}_{i-1}\cap \spc{B}_{i+1}\subset \spc{B}_{i}$ if $0<i<n$.
 
-Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all~$i$.
-Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along~$\sim$.
+Consider the disjoint union $\bigsqcup_i\spc{B}_i=\set{(i,x)}{x\in\spc{B}_i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all~$i$.
+Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}_i$ along~$\sim$.
 
-Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
+Note that $A_i=\spc{B}_i\cap\spc{B}_{i-1}$ is convex in $\spc{B}_i$ and in $\spc{B}_{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
 we conclude that $\spc{N}$ is a proper length $\Cat{}{0}$ space.
 
-For $t\in[t^{i-1},t^i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in~$\spc{N}$.
-Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\gamma$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\gamma(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
+For $t\in[t_{i-1},t_i]$, define $\hat\gamma(t)$ as the equivalence class of $(i,\gamma(t))$ in~$\spc{N}$.
+Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\gamma$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\gamma(t),\eps)\subset\spc{B}_i$ for all $t\in[t_{i-1},t_i]$.
 
 Define $\map\:\hat\Omega\to\spc{U}$
 by sending the equivalence class of $(i,x)$ to~$x$.
