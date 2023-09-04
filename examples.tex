@@ -73,8 +73,18 @@ if $a<b<c$, then $V_b\supset V_a\cap V_c$.
 Consider the finite union
 \[C'=V_{t_1}\cup\dots\cup V_{t_n}.\]
 The inclusion \ref{eq:VcVnV-0} makes it possible to apply Reshetnyak gluing theorem \ref{thm:gluing} recursively and show that $C'$ is $\Cat{}{0}$.
+
 By approximation, the $\Cat{}{0}$ comparison holds for any 4 points in $C$;
 hence $C$ is $\Cat{}{0}$.
+More precisely, choose $x_1,x_2,x_3,x_4\in C$ and 6 geodesics $[x_ix_j]_C$ between them.
+Choose $\eps>0$, shift each $[x_ix_j]_C$ down by $\eps$, and reconnect it to $x_i$ and $x_j$ by vertical $\eps$-segments.
+Denote the obtained curve by $\gamma_{i,j}$;
+note that 
+\[\length\gamma_{i,j}=\dist{x_i}{x_j}{C}+2\cdot\eps.\]
+We may assume that $C'$ contains all $\gamma_{i,j}$.
+It follows that 
+\[\dist{x_i}{x_j}{C}\le \dist{x_i}{x_j}{C'}\le \dist{x_i}{x_j}{C}+2\cdot\eps\]
+Since and $C'$ is $\Cat{}{0}$, $\eps>0$ is arbitrary, so is $C$.
 
 \parbf{Remark.}
 The set $C$ is not convex, but it is \emph{two-convex} as defined in the next section.
