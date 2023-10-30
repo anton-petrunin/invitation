@@ -844,7 +844,7 @@ It follows that $(Q,\ell^\infty)$ is not an injective space --- it does not cont
 
 
 \parit{(\ref{SHORT.cube-1}) $\Rightarrow$ (\ref{SHORT.cube-2}).}
-Observe that median point $m(x,y,z)$ of depends continuously on triple of points $(x,y,z)$ and $m(x,x,y)=x$.
+Observe that median point $m(x,y,z)$ depends continuously on triple of points $(x,y,z)$ and $m(x,x,y)=x$.
 
 Given a loop $\gamma\:[0,1]\to Q$ with base at $p=\gamma(0)=\gamma(1)$,
 consider the map $(a,b)\mapsto m(p,\gamma(a),\gamma(b))$ of the triangle $\triangle$ defined by $0\z\le a \z\le b\z\le 1$.
@@ -1032,10 +1032,14 @@ In particular, all points on $[pq]$ sufficiently close to $p$ lie in $\bar S$,
 a contradiction.
 \qeds
 
-
 \parbf{Exercise~\ref{ex:CAT=>two-convex}.}
-Show that if $K$ is not two-convex, then there is a plane triangle $\triangle$ whose sides lie completely in $K$, 
-but whose interior contains some points from  the complement $\EE^m\backslash K$.
+Suppose $K$ is not two convex;
+let $\gamma$ be a closed simple curve in a plane $W$ that do not meet Definition~\ref{def:two-convex}.
+Note that $W$ is not a vertical plane; denote by $V$ the three-dimensional subspace that spanned by $W$ and vertical direction.
+
+Note that $\gamma$ is contractible in $V\cap K$.
+Act as in \ref{ex:inner-support} to show that there exists a plane triangle $\triangle\subset V$ whose sides lie completely in $K$, 
+but whose interior contains points from the complement $\EE^m\backslash K$.
 
 It remains to note that $\triangle$ is not thin in~$K$.
 \qeds
