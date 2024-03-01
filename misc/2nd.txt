@@ -1,0 +1,20 @@
+2nd edition of "An invitation to Alexandrov geometry: CAT(0) spaces"
+
+Corrections + extra chapter about barycenters ~ Lecture 10 here: https://anton-petrunin.github.io/alexandrov/alexandrov.pdf
+
+"An invitation to Alexandrov geometry: curvature bounded below"
+
+Я предлагаю держаться того же формата --- техническое утверждение + приложение.
+К сожалению не всё получится всё строго доказать, как было в CAT(0).
+Вот список тем:
+
+Alexandrov embedding theorem > bending of convex surfaces
+
+Globalization > ???
+
+Quotient spaces > Erd"os revisited and/or Kleiner--Hsiang
+
+Gradient flow > Splitting theorem.
+
+Controlled convexity > Homotopy-type finiteness theorem.
+
