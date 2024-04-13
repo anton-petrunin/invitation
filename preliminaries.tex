@@ -1,0 +1,885 @@
+%%!TEX root = invitation-springer.tex
+\chapter{Preliminaries}\label{prelim}
+
+In this chapter we fix some conventions and recall the main definitions.
+The chapter may be used as a quick reference when reading the book.
+
+To learn background in metric geometry, the reader  may consult the book of Dmitri Burago, Yuri Burago, and Sergei Ivanov~\cite{burago-burago-ivanov}.
+ 
+
+\section{Metric spaces}
+\label{sec:metric spaces}
+
+
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
+The latter notation is used if we need to emphasize 
+that the distance is taken in the space~${\spc{X}}$.
+
+The function 
+\[\distfun_x\:y\mapsto \dist{x}{y}{}\]
+is called the \index{distance function}\emph{distance function} from~$x$. 
+
+\begin{itemize}
+\item The \index{diameter}\emph{diameter} of a metric space $\spc{X}$ is defined as
+\[\diam \spc{X}=\sup\set{\dist{x}{y}{\spc{X}}}{x,y\in \spc{X}}.\]
+
+\item Given $R\in[0,\infty]$ and $x\in \spc{X}$, the sets
+\begin{align*}
+\oBall(x,R)&=\{y\in \spc{X}\mid \dist{x}{y}{}<R\},
+\\
+\cBall[x,R]&=\{y\in \spc{X}\mid \dist{x}{y}{}\le R\}
+\end{align*}
+are called, respectively, the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}   of radius $R$ with center~$x$.
+Again, if we need to emphasize that these balls are taken in the metric space $\spc{X}$,
+we write 
+\[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}.\]
+\end{itemize}
+
+A metric space $\spc{X}$ is called \index{proper space}\emph{proper} if all closed bounded sets in $\spc{X}$ are compact. 
+This condition is equivalent to each of the following statements:
+\begin{enumerate}
+\item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
+the closed ball $\cBall[p,R]\subset\spc{X}$ is compact. 
+\item The function $\distfun_p\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$;
+that is, for any compact set $K\subset \RR$, its inverse image 
+$\set{x\in \spc{X}}{\dist{p}{x}{\spc{X}}\in K}$
+is compact.
+\end{enumerate}
+
+\begin{thm}{Exercise}\label{ex:non-contracting-map}
+Let $K$  be a compact metric space and
+\[f\:K\z\to K\] 
+be a distance non-decreasing map.
+Prove that $f$ is an isometry.
+\end{thm}
+
+\section{Constructions}\label{sec:constructions}
+
+\parbf{Product space.}
+Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
+$\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ where $u\in\spc{U}$ and $v\in \spc{V}$ 
+with the metric defined by formula
+\[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
+
+
+\parbf{Cone.}
+The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over a metric space $\spc{U}$
+is defined as the metric space whose underlying set consists of
+equivalence classes in
+$[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
+and whose metric is given by the cosine rule
+\[
+\dist{(p,s)}{(q,t)}{\spc{V}} 
+=
+\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
+\]
+where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
+
+The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
+The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
+
+\parbf{Suspension.}
+The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over a metric space $\spc{U}$
+is defined as the metric space whose underlying set consists of equivalence classes in
+$[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\z\sim (0,q)$ and $(\pi,p)\z\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
+and whose metric is given by the  spherical cosine rule
+\[
+\cos\dist{(p,s)}{(q,t)}{\Susp\spc{U}} 
+=
+\cos s\cdot\cos t-\sin s\cdot\sin t\cdot\cos\alpha,
+\]
+where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
+
+The points in $\spc{V}$ formed by the equivalence classes of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \index{pole of suspension}\emph{south poles} of the suspension.
+
+\begin{thm}{Exercise}\label{ex:product-cone}
+Let $\spc{U}$ be a metric space.
+Show that the spaces 
+\[\RR\times \Cone\spc{U}\quad\text{and}\quad\Cone[\Susp\spc{U}]\]
+are isometric.
+\end{thm}
+
+
+
+
+\section{Geodesics, triangles, and hinges}
+\label{sec:geods}
+
+\parbf{Geodesic.}
+Let $\spc{X}$ be a metric space 
+and $\II$\index{$\II$} be a real interval. 
+A~globally isometric map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
+\footnote{Various authors call it differently: {}\emph{shortest path}, {}\emph{minimizing geodesic}.}; 
+in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
+\[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
+for any pair $s,t\in \II$.
+
+We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if 
+$\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$.
+In this case the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$} and with an abuse of notations  we also call it a \index{geodesic}\emph{geodesic}.
+%Given a geodesic $[pq]$, we can parametrize it by distance to $p$; this parametrization will be denoted by $\geod_{[p q]}(t)$.
+
+
+We may write $[p q]_{\spc{X}}$ 
+to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
+We also use the following shortcut notation:
+\begin{align*}
+\left] p q \right]&=[pq]\backslash\{p,q\},
+&
+\left] p q \right]&=[pq]\backslash\{p\},
+&
+\left[ p q \right]&=[pq]\backslash\{q\}.
+\end{align*}
+
+
+
+In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  
+However,  once we write $[p q]$ we mean that we have  made a choice of  geodesic.
+
+A metric space is called \index{geodesic}\emph{geodesic} if any pair of its points can be joined by a geodesic. 
+
+
+A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parametrization by $[0,1]$.
+%Given a geodesic $[p q]$, we denote by $\geodpath_{[pq]}$ the corresponding geodesic path; that is, $$\geodpath_{[pq]}(t)\z\df\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
+
+A curve $\gamma\:\II\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
+A constant-speed parametrization of a local geodesic by the unit interval $[0,1]$ is called a \index{geodesic!local geodesic}\emph{local geodesic path}. 
+
+
+\parbf{Triangle.}
+For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
+$\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+
+Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
+$\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
+Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
+However, if we write $\trig p q r$, it means that we have made a choice of such a triangle; 
+that is, we have  fixed a choice of the geodesics $[q r]$, $[r p]$, and $[p q]$.
+
+The value 
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\]
+will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
+
+\parbf{Hinge.}
+Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
+A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
+$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
+
+
+\parbf{Convex set.}\label{def:convex-set}
+A set $A$ in a metric space $\spc{X}$ is called 
+\index{convex set}\emph{convex}
+if for every two points $p,q\in A$, 
+{}\emph{every} geodesic $[pq]$ in $\spc{X}$ 
+lies in~$A$.
+
+A set $A\subset\spc{X}$ is called 
+\index{locally convex}\emph{locally convex}
+if every point $a\in A$ admits an open neighborhood $\Omega\ni a$ in $\spc{X}$ 
+such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in~$A$.
+
+Note that any open set is locally convex by  definition.
+
+\section{Length spaces}\label{sec:intrinsic}
+
+A \emph{curve} is defined as a continuous map from a real interval to a space.
+If the real interval is $[0,1]$, then the curve is called a \emph{path}.
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space and
+$\alpha\: \II\to \spc{X}$ be a curve.
+We define the \index{length}\emph{length} of $\alpha$ as 
+\[
+\length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha(t_{i-1})}{}.
+\]
+\end{thm}
+
+Directly from the definition, it follows that if a path $\alpha\:[0,1]\to\spc{X}$ connects two points $x$ and $y$ 
+(that is, if $\alpha(0)=x$ and $\alpha(1)=y$), then 
+\[\length\alpha\ge \dist{x}{y}{}.\]
+
+Let $A$ be a subset of a metric space $\spc{X}$.
+Given two points $x,y\in A$,
+consider the value
+\[\dist{x}{y}{A}=\inf_{\alpha}\{\length\alpha\},\]
+where the infimum is taken for all paths $\alpha$ from $x$ to $y$ in $A$.\footnote{Note that while this notation slightly conflicts with the previously defined notation for distance on a general metric space, we will usually work with ambient length spaces where the meaning will be unambiguous.}
+
+If $\dist{x}{y}{A}$ takes finite value for each pair $x,y\in A$,
+then $\dist{x}{y}{A}$ defines a metric on  $A$;
+this metric will be called the \index{induced length metric}\emph{induced length metric} on $A$.
+
+If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$, there is a path $\alpha$ connecting $x$ to $y$ such that
+\[\length\alpha< \dist{x}{y}{}+\eps,\]
+then $\spc{X}$ is called a \index{length space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length metric}\emph{length metric}.\label{page:length metric}
+
+If $f\:\tilde{\spc{X}}\to\spc{X}$ is a covering,
+then a length metric on $\spc{X}$ can be lifted to $\tilde{\spc{X}}$
+by declaring 
+\[\length_{\tilde{\spc{X}}}\gamma=\length_{\spc{X}}(f\circ\gamma)\]
+for any curve $\gamma$ in $\tilde{\spc{X}}$.
+The space $\tilde{\spc{X}}$ with this metric is called the  \index{metric cover}\emph{metric cover} of $\spc{X}$.
+
+Note that any geodesic space is a length space.
+As can be seen from the following example, the converse does not hold.
+
+
+\begin{thm}{Example}
+Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\{\II_n\}$ of length $1+\tfrac1n$, where for each $\II_n$ the left end is glued to $p$ and the right end to~$q$.
+Then $\spc{X}$ carries a natural complete length metric with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to~$q$.
+\end{thm}
+
+
+
+\begin{thm}{Exercise}\label{ex:no-geod}
+Give an example of a complete length space for which no pair of distinct points can be joined by a geodesic.
+\end{thm}
+
+Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
+
+\begin{enumerate}[(i)]
+\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} between $x$ and $y$
+if 
+\[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
+\item Assume $\eps\ge 0$.
+A point $z\in \spc{X}$ is called an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} between $x$ and $y$
+if 
+\[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
+\end{enumerate}
+
+
+Note that a $0$-midpoint is the same as a midpoint.
+
+
+\begin{thm}{Lemma}\label{lem:mid>geod}
+Let $\spc{X}$ be a complete metric space.
+\begin{subthm}{lem:mid>length}
+Assume that for any pair of points $x,y\in \spc{X}$  
+ and any $\eps>0$
+there is an $\eps$-midpoint~$z$.
+Then $\spc{X}$ is a length space.
+\end{subthm}
+
+\begin{subthm}{lem:mid>geod:geod}
+Assume that for any pair of points $x,y\in \spc{X}$, 
+there is a midpoint~$z$.
+Then $\spc{X}$ is a geodesic space.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+We first prove (\ref{SHORT.lem:mid>length}).
+Let $x,y\in \spc{X}$ be a pair of points.
+
+Set $\eps_n=\frac\eps{4^n}$, $\alpha(0)=x$ and $\alpha(1)=y$.
+
+Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint between $\alpha(0)$ and $\alpha(1)$.
+Further, let $\alpha(\frac14)$ 
+and $\alpha(\frac34)$ be $\eps_2$-midpoints between the pairs $(\alpha(0),\alpha(\tfrac12))$ 
+and $(\alpha(\tfrac12),\alpha(1))$ respectively.
+Applying the above procedure recursively,
+on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$,
+for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, 
+as an $\eps_{n}$-midpoint between the already defined
+$\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
+
+
+In this way we define $\alpha(t)$ for $t\in W$,
+where $W$ denotes the set of dyadic rationals in $[0,1]$.
+Since $\spc{X}$ is complete, the map $\alpha$ can be extended continuously to $[0,1]$.
+Moreover,
+\[\begin{aligned}
+\length\alpha&\le \dist{x}{y}{}+\sum_{n=1}^\infty 2^{n-1}\cdot\eps_n\le
+\\
+&\le \dist{x}{y}{}+\tfrac\eps2.
+\end{aligned}
+\eqlbl{eq:eps-midpoint}
+\]
+Since $\eps>0$ is arbitrary, we get (\ref{SHORT.lem:mid>length}).
+
+To prove (\ref{SHORT.lem:mid>geod:geod}), 
+one should repeat the same argument 
+taking midpoints instead of $\eps_n$-midpoints.
+In this case \ref{eq:eps-midpoint} holds for $\eps_n=\eps=0$.
+\qeds
+
+Since in a compact space a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence, Lemma~\ref{lem:mid>geod} immediately implies
+
+\begin{thm}{Proposition}\label{prop:length+proper=>geodesic}
+A proper length space is geodesic.
+\end{thm}
+
+\begin{thm}{Hopf--Rinow theorem}\label{thm:Hopf-Rinow}
+Any complete, locally compact length space is proper.
+\end{thm}
+
+\parit{Proof.}
+Let $\spc{X}$ be a locally compact length space.
+Given $x\in \spc{X}$, denote by $\rho(x)$ the supremum of all $R>0$ such that
+the closed ball $\cBall[x,R]$ is compact.
+Since $\spc{X}$ is locally compact, 
+$$\rho(x)>0\ \ \text{for any}\ \ x\in \spc{X}.\eqlbl{eq:rho>0}$$
+It is sufficient to show that $\rho(x)=\infty$ for some (and therefore any) point $x\in \spc{X}$.
+
+Assume the contrary; that is, $\rho(x)<\infty$. We claim that
+
+\begin{clm}{} $B=\cBall[x,\rho(x)]$ is compact for any~$x$.
+\end{clm}
+
+Indeed, $\spc{X}$ is a length space;
+therefore for any $\eps>0$, 
+the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in~$B$.
+Since $B$ is closed and hence complete, it must be compact.
+\claimqeds
+Next we claim that
+\begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$ for any $x,y\in \spc{X}$;
+in particular $\rho\:\spc{X}\to\RR$ is a continuous function.
+\end{clm}
+
+Indeed, 
+assume the contrary; that is, $\rho(x)+|x-y|<\rho(y)$ for some $x,y\in \spc{X}$. 
+Then 
+$\cBall[x,\rho(x)+\eps]$ is a closed subset of $\cBall[y,\rho(y)]$ for some $\eps>0$.
+Then  compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$, a contradiction.\claimqeds
+
+Set $\eps=\min\set{\rho(y)}{y\in B}$; the minimum is defined since $B$ is compact.
+From \ref{eq:rho>0}, we have $\eps>0$.
+
+Choose a finite $\tfrac\eps{10}$-net $\{a_1,a_2,\dots,a_n\}$ in $B$.
+The union $W$ of the closed balls $\cBall[a_i,\eps]$ is compact.
+Clearly 
+$\cBall[x,\rho(x)+\frac\eps{10}]\subset W$.
+Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact,
+a contradiction.
+\qeds
+
+\begin{thm}{Exercise}\label{exercise from BH}
+Construct a geodesic space that is locally compact,
+but whose completion is neither geodesic nor locally compact.
+\end{thm}
+
+\section{Model angles and triangles}\label{sec:mod-tri/angles}
+
+Let $\spc{X}$ be a metric space and 
+$p,q,r\in \spc{X}$. 
+Let us define the \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
+(briefly, 
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
+\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same side lengths; that is,
+\[\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{},
+\quad\dist{\tilde q}{\tilde r}{}=\dist{q}{r}{},
+\quad\dist{\tilde r}{\tilde p}{}=\dist{r}{p}{}.\]
+
+In the same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\mathbb{S}^2}$
+in the hyperbolic plane $\HH^2$ and the unit sphere~$\mathbb{S}^2$.
+In the latter case the model triangle is said to be defined if in addition
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
+In this case the model triangle again exists and is unique up to an isometry of~$\mathbb{S}^2$.
+
+If 
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$ 
+and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
+the angle measure of 
+$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$ 
+will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
+$\angk p q r_{\EE^2}$%
+\index{$\angk{{*}}{{*}}{{*}}$}.
+In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\mathbb{S}^2}$;
+in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\mathbb{S}^2}$ is defined.
+
+We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\mathbb{S}^2$ is meant.
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-730}
+\end{wrapfigure}
+
+\begin{thm}{Alexandrov's lemma}
+\index{Alexandrov's lemma}
+\index{lemma!Alexandrov's lemma}
+\label{lem:alex}  
+Let $p,x,y,z$ be distinct points in a metric space such that $z\in \left]x y\right]$.
+Then 
+the following expressions for the Euclidean model angles have the same sign:
+\begin{subthm}{lem-alex-difference}
+$\angk x p y
+-\angk x p z$,
+\end{subthm} 
+
+\begin{subthm}{lem-alex-angle}
+$\angk z p x
++\angk z p y -\pi$.
+\end{subthm}
+
+Moreover,
+\[\angk p x y \ge \angk p x z +  \angk p z y,\]
+with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
+
+The same holds for the hyperbolic and spherical model angles, 
+but in the latter case one has to assume in addition that
+\[\dist{p}{z}{}+\dist{p}{y}{}+\dist{x}{y}{}< 2\cdot\pi.\]
+
+\end{thm}
+
+\parit{Proof.} 
+Consider the model triangle $\trig{\tilde x}{\tilde p}{\tilde z}=\modtrig(x p z)$.
+Take 
+a point $\tilde y$ on the extension of 
+$[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{}$ (and therefore $\dist{\tilde x}{\tilde z}{}=\dist{x}{z}{}$). 
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-740}
+\end{wrapfigure}
+
+Since increasing the opposite side in a plane triangle increases the corresponding angle, 
+the following expressions have the same sign:
+\begin{enumerate}[(i)]
+\item $\mangle\hinge{\tilde x}{\tilde p}{\tilde y}-\angk{x}{p}{y}$,
+\item $\dist{\tilde p}{\tilde y}{}-\dist{p}{y}{}$,
+\item $\mangle\hinge{\tilde z}{\tilde p}{\tilde y}-\angk{z}{p}{y}$.
+\end{enumerate}
+Since 
+\[\mangle\hinge{\tilde x}{\tilde p}{\tilde y}=\mangle\hinge{\tilde x}{\tilde p}{\tilde z}=\angk{x}{p}{z}\]
+and
+\[ \mangle\hinge{\tilde z}{\tilde p}{\tilde y}
+=\pi-\mangle\hinge{\tilde z}{\tilde x}{\tilde p}
+=\pi-\angk{z}{x}{p},\]
+the first statement follows.
+
+For the second statement, construct a model triangle $\trig{\tilde p}{\tilde z}{\tilde y'}\z=\modtrig(pzy)_{\EE^2}$ on the opposite side of $[\tilde p\tilde z]$ from $\trig{\tilde x}{\tilde p}{\tilde z}$.  
+Note that 
+\begin{align*}
+\dist{\tilde x}{\tilde y'}{}
+&\le \dist{\tilde x}{\tilde z}{} + \dist{\tilde z}{\tilde y'}{}=
+\\
+&=\dist{x}{z}{}+\dist{z}{y}{}=
+\\
+&=\dist{x}{y}{}.
+\intertext{Therefore}
+\angk{p}{x}{z} + \angk{p}{z}{y} 
+&
+= 
+\mangle\hinge{\tilde p}{\tilde x}{\tilde z}+ \mangle\hinge{\tilde p}{\tilde z}{\tilde y'} 
+=
+\\
+&
+= 
+\mangle\hinge{\tilde p}{\tilde x}{\tilde y'}
+\le
+\\
+&\le  \angk p x y.
+\end{align*}
+Equality holds if and only  if $\dist{\tilde x}{\tilde y'}{}=\dist{x}{y}{}$, 
+as required.
+\qeds
+
+\section{Angles and the first variation}\label{sec:angles}
+
+Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} as 
+the limit\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
+\[\mangle\hinge p x y
+\df
+\lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y}_{\EE^2},\eqlbl{eq:def-angle}\]
+where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
+(The angle $\mangle\hinge p x y$ is defined if the limit exists.)
+
+The value under the limit can be calculated from the  cosine law:
+\[\cos\angk{p}{x}{y}_{\EE^2}
+=
+\frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
+
+The following lemma implies that in \ref{eq:def-angle}, one can use $\angk p{\bar x}{\bar y}_{\mathbb{S}^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
+
+
+\begin{thm}{Lemma}\label{lem:k-K-angle}
+For any three points $p,x,y$ in a metric space the following inequalities
+\[
+\begin{aligned}
+|\angk p{x}{y}_{\mathbb{S}^2}-\angk p{x}{y}_{\EE^2}|
+&\le 
+\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
+\\
+|\angk p{x}{y}_{\HH^2}-\angk p{x}{y}_{\EE^2}|
+&\le 
+\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}
+\end{aligned}
+\eqlbl{eq:k-K}\]
+hold whenever the left-hand side is defined.
+\end{thm}
+
+
+\parit{Proof.}
+Note that 
+\[\angk p{x}{y}_{\HH^2}\le\angk{p}{x}{y}_{\EE^2}\le \angk p{x}{y}_{\mathbb{S}^2}.\]
+Therefore
+\begin{align*}
+0&\le \angk p{x}{y}_{\mathbb{S}^2}-\angk p{x}{y}_{\HH^2}\le
+\\
+&\le\quad \angk p{x}{y}_{\mathbb{S}^2}+\angk {x}p{y}_{\mathbb{S}^2}+\angk {y}p{x}_{\mathbb{S}^2}
+-
+\\
+&\quad-\angk p{x}{y}_{\HH^2}-\angk {x}p{y}_{\HH^2}-\angk {y}p{x}_{\HH^2}
+= 
+\\
+&=\area\modtrig(pxy)_{\mathbb{S}^2}+\area\modtrig(pxy)_{\HH^2}.
+\end{align*}
+The inequality \ref{eq:k-K} follows since 
+\begin{align*}
+0
+&\le
+\area\modtrig(pxy)_{\HH^2}\le 
+\\
+&\le\area\modtrig(pxy)_{\mathbb{S}^2}\le
+\\
+&\le\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}.
+\end{align*}
+\qedsf
+
+
+
+\begin{thm}{Triangle inequality for angles}
+\label{claim:angle-3angle-inq}
+Let  $[px^1]$, $[px^2]$ and $[px^3]$ be three geodesics in a metric space.
+If all  the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined, then they satisfy the triangle inequality:
+\[\alpha^{13}\le \alpha^{12}+\alpha^{23}.\]
+
+\end{thm}
+
+
+
+
+\parit{Proof.} 
+Since $\alpha^{13}\le\pi$, we may assume that $\alpha^{12}+\alpha^{23}< \pi$.
+
+Let $\gamma^i$ be the unit-speed parametrization of $[px^i]$ from $p$ to $x^i$.
+Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
+\begin{align*}
+\dist{\gamma^1(t)}{\gamma^3(\tau)}{}
+\le 
+\ &\dist{\gamma^1(t)}{\gamma^2(s)}{}+\dist{\gamma^2(s)}{\gamma^3(\tau)}{}<\\
+<
+\ &\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha^{12}+\eps)}\ +
+\\
+&+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha^{23}+\eps)}\le
+\end{align*}
+
+\begin{wrapfigure}{o}{30 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-615}
+\vskip3mm
+\end{wrapfigure}
+
+Below we define 
+$s(t,\tau)$ so that for 
+$s=s(t,\tau)$, this chain of inequalities can be continued as follows:
+\[\le
+\ \sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
+\]
+Thus for any $\eps>0$, 
+\[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
+Hence the result.
+
+To define $s(t,\tau)$, consider three rays $\tilde\gamma^1$, $\tilde\gamma^2$, $\tilde\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde\gamma^1,\tilde\gamma^2)=\alpha^{12}+\eps$, $\mangle(\tilde\gamma^2,\tilde\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\tilde\gamma^1,\tilde\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+We parametrize each ray by the distance from the starting point.
+Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
+the number such that 
+$\tilde\gamma^2(s)\in[\tilde\gamma^1(t)\ \tilde\gamma^3(\tau)]$. 
+Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
+\qeds 
+
+\begin{thm}{Exercise}\label{ex:adjacent-angles}
+Prove that the sum of adjacent angles is at least~$\pi$.
+
+More precisely, let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
+If $p\in \left] x y \right]$, then 
+\[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
+whenever  each angle on the left-hand side is defined.
+\end{thm}
+
+
+\begin{thm}{First variation inequality}\label{lem:first-var}
+Assume that for a  hinge $\hinge q p x$ 
+the angle $\alpha=\mangle\hinge q p x$ is defined.
+Then
+\[\dist{p}{\gamma(t)}{}
+\le
+\dist{q}{p}{}-t\cdot \cos\alpha+o(t),\]
+where $\gamma$ is the unit-speed parametrization of $[qx]$ from $q$ to $x$.
+\end{thm}
+
+\parit{Proof.} Take a sufficiently small $\eps>0$.
+Denote by $\beta$ the the unit-speed parametrization of $[qp]$ from $q$ to $p$.
+For all sufficiently small $t>0$, we have 
+\begin{align*}
+\dist{\beta(t/\eps)}{\gamma(t)}{}
+&\le 
+\tfrac{t}{\eps}\cdot \sqrt{1+\eps^2 -2\cdot \eps\cdot \cos\alpha}+o(t)\le
+\\
+&\le \tfrac{t}{\eps} -t\cdot \cos\alpha + t\cdot \eps.
+\end{align*}
+Applying the triangle inequality, we get 
+\begin{align*}
+\dist{p}{\gamma(t)}{}
+&\le \dist{p}{\beta(t/\eps)}{}+\dist{\beta(t/\eps)}{\gamma(t)}{}
+\le 
+\\
+&\le
+\dist{p}{q}{} -t\cdot \cos\alpha + t\cdot \eps
+\end{align*}
+for any fixed $\eps>0$ and all sufficiently small~$t$.
+Hence the result.
+\qeds
+
+\section{Space of directions and tangent space}
+\label{sec:tangent-space+directions}
+
+Let $\spc{X}$ be a metric space with defined angles for all hinges.
+Fix a point $p\in \spc{X}$. 
+
+Consider the set $\mathfrak{S}_p$ 
+of all nontrivial geodesics  that start at~$p$.
+By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
+so
+ $(\mathfrak{S}_p,\mangle)$ 
+forms a \index{pseudometric space}\emph{pseudometric space};
+that is, $\mangle$ satisfies all the conditions of a metric on $\mathfrak{S}_p$, except that  the angle between distinct geodesics might vanish.
+
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+Elements of $\Sigma'_p$ are called \index{geodesic directions}\emph{geodesic directions} at~$p$.
+Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
+for the equivalence relation 
+\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
+
+The completion of $\Sigma'_p$ is called the 
+\index{space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
+Elements of $\Sigma_p$ are called \index{direction}\emph{directions} at~$p$.
+
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at  $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
+
+The tangent space $\T_p$ could also be defined directly, without introducing the space of directions.
+To do so, consider the set $\mathfrak{T}_p$ of all geodesics with constant-speed parametrizations starting at~$p$. 
+Given $\alpha,\beta\in \mathfrak{T}_p$,
+set 
+\[\dist{\alpha}{\beta}{\mathfrak{T}_p}
+=
+\lim_{\eps\to0} 
+\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps
+\eqlbl{eq:dist-in-T_p}\]
+Since the angles in $\spc{X}$ are defined, 
+\ref{eq:dist-in-T_p}
+defines a pseudometric on $\mathfrak{T}_p$.
+
+
+The corresponding metric space admits a natural isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
+The elements of $\T'_p$ are  equivalence classes for the relation 
+\[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+The completion of $\T'_p$ is therefore  naturally isometric to~$\T_p$.
+
+Elements of $\T_p$ will be called 
+\index{tangent vector}\emph{tangent vectors} 
+at $p$, regardless of the fact that $\T_p$ is only a metric cone and need not be a vector space.
+Elements of $\T'_p$ will be called 
+\index{geodesic tangent vector}\emph{geodesic tangent vectors} 
+at~$p$.
+
+\section{Hausdorff convergence}
+
+It seems that \emph{Hausdorff convergence} was first introduced by Felix Hausdorff in \cite{hausdorff},
+and a couple of years later an equivalent definition was given by Wilhelm Blaschke in~\cite{blaschke}.
+A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
+and later rediscovered by Robert Wijsman in~\cite{wijsman}.  
+However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence}, also introduced by Hausdorff in \cite{hausdorff}.
+For this reason we call it Hausdorff convergence
+instead of
+{}\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
+
+
+Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
+We will denote by $\distfun_A(x)$ the distance from $A$ to a point $x$ in $\spc{X}$;
+that is,
+$$\distfun_A(x)\df\inf\set{\dist{a}{x}{\spc{X}}}{a\in A}.$$
+
+\begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
+Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$, 
+a closed set $A_\infty\subset \spc{X}$ is called the \emph{Hausdorff limit} of $(A_n)_{n=1}^\infty$,
+briefly $A_n\to A_\infty$, if 
+$$\distfun_{A_n}(x)\to\distfun_{A_\infty}(x)\ \ \text{as}\ \ n\to\infty$$
+for every $x\in \spc{X}$.
+
+In this case, the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{converge in the sense of Hausdorff}\emph{converge in the sense of Hausdorff}.
+\end{thm}
+
+\parbf{Example.}
+Let $D_n$ be the disc in the coordinate plane 
+with center $(0,n)$ and radius~$n$.
+Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
+
+\begin{thm}{Exercise}\label{ex:hausdorff-conv}
+Let $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}.  
+
+Show that $A_\infty$ is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in A_n$.
+
+Does  the converse hold? That is, suppose $(A_n)_{n=1}^\infty, A_\infty$ are closed sets such that  $A_\infty$  is the set of all points $p$ such that   $p_n\to p$ for some sequence of points  $p_n\in A_n$.
+Does this imply that $A_n\to A_\infty$?
+\end{thm}
+
+\begin{thm}{First selection theorem}
+Let $\spc{X}$ be a proper metric space
+and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in~$\spc{X}$.
+Assume that for some (and therefore any) point  $x\in\spc{X}$, 
+the sequence $\distfun_{A_n}(x)$ is bounded.
+Then the sequence  $(A_n)_{n=1}^\infty$ has a convergent subsequence in the sense of Hausdorff.
+\end{thm}
+
+\parit{Proof.}
+Since $X$ is proper,
+there is a countable dense set $\{x_1,x_2,\dots\}$ in~$\spc{X}$.
+Note that the sequence $d_n=\distfun_{A_n}(x_\kay)$ is bounded for each~$\kay$. 
+Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
+we can assume that $\distfun_{A_n}(x_\kay)$ converges as $n\to\infty$ for any fixed~$\kay$.
+
+Note that for each $n$, the function $\distfun_{A_n}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
+Therefore the sequence $\distfun_{A_n}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
+
+Set $A_\infty=f^{-1}(0)$. Let us show that 
+\[\distfun_{A_\infty}(y)\le f(y)\] 
+for any~$y$.
+
+Assume the contrary;
+that is, 
+\[f(z)<R<\distfun_{A_\infty}(z)\] 
+for some $z\in \spc{X}$ and $R>0$.
+Then for any sufficiently large $n$, there is a point $z_n\in A_n$ such that
+$\dist{x}{z_n}{}\le R$.
+Since $\spc{X}$ is proper, we can pass to a partial limit $z_\infty$ of $z_n$ as $n\to\infty$.
+
+It is clear that $f(z_\infty)=0$;
+that is, $z_\infty\in A_\infty$. 
+(Note that  this implies that $A_\infty\ne \emptyset$.)
+On the other hand, 
+\begin{align*}
+\distfun_{A_\infty}(y)
+\le
+\dist{z_\infty}{y}{}
+\le R
+<
+\distfun_{A_\infty}(y),
+\end{align*}
+a contradiction.
+
+On the other hand, since $f$ is 1-Lipschitz,  $\distfun_{A_\infty}(y)\ge f(y)$.
+Therefore
+\[\distfun_{A_\infty}(y)= f(y)\]
+for any $y\in \spc{X}$.
+Hence the result.
+\qeds
+
+\section{Gromov--Hausdorff convergence}
+
+\begin{thm}{Definition}\label{def:comp-metr}
+Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a collection of metric spaces.
+A metric $\rho$ on the disjoint union
+$$\bm{X}=\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$
+is called a  \index{compatible metric}\emph{compatible metric}
+if the restriction of $\rho$ to every $\spc{X}_\alpha$ coincides with the original metric on~$\spc{X}_\alpha$.
+\end{thm}
+
+\begin{thm}{Definition}\label{def:GH}
+Let $\spc{X}_1,\spc{X}_2,\dots$ 
+and $\spc{X}_\infty$ be proper metric spaces 
+and $\rho$ be a compatible metric on their disjoint union~$\bm{X}$.
+Assume that $\spc{X}_n$ is an open set in 
+$(\bm{X},\rho)$ for each $n\ne\infty$, and 
+$\spc{X}_n\to \spc{X}_\infty$ in $(\bm{X},\rho)$ as $n\to\infty$ in the sense of Hausdorff (see Definition~\ref{def:hausdorff-coverge}).
+
+Then we say $\rho$ defines a 
+\index{convergence in the sense of Gromov--Hausdorff}\emph{convergence%
+\footnote{Formally speaking, convergence in the topology induced by $\rho$ on~$\bm{X}$.} 
+in the sense of Gromov--Hausdorff}%
+\index{convergence in the sense of Gromov--Hausdorff},
+and write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xrightarrow{\rho} \spc{X}_\infty$.
+The space $\spc{X}_\infty$ is called the \emph{limit space} of the sequence $(\spc{X}_n)$ \emph{along} $\rho$.
+\end{thm}
+
+Usually Gromov--Hausdorff convergence is defined differently. We prefer this definition since it induces convergence for a sequence of points $x_n\in\spc{X}_n$ (Exercise \ref{ex:hausdorff-conv}),
+as well as 
+weak convergence of measures $\mu_n$ on $\spc{X}_n$, 
+and so on,
+corresponding to convergence in the ambient space $(\bm{X},\rho)$.
+
+Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we have  made a choice of convergence.
+Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, it might be possible to construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xrightarrow{\rho}} \spc{X}_\infty$ and $\spc{X}_n\xrightarrow{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
+
+For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$
+may converge to $\RR_{\ge0}$ and $\RR$.
+The first convergence is evident and the second could be guessed from the diagram.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-500}
+\end{figure}
+
+\begin{thm}{Second selection theorem}\label{thm:gromov-selection}
+Let $\spc{X}_n$ be a sequence of proper metric spaces 
+with marked points $x_n\in \spc{X}_n$.
+Assume that for any fixed $R,\eps>0$, there is $N=N(R,\eps)\in\NN$ 
+such that for each $n$
+the ball $\cBall[x_n,R]_{\spc{X}_n}$ admits a finite $\eps$-net with at most $N$ points.
+Then there is a subsequence of $\spc{X}_n$ admitting a Gromov--Hausdorff convergence 
+such that the sequence of marked points $x_n\in\spc{X}_n$ converges.
+\end{thm}
+
+\parit{Proof.}
+From the main assumption in the theorem,
+in each space $\spc{X}_n$ 
+there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that the following condition holds for a fixed sequence of integers $M_1<M_2<\dots$
+\begin{itemize}
+\item $\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1$ if $i\le M_\kay$,
+\item the points $z_{1,n},\dots,z_{M_\kay,n}$ form an $\tfrac1\kay$-net in $\cBall[x_n,\kay]_{\spc{X}_n}$.
+\end{itemize}
+
+Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}\] 
+converges for any $i$ and~$j$.
+
+Consider a countable set of points $\spc{W}=\{w_1,w_2,\dots\}$
+equipped with the pseudometric defined by 
+\[\dist{w_i}{w_j}{\spc{W}}
+=
+\lim_{n\to\infty}\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}.\]
+Let $\hat{\spc{W}}$ be the metric space corresponding to $\spc{W}$;
+that is, points in $\hat{\spc{W}}$ are equivalence classes in $\spc{W}$
+for the relation $\sim$, where $w_i\sim w_j$ if and only if $\dist{w_i}{w_j}{\spc{W}}=0$, 
+and where 
+\[\dist{[w_i]}{[w_j]}{\hat{\spc{W}}}\df\dist{w_i}{w_j}{\spc{W}}.\]
+Denote by
+$\spc{X}_\infty$ the completion of~$\hat{\spc{W}}$.
+
+It remains to show that there is a Gromov--Hausdorff convergence 
+$\spc{X}_n\to\spc{X}_\infty$ such that the sequence $x_n\in\spc{X}_n$ converges.
+To prove this, we need to construct a metric $\rho$ on the disjoint union of \[\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots\]  satisfying definitions \ref{def:comp-metr} and~\ref{def:GH}.
+The metric $\rho$ can be constructed as the maximal compatible metric
+such that 
+\[\rho(z_{i,n},w_i)\le\tfrac1m\]
+for any $n\ge N_m$ and $i<I_m$ for a suitable choice of two sequences 
+$(I_m)$ and $(N_m)$ with $I_1=N_1=1$.
+\qeds
+
+
+
+\begin{thm}{Exercise}\label{ex:compact-proper-GH}
+Let $\spc{X}_n$ be a sequence of metric spaces that admits 
+two convergences $\spc{X}_n\xrightarrow{\rho}\spc{X}_\infty$ and $\spc{X}_n\xrightarrow{\rho'}\spc{X}_\infty'$.
+\begin{subthm}{ex:compact-proper-GH:a}
+If  $\spc{X}_\infty$ is compact, then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+\end{subthm}
+
+\begin{subthm}{ex:compact-proper-GH:b}
+If  $\spc{X}_\infty$ is proper and there is a sequence of points $x_n\in \spc{X}_n$ 
+that  converges in both convergences, 
+ then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+\end{subthm}
+\end{thm}

@@ -1,0 +1,54 @@
+\documentclass[twoside]{book}
+
+%\newcommand{\spell}[2]{#1} %spell
+\newcommand{\spell}[2]{#2} %notes
+
+
+\def\thetitle{An invitation to Alexandrov geometry: CAT(0) spaces}
+\def\theauthors{Stephanie Alexander, Vitali Kapovitch, Anton Petrunin}
+
+\usepackage{lectures}
+\usepackage[colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={\thetitle},
+pdfsubject={Geometry},
+pdfauthor={\theauthors}
+]{hyperref}
+\makeindex
+
+%\usepackage[x-1a]{pdfx}
+
+\overfullrule=100mm
+
+\begin{document}
+\spell{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\emph[1]{#1}}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{intro}
+\include{preliminaries}
+\include{billiard}
+\include{majorization}
+\include{cartan-hadamard}
+\include{exot}
+\include{subsets}
+\include{kleiner}
+
+\appendix
+\include{solutions}
+
+{
+\input{invitation-CAT.ind}
+
+\def\emph{\textit}
+
+\printbibliography[heading=bibintoc]
+\fussy
+}
+
+
+\end{document}

@@ -1,0 +1,1092 @@
+\chapter{Gluing and billiards}\label{chapter:gluing}
+
+In this chapter we define $\CAT(\kappa)$ spaces,
+prove Reshetnyak's gluing theorem, and give the first application, to billiards.
+
+Here ``$\CAT$'' is an acronym for Cartan, Alexandrov, and Toponogov.
+It was coined by Mikhael Gromov in 1987.
+Originally, Alexandrov called these spaces ``$\mathfrak{R}_\kappa$ domain'';
+this term is still in use.
+
+Riemannian manifolds with nonpositive sectional curvature provide a motivating example.
+Specifically,  a Riemannian manifold has nonpositive sectional curvature if and only if each point admits a $\CAT(0)$ neighborhood.
+
+
+\section{The 4-point condition}
+
+Given a quadruple of points $p,q,x,y$ in a metric space $\spc{X}$,
+consider two model triangles in the plane 
+$\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\EE^2}$ 
+and 
+$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$.
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-720}
+\end{wrapfigure}
+
+If the inequality
+\[\dist{p}{q}{\spc{X}}\le \dist{\tilde p}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde q}{\EE^2}\]
+holds for any point $\tilde z\in [\tilde x\tilde y]$, then we say that 
+the quadruple $p,q,x,y$ \index{$\CAT(0)$ comparison}\emph{satisfies $\CAT(0)$ comparison}.
+\label{page:CAT-comparison}
+
+
+If we do the same for spherical model triangles  
+$\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\mathbb{S}^2}$ 
+and 
+$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\mathbb{S}^2}$,
+then we arrive at the definition of $\CAT(1)$ comparison.
+If one of the spherical model triangles is undefined,\footnote{That is, if 
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi
+\quad
+\text{or}
+\quad
+\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
+then it is assumed that $\CAT(1)$ comparison automatically holds for this quadruple.
+
+We can do the same for the model plane of curvature $\kappa$;
+that is, a sphere if $\kappa>0$, 
+Euclidean plane if $\kappa=0$ 
+and Lobachevsky plane if $\kappa<0$.
+In this case we arrive at the definition of $\CAT(\kappa)$ comparison.
+However in these notes we will mostly consider  $\CAT(0)$ comparison and occasionally $\CAT(1)$ comparison;
+so, if you see $\CAT(\kappa)$, you can assume that $\kappa$ is $0$ or~$1$.
+
+
+If all quadruples in a metric space $\spc{X}$ satisfy $\CAT(\kappa)$ comparison, then we say that the space $\spc{X}$ is $\CAT(\kappa)$.
+(Note that $\CAT(\kappa)$ is an adjective.)
+
+In order to check $\CAT(\kappa)$ comparison, it is sufficient to know the 6 distances between all pairs of points in the quadruple.
+This observation implies the following.
+
+\begin{thm}{Proposition}\label{prop:cat-limit}
+Any Gromov--Hausdorff limit of a sequence of $\CAT(\kappa)$ spaces is $\CAT(\kappa)$. 
+\end{thm}
+
+In the proposition above, 
+it does not matter which definition of convergence for metric spaces you use, 
+as long as any quadruple of points in the limit space can be arbitrarily well approximated by  quadruples in the sequence of metric spaces. 
+
+\section{Products, cones, and suspension}
+\label{sec:Products and cones}
+
+Products, cones, and suspension are defined in Section~\ref{sec:constructions}.
+
+\begin{thm}{Proposition}\label{ex:product-CAT}
+Let $\spc{U}$ and $\spc{V}$ be $\CAT(0)$ spaces.
+Then the product space $\spc{U}\times\spc{V}$ is $\CAT(0)$.
+\end{thm}
+
+\parit{Proof.}
+Fix a quadruple in $\spc{U}\times \spc{V}$:
+\begin{align*}
+p&=(p_1,p_2),
+&
+q&=(q_1,q_2), 
+&
+x&=(x_1,x_2),
+&
+y&=(y_1,y_2).
+\end{align*}
+For the quadruple $p_1,q_1,x_1,y_1$ in $\spc{U}$,
+construct two model triangles $\trig{\tilde p_1}{\tilde x_1}{\tilde y_1}=\modtrig(p_1x_1y_1)_{\EE^2}$ 
+and $\trig{\tilde q_1}{\tilde x_1}{\tilde y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$.  
+Similarly, for the quadruple $p_2,q_2,x_2,y_2$ in $\spc{V}$
+construct two model triangles $\trig{\tilde p_2}{\tilde x_2}{\tilde y_2}$ and $\trig{\tilde q_2}{\tilde x_2}{\tilde y_2}$.
+
+Consider four points in $\EE^4=\EE^2\times\EE^2$ 
+\begin{align*}
+\tilde p&=(\tilde p_1,\tilde p_2),
+&
+\tilde q&=(\tilde q_1,\tilde q_2),
+&
+\tilde x&=(\tilde x_1,\tilde x_2),
+&
+\tilde y&=(\tilde y_1,\tilde y_2).
+\end{align*}
+Note that the triangles $\trig{\tilde p}{\tilde x}{\tilde y}$ and $\trig{\tilde q}{\tilde x}{\tilde y}$ in $\EE^4$ are isometric to the model triangles 
+$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$.
+
+If $\tilde z=(\tilde z_1,\tilde z_2)\in [\tilde x\tilde y]$, then $\tilde z_1\in [\tilde x_1\tilde y_1]$ and $\tilde z_2\in [\tilde x_2\tilde y_2]$ and
+\begin{align*}
+\dist[2]{\tilde z}{\tilde p}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde p_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde p_2}{\EE^2},
+\\
+\dist[2]{\tilde z}{\tilde q}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde q_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde q_2}{\EE^2},
+\\
+\dist[2]{p}{q}{\spc{U}\times\spc{V}}&=\dist[2]{p_1}{q_1}{\spc{U}}+\dist[2]{p_2}{q_2}{\spc{V}}.
+\end{align*}
+Therefore $\CAT(0)$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
+and 
+$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies 
+$\CAT(0)$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.
+\qeds
+
+Recall that metric on the cone \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ is defined via cosine rule.
+
+\begin{thm}{Proposition}\label{ex:cone+susp}
+Let $\spc{U}$ be a metric space.
+Then $\Cone\spc{U}$ is  $\CAT(0)$ if and only if $\spc{U}$ is $\CAT(1)$.
+\end{thm}
+
+\parit{Proof; if part.}
+Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
+and by $|x|$ the distance from $x$ to the tip of the cone;
+if $x$ is the tip, then $|x|=0$ and we can take any point of $\spc{U}$ as~$x'$.
+
+Let $p$, $q$, $x$, $y$
+be a quadruple in $\Cone\spc{U}$.
+Assume that the spherical model triangles $\trig{\tilde p'}{\tilde x'}{\tilde y'}_{\SSS^2}=\modtrig(p'x'y')_{\SSS^2}$ and $\trig{\tilde q'}{\tilde x'}{\tilde y'}_{\SSS^2}=\modtrig(q'x'y')_{\SSS^2}$ are defined.
+Consider the following points in $\EE^3=\Cone\SSS^2$: 
+\begin{align*}
+\tilde p&=|p|\cdot\tilde p',
+&
+\tilde q&=|q|\cdot\tilde q',
+&
+\tilde x&=|x|\cdot\tilde x',
+&
+\tilde y&=|y|\cdot\tilde y'.
+\end{align*}
+
+Note that
+$\trig{\tilde p}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(pxy)_{\EE^2}$
+and
+$\trig{\tilde q}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(qxy)_{\EE^2}$.
+Further, note that if $\tilde z\in [\tilde x\tilde y]_{\EE^3}$, then
+$\tilde z'=\tilde z/|\tilde z|$ lies on the geodesic $[\tilde x'\tilde y']_{\SSS^2}$.
+Therefore the $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies the 
+$\CAT(0)$ comparison for $\dist{p}{q}{}$ with $\tilde z\in[\tilde x\tilde y]_{\EE^3}$.
+
+If at least one of the model triangles $\modtrig(p'x'y')_{\SSS^2}$ and $\modtrig(q'x'y')_{\SSS^2}$ is undefined,
+then the statement follows from the triangle inequalities 
+\begin{align*}
+|p'-x'|_{\spc{U}}+|q'-x'|_{\spc{U}}
+&\ge |p'-q'|_{\spc{U}}
+\\
+|p'-y'|_{\spc{U}}+|q'-y'|_{\spc{U}}
+&\ge |p'-q'|_{\spc{U}}
+\end{align*}
+This case is left as an exercise. %???
+
+\parit{Only-if part.}
+Suppose that $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ are defined as above.
+Assume all these points lie in a half-space of $\EE^3=\Cone\SSS^2$ with origin at its boundary. 
+Then we can choose positive values $a$, $b$, $c$, and $d$ such that the points $a\cdot \tilde p'$, $b\cdot \tilde q'$, $c\cdot \tilde x'$, $d\cdot \tilde y'$ lie in one plane.
+Consider the corresponding points $a\cdot  p'$, $b\cdot  q'$, $c\cdot  x'$, $d\cdot y'$ in $\Cone\spc{U}$.
+Applying the $\CAT(0)$ comparison for these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
+
+It remains to consider the case when $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ do not in a half-space.
+Fix $\tilde z'\in [\tilde x' \tilde y']_{\SSS^2}$.
+Observe that 
+\begin{align*}\dist{\tilde p'}{\tilde x'}{\SSS^2}+\dist{\tilde q'}{\tilde x'}{\SSS^2}
+ &
+\le \dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}
+\intertext{or} 
+\dist{\tilde p'}{\tilde y'}{\SSS^2}+\dist{\tilde q'}{\tilde y'}{\SSS^2}
+&\le
+\dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}.\end{align*}
+That is, in this case, the $\CAT(1)$ comparison follows from the triangle inequality.
+\qeds
+
+Suspension is a spherical analog of cone construction,
+and the following statement is a direct analog of \ref{ex:cone+susp} and it can be proved along the same lines.
+
+\begin{thm}{Proposition}\label{prop:susp}
+Let $\spc{U}$ be a metric space.
+Then a neighborhood $\spc{N}$ of the north in $\Susp\spc{U}$ is  $\CAT(1)$ if and only if $\spc{U}$ is $\CAT(1)$.
+\end{thm}
+
+\section{Geodesics}
+
+The $\CAT$ comparison can be applied to any metric space,
+but it is usually applied to geodesic spaces (or complete length spaces).
+To simplify the presentation we will assume in addition that the space is \index{proper space}\emph{proper}.
+The latter means that any closed ball is compact.
+
+Recall that function is \index{proper function}\emph{proper} if inverse image of any compact set is compact.
+Note that \textit{a metric space is proper if and only if the distance function from one (and therefore any) point is proper}.
+
+
+\begin{thm}{Proposition}\label{ex:CAT-geodesic}
+Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
+Then any two points in $\spc{U}$ are joined by a unique geodesic.
+\end{thm}
+
+\parit{Proof.} 
+Suppose there are two geodesics between $x$ and $y$.
+Then we can choose two points $p\ne q$ on these geodesics such that $\dist{x}{p}{}=\dist{x}{q}{}$ and therefore $\dist{y}{p}{}=\dist{y}{q}{}$.
+
+Observe that the model triangles $[\tilde p\tilde x\tilde y]=\modtrig(pxy)$ and $[\tilde q\tilde x\tilde y]\z=\modtrig(qxy)$ are degenerate and moreover $\tilde p=\tilde q$.
+Applying $\CAT(0)$ comparison with $\tilde z=\tilde p=\tilde q$,
+we get that $\dist{p}{q}{}=0$, a contradiction.
+\qeds
+
+\begin{wrapfigure}[3]{r}{25mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-750}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:noncreasing-CAT}
+Given $\hinge p x y$ in a $\CAT(0)$ space $\spc{U}$, consider the function 
+\[f\:(\dist{p}{\bar x}{},\dist{p}{\bar y}{})\mapsto \angk p{\bar x}{\bar y},\]
+where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
+Show that $f$ is nondecreasing in each argument.
+
+Conclude that any hinge in a $\CAT(0)$ space has defined angle.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:contractible}
+Fix a point $p$ in a  be a complete geodesic $\CAT(0)$ space~$\spc{U}$.
+Given a point $x\in \spc{U}$, denote by $\gamma_x\:[0,1]\to \spc{U}$ a (necessarily unique) geodesic path from $p$ to $x$.
+
+Show that the family of maps $h_t\: \spc{U}\to \spc{U}$ defined by 
+\[h_t(x)= \gamma_x(t)\]
+is a homotopy; it is called \index{geodesic homotopy}\emph{geodesic homotopy}. 
+Conclude that $\spc{U}$ is contractible.
+\end{thm}
+
+The geodesic homotopy introduced in the previous exercise should help to solve the next one.
+
+\begin{thm}{Exercise}\label{ex:CAT-mnfld=>ext.geod}
+Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
+Assume $\spc{U}$ is a topological manifold.
+Show that any geodesic in $\spc{U}$ can be extended 
+as a two-side infinite geodesic.
+\end{thm}
+
+\section{Thin triangles}
+
+Let us recall the definition of thin triangles.
+
+\begin{thm}{Definition}\label{def:k-thin}
+A triangle $\trig{x}{y}{z}$ in the metric space $\spc{U}$ 
+is called \index{thin triangle}\emph{thin} if the natural map $\modtrig{}({x}{y}{z})_{\EE^2}\to \trig{x}{y}{z}$ is distance nonincreasing.
+
+{\sloppy 
+
+Analogously, a triangle $\trig{x}{y}{z}$ 
+is called \index{spherically thin}\emph{spherically thin} if
+the natural map from the spherical model triangle $\modtrig{}({x}{y}{z})_{\mathbb{S}S^2}$ to $\trig{x}{y}{z}$ is distance nonincreasing.
+
+}
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:thin=cat}
+A geodesic space is $\CAT(0)$ 
+($\CAT(1)$) 
+if and only if 
+all its triangles are thin (respectively, all its triangles of perimeter $<2\cdot\pi$ are spherically thin).
+\end{thm}
+
+\parit{Proof; if part.} 
+Apply  the triangle inequality and thinness of triangles $\trig pxy$ and $\trig qxy$, where $p$, $q$, $x$, and $y$ are as in the definition of the $\CAT(\kappa)$ comparison.
+
+\parit{Only-if part.} 
+Applying $\CAT(0)$ comparison to a quadruple $p,q,x,y$ with $q\in [xy]$ shows that any triangle satisfies \index{point-side comparison}\emph{point-side comparison}, that is, the distance from a vertex to a  point on the opposite side is no greater than the corresponding distance in the Euclidean model triangle.  
+
+Now consider a triangle $\trig{x}{y}{z}$ and let $p\in [xy]$ and $q\in [xz]$.
+Let $\tilde p$, $\tilde q$ be the corresponding points on the sides of the model triangle $\modtrig({x}{y}{z})_{\EE^2}$.
+Applying \ref{ex:noncreasing-CAT}, we get that
+\[\angk {x} {y} {z}_{\EE^2} \ge \angk {x} p q _{\EE^2}.\]
+Therefore $ \dist{\tilde p}{\tilde q}{\EE^2}\ge \dist{p}{q}{}$.
+
+The $\CAT(1)$ argument is the same.
+\qeds
+
+A curve $\gamma\:\II\to \spc{U}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
+
+\begin{thm}{Proposition}\label{cor:loc-geod-are-min}
+Suppose $\spc{U}$ is a proper geodesic $\CAT(0)$ space.  
+Then any local geodesic in $\spc{U}$ is a geodesic.
+
+Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local geodesic in $\spc{U}$ which is shorter than $\pi$ is a geodesic.
+\end{thm}
+
+\parit{Proof.}
+Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
+Choose $a$ to be the maximal value 
+such that $\gamma$ is a geodesic on $[0,a]$.
+Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-800}
+\end{wrapfigure}
+
+Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin (see the next section) and 
+$\dist{\gamma(0)}{\gamma(b)}{}<b$ we have
+\[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
+for all small~$\eps>0$.
+That is, $\gamma$ is not length-minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
+a contradiction.
+
+The spherical case is done in the same way.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:convex-distfun}
+Let $\spc{U}$ be a complete geodesic space.
+Show that $\spc{U}$ is $\CAT(0)$ if and only if the function $f=\tfrac12\cdot\distfun_p^2$ is 1-convex for any $p\in \spc{U}$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:convex-dist}
+Suppose $\gamma_1,\gamma_2\:[0,1]\to \spc{U}$ are two geodesic paths in a complete geodesic $\CAT(0)$ space $\spc{U}$.
+Show that
+\[t\mapsto\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\]
+is a convex function.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:convex-nbhd}
+Let $A$ be a convex closed set in a proper geodesic $\CAT(0)$ space $\spc{U}$;
+that is, if $x,y\in A$, then $[xy]\subset A$.
+Show that for any $r>0$ the closed $r$-neighborhood of $A$ is convex;
+that is, the set
+\[A_r=\set{x\in \spc{U}}{\distfun_Ax\le r}\]
+is convex.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:closest-point}
+Let  $\spc{U}$ be a proper geodesic $\CAT(0)$ space 
+and $K\subset \spc{U}$ be a closed convex set.
+Show that: 
+
+\begin{subthm}{ex:closest-point:a}
+For each point $p\in \spc{U}$ there is a unique point $p^*\in K$ that minimizes the distance $\dist{p}{p^*}{}$.
+\end{subthm}
+
+\begin{subthm}{ex:closest-point:b}
+The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short. 
+\end{subthm}
+
+\end{thm}
+
+Recall that a set $A$ in a metric space $\spc{U}$ is called \index{locally convex set}\emph{locally convex} if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in~$A$. 
+
+\begin{thm}{Exercise}\label{ex:locally-convex}
+Let $\spc{U}$ be a proper geodesic $\CAT(0)$ space.
+Show that any closed, connected, locally convex set in $\spc{U}$ is convex.
+\end{thm}
+
+
+\section{Inheritance lemma} \label{sec:thin-triangle}
+
+\begin{thm}{Inheritance lemma}
+\label{lem:inherit-angle} 
+Assume that a triangle $\trig p x y$ 
+in a metric space is \index{decomposed triangle}\emph{decomposed} 
+into two triangles $\trig p x z$ and $\trig p y z$;
+that is, $\trig p x z$ and $\trig p y z$ have a common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-810}
+\end{wrapfigure}
+
+If both triangles $\trig p x z$ and $\trig p y z$ are thin, 
+then the triangle $\trig p x y$ is also thin.
+
+Analogously, if $\trig p x y$ has perimeter $<2\cdot\pi$ and both triangles $\trig p x z$ and $\trig p y z$ are spherically thin, then triangle $\trig p x y$ is spherically thin.
+\end{thm} 
+
+
+\parit{Proof.}
+Construct  the model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
+and $\trig {\dot p} {\dot y} {\dot z}\z=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-821}
+\vskip0mm
+\end{wrapfigure}
+
+Let us show that 
+\[\angk{z}{p}{x}+\angk{z}{p}{y}
+\ge
+\pi.
+\eqlbl{eq:<+<>=pi}\]
+If not, then for some point $\dot w\in[\dot p\dot z]$, we have \[\dist{\dot x}{\dot w}{}+\dist{\dot w}{\dot y}{}
+<
+\dist{\dot x}{\dot z}{}+\dist{\dot z}{\dot y}{}=\dist{x}{y}{}.\]
+Let $w\in[p z]$ correspond to $\dot w$; that is, $\dist{z}{w}{}=\dist{\dot z}{\dot w}{}$. 
+Since $\trig p x z$ and $\trig p y z$ are thin, we have 
+\[\dist{x}{w}{}+\dist{w}{y}{}<\dist{x}{y}{},\]
+contradicting the triangle inequality. 
+
+Denote by $\dot D$ the union of two solid triangles $\trig {\dot p}{\dot x}{\dot z}$ and $\trig {\dot p} {\dot y} {\dot z}$.
+Further, denote by $\tilde D$ the solid triangle $\trig{\tilde  p}{\tilde  x}{\tilde  y}=\modtrig(p x y)_{\EE^2}$.
+By \ref{eq:<+<>=pi}, there is a short map $F\:\tilde D\to \dot D$ that sends 
+\begin{align*}
+\tilde p&\mapsto \dot p,
+&
+\tilde x&\mapsto \dot x,
+&
+\tilde z&\mapsto \dot z,
+&
+\tilde y&\mapsto \dot y.
+\end{align*}
+
+\begin{wrapfigure}{r}{50mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-830}
+\vskip0mm
+\end{wrapfigure}
+
+Indeed, by Alexandrov's lemma (\ref{lem:alex}), 
+there are nonoverlapping triangles 
+\[\trig{\tilde p}{\tilde x}{\tilde z_x}\iso\trig {\dot p}{\dot x}{\dot z}\] 
+and 
+\[\trig{\tilde p}{\tilde y}{\tilde z_y}\iso\trig {\dot p}{\dot y}{\dot z}\]
+inside the  triangle $\trig{\tilde p}{\tilde x}{\tilde y}$.
+
+Connect  the points in each pair
+$(\tilde z,\tilde z_x)$, 
+$(\tilde z_x,\tilde z_y)$ 
+and $(\tilde z_y,\tilde z)$ 
+with arcs of circles centered at 
+$\tilde y$, $\tilde p$, and $\tilde x$ respectively. 
+Define $F$ as follows:
+\begin{itemize}
+
+\item Map  $\Conv\trig{\tilde p}{\tilde x}{\tilde z_x}$ isometrically onto  $\Conv\trig {\dot p}{\dot x}{\dot z}$;
+similarly map $\Conv \trig{\tilde p}{\tilde y}{\tilde z_y}$ onto $\Conv \trig {\dot p}{\dot y}{\dot z}$.
+
+\item If $x$ is in one of the three circular sectors, say at distance $r$ from its center, set $F(x)$ to be the point on the corresponding segment 
+$[p z]$, 
+$[x z]$ 
+or $[y z]$ whose distance from the left-hand endpoint of the segment is~$r$.
+
+\item Finally, if $x$ lies in the remaining curvilinear triangle $\tilde z \tilde z_x \tilde z_y$, 
+set $F(x) = z$. 
+\end{itemize}
+By construction, $F$ satisfies the conditions.
+
+By assumption, the natural maps $\trig {\dot p} {\dot x} {\dot z}\to\trig p x z$ and $\trig {\dot p} {\dot y} {\dot z}\to\trig p y z$ are short.  
+By composition,  the natural map from $\trig{\tilde  p}{\tilde  x}{\tilde  y}$ to $\trig p y z$ is short, as claimed.
+
+The spherical case is done along the same lines.
+\qeds
+
+\section{Reshetnyak's gluing}\label{sec:cba-gluing}
+
+Suppose 
+$\spc{U}^1$ and $\spc{U}^2$ are proper geodesic spaces 
+with isometric closed convex sets $A^i\subset\spc{U}^i$ and let $\iota\:A^1\to A^2$ be an isometry.
+Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$. %??? repeating
+
+It is straightforward to see that $\spc{W}$ is a proper geodesic space when equipped with the following metric
+\begin{align*}
+\dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}^i}
+\\
+&\quad\text{if}\quad x,y\in \spc{U}^i,\quad\text{and}
+\\
+\dist{x}{y}{\spc{W}}&\df\min\set{\dist{x}{a}{\spc{U}^1}+\dist{y}{\iota(a)}{\spc{U}^2}}{a\in A^1}
+\\
+&\quad\text{if}\quad x\in \spc{U}^1\quad\text{and}\quad y\in \spc{U}^2.
+\end{align*}
+Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
+
+The  space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
+If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
+
+We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
+this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by~$A$.
+Note that $A=\spc{U}^1\cap \spc{U}^2\subset \spc{W}$,
+therefore $A$ is also a convex set in~$\spc{W}$.
+
+{\sloppy
+
+\begin{thm}{Reshetnyak gluing}\label{thm:gluing}
+Suppose 
+$\spc{U}^1$ and $\spc{U}^2$ are proper geodesic $\CAT(0)$ spaces 
+with isometric 
+closed 
+ convex
+sets $A^i\subset\spc{U}^i$, and $\iota\:A^1\z\to A^2$ is an isometry.
+Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is a $\CAT(0)$ proper geodesic space.
+\end{thm}
+
+}
+
+\parit{Proof.} 
+By construction of the gluing space, the statement can be reformulated in the following way:
+
+
+\begin{thm}{Reformulation of \ref{thm:gluing}}
+Let $\spc{W}$ be a 
+proper geodesic space with two closed 
+convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
+$\spc{U}^1\cup\spc{U}^2=\spc{W}$
+and $\spc{U}^1$, $\spc{U}^2$ are $\CAT(0)$.
+Then $\spc{W}$ is $\CAT(0)$.
+\end{thm}
+
+\begin{wrapfigure}{o}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-840}
+\end{wrapfigure}
+
+It suffices to show that any triangle $\trig {x}{y}{z}$ 
+in $\spc{W}$ is thin.
+This is obviously true if all three points $x$, $y$, $z$ lie in one of~$\spc{U}^i$.
+Thus, without loss of generality, we may assume that $x\z\in\spc{U}^1$ and $y,z\z\in\spc{U}^2$.
+
+
+Choose points $a,b\in A\z=\spc{U}^1\z\cap\spc{U}^2$ 
+that lie respectively on the sides $[xy], [xz]$.
+Note that
+
+\begin{itemize}
+\item the triangle $\trig{x}{a}{b}$ lies in $\spc{U}^1$,
+\item both triangles $\trig{y}{a}{b}$ and $\trig{y}{b}{z}$ lie in~$\spc{U}^2$.
+\end{itemize}
+In particular, each triangle $\trig{x}{a}{b}$,
+$\trig{y}{a}{b}$, and $\trig{y}{b}{z}$ is thin.
+
+Applying the inheritance lemma (\ref{lem:inherit-angle}) twice, 
+we get that $\trig {x}{y}{b}$ 
+and consequently $\trig {x}{y}{z}$ is thin.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
+Suppose $\spc{U}$ is a geodesic space and $A\subset \spc{U}$ is a closed subset.
+Assume that the doubling of $\spc{U}$ in $A$ is $\CAT(0)$. 
+Show that $A$ is a convex set of $\spc{U}$.
+\end{thm}
+
+
+
+\section{Puff pastry}\label{sec:puff-pastry}
+
+In this section, we introduce 
+the notion of 
+Reshetnyak puff pastry.  This  construction will be used in the next section to prove the collision theorem (\ref{thm:collision}).
+
+Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in the Euclidean space~$\EE^m$.
+Consider an array of $N+1$ copies of~$\EE^m$.
+Assume that the space $\spc{R}$ is 
+obtained by
+gluing successive pairs of spaces along  $A^1,\dots,A^N$ respectively.
+
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-850}
+\caption*{Puff pastry for $(A,B,A)$.}
+\end{figure}
+
+The resulting space $\spc{R}$  will be called 
+the
+\index{puff pastry}\emph{Reshetnyak puff pastry} for array~$\bm{A}$.
+The copies of $\EE^m$ in the puff pastry $\spc{R}$
+will be called {}\emph{levels};
+they will be denoted by $\spc{R}^0,\dots,\spc{R}^N$.
+The point in the $k$-th level $\spc{R}^k$
+that corresponds to $x\in \EE^m$
+will be denoted by~$x^k$.
+
+Given $x\in \EE^m$, any point $x^k\in\spc{R}$ is called a {}\emph{lifting} of~$x$.
+The map $x\mapsto x^k$ defines an isometry $\EE^m\to \spc{R}^k$;  
+in particular, we can talk about liftings of subsets in~$\EE^m$.
+
+Note that: 
+\begin{itemize}
+\item The intersection $A^1\cap\dots\cap A^N$ admits a unique lifting in~$\spc{R}$.
+\item Moreover, $x^i=x^j$ for some $i<j$
+if and only if 
+\[x\in A^{i+1}\cap\dots\cap A^j.\]
+\item The restriction $\spc{R}^k\to \EE^m$
+of the natural projection $x^k\mapsto x$ is an isometry.
+\end{itemize}
+
+
+
+
+\begin{thm}{Observation}\label{obs:puff pastry is CAT}
+Any Reshetnyak puff pastry is a proper geodesic $\CAT(0)$ space.
+\end{thm}
+
+\parit{Proof.} Apply Reshetnyak gluing theorem (\ref{thm:gluing}) recursively for the convex sets in the array.
+\qeds
+
+\begin{thm}{Proposition}\label{prop:A-check-A}
+Assume $(A^1,\dots,A^N)$ and $(\check A^1,\dots,\check A^N)$ are two arrays of convex closed sets in $\EE^m$ 
+such that $ A^k\subset \check A^k$ for each~$k$.
+Let $\spc{R}$ and $\check{\spc{R}}$ be the corresponding Reshetnyak  puff pastries.
+Then the map $\spc{R}\to\check{\spc{R}}$
+defined by $x^k\mapsto\check x^k$ is short.
+
+Moreover, if  
+\[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\eqlbl{eq:dist=dist}\]
+for some $x,y\in \EE^m$ and $i,j\in \{0,\dots,n\}$,
+then the unique geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
+is the image of the unique geodesic $[x^i y^j]_{\spc{R}}$
+under the map $x^i\mapsto \check x^i$.
+\end{thm}
+
+\parit{Proof.}
+The first statement in the proposition 
+follows from the construction of Reshetnyak  puff pastries.
+
+By Observation~\ref{obs:puff pastry is CAT}, 
+$\spc{R}$  and  $\check{\spc{R}}$ are proper geodesic $\CAT(0)$ spaces; 
+hence $[x^i y^j]_{\spc{R}}$ 
+and $[\check x^i \check y^j]_{\check{\spc{R}}}$ are unique.  
+By \ref{eq:dist=dist}, since the map $\spc{R}\to\check{\spc{R}}$ is short, 
+the image of $[x^i y^j]_{\spc{R}}$
+is a geodesic of $\check{\spc{R}}$ joining $\check x^i$ to~$\check y^j$.
+Hence the second statement follows.
+\qeds
+
+%??? Sasha suggests to add the following def:
+
+%Say that a puff-pastry is "simple" (or whatever) if there exists a geodesic connecting a point from the first with a point in the last  leave and which does not cut $A_i\cap A_j$  for no $i,j$.
+
+%The theorem about pastry you prove is that if the angles are large there are no high simple puff pastries. 
+
+\begin{thm}{Definition}
+Consider a Reshetnyak puff pastry $\spc{R}$ with the levels 
+$\spc{R}^0,\dots,\spc{R}^N$.
+We say that $\spc{R}$ is \index{end-to-end convex}\emph{end-to-end convex} 
+if $\spc{R}^0\cup\spc{R}^N$, the union of its lower and upper levels, 
+forms a convex set in~$\spc{R}$;
+that is, if $x,y\in \spc{R}^0\cup\spc{R}^N$, then $[xy]_{\spc{R}}\subset  \spc{R}^0\cup\spc{R}^N$.
+\end{thm}
+
+Note that if $\spc{R}$ is the Reshetnyak puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$, 
+then $\spc{R}$ is end-to-end convex
+if and only if the union of the lower and the upper levels
+$\spc{R}^0\cup\spc{R}^N$ is isometric to the double of $\EE^m$ along the nonempty intersection $A^1\cap\dots\cap A^N$.
+
+
+\begin{thm}{Observation}\label{obs:end-to-end-convex}
+Let $\check{\bm{A}}$ and $\bm{A}$ be arrays of convex bodies in~$\EE^m$.
+Assume that array $\bm{A}$ is
+obtained by inserting in $\check{\bm{A}}$ 
+several copies of the bodies which were already listed in~$\check{\bm{A}}$.
+
+For example, if $\check{\bm{A}}=(A,C,B,C,A)$, by placing $B$ in the second place and $A$ in the fourth place, we obtain $\bm{A}=(A,B,C,A,B,C,A)$.
+
+Denote by $\check{\spc{R}}$ and $\spc{R}$ 
+the Reshetnyak puff pastries for $\check{\bm{A}}$ and $\bm{A}$ respectively.
+
+If $\check{\spc{R}}$ is end-to-end convex, then so is~$\spc{R}$.
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality, we may assume that $\bm{A}$ is 
+obtained by inserting one element in $\check{\bm{A}}$,
+say at the place number~$k$.
+
+Note that $\check{\spc{R}}$ is isometric to the puff pastry 
+for $\bm{A}$ with $A^k$ replaced by~$\EE^m$.
+It remains to apply Proposition~\ref{prop:A-check-A}.
+\qeds
+
+{
+
+\begin{wrapfigure}{o}{30mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-860}
+\end{wrapfigure}
+
+Let $X$ be a convex set in a Euclidean space.
+By a \index{dihedral angle}\emph{dihedral angle}, we understand an intersection of two half-spaces;
+the intersection of corresponding hyperplanes is called the {}\emph{edge} of the angle.
+We say that a dihedral angle $D$ 
+supports
+ $X$ at a point $p\in X$ 
+if $D$ contains $X$ and the edge of $D$ contains~$p$.
+
+}
+
+\begin{thm}{Lemma}\label{lem:end-to-end-convex}
+Let $A$ and $B$ be two convex sets in~$\EE^m$.
+Assume that any dihedral angle supporting $A\cap B$ has angle measure at least~$\alpha$.
+Then the Reshetnyak puff pastry for the array
+\[(\underbrace{A,B,A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
+is end-to-end convex. 
+\end{thm}
+
+
+The proof of the lemma is based on a partial case,
+which we formulate as a sublemma.
+
+\begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
+Let $\ddot A$ and $\ddot B$ be two  
+half-planes in $\EE^2$, where $\ddot A\cap \ddot B$ is an angle with measure~$\alpha$.
+Then the Reshetnyak puff pastry for the array \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}})\]
+is end-to-end convex. 
+\end{thm}
+
+\begin{wrapfigure}{r}{35mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-870}
+\end{wrapfigure}
+
+\parit{Proof.}
+Note that the puff pastry $\ddot{\spc{R}}$ is isometric to the cone over the space glued from the unit circles as shown on the diagram.
+
+All the short arcs on the diagram have length $\alpha$;
+the long arcs have length $\pi-\alpha$,
+so making a circuit along any path will take~$2\cdot\pi$.
+
+The end-to-end convexity of $\ddot{\spc{R}}$ is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on the inner and the outer circles lies completely in the union of these two circles.
+
+The latter holds if the zigzag line in the picture has length at least~$\pi$.
+This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ each.
+Hence the sublemma.
+\qeds
+
+{
+
+\begin{wrapfigure}{r}{26mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-880}
+\end{wrapfigure}
+
+In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
+
+\begin{thm}{Exercise}\label{ex:supporting-planes}
+Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
+Given two points $x,y\in \EE^m$  let $f(z)=\dist{x}{z}{}+\dist{y}{z}{}$.
+
+Let $z_0\in A\cap B$ be  a point of minimum of $f|_{A\cap B}$.
+
+Show that there are half-spaces $\dot A$ and $\dot B$ such that
+$\dot A\supset A$ and $\dot B\supset B$
+and $z_0$ is also a point of minimum of the restriction $f|_{\dot A\cap \dot B}$.
+
+\end{thm}
+
+}
+
+\parit{Proof of \ref{lem:end-to-end-convex}.}
+Fix arbitrary $x,y\in \EE^m$.
+Choose a point $z\in A\cap B$
+for which the sum 
+\[\dist{x}{z}{}+\dist{y}{z}{}\] 
+is minimal.
+To show the end-to-end convexity of  $\spc{R}$,
+it is sufficient to prove the following:
+
+\begin{clm}{}\label{clm:z in xy}
+The geodesic $[x^0y^N]_\spc{R}$ contains $z^0=z^N\in \spc{R}$.
+\end{clm}
+
+Without loss of generality, we may assume that $z\in\partial A\cap\partial B$.
+Indeed, since the puff pastry for the 1-array $(B)$ is end-to-end convex,
+Proposition~\ref{prop:A-check-A} together with \ref{obs:end-to-end-convex}
+imply \ref{clm:z in xy} in  case $z$ lies in the interior of~$A$.
+The same way we can treat the case when $z$ lies in the interior of~$B$.
+
+Note that $\EE^{m}$ admits 
+an
+isometric splitting $\EE^{m-2}\times \EE^2$ 
+such that 
+\begin{align*}
+\dot A&=\EE^{m-2}\times \ddot A
+\\
+\dot B&=\EE^{m-2}\times \ddot B
+\end{align*}
+where $\ddot A$ and $\ddot B$ are half-planes in~$\EE^2$.
+
+Using Exercise \ref{ex:supporting-planes}, let us replace each $A$ by $\dot A$ and each $B$ by $\dot B$
+in the array, to get the array
+\[(\underbrace{\dot A,\dot B,\dot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
+The corresponding puff pastry $\dot{\spc{R}}$
+splits as a product of $\EE^{m-2}$ and a puff pastry, 
+call it $\ddot{\spc{R}}$,
+glued from the copies of the plane $\EE^2$ for the array
+\[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
+
+Note that the dihedral angle $\dot A\cap \dot B$ is at least~$\alpha$.
+Therefore the angle measure of  $\ddot A\cap \ddot B$ is also at least $\alpha$.
+According to Sublemma~\ref{sublem:end-to-end-convex} and Observation~\ref{obs:end-to-end-convex}, $\ddot{\spc{R}}$ is end-to-end convex.
+
+Since $\dot{\spc{R}}\iso\EE^{m-2}\times\ddot{\spc{R}}$, 
+the puff pastry $\dot{\spc{R}}$ is also end-to-end convex.
+
+It follows that the geodesic $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ contains $\dot z^0=\dot z^N\in\dot{\spc{R}}$.
+By Proposition~\ref{prop:A-check-A}, 
+the image of $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ 
+under the map $\dot x^k\mapsto x^k$
+is the geodesic $[x^0 y^N]_{\spc{R}}$.
+Hence \ref{clm:z in xy} and the lemma follow.
+\qeds
+
+\section{Wide corners}
+\label{sec:wide-corners}
+
+We say that a closed convex set $A\subset \EE^m$ has  \index{$\eps$-wide corners}\emph{$\eps$-wide corners}\label{page:wide corners} for given $\eps >0$ 
+if together with each point $p$, 
+the set $A$ contains a small right circular cone
+with the tip at $p$ and aperture $\eps$;
+that is, $\eps$ is the maximum angle between two generating lines of the cone.
+
+For example, 
+a plane polygon 
+has $\eps$-wide corners
+if all its interior angles are at least~$\eps$.
+
+We will consider arrays of closed convex sets 
+$A^1,\dots,A^n$ in $\EE^m$ 
+such that for any subset $F\subset\{1,\dots,n\}$,
+the intersection
+$\bigcap_{i\in F}A^i$ 
+has $\eps$-wide corners.
+In this case, we may say briefly \index{$\eps$-wide corners}\textit{all intersections of $A^i$ have $\eps$-wide corners}.
+
+
+\begin{thm}{Exercise}\label{ex:compact-walls}
+Assume $A^1,\dots,A^n\subset\EE^m$ are compact, convex sets with a common interior point.
+Show that all intersections of $A^i$ have $\eps$-wide corners for some~$\eps>0$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:centrally-simmetric-walls}
+Assume $A^1,\dots,A^n\subset\EE^m$ are
+convex sets with nonempty interiors that have a common center of symmetry.
+Show that all intersections of $A^i$ have $\eps$-wide corners for some~$\eps>0$.
+\end{thm}
+
+The proof of the following proposition is based on \ref{lem:end-to-end-convex};
+this lemma is essentially the case $n=2$ in the proposition.
+
+\begin{thm}{Proposition}\label{prop:end-to-end-convex}
+Given $\eps>0$ and a positive integer $n$, 
+there is an array of integers $\bm{j}_\eps(n)=(j_1,\dots,j_N)$ 
+such that: 
+
+\begin{subthm}{} For each $k$ we have $1\le j_k\le n$,
+and each number $1,\dots,n$ appears in $\bm{j}_\eps$ at least once.
+\end{subthm}
+
+\begin{subthm}{}
+If $A^1,\dots,A^n$ is a collection of closed convex sets in $\EE^m$ with a common point 
+and all their intersections have $\eps$-wide corners,  
+then the puff pastry for the array
+$(A^{j_1},\dots,A^{j_N})$ is end-to-end convex.
+\end{subthm}
+
+Moreover, we can assume that $N\le (\lceil\tfrac\pi\eps\rceil+1)^n$.
+\end{thm}
+
+\parit{Proof.}
+The array $\bm{j}_\eps(n)=(j_1,\dots,j_N)$  is constructed recursively.
+For $n=1$, we can take $\bm{j}_\eps(1)=(1)$.
+
+Assume that $\bm{j}_\eps(n)$ is constructed.
+Let us replace each occurrence of $n$ in $\bm{j}_\eps(n)$ by the alternating string 
+\[\underbrace{n,n+1,n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}.\]
+Denote the obtained array by $\bm{j}_\eps(n+1)$.
+
+By Lemma \ref{lem:end-to-end-convex},
+the end-to-end convexity of the puff pastry for $\bm{j}_\eps(n\z+1)$
+follows from the end-to-end convexity of the puff pastry for the array
+where each string
+\[\underbrace{A^n,A^{n+1},A^n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}\]
+is replaced by  $Q=A^n\cap A^{n+1}$.
+End-to-end convexity of the latter follows by the assumption on $\bm{j}_\eps(n)$, 
+since all the intersections of $A^1,\dots,A^{n-1},Q$
+have $\eps$-wide corners.
+
+The upper bound on $N$ follows directly from the construction.
+\qeds
+
+
+
+\section{Billiards}
+
+Let $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in~$\EE^m$.
+Assume that for each $i$
+the boundary $\partial A^i$ is a smooth hypersurface.
+
+Consider the billiard table formed by the closure of the complement 
+$$T=\overline{\EE^m\setminus \bigcup_{i} A^i}.$$
+The sets $A^i$ will be called {}\emph{walls} of the table
+and the billiards described above will be called {}\emph{billiards with convex walls}.
+
+A billiard {}\emph{trajectory} 
+on the table is a unit-speed broken line $\gamma$ 
+that  follows  the
+standard law of billiards 
+at the breakpoints on $\partial A^i$ 
+--- in particular, the angle of reflection is equal to the angle of incidence.
+The breakpoints of the trajectory will be called {}\emph{collisions}.
+We assume the trajectory meets only one wall at a time.
+
+Recall that the definition of sets with $\eps$-wide corners is given in \ref{sec:wide-corners}.
+
+\begin{thm}{Collision theorem}\label{thm:collision}
+Assume $T\subset\EE^m$ is a billiard table with $n$ convex walls.
+Assume that the walls of $T$ have a common interior point  and all their intersections have $\eps$-wide corners.
+Then the number of collisions of any trajectory in  $T$  is bounded
+by a number $N$ which depends only on $n$ and~$\eps$.
+\end{thm}
+
+As we will see from the proof,
+the value $N$ can be found explicitly;
+$N=(\lceil\tfrac\pi\eps\rceil+1)^{n^2}$
+will do.
+
+\begin{thm}{Corollary}\label{cor:balls}
+Consider $n$ homogeneous hard balls
+moving freely and colliding
+elastically in~$\RR^3$. 
+Every ball moves
+along a straight line with constant speed until two balls collide, and then
+the new velocities of the two balls are determined by the
+laws of classical mechanics. 
+We assume that only two balls can collide at the same time.
+
+Then the total number of collisions cannot exceed some number $N$ that  depends on the radii and masses of the balls.
+If the balls are identical, then $N$ depends only on~$n$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{cor:balls:dim=1}
+Show that in the case of identical balls in the one-dimensional space (in $\RR$) 
+the total number of collisions cannot exceed $N=\tfrac{n\cdot(n-1)}2$.
+\end{thm}
+
+
+
+The proof below admits a straightforward generalization to all dimensions.
+
+\parit{Proof of \ref{cor:balls} modulo \ref{thm:collision}.}
+Denote by $a_i=(x_i,y_i,z_i) \in \RR^3$ the center of the $i$-th ball.
+Consider the corresponding point in $\RR^{3\cdot N}$
+\begin{align*}
+\bm{a}&=(a_1, a_2 , \dots , a_n ) =
+\\
+&=(x_1, y_1 , z_1 , x_2 , y_2 , z_2 , \dots , x_n , y_n , z_n).
+\end{align*}
+
+The $i$-th and $j$-th balls intersect if 
+$$|a_i - a_j | \le R_i+R_j,$$
+where $R_i$ denotes the radius of the $i$-th ball.
+These inequalities define $\tfrac{n\cdot(n-1)}{2}$ cylinders 
+\[C_{i,j}=\set{(a_1, a_2 , \dots , a_n )\in\RR^{3\cdot n}} {|a_i - a_j |\le R_i+R_j}.\] 
+The closure of the complement
+\[T=\overline{\RR^{3\cdot n}\setminus \bigcup_{i< j} C_{i,j}}\] 
+is the configuration space of our system. 
+Its points correspond
+to valid positions of the system of balls.
+
+The evolution of the system
+of balls is described by the motion of
+the point $\bm{a}\in\RR^{3\cdot n}$.
+It moves along a straight line at a
+constant speed until it hits one of the cylinders $C_{i,j}$; 
+this event corresponds
+to a collision in the system of balls.
+
+Consider the norm of $\bm{a}=(a_1,\dots,a_n)\in \RR^{3\cdot n}$ defined by
+\[\lVert \bm{a}\rVert
+=
+\sqrt{M_1\cdot|a_1|^2+\dots+M_n\cdot |a_n|^2},\]
+where $|a_i|=\sqrt{x_i^2+y_i^2+z_i^2}$ 
+and $M_i$ denotes the mass of the $i$-th ball.
+In the metric defined by $\lVert {*}\rVert$,
+the collisions follow the
+standard law of billiards. 
+
+By construction, the number of collisions of hard balls that we need to estimate 
+is the same as the number of collisions of the corresponding billiard trajectory on the table with $C_{i,j}$ as the walls.
+
+Note that each cylinder $C_{i,j}$ is a convex set;
+it has smooth boundary, 
+and it is centrally symmetric around the origin.
+By \ref{ex:centrally-simmetric-walls}, all the intersections of the walls have $\eps$-wide corners for some $\eps>0$ that depend on the radiuses $R_i$ and the masses~$M_i$.
+It remains to apply the collision theorem (\ref{thm:collision}).
+\qeds
+
+Now we present the proof of the collision theorem (\ref{thm:collision})
+based on the results developed in the previous section.
+
+\parit{Proof of \ref{thm:collision}.}
+Let us apply induction on~$n$.
+
+\parit{Base: $n=1$.}
+The number of collisions cannot exceed~1.  
+Indeed, by the convexity of $A^1$,
+if the trajectory is reflected once in $\partial A^1$, 
+then it cannot return to~$A^1$. 
+
+\parit{Step.}
+Assume $\gamma$ is a trajectory that  meets the walls in the order $A^{i_1},\dots,A^{i_N}$ for a large integer~$N$.
+
+Consider the array 
+\[\bm{A}_\gamma=(A^{i_1},\dots,A^{i_N}).\]
+The induction hypothesis implies:
+
+\begin{clm}{}\label{clm:collision-induction hypothesis}
+There is a positive integer $M$ such that any $M$ consecutive elements of $\bm{A}_\gamma$ contain each $A^i$ at least once.
+\end{clm}
+
+Let $\spc{R}_\gamma $ be  the  Reshetnyak puff pastry for~$\bm{A}_\gamma$.
+
+Consider the lift of $\gamma$ to $\spc{R}_\gamma$,
+defined by 
+$\bar\gamma(t)=\gamma^k(t)\in \spc{R}_\gamma$ 
+for any moment of time $t$ between the $k$-th and $(k+1)$-th collisions.  
+Since $\gamma$ follows the standard law of billiards at breakpoints, the lift $\bar\gamma$ is locally a geodesic in~$\spc{R}_\gamma$.
+By \ref{obs:puff pastry is CAT},
+the puff pastry $\spc{R}_\gamma$ is a proper geodesic $\CAT(0)$ space.
+Therefore $\bar\gamma$ is a geodesic.
+
+Since $\gamma$ does not meet $A^1\cap\dots\cap A^n$,
+the lift $\bar\gamma$ does not lie in  $\spc{R}_\gamma^0\cup \spc{R}_\gamma^N$.
+In particular, $\spc{R}_\gamma$ is not end-to-end convex.
+
+Let 
+\[\bm{B}=(A^{j_1},\dots,A^{j_K})\] 
+be the array provided by Proposition~\ref{prop:end-to-end-convex};
+so $\bm{B}$ contains each $A^i$ at least once
+and the puff pastry $\spc{R}_{\bm{B}}$ for $\bm{B}$ is end-to-end convex.
+If $N$ is sufficiently large, namely $N\ge K\cdot M$, then
+ \ref{clm:collision-induction hypothesis}
+implies that $\bm{A}_\gamma$ can be obtained  
+by inserting a finite number of $A^i$'s in~$\bm{B}$.
+
+By \ref{obs:end-to-end-convex}, 
+$\spc{R}_\gamma$ is end-to-end convex --- a contradiction.
+\qeds
+
+\section{Comments}
+
+
+The gluing theorem (\ref{thm:gluing}) was proved by Yuri Reshetnyak~\cite{reshetnyak:glue}.
+It can be extended to all geodesic $\CAT(0)$ spaces.
+It also admits a natural generalization to 
+geodesic $\CAT(\kappa)$
+spaces;
+see the book of Martin Bridson and  Andr\'e Haefliger \cite{bridson-haefliger} and our book \cite{alexander-kapovitch-petrunin-2025} for details.
+
+The collision theorem (\ref{thm:collision}) was proved by Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{burago-ferleger-kononenko-1997}.
+Its corollary (\ref{cor:balls}) answers a question posed by Yakov Sinai \cite{galperin}.
+Puff pastry is used to bound topological entropy of the billiard flow 
+and to approximate the shortest billiard path that  touches given lines in a given order; 
+see the papers of Dmitri Burago with  Serge Ferleger,
+and Alexey Kononenko~\cite{burago-ferleger-kononenko-1998}, and with
+Dimitri Grigoriev and Anatol Slissenko~\cite{burago-grigoriev-slissenko}.
+The lecture of Dmitri Burago \cite{burago-1998} gives a short survey on the subject.
+
+Note that the interior points of the walls play a key role in the proof
+despite that the trajectories never go inside the walls.
+In a similar fashion, puff pastry was used by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}
+to find the upper curvature bound for warped products.
+
+Joel Hass \cite{hass} constructed an example of a Riemannian metric on the 3-ball with negative curvature and concave boundary.
+This example might decrease your appetite for generalizing the collision theorem --- while
+locally such a 3-ball looks as good as the billiards table in the theorem, the number of collisions is obviously infinite.
+
+It was shown by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls in $\RR^3$ grows at least exponentially in $n$; the two-dimensional remains open.
