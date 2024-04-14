@@ -162,6 +162,26 @@ draw k*z1--z4--k*z2--z5--k*z3--z1--k*z4--z2--k*z5--z3--cycle;
 
 endfig;
 
+beginfig(11) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=(0,0)*u;
+z.q=(0,-2)*u;
+
+p0=z.p{1,.3}..{-1,-.2}z.q..cycle;
+
+draw p0;
+draw z.p--z.q;
+
+dOt z.p,z.q;
+
+label.top(btex $p$ etex, z.p);
+label.bot(btex $q$ etex, z.q);
+label.rt(btex $\gamma$ etex, point .5 of p0);
+endfig;
+
 beginfig(12) 
 save u,p;
 path p[];
@@ -178,6 +198,126 @@ clip currentpicture to (-2,-2)*u--(2,-2)*u--(2,2)*u--(-2,2)*u--cycle;
 
 endfor
 
+endfig;
+
+beginfig(13) 
+save u,p,a,b,c,r;
+path p[];
+u:=1.4cm;
+a:=30;
+b:=30;
+c:=56;
+r:=1/4;
+
+p0=(.5+r,0)*u--(.5+r,r)*u--(.5-r,r)*u--(.5-r,0)*u--cycle;
+p1=(0,.5+r)*u--(r,.5+r)*u--(r,.5-r)*u--(0,.5-r)*u--cycle;
+
+picture box;
+box:= image(
+hatchfill p0 withcolor (c, 1mm, -.5bp);
+hatchfill p1 withcolor (c-90, 1mm, -.5bp);
+draw (0,0)*u--(1,0)*u--(1,1)*u--(0,1)*u;
+draw subpath (0,3) of p0;
+draw subpath (0,3) of p1;
+);
+
+z.x=(cosd(b),-sind(b)*sind(a))*u;
+z.y=(-sind(b),-cosd(b)*sind(a))*u;
+z.z=(0,cosd(a))*u;
+
+transform T[];
+
+origin=origin transformed T1;
+z.x=(0,1)*u transformed T1;
+z.y=(1,0)*u transformed T1;
+
+origin=origin transformed T2;
+z.y=(0,1)*u transformed T2;
+z.z=(1,0)*u transformed T2;
+
+origin=origin transformed T3;
+z.z=(0,1)*u transformed T3;
+z.x=(1,0)*u transformed T3;
+
+draw box transformed T1;
+draw box transformed T2;
+draw box transformed T3;
+
+endfig;
+
+beginfig(15) 
+save u,p,a,b,c,r;
+path p[];
+u:=1.4cm;
+a:=30;
+b:=40;
+c:=37;
+r:=1/4;
+
+z=(.5,.5)*u;
+
+
+picture box;
+box:= image(
+draw (.5,0)*u--(.5,.5)*u--(0,.5)*u;
+draw (0,0)*u--(1,0)*u--(1,1)*u--(0,1)*u;
+dOt z;
+);
+
+z.x=(cosd(b),-sind(b)*sind(a))*u;
+z.y=(-sind(b),-cosd(b)*sind(a))*u;
+z.z=(0,cosd(a))*u;
+
+transform T[];
+
+origin=origin transformed T1;
+z.x=(0,1)*u transformed T1;
+z.y=(1,0)*u transformed T1;
+
+origin=origin transformed T2;
+z.y=(0,1)*u transformed T2;
+z.z=(1,0)*u transformed T2;
+
+origin=origin transformed T3;
+z.z=(0,1)*u transformed T3;
+z.x=(1,0)*u transformed T3;
+
+draw box transformed T1;
+draw box transformed T2;
+draw box transformed T3;
+
+label.urt(btex $x$ etex transformed T3, z transformed T3);
+label.ulft(btex $y$ etex rotated -90 transformed T2, z transformed T2);
+label.bot(btex $z$ etex rotated 90 transformed T1, z transformed T1);
+endfig;
+
+beginfig(19) 
+save u;
+u:=1cm;
+path p[];
+
+z.p=(-.5,.8)*u;
+z.r=(1.4,0)*u;
+z.a=(-.6,0)*u;
+z.b=(.7,0)*u;
+
+p1=-z.r..z.p..z.r;
+p2=z.a..tension 1.5..point 1 of p1{direction 1 of p1}..tension 1.5..z.b;
+
+
+hatchfill p2--cycle withcolor (77, 1mm, -.5bp);
+draw p1;
+draw p2;
+draw ddline(-z.r,z.r)(.2,.2);
+
+draw ddline(z.p,z.p+direction 1 of p1)(1.2,.2);
+
+dOt z.p;
+
+label.ulft(btex $p$ etex, z.p);
+whitelabel.bot(btex $R$ etex, z.p+(6,-6));
+label.bot(btex $W_0$ etex, 1.3*z.r);
+label.ulft(btex $W$ etex, z.p+1.2*(direction 1 of p1));
 endfig;
 
 beginfig(20) 
@@ -215,6 +355,44 @@ draw  -z10-- -z9-- -z8--z9;
 rimmark(-z9--z9)
 
 
+endfig;
+
+beginfig(21) 
+save u;
+u:=1cm;
+path p[];
+
+z.x=(-1,0)*u;
+z.y=(-.8,.4)*u;
+z.z=(1,0)*u;
+z.p=.5[z.x,z.z];
+z.pq=.4[z.y,z.z];
+z.q=3.3[z.p,z.pq];
+
+z.z0=(1.2,-.8)*u;
+z.z2=(1.1,1.3)*u;
+
+z.x0=(-1.1,-.8)*u;
+z.x2=(-.9,1.3)*u;
+
+
+p1=z.x--z.y--z.z--cycle;
+
+hatchfill p1 withcolor (77, 1mm, -.5bp);
+draw p1;
+draw z.p--z.q;
+draw z.z0--z.z--z.z2 pensemibold;
+draw z.x0--z.x--z.y--z.x2 pensemibold;
+
+dOt z.x,z.y,z.z,z.p,z.q,z.pq;
+
+label.bot(btex $p$ etex, z.p);
+label.top(btex $q$ etex, z.q);
+label.lft(btex $x$ etex, z.x);
+label.lft(btex $y$ etex, z.y);
+label.rt(btex $z$ etex, z.z);
+label.rt(btex $\partial \bar S$ etex, z.z2);
+label.lft(btex $\partial \bar S$ etex, z.x2);
 endfig;
 
 beginfig(30) 
@@ -307,6 +485,47 @@ label.bot(btex $a_2$ etex, z.a2);
 label.lrt(btex $a_3$ etex, z.a3);
 endfig;
 
+beginfig(41) 
+save u;
+u:=1.3cm;
+
+z.p=(-1,1)*u;
+z.pp=(-.7,0)*u;
+z.q=(1,.9)*u;
+z.qq=(.7,0)*u;
+
+draw z.p--z.pp--z.qq--z.q--z.p--z.qq;
+
+dOt z.p,z.pp,z.q,z.qq;
+
+label.top(btex $\tilde p$ etex, z.p);
+label.top(btex $\tilde q$ etex, z.q);
+label.bot(btex $\tilde p^*$ etex, z.pp);
+label.bot(btex $\tilde q*$ etex, z.qq);
+
+
+endfig;
+
+beginfig(43) 
+save u;
+u:=1cm;
+
+z.a=(.5,1)*u;
+
+path p[];
+
+p1=circle(origin,.5*u);
+p2=circle(origin,2*u);
+
+draw p1;
+draw p2;
+
+draw (-.7,0)*u..z.a..(1.5,0)*u..tension 1.2..cycle;
+draw (-1,1)*u..z.a..(.5,-.5)*u..tension 1.2..cycle;
+
+dOt origin, z.a;
+
+endfig;
 
 beginfig(50) 
 save u;
@@ -336,6 +555,46 @@ whitelabel(btex ${+}$ etex, .5[z.v,z.b]);
 whitelabel(btex ${+}$ etex, .5[z.v,-z.b]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.a]);
 whitelabel(btex ${-}$ etex, .5[z.v,z.aa]);
+endfig;
+
+beginfig(52)
+save u,p;
+path p[];
+u:=1cm;
+
+z.z=origin;
+z.r=(1,1)*u;
+
+p0=circle(z.z,z.r);
+
+z.p=(.3,-.2)*u;
+z.q=-z.p;
+
+draw z.p--z.q;
+
+z.s=(.5,-.5)*u;
+
+p1= z.p{up}..z.r..z.q{-1,-1}..z.s..cycle;
+
+draw p1;
+
+p2=(subpath (0,2) of p1) rotated 180;
+
+draw p2 dashed evenly;
+
+clip currentpicture to p0;
+draw p0;
+
+dOt z.p,z.q,z.r,-z.r,z.z;
+
+label.rt(btex $p$ etex, z.p);
+label.ulft(btex $q$ etex, z.q);
+label.urt(btex $z$ etex, z.z);
+label.urt(btex $r$ etex, z.r);
+label.llft(btex $r^{*}$ etex, -z.r);
+
+label.ulft(btex $\gamma_1$ etex, point 1.6 of p1+(1,0));
+label.ulft(btex $\gamma_1^{*}$ etex, point .6 of p2+(1,0));
 endfig;
 
 beginfig(100) 

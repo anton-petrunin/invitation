@@ -333,6 +333,13 @@ Clearly $z$ is a midpoint  between $x$ and~$y$.
 Without loss of generality we can assume that $\kappa=1$.
 Fix a sufficiently small $0<\eps<\pi$.
 
+
+\begin{wrapfigure}{o}{45 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-12}
+\end{wrapfigure}
+
 Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic shorter than $\pi$ in  $\spc{U}$ is a geodesic.
 
 Consider a sequence of directions $\xi_n$ 
@@ -341,17 +348,10 @@ of geodesics $[pq_n]$.
 We can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal to $\eps$ for all $n$;
 here we use that the geodesics are extendable as local geodesics and minimizing up to length~$\pi$.
 
-\begin{wrapfigure}{o}{45 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-12}
-\end{wrapfigure}
-
 Since $\spc{U}$ is proper,
 the sequence $q_n$ has a partial limit, say~$q$.
 It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
 assuming the latter is defined.\qeds
-
 
 Note that the unit disc in the plane with attached half-line to each point is a complete $\CAT(0)$ length space with extendable geodesics. 
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
@@ -412,13 +412,11 @@ that is,
 \[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\eqlbl{eq:short-p-p}\]
 for any $p,q\in \spc{U}$.
 
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-8mm),b(0mm),r(1mm),l(1mm)]{pics/ppqq(1)}
-\lbl[t]{5,1;$\tilde p^*$}
-\lbl[r]{0,21;$\tilde p$}
-\lbl[l]{27,19;$\tilde q$}
-\lbl[t]{21,1;$\tilde q^*$}
-\end{lpic}
+\begin{wrapfigure}{r}{37 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-41}
+\vskip-0mm
 \end{wrapfigure}
 
 Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
@@ -442,7 +440,7 @@ and \ref{eq:short-p-p} follows.
 
 \parit{Comment.}
 It is sufficient to assume that the space is complete length and $\CAT(0)$.
-This solution leads to the arm lemma in $\Cat{}{\kappa}$ spaces; see our book \cite{alexander-kapovitch-petrunin-2025}.
+This solution leads to the arm lemma in $\CAT(\kappa)$ spaces; see our book \cite{alexander-kapovitch-petrunin-2025}.
  
 
 \parbf{Exercise~\ref{ex:supporting-planes}.}
@@ -478,15 +476,13 @@ such that
 \[B_1\subset A^i\subset B_2\]
 for each wall~$A^i$.
 
-
-\begin{wrapfigure}{r}{44mm}
-\begin{lpic}[t(-6mm),b(0mm),r(0mm),l(0mm)]{pics/compact-walls(1)}
-\lbl{21.5,9.5;{\color{white}$B_1$}}
-\lbl{27,27;$B_2$}
-\lbl[tr]{10,20;$A^i$}
-\lbl[tr]{34,12;$A^j$}
-\end{lpic}
+\begin{wrapfigure}{r}{37 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-43}
+\vskip-0mm
 \end{wrapfigure}
+
 
 Note that all the intersections of  the walls  have $\eps$-wide corners for
 \[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
@@ -522,17 +518,14 @@ Hence the result.\qeds
 \parbf{Exercise~\ref{ex:geod-circle}.}
 The following proof works for compact locally simply connected metric spaces;
 by uniqueness of geodesics (\ref{thm:cat-unique}) 
-this class of spaces includes compact length, locally $\Cat{}{\kappa}$ spaces. 
+this class of spaces includes compact length, locally $\CAT(\kappa)$ spaces. 
 
 \medskip
 
-\begin{wrapfigure}{r}{25mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/geod-circle(1)}
-\lbl[tr]{5,0;$p$}
-\lbl[bl]{21,17;$q$}
-\lbl[t]{5,17,43;$\alpha_1$}
-\lbl[t]{19.7,3.3,43;$\alpha_2$}
-\end{lpic}
+\begin{wrapfigure}{r}{25 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-11}
 \end{wrapfigure}
 
 By the globalization theorem there is  a nontrivial homotopy class of closed curves.
@@ -770,7 +763,7 @@ Therefore
 That is, $\spc{S}$ satisfies the conditions above.
 \qeds
 
-\parbf{Exercise~\ref{ex:cube-infty=>cube-2}}; (\ref{SHORT.cube-infty}) $\RRightarrow$ (\ref{SHORT.cube-2}).
+\parbf{Exercise~\ref{ex:cube-infty=>cube-2}}; (\ref{SHORT.cube-infty}) $\Rightarrow$ (\ref{SHORT.cube-2}).
 Since any closed curve can be considered as a short map from a boundary of a disc with some metric, it can be extended to a short map from a disc.
 Therefore any injective space is simply connected.
 
@@ -795,7 +788,7 @@ but all three together have no points of intersection.
 It follows that $(Q,\ell^\infty)$ is not an injective space --- it does not contain a point on distance $\tfrac14$ from $m_x$, $m_y$, and $m_z$ --- a contradiction.
 
 
-\parit{(\ref{SHORT.cube-1}) $\RRightarrow$ (\ref{SHORT.cube-2}).}
+\parit{(\ref{SHORT.cube-1}) $\Rightarrow$ (\ref{SHORT.cube-2}).}
 Observe that median point $m(x,y,z)$ depends continuously on triple of points $(x,y,z)$ and $m(x,x,y)=x$.
 
 Given a loop $\gamma\:[0,1]\to Q$ with base at $p=\gamma(0)=\gamma(1)$,
@@ -904,7 +897,7 @@ $\#(\alpha\cap v^\perp) \ge 2$ for almost all $v\in\mathbb{S}^2$.
 By the Crofton formula we have that
 \begin{align*}
 \length(\alpha)
-&=\frac 1 4\cdot \int\limits_{\mathbb{S}^2}\#(\alpha\cap v^\perp)\cdot \d_v\area\ge
+&=\frac 1 4\cdot \int\limits_{v\in \mathbb{S}^2}\#(\alpha\cap v^\perp)\ge
 \\
 &\ge2\cdot\pi.
 \end{align*}
@@ -917,13 +910,9 @@ we can fix a simple closed curve $\gamma$ that lies in the intersection of a pla
 and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
 
 \begin{wrapfigure}{r}{43mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/inner-support(1)}
-\lbl[t]{40,.5;$W_0$}
-\lbl[t]{27,.5;$\Gamma$}
-\lbl[br]{12,12;$p$}
-\lbl{14,6;$R$}
-\lbl[tl]{27,17;$W$}
-\end{lpic}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-19}
 \end{wrapfigure}
 
 Let $\phi\:\DD\to \Omega$ be a disc that  shrinks~$\gamma$.
@@ -956,18 +945,10 @@ Assume $\bar S$ is not piecewise linear.
 Show that there is a line segment $[pq]$ in $\EE^3$ that is tangent to $\bar S$ at some point $p$ and    has no common points with $\bar S$ except~$p$.
 
 \begin{wrapfigure}{r}{41mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(0mm)]{pics/shefel-last-step(1)}
-\lbl[t]{21,7;$p$}
-\lbl[r]{15,21;$q$}
-\lbl[r]{2,9;$x$}
-\lbl[l]{39.5,9;$y$}
-\lbl[r]{4,17;$z$}
-\lbl[lt]{4,25;$\partial \bar S$}
-\lbl[tr]{32.5,25;$\partial \bar S$}
-\end{lpic}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-21}
 \end{wrapfigure}
-
-
 
 Since $\bar S$ is locally concave,
 there is a local inner supporting plane $\Pi$ at $p$ that contains the segment $[pq]$.
@@ -1005,14 +986,7 @@ such that the intersection $H_1\cap H_2$ is a geodesic $[\xi\zeta]$ orthogonal t
 \[\dist{\xi}{\zeta}{\mathbb{S}^3}<\tfrac\pi2.\]
 Equip the complement $\mathbb{S}^3\backslash(H_1\cup H_2)$ with induced length metric and denote by $\Sigma$ its completion.
 
-\begin{wrapfigure}{r}{55mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/halph-spheres(1)}
-\lbl[r]{20,12;$\xi$}
-\lbl[l]{34,12;$\zeta$}
-\lbl{10,12;$H_1$}
-\lbl{45,12;$H_2$}
-\end{lpic}
-\end{wrapfigure}
+???
 
 Note that there is a closed geodesic in $\Sigma$ whose projection to $\mathbb{S}^3$
 is formed by a product of four copies of $[\xi\zeta]$.
@@ -1023,6 +997,6 @@ and therefore $K'=\Cone \Sigma$ is not $\CAT(0)$.
 
 For a suitable choice of the motion $\iota$,
 we have that $\tfrac1n\cdot K\to K'$ as $n\to\infty$ in  the sense of Gromov--Hausdorff.
-Therefore by Proposition~\ref{prop:cat-limit}, $K$ is not $\CAT(0)$.
+By \ref{prop:cat-limit}, $K$ is not $\CAT(0)$.
 \qeds
 
