@@ -1,8 +1,8 @@
 %%!TEX root = invitation-springer.tex
 \chapter{Preliminaries}\label{prelim}
 
-In this chapter we fix some conventions and recall the main definitions.
-The chapter may be used as a quick reference when reading the book.
+In this lecture we fix some conventions and recall the main definitions.
+It may be used as a quick reference when reading the book.
 
 To learn background in metric geometry, the reader  may consult the book of Dmitri Burago, Yuri Burago, and Sergei Ivanov~\cite{burago-burago-ivanov}
 or the book by the third author \cite{petrunin-2023}.
@@ -36,72 +36,12 @@ we write
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}.\]
 \end{itemize}
 
-A metric space $\spc{X}$ is called \index{proper space}\emph{proper} if all closed bounded sets in $\spc{X}$ are compact. 
-This condition is equivalent to each of the following statements:
-\begin{enumerate}
-\item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
-the closed ball $\cBall[p,R]\subset\spc{X}$ is compact. 
-\item The function $\distfun_p\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$;
-that is, for any compact set $K\subset \RR$, its inverse image 
-$\set{x\in \spc{X}}{\dist{p}{x}{\spc{X}}\in K}$
-is compact.
-\end{enumerate}
-
 \begin{thm}{Exercise}\label{ex:non-contracting-map}
 Let $K$  be a compact metric space and
 \[f\:K\z\to K\] 
 be a distance non-decreasing map.
 Prove that $f$ is an isometry.
 \end{thm}
-
-\section{Constructions}\label{sec:constructions}
-
-\parbf{Product space.}
-Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
-$\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ where $u\in\spc{U}$ and $v\in \spc{V}$ 
-with the metric defined by formula
-\[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
-
-
-\parbf{Cone.}
-The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over a metric space $\spc{U}$
-is defined as the metric space whose underlying set consists of
-equivalence classes in
-$[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
-and whose metric is given by the cosine rule
-\[
-\dist{(p,s)}{(q,t)}{\spc{V}} 
-=
-\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
-\]
-where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
-
-The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
-The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
-
-\parbf{Suspension.}
-The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over a metric space $\spc{U}$
-is defined as the metric space whose underlying set consists of equivalence classes in
-$[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\z\sim (0,q)$ and $(\pi,p)\z\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
-and whose metric is given by the  spherical cosine rule
-\[
-\cos\dist{(p,s)}{(q,t)}{\Susp\spc{U}} 
-=
-\cos s\cdot\cos t-\sin s\cdot\sin t\cdot\cos\alpha,
-\]
-where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
-
-The points in $\spc{V}$ formed by the equivalence classes of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \index{pole of suspension}\emph{south poles} of the suspension.
-
-\begin{thm}{Exercise}\label{ex:product-cone}
-Let $\spc{U}$ be a metric space.
-Show that the spaces 
-\[\RR\times \Cone\spc{U}\quad\text{and}\quad\Cone[\Susp\spc{U}]\]
-are isometric.
-\end{thm}
-
-
-
 
 \section{Geodesics, triangles, and hinges}
 \label{sec:geods}
@@ -125,11 +65,11 @@ We may write $[p q]_{\spc{X}}$
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
 We also use the following shortcut notation:
 \begin{align*}
-\left] p q \right]&=[pq]\backslash\{p,q\},
+\left] p q \right[&=[pq]\setminus\{p,q\},
 &
-\left] p q \right]&=[pq]\backslash\{p\},
+\left] p q \right]&=[pq]\setminus\{p\},
 &
-\left[ p q \right]&=[pq]\backslash\{q\}.
+\left[ p q \right[&=[pq]\setminus\{q\}.
 \end{align*}
 
 
@@ -164,7 +104,7 @@ will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
 \parbf{Hinge.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
 A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
-$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
+$\hinge p x y$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
 \parbf{Convex set.}\label{def:convex-set}
@@ -180,6 +120,8 @@ if every point $a\in A$ admits an open neighborhood $\Omega\ni a$ in $\spc{X}$
 such that any geodesic lying in $\Omega$ and with ends in $A$ lies completely in~$A$.
 
 Note that any open set is locally convex by  definition.
+
+
 
 \section{Length spaces}\label{sec:intrinsic}
 
@@ -251,7 +193,7 @@ if
 Note that a $0$-midpoint is the same as a midpoint.
 
 
-\begin{thm}{Lemma}\label{lem:mid>geod}
+\begin{thm}{Menger's lemma}\label{lem:mid>geod}
 Let $\spc{X}$ be a complete metric space.
 \begin{subthm}{lem:mid>length}
 Assume that for any pair of points $x,y\in \spc{X}$  
@@ -267,8 +209,10 @@ Then $\spc{X}$ is a geodesic space.
 \end{subthm}
 \end{thm}
 
+The second part of this lemma was proved by Karl Menger \cite[Section 6]{menger}.
+
 \parit{Proof.}
-We first prove (\ref{SHORT.lem:mid>length}).
+We first prove \ref{SHORT.lem:mid>length}.
 Let $x,y\in \spc{X}$ be a pair of points.
 
 Set $\eps_n=\frac\eps{4^n}$, $\alpha(0)=x$ and $\alpha(1)=y$.
@@ -295,15 +239,26 @@ Moreover,
 \end{aligned}
 \eqlbl{eq:eps-midpoint}
 \]
-Since $\eps>0$ is arbitrary, we get (\ref{SHORT.lem:mid>length}).
+Since $\eps>0$ is arbitrary, we get \ref{SHORT.lem:mid>length}.
 
-To prove (\ref{SHORT.lem:mid>geod:geod}), 
+To prove \ref{SHORT.lem:mid>geod:geod}, 
 one should repeat the same argument 
 taking midpoints instead of $\eps_n$-midpoints.
 In this case \ref{eq:eps-midpoint} holds for $\eps_n=\eps=0$.
 \qeds
 
-Since in a compact space a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence, Lemma~\ref{lem:mid>geod} immediately implies
+A metric space $\spc{X}$ is called \index{proper space}\emph{proper} if all closed bounded sets in $\spc{X}$ are compact. 
+This condition is equivalent to each of the following statements:
+\begin{enumerate}
+\item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
+the closed ball $\cBall[p,R]\subset\spc{X}$ is compact. 
+\item The function $\distfun_p\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$;
+that is, for any compact set $K\subset \RR$, its inverse image 
+$\set{x\in \spc{X}}{\dist{p}{x}{\spc{X}}\in K}$
+is compact.
+\end{enumerate}
+
+Since in a compact space a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence, Menger's lemma immediately implies the following.
 
 \begin{thm}{Proposition}\label{prop:length+proper=>geodesic}
 A proper length space is geodesic.
@@ -358,6 +313,66 @@ Construct a geodesic space that is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
 
+\section{Constructions}\label{sec:constructions}
+
+\parbf{Product space.}
+Given two metric spaces $\spc{U}$ and $\spc{V}$, the \index{product space}\emph{product space} 
+$\spc{U}\times\spc{V}$ is defined as the set of all pairs $(u,v)$ where $u\in\spc{U}$ and $v\in \spc{V}$ 
+with the metric defined by formula
+\[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
+
+\begin{thm}{Exercise}\label{ex:length-prod}
+Show that product of length spaces is a length space.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:geod-prod}
+Show that projection of a geodesic path from the product space to its factors are geodesic paths. 
+\end{thm}
+
+\parbf{Cone.}
+The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over a metric space $\spc{U}$
+is defined as the metric space whose underlying set consists of
+equivalence classes in
+$[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
+and whose metric is given by the cosine rule
+\[
+\dist{(p,s)}{(q,t)}{\spc{V}} 
+=
+\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
+\]
+where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
+
+The point in the cone $\spc{V}$ formed by the equivalence class of $0\times\spc{U}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{V}}$.
+The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
+
+\begin{thm}{Exercise}\label{ex:cone-geod}
+Let $[pq]$ be a geodesic in $\Cone\spc{U}$;
+assume it does not pass thru the tip.
+Show that the projection of $[pq]$ to $\spc{U}$ is a geodesic of length less than $\pi$.
+\end{thm}
+
+
+\parbf{Suspension.}
+The \index{suspension}\emph{suspension} $\spc{V}=\Susp\spc{U}$ over a metric space $\spc{U}$
+is defined as the metric space whose underlying set consists of equivalence classes in
+$[0,\pi]\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\z\sim (0,q)$ and $(\pi,p)\z\sim (\pi,q)$ for any points $p,q\in\spc{U}$,
+and whose metric is given by the  spherical cosine rule
+\[
+\cos\dist{(p,s)}{(q,t)}{\Susp\spc{U}} 
+=
+\cos s\cdot\cos t-\sin s\cdot\sin t\cdot\cos\alpha,
+\]
+where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
+
+The points in $\spc{V}$ formed by the equivalence classes of $0\times\spc{U}$ and $\pi\times\spc{U}$ are called  the \emph{north} and the  \index{pole of suspension}\emph{south poles} of the suspension.
+
+\begin{thm}{Exercise}\label{ex:product-cone}
+Let $\spc{U}$ be a metric space.
+Show that the spaces 
+\[\RR\times \Cone\spc{U}\quad\text{and}\quad\Cone[\Susp\spc{U}]\]
+are isometric.
+\end{thm}
+
 \section{Model angles and triangles}\label{sec:mod-tri/angles}
 
 Let $\spc{X}$ be a metric space and 
@@ -399,7 +414,7 @@ We may use the notation $\angk p q r$ if it is evident which of the model spaces
 \index{Alexandrov's lemma}
 \index{lemma!Alexandrov's lemma}
 \label{lem:alex}  
-Let $p,x,y,z$ be distinct points in a metric space such that $z\in \left]x y\right]$.
+Let $p,x,y,z$ be distinct points in a metric space such that $z\in \left]x y\right[$.
 Then 
 the following expressions for the Euclidean model angles have the same sign:
 \begin{subthm}{lem-alex-difference}
@@ -414,7 +429,7 @@ $\angk z p x
 
 Moreover,
 \[\angk p x y \ge \angk p x z +  \angk p z y,\]
-with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
+with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} and \ref{SHORT.lem-alex-angle} vanish.
 
 The same holds for the hyperbolic and spherical model angles, 
 but in the latter case one has to assume in addition that
@@ -595,7 +610,7 @@ Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 Prove that the sum of adjacent angles is at least~$\pi$.
 
 More precisely, let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
-If $p\in \left] x y \right]$, then 
+If $p\in \left] x y \right[$, then 
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
 \end{thm}
@@ -642,7 +657,7 @@ Fix a point $p\in \spc{X}$.
 
 Consider the set $\mathfrak{S}_p$ 
 of all nontrivial geodesics  that start at~$p$.
-By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
+By \ref{claim:angle-3angle-inq}, the triangle inequality holds for the angle measure $\mangle$ on $\mathfrak{S}_p$,
 so
  $(\mathfrak{S}_p,\mangle)$ 
 forms a \index{pseudometric space}\emph{pseudometric space};
@@ -688,20 +703,11 @@ at~$p$.
 
 \section{Hausdorff convergence}
 
-It seems that \emph{Hausdorff convergence} was first introduced by Felix Hausdorff in \cite{hausdorff},
-and a couple of years later an equivalent definition was given by Wilhelm Blaschke in~\cite{blaschke}.
-A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
-and later rediscovered by Robert Wijsman in~\cite{wijsman}.  
-However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence}, also introduced by Hausdorff in \cite{hausdorff}.
-For this reason we call it Hausdorff convergence
-instead of
-{}\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
-
-
 Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
 We will denote by $\distfun_A(x)$ the distance from $A$ to a point $x$ in $\spc{X}$;
 that is,
 $$\distfun_A(x)\df\inf\set{\dist{a}{x}{\spc{X}}}{a\in A}.$$
+It is natural to assume that $\distfun_\emptyset(x)=\infty$ for any $x$.
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
 Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$, 
@@ -713,10 +719,13 @@ for every $x\in \spc{X}$.
 In this case, the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{converge in the sense of Hausdorff}\emph{converge in the sense of Hausdorff}.
 \end{thm}
 
-\parbf{Example.}
+\parbf{Examples.}
 Let $D_n$ be the disc in the coordinate plane 
 with center $(0,n)$ and radius~$n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
+
+Note that sequence of one-point sets $\{(0,n)\}$ converges to the empty set.
+Indeed, for any $\distfun_{\{(0,n)\}}(x)\to \infty=\distfun_\emptyset(x)$ for any~$x$.
 
 \begin{thm}{Exercise}\label{ex:hausdorff-conv}
 Let $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}.  
@@ -730,15 +739,16 @@ Does this imply that $A_n\to A_\infty$?
 \begin{thm}{First selection theorem}
 Let $\spc{X}$ be a proper metric space
 and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in~$\spc{X}$.
-Assume that for some (and therefore any) point  $x\in\spc{X}$, 
-the sequence $\distfun_{A_n}(x)$ is bounded.
 Then the sequence  $(A_n)_{n=1}^\infty$ has a convergent subsequence in the sense of Hausdorff.
 \end{thm}
 
 \parit{Proof.}
-Since $X$ is proper,
+Since $\spc{X}$ is proper,
 there is a countable dense set $\{x_1,x_2,\dots\}$ in~$\spc{X}$.
-Note that the sequence $d_n=\distfun_{A_n}(x_\kay)$ is bounded for each~$\kay$. 
+We can assume that the sequence $d_n=\distfun_{A_n}(x_\kay)$ is bounded for each~$\kay$.
+Otherwise there is a subsequence such that $\distfun_{A_n}(x)\to \infty$ as $n\to \infty$ for some (and therefore any) $x$.
+Therefore, the corresponding subsequence of $A_n$ converges to the empty set.
+
 Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
 we can assume that $\distfun_{A_n}(x_\kay)$ converges as $n\to\infty$ for any fixed~$\kay$.
 
@@ -748,10 +758,9 @@ Therefore the sequence $\distfun_{A_n}$ converges pointwise to a 1-Lipschitz non
 Set $A_\infty=f^{-1}(0)$. Let us show that 
 \[\distfun_{A_\infty}(y)\le f(y)\] 
 for any~$y$.
-
 Assume the contrary;
 that is, 
-\[f(z)<R<\distfun_{A_\infty}(z)\] 
+$f(z)<R<\distfun_{A_\infty}(z)$ 
 for some $z\in \spc{X}$ and $R>0$.
 Then for any sufficiently large $n$, there is a point $z_n\in A_n$ such that
 $\dist{x}{z_n}{}\le R$.
@@ -797,9 +806,9 @@ $(\bm{X},\rho)$ for each $n\ne\infty$, and
 $\spc{X}_n\to \spc{X}_\infty$ in $(\bm{X},\rho)$ as $n\to\infty$ in the sense of Hausdorff (see Definition~\ref{def:hausdorff-coverge}).
 
 Then we say $\rho$ defines a 
-\index{convergence in the sense of Gromov--Hausdorff}\emph{convergence%
+\index{convergence in the sense of Gromov--Hausdorff}\emph{convergence}%
 \footnote{Formally speaking, convergence in the topology induced by $\rho$ on~$\bm{X}$.} 
-in the sense of Gromov--Hausdorff}%
+in the sense of \emph{Gromov--Hausdorff}%
 \index{convergence in the sense of Gromov--Hausdorff},
 and write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xrightarrow{\rho} \spc{X}_\infty$.
 The space $\spc{X}_\infty$ is called the \emph{limit space} of the sequence $(\spc{X}_n)$ \emph{along} $\rho$.
@@ -884,3 +893,14 @@ that  converges in both convergences,
  then $\spc{X}_\infty\iso\spc{X}_\infty'$.
 \end{subthm}
 \end{thm}
+
+\section{Remarks}
+
+It seems that \emph{Hausdorff convergence} was first introduced by Felix Hausdorff in \cite{hausdorff},
+and a couple of years later an equivalent definition was given by Wilhelm Blaschke in~\cite{blaschke}.
+A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
+and later rediscovered by Robert Wijsman in~\cite{wijsman}.  
+However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence}, also introduced by Hausdorff in \cite{hausdorff}.
+For this reason we call it Hausdorff convergence
+instead of
+{}\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.

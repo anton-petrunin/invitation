@@ -1,16 +1,11 @@
 \chapter{Gluing}\label{chapter:gluing}
 
-In this chapter we define $\CAT(\kappa)$ spaces,
-prove Reshetnyak's gluing theorem.
+In this lecture we define $\CAT(\kappa)$ spaces and prove Reshetnyak's gluing theorem.
 
 Here ``$\CAT$'' is an acronym for Cartan, Alexandrov, and Toponogov.
 It was coined by Mikhael Gromov in 1987.
 Originally, Alexandrov called these spaces ``$\mathfrak{R}_\kappa$ domain'';
 this term is still in use.
-
-Riemannian manifolds with nonpositive sectional curvature provide a motivating example.
-Specifically,  a Riemannian manifold has nonpositive sectional curvature if and only if each point admits a $\CAT(0)$ neighborhood.
-
 
 \section{The 4-point condition}
 
@@ -29,7 +24,7 @@ $\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $
 If the inequality
 \[\dist{p}{q}{\spc{X}}\le \dist{\tilde p}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde q}{\EE^2}\]
 holds for any point $\tilde z\in [\tilde x\tilde y]$, then we say that 
-the quadruple $p,q,x,y$ \index{$\CAT(0)$ comparison}\emph{satisfies $\CAT(0)$ comparison}.
+the quadruple $p,q,x,y$ satisfies \index{$\CAT(0)$ comparison}\emph{$\CAT(0)$ comparison}.
 \label{page:CAT-comparison}
 
 
@@ -67,145 +62,18 @@ Any Gromov--Hausdorff limit of a sequence of $\CAT(\kappa)$ spaces is $\CAT(\kap
 
 In the proposition above, 
 it does not matter which definition of convergence for metric spaces you use, 
-as long as any quadruple of points in the limit space can be arbitrarily well approximated by  quadruples in the sequence of metric spaces. 
-
-\section{Products, cones, and suspension}
-\label{sec:Products and cones}
-
-Products, cones, and suspension are defined in Section~\ref{sec:constructions}.
-
-\begin{thm}{Proposition}\label{ex:product-CAT}
-Let $\spc{U}$ and $\spc{V}$ be $\CAT(0)$ spaces.
-Then the product space $\spc{U}\times\spc{V}$ is $\CAT(0)$.
-\end{thm}
-
-\parit{Proof.}
-Fix a quadruple in $\spc{U}\times \spc{V}$:
-\begin{align*}
-p&=(p_1,p_2),
-&
-q&=(q_1,q_2), 
-&
-x&=(x_1,x_2),
-&
-y&=(y_1,y_2).
-\end{align*}
-For the quadruple $p_1,q_1,x_1,y_1$ in $\spc{U}$,
-construct two model triangles $\trig{\tilde p_1}{\tilde x_1}{\tilde y_1}=\modtrig(p_1x_1y_1)_{\EE^2}$ 
-and $\trig{\tilde q_1}{\tilde x_1}{\tilde y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$.  
-Similarly, for the quadruple $p_2,q_2,x_2,y_2$ in $\spc{V}$
-construct two model triangles $\trig{\tilde p_2}{\tilde x_2}{\tilde y_2}$ and $\trig{\tilde q_2}{\tilde x_2}{\tilde y_2}$.
-
-Consider four points in $\EE^4=\EE^2\times\EE^2$ 
-\begin{align*}
-\tilde p&=(\tilde p_1,\tilde p_2),
-&
-\tilde q&=(\tilde q_1,\tilde q_2),
-&
-\tilde x&=(\tilde x_1,\tilde x_2),
-&
-\tilde y&=(\tilde y_1,\tilde y_2).
-\end{align*}
-Note that the triangles $\trig{\tilde p}{\tilde x}{\tilde y}$ and $\trig{\tilde q}{\tilde x}{\tilde y}$ in $\EE^4$ are isometric to the model triangles 
-$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$.
-
-If $\tilde z=(\tilde z_1,\tilde z_2)\in [\tilde x\tilde y]$, then $\tilde z_1\in [\tilde x_1\tilde y_1]$ and $\tilde z_2\in [\tilde x_2\tilde y_2]$ and
-\begin{align*}
-\dist[2]{\tilde z}{\tilde p}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde p_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde p_2}{\EE^2},
-\\
-\dist[2]{\tilde z}{\tilde q}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde q_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde q_2}{\EE^2},
-\\
-\dist[2]{p}{q}{\spc{U}\times\spc{V}}&=\dist[2]{p_1}{q_1}{\spc{U}}+\dist[2]{p_2}{q_2}{\spc{V}}.
-\end{align*}
-Therefore $\CAT(0)$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
-and 
-$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies 
-$\CAT(0)$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.
-\qeds
-
-Recall that metric on the cone \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ is defined via cosine rule.
-
-\begin{thm}{Proposition}\label{ex:cone+susp}
-Let $\spc{U}$ be a metric space.
-Then $\Cone\spc{U}$ is  $\CAT(0)$ if and only if $\spc{U}$ is $\CAT(1)$.
-\end{thm}
-
-\parit{Proof; if part.}
-Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
-and by $|x|$ the distance from $x$ to the tip of the cone;
-if $x$ is the tip, then $|x|=0$ and we can take any point of $\spc{U}$ as~$x'$.
-
-Let $p$, $q$, $x$, $y$
-be a quadruple in $\Cone\spc{U}$.
-Assume that the spherical model triangles $\trig{\tilde p'}{\tilde x'}{\tilde y'}_{\SSS^2}=\modtrig(p'x'y')_{\SSS^2}$ and $\trig{\tilde q'}{\tilde x'}{\tilde y'}_{\SSS^2}=\modtrig(q'x'y')_{\SSS^2}$ are defined.
-Consider the following points in $\EE^3=\Cone\SSS^2$: 
-\begin{align*}
-\tilde p&=|p|\cdot\tilde p',
-&
-\tilde q&=|q|\cdot\tilde q',
-&
-\tilde x&=|x|\cdot\tilde x',
-&
-\tilde y&=|y|\cdot\tilde y'.
-\end{align*}
-
-Note that
-$\trig{\tilde p}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(pxy)_{\EE^2}$
-and
-$\trig{\tilde q}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(qxy)_{\EE^2}$.
-Further, note that if $\tilde z\in [\tilde x\tilde y]_{\EE^3}$, then
-$\tilde z'=\tilde z/|\tilde z|$ lies on the geodesic $[\tilde x'\tilde y']_{\SSS^2}$.
-Therefore the $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies the 
-$\CAT(0)$ comparison for $\dist{p}{q}{}$ with $\tilde z\in[\tilde x\tilde y]_{\EE^3}$.
-
-If at least one of the model triangles $\modtrig(p'x'y')_{\SSS^2}$ and $\modtrig(q'x'y')_{\SSS^2}$ is undefined,
-then the statement follows from the triangle inequalities 
-\begin{align*}
-|p'-x'|_{\spc{U}}+|q'-x'|_{\spc{U}}
-&\ge |p'-q'|_{\spc{U}}
-\\
-|p'-y'|_{\spc{U}}+|q'-y'|_{\spc{U}}
-&\ge |p'-q'|_{\spc{U}}
-\end{align*}
-This case is left as an exercise. %???
-
-\parit{Only-if part.}
-Suppose that $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ are defined as above.
-Assume all these points lie in a half-space of $\EE^3=\Cone\SSS^2$ with origin at its boundary. 
-Then we can choose positive values $a$, $b$, $c$, and $d$ such that the points $a\cdot \tilde p'$, $b\cdot \tilde q'$, $c\cdot \tilde x'$, $d\cdot \tilde y'$ lie in one plane.
-Consider the corresponding points $a\cdot  p'$, $b\cdot  q'$, $c\cdot  x'$, $d\cdot y'$ in $\Cone\spc{U}$.
-Applying the $\CAT(0)$ comparison for these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
-
-It remains to consider the case when $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ do not in a half-space.
-Fix $\tilde z'\in [\tilde x' \tilde y']_{\SSS^2}$.
-Observe that 
-\begin{align*}\dist{\tilde p'}{\tilde x'}{\SSS^2}+\dist{\tilde q'}{\tilde x'}{\SSS^2}
- &
-\le \dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}
-\intertext{or} 
-\dist{\tilde p'}{\tilde y'}{\SSS^2}+\dist{\tilde q'}{\tilde y'}{\SSS^2}
-&\le
-\dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}.\end{align*}
-That is, in this case, the $\CAT(1)$ comparison follows from the triangle inequality.
-\qeds
-
-Suspension is a spherical analog of cone construction,
-and the following statement is a direct analog of \ref{ex:cone+susp} and it can be proved along the same lines.
-
-\begin{thm}{Proposition}\label{prop:susp}
-Let $\spc{U}$ be a metric space.
-Then a neighborhood $\spc{N}$ of the north in $\Susp\spc{U}$ is  $\CAT(1)$ if and only if $\spc{U}$ is $\CAT(1)$.
-\end{thm}
+as long as any quadruple of points in the limit space can be arbitrarily well approximated by  quadruples in the sequence of metric spaces.
+In particular, it works for the so-called \emph{ultralimits}.
 
 \section{Geodesics}
 
 The $\CAT$ comparison can be applied to any metric space,
 but it is usually applied to geodesic spaces (or complete length spaces).
-To simplify the presentation we will assume in addition that the space is \index{proper space}\emph{proper}.
+To simplify the presentation we will often assume in addition that the space is \index{proper space}\emph{proper}.
 The latter means that any closed ball is compact.
 
 Recall that function is \index{proper function}\emph{proper} if inverse image of any compact set is compact.
-Note that \textit{a metric space is proper if and only if the distance function from one (and therefore any) point is proper}.
+Note that \textit{a metric space is proper if and only if the distance function from one (and therefore any) point is proper}; see Section~\ref{sec:metric spaces}.
 
 
 \begin{thm}{Proposition}\label{ex:CAT-geodesic}
@@ -223,13 +91,13 @@ we get that $\dist{p}{q}{}=0$, a contradiction.
 \qeds
 
 \begin{wrapfigure}[3]{r}{25mm}
-\vskip-7mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-750}
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:noncreasing-CAT}
-Given $\hinge p x y$ in a $\CAT(0)$ space $\spc{U}$, consider the function 
+Given a hinge $\hinge p x y$ in a $\CAT(0)$ space $\spc{U}$, consider the function 
 \[f\:(\dist{p}{\bar x}{},\dist{p}{\bar y}{})\mapsto \angk p{\bar x}{\bar y},\]
 where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
 Show that $f$ is nondecreasing in each argument.
@@ -238,7 +106,7 @@ Conclude that any hinge in a $\CAT(0)$ space has defined angle.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:contractible}
-Fix a point $p$ in a  be a complete geodesic $\CAT(0)$ space~$\spc{U}$.
+Fix a point $p$ in a complete geodesic $\CAT(0)$ space~$\spc{U}$.
 Given a point $x\in \spc{U}$, denote by $\gamma_x\:[0,1]\to \spc{U}$ a (necessarily unique) geodesic path from $p$ to $x$.
 
 Show that the family of maps $h_t\: \spc{U}\to \spc{U}$ defined by 
@@ -256,21 +124,30 @@ Show that any geodesic in $\spc{U}$ can be extended
 as a two-side infinite geodesic.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:geod-CBA}
+Assume $\spc{U}$ is a proper length $\CAT(0)$ space
+ with extendable geodesics;
+that is, any geodesic is an arc in a local geodesic $\RR\to \spc{U}$.
+Show that the space of geodesic directions at any point in $\spc{U}$ is complete.
+
+Does the statement remain true if $\spc{U}$ is complete, but not required to be proper?
+\end{thm}
+
 \section{Thin triangles}
 
-Let us recall the definition of thin triangles.
+Let $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\z=\modtrig({x^1}{x^2}{x^3})$
+be a model triangle for a triangle 
+$\trig{x^1}{x^2}{x^3}$ in a metric space.
+The map that sends a point $\tilde z\in[\tilde x^i\tilde x^j]$ to the corresponding point $z\in[x^ix^j]$ for each side will be called \index{natural map}\emph{natural}.
 
 \begin{thm}{Definition}\label{def:k-thin}
 A triangle $\trig{x}{y}{z}$ in the metric space $\spc{U}$ 
 is called \index{thin triangle}\emph{thin} if the natural map $\modtrig{}({x}{y}{z})_{\EE^2}\to \trig{x}{y}{z}$ is distance nonincreasing.
 
-{\sloppy 
-
 Analogously, a triangle $\trig{x}{y}{z}$ 
 is called \index{spherically thin}\emph{spherically thin} if
-the natural map from the spherical model triangle $\modtrig{}({x}{y}{z})_{\mathbb{S}S^2}$ to $\trig{x}{y}{z}$ is distance nonincreasing.
+the natural map from the spherical model triangle $\modtrig{}({x}{y}{z})_{\mathbb{S}^2}$ to $\trig{x}{y}{z}$ is distance nonincreasing.
 
-}
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:thin=cat}
@@ -295,7 +172,7 @@ Therefore $ \dist{\tilde p}{\tilde q}{\EE^2}\ge \dist{p}{q}{}$.
 The $\CAT(1)$ argument is the same.
 \qeds
 
-A curve $\gamma\:\II\to \spc{U}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
+Recall that a curve $\gamma\:\II\to \spc{U}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
 
 \begin{thm}{Proposition}\label{cor:loc-geod-are-min}
 Suppose $\spc{U}$ is a proper geodesic $\CAT(0)$ space.  
@@ -328,45 +205,8 @@ The spherical case is done in the same way.
 
 \begin{thm}{Exercise}\label{ex:convex-distfun}
 Let $\spc{U}$ be a complete geodesic space.
-Show that $\spc{U}$ is $\CAT(0)$ if and only if the function $f=\tfrac12\cdot\distfun_p^2$ is 1-convex for any $p\in \spc{U}$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:convex-dist}
-Suppose $\gamma_1,\gamma_2\:[0,1]\to \spc{U}$ are two geodesic paths in a complete geodesic $\CAT(0)$ space $\spc{U}$.
-Show that
-\[t\mapsto\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\]
-is a convex function.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:convex-nbhd}
-Let $A$ be a convex closed set in a proper geodesic $\CAT(0)$ space $\spc{U}$;
-that is, if $x,y\in A$, then $[xy]\subset A$.
-Show that for any $r>0$ the closed $r$-neighborhood of $A$ is convex;
-that is, the set
-\[A_r=\set{x\in \spc{U}}{\distfun_Ax\le r}\]
-is convex.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:closest-point}
-Let  $\spc{U}$ be a proper geodesic $\CAT(0)$ space 
-and $K\subset \spc{U}$ be a closed convex set.
-Show that: 
-
-\begin{subthm}{ex:closest-point:a}
-For each point $p\in \spc{U}$ there is a unique point $p^*\in K$ that minimizes the distance $\dist{p}{p^*}{}$.
-\end{subthm}
-
-\begin{subthm}{ex:closest-point:b}
-The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short. 
-\end{subthm}
-
-\end{thm}
-
-Recall that a set $A$ in a metric space $\spc{U}$ is called \index{locally convex set}\emph{locally convex} if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in~$A$. 
-
-\begin{thm}{Exercise}\label{ex:locally-convex}
-Let $\spc{U}$ be a proper geodesic $\CAT(0)$ space.
-Show that any closed, connected, locally convex set in $\spc{U}$ is convex.
+Show that $\spc{U}$ is $\CAT(0)$ if and only if the function $f=\tfrac12\cdot\distfun_p^2$ is \index{1-convex function}\emph{1-convex} for any $p\in \spc{U}$;
+that is, the function $t\mapsto f\circ \gamma(t) - \tfrac 12\cdot t^2$ is convex for any unit-speed geodesic $\gamma$
 \end{thm}
 
 
@@ -418,7 +258,8 @@ contradicting the triangle inequality.
 
 Denote by $\dot D$ the union of two solid triangles $\trig {\dot p}{\dot x}{\dot z}$ and $\trig {\dot p} {\dot y} {\dot z}$.
 Further, denote by $\tilde D$ the solid triangle $\trig{\tilde  p}{\tilde  x}{\tilde  y}=\modtrig(p x y)_{\EE^2}$.
-By \ref{eq:<+<>=pi}, there is a short map $F\:\tilde D\to \dot D$ that sends 
+By \ref{eq:<+<>=pi}, there is a \index{short map}\emph{short map}\footnote{In other words, distance-nonexpanding or 1-Lipschitz.}
+$F\:\tilde D\to \dot D$ that sends 
 \begin{align*}
 \tilde p&\mapsto \dot p,
 &
@@ -559,9 +400,19 @@ Assume that the doubling of $\spc{U}$ in $A$ is $\CAT(0)$.
 Show that $A$ is a convex set of $\spc{U}$.
 \end{thm}
 
-\chapter{Billiards}
+\section{Comments}
 
-In this chapter we give tan application of $\CAT(0)$ geometry to billiards.
+The gluing theorem (\ref{thm:gluing}) was proved by Yuri Reshetnyak~\cite{reshetnyak:glue}.
+It can be extended to all geodesic $\CAT(0)$ spaces.
+It also admits a natural generalization to 
+geodesic $\CAT(\kappa)$
+spaces;
+see the book of Martin Bridson and  Andr\'e Haefliger \cite{bridson-haefliger} and our book \cite{alexander-kapovitch-petrunin-2025} for details.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Billiards}\label{chap:billiards}
 
 \section{Puff pastry}\label{sec:puff-pastry}
 
@@ -603,7 +454,7 @@ Note that:
 \item Moreover, $x^i=x^j$ for some $i<j$
 if and only if 
 \[x\in A^{i+1}\cap\dots\cap A^j.\]
-\item The restriction $\spc{R}^k\to \EE^m$
+\item For any $k$, the restriction $\spc{R}^k\to \EE^m$
 of the natural projection $x^k\mapsto x$ is an isometry.
 \end{itemize}
 
@@ -728,12 +579,6 @@ Then the Reshetnyak puff pastry for the array \[(\underbrace{\ddot A,\ddot B,\dd
 is end-to-end convex. 
 \end{thm}
 
-\begin{wrapfigure}{r}{35mm}
-\vskip0mm
-\centering
-\includegraphics{mppics/pic-870}
-\end{wrapfigure}
-
 \parit{Proof.}
 Note that the puff pastry $\ddot{\spc{R}}$ is isometric to the cone over the space glued from the unit circles as shown on the diagram.
 
@@ -741,12 +586,20 @@ All the short arcs on the diagram have length $\alpha$;
 the long arcs have length $\pi-\alpha$,
 so making a circuit along any path will take~$2\cdot\pi$.
 
-The end-to-end convexity of $\ddot{\spc{R}}$ is equivalent to the fact that any geodesic shorter than $\pi$ with the ends on the inner and the outer circles lies completely in the union of these two circles.
+\begin{wrapfigure}{r}{35mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-870}
+\end{wrapfigure}
 
+Applying Exercise \ref{ex:cone-geod}, we get that 
+the end-to-end convexity of $\ddot{\spc{R}}$ follows if any geodesic shorter than $\pi$ with the ends on the inner and the outer circles lies completely in the union of these two circles.
 The latter holds if the zigzag line in the picture has length at least~$\pi$.
 This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ each.
 Hence the sublemma.
 \qeds
+
+In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
 
 {
 
@@ -755,8 +608,6 @@ Hence the sublemma.
 \centering
 \includegraphics{mppics/pic-880}
 \end{wrapfigure}
-
-In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
 
 \begin{thm}{Exercise}\label{ex:supporting-planes}
 Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
@@ -816,7 +667,8 @@ Therefore the angle measure of  $\ddot A\cap \ddot B$ is also at least $\alpha$.
 According to Sublemma~\ref{sublem:end-to-end-convex} and Observation~\ref{obs:end-to-end-convex}, $\ddot{\spc{R}}$ is end-to-end convex.
 
 Since $\dot{\spc{R}}\iso\EE^{m-2}\times\ddot{\spc{R}}$, 
-the puff pastry $\dot{\spc{R}}$ is also end-to-end convex.
+the puff pastry $\dot{\spc{R}}$ is also end-to-end convex;
+see \ref{ex:geod-prod}.
 
 It follows that the geodesic $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ contains $\dot z^0=\dot z^N\in\dot{\spc{R}}$.
 By Proposition~\ref{prop:A-check-A}, 
@@ -904,16 +756,6 @@ have $\eps$-wide corners.
 The upper bound on $N$ follows directly from the construction.
 \qeds
 
-\section{Comments}
-
-
-The gluing theorem (\ref{thm:gluing}) was proved by Yuri Reshetnyak~\cite{reshetnyak:glue}.
-It can be extended to all geodesic $\CAT(0)$ spaces.
-It also admits a natural generalization to 
-geodesic $\CAT(\kappa)$
-spaces;
-see the book of Martin Bridson and  Andr\'e Haefliger \cite{bridson-haefliger} and our book \cite{alexander-kapovitch-petrunin-2025} for details.
-
 \section{Billiards}
 
 Let $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in~$\EE^m$.
@@ -962,14 +804,13 @@ Then the total number of collisions cannot exceed some number $N$ that  depends 
 If the balls are identical, then $N$ depends only on~$n$.
 \end{thm}
 
+The proof below admits a straightforward generalization to all dimensions.
+
 \begin{thm}{Exercise}\label{cor:balls:dim=1}
 Show that in the case of identical balls in the one-dimensional space (in $\RR$) 
 the total number of collisions cannot exceed $N=\tfrac{n\cdot(n-1)}2$.
 \end{thm}
 
-
-
-The proof below admits a straightforward generalization to all dimensions.
 
 \parit{Proof of \ref{cor:balls} modulo \ref{thm:collision}.}
 Denote by $a_i=(x_i,y_i,z_i) \in \RR^3$ the center of the $i$-th ball.

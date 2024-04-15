@@ -4,9 +4,7 @@
 \addcontentsline{toc}{chapter}{Semisolutions}
 \chaptermark{Semisolutions}
 
-\section*{Preface}
-
-\parbf{Exercise~\ref{ex:two-components-of-M4}.} 
+\parbf{\ref{ex:two-components-of-M4}.} 
 Let $\spc{X}$ be a 4-point metric space.
 
 Fix a tetrahedron $\triangle$ in~$\RR^3$.
@@ -41,7 +39,7 @@ If one moves $v$ continuously, keeping $W(v)<0$,
 then the corresponding projection moves continuously and the projections of the 4 faces 
 cannot degenerate. 
 It follows that the combinatorics of the picture do not depend on the choice of~$v$. 
-Hence $\mathcal{M}_4\backslash\mathcal{E}_4$ is not connected. 
+Hence $\mathcal{M}_4\setminus\mathcal{E}_4$ is not connected. 
 
 It remains to show that if the combinatorics of the pictures for two spaces is the same, then one can continuously deform one space into the other.
 This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
@@ -50,13 +48,11 @@ This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x
 The above solution is taken from \cite{petrunin-quest}.
 
 
-\parbf{Exercise~\ref{ex:convex-set}.}
+\parbf{\ref{ex:convex-set}.}
 The simplest proof we know requires the construction of tangent cones for Alexandrov spaces with nonnegative curvature.
 (The length metric is defined in Section~\ref{sec:intrinsic}.)
 
-\section*{Preliminaries}
-
-\parbf{Exercise~\ref{ex:non-contracting-map}.}
+\parbf{\ref{ex:non-contracting-map}.}
 This exercise is a basic introductory lemma on  Gromov--Hausdorff distance (see for example \cite[7.3.30]{burago-burago-ivanov}).
 The following proof is not quite standard, it was suggested to the third author by Travis Morrison.
 
@@ -109,16 +105,7 @@ From $({*})$, we also get that $f(K)$ is everywhere dense.
 Since $K$ is compact, $f\:K\to K$ is surjective.
 Hence the result.\qeds
 
-
-\parbf{Exercise~\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
-Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
-
-The map 
-$\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defined as
-\[(\rho,\phi,p)\mapsto(\rho\cdot\cos\phi,\rho\cdot\sin\phi,p)\] 
-is the needed isometry.\qeds
-
-\parbf{Exercise~\ref{ex:no-geod}.}
+\parbf{\ref{ex:no-geod}.}
 The following example is due to Fedor Nazarov \cite{nazarov}.
 
 \medskip
@@ -154,7 +141,7 @@ That is, for any curve $\bm{x}(t)$ in $(B,\rho_1)$, we can find a shorter curve 
 In particular, $(B,\rho_1)$ has no geodesics.
 \qeds
 
-\parbf{Exercise~\ref{exercise from BH}.}
+\parbf{\ref{exercise from BH}.}
 The following example is taken from~\cite{bridson-haefliger}.
 
 \medskip
@@ -181,7 +168,22 @@ $\bar{\spc{X}}$ is obtained from $\spc{X}$ by adding two points $p=(0,0)$ and $q
 The point $p$ admits no compact neighborhood in $\bar{\spc{X}}$ 
 and there is no geodesic connecting $p$ to $q$ in~$\bar{\spc{X}}$. \qeds 
 
-\parbf{Exercise~\ref{ex:adjacent-angles}.}
+
+\parbf{\ref{ex:length-prod}.}
+
+\parbf{\ref{ex:geod-prod}.}
+
+\parbf{\ref{ex:cone-geod}.}
+
+\parbf{\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
+Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
+
+The map 
+$\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defined as
+\[(\rho,\phi,p)\mapsto(\rho\cdot\cos\phi,\rho\cdot\sin\phi,p)\] 
+is the needed isometry.\qeds
+
+\parbf{\ref{ex:adjacent-angles}.}
 Assume the contrary; that is
 \[\mangle\hinge pxz+\mangle\hinge pyz< \pi.\]
 By the  triangle inequality for angles (\ref{claim:angle-3angle-inq})
@@ -192,9 +194,9 @@ where the points
 $\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
 are sufficiently close to~$p$.\qeds
 
-\parbf{Exercise~\ref{ex:hausdorff-conv}.}
+\parbf{\ref{ex:hausdorff-conv}.}
 By definition of Hausdorff convergence
-\[p\in A_\infty\quad\iff\quad\dist{A_n}{}{}(p)\to 0\quad\text{as}\quad n\to \infty.\] 
+\[p\in A_\infty\quad\iff\quad\distfun_{A_n}(p)\to 0\quad\text{as}\quad n\to \infty.\] 
 The latter is equivalent to the existence of a sequence $p_n\in A_n$ such that
 $\dist{p_n}{p}{}\to0$ as $n\to \infty$;
 or equivalently $p_n\to p$.
@@ -216,8 +218,8 @@ For the class of closed subsets of a proper metric spaces, closed limits coincid
 
 
 
-\parbf{Exercise~\ref{ex:compact-proper-GH}.}
-To prove part (\ref{SHORT.ex:compact-proper-GH:a}),
+\parbf{\ref{ex:compact-proper-GH}.}
+To prove part \ref{SHORT.ex:compact-proper-GH:a},
 fix a countable dense set of points $\mathfrak{S}\subset\spc{X}_\infty$.
 For each point $x\in \mathfrak{S}$, choose a sequence 
 of points $x_n\in\spc{X}_n$ such that $x_n\xrightarrow{\rho} x$.
@@ -231,108 +233,23 @@ Likewise we construct a distance-preserving map $\spc{X}_\infty'\to\spc{X}_\inft
 
 It remains to apply Exercise~\ref{ex:non-contracting-map}.
 
-The proof of part (\ref{SHORT.ex:compact-proper-GH:b}) is  nearly identical,
+The proof of part \ref{SHORT.ex:compact-proper-GH:b} is  nearly identical,
 but one has to apply Exercise~\ref{ex:non-contracting-map} to closed balls centered at the limits of $x_n$ in $\spc{X}_\infty$ and $\spc{X}_\infty'$. 
 \qeds
 
-\section*{Gluing theorem and billiards}
+\parbf{\ref{ex:noncreasing-CAT}.}
 
-\parbf{Exercise~\ref{ex:cone+susp}.}
-Given a point $x\in \Cone\spc{V}$, denote by $x'$ its projection to $\spc{V}$
-and by $|x|$ the distance from $x$ to the tip of the cone;
-if $x$ is the tip, then $|x|=0$ and we can take any point of $\spc{U}$ as~$x'$.
+\parbf{\ref{ex:contractible}.}
 
-Let $p$, $q$, $x$, $y$
-be a quadruple in $\Cone\spc{V}$.
-Assume that the spherical model triangles $\trig{\tilde p'}{\tilde x'}{\tilde y'}=\modtrig(p'x'y')_{\mathbb{S}^2}$ and $\trig{\tilde q'}{\tilde x'}{\tilde y'}=\modtrig(q'x'y')_{\mathbb{S}^2}$ are defined.
-Consider the following points in $\EE^3=\Cone\mathbb{S}^2$: 
-\begin{align*}
-\tilde p&=|p|\cdot\tilde p',
-&
-\tilde q&=|q|\cdot\tilde q',
-&
-\tilde x&=|x|\cdot\tilde x',
-&
-\tilde y&=|y|\cdot\tilde y'.
-\end{align*}
+\parbf{\ref{ex:CAT-mnfld=>ext.geod}.}
 
-Note that
-$\trig{\tilde p}{\tilde x}{\tilde y}\iso\modtrig(pxy)_{\EE^2}$
-and
-$\trig{\tilde q}{\tilde x}{\tilde y}\iso\modtrig(qxy)_{\EE^2}$.
-Further note that if $\tilde z\in [\tilde x\tilde y]$, then
-$\tilde z'=\tilde z/|\tilde z|$ lies on the geodesic $[\tilde x'\tilde y']$ in~$\mathbb{S}^2$.
-Therefore the $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\mathbb{S}^2}$ implies the 
-$\CAT(0)$ comparison for $\dist{p}{q}{}$ with $\tilde z\in[\tilde x\tilde y]_{\EE^3}$.
+\parbf{\ref{ex:convex-distfun}.}
 
-To show the converse, we need to apply 
-the $\CAT(0)$ comparison to a quadruple $s=a\cdot p$, $q$, $x$, $y$ with $a\ge 0$ chosen so  that the corresponding points 
-$\tilde s=a\cdot \tilde p$, $\tilde q$, $\tilde x$, $\tilde y$ lie in one plane.
+\parbf{\ref{ex:reshetnyak-doubling}.}
 
-The second statement is proved along the same lines, but we have to use $\mathbb{S}^3=\Susp\mathbb{S}^2$ instead of $\EE^3=\Cone\mathbb{S}^2$.
-\qeds
-
-\parbf{Exercise~\ref{ex:product}.}
-Fix a quadruple in $\spc{U}\times \spc{V}$:
-\begin{align*}
-p&=(p_1,p_2),
-&
-q&=(q_1,q_2), 
-&
-x&=(x_1,x_2),
-&
-y&=(y_1,y_2).
-\end{align*}
-For the quadruple $p_1,q_1,x_1,y_1$ in $\spc{U}$,
-construct two model triangles $\trig{\tilde p_1}{\tilde x_1}{\tilde y_1}=\modtrig(p_1x_1y_1)_{\EE^2}$ 
-and $\trig{\tilde q_1}{\tilde x_1}{\tilde y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$.  
-Similarly, for the quadruple $p_2,q_2,x_2,y_2$ in $\spc{V}$
-construct two model triangles $\trig{\tilde p_2}{\tilde x_2}{\tilde y_2}$ and $\trig{\tilde q_2}{\tilde x_2}{\tilde y_2}$.
-
-Consider four points in $\EE^4=\EE^2\times\EE^2$ 
-\begin{align*}
-\tilde p&=(\tilde p_1,\tilde p_2),
-&
-\tilde q&=(\tilde q_1,\tilde q_2),
-&
-\tilde x&=(\tilde x_1,\tilde x_2),
-&
-\tilde y&=(\tilde y_1,\tilde y_2).
-\end{align*}
-Note that the triangles $\trig{\tilde p}{\tilde x}{\tilde y}$ and $\trig{\tilde q}{\tilde x}{\tilde y}$ in $\EE^4$ are isometric to the model triangles 
-$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$.
-
-If $\tilde z=(\tilde z_1,\tilde z_2)\in [\tilde x\tilde y]$, then $\tilde z_1\in [\tilde x_1\tilde y_1]$ and $\tilde z_2\in [\tilde x_2\tilde y_2]$ and
-\begin{align*}
-\dist[2]{\tilde z}{\tilde p}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde p_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde p_2}{\EE^2},
-\\
-\dist[2]{\tilde z}{\tilde q}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde q_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde q_2}{\EE^2},
-\\
-\dist[2]{p}{q}{\spc{U}\times\spc{V}}&=\dist[2]{p_1}{q_1}{\spc{U}}+\dist[2]{p_2}{q_2}{\spc{V}}.
-\end{align*}
-Therefore $\CAT(0)$ comparison for the quadruples $p_1$, $q_1$, $x_1$, $y_1$ in $\spc{U}$
-and 
-$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies 
-$\CAT(0)$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.\qeds
-
-\parbf{Exercise~\ref{ex:CAT-geodesic}.}
-According to Lemma~\ref{lem:mid>geod}, it is sufficient to prove the existence of a midpoint between two given points $x$ and~$y$.
-
-For each $n$ choose a $\tfrac1n$-midpoint $z_n$;
-that is, a point such that
-\[\dist{x}{z_n}{},\dist{y}{z_n}{}\le \tfrac12\cdot\dist{x}{y}{}+\tfrac1n.\]
-
-From the $\CAT(0)$ comparison inequality for the quadruple $x$, $y$, $z_n$, $z_m$ we have that $\dist{z_m}{z_n}{}\to0$ as $n,m\to\infty$;
-that is, $z_n$ is Cauchy and hence converges since the space is complete. 
-
-Let $z$ be the limit of $z_n$ as $n\to\infty$.
-Clearly $z$ is a midpoint  between $x$ and~$y$.
-\qeds
-
-\parbf{Exercise~\ref{ex:geod-CBA}.}
+\parbf{\ref{ex:geod-CBA}.}
 Without loss of generality we can assume that $\kappa=1$.
 Fix a sufficiently small $0<\eps<\pi$.
-
 
 \begin{wrapfigure}{o}{45 mm}
 \vskip-0mm
@@ -357,45 +274,72 @@ Note that the unit disc in the plane with attached half-line to each point is a 
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 This provides a counterexample to the statement of the exercise if  $\spc{U}$ is not assumed to be proper.
 
-\parbf{Exercise~\ref{ex:convex-balls}.}
-For the $\CAT(0)$ case, the statement follows from convexity of distance functions to points in $\EE^2$, and thinness of triangles.
+\parbf{\ref{ex:supporting-planes}.}
+By approximation, it is sufficient to consider the case when 
+$A$ and $B$ have smooth boundary. 
 
-For the $\CAT(1)$ case,  the statement  follows from spherical thinness of triangles and convexity of the ball of radius $r<\tfrac\pi2$ in~$\mathbb{S}^2$.
+If $[xy]\cap A\cap B\ne \emptyset$, then $z_0\in [xy]$ and $\dot A, \dot B$ can be chosen to be arbitrary half-spaces containing $A$ and $B$ respectively.  
 
-\parbf{Exercise~\ref{ex:locally-convex}.}
-Fix a closed, connected, locally convex set~$K$.
-Note that by Corollary \ref{cor:dist-convex}, $\dist{K}{}{}$ is convex in a neighborhood $\Omega\supset K$; that is, $\dist{K}{}{}$ is convex along any geodesic completely contained in~$\Omega$.
+In the remaining case $[xy]\cap A\cap B=\emptyset$, 
+we have $z_0\in\partial (A\cap B)$.  
+Consider the solid ellipsoid
+\[C=\set{z\in\EE^m}{f(z)\le f(z_0)}.\] 
+Note that $C$ is compact, convex and has  smooth boundary. 
 
-Since $K$ is locally convex,
-it is locally path connected.
-Since $K$ is connected, the latter implies that $K$ is path connected.
+Suppose $z_0\in\partial  A \cap \Int B$. 
+Then $A$ and $C$ touch at $z_0$ and we can set $\dot A$ to be the uniquely defined supporting half-space to $A$  at $z_0$ and $\dot B$ to be any half-space containing~$B$. 
+The case $z_0\in\partial B \cap \Int A$ is treated similarly.
 
-Fix two points $x,y\in K$. 
-Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
-By Theorem~\ref{thm:cat-unique}, the geodesic $[x\,\alpha(s)]$ 
-is uniquely defined and depends continuously on~$s$.
 
-\begin{wrapfigure}{r}{50 mm}
-\vskip-0mm
+Finally, suppose $z_0\in\partial A\cap\partial B$. 
+Then the set  $\dot A$ (respectively, $\dot B$) is defined as the unique supporting half-space to $A$ (respectively, $B$) at $z_0$ containing $A$ (respectively, $B$).
+
+Suppose $f(z)<f(z_0)$ for some $z\in \dot A\cap\dot B$.
+Since $f$ is concave,
+$f(\bar z)<f(z_0)$ for any $\bar z \in \left[zz_0\right[$.
+Since $\left[zz_0\right[\cap A\cap B\ne\emptyset$,
+the latter contradicts the fact that $z_0$ is minimum point of $f$ on $A\cap B$.
+\qeds
+
+\parbf{\ref{ex:compact-walls}.}
+Fix two open balls $B_1\z=\oBall(0,r_1)$ and $B_2=\oBall(0,r_2)$
+such that 
+\[B_1\subset A^i\subset B_2\]
+for each wall~$A^i$.
+
+\begin{wrapfigure}{r}{37 mm}
+\vskip-4mm
 \centering
-\includegraphics{mppics/pic-9}
+\includegraphics{mppics/pic-43}
+\vskip-0mm
 \end{wrapfigure}
 
-If $[xy]=[x\,\alpha(1)]$ does not completely lie in $K$, then 
-there is a value $s\in [0,1]$ such that $[x\,\alpha(s)]$ 
-lies in $\Omega$,
-but does not completely lie in~$K$.
-Therefore $f=\dist{K}{}{}$ is convex 
-along $[x\alpha(s)]$.
-Note that $f(x)\z=f(\alpha(s))=0$ and $f\ge 0$, 
-therefore $f(z)= 0$ for any $z\in [x\,\alpha(s)]$;
-that is, $[x\,\alpha(s)]\subset K$, a contradiction.\qeds
 
-\parit{Comment.}
-The statement generalizes a theorem of Heinrich Tietze, and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
+Note that all the intersections of  the walls  have $\eps$-wide corners for
+\[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
+The proof can be guessed from the picture.
+\qedsf
+
+\parbf{\ref{ex:centrally-simmetric-walls}.}
+Note that any centrally symmetric convex closed set in Euclidean space is a product of a compact centrally symmetric convex set and a subspace.
+
+It follows that there is $R<\infty$
+such that if $X$ is an intersection of an arbitrary number of walls, then for any point $p\in X$ there is an isometry of $X$ 
+that moves  $p$ to a point in the ball $\oBall(0,R)$.
+
+It remains to repeat the proof of Exercise~\ref{ex:compact-walls}.\qeds
+
+\parbf{\ref{cor:balls:dim=1}.}
+
+\parbf{\ref{ex:convex-dist}.}
+
+\parbf{\ref{ex:convex-nbhd}.}
 
 
-\parbf{Exercise~\ref{ex:closest-point}.}
+
+
+
+\parbf{\ref{ex:closest-point}.}
 Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
 The existence of at least one point $p^*$ that minimizes the distance from $p$ follows.
 
@@ -443,64 +387,52 @@ It is sufficient to assume that the space is complete length and $\CAT(0)$.
 This solution leads to the arm lemma in $\CAT(\kappa)$ spaces; see our book \cite{alexander-kapovitch-petrunin-2025}.
  
 
-\parbf{Exercise~\ref{ex:supporting-planes}.}
-By approximation, it is sufficient to consider the case when 
-$A$ and $B$ have smooth boundary. 
+\parbf{\ref{ex:locally-convex}.}
+Fix a closed, connected, locally convex set~$K$.
+Note that by Corollary \ref{cor:dist-convex}, $\distfun_{K}$ is convex in a neighborhood $\Omega\supset K$; that is, $\distfun_{K}$ is convex along any geodesic completely contained in~$\Omega$.
 
-If $[xy]\cap A\cap B\ne \emptyset$, then $z_0\in [xy]$ and $\dot A, \dot B$ can be chosen to be arbitrary half-spaces containing $A$ and $B$ respectively.  
+Since $K$ is locally convex,
+it is locally path connected.
+Since $K$ is connected, the latter implies that $K$ is path connected.
 
-In the remaining case $[xy]\cap A\cap B=\emptyset$, 
-we have $z_0\in\partial (A\cap B)$.  
-Consider the solid ellipsoid
-\[C=\set{z\in\EE^m}{f(z)\le f(z_0)}.\] 
-Note that $C$ is compact, convex and has  smooth boundary. 
+Fix two points $x,y\in K$. 
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\z\to K$.
+By Theorem~\ref{thm:cat-unique}, the geodesic $[x\,\alpha(s)]$ 
+is uniquely defined and depends continuously on~$s$.
 
-Suppose $z_0\in\partial  A \cap \Int B$. 
-Then $A$ and $C$ touch at $z_0$ and we can set $\dot A$ to be the uniquely defined supporting half-space to $A$  at $z_0$ and $\dot B$ to be any half-space containing~$B$. 
-The case $z_0\in\partial B \cap \Int A$ is treated similarly.
-
-
-Finally, suppose $z_0\in\partial A\cap\partial B$. 
-Then the set  $\dot A$ (respectively, $\dot B$) is defined as the unique supporting half-space to $A$ (respectively, $B$) at $z_0$ containing $A$ (respectively, $B$).
-
-Suppose $f(z)<f(z_0)$ for some $z\in \dot A\cap\dot B$.
-Since $f$ is concave,
-$f(\bar z)<f(z_0)$ for any $\bar z \in \left[zz_0\right[$.
-Since $\left[zz_0\right[\cap A\cap B\ne\emptyset$,
-the latter contradicts the fact that $z_0$ is minimum point of $f$ on $A\cap B$.
-\qeds
-
-\parbf{Exercise~\ref{ex:compact-walls}.}
-Fix two open balls $B_1\z=\oBall(0,r_1)$ and $B_2=\oBall(0,r_2)$
-such that 
-\[B_1\subset A^i\subset B_2\]
-for each wall~$A^i$.
-
-\begin{wrapfigure}{r}{37 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-43}
+\begin{wrapfigure}{r}{50 mm}
 \vskip-0mm
+\centering
+\includegraphics{mppics/pic-9}
 \end{wrapfigure}
 
+If $[xy]=[x\,\alpha(1)]$ does not completely lie in $K$, then 
+there is a value $s\in [0,1]$ such that $[x\,\alpha(s)]$ 
+lies in $\Omega$,
+but does not completely lie in~$K$.
+Therefore $f=\distfun_{K}$ is convex 
+along $[x\alpha(s)]$.
+Note that $f(x)\z=f(\alpha(s))=0$ and $f\ge 0$, 
+therefore $f(z)= 0$ for any $z\z\in [x\,\alpha(s)]$;
+that is, $[x\,\alpha(s)]\subset K$, a contradiction.\qeds
 
-Note that all the intersections of  the walls  have $\eps$-wide corners for
-\[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
-The proof can be guessed from the picture.
-\qedsf
+\parit{Comment.}
+The statement generalizes a theorem of Heinrich Tietze, and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
 
-\parbf{Exercise~\ref{ex:centrally-simmetric-walls}.}
-Note that any centrally symmetric convex closed set in Euclidean space is a product of a compact centrally symmetric convex set and a subspace.
 
-It follows that there is $R<\infty$
-such that if $X$ is an intersection of an arbitrary number of walls, then for any point $p\in X$ there is an isometry of $X$ 
-that moves  $p$ to a point in the ball $\oBall(0,R)$.
+\parbf{\ref{ex:devel-comp-CAT}.}
 
-It remains to repeat the proof of Exercise~\ref{ex:compact-walls}.\qeds
+\parbf{\ref{ex:fenchel}.}
 
-\section*{Globalization and asphericity}
+\parbf{\ref{ex:FM}.}
 
-\parbf{Exercise~\ref{ex:null-homotopic}.}
+\parbf{\ref{ex:arm-lemma}.}
+
+\parbf{\ref{ex:isometric-majorization}.}
+
+\parbf{\ref{ex:bishop}.}
+
+\parbf{\ref{ex:null-homotopic}.}
 Note that the existence of a null-homotopy is equivalent to the following.
 There are two one-parameter families of paths $\alpha_\tau$ and $\beta_\tau$, $\tau\in[0,1]$ 
 such that: 
@@ -515,7 +447,7 @@ By Corollary~\ref{cor:discrete-paths},
 the construction in Corollary~\ref{cor:path-geod} produces the same result for $\alpha_\tau$ and $\beta_\tau$.
 Hence the result.\qeds
 
-\parbf{Exercise~\ref{ex:geod-circle}.}
+\parbf{\ref{ex:geod-circle}.}
 The following proof works for compact locally simply connected metric spaces;
 by uniqueness of geodesics (\ref{thm:cat-unique}) 
 this class of spaces includes compact length, locally $\CAT(\kappa)$ spaces. 
@@ -556,12 +488,12 @@ One also need to apply \ref{ex:null-homotopic}, to show that curves $\gamma_1$ a
 
 Note that the statement of the exercise fails if the requirement that $\spc{X}$ be compact is replaced by the assumption that it is proper. For example, the surface of revolution of the graph of $y=e^x$ around the $x$-axis is locally $\CAT(0)$ but has no closed geodesics.
 
-\parbf{Exercise~\ref{ex:branching-cover}.}
+\parbf{\ref{ex:branching-cover}.}
 Consider a closed $\eps$-neighborhood $A$ of the geodesic.
 Note that $A_\eps$ is convex.
 By the Reshetnyak gluing theorem, the double $\spc{W}_\eps$ of $\spc{U}$ along $A_\eps$ is $\CAT(0)$.
 
-Consider the space $\spc{W}'_\eps$ obtained by doubly covering $\spc{U}\backslash A_\eps$ and gluing back~$A_\eps$.
+Consider the space $\spc{W}'_\eps$ obtained by doubly covering $\spc{U}\setminus A_\eps$ and gluing back~$A_\eps$.
 
 Observe that $\spc{W}'_\eps$ is locally isometric to $\spc{W}_\eps$. 
 That is, for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ such that the $\delta$-neighborhood of $p'$ is isometric to the $\delta$-neighborhood of $p$ for all small $\delta>0$.
@@ -573,7 +505,8 @@ It remains to note that $\tilde {\spc{U}}$ can be obtained as a limit of $\spc{W
 \qeds
 
 
-\parbf{Exercise~\ref{ex:unique-geod=CAT}.}
+
+\parbf{\ref{ex:unique-geod=CAT}.}
 Assume $\spc{P}$ is not $\CAT(0)$.
 Then by \ref{thm:PL-CAT}, a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
 We can assume that $\Sigma$ has minimal possible dimension;
@@ -602,7 +535,7 @@ It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\a
 By \ref{ex:CAT-geodesic}, the given condition is a necessary and sufficient.
 
 
-\parbf{Advanced exercise~\ref{ex:S3}.}
+\parbf{\ref{ex:S3}.}
 Note that it is sufficient to construct a polyhedral space $\spc{P}$ homeomorphic to the 3-disc such that (1) $\spc{P}$ is locally $\CAT(0)$ in its interior and (2) the boundary of $\spc{P}$ is locally concave; in particular, each edge on the boundary of $\spc{P}$ has angle at least~$\pi$.
 
 Indeed, once $\spc{P}$ is constructed, taking the double of $\spc{P}$ along its boundary produces the needed metric on~$\mathbb{S}^3$.
@@ -623,7 +556,7 @@ and
 the third author.
 
 
-\parbf{Exercise~\ref{ex:baricenric-flag}.}
+\parbf{\ref{ex:baricenric-flag}.}
 Checking the flag condition is straightforward once we know the following description of the barycentric subdivision.
 
 Each vertex $v$ of the barycentric subdivision 
@@ -636,7 +569,7 @@ so that the corresponding simplices form a nested sequence
 
 
 
-\parbf{Exercise~\ref{ex:flag>=pi/2}.}
+\parbf{\ref{ex:flag>=pi/2}.}
 Use induction on the dimension  to prove that if in a spherical simplex $\triangle$ every edge is at least $\tfrac\pi2$, then 
 all dihedral angles of $\triangle$ are at least~$\tfrac\pi2$.
 
@@ -649,8 +582,9 @@ Indeed, the two-dimensional sphere with removed interior of a small rhombus is a
 On the other hand the boundary of the rhombus is closed local geodesic in this space.
 Therefore the space cannot be $\CAT(1)$.
 
+\parbf{\ref{ex:polyhedron-glue}.}
 
-\parbf{Exercise~\ref{ex:tree}.}
+\parbf{\ref{ex:tree}.}
 The space $\spc{T}_n$ has a natural cone structure with the vertex formed by the  completely degenerate tree --- all its edges have zero length.
 Note that the space $\Sigma$
 over which the cone is taken comes naturally with a triangulation 
@@ -667,7 +601,7 @@ Therefore, by Proposition~\ref{prop:no-trig} our complex is flag.
 It remains to apply the flag condition (\ref{thm:flag}) and then Exercise~\ref{ex:cone+susp}.
 \qeds
 
-\parbf{Exercise~\ref{ex:flag-aspherical}.}
+\parbf{\ref{ex:flag-aspherical}.}
 If the complex $\mathcal{S}$ is flag, then its cubical analog $\square_{\mathcal{S}}$ is locally $\CAT(0)$ and therefore aspherical.
 
 Assume now that the complex $\mathcal{S}$ is not flag. 
@@ -682,21 +616,21 @@ Let $\tilde\square_{\mathcal{S}}$ be the inverse image of $\square_{\mathcal{S}}
 Choose a cube $Q$ with minimal dimension in $\tilde\square_{\mathcal{T}}$ which is not present in $\tilde\square_{\mathcal{S}}$.
 By Exercise~\ref{ex:locally-convex}, $Q$ is a convex set in $\tilde\square_{\mathcal{T}}$.
 The closest point projection $\tilde\square_{\mathcal{T}}\to Q$ is a retraction.
-It follows that the boundary $\partial Q$ is not contractible in $\tilde\square_{\mathcal{T}}\backslash\Int Q$.
+It follows that the boundary $\partial Q$ is not contractible in $\tilde\square_{\mathcal{T}}\setminus\Int Q$.
 Therefore the spheroid $\partial Q$ is not contractible in $\tilde\square_{\mathcal{S}}$.
 That is, a covering of $\square_{\mathcal{S}}$ is not aspherical and therefore $\square_{\mathcal{S}}$ is not as well.
 \qeds
 
-\parbf{Exercise~\ref{ex:example-pi_infty-new}.}
+\parbf{\ref{ex:example-pi_infty-new}.}
 The solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}, but few changes are needed.
 
-The cycle $\gamma$ is taken in the complement $\mathcal{S}\backslash\{v\}$ (or, alternatively, in the link of $v$ in $\mathcal{S}$).
-Instead of a vertex, one has to take edge $e$ in $\tilde Q$ that corresponds to $v$; so we have to show existence of large cycle in $\tilde Q$ that is not contractible in $\tilde Q\backslash e$.
+The cycle $\gamma$ is taken in the complement $\mathcal{S}\setminus\{v\}$ (or, alternatively, in the link of $v$ in $\mathcal{S}$).
+Instead of a vertex, one has to take edge $e$ in $\tilde Q$ that corresponds to $v$; so we have to show existence of large cycle in $\tilde Q$ that is not contractible in $\tilde Q\setminus e$.
 The last change is not principle:
 it is more visual to think that $G$ is made from the squares parallel to the squares of the cubical complex which meet the edges of the complex orthogonally at their midpoints (in this case formally speaking $G$ is not a subcomplex of the cubical analog).
 \qeds
 
-\parbf{Exercise~\ref{ex:funny-S}.}
+\parbf{\ref{ex:funny-S}.}
 In the proof we apply the following lemma. 
 It follows from the disjoint discs property;
 see \cite{edwards, daverman}.
@@ -717,7 +651,7 @@ Note that it is sufficient to construct a simplicial complex $\spc{S}$
 such that 
 \begin{itemize}
 \item $\spc{S}$ is a closed $(m-1)$-dimensional homology manifold;
-\item $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$;
+\item $\pi_1(\spc{S}\setminus\{v\})\ne0$ for some vertex $v$ in $\spc{S}$;
 \item $\spc{S}\sim \mathbb{S}^{m-1}$; that is, $\spc{S}$ is homotopy equivalent to~$\mathbb{S}^{m-1}$.
 \end{itemize}
 
@@ -731,8 +665,8 @@ According to the generalized Poincar\'{e} conjecture,
 $\spc{R}\simeq\mathbb{S}^m$;
 that is
 $\spc{R}$ is homeomorphic to~$\mathbb{S}^m$.
-Since $\Cone \spc{S}\simeq \spc{R}\backslash\{s\}$ where $s$ denotes a south pole of the suspension 
-and $\EE^m\simeq \mathbb{S}^m\backslash\{p\}$
+Since $\Cone \spc{S}\simeq \spc{R}\setminus\{s\}$ where $s$ denotes a south pole of the suspension 
+and $\EE^m\simeq \mathbb{S}^m\setminus\{p\}$
 for any point $p\in \mathbb{S}^m$,
 we get 
 \[\Cone \spc{S}\simeq\EE^m.\]
@@ -753,17 +687,17 @@ and by $v$ the tip of the attached cone.
 Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$, which is a simply connected homology sphere and hence is homotopy equivalent to~$\mathbb{S}^{m-1}$.
   Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
 
-The complement $\spc{S}\backslash\{v\}$ is homotopy equivalent to~$\Sigma'$.
+The complement $\spc{S}\setminus\{v\}$ is homotopy equivalent to~$\Sigma'$.
 Therefore 
 \[
-\pi_1(\spc{S}\backslash\{v\})
+\pi_1(\spc{S}\setminus\{v\})
 =\pi_1\Sigma'
 =\pi_1\Sigma\ne 0.
 \]
 That is, $\spc{S}$ satisfies the conditions above.
 \qeds
 
-\parbf{Exercise~\ref{ex:cube-infty=>cube-2}}; (\ref{SHORT.cube-infty}) $\Rightarrow$ (\ref{SHORT.cube-2}).
+\parbf{\ref{ex:cube-infty=>cube-2}}; \ref{SHORT.cube-infty} $\Rightarrow$ \ref{SHORT.cube-2}.
 Since any closed curve can be considered as a short map from a boundary of a disc with some metric, it can be extended to a short map from a disc.
 Therefore any injective space is simply connected.
 
@@ -788,7 +722,7 @@ but all three together have no points of intersection.
 It follows that $(Q,\ell^\infty)$ is not an injective space --- it does not contain a point on distance $\tfrac14$ from $m_x$, $m_y$, and $m_z$ --- a contradiction.
 
 
-\parit{(\ref{SHORT.cube-1}) $\Rightarrow$ (\ref{SHORT.cube-2}).}
+\parit{\ref{SHORT.cube-1} $\Rightarrow$ \ref{SHORT.cube-2}.}
 Observe that median point $m(x,y,z)$ depends continuously on triple of points $(x,y,z)$ and $m(x,x,y)=x$.
 
 Given a loop $\gamma\:[0,1]\to Q$ with base at $p=\gamma(0)=\gamma(1)$,
@@ -813,13 +747,11 @@ Observe that that the geodesics $[xy]_{\ell^1}$, $[xz]_{\ell^1}$, and $[yz]_{\el
 It follows that the triple $(x,y,z)$ does not have a median; 
 that is, $(Q,\ell^1)$ is not a median space --- a contradiction.
 
-\section*{Subsets}
-
-\parbf{Exercise~\ref{ex:chopping-triangle}.} 
+\parbf{\ref{ex:chopping-triangle}.} 
 Observe that the triangle $\trig pqx$ is degenerate, in particular it is thin.
 It remains to apply the inheritance lemma (\ref{lem:inherit-angle}).
 
-\parbf{Exercise~\ref{ex:concave-triangle}.}
+\parbf{\ref{ex:concave-triangle}.}
 By approximation,
 it is sufficient to consider the case when $S$ has polygonal sides.
 
@@ -830,7 +762,7 @@ To prove the induction step, apply Alexandrov's lemma (\ref{lem:alex})
 together with the construction in Exercise~\ref{ex:short-map}.
 \qeds
 
-\parbf{Exercise~\ref{ex:bishop-sphere}.}
+\parbf{\ref{ex:bishop-sphere}.}
 From  Exercise~\ref{ex:hemisphere}, it follows that if a lune in $\mathbb{S}^2$ has perimeter smaller then $2\cdot\pi$, then it contains a closed hemisphere in its interior or lies in an open hemisphere.
 The same holds for a triangular region with concave sides.  
 
@@ -840,7 +772,7 @@ It remains to apply the argument in the proof of Theorem~\ref{thm:bishop-plane}.
 \qeds
 
 
-\parbf{Exercise~\ref{ex:two-planes}.}
+\parbf{\ref{ex:two-planes}.}
 The space $\tilde K$ is a cone over the branched covering $\Sigma$ of $\mathbb{S}^3$ infinitely branching along two great circles.
 
 If the planes are not orthogonal, then the minimal distance between the circles is less than~$\tfrac\pi2$.
@@ -864,7 +796,7 @@ In particular they show that if a covering space of $\EE^4$
 branching at three planes intersecting at the origin is $\CAT(0)$, then these all are complex planes for some complex structure on~$\EE^4$.
 
 
-\parbf{Exercise~\ref{ex:hemisphere}.}
+\parbf{\ref{ex:hemisphere}.}
 Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 
 Assume $\ell<\pi$.
@@ -904,7 +836,7 @@ By the Crofton formula we have that
 \qedsf
 
 
-\parbf{Exercise~\ref{ex:inner-support}.}
+\parbf{\ref{ex:inner-support}.}
 Since  $\Omega$ is not two-convex, 
 we can fix a simple closed curve $\gamma$ that lies in the intersection of a plane $W_0$ and $\Omega$, 
 and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
@@ -924,14 +856,14 @@ Changing $W_0,\gamma$ and $\phi$ slightly, we can assume that such a point lies 
 
 Fix a circle $\Gamma$ in $W_0$ that  surrounds $Q\cap W_0$.
 Since $Q$ lies in a half-space with boundary $W_0$, there is a
-smallest spherical dome with boundary $\Gamma$ that  includes the set $R=Q\backslash\Omega$.
+smallest spherical dome with boundary $\Gamma$ that  includes the set $R=Q\setminus\Omega$.
 
 The dome has to touch $R$ at some point~$p$.
-The plane $W$ tangent to the dome at $p$ has the required property --- the point $p$ is an isolated point of the complement $W\backslash \Omega$.
+The plane $W$ tangent to the dome at $p$ has the required property --- the point $p$ is an isolated point of the complement $W\setminus \Omega$.
 Further, by construction a small circle around $p$ in $W$ is contractible in $\Omega$.
 \qeds
 
-\parbf{Exercise~\ref{ex:convex+saddle+broken=>PL}.}
+\parbf{\ref{ex:convex+saddle+broken=>PL}.}
 The proof is simple and visual, but it is hard to write it formally in a non-tedious way;
 for that reason we give only a sketch.
 
@@ -965,26 +897,36 @@ In particular, all points on $[pq]$ sufficiently close to $p$ lie in $\bar S$,
 a contradiction.
 \qeds
 
-\parbf{Exercise~\ref{ex:CAT=>two-convex}.}
+\parbf{\ref{ex:CAT=>two-convex}.}
 Suppose $K$ is not two convex;
 let $\gamma$ be a closed simple curve in a plane $W$ that do not meet Definition~\ref{def:two-convex}.
 Note that $W$ is not a vertical plane; denote by $V$ the three-dimensional subspace that spanned by $W$ and vertical direction.
 
 Note that $\gamma$ is contractible in $V\cap K$.
 Act as in \ref{ex:inner-support} to show that there exists a plane triangle $\triangle\subset V$ whose sides lie completely in $K$, 
-but whose interior contains points from the complement $\EE^m\backslash K$.
+but whose interior contains points from the complement $\EE^m\setminus K$.
 
 It remains to note that $\triangle$ is not thin in~$K$.
 \qeds
 
-\parbf{Exercise~\ref{ex:two-convex-not-a-CAT}.}
+\parbf{\ref{ex:finite-action-CAT}.}
+
+\parbf{\ref{ex:barysimple}.}
+
+\parbf{\ref{lem:nondeg-test-with-balls}.}
+
+\parbf{\ref{ex:helly}.}
+
+\parbf{\ref{ex:dim-top-haus-CAT}.}
+
+\parbf{\ref{ex:two-convex-not-a-CAT}.}
 Clearly the set $W$ is two-convex.
 Therefore so is $K$ as the intersection of two two-convex sets.
 
 Consider two $2$-dimensional hemispheres $H_1$ and $H_2$ in $\mathbb{S}^3$ 
 such that the intersection $H_1\cap H_2$ is a geodesic $[\xi\zeta]$ orthogonal to the boundary equators of $H_1$ and $H_2$ and 
 \[\dist{\xi}{\zeta}{\mathbb{S}^3}<\tfrac\pi2.\]
-Equip the complement $\mathbb{S}^3\backslash(H_1\cup H_2)$ with induced length metric and denote by $\Sigma$ its completion.
+Equip the complement $\mathbb{S}^3\setminus(H_1\cup H_2)$ with induced length metric and denote by $\Sigma$ its completion.
 
 ???
 
@@ -999,4 +941,3 @@ For a suitable choice of the motion $\iota$,
 we have that $\tfrac1n\cdot K\to K'$ as $n\to\infty$ in  the sense of Gromov--Hausdorff.
 By \ref{prop:cat-limit}, $K$ is not $\CAT(0)$.
 \qeds
-

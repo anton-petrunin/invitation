@@ -1,18 +1,147 @@
 \chapter{Polyhedral spaces}\label{chap:poly}
 
-This lecture is nearly a copy of \cite[Sections 3.4--3.8]{alexander-kapovitch-petrunin-2019};
-here we describe a set of rules for gluing Euclidean cubes that produce a 
+This lecture describes a set of rules for gluing Euclidean cubes that produce a 
 locally $\CAT(0)$ space and use these rules to construct exotic examples of aspherical manifolds.
+
+\section{Products, cones, and suspension}
+\label{sec:Products and cones}
+
+Products, cones, and suspension are defined in Section~\ref{sec:constructions}.
+
+\begin{thm}{Proposition}\label{ex:product-CAT}
+Let $\spc{U}$ and $\spc{V}$ be $\CAT(0)$ spaces.
+Then the product space $\spc{U}\times\spc{V}$ is $\CAT(0)$.
+\end{thm}
+
+\parit{Proof.}
+Fix a quadruple in $\spc{U}\times \spc{V}$:
+\begin{align*}
+p&=(p_1,p_2),
+&
+q&=(q_1,q_2), 
+&
+x&=(x_1,x_2),
+&
+y&=(y_1,y_2).
+\end{align*}
+For the quadruple $p_1,q_1,x_1,y_1$ in $\spc{U}$,
+construct two model triangles $\trig{\tilde p_1}{\tilde x_1}{\tilde y_1}=\modtrig(p_1x_1y_1)_{\EE^2}$ 
+and $\trig{\tilde q_1}{\tilde x_1}{\tilde y_1}=\modtrig(q_1x_1y_1)_{\EE^2}$.  
+Similarly, for the quadruple $p_2,q_2,x_2,y_2$ in $\spc{V}$
+construct two model triangles $\trig{\tilde p_2}{\tilde x_2}{\tilde y_2}$ and $\trig{\tilde q_2}{\tilde x_2}{\tilde y_2}$.
+
+Consider four points in $\EE^4=\EE^2\times\EE^2$ 
+\begin{align*}
+\tilde p&=(\tilde p_1,\tilde p_2),
+&
+\tilde q&=(\tilde q_1,\tilde q_2),
+&
+\tilde x&=(\tilde x_1,\tilde x_2),
+&
+\tilde y&=(\tilde y_1,\tilde y_2).
+\end{align*}
+Note that the triangles $\trig{\tilde p}{\tilde x}{\tilde y}$ and $\trig{\tilde q}{\tilde x}{\tilde y}$ in $\EE^4$ are isometric to the model triangles 
+$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$.
+
+If $\tilde z=(\tilde z_1,\tilde z_2)\in [\tilde x\tilde y]$, then $\tilde z_1\in [\tilde x_1\tilde y_1]$ and $\tilde z_2\in [\tilde x_2\tilde y_2]$ and
+\begin{align*}
+\dist[2]{\tilde z}{\tilde p}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde p_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde p_2}{\EE^2},
+\\
+\dist[2]{\tilde z}{\tilde q}{\EE^4}&=\dist[2]{\tilde z_1}{\tilde q_1}{\EE^2}+\dist[2]{\tilde z_2}{\tilde q_2}{\EE^2},
+\\
+\dist[2]{p}{q}{\spc{U}\times\spc{V}}&=\dist[2]{p_1}{q_1}{\spc{U}}+\dist[2]{p_2}{q_2}{\spc{V}}.
+\end{align*}
+Therefore $\CAT(0)$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
+and 
+$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies 
+$\CAT(0)$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.
+\qeds
+
+Recall that metric on the cone \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ is defined via cosine rule.
+
+\begin{thm}{Proposition}\label{ex:cone+susp}
+Let $\spc{U}$ be a metric space.
+Then $\Cone\spc{U}$ is  $\CAT(0)$ if and only if $\spc{U}$ is $\CAT(1)$.
+\end{thm}
+
+\parit{Proof; if part.}
+Given a point $x\in \Cone\spc{U}$, denote by $x'$ its projection to $\spc{U}$
+and by $|x|$ the distance from $x$ to the tip of the cone;
+if $x$ is the tip, then $|x|=0$ and we can take any point of $\spc{U}$ as~$x'$.
+
+Let $p$, $q$, $x$, $y$
+be a quadruple in $\Cone\spc{U}$.
+Assume that the spherical model triangles $\trig{\tilde p'}{\tilde x'}{\tilde y'}_{\SSS^2}=\modtrig(p'x'y')_{\SSS^2}$ and $\trig{\tilde q'}{\tilde x'}{\tilde y'}_{\SSS^2}=\modtrig(q'x'y')_{\SSS^2}$ are defined.
+Consider the following points in $\EE^3=\Cone\SSS^2$: 
+\begin{align*}
+\tilde p&=|p|\cdot\tilde p',
+&
+\tilde q&=|q|\cdot\tilde q',
+&
+\tilde x&=|x|\cdot\tilde x',
+&
+\tilde y&=|y|\cdot\tilde y'.
+\end{align*}
+
+Note that
+$\trig{\tilde p}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(pxy)_{\EE^2}$
+and
+$\trig{\tilde q}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(qxy)_{\EE^2}$.
+Further, note that if $\tilde z\in [\tilde x\tilde y]_{\EE^3}$, then
+$\tilde z'=\tilde z/|\tilde z|$ lies on the geodesic $[\tilde x'\tilde y']_{\SSS^2}$.
+Therefore the $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies the 
+$\CAT(0)$ comparison for $\dist{p}{q}{}$ with $\tilde z\in[\tilde x\tilde y]_{\EE^3}$.
+
+If at least one of the model triangles $\modtrig(p'x'y')_{\SSS^2}$ and $\modtrig(q'x'y')_{\SSS^2}$ is undefined,
+then the statement follows from the triangle inequalities 
+\begin{align*}
+|p'-x'|_{\spc{U}}+|q'-x'|_{\spc{U}}
+&\ge |p'-q'|_{\spc{U}}
+\\
+|p'-y'|_{\spc{U}}+|q'-y'|_{\spc{U}}
+&\ge |p'-q'|_{\spc{U}}
+\end{align*}
+This case is left as an exercise. %???
+
+\parit{Only-if part.}
+Suppose that $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ are defined as above.
+Assume all these points lie in a half-space of $\EE^3=\Cone\SSS^2$ with origin at its boundary. 
+Then we can choose positive values $a$, $b$, $c$, and $d$ such that the points $a\cdot \tilde p'$, $b\cdot \tilde q'$, $c\cdot \tilde x'$, $d\cdot \tilde y'$ lie in one plane.
+Consider the corresponding points $a\cdot  p'$, $b\cdot  q'$, $c\cdot  x'$, $d\cdot y'$ in $\Cone\spc{U}$.
+Applying the $\CAT(0)$ comparison for these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
+
+It remains to consider the case when $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ do not in a half-space.
+Fix $\tilde z'\in [\tilde x' \tilde y']_{\SSS^2}$.
+Observe that 
+\begin{align*}\dist{\tilde p'}{\tilde x'}{\SSS^2}+\dist{\tilde q'}{\tilde x'}{\SSS^2}
+ &
+\le \dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}
+\intertext{or} 
+\dist{\tilde p'}{\tilde y'}{\SSS^2}+\dist{\tilde q'}{\tilde y'}{\SSS^2}
+&\le
+\dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}.\end{align*}
+That is, in this case, the $\CAT(1)$ comparison follows from the triangle inequality.
+\qeds
+
+Suspension is a spherical analog of cone construction,
+and the following statement is a direct analog of \ref{ex:cone+susp};
+it can be proved along the same lines.
+
+\begin{thm}{Proposition}\label{prop:susp}
+Let $\spc{U}$ be a metric space,
+and let $\spc{N}$ be a neighborhood of the north pole in $\Susp\spc{U}$ (possibly $\spc{N}=\Susp\spc{U}$)
+Then $\spc{N}$ is $\CAT(1)$ if and only if so is $\spc{U}$.
+\end{thm}
 
 \section{Polyhedral spaces}
 
 \begin{thm}{Definition}\label{def:poly}
 A geodesic space $\spc{P}$ is called  
-a \index{polyhedral space}\emph{(spherical) polyhedral space} 
+a (spherical) \index{polyhedral space}\emph{polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that every simplex in $\tau$ is isometric to a simplex in a Euclidean space (or respectively a unit sphere) of appropriate dimension.
 
-By \index{triangulation of a polyhedral space}\emph{triangulation of a polyhedral space}, 
+By \index{triangulation of a polyhedral space}\emph{triangulation} of a polyhedral space, 
 we will always understand a triangulation as above. 
 \end{thm}
 
@@ -75,8 +204,8 @@ The following theorem provides a combinatorial description of polyhedral spaces 
 
 
 \begin{thm}{Theorem}\label{thm:PL-CAT}
-Let $\spc{P}$ be a polyhedral space and $\tau$ be its triangulation. 
-Then $\spc{P}$ is locally $\CAT(0)$ if and only if the link of each simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
+Let $\tau$ be a triangulation of a polyhedral space $\spc{P}$. 
+The space $\spc{P}$ is locally $\CAT(0)$ if and only if the link of each simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
 
 Analogously, let $\spc{P}$ be a spherical polyhedral space and $\tau$ be its triangulation. 
 Then $\spc{P}$ is $\CAT(1)$ if and only if neither $\spc{P}$ nor  the  link of any simplex in $\tau$ has a closed local geodesic shorter than $2\cdot\pi$.
@@ -111,7 +240,7 @@ Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally  $
 Applying the second part of Corollary~\ref{cor:closed-geod-cat},
 we get the statement.
 
-The $\CAT(0)$ case is done in exactly the same way except we need to use the first part of Exercise~\ref{ex:cone+susp} and  the first part of Corollary~\ref{cor:closed-geod-cat} on the last step.
+The $\CAT(0)$ case is done in exactly the same way except we need to use Proposition~\ref{ex:cone+susp} and  the first part of Corollary~\ref{cor:closed-geod-cat} on the last step.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
@@ -155,7 +284,7 @@ to conclude that any finite simplicial complex is homeomorphic to a proper lengt
 
 \begin{thm}{Proposition}\label{prop:no-trig}
 A simplicial complex $\mathcal{S}$ is flag if and only if 
-$\mathcal{S}$ as well as all the links of all its simplices
+$\mathcal{S}$ as well as the links of all its simplices
 satisfy the no-triangle condition.
 \end{thm}
 
@@ -258,7 +387,7 @@ In particular,
 that is, $\gamma$ spends time $\pi$ on every visit to $\Star_v$.
 
 \begin{wrapfigure}{r}{45mm}
-\vskip-2mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1000}
 \end{wrapfigure}
@@ -458,6 +587,7 @@ Fix a point $\tilde v\in\tilde G$ in the inverse image of~$v$.
 \vskip0mm
 \centering
 \includegraphics{mppics/pic-1100}
+\vskip-4mm
 \end{wrapfigure}
  
 Note that 

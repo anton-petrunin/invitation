@@ -1,4 +1,4 @@
-\chapter{Barycenters}
+\chapter{Barycenters}\label{chap:barycenter}
 
 \section{Definition}
 
@@ -16,9 +16,9 @@ where $f_i=\tfrac12\cdot\distfun_{p_i}^2$ for each $i$, and $\argmin f$\index{$\
 
 The map $\spx{}\:\Delta^k\mapsto \EE^n$ defined by $\spx{}\:\bm{m}\mapsto z$ is called barycentric simplex of the array $\bm{p}$.
 If needed we may denote this map by $\spx{\bm{p}}$ or, more generally, $\spx{\bm{f}}$.
-The latter means that we define the map using \ref{eq:f-spx} for an array of functions $\bm{f}=(f_0,f_1,\dots,f_k)$.
-Note that the definition \ref{eq:f-spx} makes sense for any array of functions in a metric space;
-altho, in this case, the map might be undefined or nonuniquely defined.
+The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f_0,f_1,\dots,f_k)$.
+Formally speaking, the definition \ref{eq:f-spx} makes sense for any array of functions in a metric space;
+altho, the map might be undefined or nonuniquely defined.
 
 Further, we will work with this definition in $\CAT(0)$ spaces instead of $\EE^n$.
 It will be used to define and study dimension of $\CAT$ spaces.
@@ -206,7 +206,7 @@ Denote by $\bar V$ the closure of $V$.
 
 \parit{\ref{SHORT.thm:up-convex:convex}.}
 Convexity of all $f_i$ implies that
-for any two points $p,q\in \spc{X}$ and $t\in[0,1]$ we have
+for any two points $p,q\in \spc{X}$ and $t\z\in[0,1]$ we have
 \[(1-t)\cdot\bm{f}(p)+t\cdot \bm{f}(q)
 \succcurlyeq
 \bm{f}\circ\gamma(t),\]
@@ -231,7 +231,7 @@ in particular $\bm{v}\in V$.
 Note that $p\in \spx{\bm{f}}(\Delta^k)\setminus\spx{\bm{f}}(\partial\Delta^k)$ if and only if 
 $\bm{f}(p)$ is supported by a plane as above for some $\bm{m}\in\Delta^{\kay}$,
 but it is not supported by a plane for some $\bm{m}\in\partial\Delta^{\kay}$.
-This condition is open, therefore $\spx{\bm{f}}(\Delta^k)\setminus\spx{\bm{f}}(\partial\Delta^k)$ is an open set.
+This condition is open, therefore $\spx{\bm{f}}(\Delta^k)\z\setminus\spx{\bm{f}}(\partial\Delta^k)$ is an open set.
 \qeds
 
 \section{Nondegenerate simplex}

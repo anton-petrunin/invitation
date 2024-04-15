@@ -4,26 +4,34 @@
 \chapter*{Preface}
 
 This short monograph arose as an offshoot 
-of the book on Alexandrov geometry we have been writing for  a number of years.
+of the book on Alexandrov geometry \cite{alexander-kapovitch-petrunin-2025} we have been writing for  a number of years.
 The notes were shaped in a number of lectures given by the third author
 to undergraduate students 
-at different  occasions at the
-MASS program at Penn State University
-and the Summer School ``Algebra and Geometry'' in Yaroslavl.
+at different occasions in Penn State, including the MASS program,
+at the Summer School ``Algebra and Geometry'' in Yaroslavl,
+and at SPbSU.
 
 The idea is to demonstrate the beauty and power of Alexandrov geometry by reaching interesting applications and theorems with a minimum of preparation.
 Namely,  we consider $\CAT(0)$ spaces --- the metric spaces with nonpositive curvature in the sense of Alexandrov; these spaces can be loosely described as a non-linear generalization of a Hilbert space.
 
 \medskip 
 
-In Chapter~\ref{prelim}, we discuss necessary preliminaries.
+In Lecture~\ref{prelim}, we discuss necessary preliminaries.
 
-In Chapter~\ref{chapter:gluing}, we discuss the Reshetnyak gluing theorem and apply it to a problem in billiards which was solved by Dmitri Burago, Serge Ferleger, and Alexey Kononenko.
+In Lecture~\ref{chapter:gluing}, we discuss the Reshetnyak gluing theorem and apply it to a problem in billiards which was solved by Dmitri Burago, Serge Ferleger, and Alexey Kononenko.
 
-In Chapter~\ref{chapter:globalization}, we discuss the Hadamard--Cartan globalization theorem, and apply it to the construction of exotic aspherical manifolds introduced by Michael Davis.
+In Lecture~\ref{chap:billiards} we apply Lecture~\ref{chapter:gluing} to a problem in billiards which was solved by Dmitri Burago, Serge Ferleger, and Alexey Kononenko.
 
-In Chapter~\ref{chapter:shefel}, we discuss examples of Alexandrov spaces with curvature bounded above.
-This chapter is based largely on work of Samuel Shefel on nonsmooth saddle surfaces.
+Lecture~\ref{sec:resh-kirz} provides the so-called Reshetnyak's majorization theorem. It is illustrated by several applications about convexity and geodesics.
+
+In Lecture~\ref{chapter:globalization}, we discuss the Hadamard--Cartan globalization theorem,.
+
+In Lecture~\ref{chap:poly} we apply Lecture~\ref{chapter:globalization} to the construction of exotic aspherical manifolds introduced by Michael Davis.
+
+In Lecture~\ref{chapter:shefel}, we discuss examples of Alexandrov spaces with curvature bounded above.
+It is is based largely on work of Samuel Shefel on nonsmooth saddle surfaces.
+
+Finally, in Lecture~\ref{chap:barycenter} we discuss barycenters with their applications to the dimension theory. 
 
 \medskip
 
@@ -34,6 +42,7 @@ we will not assume familiarity with any of these sources.
 \item The book by Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger};
 \item Lecture notes of Werner Ballmann \cite{ballmann:lectures};
 \item Chapter 9 in the book \cite{burago-burago-ivanov} by Dmitri Burago, Yuri Burago and Sergei Ivanov.
+\item Our book \cite{alexander-kapovitch-petrunin-2025}.
 \end{itemize}
 
 
@@ -61,9 +70,9 @@ The study of  spaces with curvature bounded above started later.
 The first paper on the subject was written by Alexandrov; it appeared in 1951, see \cite{alexandrov:strong-angle}.
 It was based on work of Herbert Busemann, who studied spaces satisfying a weaker condition \cite{busemann-CBA}.
 
-Yurii Grigorievich Reshetnyak proved fundamental results about general spaces with curvature bounded above, the most important of which is his gluing theorem.
+Yurii Grigorievich Reshetnyak proved fundamental results about general spaces with curvature bounded above, the most important of which is his gluing and majorization theorems.
 An equally important theorem is the Hadamard--Cartan theorem (globalization theorem).
-These theorems and their history are discussed in chapters \ref{chapter:gluing} and~\ref{chapter:globalization}.
+These theorems and their history are discussed in lectures \ref{chapter:gluing}, \ref{sec:resh-kirz} and~\ref{chapter:globalization}.
 
 Surfaces with upper curvature bounds were studied extensively in the 50-s and 60-s, and are by now well understood; see the survey \cite{reshetnyak:survey} and the references therein.
 
@@ -91,7 +100,7 @@ holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$ and
 \end{wrapfigure}
 
 Consider the subset $\mathcal{E}_4\subset \mathcal{M}_4$ of all isometry classes of 4-point metric spaces that admit isometric embeddings into Euclidean space.
-The complement $\mathcal{M}_4\backslash \mathcal{E}_4$ has two connected components.
+The complement $\mathcal{M}_4\setminus \mathcal{E}_4$ has two connected components.
 
 \begin{thm}{Exercise}\label{ex:two-components-of-M4}
 Prove the latter statement.
@@ -110,14 +119,13 @@ respectively
 is called an Alexandrov space with non-positive or non-negative curvature.
 
 Here is an exercise, solving which would force the reader to rebuild a considerable part of Alexandrov geometry.
+It might be helpful to spend some time thinking about this exercise before proceeding.
 
 \begin{thm}{Advanced exercise}\label{ex:convex-set}
 Assume $\spc{X}$ is a complete metric space with length metric, 
 containing only quadruples of type~$\mathcal{E}_4$.
 Show that $\spc{X}$ is isometric to a convex set in a Hilbert space.
 \end{thm}
-
-In fact, it might be helpful to spend some time thinking about this exercise before proceeding.
 
 In the definition above, 
 instead of  Euclidean space 
@@ -164,5 +172,5 @@ Max Planck Institute for Mathematics.
 
 The first author was partially supported by  the Simons Foundation grant \#209053.
 The second author was partially supported by a Discovery grant  from NSERC and by the Simons Foundation grant \#390117.
-The third author was partially supported by the NSF grant DMS 1309340 and the Simons Foundation \#584781.
+The third author was partially supported by the NSF grants DMS 1309340 and DMS-2005279 and the Simons Foundation \#584781.
 

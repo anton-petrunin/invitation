@@ -51,6 +51,48 @@ Now we come to the main theorem of this section.
 \label{thm:major}
 Any closed rectifiable curve $\alpha$ in a geodesic $\CAT(0)$ space is majorized by a convex plane figure. \end{thm}
 
+It is instructive to solve the following exercises before diving into the proof of the theorem.
+
+\begin{thm}{Exercise}\label{ex:convex-dist}
+Suppose $\gamma_1,\gamma_2\:[0,1]\to \spc{U}$ are two geodesic paths in a complete geodesic $\CAT(0)$ space $\spc{U}$.
+Show that
+\[t\mapsto\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\]
+is a convex function.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:convex-nbhd}
+Let $A$ be a convex closed set in a proper geodesic $\CAT(0)$ space $\spc{U}$;
+that is, if $x,y\in A$, then $[xy]\subset A$.
+Show that $\distfun_A$ is convex.
+
+In particular, for any $r>0$ the closed $r$-neighborhood of $A$ is convex;
+that is, the set
+\[A_r=\set{x\in \spc{U}}{\distfun_Ax\le r}\]
+is convex.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:closest-point}
+Let  $\spc{U}$ be a proper geodesic $\CAT(0)$ space 
+and $K\subset \spc{U}$ be a closed convex set.
+Show that: 
+
+\begin{subthm}{ex:closest-point:a}
+For each point $p\in \spc{U}$ there is a unique point $p^*\in K$ that minimizes the distance $\dist{p}{p^*}{}$.
+\end{subthm}
+
+\begin{subthm}{ex:closest-point:b}
+The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short. 
+\end{subthm}
+
+\end{thm}
+
+Recall that a set $A$ in a metric space $\spc{U}$ is called \index{locally convex set}\emph{locally convex} if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in~$A$. 
+
+\begin{thm}{Exercise}\label{ex:locally-convex}
+Let $\spc{U}$ be a proper geodesic $\CAT(0)$ space.
+Show that any closed, connected, locally convex set in $\spc{U}$ is convex.
+\end{thm}
+
 \section{Triangles}
 
 The case when $\alpha$ is a triangle, say $\trig p x y$, is the base in the following proof, and it is nontrivial.
@@ -66,8 +108,8 @@ If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\mathring\alpha
 is a \index{line-of-sight map}\emph{line-of-sight map from $p$ to $\alpha$}.  
 \end{thm}
 
-We will show that there is a majorizing map for $\trig p x y$ whose image $W$ is the image of the line-of-sight map for $[x y]$ from  $p$,
-but as one can see from the following example, the line-of-sight map is not majorizing in general.
+We will show that there is a majorizing map for $\trig p x y$ whose image $W$ is the image of the line-of-sight map for $[x y]$ from  $p$.
+However, as one can see from the following example, the line-of-sight map is \textit{not} majorizing in general.
 
 
 
@@ -107,11 +149,7 @@ The set formed by all geodesics from  $\tilde p$ to the points on $\tilde \gamma
 
 The set of all points $\tilde x\in\EE^2$ such that a geodesic $[\tilde p\tilde x]$ intersects $\tilde \gamma$ is called the \emph{supergraph} of $\tilde \gamma$ with respect to $\tilde p$.
 
-The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to a point}\emph{convex (concave) with respect to} $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
-
-The curve $\tilde \gamma$ is called 
-\emph{locally convex (concave) with respect to $\tilde p$} 
-if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (concave) with respect to~$\tilde p$.
+The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to a point}\emph{convex} (\emph{concave}) with respect to $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
 \end{thm}
 
 Our first lemma gives a model space construction based on repeated application of the argument in the proof of the inheritance lemma (\ref{lem:inherit-angle}).
@@ -144,7 +182,7 @@ it can be approximated by polygonal lines that are concave with respect to $p$,
 with their lengths converging to $\length \beta$. 
 Passing to a partial limit we will obtain the needed map $G$.  
 
-Suppose $\beta=x^0x^1\dots x^n$ is a polygonal line with $x^0=x$ and $x^n=y$.
+Suppose $\beta=x^0x^1\dots x^n$ is a polygonal line with $x^0=x$ and $x^n\z=y$.
 Consider a sequence of polygonal lines $\beta_i=x^0x^1\dots x^{i-1}y_i$ such that $\dist{p}{y_i}{}=\dist{p}{y}{}$ and 
 $\beta_i$ has same length as $\beta$; 
 that is, 
@@ -261,16 +299,14 @@ In  the following proofs, $x^1 \dots x^n$ ($n\ge 3$) denotes a polygonal line $x
 For a subset $R$ of the ambient metric space,
 we denote by $[x^1\dots x^n ]_R$ a polygon in the length metric of $R$.
 
-\parit{Proof of \ref{thm:major} for polygons.}
-We begin by proving the theorem in case $\alpha$ is polygonal.
-
 \begin{wrapfigure}{o}{40 mm}
-\vskip-1mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-960}
 \vskip0mm
 \end{wrapfigure}
 
+\parit{Proof of \ref{thm:major} for polygons.}
 Now we claim that any closed $n$-gon $[x^1x^2 \dots x^n ]$ in a $\CAT(0)$ space  is majorized by a convex polygonal region \[R_n=\Conv[\tilde x^1\tilde x^2\dots\tilde x^n]\]
 under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$. 
 
@@ -298,8 +334,8 @@ Then $F$ is length-nonincreasing and is a majorizing map for $[x^1 x^2 \z\dots x
 
 If $R$ is a convex subset of $\EE^2$, we are done. 
 
-If $R$ is not convex,  the total internal angle of $R$ at $\tilde x^1$ or $ \tilde x^{n-1} $ or both is $>\pi$.  
-By relabeling we may suppose this holds for $\tilde x^{n-1}$.  
+If $R$ is not convex, the total internal angle of $R$ at $\tilde x^1$ or $ \tilde x^{n-1} $ or both is is larger than $\pi$.  
+By relabeling we may suppose this holds for~$\tilde x^{n-1}$.  
 
 The region $R$ is obtained by gluing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
 Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ carrying its length metric is a $\CAT(0)$-space.  
@@ -307,7 +343,7 @@ Moreover $[\tilde x^{n-2}\tilde x^{n-1}]\cup[\tilde x^{n-1} \dot x^n]$ is a geod
 Thus $[\tilde x^1 \tilde x^2 \dots \tilde x^{n-2} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \EE^2$ to~$R$, followed by $F$,  is the desired majorizing map.
 \qeds
 
-If $p_1\dots p_n$ is a polygon, then values $\theta_i=\pi-\mangle\hinge{p_i}{p_{i-1}}{p_{i+1}}$ for all $i\pmod n$ are called \emph{external angles} of the polygon.
+For a polygon $[p_1\dots p_n]$, the values $\theta_i=\pi-\mangle\hinge{p_i}{p_{i-1}}{p_{i+1}}$ for all $i\pmod n$ are called \emph{external angles} of the polygon.
 The following exercise is a generalization of Fenchel's theorem.
 
 \begin{thm}{Exercise}\label{ex:fenchel}
@@ -378,10 +414,10 @@ Show that a closed rectifiable curve in a $\CAT(0)$ space has an isometric major
 
 \section{Comments}
 
-The statements in this section can be generalized to $\CAT(\pm1)$ spaces;
+The majorization theorem can be generalized to $\CAT(\pm1)$ spaces;
 in the $\CAT(1)$ case one has to assume that the closed curve has length at most $2\cdot\pi$.
 
-The majorization theorem was proved by Yuriy Reshetnyak \cite{reshetnyak:major};
+This theorem was proved by Yuriy Reshetnyak \cite{reshetnyak:major};
 our proof uses a trick that we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
 Another proof can be built on generalized Kirszbraun's theorem \cite{lang-schroeder,alexander-kapovitch-petrunin-2011,alexander-kapovitch-petrunin-2025}, but it works only for complete spaces.
 
@@ -395,8 +431,11 @@ Note that if $\alpha$ is a geodesic triangle or it bounds an isometric copy of c
 What about the converse?
 \end{thm}
 
-Notice that the majorization theorem implies isoperimetrical inequality
---- \textit{any curve of length $2\cdot \pi\cdot r$ in a $\CAT(0)$ length space spans a disc of are at most $\pi\cdot r^2$}.
-Almgren's inequality \cite{almgren} provides an analogous statement for all dimensions and codimensions.
-For the $\CAT(0)$ spaces this question is open.
-Even in the smooth case, it is solved only if dimension $\le 4$ and codimension $1$ \cite{kleiner-1992,croke}.
+Notice that the majorization theorem implies isoperimetrical inequality for $\CAT(0)$ metrics on the plane.
+Moreover, it implies the generalized isoperimetrical inequality in the style of Frederick Almgren \cite{almgren}: \textit{any curve of length $2\cdot \pi\cdot r$ in a $\CAT(0)$ length space spans a disc of area at most $\pi\cdot r^2$}.
+
+It is known that isoperimetrical inequality holds for $\CAT(0)$ Riemannian manifolds of dimension 3 and 4.
+First the 4-dimensional case was proved by Christopher Croke \cite{croke},
+and after that Bruce Kleiner proved the 3-dimensional case \cite{kleiner-1992}.
+Each of these two papers is a masterpiece.
+Despite many attempts, the isoperimetrical inequality for $\CAT(0)$ spaces remains open in all other dimensions and codimensions. 
