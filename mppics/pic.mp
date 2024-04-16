@@ -507,23 +507,40 @@ label.bot(btex $\tilde q*$ etex, z.qq);
 endfig;
 
 beginfig(43) 
-save u;
+save u,ang;
 u:=1cm;
+ang=25;
 
-z.a=(.5,1)*u;
+z.a=(1,1.2)*u;
+z.b=(-1,-1)*u;
+z.r=-.5*z.a rotated ang +.5*z.a;
+z.rr=-.5*z.a rotated -ang +.5*z.a;
 
 path p[];
 
-p1=circle(origin,.5*u);
+p1=circle(origin,z.r);
 p2=circle(origin,2*u);
+p3=(-.7,.3)*u..z.a{right}..(1.5,0)*u..z.b..cycle;
+p4=(-1,1)*u..z.a{down}..(.5,-.5)*u..z.b..cycle;
+
+hatchfill p3 withcolor (77, 1mm, -.5bp);
+hatchfill p4 withcolor (-15, 1mm, -.5bp);
+fill (z.r--z.a--z.rr--cycle) withcolor 0;
+fill p1 withcolor .5;
 
 draw p1;
 draw p2;
+draw z.rr--z.a--z.r;
 
-draw (-.7,0)*u..z.a..(1.5,0)*u..tension 1.2..cycle;
-draw (-1,1)*u..z.a..(.5,-.5)*u..tension 1.2..cycle;
+draw p3;
+draw p4;
 
-dOt origin, z.a;
+dOt  z.a;
+
+label(btex $B_1$ etex, origin) withcolor 1;
+label.llft(btex $B_2$ etex, z.b+(1,0));
+whitelabel.ulft(btex $A^i$ etex, (-.7,.3)*u);
+whitelabel.lrt(btex $A^j$ etex, (.5,-.5)*u);
 
 endfig;
 
