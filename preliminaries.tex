@@ -36,13 +36,6 @@ we write
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad\cBall[x,R]_{\spc{X}}.\]
 \end{itemize}
 
-\begin{thm}{Exercise}\label{ex:non-contracting-map}
-Let $K$  be a compact metric space and
-\[f\:K\z\to K\] 
-be a distance non-decreasing map.
-Prove that $f$ is an isometry.
-\end{thm}
-
 \section{Geodesics, triangles, and hinges}
 \label{sec:geods}
 
@@ -348,7 +341,7 @@ The distance $\dist{0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by 
 \begin{thm}{Exercise}\label{ex:cone-geod}
 Let $[pq]$ be a geodesic in $\Cone\spc{U}$;
 assume it does not pass thru the tip.
-Show that the projection of $[pq]$ to $\spc{U}$ is a geodesic of length less than $\pi$.
+Show that the projection of $[pq]$ to $\spc{U}$ (after reparametrization) is a geodesic of length less than $\pi$.
 \end{thm}
 
 
@@ -814,7 +807,8 @@ and write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xrightarrow{\rho} \spc{X}_
 The space $\spc{X}_\infty$ is called the \emph{limit space} of the sequence $(\spc{X}_n)$ \emph{along} $\rho$.
 \end{thm}
 
-Usually Gromov--Hausdorff convergence is defined differently. We prefer this definition since it induces convergence for a sequence of points $x_n\in\spc{X}_n$ (Exercise \ref{ex:hausdorff-conv}),
+Usually Gromov--Hausdorff convergence is defined differently.
+We prefer this definition since it induces convergence for a sequence of points $x_n\in\spc{X}_n$ (Exercise \ref{ex:hausdorff-conv}),
 as well as 
 weak convergence of measures $\mu_n$ on $\spc{X}_n$, 
 and so on,
@@ -879,6 +873,12 @@ $(I_m)$ and $(N_m)$ with $I_1=N_1=1$.
 \qeds
 
 
+\begin{thm}{Exercise}\label{ex:non-contracting-map}
+Let $\spc{K}$  be a compact metric space and
+\[f\:\spc{K}\z\to \spc{K}\] 
+be a distance non-decreasing map.
+Prove that $f$ is an isometry.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:compact-proper-GH}
 Let $\spc{X}_n$ be a sequence of metric spaces that admits 

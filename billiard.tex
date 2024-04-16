@@ -111,11 +111,16 @@ Given a point $x\in \spc{U}$, denote by $\gamma_x\:[0,1]\to \spc{U}$ a (necessar
 
 Show that the family of maps $h_t\: \spc{U}\to \spc{U}$ defined by 
 \[h_t(x)= \gamma_x(t)\]
-is a homotopy; it is called \index{geodesic homotopy}\emph{geodesic homotopy}. 
+is a homotopy.
 Conclude that $\spc{U}$ is contractible.
 \end{thm}
 
-The geodesic homotopy introduced in the previous exercise should help to solve the next one.
+The homotopy in the exercise is a special case of the so-called \index{geodesic homotopy}\emph{geodesic homotopy}.
+Namely, given two maps $h_0,h_1\:\spc{X}\to \spc{U}$ we define homotopy
+\[h_t(x)= \gamma_x(t),\]
+where $\gamma_x$ is the geodesic path from $h_0(x)$ to $h_1(x)$.
+
+The construction in the previous exercise should help to solve the next one.
 
 \begin{thm}{Exercise}\label{ex:CAT-mnfld=>ext.geod}
 Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
@@ -396,8 +401,7 @@ and consequently $\trig {x}{y}{z}$ is thin.
 
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
 Suppose $\spc{U}$ is a geodesic space and $A\subset \spc{U}$ is a closed subset.
-Assume that the doubling of $\spc{U}$ in $A$ is $\CAT(0)$. 
-Show that $A$ is a convex set of $\spc{U}$.
+Show that the doubling $\spc{W}$ of $\spc{U}$ along $A$ is $\CAT(0)$ if and only if $A$ is a convex set of $\spc{U}$.
 \end{thm}
 
 \section{Comments}

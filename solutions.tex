@@ -24,7 +24,7 @@ Note that $\spc{X}$ is isometric to a 4-point subset in the Euclidean space
 if and only if $W(v)\ge 0$ for any vector $v$ in~$\RR^3$.
 
 \begin{wrapfigure}{r}{33mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-710}
 \end{wrapfigure}
@@ -43,73 +43,16 @@ Hence $\mathcal{M}_4\setminus\mathcal{E}_4$ is not connected.
 
 It remains to show that if the combinatorics of the pictures for two spaces is the same, then one can continuously deform one space into the other.
 This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
-\qeds
 
-The above solution is taken from \cite{petrunin-quest}.
+\parit{Comment.}
+This solution is taken from \cite{petrunin-quest}.
 
 
 \parbf{\ref{ex:convex-set}.}
 The simplest proof we know requires the construction of tangent cones for Alexandrov spaces with nonnegative curvature.
 (The length metric is defined in Section~\ref{sec:intrinsic}.)
 
-\parbf{\ref{ex:non-contracting-map}.}
-This exercise is a basic introductory lemma on  Gromov--Hausdorff distance (see for example \cite[7.3.30]{burago-burago-ivanov}).
-The following proof is not quite standard, it was suggested to the third author by Travis Morrison.
-
-\medskip
-
-Given any pair of points $x_0,y_0\in K$, 
-consider two sequences $(x_n)$ and $(y_n)$
-such that 
-$x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each~$n$.
-
-Since $K$ is compact, 
-we can choose an increasing sequence of integers $n_i$
-such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
-converge.
-In particular, both of these sequences  are Cauchy;
-that is,
-\[
-|x_{n_i}-x_{n_j}|_K, |y_{n_i}-y_{n_j}|_K\to 0
-\ \ 
-\text{as}
-\ \ \min\{i,j\}\to\infty.
-\]
-
-
-Since $f$ is distance non-decreasing, we get
-\[
-|x_0-x_{|n_i-n_j|}|
-\le 
-|x_{n_i}-x_{n_j}|.
-\]
-
-It follows that  
-there is a sequence $m_i\to\infty$ such that
-\[
-x_{m_i}\to x_0\ \ \text{and}\ \ y_{m_i}\to y_0\ \ \text{as}\ \ i\to\infty.
-\leqno({*})\]
-
-Set \[\ell_n=|x_n-y_n|_K.\]
-Since $f$ is distance non-decreasing, $(\ell_n)$ is a non-decreasing sequence.
-
-By $({*})$,  $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
-It follows that $(\ell_n)$ is a constant sequence.
-
-In particular 
-\[|x_0-y_0|_K=\ell_0=\ell_1=|f(x_0)-f(y_0)|_K\]
-for any pair $x_0$ and~$y_0$.
-That is, $f$ is distance-preserving, in particular, injective.
-
-From $({*})$, we also get that $f(K)$ is everywhere dense.
-Since $K$ is compact, $f\:K\to K$ is surjective.
-Hence the result.\qeds
-
 \parbf{\ref{ex:no-geod}.}
-The following example is due to Fedor Nazarov \cite{nazarov}.
-
-\medskip
-
 Consider the unit ball $(B,\rho_0)$
 in the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
 
@@ -139,12 +82,9 @@ Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points, and by the abov
 \[\length_{\rho_1}\bm{x}'<\length_{\rho_1}\bm{x}.\]
 That is, for any curve $\bm{x}(t)$ in $(B,\rho_1)$, we can find a shorter curve $\bm{x}'(t)$ with the same end points.
 In particular, $(B,\rho_1)$ has no geodesics.
-\qeds
 
-\parbf{\ref{exercise from BH}.}
-The following example is taken from~\cite{bridson-haefliger}.
-
-\medskip
+\parit{Comment.}
+This example is due to Fedor Nazarov \cite{nazarov}.
 
 \begin{wrapfigure}{r}{20 mm}
 \vskip-0mm
@@ -152,6 +92,7 @@ The following example is taken from~\cite{bridson-haefliger}.
 \includegraphics{mppics/pic-1}
 \end{wrapfigure}
 
+\parbf{\ref{exercise from BH}.}
 Consider the following subset of $\RR^2$ equipped with the induced length metric
 \[
 \spc{X}
@@ -168,12 +109,47 @@ $\bar{\spc{X}}$ is obtained from $\spc{X}$ by adding two points $p=(0,0)$ and $q
 The point $p$ admits no compact neighborhood in $\bar{\spc{X}}$ 
 and there is no geodesic connecting $p$ to $q$ in~$\bar{\spc{X}}$. \qeds 
 
+\parit{Comment.}
+This example is taken from~\cite{bridson-haefliger}.
 
 \parbf{\ref{ex:length-prod}.}
+Let $\spc{W}=\spc{U}\times \spc{V}$.
+Choose two pairs of points $u^0,u^1\in \spc{U}$
+and $v^0,v^1\in \spc{V}$.
+Set $a=\dist{u^0}{u^1}{\spc{U}}$, $b=\dist{v^0}{v^1}{\spc{V}}$ and $c=\dist{(u^0,v^0)}{(v^1,u^1)}{\spc{W}}$.
+
+Since $\spc{U}$ and $\spc{V}$ are length spaces,
+given $\eps>0$,
+we can choose curves $\alpha\:[0,1]\to \spc{U}$ from $u^0$ to $u^1$
+and $\beta\:[0,1]\to \spc{V}$  from $v^0$ to $v^1$
+such that 
+\[\length \alpha<a+\eps
+\quad\text{and}\quad
+\length \beta<b+\eps.\]
+Reparametrizing the paths proportional their lengths we can assume that 
+$\alpha$ is $(a+\eps)$-Lipschitz
+and
+$\beta$ is $(b+\eps)$-Lipschitz.
+Therefore the path $t\mapsto (\alpha(t),\beta(t))$ is $(c+2\cdot \eps)$-Lipschitz.
+In particular, its length cannot exceed $c+2\cdot \eps$ for any $\eps>0$.
+Hence $\spc{W}$ meets the conditions in the definition of length space.
 
 \parbf{\ref{ex:geod-prod}.}
+Let $\gamma\:t\mapsto (\alpha(t),\beta(t))$ be a geodesic path in $\spc{W}=\spc{U}\times \spc{V}$.
+Show and use that 
+\begin{align*}
+\dist{\alpha(t_0)}{\alpha(t_1)}{\spc{U}}&=a\cdot \dist{\gamma(t_0)}{\gamma(t_1)}{\spc{W}}
+\\
+\dist{\beta(t_0)}{\beta(t_1)}{\spc{U}}&=b\cdot \dist{\gamma(t_0)}{\gamma(t_1)}{\spc{W}}
+\end{align*}
+for any $t_0$ and $t_1$ and some fixed values $a\ge 0$ and $b\ge 0$ such that $a^2+b^2=1$.
+
 
 \parbf{\ref{ex:cone-geod}.}
+Let $\gamma$ be a unit-speed parametrization of $[pq]$.
+Show that $|gamma(t)|=\sqrt{t^2+a\cdot t+b}$ for some constants $a$ and $b$.
+
+???
 
 \parbf{\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
 Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
@@ -216,7 +192,57 @@ If $\ushort{A}_\infty=\bar{A}_\infty$, then it is called  the \emph{closed limit
 For the class of closed subsets of a proper metric spaces, closed limits coincide with limits in the sense of Hausdorff as we defined them.
 
 
+\parbf{\ref{ex:non-contracting-map}.}
+Given any pair of points $x_0,y_0\in \spc{K}$, 
+consider two sequences $(x_n)$ and $(y_n)$
+such that 
+$x_{n+1}=f(x_n)$ and $y_{n+1}=f(y_n)$ for each~$n$.
 
+Since $\spc{K}$ is compact, 
+we can choose an increasing sequence of integers $n_i$
+such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+converge.
+In particular, both of these sequences  are Cauchy;
+that is,
+\[
+|x_{n_i}-x_{n_j}|_{\spc{K}}, |y_{n_i}-y_{n_j}|_{\spc{K}}\to 0
+\ \ 
+\text{as}
+\ \ \min\{i,j\}\to\infty.
+\]
+
+
+Since $f$ is distance non-decreasing, we get
+\[
+|x_0-x_{|n_i-n_j|}|
+\le 
+|x_{n_i}-x_{n_j}|.
+\]
+
+It follows that  
+there is a sequence $m_i\to\infty$ such that
+\[
+x_{m_i}\to x_0\ \ \text{and}\ \ y_{m_i}\to y_0\ \ \text{as}\ \ i\to\infty.
+\leqno({*})\]
+
+Set \[\ell_n=|x_n-y_n|_{\spc{K}}.\]
+Since $f$ is distance non-decreasing, $(\ell_n)$ is a non-decreasing sequence.
+
+By $({*})$,  $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
+It follows that $(\ell_n)$ is a constant sequence.
+
+In particular 
+\[|x_0-y_0|_{\spc{K}}=\ell_0=\ell_1=|f(x_0)-f(y_0)|_{\spc{K}}\]
+for any pair $x_0$ and~$y_0$.
+That is, $f$ is distance-preserving, in particular, injective.
+
+From $({*})$, we also get that $f({\spc{K}})$ is everywhere dense.
+Since ${\spc{K}}$ is compact, $f\:{\spc{K}}\to {\spc{K}}$ is surjective.
+Hence the result.
+
+\parit{Comment.}
+This exercise is a basic introductory lemma on  Gromov--Hausdorff distance (see for example \cite[7.3.30]{burago-burago-ivanov}).
+The presented proof is not quite standard, it was suggested to the third author by Travis Morrison.
 
 \parbf{\ref{ex:compact-proper-GH}.}
 To prove part \ref{SHORT.ex:compact-proper-GH:a},
@@ -238,38 +264,59 @@ but one has to apply Exercise~\ref{ex:non-contracting-map} to closed balls cente
 \qeds
 
 \parbf{\ref{ex:noncreasing-CAT}.}
+Note that it is sufficient to show that 
+$\angk p{\bar x}{y}\le \angk p{x}{y}$ for any $\bar x\in \left]px\right[$.
+The latter follows from Alexandrov's lemma (\ref{lem:alex}) and the $\CAT(0)$ comparison for the quadruple $p,x,\bar x, y$.
 
 \parbf{\ref{ex:contractible}.}
+Observe that 
+$\dist{h_t(x)}{h_t(y)}{}\le t\cdot \dist{x}{y}{}$
+and therefore
+\[\dist{h_{t_0}(x)}{h_{t_1}(y)}{}\le t_0\cdot \dist{x}{y}{}+|t_0-t_1|\cdot \dist{p}{y}{}.\]
+Make a conclusion.
+
 
 \parbf{\ref{ex:CAT-mnfld=>ext.geod}.}
+Assume that a geodesic $[px]$ cannot be extended behind $x$.
+Apply the homotopy from \ref{ex:contractible} to prove that $\spc{U}$ has vanishing local homology groups (and/or homotopy groups)  of at $x$.
+Use that manifolds have some nontrivial local homologies (and/or homotopy) groups. 
 
 \parbf{\ref{ex:convex-distfun}.}
+It is sufficient to prove Jensen's inequality
+\[h(\tfrac{t_0+t_1}2)\le \tfrac12(h(t_0)+h(t_1))\]
+where $h(t)\df f\circ \gamma(t)-\tfrac12\cdot t^2$.
+Observe that the inequality holds in Euclidean plane, and 
+apply that triangle $[p\,\gamma(t_0)\,\gamma(t_1)]_{\spc{U}}$ is thin.
 
 \parbf{\ref{ex:reshetnyak-doubling}.}
+The ``if'' part follows from Reshetnyak gluing theorem (\ref{thm:gluing}).
+
+Assume $\spc{W}$ is $\CAT(0)$, but $A$ is not convex;
+that is $[xy]\not\subset A$ for some $x,y\in A$.
+Observe that there distinct geodesics from $x$ to $y$ in $\spc{W}$.
+Arrive at a contradiction with the uniqueness of geodesics (\ref{ex:CAT-geodesic}).
 
 \parbf{\ref{ex:geod-CBA}.}
-Without loss of generality we can assume that $\kappa=1$.
-Fix a sufficiently small $0<\eps<\pi$.
-
-\begin{wrapfigure}{o}{45 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-12}
-\end{wrapfigure}
-
-Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic shorter than $\pi$ in  $\spc{U}$ is a geodesic.
+Fix a sufficiently small $0<\eps$.
+Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic in  $\spc{U}$ is a geodesic.
 
 Consider a sequence of directions $\xi_n$ 
 at $p$
 of geodesics $[pq_n]$.
 We can assume that the distances $\dist{p}{q_n}{\spc{U}}$ are equal to $\eps$ for all $n$;
-here we use that the geodesics are extendable as local geodesics and minimizing up to length~$\pi$.
+here we use that the geodesics are extendable.
 
-Since $\spc{U}$ is proper,
-the sequence $q_n$ has a partial limit, say~$q$.
-It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$,
-assuming the latter is defined.\qeds
+Since $\spc{U}$ is proper, we can pass to a converging subsequence of $q_n$;
+suppose $q$ is its limit.
+It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$.
 
+\begin{wrapfigure}{r}{45 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-12}
+\end{wrapfigure}
+
+\parit{Comment.}
 Note that the unit disc in the plane with attached half-line to each point is a complete $\CAT(0)$ length space with extendable geodesics. 
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 This provides a counterexample to the statement of the exercise if  $\spc{U}$ is not assumed to be proper.
@@ -318,7 +365,6 @@ for each wall~$A^i$.
 Note that all the intersections of  the walls  have $\eps$-wide corners for
 \[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
 The proof can be guessed from the picture.
-\qedsf
 
 \parbf{\ref{ex:centrally-simmetric-walls}.}
 Note that any centrally symmetric convex closed set in Euclidean space is a product of a compact centrally symmetric convex set and a subspace.
@@ -330,6 +376,19 @@ that moves  $p$ to a point in the ball $\oBall(0,R)$.
 It remains to repeat the proof of Exercise~\ref{ex:compact-walls}.\qeds
 
 \parbf{\ref{cor:balls:dim=1}.}
+Imagine that each ball zero radius, then may think that balls pass thru each other.
+That is, every ball moves with constant speed along the line.
+Let $x_i(t)$ be the coordinate of $i^{\text{th}}$ ball at time $t$.
+Note that the graph $x_i$ in the $(t,x)$-plane is a straight line.
+Every two lines have at most one intersection and each collision corresponds to one such intersection.
+We have $n$ lines and therefore at most $\binom n2$ collisions.
+
+The general case, with balls of radius $r>0$ can be reduced to the case above.
+To do this, one have to exclude the space occupied by the balls.
+In other words, if the $i^{\text{th}}$ ball centered at $x$, then the we assume that its coordinate is 
+$x-2\cdot r\cdot i$.
+With these new coordinates, the balls behave exactly as the balls with vanishing radii.
+
 
 \parbf{\ref{ex:convex-dist}.}
 
@@ -546,6 +605,7 @@ This construction is given by Joel Hass in \cite{hass}.
 
 Note that by the globalization theorem (\ref{thm:hadamard-cartan}) the obtained metric on $\mathbb{S}^3$ is not locally $\CAT(0)$.
 
+\parit{Comment.}
 This problem originated from a discussion 
 in Oberwolfach
 between
@@ -907,11 +967,27 @@ Act as in \ref{ex:inner-support} to show that there exists a plane triangle $\tr
 but whose interior contains points from the complement $\EE^m\setminus K$.
 
 It remains to note that $\triangle$ is not thin in~$K$.
-\qeds
 
 \parbf{\ref{ex:finite-action-CAT}.}
+Suppose $G$ is finite.
+Choose its $\{p_1,\dots,p_n\}$.
+Consider the barycenter $z$ of the array $\bm{p}=(p_1,\dots,p_n)$ with equal masses;
+in other words, $z\df\spx{\bm{p}}(\tfrac1n,\dots,\tfrac1n)$.
+Observe that $z$ is a fixed point of the acton.
+
+Now suppose $G$ is compact.
+Let $\mu$ be the probability Haar measure on $G$.
+Choose a point $p\in \spc{U}$ and consider the function
+\[f=\tfrac12\cdot\int_{g\in G} \distfun_{g\cdot p}^2\mu.\]
+Show that $f$ is 1-convex.
+By \ref{lem:argmin(convex)}, $f$ has unique minimum point, say $z$.
+Observe that $z$ is a fixed point of the action.
+
 
 \parbf{\ref{ex:barysimple}.}
+The first part follows directly from the definitions.
+For the second part check a cone over circle with length bigger than $2\cdot\pi$,
+or a product of a tripod with real line.
 
 \parbf{\ref{lem:nondeg-test-with-balls}.}
 
