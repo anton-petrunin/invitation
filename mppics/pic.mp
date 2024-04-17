@@ -129,7 +129,7 @@ p2=z.x{1,-2}..z.t..{1,2}z.y;
 
 hatchfill p0--reverse(p1)--cycle withcolor (77, 1mm, -.5bp);
 draw p0;
-draw p1;
+draw p1 dashed evenly;
 draw z.t--z.x--z.y;
 draw p2;
 
@@ -647,6 +647,32 @@ label(btex $=\mangle\hinge x p q$ etex rotated (angle(z.C-z.A)/2), z.A +32*unitv
 label(btex $\side\hinge x p q$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
 label(btex $\dist{x}{q}{}$ etex rotated angle(z.C-z.A), .5[z.A,z.C]+8*unitvector(z.C-z.A) zscaled (0,1));
 label.bot(btex $\dist{x}{p}{}$ etex, .5[z.A,z.B]);
+endfig;
+
+beginfig(416) 
+save u,p;
+path p[];
+u:=.3cm;
+
+z.l=(-.2,1.4)*u;
+z.r=(.2,1.2)*u;
+z.b=(0,-1.4)*u;
+z.x=(1,0)*u;
+
+p1=-z.x--z.b-z.x--z.b+z.x--z.x--z.x+2*z.l--2*z.l-2*z.x--(-2*z.x)--2z.b-2*z.x--2z.b+2*z.x--2*z.x--2*z.r+2*z.x--2*z.r-z.x--cycle;
+p2=-3*z.x-- 3*z.l-3*z.x--3*z.l+3*z.x--3*z.x;
+p3=-3*z.x-- 3*z.r-3*z.x--3*z.r+3*z.x--3*z.x;
+p4=-3*z.x-- 3*z.b-3*z.x--3*z.b+3*z.x--3*z.x;
+
+
+draw subpath (0,9) of p1 penbold;
+draw subpath (9,12) of p1 penbold dashed evenly;
+draw -3*z.x--3*z.x;
+draw p2;
+draw (p3 cutbefore (subpath (2,3) of p2));
+draw (p3 cutafter (subpath (2,3) of p2)) dashed evenly;
+draw p4;
+
 endfig;
 
 beginfig(500) 

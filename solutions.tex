@@ -110,7 +110,7 @@ The point $p$ admits no compact neighborhood in $\bar{\spc{X}}$
 and there is no geodesic connecting $p$ to $q$ in~$\bar{\spc{X}}$. 
 
 \parit{Comment.}
-This example is taken from~\cite{bridson-haefliger}.
+This example is taken from the book by Martin Bridson and André Haefliger \cite[I.3.6(4)]{bridson-haefliger}.
 
 \parbf{\ref{ex:length-prod}.}
 Let $\spc{W}=\spc{U}\times \spc{V}$.
@@ -426,18 +426,18 @@ that is,
 \[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\eqlbl{eq:short-p-p}\]
 for any $p,q\in \spc{U}$.
 
-\begin{wrapfigure}{r}{37 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-41}
-\vskip-0mm
-\end{wrapfigure}
-
 Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
 Construct the model triangles 
 $\trig{\tilde p}{\tilde p^*}{\tilde q^*}$ and $\trig{\tilde p}{\tilde q}{\tilde q^*}$
 of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
 the points $\tilde p^*$ and $\tilde q$ lie on the opposite sides from $[{\tilde p}{\tilde q^*}]$.
+
+\begin{wrapfigure}{r}{37 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-41}
+\vskip-0mm
+\end{wrapfigure}
 
 From thinness of triangles $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$, we get that
 \[\mangle\hinge{\tilde p^*}{\tilde p}{\tilde q^*},\mangle\hinge{\tilde q^*}{\tilde p^*}{\tilde q}\ge \tfrac\pi2.\]
@@ -458,15 +458,15 @@ This solution leads to the arm lemma in $\CAT(\kappa)$ spaces; see our book \cit
 
 \parbf{\ref{ex:locally-convex}.}
 Fix a closed, connected, locally convex set~$K$.
-Note that by Corollary \ref{cor:dist-convex}, $\distfun_{K}$ is convex in a neighborhood $\Omega\supset K$; that is, $\distfun_{K}$ is convex along any geodesic completely contained in~$\Omega$.
+Apply \ref{ex:convex-nbhd} to show that $\distfun_{K}$ is convex in a neighborhood $\Omega\supset K$; that is, $\distfun_{K}$ is convex along any geodesic completely contained in~$\Omega$.
 
 Since $K$ is locally convex,
 it is locally path connected.
-Since $K$ is connected, the latter implies that $K$ is path connected.
+Since $K$ is connected, it is also path connected.
 
 Fix two points $x,y\in K$. 
 Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\z\to K$.
-By Theorem~\ref{thm:cat-unique}, the geodesic $[x\,\alpha(s)]$ 
+Use \ref{prop:thin=cat} to show that the geodesic $[x\,\alpha(s)]$ 
 is uniquely defined and depends continuously on~$s$.
 
 \begin{wrapfigure}{r}{50 mm}
@@ -481,12 +481,13 @@ lies in $\Omega$,
 but does not completely lie in~$K$.
 Therefore $f=\distfun_{K}$ is convex 
 along $[x\alpha(s)]$.
+
 Note that $f(x)\z=f(\alpha(s))=0$ and $f\ge 0$, 
 therefore $f(z)= 0$ for any $z\z\in [x\,\alpha(s)]$;
-that is, $[x\,\alpha(s)]\subset K$, a contradiction.
+that is, $[x\,\alpha(s)]\z\subset K$, a contradiction.
 
 \parit{Comment.}
-The statement generalizes a theorem of Heinrich Tietze, and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
+This statement generalizes the theorem of Heinrich Tietze, and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
 
 
 \parbf{\ref{ex:devel-comp-CAT}.} Apply \ref{ex:convex-distfun}.
@@ -497,14 +498,37 @@ Show that $D$ is an $n$-gon and, for each $i$, the majorization sends to $p_i$ i
 Show that the external angle of $D$ at $\tilde p_i$ cannot exceed the exteral angle at $p_i$;
 make a conclusion.
 
+\begin{wrapfigure}{r}{25 mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-416}
+\end{wrapfigure}
+
 \parbf{\ref{ex:FM}.}
-Read \cite{alexander-bishop-1998}.
-The required polygon can be found in the product space of the real line and a \index{tripod}\emph{tripod}; that is three line segments glued together at one end.
+It is a theorem of the first author and Richard Bishop \cite{alexander-bishop-1998}.
+The required polygon is shown on the diagram;
+it lies in the product space of the real line and a \index{tripod}\emph{tripod}; that is three line segments glued together at one end.
+
+\parit{Comment.}
+This is a $\CAT(0)$ version of the famous Fáry--Milnor theorem.
+In the original theorem, the inequality is strict.
 
 \parbf{\ref{ex:arm-lemma}.}
 Apply the majorization theorem and the standard arm lemma.
 
 \parbf{\ref{ex:isometric-majorization}.}
+Use the majorization theorem, to reduce the question to the following.
+\textit{If a plane curve bounds a convex figure $F$,
+then its majorization map is distance-preserving.}
+
+To prove the latter statement assume that the majorization map is defined on a convex figure $F'$.
+Identify the boundaries $\partial F$ and $\partial F'$ by the majorization map.
+Show that the curvature measure of $\partial F'$ cannot exceed the curvature measure of $\partial F$.
+On the other hand the total curvatures of $\partial F'$ and $\partial F$ are equll $2\cdot\pi$.
+Therefore, $\partial F'$ and $\partial F$ have the same curvature measures,
+and hence the majorization map is distance-preserving.
+
+
 
 \parbf{\ref{ex:bishop}.}
 
@@ -524,27 +548,20 @@ the construction in Corollary~\ref{cor:path-geod} produces the same result for $
 Hence the result.
 
 \parbf{\ref{ex:geod-circle}.}
-The following proof works for compact locally simply connected metric spaces;
-by uniqueness of geodesics (\ref{thm:cat-unique}) 
-this class of spaces includes compact length, locally $\CAT(\kappa)$ spaces. 
-
-\medskip
-
-\begin{wrapfigure}{r}{25 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-11}
-\end{wrapfigure}
-
 By the globalization theorem there is  a nontrivial homotopy class of closed curves.
 
 Consider a shortest noncontractible closed curve $\gamma$ in  $\spc{X}$;
 note that such a curve exists.
 
 Indeed, let $L$ be the infimum of lengths of all noncontractible closed curves in $\spc{X}$.
-Compactness and local contractibility of $\spc{X}$ imply that any two sufficiently close closed curves in $\spc{X}$ are homotopic.
-Then choosing a sequence of unit speed noncontractible curves whose lengths converge to $L$, an Arzel\'{a}--Ascoli type of argument shows that these curves subconverge to a noncontractible curve of length $L$.
+Geodesic homotopy construction implies that for two sufficiently close closed curves in $\spc{X}$ are homotopic.
+Then choosing a sequence of unit speed noncontractible curves whose lengths converge to $L$, an Arzel\'{a}--Ascoli type of argument shows that these curves subconverge to a noncontractible curve $\gamma$ of length~$L$.
 
+\begin{wrapfigure}{r}{25 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-11}
+\end{wrapfigure}
 
 Assume that $\gamma$ is not a geodesic circle,
 that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
@@ -556,7 +573,7 @@ Then
  \item  $\gamma_1$ or $\gamma_2$ is noncontractible,
  \item $\length\gamma_1, \length\gamma_2<\length \gamma$,
 \end{itemize}
-a contradiction.
+--- a contradiction.
 
 In the $\CAT(1)$ case we also have a geodesic circle.
 The proof is done nearly the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.
