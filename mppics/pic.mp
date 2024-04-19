@@ -796,6 +796,75 @@ label.llft(btex $\tilde p$ etex, z.p);
 label.urt(btex $\tilde q$ etex, z.q);
 endfig;
 
+beginfig(722)
+save u,p;
+path p[];
+u:=1cm;
+
+z.z=origin;
+z.r=(1,1)*u;
+
+p0=circle(z.z,z.r);
+
+z.p=(.3,-.2)*u;
+z.q=-z.p;
+
+draw z.p--z.q;
+
+z.s=(.5,-.5)*u;
+
+p1= z.p{up}..z.r..z.q{-1,-1}..z.s..cycle;
+
+draw p1;
+
+p2=(subpath (0,2) of p1) rotated 180;
+
+draw p2 dashed evenly;
+
+clip currentpicture to p0;
+draw p0;
+
+dOt z.p,z.q,z.r,-z.r,z.z;
+
+label.rt(btex $p$ etex, z.p);
+label.ulft(btex $q$ etex, z.q);
+label.urt(btex $z$ etex, z.z);
+label.urt(btex $r$ etex, z.r);
+label.llft(btex $r^{*}$ etex, -z.r);
+
+label.ulft(btex $\check\alpha$ etex, point 1.6 of p1+(1,0));
+%label.ulft(btex $\gamma_1^{*}$ etex, point .6 of p2+(1,0));
+endfig;
+
+beginfig(728)
+save u,p;
+path p[];
+u:=.6cm;
+
+z.a=(-3,0)*u;
+z.b=(-1,0)*u;
+z.c=(1,0)*u;
+z.d=(3,0)*u;
+
+p1=z.a{up}..tension 1.5..z.c{down}..tension 1.5..cycle;
+p2=z.b{up}..tension 1.2..z.d{down}..tension 1.2..cycle;
+
+draw subpath (0,1) of p1 cutafter  p2;
+draw subpath (0,1) of p1 cutbefore  p2 dashed evenly;
+draw subpath (1,2) of p1;
+draw p2 cutafter subpath (1,2) of p1;
+draw p2 cutbefore subpath (1,2) of p1 dashed evenly;
+draw z.b--z.c;
+
+dOt z.b,z.c;
+
+label.lft(btex $\xi$ etex, z.b);
+label.rt(btex $\zeta$ etex, z.c);
+label(btex $H_1$ etex, .4[z.a,z.b]);
+label(btex $H_2$ etex, .6[z.c,z.d]);
+
+endfig;
+
 beginfig(730) 
 save u;
 u:=1.4cm;
@@ -1998,6 +2067,38 @@ label(btex $\spc{L}_0$ etex, 1.3*z.x+(0,1)*u);
 label(btex $\spc{L}_1$ etex, 1.3*z.x+(0,-1)*u);
 label.ulft(btex $\gamma$ etex, .8[z.a,z.b]);
 label.rt(btex $p$ etex, z.p);
+endfig;
+
+beginfig(1650) 
+save u,k;
+u:=.9cm;
+k=.5;
+
+
+z.p0=(0,0)*u;
+z.p1=(2,1)*u;
+z.q0=(1,-2)*u;
+z.q1=(3,-2.2)*u;
+
+z.a=k[z.p0,z.p1];
+z.b=k[z.q0,z.p1];
+z.c=k[z.q0,z.q1];
+
+draw z.p0--z.p1--z.q0--z.q1;
+draw z.a--z.b--z.c penhair dashed evenly;
+draw z.a--z.c penhair;
+draw z.p0--z.q0 penhair;
+draw z.p1--z.q1 penhair;
+
+dOt z.p0,z.p1,z.q0,z.q1,z.a,z.b,z.c;
+
+label.lft(btex $\gamma_1(0)$ etex, z.p0);
+label.rt(btex {\small $\gamma_1(1)=\beta(1)$} etex, z.p1);
+label.lrt(btex $\gamma_2(1)$ etex, z.q1);
+label.llft(btex {\small $\gamma_2(0)=\beta(0)$} etex, z.q0);
+label.top(btex $\gamma_1(t)$ etex, z.a);
+label.rt(btex $\beta(t)$ etex, z.b);
+label.bot(btex $\gamma_2(t)$ etex, z.c);
 endfig;
 
 beginfig(3005) 

@@ -214,6 +214,46 @@ Show that $\spc{U}$ is $\CAT(0)$ if and only if the function $f=\tfrac12\cdot\di
 that is, the function $t\mapsto f\circ \gamma(t) - \tfrac 12\cdot t^2$ is convex for any unit-speed geodesic $\gamma$
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:convex-dist}
+Suppose $\gamma_1,\gamma_2\:[0,1]\to \spc{U}$ are two geodesic paths in a complete geodesic $\CAT(0)$ space $\spc{U}$.
+Show that
+\[t\mapsto\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\]
+is a convex function.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:convex-nbhd}
+Let $A$ be a convex closed set in a proper geodesic $\CAT(0)$ space $\spc{U}$;
+that is, if $x,y\in A$, then $[xy]\subset A$.
+Show that $\distfun_A$ is convex.
+
+In particular, for any $r>0$ the closed $r$-neighborhood of $A$ is convex;
+that is, the set
+\[A_r=\set{x\in \spc{U}}{\distfun_Ax\le r}\]
+is convex.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:closest-point}
+Let  $\spc{U}$ be a proper geodesic $\CAT(0)$ space 
+and $K\subset \spc{U}$ be a closed convex set.
+Show that: 
+
+\begin{subthm}{ex:closest-point:a}
+For each point $p\in \spc{U}$ there is a unique point $p^*\in K$ that minimizes the distance $\dist{p}{p^*}{}$.
+\end{subthm}
+
+\begin{subthm}{ex:closest-point:b}
+The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short. 
+\end{subthm}
+
+\end{thm}
+
+Recall that a set $A$ in a metric space $\spc{U}$ is called \index{locally convex set}\emph{locally convex} if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in~$A$. 
+
+\begin{thm}{Exercise}\label{ex:locally-convex}
+Let $\spc{U}$ be a proper geodesic $\CAT(0)$ space.
+Show that any closed, connected, locally convex set in $\spc{U}$ is convex.
+\end{thm}
+
 
 \section{Inheritance lemma} \label{sec:thin-triangle}
 
@@ -565,7 +605,7 @@ if $D$ contains $X$ and the edge of $D$ contains~$p$.
 }
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
-Let $A$ and $B$ be two convex sets in~$\EE^m$.
+Let $A$ and $B$ be two-convex sets in~$\EE^m$.
 Assume that any dihedral angle supporting $A\cap B$ has angle measure at least~$\alpha$.
 Then the Reshetnyak puff pastry for the array
 \[(\underbrace{A,B,A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]

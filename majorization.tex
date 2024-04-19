@@ -49,49 +49,12 @@ Now we come to the main theorem of this section.
 
 \begin{thm}{Majorization theorem}\label{thm:majorization}
 \label{thm:major}
-Any closed rectifiable curve $\alpha$ in a geodesic $\CAT(0)$ space is majorized by a convex plane figure. \end{thm}
-
-It is instructive to solve the following exercises before diving into the proof of the theorem.
-
-\begin{thm}{Exercise}\label{ex:convex-dist}
-Suppose $\gamma_1,\gamma_2\:[0,1]\to \spc{U}$ are two geodesic paths in a complete geodesic $\CAT(0)$ space $\spc{U}$.
-Show that
-\[t\mapsto\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\]
-is a convex function.
+Any closed rectifiable curve $\alpha$ in a geodesic $\CAT(0)$ space is majorized by a convex plane figure.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:convex-nbhd}
-Let $A$ be a convex closed set in a proper geodesic $\CAT(0)$ space $\spc{U}$;
-that is, if $x,y\in A$, then $[xy]\subset A$.
-Show that $\distfun_A$ is convex.
-
-In particular, for any $r>0$ the closed $r$-neighborhood of $A$ is convex;
-that is, the set
-\[A_r=\set{x\in \spc{U}}{\distfun_Ax\le r}\]
-is convex.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:closest-point}
-Let  $\spc{U}$ be a proper geodesic $\CAT(0)$ space 
-and $K\subset \spc{U}$ be a closed convex set.
-Show that: 
-
-\begin{subthm}{ex:closest-point:a}
-For each point $p\in \spc{U}$ there is a unique point $p^*\in K$ that minimizes the distance $\dist{p}{p^*}{}$.
-\end{subthm}
-
-\begin{subthm}{ex:closest-point:b}
-The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short. 
-\end{subthm}
-
-\end{thm}
-
-Recall that a set $A$ in a metric space $\spc{U}$ is called \index{locally convex set}\emph{locally convex} if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in~$A$. 
-
-\begin{thm}{Exercise}\label{ex:locally-convex}
-Let $\spc{U}$ be a proper geodesic $\CAT(0)$ space.
-Show that any closed, connected, locally convex set in $\spc{U}$ is convex.
-\end{thm}
+This theorem is a useful tool for $\CAT(0)$ spaces.
+It can be used to get shorter proofs for several statements above;
+see for example \ref{ex:convex-dist}.
 
 \section{Triangles}
 
@@ -151,6 +114,9 @@ The set of all points $\tilde x\in\EE^2$ such that a geodesic $[\tilde p\tilde x
 
 The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to a point}\emph{convex} (\emph{concave}) with respect to $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
 \end{thm}
+
+This notion appears in \cite{alexandrov:devel}
+and an earlier form of it can be found in \cite{liberman}.
 
 Our first lemma gives a model space construction based on repeated application of the argument in the proof of the inheritance lemma (\ref{lem:inherit-angle}).
 
@@ -386,43 +352,28 @@ $\dist{\tilde x^0}{\tilde x^{n+1}}{\EE^2}
 \section{General case}
 
 If the space is proper, then the general case follows applying polygonal case to inscribed polygonal lines and passing to the limit.
-The statement holds for any geodesic $\CAT(0)$ space but one need to be more careful \cite[9.56]{alexander-kapovitch-petrunin-2025}.
-
-The following exercise is the rigidity case 
-of the majorization theorem.
-
-{\sloppy 
-
-\begin{thm}{Advanced exercise}\label{ex:isometric-majorization}
-Let $\spc{U}$ be a geodesic $\CAT(0)$ space
-and $\alpha\:[0,\ell]\to\spc{U}$ be a closed curve with arclength parametrization.
-Assume there is a unit-speed closed convex curve $\tilde \beta\:[0,\ell]\to\EE^2$ such that 
-\[\dist{\alpha(t_0)}{\alpha(t_1)}{\spc{U}}=\dist{\tilde \beta(t_0)}{\tilde \beta(t_1)}{\EE^2}\]
-for any $t_0$ and $t_1$.
-Show that there is a distance-preserving map $F\:\Conv\tilde \beta\to \spc{U}$
-such that $F\:\tilde \beta(t)\mapsto \alpha(t)$ for any $t$.
-\end{thm}
-
-}
-
-\begin{thm}{Exercise}\label{ex:bishop}
-Two majorizations $F\:D\to \spc{U}$ and $F'\:D'\to \spc{U}$ will be called \index{majorizing map!equivalent majorizations}\emph{equivalent} if $F'=F\circ\iota$ for an isometry $\iota\:D\to D'$.
-
-Show that a closed rectifiable curve in a $\CAT(0)$ space has an isometric majorization map if and only if the majorization map is unique up to equivalence.
-\end{thm}
-
 
 \section{Comments}
+
+The last step in our proof essentially use that the space is proper.
+But the theorem holds for any geodesic $\CAT(0)$ space \cite[9.56]{alexander-kapovitch-petrunin-2025}.
 
 The majorization theorem can be generalized to $\CAT(\pm1)$ spaces;
 in the $\CAT(1)$ case one has to assume that the closed curve has length at most $2\cdot\pi$.
 
 This theorem was proved by Yuriy Reshetnyak \cite{reshetnyak:major};
 our proof uses a trick that we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
-Another proof can be built on generalized Kirszbraun's theorem \cite{lang-schroeder,alexander-kapovitch-petrunin-2011,alexander-kapovitch-petrunin-2025}, but it works only for complete spaces.
+Another proof can be built on on the following closely related theorem; see \cite{lang-schroeder,alexander-kapovitch-petrunin-2011,alexander-kapovitch-petrunin-2025},
+but this proof works only for complete spaces.
 
-The definition of develpoment appears in \cite{alexandrov:devel}
-and an earlier form of it can be found in \cite{liberman}.
+\begin{thm}{Generalized Kirszbraun's theorem}
+\label{thm:kirsz+}
+Let $\spc{U}$ be a complete length $\CAT(0)$ space, 
+let $Q$ be arbitrary subset of a Euclidean space~$\EE^m$.
+Suppose $f\: Q\to\spc{U}$ is a short map.
+Then $f\:Q\to\spc{U}$ can be extended to a short map 
+$F\:\EE^m\to \spc{U}$.
+\end{thm}
 
 \begin{thm}{Open problem}
 Consider be a closed rectifiable curve $\alpha$ in a $\CAT(0)$ space $\spc{U}$.
@@ -434,8 +385,12 @@ What about the converse?
 Notice that the majorization theorem implies isoperimetrical inequality for $\CAT(0)$ metrics on the plane.
 Moreover, it implies the generalized isoperimetrical inequality in the style of Frederick Almgren \cite{almgren}: \textit{any curve of length $2\cdot \pi\cdot r$ in a $\CAT(0)$ length space spans a disc of area at most $\pi\cdot r^2$}.
 
-It is known that isoperimetrical inequality holds for $\CAT(0)$ Riemannian manifolds of dimension 3 and 4.
+{\sloppy
+
+The isoperimetrical inequality is known for 3- and 4-dimesnional \emph{Hadamard manifolds} (that is, $\CAT(0)$ Riemannian manifolds).
 First the 4-dimensional case was proved by Christopher Croke \cite{croke},
-and after that Bruce Kleiner proved the 3-dimensional case \cite{kleiner-1992}.
-Each of these two papers is a masterpiece.
-Despite many attempts, the isoperimetrical inequality for $\CAT(0)$ spaces remains open in all other dimensions and codimensions. 
+and latter Bruce Kleiner proved the 3-dimensional case \cite{kleiner-1992}.
+Both papers are masterpieces.
+Despite many attempts, the isoperimetrical inequality for $\CAT(0)$ spaces remains open in all other dimensions and codimensions.
+
+}

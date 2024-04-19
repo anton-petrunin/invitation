@@ -2,19 +2,19 @@
 
 \section{Definition}
 
-Let us denote by $\Delta^k\subset \RR^{k+1}$\index{$\Delta^m$} 
+Let us denote by $\triangle^k\subset \RR^{k+1}$\index{$\triangle^m$} 
 the \index{standard simplex}\emph{standard $k$-simplex}; 
-that is, $\bm{m}=(m_0,\dots,m_k)\in\Delta^k$ if $m_0+\dots+m_k=1$ and $m_i\ge0$ for all $i$.
+that is, $\bm{m}=(m_0,\dots,m_k)\in\triangle^k$ if $m_0+\dots+m_k=1$ and $m_i\ge0$ for all $i$.
 
 Consider a point array $\bm{p}=(p_0,\dots,p_k)$ in a Euclidean space $\EE^n$.
 Recall that
 \[z=m_0\cdot p_0+\dots+m_k\cdot p_k\]
-is called barycenter of point array $\bm{p}=p_0,\dots,p_k$ with masses $\bm{m}\z=(m_0,\dots, m_k)\in \Delta^k$.
+is called barycenter of point array $\bm{p}=p_0,\dots,p_k$ with masses $\bm{m}\z=(m_0,\dots, m_k)\in \triangle^k$.
 Equivalently, 
 \[z\df \argmin (m_0\cdot f_0+\dots+m_k\cdot f_k),\eqlbl{eq:f-spx}\]
 where $f_i=\tfrac12\cdot\distfun_{p_i}^2$ for each $i$, and $\argmin f$\index{$\argmin$} denotes a point of minimum of function $f$.
 
-The map $\spx{}\:\Delta^k\mapsto \EE^n$ defined by $\spx{}\:\bm{m}\mapsto z$ is called barycentric simplex of the array $\bm{p}$.
+The map $\spx{}\:\triangle^k\mapsto \EE^n$ defined by $\spx{}\:\bm{m}\mapsto z$ is called barycentric simplex of the array $\bm{p}$.
 If needed we may denote this map by $\spx{\bm{p}}$ or, more generally, $\spx{\bm{f}}$.
 The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f_0,f_1,\dots,f_k)$.
 Formally speaking, the definition \ref{eq:f-spx} makes sense for any array of functions in a metric space;
@@ -34,7 +34,7 @@ Let $\spc{X}$ be a complete geodesic space
 and $\bm{f}\z=(f_0,\z\dots,f_k)\:\spc{X}\to\RR^{k+1}$
 be an array of nonnegative 1-convex locally Lipschitz functions.
 Then the barycentric simplex 
-$\spx{\bm{f}}\:\Delta^k\to \spc{X}$ is a uniquely defined Lipshitz map.
+$\spx{\bm{f}}\:\triangle^k\to \spc{X}$ is a uniquely defined Lipshitz map.
 
 In particular, we have that 
 the barycentric simplex $\spx{\bm{p}}$ any point array $\bm{p}\z=(p_0,\z\dots,p_k)$ in a complete geodesic $\CAT(0)$ space is a uniquely defined Lipshitz map.
@@ -73,15 +73,15 @@ Thus the sequence $p_n$ converges to a minimum point of $f$.
 \qeds
 
 \parit{Proof of \ref{thm:barycenter}.}
-Since each $f_i$ is $1$-convex, for any $\bm{x}=(x_0,x_1,\dots,x_k)\z\in\Delta^k$ 
+Since each $f_i$ is $1$-convex, for any $\bm{x}=(x_0,x_1,\dots,x_k)\z\in\triangle^k$ 
 the convex combination 
 \[\left(\sum_i x_i\cdot f_i\right)\:\spc{X}\to\RR\] 
 is also $1$-convex.
 Therefore, according to \ref{lem:argmin(convex)}, the barycentric simplex 
-%$\spx{\bm{f}}(\bm{x})$ is defined for any $\bm{x}\in\Delta^k$.
-$\spx{\bm{f}}$ is uniquely defined on $\Delta^k$.
+%$\spx{\bm{f}}(\bm{x})$ is defined for any $\bm{x}\in\triangle^k$.
+$\spx{\bm{f}}$ is uniquely defined on $\triangle^k$.
  
-For $\bm{x},\bm{y}\in\Delta^k$,
+For $\bm{x},\bm{y}\in\triangle^k$,
 let 
 \begin{align*}
 f_{\bm{x}}
@@ -115,7 +115,7 @@ Then
 \le 
 \phi^+(0)+\Lip\cdot\|\bm{x}-\bm{y}\|_1,\] 
 where $\|\bm{x}-\bm{y}\|_1=\sum_{i=0}^k|x_i-y_i|$.
-It follows that given $\bm{x}\in\Delta^k$, there is a constant $\Lip$ such that
+It follows that given $\bm{x}\in\triangle^k$, there is a constant $\Lip$ such that
 \begin{align*}
 \dist{\spx{\bm{f}}(\bm{x})}{\spx{\bm{f}}(\bm{y})}{}
 &=
@@ -125,13 +125,13 @@ s
 &\le 
 \Lip\cdot\|\bm{x}-\bm{y}\|_1
 \end{align*}
-for any $\bm{y}\in\Delta^k$.
+for any $\bm{y}\in\triangle^k$.
 In particular, there is $\eps>0$ such that if $\|\bm{x}-\bm{y}\|_1<\eps,$ $\|\bm{x}-\bm{z}\|_1 <\eps$, then $\spx{\bm{f}}(\bm{y})$, $\spx{\bm{f}}(\bm{z})\in\Omega$. 
 Thus the same argument as above implies 
 \[\dist{\spx{\bm{f}}(\bm{y})}{\spx{\bm{f}}(\bm{z})}{}
 \le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
 for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$; that is, $\spx{\bm{f}}$ is locally Lipschitz.
-Since $\Delta^k$ is compact, $\spx{\bm{f}}$ is Lipschitz.
+Since $\triangle^k$ is compact, $\spx{\bm{f}}$ is Lipschitz.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:finite-action-CAT}
@@ -178,13 +178,13 @@ The set $W$ is convex.
 \end{subthm}
 
 \begin{subthm}{thm:up-convex:bry}
-$\bm{f}[\spx{\bm{f}}(\Delta^k)]\subset\partial W$.
-Moreover, $\bm{f}[\spx{\bm{f}}(\Delta^k)\setminus \spx{\bm{f}}(\partial\Delta^k)]$ is an open set in $\partial W$.
+$\bm{f}[\spx{\bm{f}}(\triangle^k)]\subset\partial W$.
+Moreover, $\bm{f}[\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial\triangle^k)]$ is an open set in $\partial W$.
 \end{subthm}
 
 \begin{subthm}{thm:up-convex:bry+}
-$W=\Up(\bm{f}[\spx{\bm{f}}(\Delta^k)])$; 
-in other words, $\Up(\bm{f}[\spx{\bm{f}}(\Delta^k)])\supset\bm{f}(\spc{X})$.
+$W=\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])$; 
+in other words, $\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])\supset\bm{f}(\spc{X})$.
 \end{subthm}
 
 
@@ -192,7 +192,7 @@ in other words, $\Up(\bm{f}[\spx{\bm{f}}(\Delta^k)])\supset\bm{f}(\spc{X})$.
 
 \end{thm}
 
-Note that since $\Delta^k$ is compact, we also get that $W$ is closed.
+Note that since $\triangle^k$ is compact, we also get that $W$ is closed.
 
 \begin{wrapfigure}{r}{48mm}
 \vskip0mm
@@ -214,24 +214,24 @@ where $\gamma$ denotes a geodesic path from $p$ to $q$.
 Therefore, $W$ is convex.
 
 \parit{\ref{SHORT.thm:up-convex:bry}+\ref{SHORT.thm:up-convex:bry+}.}
-Choose $p\in \spx{\bm{f}}(\Delta^k)$.
+Choose $p\in \spx{\bm{f}}(\triangle^k)$.
 Note that if $\bm{f}(p)\succcurlyeq\bm{w}$ for some $\bm{w}\in W$, then $\bm{f}(p)=\bm{w}$.
 It follows that $\bm{f}(p)\in\partial  W$;
-therefore $\bm{f}[\spx{\bm{f}}(\Delta^k)]$ lies in a convex hypersurface $\partial  W$.
+therefore $\bm{f}[\spx{\bm{f}}(\triangle^k)]$ lies in a convex hypersurface $\partial  W$.
 
 Choose $\bm{w}\in W$.
 Observe that $\bm{w}\succcurlyeq\bm{v}$ for some $\bm{v}\in \bar V\cap \partial W$.
 Note that $W$ is supported at $\bm{v}$ by a hyperplane 
 \[\Pi=\set{(x_1,\dots,x_k)\in \RR^k}{m_0\cdot x_0+\dots+m_k\cdot x_k=\const}\]
-for some $\bm{m}=(m_0,\dots,m_k)\in\Delta^{\kay}$.
+for some $\bm{m}=(m_0,\dots,m_k)\in\triangle^{\kay}$.
 Let $p=\spx{\bm f}(\bm m)$.
 By \ref{lem:argmin(convex)}, $\bm{f}(p)\z=\bm{v}$;
 in particular $\bm{v}\in V$.
 
-Note that $p\in \spx{\bm{f}}(\Delta^k)\setminus\spx{\bm{f}}(\partial\Delta^k)$ if and only if 
-$\bm{f}(p)$ is supported by a plane as above for some $\bm{m}\in\Delta^{\kay}$,
-but it is not supported by a plane for some $\bm{m}\in\partial\Delta^{\kay}$.
-This condition is open, therefore $\spx{\bm{f}}(\Delta^k)\z\setminus\spx{\bm{f}}(\partial\Delta^k)$ is an open set.
+Note that $p\in \spx{\bm{f}}(\triangle^k)\setminus\spx{\bm{f}}(\partial\triangle^k)$ if and only if 
+$\bm{f}(p)$ is supported by a plane as above for some $\bm{m}\in\triangle^{\kay}$,
+but it is not supported by a plane for some $\bm{m}\in\partial\triangle^{\kay}$.
+This condition is open, therefore $\spx{\bm{f}}(\triangle^k)\z\setminus\spx{\bm{f}}(\partial\triangle^k)$ is an open set.
 \qeds
 
 \section{Nondegenerate simplex}
@@ -243,12 +243,12 @@ that is,
 \df
 (f_0,\dots,f_{i-1},f_{i+1},\dots,f_k).\]
 It should be clear from the definition that $\spx{\bm{f}^{\without i}}$ 
-coincides with the restriction of $\spx{\bm{f}}$ to the corresponding facet of $\Delta^k$.
+coincides with the restriction of $\spx{\bm{f}}$ to the corresponding facet of $\triangle^k$.
 
 If $\Im \spx{\bm{f}}$ is not covered by $\Im \spx{\bm{f}^{\without i}}$ for all $i$,
 then we say that $\spx{\bm{f}}$ is nondegenerate.
 In other words, $\spx{\bm{f}}$ is \index{nondegenerate simplex}\emph{nondegenerate} if 
-\[\spx{\bm{f}}(\Delta^k)\setminus \spx{\bm{f}}(\partial \Delta^k)\ne\emptyset.\]
+\[\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial \triangle^k)\ne\emptyset.\]
 
 \begin{thm}{Exercise}\label{ex:barysimple}
 Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
@@ -264,8 +264,9 @@ Let $\bm{p}\z=(p_0,\dots p_\kay)$ be a point array
 in a complete length $\CAT(0)$ space $\spc{U}$, 
 and $B_i=\cBall[p_i,r_i]$ for some array of positive reals $(r_0,r_1,\dots,r_\kay)$.
 
-\begin{subthm}{}
-Suppose $\bigcap_i B_i\ne \emptyset$. Show that 
+\begin{subthm}{lem:nondeg-test-with-ball:U}
+Suppose $\bigcap_i B_i\ne \emptyset$.
+Show that 
 \[\Im\spx{\bm{p}}\subset \bigcup_i B_i.\]
 \end{subthm}
 
@@ -275,7 +276,7 @@ Show that
 $\spx{\bm{p}}$ is nondegenerate.
 \end{subthm}
 
-\begin{subthm}{}
+\begin{subthm}{lem:nondeg-test-with-balls:nondeg+}
 Suppose $\spx{\bm{p}}$ is nondegenerate.
 Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} hold for some 
   array of positive reals $(r_0,\dots,r_\kay)$.
@@ -292,7 +293,7 @@ Let $\spc{X}$ be a complete geodesic space
 and $\bm{f}\z=(f_0,\z\dots,f_k)\:\spc{X}\to\RR^{k+1}$
 be an array of 1-convex locally Lipschitz functions.
 Then the set 
-\[Z=\spx{\bm{f}}(\Delta^k)\setminus \spx{\bm{f}}(\partial \Delta^k)\]
+\[Z=\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial \triangle^k)\]
 is $C^{\frac12}$-bi-H\"older to an open domain in $\RR^k$.
 \end{thm}
 
@@ -314,8 +315,8 @@ According to Lemma~\ref{lem:argmin(convex)}, $\map(\bm{v})$ is uniquely defined.
 If $\bm{v}=\proj \bm{f}(p)$, then 
 \[f_i\circ \map(\bm{v})\le f_i(p)\]
 for any $i$.
-In particular, if $p\in \spx{\bm{f}}(\Delta^k)$, then  $p=\map(\bm{v})$.
-That is, $\map$ is a right inverse of the restriction $\bm{f}|_{\spx{\bm{f}}(\Delta^k)}$.
+In particular, if $p\in \spx{\bm{f}}(\triangle^k)$, then  $p=\map(\bm{v})$.
+That is, $\map$ is a right inverse of the restriction $\bm{f}|_{\spx{\bm{f}}(\triangle^k)}$.
 
 Given $\bm{v},\bm{w}\in\RR^{\kay+1}$,
 set $p=\map (\bm{v})$ and $q=\map (\bm{w})$.
@@ -494,31 +495,32 @@ According to \ref{thm:barycenter}, this extension exists,
 and $\Psi$ is locally Lipschitz.
 
 \parit{\ref{SHORT.lem:approximation-cba:displacement}.}
-Fix $x\in\spc{U}$. Denote by $\Delta$ the minimal simplex that contains $\map(x)$, 
-and let $\alpha_0,\alpha_1,\dots,\alpha_n$ be the vertexes of $\Delta$.
-%Denote by $\Delta$ the minimal simplex that contains $\map(x)$;
-%and let $(\alpha_0,\alpha_1,\dots,\alpha_n)$ be the vertices of $\Delta$.
-Note that $\alpha$ is a vertex of $\Delta$ if and only if $\phi_{\alpha}(x)>0$.
+Fix $x\in\spc{U}$.
+Denote by $\triangle$ the minimal simplex that contains $\map(x)$, 
+and let $\alpha_0,\alpha_1,\dots,\alpha_n$ be the vertexes of $\triangle$.
+%Denote by $\triangle$ the minimal simplex that contains $\map(x)$;
+%and let $(\alpha_0,\alpha_1,\dots,\alpha_n)$ be the vertices of $\triangle$.
+Note that $\alpha$ is a vertex of $\triangle$ if and only if $\phi_{\alpha}(x)>0$.
 Thus
 \[\dist{x}{x_{\alpha_i}}{}<\tfrac{1}{3}\cdot\rho(x)\] 
 for any $i$.
 Therefore 
-\[\diam\Psi(\Delta)
+\[\diam\Psi(\triangle)
 \le
 \max_{i,j}\{\dist{x_{\alpha_i}}{x_{\alpha_j}}{}\}
 <
 \tfrac{2}{3}\cdot\rho(x).\]
 In particular, 
-\[\dist{x}{\Psi\circ\map(x)}{}\le\dist{x}{x_{\alpha_0}}{}+\diam \Psi(\Delta) <\rho(x).\]
+\[\dist{x}{\Psi\circ\map(x)}{}\le\dist{x}{x_{\alpha_0}}{}+\diam \Psi(\triangle) <\rho(x).\]
 
 \parit{\ref{SHORT.lem:approximation-cba:im}.}
 Assume the contrary;
 that is, $\Psi(\spc{N})$ is not included in the $\Psi$-image of the $m$-skeleton of $\spc{N}$.
 Then for some $\kay>m$,
-there is a $\kay$-simplex $\Delta^\kay$ in $\spc{N}$
-such that the barycentric simplex $\sigma=\Psi|_{\Delta^\kay}$ is nondegenerate; 
+there is a $\kay$-simplex $\triangle^\kay$ in $\spc{N}$
+such that the barycentric simplex $\sigma=\Psi|_{\triangle^\kay}$ is nondegenerate; 
 that is, 
-$$W=\Psi(\Delta^\kay)\setminus\Psi(\partial\Delta^\kay)\ne \emptyset.
+$$W=\Psi(\triangle^\kay)\setminus\Psi(\partial\triangle^\kay)\ne \emptyset.
 $$
 By \ref{thm:bihoelder}, $\TopDim\spc{U}\ge \kay$ --- a contradiction.
 \qeds
@@ -557,7 +559,7 @@ The following exercise is a generalization of Helly's theorem; for closely relat
 
 \begin{thm}{Exercise}\label{ex:helly}
 Let $K_1,\dots,K_n$ be closed convex subsets in a proper length $\CAT(0)$ space $\spc{U}$.
-Suppose that $\TopDim \spc{U}=m$ and any $m+1$ subsets from $\{K_1,\dots K_n\}$ have a common point.
+Suppose that $\TopDim \spc{U}=m$ and any $m+1$ subsets from $\{K_1,\dots, K_n\}$ have a common point.
 Show that all subsets $K_1,\dots,K_n$ have a common point.
 \end{thm}
 

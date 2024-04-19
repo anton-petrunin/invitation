@@ -45,12 +45,11 @@ It remains to show that if the combinatorics of the pictures for two spaces is t
 This can be easily done by deforming $W$ and applying a permutation of $x_0$, $x_1$, $x_2$, $x_3$ if necessary.
 
 \parit{Comment.}
-This solution is taken from \cite{petrunin-quest}.
+This solution is inspired by \cite{petrunin-quest}.
 
 
 \parbf{\ref{ex:convex-set}.}
-The simplest proof we know requires the construction of tangent cones for Alexandrov spaces with nonnegative curvature.
-(The length metric is defined in Section~\ref{sec:intrinsic}.)
+The simplest proof we know requires the construction of tangent cones.
 
 \parbf{\ref{ex:no-geod}.}
 Consider the unit ball $(B,\rho_0)$
@@ -187,7 +186,7 @@ On the other hand, the set of all limit points is well defined --- it is the int
 \parit{Comment.} The set $\ushort{A}_\infty$ of all limits  of sequences $p_n\in A_n$ is called the \emph{lower closed limit}
 and the set $\bar{A}_\infty$ of all partial limits of such sequences is called the \emph{upper closed limit}.
 Clearly $\ushort{A}_\infty\subset \bar{A}_\infty$.
-If $\ushort{A}_\infty=\bar{A}_\infty$, then it is called  the \emph{closed limit} of~$A_n$.%
+If $\ushort{A}_\infty=\bar{A}_\infty$, then it is called  the \emph{closed limit} of~$A_n$.
 All these convergences were introduced by Felix Hausdorff in~\cite{hausdorff}.
 
 For the class of closed subsets of a proper metric spaces, closed limits coincide with limits in the sense of Hausdorff as we defined them.
@@ -243,7 +242,7 @@ Hence the result.
 
 \parit{Comment.}
 This exercise is a basic introductory lemma on  Gromov--Hausdorff distance (see for example \cite[7.3.30]{burago-burago-ivanov}).
-The presented proof is not quite standard, it was suggested to the third author by Travis Morrison.
+The presented proof is not quite standard, it was found by Travis Morrison.
 
 \parbf{\ref{ex:compact-proper-GH}.}
 To prove part \ref{SHORT.ex:compact-proper-GH:a},
@@ -278,26 +277,11 @@ Make a conclusion.
 
 \parbf{\ref{ex:CAT-mnfld=>ext.geod}.}
 Assume that a geodesic $[px]$ cannot be extended behind $x$.
-Apply the homotopy from \ref{ex:contractible} to prove that $\spc{U}$ has vanishing local homology groups (and/or homotopy groups)  of at $x$.
+Apply the homotopy from \ref{ex:contractible} to prove that $\spc{U}$ has vanishing local homology (and/or homotopy) groups   of at $x$.
 Use that manifolds have some nontrivial local homologies (and/or homotopy) groups. 
 
-\parbf{\ref{ex:convex-distfun}.}
-It is sufficient to prove Jensen's inequality
-\[h(\tfrac{t_0+t_1}2)\le \tfrac12(h(t_0)+h(t_1))\]
-where $h(t)\df f\circ \gamma(t)-\tfrac12\cdot t^2$.
-Observe that the inequality holds in Euclidean plane, and 
-apply that triangle $[p\,\gamma(t_0)\,\gamma(t_1)]_{\spc{U}}$ is thin.
-
-\parbf{\ref{ex:reshetnyak-doubling}.}
-The ``if'' part follows from Reshetnyak gluing theorem (\ref{thm:gluing}).
-
-Assume $\spc{W}$ is $\CAT(0)$, but $A$ is not convex;
-that is $[xy]\not\subset A$ for some $x,y\in A$.
-Observe that there distinct geodesics from $x$ to $y$ in $\spc{W}$.
-Arrive at a contradiction with the uniqueness of geodesics (\ref{ex:CAT-geodesic}).
-
 \parbf{\ref{ex:geod-CBA}.}
-Fix a sufficiently small $0<\eps$.
+Fix a sufficiently small $\eps>0$.
 Recall that by Proposition~\ref{cor:loc-geod-are-min}, any local geodesic in  $\spc{U}$ is a geodesic.
 
 Consider a sequence of directions $\xi_n$ 
@@ -308,7 +292,7 @@ here we use that the geodesics are extendable.
 
 Since $\spc{U}$ is proper, we can pass to a converging subsequence of $q_n$;
 suppose $q$ is its limit.
-It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$.
+Show that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$.
 
 \begin{wrapfigure}{r}{45 mm}
 \vskip-4mm
@@ -316,9 +300,142 @@ It remains to note that the direction $\xi$ of $[pq]$ is the limit of directions
 \includegraphics{mppics/pic-12}
 \end{wrapfigure}
 
-The unit disc in the plane with attached half-line to each point is a complete $\CAT(0)$ length space with extendable geodesics. 
+The unit disc in the plane with attached half-line to each point of its boundary is a complete $\CAT(0)$ length space with extendable geodesics. 
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 This provides a counterexample to the statement of the exercise if  $\spc{U}$ is not assumed to be proper.
+
+
+\parbf{\ref{ex:convex-distfun}.}
+It is sufficient to prove Jensen's inequality
+\[h(\tfrac{t_0+t_1}2)\le \tfrac12(h(t_0)+h(t_1))\]
+where $h(t)\df f\circ \gamma(t)-\tfrac12\cdot t^2$.
+Observe that the inequality holds in Euclidean plane, and 
+apply that triangle $[p\,\gamma(t_0)\,\gamma(t_1)]_{\spc{U}}$ is thin.
+
+\parbf{\ref{ex:convex-dist}.}
+Observe that it is sufficient to show that 
+\[\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\le (1-t)\cdot\dist{\gamma_1(0)}{\gamma_2(0)}{\spc{U}}+t\cdot \dist{\gamma_1(1)}{\gamma_2(1)}{\spc{U}}.\]
+
+\begin{figure}[htb!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1650}
+\vskip0mm
+\end{figure}
+
+Let $\beta$ be the geodesic path from $\gamma_1(0)$ to $\gamma_2(1)$.
+Observe that 
+\begin{align*}
+\dist{\gamma_1(t)}{\beta(t)}{\spc{U}}&\le t\cdot \dist{\gamma_1(1)}{\beta(1)}{\spc{U}},
+\\
+\dist{\beta(t)}{\gamma_2(t)}{\spc{U}}&\le (1-t)\cdot\dist{\beta(0)}{\gamma_2(0)}{\spc{U}},
+\end{align*}
+and apply the triangle inequality.
+
+\parbf{\ref{ex:convex-nbhd}.}
+It is sufficient to show that 
+\[\distfun_A\circ\gamma(t)\le (1-t)\cdot\distfun_A\circ\gamma(0)+t\cdot \distfun_A\circ \gamma(1).
+\leqno({*})\]
+for any geodesic path $\gamma$.
+Note that given $\eps>0$, there are points $p,q\in A$ such that 
+\[\dist{p}{\gamma(0)}{}<\distfun_A\circ\gamma(0)+\eps
+\quad\text{and}\quad
+\dist{q}{\gamma(1)}{}< \distfun_A\circ\gamma(1)+\eps.
+\]
+Let $\beta$ be a geodesic path from $p$ to $q$.
+By \ref{ex:convex-dist},
+\[\dist{\beta(t)}{\gamma(t)}{}\le (1-t)\cdot\dist{p}{\gamma(0)}{}+t\cdot \dist{q}{\gamma(1)}{}.\]
+Since $A$ is convex, $\beta(t)\in A$ for any $t$.
+Since $\eps>0$ is arbitrary, we get~$({*})$.
+
+
+\parbf{\ref{ex:closest-point}.}
+Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
+The existence of at least one point $p^*$ that minimizes the distance from $p$ follows.
+
+Assume $p^*$ is not uniquely defined;
+that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from~$p$.
+Since $K$ is convex, the midpoint $z$ of $[xy]$ lies in~$K$.
+
+Thinness of triangles implies that
+\[\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{},\] 
+a contradiction.
+
+\begin{wrapfigure}{r}{37 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-41}
+\vskip-0mm
+\end{wrapfigure}
+
+It remains to show that the map $p\mapsto p^*$ is short, 
+that is, 
+\[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\leqno({*})\]
+for any $p,q\in \spc{U}$.
+
+Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
+Construct the model triangles 
+$\trig{\tilde p}{\tilde p^*}{\tilde q^*}$ and $\trig{\tilde p}{\tilde q}{\tilde q^*}$
+of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
+the points $\tilde p^*$ and $\tilde q$ lie on the opposite sides from $[{\tilde p}{\tilde q^*}]$.
+
+From thinness of triangles $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$, we get that
+\[\mangle\hinge{\tilde p^*}{\tilde p}{\tilde q^*},\mangle\hinge{\tilde q^*}{\tilde p^*}{\tilde q}\ge \tfrac\pi2.\]
+Hence 
+\[\dist{\tilde p}{\tilde q}{}\ge \dist{\tilde p^*}{\tilde q^*}{}.\]
+The latter is equivalent to $({*})$.
+
+In the remaining cases:  $({*})$ holds automatically if (1) $p^*= q^*$ or (2) $p= p^*$ and $q= q^*$.
+If $p= p^*$, $q\ne q^*$ and $p^*\ne q^*$, then thinness of $\trig{p}{q}{q^*}$ implies that
+\[
+\mangle\hinge{\tilde q^*}{\tilde q}{\tilde p}\ge \tfrac\pi2,\]
+and $({*})$ follows.
+
+\parit{Comment.}
+It is sufficient to assume that the space is complete length and $\CAT(0)$; see \cite{alexander-kapovitch-petrunin-2025}.
+ 
+
+\parbf{\ref{ex:locally-convex}.}
+Fix a closed, connected, locally convex set~$K$.
+Apply \ref{ex:convex-nbhd} to show that $\distfun_{K}$ is convex in a neighborhood $\Omega\supset K$; that is, $\distfun_{K}$ is convex along any geodesic completely contained in~$\Omega$.
+
+Since $K$ is locally convex,
+it is locally path connected.
+Since $K$ is connected, it is also path connected.
+
+Fix two points $x,y\in K$. 
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\z\to K$.
+Use \ref{prop:thin=cat} to show that the geodesic $[x\,\alpha(s)]$ 
+is uniquely defined and depends continuously on~$s$.
+
+\begin{wrapfigure}{r}{50 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-9}
+\end{wrapfigure}
+
+If $[xy]=[x\,\alpha(1)]$ does not completely lie in $K$, then 
+there is a value $s\in [0,1]$ such that $[x\,\alpha(s)]$ 
+lies in $\Omega$,
+but does not completely lie in~$K$.
+Therefore $f=\distfun_{K}$ is convex 
+along $[x\alpha(s)]$.
+
+Note that $f(x)\z=f(\alpha(s))=0$ and $f\ge 0$, 
+therefore $f(z)= 0$ for any $z\z\in [x\,\alpha(s)]$;
+that is, $[x\,\alpha(s)]\z\subset K$, a contradiction.
+
+\parit{Comment.}
+This statement generalizes the theorem of Heinrich Tietze, and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
+
+\parbf{\ref{ex:reshetnyak-doubling}.}
+The ``if'' part follows from Reshetnyak gluing theorem (\ref{thm:gluing}).
+
+Assume $\spc{W}$ is $\CAT(0)$, but $A$ is not convex;
+that is $[xy]\not\subset A$ for some $x,y\in A$.
+Observe that there are distinct geodesics from $x$ to $y$ in $\spc{W}$.
+Arrive at a contradiction with the uniqueness of geodesics (\ref{ex:CAT-geodesic}).
+
 
 \parbf{\ref{ex:supporting-planes}.}
 By approximation, it is sufficient to consider the case when 
@@ -373,7 +490,7 @@ that moves  $p$ to a point in the ball $\oBall(0,R)$.
 It remains to repeat the proof of Exercise~\ref{ex:compact-walls}.
 
 \parbf{\ref{cor:balls:dim=1}.}
-Imagine that each ball zero radius, then may think that balls pass thru each other.
+Imagine that each ball has zero radius, then may think that balls pass thru each other.
 That is, every ball moves with constant speed along the line.
 Let $x_i(t)$ be the coordinate of $i^{\text{th}}$ ball at time $t$.
 Note that the graph $x_i$ in the $(t,x)$-plane is a straight line.
@@ -386,108 +503,7 @@ In other words, if the $i^{\text{th}}$ ball centered at $x$, then the we assume 
 $x-2\cdot r\cdot i$.
 With these new coordinates, the balls behave exactly as the balls with vanishing radii.
 
-\parbf{\ref{ex:convex-dist}.}
-Observe that it is sufficient to show that 
-\[\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\le (1-t)\cdot\dist{\gamma_1(0)}{\gamma_2(0)}{\spc{U}}+t\cdot \dist{\gamma_1(1)}{\gamma_2(1)}{\spc{U}}.\]
-This statement holds if $\gamma_1$ and $\gamma_2$ run along the opposite sides of a convex quadrangle in the plane.
-Applying the majorization theorem to the quadrangle $[\gamma_1(0)\,\gamma_1(1),\gamma_2(1)\,\gamma_2(0)]$, we get the general case.
 
-\parbf{\ref{ex:convex-nbhd}.}
-It is sufficient to show that 
-\[\distfun_A\circ\gamma(t)\le (1-t)\cdot\distfun_A\circ\gamma(0)+t\cdot \distfun_A\circ \gamma(1).
-\eqlbl{eq:distfun(gamma(t))}\]
-for any geodesic path $\gamma$.
-Note that given $\eps>0$, there are points $p,q\in A$ such that 
-\[\dist{p}{\gamma(0)}{}<\distfun_A\circ\gamma(0)+\eps
-\quad\text{and}\quad
-\dist{q}{\gamma(1)}{}< \distfun_A\circ\gamma(1)+\eps.
-\]
-Let $\beta$ be a geodesic path from $p$ to $q$.
-By \ref{ex:convex-dist},
-\[\dist{\beta(t)}{\gamma(t)}{}\le (1-t)\cdot\dist{p}{\gamma(0)}{}+t\cdot \dist{q}{\gamma(1)}{}.\]
-Since $A$ is convex, $\beta(t)\in A$ for any $t$.
-Since $\eps>0$ is arbitrary, we get \ref{eq:distfun(gamma(t))}.
-
-
-\parbf{\ref{ex:closest-point}.}
-Since $\spc{U}$ is proper, the set $K\cap \cBall[p,R]$ is compact for any $R<\infty$.
-The existence of at least one point $p^*$ that minimizes the distance from $p$ follows.
-
-Assume $p^*$ is not uniquely defined;
-that is,  two distinct points in $K$, say $x$ and $y$, minimize the distance from~$p$.
-Since $K$ is convex, the midpoint $z$ of $[xy]$ lies in~$K$.
-
-Thinness of triangles implies that
-\[\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{},\] 
-a contradiction.
-
-It remains to show that the map $p\mapsto p^*$ is short, 
-that is, 
-\[\dist{p}{q}{}\ge \dist{p^*}{q^*}{}.\eqlbl{eq:short-p-p}\]
-for any $p,q\in \spc{U}$.
-
-Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
-Construct the model triangles 
-$\trig{\tilde p}{\tilde p^*}{\tilde q^*}$ and $\trig{\tilde p}{\tilde q}{\tilde q^*}$
-of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
-the points $\tilde p^*$ and $\tilde q$ lie on the opposite sides from $[{\tilde p}{\tilde q^*}]$.
-
-\begin{wrapfigure}{r}{37 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-41}
-\vskip-0mm
-\end{wrapfigure}
-
-From thinness of triangles $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$, we get that
-\[\mangle\hinge{\tilde p^*}{\tilde p}{\tilde q^*},\mangle\hinge{\tilde q^*}{\tilde p^*}{\tilde q}\ge \tfrac\pi2.\]
-Hence 
-\[\dist{\tilde p}{\tilde q}{}\ge \dist{\tilde p^*}{\tilde q^*}{}.\]
-The latter is equivalent to \ref{eq:short-p-p}.
-
-In the remaining cases:  \ref{eq:short-p-p} holds automatically if (1) $p^*= q^*$ or (2) $p= p^*$ and $q= q^*$.
-If $p= p^*$, $q\ne q^*$ and $p^*\ne q^*$, then thinness of $\trig{p}{q}{q^*}$ implies that
-\[
-\mangle\hinge{\tilde q^*}{\tilde q}{\tilde p}\ge \tfrac\pi2,\]
-and \ref{eq:short-p-p} follows.
-
-\parit{Comment.}
-It is sufficient to assume that the space is complete length and $\CAT(0)$.
-This solution leads to the arm lemma in $\CAT(\kappa)$ spaces; see our book \cite{alexander-kapovitch-petrunin-2025}.
- 
-
-\parbf{\ref{ex:locally-convex}.}
-Fix a closed, connected, locally convex set~$K$.
-Apply \ref{ex:convex-nbhd} to show that $\distfun_{K}$ is convex in a neighborhood $\Omega\supset K$; that is, $\distfun_{K}$ is convex along any geodesic completely contained in~$\Omega$.
-
-Since $K$ is locally convex,
-it is locally path connected.
-Since $K$ is connected, it is also path connected.
-
-Fix two points $x,y\in K$. 
-Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\z\to K$.
-Use \ref{prop:thin=cat} to show that the geodesic $[x\,\alpha(s)]$ 
-is uniquely defined and depends continuously on~$s$.
-
-\begin{wrapfigure}{r}{50 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-9}
-\end{wrapfigure}
-
-If $[xy]=[x\,\alpha(1)]$ does not completely lie in $K$, then 
-there is a value $s\in [0,1]$ such that $[x\,\alpha(s)]$ 
-lies in $\Omega$,
-but does not completely lie in~$K$.
-Therefore $f=\distfun_{K}$ is convex 
-along $[x\alpha(s)]$.
-
-Note that $f(x)\z=f(\alpha(s))=0$ and $f\ge 0$, 
-therefore $f(z)= 0$ for any $z\z\in [x\,\alpha(s)]$;
-that is, $[x\,\alpha(s)]\z\subset K$, a contradiction.
-
-\parit{Comment.}
-This statement generalizes the theorem of Heinrich Tietze, and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
 
 
 \parbf{\ref{ex:devel-comp-CAT}.} Apply \ref{ex:convex-distfun}.
@@ -507,30 +523,11 @@ make a conclusion.
 \parbf{\ref{ex:FM}.}
 It is a theorem of the first author and Richard Bishop \cite{alexander-bishop-1998}.
 The required polygon is shown on the diagram;
-it lies in the product space of the real line and a \index{tripod}\emph{tripod}; that is three line segments glued together at one end.
-
-\parit{Comment.}
-This is a $\CAT(0)$ version of the famous Fáry--Milnor theorem.
-In the original theorem, the inequality is strict.
+it lies in the product space of the real line and a \index{tripod}\emph{tripod}; that is, three line segments glued together at one end.
+Note that in the original Fáry--Milnor theorem, the inequality is strict.
 
 \parbf{\ref{ex:arm-lemma}.}
 Apply the majorization theorem and the standard arm lemma.
-
-\parbf{\ref{ex:isometric-majorization}.}
-Use the majorization theorem, to reduce the question to the following.
-\textit{If a plane curve bounds a convex figure $F$,
-then its majorization map is distance-preserving.}
-
-To prove the latter statement assume that the majorization map is defined on a convex figure $F'$.
-Identify the boundaries $\partial F$ and $\partial F'$ by the majorization map.
-Show that the curvature measure of $\partial F'$ cannot exceed the curvature measure of $\partial F$.
-On the other hand the total curvatures of $\partial F'$ and $\partial F$ are equll $2\cdot\pi$.
-Therefore, $\partial F'$ and $\partial F$ have the same curvature measures,
-and hence the majorization map is distance-preserving.
-
-
-
-\parbf{\ref{ex:bishop}.}
 
 \parbf{\ref{ex:null-homotopic}.}
 Note that the existence of a null-homotopy is equivalent to the following.
@@ -553,35 +550,34 @@ By the globalization theorem there is  a nontrivial homotopy class of closed cur
 Consider a shortest noncontractible closed curve $\gamma$ in  $\spc{X}$;
 note that such a curve exists.
 
-Indeed, let $L$ be the infimum of lengths of all noncontractible closed curves in $\spc{X}$.
+Indeed, let $\ell$ be the infimum of lengths of all noncontractible closed curves in $\spc{X}$.
 Geodesic homotopy construction implies that for two sufficiently close closed curves in $\spc{X}$ are homotopic.
-Then choosing a sequence of unit speed noncontractible curves whose lengths converge to $L$, an Arzel\'{a}--Ascoli type of argument shows that these curves subconverge to a noncontractible curve $\gamma$ of length~$L$.
-
-\begin{wrapfigure}{r}{25 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-11}
-\end{wrapfigure}
+Then choosing a sequence of unit speed noncontractible curves whose lengths converge to $\ell$, an Arzel\'{a}--Ascoli type of argument shows that these curves subconverge to a noncontractible curve $\gamma$ of length~$\ell$.
 
 Assume that $\gamma$ is not a geodesic circle,
 that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
 is shorter then the lengths of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to~$q$.
 Consider the products, say $\gamma_1$ and $\gamma_2$,
 of $[qp]$ with $\alpha_1$ and~$\alpha_2$.
-Then
-\begin{itemize}
- \item  $\gamma_1$ or $\gamma_2$ is noncontractible,
- \item $\length\gamma_1, \length\gamma_2<\length \gamma$,
-\end{itemize}
+Then $\gamma_1$ or $\gamma_2$ is noncontractible,
+\[\length\gamma_1<\ell
+\quad\text{and}\quad
+\length\gamma_2<\ell\]
 --- a contradiction.
+
+\begin{wrapfigure}{r}{25 mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-11}
+\end{wrapfigure}
 
 In the $\CAT(1)$ case we also have a geodesic circle.
 The proof is done nearly the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.
 One also need to apply \ref{ex:null-homotopic}, to show that curves $\gamma_1$ and $\gamma_2$ are not contractible in the class of curves shorter than $2\cdot \pi$.
 
 \parit{Comment.}
-Note that the statement of the exercise fails if the requirement that $\spc{X}$ be compact is replaced by the assumption that it is proper.
-For example, the surface of revolution of the graph of $y=e^x$ around the $x$-axis is locally $\CAT(0)$ but has no closed geodesics.
+Note that the surface of revolution of the graph of $y=e^x$ around the $x$-axis is locally $\CAT(0)$ but has no closed geodesics.
+Therefore, in this exercise, one cannot trade compactness to properness. 
 
 \parbf{\ref{ex:branching-cover}.}
 Consider a closed $\eps$-neighborhood $A$ of the geodesic.
@@ -596,7 +592,7 @@ That is, for any point $p'\in\spc{W}'_\eps$ there is a point $p\in\spc{W}_\eps$ 
 Further observe that $\spc{W}'_\eps$ is simply connected since it admits a deformation retraction onto $A_\eps$, which is contractible.
 By the globalization theorem, $\spc{W}'_\eps$ is $\CAT(0)$.
 
-It remains to note that $\tilde {\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$, and apply Proposition~\ref{prop:cat-limit}.
+It remains to note that $\tilde {\spc{U}}$ can be obtained as a limit of $\spc{W}'_\eps$ as $\eps\to 0$, and apply~\ref{prop:cat-limit}.
 
 
 
@@ -616,7 +612,7 @@ consider two curves in $\Cone\Sigma$ written in polar coordinates as
 \[\gamma_i(t)=(\alpha_i(\arctan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
 Observe that both curves $\gamma_1$ and $\gamma_2$ are geodesics in $\Cone\Sigma$ and  have common ends.
 
-Observe that a small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into~$\spc{P}$.
+Note that a small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into~$\spc{P}$.
 Hence we can construct two geodesics $\gamma_1$ and $\gamma_2$ in $\spc{P}$ with common endpoints.
 
 It remains to consider the case when $\alpha_1$ (and therefore $\alpha_2$) is not length minimizing.
@@ -626,8 +622,11 @@ Since $\Sigma$ is locally $\CAT(1)$, \ref{cor:discrete-paths} implies that
 there is another geodesic $\bar\alpha_2$ in $\Sigma_p$ that shares endpoints with $\bar\alpha_1$.
 It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\alpha_2$.
 
-\parit{Comment.}
+\parit{Comments.}
 By \ref{ex:CAT-geodesic}, the given condition is a necessary and sufficient.
+
+In the proof, one can apply \ref{ex:geod-circle};
+in this case the last part of the arguing is not needed.
 
 
 \parbf{\ref{ex:S3}.}
@@ -648,6 +647,9 @@ Tadeusz Januszkiewicz,
 Dmitri Panov
 and 
 the third author.
+Another solution was given by Karim Adiprasito \cite{adiprasito};
+he proved that an example can be found among spaces that admit a cubulation into unit cubes.
+
 
 
 \parbf{\ref{ex:baricenric-flag}.}
@@ -660,14 +662,15 @@ if it can be ordered, say as $v_1,\dots,v_\kay$,
 so that the corresponding simplices form a nested sequence
 \[\triangle_{v_1}\subset\dots\subset\triangle_{v_\kay}.\]
 
-
+\parit{Comment.}
+There are a compact metrizable contractible and locally contractible spaces that do not admit a $\CAT(1)$ length metrics \cite{460763}.
 
 \parbf{\ref{ex:flag>=pi/2}.}
 Use induction on the dimension  to prove that if in a spherical simplex $\triangle$ every edge is at least $\tfrac\pi2$, then 
 all dihedral angles of $\triangle$ are at least~$\tfrac\pi2$.
 
 The rest of the proof goes along the same lines as the proof of the flag condition (\ref{thm:flag}).
-The only difference is that a geodesic may spend time \emph{at least} $\pi$ on each visit to $\Star_v$.
+The only difference is geodesic spends \textit{at least} $\pi$ on each visit to $\Star_v$.
 
 \parit{Comment.}
 Note that it is not sufficient to assume only that the all dihedral angles of the simplices are at least~$\tfrac\pi2$. 
@@ -676,7 +679,7 @@ On the other hand the boundary of the rhombus is closed local geodesic in this s
 Therefore the space cannot be $\CAT(1)$.
 
 \parbf{\ref{ex:polyhedron-glue}.}
-Apply the globalization theorem (\ref{thm:hadamard-cartan}) with \ref{ex:cone+susp} and the previous exercise \ref{ex:flag>=pi/2}. 
+Apply the globalization theorem (\ref{thm:hadamard-cartan}) with \ref{ex:cone+susp} and \ref{ex:flag>=pi/2}. 
 
 \parbf{\ref{ex:tree}.}
 The space $\spc{T}_n$ has a natural cone structure with the vertex formed by the  completely degenerate tree --- all its edges have zero length.
@@ -684,7 +687,7 @@ Note that the space $\Sigma$
 over which the cone is taken comes naturally with a triangulation 
 with all-right spherical simplicies.
 
-Note that the link of any simplex of this triangulation satisfies the no-triangle condition (\ref{def:flag}).
+The link of any simplex of this triangulation satisfies the no-triangle condition (\ref{def:flag}).
 Indeed, fix a simplex $\triangle$ of the complex;
 it can be described by combinatorics of a possibly degenerate tree.
 A triangle in the link of  $\triangle$ can be described by three ways to resolve a degeneracy by adding one edge of positive length,
@@ -720,8 +723,10 @@ The solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi
 
 The cycle $\gamma$ is taken in the complement $\mathcal{S}\setminus\{v\}$ (or, alternatively, in the link of $v$ in $\mathcal{S}$).
 Instead of a vertex, one has to take edge $e$ in $\tilde Q$ that corresponds to $v$; so we have to show existence of large cycle in $\tilde Q$ that is not contractible in $\tilde Q\setminus e$.
-The last change is not principle:
-it is more visual to think that $G$ is made from the squares parallel to the squares of the cubical complex which meet the edges of the complex orthogonally at their midpoints (in this case formally speaking $G$ is not a subcomplex of the cubical analog).
+Think that $G$ is made from the squares parallel to the squares of the cubical complex which meet the edges of the complex orthogonally at their midpoints.
+Note that formally speaking, $G$ is not a subcomplex of the cubical analog.
+
+
 
 
 \parbf{\ref{ex:funny-S}.}
@@ -732,7 +737,7 @@ see \cite{edwards, daverman}.
 \medskip
 
 \parbf{Lemma.}
-\textit{Let $\spc{S}$ be a finite simplicial complex which 
+\textit{Let $\spc{S}$ be a finite simplicial complex that
 is homeomorphic to an $m$-dimensional homology manifold for some $m\ge 5$.
 Assume that  all vertices of
 $\spc{S}$ have simply connected links.
@@ -853,7 +858,7 @@ The latter case can be done by induction on the number of sides.
 The base case of triangle is evident.
 
 To prove the induction step, apply Alexandrov's lemma (\ref{lem:alex}) 
-together with the construction in Exercise~\ref{ex:short-map}.
+together with the construction in the inheritance lemma (\ref{lem:inherit-angle}).
 
 
 \parbf{\ref{ex:bishop-sphere}.}
@@ -892,6 +897,12 @@ branching at three planes intersecting at the origin is $\CAT(0)$, then these al
 
 \parbf{\ref{ex:hemisphere}.}
 Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
+
+\begin{wrapfigure}{r}{35 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-722}
+\end{wrapfigure}
 
 Assume $\ell<\pi$.
 Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and~$q$. 
@@ -935,12 +946,6 @@ Since  $\Omega$ is not two-convex,
 we can fix a simple closed curve $\gamma$ that lies in the intersection of a plane $W_0$ and $\Omega$, 
 and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
 
-\begin{wrapfigure}{r}{43mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-19}
-\end{wrapfigure}
-
 Let $\phi\:\DD\to \Omega$ be a disc that  shrinks~$\gamma$.
 Applying the loop theorem (arguing as in the proof of Proposition~\ref{prop:3d-strong-2-convexity}), we can assume that $\phi$ is an embedding and $\phi(\DD)$ lies on one side of~$W_0$.
 
@@ -951,6 +956,12 @@ Changing $W_0,\gamma$ and $\phi$ slightly, we can assume that such a point lies 
 Fix a circle $\Gamma$ in $W_0$ that  surrounds $Q\cap W_0$.
 Since $Q$ lies in a half-space with boundary $W_0$, there is a
 smallest spherical dome with boundary $\Gamma$ that  includes the set $R=Q\setminus\Omega$.
+
+\begin{wrapfigure}{r}{43mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-19}
+\end{wrapfigure}
 
 The dome has to touch $R$ at some point~$p$.
 The plane $W$ tangent to the dome at $p$ has the required property --- the point $p$ is an isolated point of the complement $W\setminus \Omega$.
@@ -967,14 +978,14 @@ Consider the surface $\bar S$
 formed by the closure of the remaining part $S$ of the boundary.
 Note that the boundary $\partial S$ of $\bar S$ is a collection of closed polygonal lines.
 
-Assume $\bar S$ is not piecewise linear.
-Show that there is a line segment $[pq]$ in $\EE^3$ that is tangent to $\bar S$ at some point $p$ and    has no common points with $\bar S$ except~$p$.
-
 \begin{wrapfigure}{r}{41mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-21}
 \end{wrapfigure}
+
+Assume $\bar S$ is not piecewise linear.
+Show that there is a line segment $[pq]$ in $\EE^3$ that is tangent to $\bar S$ at some point $p$ and    has no common points with $\bar S$ except~$p$.
 
 Since $\bar S$ is locally concave,
 there is a local inner supporting plane $\Pi$ at $p$ that contains the segment $[pq]$.
@@ -992,7 +1003,7 @@ a contradiction.
 
 
 \parbf{\ref{ex:CAT=>two-convex}.}
-Suppose $K$ is not two convex;
+Suppose $K$ is not two-convex;
 let $\gamma$ be a closed simple curve in a plane $W$ that do not meet Definition~\ref{def:two-convex}.
 Note that $W$ is not a vertical plane; denote by $V$ the three-dimensional subspace that spanned by $W$ and vertical direction.
 
@@ -1000,15 +1011,18 @@ Note that $\gamma$ is contractible in $V\cap K$.
 Act as in \ref{ex:inner-support} to show that there exists a plane triangle $\triangle\subset V$ whose sides lie completely in $K$, 
 but whose interior contains points from the complement $\EE^m\setminus K$.
 \parbf{\ref{ex:two-convex-not-a-CAT}.}
-Clearly the set $W$ is two-convex.
-Therefore so is $K$ as the intersection of two two-convex sets.
+Clearly, the set $W$ is two-convex, and so is $K$ as the intersection of two-convex sets.
 
 Consider two $2$-dimensional hemispheres $H_1$ and $H_2$ in $\mathbb{S}^3$ 
 such that the intersection $H_1\cap H_2$ is a geodesic $[\xi\zeta]$ orthogonal to the boundary equators of $H_1$ and $H_2$ and 
 \[\dist{\xi}{\zeta}{\mathbb{S}^3}<\tfrac\pi2.\]
 Equip the complement $\mathbb{S}^3\setminus(H_1\cup H_2)$ with induced length metric and denote by $\Sigma$ its completion.
 
-???
+\begin{wrapfigure}{r}{41mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-728}
+\end{wrapfigure}
 
 Note that there is a closed geodesic in $\Sigma$ whose projection to $\mathbb{S}^3$
 is formed by a product of four copies of $[\xi\zeta]$.
@@ -1021,34 +1035,74 @@ For a suitable choice of the motion $\iota$,
 we have that $\tfrac1n\cdot K\to K'$ as $n\to\infty$ in  the sense of Gromov--Hausdorff.
 By \ref{prop:cat-limit}, $K$ is not $\CAT(0)$.
 
-
-It remains to note that $\triangle$ is not thin in~$K$.
-
-
-
-\parbf{\ref{ex:finite-action-CAT}.}
+\parbf{\ref{ex:finite-action-CAT};} \ref{SHORT.ex:finite-action-CAT:finite}
 Suppose $G$ is finite.
-Choose its $\{p_1,\dots,p_n\}$.
+Choose its orbit $\{p_1,\dots,p_n\}$.
 Consider the barycenter $z$ of the array $\bm{p}=(p_1,\dots,p_n)$ with equal masses;
 in other words, $z\df\spx{\bm{p}}(\tfrac1n,\dots,\tfrac1n)$.
 Observe that $z$ is a fixed point of the acton.
 
-Now suppose $G$ is compact.
+\parit{\ref{SHORT.ex:finite-action-CAT:compact}.}
 Let $\mu$ be the probability Haar measure on $G$.
 Choose a point $p\in \spc{U}$ and consider the function
 \[f=\tfrac12\cdot\int_{g\in G} \distfun_{g\cdot p}^2\cdot\mu.\]
 Show that $f$ is 1-convex.
 By \ref{lem:argmin(convex)}, $f$ has unique minimum point, say $z$.
-Observe that $z$ is a fixed point of the action.
+Observe that $f$ if $G$-invariant;
+therefore, $z$ is a fixed point.
 
 
 \parbf{\ref{ex:barysimple}.}
 The first part follows directly from the definitions.
 For the second part check a cone over circle with length bigger than $2\cdot\pi$,
-or a product of a tripod with real line.
+or a product of a tripod with the real line.
 
-\parbf{\ref{lem:nondeg-test-with-balls}.}
+\parbf{\ref{lem:nondeg-test-with-balls};} \ref{SHORT.lem:nondeg-test-with-ball:U}.
+Choose $q\in \bigcap_i B_i$.
+Assume $s\notin \bigcup_i B_i$.
+Observe that $\dist{p_i}{s}{}>\dist{p_i}{q}{}$ for any $i$ and apply \ref{thm:up-convex}.
+Conclude that $s\notin\spx{\bm{p}}(x)$.
+
+\parit{\ref{SHORT.lem:nondeg-test-with-balls:nondeg}.}
+Show that there is a point, say $z$, that minimize 
+\[s=\max_i\{\dist{p_i}{z}{}-r_i\}.\]
+Note that $s>0$.
+
+Let us show that $s=\dist{p_i}{z}{}-r_i$ for any $i$.
+Assume the contrary; that is, that $s>\dist{p_j}{z}{}-r_j$ for some $j$.
+Choose a point $q_j\in\bigcap_{i\ne j} B_i$.
+Note that $s>\dist{p_j}{x}{}-r_j$
+for any point $x\in \left]zq_j\right[$.
+Therefore $s$ is not minimal --- a contradiction.
+
+Observe that $z\in \spx{\bm{p}}(\triangle^k)$.
+By \ref{SHORT.lem:nondeg-test-with-ball:U}, $\spx{\bm{p}}(\partial\triangle^k)\subset \bigcup_{i} B_i$.
+Hence $\spx{\bm{p}}(\triangle^k)\setminus\spx{\bm{p}}(\partial\triangle^k)\ne \emptyset$.
+
+\parit{\ref{SHORT.lem:nondeg-test-with-balls:nondeg+}.}
+Choose $z\in \spx{\bm{p}}(\triangle^k)\setminus\spx{\bm{p}}(\partial\triangle^k)$.
+Show that for each $j$, there is a point $z_j$ such that 
+\[\dist{p_i}{z_j}{}<\dist{p_i}{z}{}\]
+for any $i\ne j$.
+Choose $r_i=\min_{j\ne i}\{\dist{p_i}{z_j}{}\}$.
 
 \parbf{\ref{ex:helly}.}
+Let $k$ be the maximal integer such that any $k$ subsets have a common points.
+By assumption $k\ge m+1$.
+
+Suppose $k<n$.
+We can assume that $n=k+1$ and $K_1\cap\dots\cap K_{n}\z=\emptyset$.
+Choose a point array $\bm{p}$ such that
+\[p_i\in \bigcap_{j\ne i} K_j\]
+for each $i$.
+Observe that $\spx{\bm{p}}(\partial\triangle^k)\subset \bigcup_iK_i$.
+Since $\spx{\bm{p}}$ is degenerate, $\spx{\bm{p}}(\triangle^k)\subset \bigcup_iK_i$.
+Apply Sperner's lemma to show that $\spx{\bm{p}}(\triangle^k)(x)\z\in \bigcap_iK_i$ for some $x\in \triangle^k$,
+and arrive at a contradiction.
 
 \parbf{\ref{ex:dim-top-haus-CAT}.}
+Let $T$ be a binary rooted tree.
+Choose a metric on $T$ such that each edge from level $n$ to $n+1$ has length $\lambda^n$ for for some $0<\lambda<1$.
+Passing to completion of the obtained space, we add to it a \textit{crown} which is homeomorphic to the Cantor set.
+Observe that the completion has topological dimension 1.
+It remains to calculate the Hausdorff dimension of the crown for given $\lambda$. 
