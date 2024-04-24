@@ -802,7 +802,7 @@ The upper bound on $N$ follows directly from the construction.
 
 \section{Billiards}
 
-Let $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in~$\EE^m$.
+Let $A^1,A^2,\dots, A^n$ be a finite collection of closed convex sets in~$\EE^m$.
 Assume that for each $i$
 the boundary $\partial A^i$ is a smooth hypersurface.
 
@@ -813,17 +813,21 @@ and the billiards described above will be called {}\emph{billiards with convex w
 
 A billiard {}\emph{trajectory} 
 on the table is a unit-speed broken line $\gamma$ 
-that  follows  the
+that follows the
 standard law of billiards 
 at the breakpoints on $\partial A^i$ 
 --- in particular, the angle of reflection is equal to the angle of incidence.
 The breakpoints of the trajectory will be called {}\emph{collisions}.
-We assume the trajectory meets only one wall at a time.
+\textit{
+We assume that trajectory never meet a wall in a tangent direction to $\partial A^i$. 
+Also, we will always assume the trajectory meets at most one wall in a small neighborhood of every time moment.
+For example, if $\gamma$ have to meet more then two walls at time moment $t$
+or collisions accumulate at $t$, then we have to assume that $\gamma$ dies before $t$.}
 
 Recall that the definition of sets with $\eps$-wide corners is given in \ref{sec:wide-corners}.
 
 \begin{thm}{Collision theorem}\label{thm:collision}
-Assume $T\subset\EE^m$ is a billiard table with $n$ convex walls.
+Let $T\subset\EE^m$ be a billiard table with $n$ convex walls.
 Assume that the walls of $T$ have a common interior point  and all their intersections have $\eps$-wide corners.
 Then the number of collisions of any trajectory in  $T$  is bounded
 by a number $N$ which depends only on $n$ and~$\eps$.
@@ -956,6 +960,16 @@ By \ref{obs:end-to-end-convex},
 $\spc{R}_\gamma$ is end-to-end convex --- a contradiction.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:collision}
+Let $T\subset\EE^m$ be a billiard table with $n$ convex walls.
+Assume that the walls of $T$ have a common point.
+Show that any trajectory in $T$ has only finite number of collisions in a finite time interval.
+
+Construct an example of a billiard table on the plane with $2$ convex walls
+such that the walls have a common point,
+but there is no upper bound on the number of collisions of its trajectories.
+\end{thm}
+
 \section{Comments}
 
 The collision theorem (\ref{thm:collision}) was proved by Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{burago-ferleger-kononenko-1997}.
@@ -977,3 +991,5 @@ This example might decrease your appetite for generalizing the collision theorem
 locally such a 3-ball looks as good as the billiards table in the theorem, the number of collisions is obviously infinite.
 
 It was shown by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls in $\RR^3$ grows at least exponentially in $n$; the two-dimensional remains open.
+
+Sergei Ivanov used another method to prove analogous statement in normed spaces with strongly convex smooth norm \cite{ivanov2024}.
