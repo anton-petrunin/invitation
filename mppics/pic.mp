@@ -1429,6 +1429,32 @@ whitelabel.bot(btex $z_0$ etex, z.z0+(0,-2));
 
 endfig;
 
+beginfig(885) 
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.p=(0,0)*u;
+z.q=(-1,-2)*u;
+z.l=(0,-.8)*u rotated -15;
+z.r=z.l rotated -50;
+
+p0=z.p{left}..z.q..{up}z.p;
+p1=z.r{z.r-z.p}..tension 3 .. z.l{z.p-z.l}..tension 3 ..cycle;
+
+draw p0;
+draw p1;
+draw z.r--z.p--z.l;
+
+labelarcsprof(z.r,z.p,z.l, 20, 4, btex $\varepsilon$ etex);
+
+
+dOt z.p;
+
+label.rt(btex $p$ etex, z.p);
+label(btex $A$ etex, .7[z.p,z.q]);
+endfig;
+
 beginfig(910) 
 save u,p,n;
 path p[];

@@ -72,7 +72,7 @@ but it is usually applied to geodesic spaces (or complete length spaces).
 To simplify the presentation we will often assume in addition that the space is \index{proper space}\emph{proper}.
 The latter means that any closed ball is compact.
 
-Recall that function is \index{proper function}\emph{proper} if inverse image of any compact set is compact.
+Recall that function is \index{proper function}\emph{proper} if the inverse image of any compact set is compact.
 Note that \textit{a metric space is proper if and only if the distance function from one (and therefore any) point is proper}; see Section~\ref{sec:metric spaces}.
 
 
@@ -439,9 +439,13 @@ we get that $\trig {x}{y}{b}$
 and consequently $\trig {x}{y}{z}$ is thin.
 \qeds
 
+Let $A$ be a closed subset in a metric space $\spc{U}$.
+Gluing of two copies of $\spc{U}$ along the copies of $A$ is called \index{doubling}\emph{doubling}  $\spc{U}$ along $A$ 
+
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
-Suppose $\spc{U}$ is a geodesic space and $A\subset \spc{U}$ is a closed subset.
-Show that the doubling $\spc{W}$ of $\spc{U}$ along $A$ is $\CAT(0)$ if and only if $A$ is a convex set of $\spc{U}$.
+Suppose $\spc{W}$ is a doubling of a geodesic space $\spc{U}$ along its closed subset $A$.
+Show that $\spc{W}$ is $\CAT(0)$ if and only if 
+$\spc{U}$ is $\CAT(0)$, and $A$ is convex in $\spc{U}$.
 \end{thm}
 
 \section{Comments}
@@ -630,6 +634,8 @@ All the short arcs on the diagram have length $\alpha$;
 the long arcs have length $\pi-\alpha$,
 so making a circuit along any path will take~$2\cdot\pi$.
 
+{
+
 \begin{wrapfigure}{r}{35mm}
 \vskip0mm
 \centering
@@ -643,15 +649,17 @@ This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ e
 Hence the sublemma.
 \qeds
 
-In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
+}
 
 {
 
 \begin{wrapfigure}{r}{26mm}
-\vskip-3mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-880}
 \end{wrapfigure}
+
+In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
 
 \begin{thm}{Exercise}\label{ex:supporting-planes}
 Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
@@ -724,6 +732,12 @@ Hence \ref{clm:z in xy} and the lemma follow.
 
 \section{Wide corners}
 \label{sec:wide-corners}
+
+\begin{wrapfigure}{r}{26mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-885}
+\end{wrapfigure}
 
 We say that a closed convex set $A\subset \EE^m$ has  \index{$\eps$-wide corners}\emph{$\eps$-wide corners}\label{page:wide corners} for given $\eps >0$ 
 if together with each point $p$, 
@@ -819,7 +833,7 @@ at the breakpoints on $\partial A^i$
 --- in particular, the angle of reflection is equal to the angle of incidence.
 The breakpoints of the trajectory will be called {}\emph{collisions}.
 \textit{
-We assume that trajectory never meet a wall in a tangent direction to $\partial A^i$. 
+We assume that trajectory never meets a wall in a tangent direction. 
 Also, we will always assume the trajectory meets at most one wall in a small neighborhood of every time moment.
 For example, if $\gamma$ have to meet more then two walls at time moment $t$
 or collisions accumulate at $t$, then we have to assume that $\gamma$ dies before $t$.}
