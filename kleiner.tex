@@ -1,3 +1,4 @@
+%%!TEX root = the-kleiner.tex
 \chapter{Barycenters}\label{chap:barycenter}
 
 \section{Definition}
@@ -6,25 +7,25 @@ Let us denote by $\triangle^k\subset \RR^{k+1}$\index{$\triangle^m$}
 the \index{standard simplex}\emph{standard $k$-simplex}; 
 that is, $\bm{m}=(m_0,\dots,m_k)\in\triangle^k$ if $m_0+\dots+m_k=1$ and $m_i\ge0$ for all $i$.
 
-Consider a point array $\bm{p}=(p_0,\dots,p_k)$ in a Euclidean space $\EE^n$.
+Consider a point array $\bm{p}=(p_0,\dots,p_k)$ in the Euclidean space $\EE^n$.
 Recall that
 \[z=m_0\cdot p_0+\dots+m_k\cdot p_k\]
-is called barycenter of point array $\bm{p}=p_0,\dots,p_k$ with masses $\bm{m}\z=(m_0,\dots, m_k)\in \triangle^k$.
+is called the  \index{barycenter}\emph{barycenter} of the point array $\bm{p}=(p_0,\dots,p_k)$ with masses $\bm{m}\z=(m_0,\dots, m_k)\in \triangle^k$.
 Equivalently, 
 \[z\df \argmin (m_0\cdot f_0+\dots+m_k\cdot f_k),\eqlbl{eq:f-spx}\]
-where $f_i=\tfrac12\cdot\distfun_{p_i}^2$ for each $i$, and $\argmin f$\index{$\argmin$} denotes a point of minimum of function $f$.
+where $f_i=\tfrac12\cdot\distfun_{p_i}^2$ for each $i$, and $\argmin f$\index{$\argmin$} denotes a point of minimum of the function $f$.
 
-The map $\spx{}\:\triangle^k\mapsto \EE^n$ defined by $\spx{}\:\bm{m}\mapsto z$ is called barycentric simplex of the array $\bm{p}$.
+The map $\spx{}\:\triangle^k\mapsto \EE^n$ defined by $\spx{}\:\bm{m}\mapsto z$ is called the \index{barycentric simplex} \emph{barycentric simplex} of the array $\bm{p}$.
 If needed we may denote this map by $\spx{\bm{p}}$ or, more generally, $\spx{\bm{f}}$.
 The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f_0,f_1,\dots,f_k)$.
 Formally speaking, the definition \ref{eq:f-spx} makes sense for any array of functions in a metric space;
-altho, the map might be undefined or nonuniquely defined.
+although, the map might be undefined or non-uniquely defined.
 
 Further, we will work with this definition in $\CAT(0)$ spaces instead of $\EE^n$.
 It will be used to define and study dimension of $\CAT$ spaces.
-We will use that on a geodesic $\CAT(0)$ space,
+We will use that on a geodesic $\CAT(0)$ space
 functions of the type $f=\tfrac12\cdot\distfun_{p}^2$ are 1-convex; see \ref{ex:convex-distfun}.
-Besides that, we will not use $\CAT(0)$ condition for a while.
+This will be the only way we'll use the  $\CAT(0)$ condition for most of this chapter.
 
 
 \section{Barycentric simplex}
@@ -36,8 +37,8 @@ be an array of nonnegative 1-convex locally Lipschitz functions.
 Then the barycentric simplex 
 $\spx{\bm{f}}\:\triangle^k\to \spc{X}$ is a uniquely defined Lipshitz map.
 
-In particular, we have that 
-the barycentric simplex $\spx{\bm{p}}$ any point array $\bm{p}\z=(p_0,\z\dots,p_k)$ in a complete geodesic $\CAT(0)$ space is a uniquely defined Lipshitz map.
+In particular, we have that for any point array $\bm{p}\z=(p_0,\z\dots,p_k)$ in a complete geodesic $\CAT(0)$ space
+the barycentric simplex $\spx{\bm{p}}$  is a uniquely defined Lipschitz map.
 \end{thm}
 
 
@@ -58,7 +59,7 @@ where $s$ is the infimum of $f$.
 \end{clm}
 
 \parit{Uniqueness.}
-Assume that $x$ and $y$ are distinct minimum points of $f$. 
+Assume that $x$ and $y$ are distinct minimum points of $f$. Let $z$ be a midpoint of the geodesic $[x y]$.
 From \ref{midpoint} we have
 \[f(z)<f(x)=f(y)\] 
 --- a contradiction. 
@@ -138,7 +139,7 @@ Since $\triangle^k$ is compact, $\spx{\bm{f}}$ is Lipschitz.
 Let $G$ be a subgroup of the group of isometries of a proper geodesic $\CAT(0)$ space.
 Assume that
 \begin{subthm}{ex:finite-action-CAT:finite}
-$G$ is finite, or
+$G$ is finite, or, more generally, 
 \end{subthm}
 \begin{subthm}{ex:finite-action-CAT:compact}
  $G$ is compact.
@@ -215,7 +216,7 @@ Therefore, $W$ is convex.
 
 \parit{\ref{SHORT.thm:up-convex:bry}+\ref{SHORT.thm:up-convex:bry+}.}
 Choose $p\in \spx{\bm{f}}(\triangle^k)$.
-Note that if $\bm{f}(p)\succcurlyeq\bm{w}$ for some $\bm{w}\in W$, then $\bm{f}(p)=\bm{w}$.
+Note that if $\bm{f}(p)\succcurlyeq\bm{w}$ for some $\bm{w}\in W$, then  $\bm{f}(p)\succcurlyeq\bm{w}\succcurlyeq\bm{f}(x)$ for some $x\in \spc{X}$ and hence $x=p$ by the uniqueness of $\spx{\bm{f}}$. Therefore  $\bm{f}(p)=\bm{w}$.
 It follows that $\bm{f}(p)\in\partial  W$;
 therefore $\bm{f}[\spx{\bm{f}}(\triangle^k)]$ lies in a convex hypersurface $\partial  W$.
 
@@ -245,7 +246,7 @@ that is,
 It should be clear from the definition that $\spx{\bm{f}^{\without i}}$ 
 coincides with the restriction of $\spx{\bm{f}}$ to the corresponding facet of $\triangle^k$.
 
-If $\Im \spx{\bm{f}}$ is not covered by $\Im \spx{\bm{f}^{\without i}}$ for all $i$,
+If $\Im \spx{\bm{f}}$ is not covered by the union of $\Im \spx{\bm{f}^{\without i}}$ over all $i$
 then we say that $\spx{\bm{f}}$ is nondegenerate.
 In other words, $\spx{\bm{f}}$ is \index{nondegenerate simplex}\emph{nondegenerate} if 
 \[\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial \triangle^k)\ne\emptyset.\]
@@ -302,7 +303,7 @@ Let $\proj\:\RR^{k+1}\to\Pi$ be orthogonal projection to the hyperplane $x_0+\do
 Let us show that the restriction $\proj\circ \bm{f}|_Z$ is a bi-H\"older embedding.
 
 The map $\proj\circ \bm{f}$ is Lipschitz;
-it remains to construct its right inverse and show that it is $C^{\frac12}$-continuous.
+it is sufficient  to construct its right inverse and show that it is $C^{\frac12}$-continuous.
 
 Given $\bm{v}=(v_0,v_1,\dots,v_\kay)\in\Pi$, consider the function 
 $h_{\bm{v}}\: \spc{X}\to \RR$ defined by
@@ -362,14 +363,14 @@ Let us recall two notions in general topology:
 \begin{thm}{Definition}\label{def:TopDim}\index{dimension!topological dimension}\index{topological dimension}
 Let $\spc{X}$ be a metric space. 
 The topological dimension of $\spc{X}$ is defined to be the minimum of nonnegative integers $n$ 
-such that for any open cover of $\spc{X}$ there is a finite open refinement with order~$n$.
+such that for any open cover of $\spc{X}$ there is a locally finite open refinement with order~$n$.
 
 If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
 
 The topological dimension of $\spc{X}$ will be denoted by $\TopDim\spc{X}$.
 \end{thm}
 
-The invariants satisfying the following two statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called ``dimension'';
+The invariants satisfying the following two statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called  the``dimension'';
 for that reason, we call these statements axioms.
 
 \begin{thm}{Normalization axiom}
@@ -515,7 +516,7 @@ In particular,
 
 \parit{\ref{SHORT.lem:approximation-cba:im}.}
 Assume the contrary;
-that is, $\Psi(\spc{N})$ is not included in the $\Psi$-image of the $m$-skeleton of $\spc{N}$.
+that is, $\Psi(\spc{N})$ is not contained in the $\Psi$-image of the $m$-skeleton of $\spc{N}$.
 Then for some $\kay>m$,
 there is a $\kay$-simplex $\triangle^\kay$ in $\spc{N}$
 such that the barycentric simplex $\sigma=\Psi|_{\triangle^\kay}$ is nondegenerate; 
@@ -568,7 +569,7 @@ Show that all subsets $K_1,\dots,K_n$ have a common point.
 \begin{thm}{Definition}
 \label{def:HausDim}\index{dimension!Hausdorff dimension}\index{Hausdorff dimension}
 Let $\spc{X}$ be a metric space. 
-Its Hausdorff dimension is defined as
+Its \emph{Hausdorff dimension} is defined as
 \[\HausDim\spc{X}=\sup\set{\alpha\in\RR}{\HausMes_\alpha(\spc{X})>0},\]
 where $\HausMes_\alpha$ denotes the $\alpha$-dimensional Hausdorff measure.
 \end{thm}
@@ -584,33 +585,33 @@ In particular,
 $\TopDim\spc{X}\le\HausDim\spc{X}$.
 \end{thm}
 
-Except for Szpilrajn's theorem, there are no other relations between topological and Husdorff dimension of separable spaces.
+Except for Szpilrajn's theorem, there are no other relations between topological and Husdorff dimension for general separable spaces.
 Moreover, the following exercise implies that the same holds for compact geodesic $\CAT(0)$ spaces of topological dimension at least 1.
 
 \begin{thm}{Exercise}\label{ex:dim-top-haus-CAT}
 Construct a metric on the binary tree such that it has compact completion of arbitrary Huasdorff dimension $\alpha\ge 1$.
 
-Concclude that for any integer $m\ge 1$ and real $\alpha\ge m$ there is a compact $\CAT(0)$ space with topological dimension $m$ and Hausdorff dimension $\alpha$. 
+Conclude that for any integer $m\ge 1$ and real $\alpha\ge m$ there is a compact $\CAT(0)$ space with topological dimension $m$ and Hausdorff dimension $\alpha$. 
 \end{thm}
 
 
 \section{Remarks}
 
 The barycenters in $\CAT(\kappa)$ spaces were introduced by Bruce Kleiner \cite{kleiner}.
-He also proved the dimension theorem; an improvement was made by Alexander Lytchak \cite{lytchak:diff}.
+He also proved the dimension theorem; an improvement was proved by Alexander Lytchak \cite{lytchak:diff}.
 
 It is not known if the dimension theorem holds for arbitrary complete geodesic $\CAT(\kappa)$ spaces.
-It was conjectured by Bruce Kleiner \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
+It was conjectured that it is so by Bruce Kleiner \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
 For separable spaces, the answer is ``yes'', and it follows from Kleiner's argument \cite[Corollary 14.13]{alexander-kapovitch-petrunin-2025}.
 
 One may wonder if bi-H\"older condition \ref{thm:dim-infty-CBA:mnfld} can be improved to bi-Lipschitz;
-it seem to be unknown even for compact spaces.
+this seems to be unknown even for compact spaces.
 However if a compact geodesic $\CAT(0)$ space $\spc{U}$ has finite topological dimension $m$,
 then a slight modification of Kleiner's technique can be used to show that there is a bi-Lipschitz embedding of an $m$-cube into $\spc{U}$ \cite[Theorem 14.15]{alexander-kapovitch-petrunin-2025}.
 In particular, there is a bi-Lipschitz embedding of an $n$-cube for any $n\le m$.
 If $\TopDim\spc{U}=\infty$, then we expect existence of a bi-Lipschitz embedding of an $n$-cube for any integer $n\ge1$.
 The statement is trivial for $n=1$; in this case any geodesic gives an isometric embedding.
-For $n=2$, one can get it from the the fact that minimal (or metric minimizing) surfaces in $\spc{U}$ are $\CAT(0)$ (any such surface is locally bi-Lipschitz to the Euclidean plane).
+For $n=2$, one can get it from the the fact that minimal (or metric minimizing) surfaces in $\spc{U}$ are $\CAT(0)$ \footnote{ \color{red} V: reference?}(any such surface is locally bi-Lipschitz to the Euclidean plane).
 For $n\ge 3$ the question remains open.%??? solved by Stadler and Co
 
 
