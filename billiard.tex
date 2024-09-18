@@ -1,3 +1,4 @@
+%%!TEX root = the-billiard.tex
 \chapter{Gluing}\label{chapter:gluing}
 
 In this lecture we define $\CAT(\kappa)$ spaces and prove Reshetnyak's gluing theorem.
@@ -13,7 +14,7 @@ Given a quadruple of points $p,q,x,y$ in a metric space $\spc{X}$,
 consider two model triangles in the plane 
 $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\EE^2}$ 
 and 
-$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$.
+$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$ and lying on opposite sides of $[\tilde x\tilde y]$.
 
 \begin{wrapfigure}{r}{25mm}
 \vskip-4mm
@@ -41,11 +42,11 @@ If one of the spherical model triangles is undefined,\footnote{That is, if
 \dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
 then it is assumed that $\CAT(1)$ comparison automatically holds for this quadruple.
 
-We can do the same for the model plane of curvature $\kappa$;
-that is, a sphere if $\kappa>0$, 
-Euclidean plane if $\kappa=0$ 
-and Lobachevsky plane if $\kappa<0$.
-In this case we arrive at the definition of $\CAT(\kappa)$ comparison.
+We can do the same for the model plane of curvature $\kappa$ for arbitrary $\kappa$;
+that is, an appropriately rescled sphere if $\kappa>0$, 
+the Euclidean plane if $\kappa=0$ 
+and a rescaled Lobachevsky plane if $\kappa<0$.
+In this way we arrive at the definition of $\CAT(\kappa)$ comparison for any reл $\kappa$.
 However in these notes we will mostly consider  $\CAT(0)$ comparison and occasionally $\CAT(1)$ comparison;
 so, if you see $\CAT(\kappa)$, you can assume that $\kappa$ is $0$ or~$1$.
 
@@ -53,7 +54,7 @@ so, if you see $\CAT(\kappa)$, you can assume that $\kappa$ is $0$ or~$1$.
 If all quadruples in a metric space $\spc{X}$ satisfy $\CAT(\kappa)$ comparison, then we say that the space $\spc{X}$ is $\CAT(\kappa)$.
 (Note that $\CAT(\kappa)$ is an adjective.)
 
-In order to check $\CAT(\kappa)$ comparison, it is sufficient to know the 6 distances between all pairs of points in the quadruple.
+In order to check $\CAT(\kappa)$ comparison for a quadruple of points, it is sufficient to know the 6 distances between all pairs of points in the quadruple.
 This observation implies the following.
 
 \begin{thm}{Proposition}\label{prop:cat-limit}
@@ -72,8 +73,8 @@ but it is usually applied to geodesic spaces (or complete length spaces).
 To simplify the presentation we will often assume in addition that the space is \index{proper space}\emph{proper}.
 The latter means that any closed ball is compact.
 
-Recall that function is \index{proper function}\emph{proper} if the inverse image of any compact set is compact.
-Note that \textit{a metric space is proper if and only if the distance function from one (and therefore any) point is proper}; see Section~\ref{sec:metric spaces}.
+Recall that a function is \index{proper function}\emph{proper} if the inverse image of any compact set is compact.
+ \textit{A metric space is proper} if and only if the distance function from one (and therefore any) point is proper; see Section~\ref{sec:metric spaces}.
 
 
 \begin{thm}{Proposition}\label{ex:CAT-geodesic}
@@ -83,7 +84,7 @@ Then any two points in $\spc{U}$ are joined by a unique geodesic.
 
 \parit{Proof.} 
 Suppose there are two geodesics between $x$ and $y$.
-Then we can choose two points $p\ne q$ on these geodesics such that $\dist{x}{p}{}=\dist{x}{q}{}$ and therefore $\dist{y}{p}{}=\dist{y}{q}{}$.
+Then we can choose two points $p\ne q$ on these geodesics such that $\dist{x}{p}{}=\dist{x}{q}{}$ and  $\dist{y}{p}{}=\dist{y}{q}{}$.
 
 Observe that the model triangles $[\tilde p\tilde x\tilde y]=\modtrig(pxy)$ and $[\tilde q\tilde x\tilde y]\z=\modtrig(qxy)$ are degenerate and moreover $\tilde p=\tilde q$.
 Applying $\CAT(0)$ comparison with $\tilde z=\tilde p=\tilde q$,
@@ -97,17 +98,17 @@ we get that $\dist{p}{q}{}=0$, a contradiction.
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:noncreasing-CAT}
-Given a hinge $\hinge p x y$ in a $\CAT(0)$ space $\spc{U}$, consider the function 
+Given a hinge $\hinge p x y$ in a $\CAT(0)$ space $\spc{U}$ consider the function 
 \[f\:(\dist{p}{\bar x}{},\dist{p}{\bar y}{})\mapsto \angk p{\bar x}{\bar y},\]
 where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
 Show that $f$ is nondecreasing in each argument.
 
-Conclude that any hinge in a $\CAT(0)$ space has defined angle.
+Conclude that any hinge in a $\CAT(0)$ space has a well  defined angle.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:contractible}
 Fix a point $p$ in a complete geodesic $\CAT(0)$ space~$\spc{U}$.
-Given a point $x\in \spc{U}$, denote by $\gamma_x\:[0,1]\to \spc{U}$ a (necessarily unique) geodesic path from $p$ to $x$.
+Given a point $x\in \spc{U}$, denote by $\gamma_x\:[0,1]\to \spc{U}$ the (necessarily unique) geodesic path from $p$ to $x$.
 
 Show that the family of maps $h_t\: \spc{U}\to \spc{U}$ defined by 
 \[h_t(x)= \gamma_x(t)\]
@@ -135,7 +136,7 @@ Assume $\spc{U}$ is a proper length $\CAT(0)$ space
 that is, any geodesic is an arc in a local geodesic $\RR\to \spc{U}$.
 Show that the space of geodesic directions at any point in $\spc{U}$ is complete.
 
-Does the statement remain true if $\spc{U}$ is complete, but not required to be proper?
+Does the statement remain true if $\spc{U}$ is complete, but is not required to be proper?
 \end{thm}
 
 \section{Thin triangles}
@@ -178,6 +179,7 @@ The $\CAT(1)$ argument is the same.
 \qeds
 
 Recall that a curve $\gamma\:\II\to \spc{U}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
+Note that a local geodesic has unit speed.
 
 \begin{thm}{Proposition}\label{cor:loc-geod-are-min}
 Suppose $\spc{U}$ is a proper geodesic $\CAT(0)$ space.  
@@ -189,7 +191,7 @@ Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local g
 \parit{Proof.}
 Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
 Choose $a$ to be the maximal value 
-such that $\gamma$ is a geodesic on $[0,a]$.
+such that $\gamma$ is a geodesic on $[0,a]$. By assumption $a<l$.
 Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 
 \begin{wrapfigure}{r}{25mm}
@@ -198,14 +200,14 @@ Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 \includegraphics{mppics/pic-800}
 \end{wrapfigure}
 
-Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin (see the next section) and 
+Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin (see the next section \footnote {\color{red} V: why refer to the next section here?}) and 
 $\dist{\gamma(0)}{\gamma(b)}{}<b$ we have
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
 for all small~$\eps>0$.
 That is, $\gamma$ is not length-minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
 a contradiction.
 
-The spherical case is done in the same way.
+The spherical case is proved in the same way.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convex-distfun}
@@ -242,7 +244,7 @@ For each point $p\in \spc{U}$ there is a unique point $p^*\in K$ that minimizes 
 \end{subthm}
 
 \begin{subthm}{ex:closest-point:b}
-The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short. 
+The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short (i.e. 1-Lipschitz). 
 \end{subthm}
 
 \end{thm}
@@ -377,7 +379,7 @@ It is straightforward to see that $\spc{W}$ is a proper geodesic space when equi
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
 
 The  space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
-If one applies this construction to two copies of one space $\spc{U}$ with a set $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
+If one applies this construction to two copies of one space $\spc{U}$ with a closed convex subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
 
 We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
 this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by~$A$.
