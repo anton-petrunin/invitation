@@ -1,3 +1,4 @@
+%%!TEX root = the-majorization.tex
 \chapter{Majorization}\label{sec:resh-kirz}
 
 \section{Formulation}
@@ -38,7 +39,7 @@ Therefore $\tilde s=\tilde r$.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:maj-triangle}
- Assume a convex region $D\subset \EE^2$ majorizes $\trig p x y$.
+ Assume a convex region $D\subset \EE^2$ majorizes a traingle $\trig p x y$ n a metric space $\spc{X}$.
 Then $D$ is a \emph{solid model triangle} of $\trig p x y$;
 that is,
 $D=\Conv\trig{\tilde p}{\tilde x}{\tilde y}$ for a model triangle $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig(p x y)$.
@@ -52,7 +53,7 @@ Now we come to the main theorem of this section.
 Any closed rectifiable curve $\alpha$ in a geodesic $\CAT(0)$ space is majorized by a convex plane figure.
 \end{thm}
 
-This theorem is a useful tool for $\CAT(0)$ spaces.
+This theorem is a useful tool for studying $\CAT(0)$ spaces.
 It can be used to get shorter proofs for several statements above;
 see for example \ref{ex:convex-dist}.
 
@@ -351,12 +352,12 @@ $\dist{\tilde x^0}{\tilde x^{n+1}}{\EE^2}
 
 \section{General case}
 
-If the space is proper, then the general case follows applying polygonal case to inscribed polygonal lines and passing to the limit.
+If the space is proper, then the general case of the Majorization Theorem follows applying polygonal case to inscribed polygonal lines and passing to the limit.
 
 \section{Comments}
 
-The last step in our proof essentially use that the space is proper.
-But the theorem holds for any geodesic $\CAT(0)$ space \cite[9.56]{alexander-kapovitch-petrunin-2025}.
+The last step in our proof makes essential use of the assumption  that the space is proper.
+Nevertheless, the theorem holds for any geodesic $\CAT(0)$ space \cite[9.56]{alexander-kapovitch-petrunin-2025}.
 
 The majorization theorem can be generalized to $\CAT(\pm1)$ spaces;
 in the $\CAT(1)$ case one has to assume that the closed curve has length at most $2\cdot\pi$.
@@ -365,34 +366,34 @@ This theorem was proved by Yuriy Reshetnyak \cite{reshetnyak:major};
 our proof uses a trick that we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
 For complete spaces, another proof can be built on on the following closely related theorem.
 It was discovered by Urs Lang and Viktor Schroeder \cite{lang-schroeder};
-the third author proved it bit earlier, but did not publish the proof for quite a while \cite{alexander-kapovitch-petrunin-2011,alexander-kapovitch-petrunin-2025}.
+the third author proved it slightly earlier, but did not publish the proof for quite a while \cite{alexander-kapovitch-petrunin-2011,alexander-kapovitch-petrunin-2025}.
 
 
 \begin{thm}{Generalized Kirszbraun's theorem}
 \label{thm:kirsz+}
 Let $\spc{U}$ be a complete length $\CAT(0)$ space, 
-let $Q$ be arbitrary subset of a Euclidean space~$\EE^m$.
+let $Q$ be an arbitrary subset of the Euclidean space~$\EE^m$.
 Suppose $f\: Q\to\spc{U}$ is a short map.
 Then $f\:Q\to\spc{U}$ can be extended to a short map 
 $F\:\EE^m\to \spc{U}$.
 \end{thm}
 
 \begin{thm}{Open problem}
-Consider be a closed rectifiable curve $\alpha$ in a $\CAT(0)$ space $\spc{U}$.
+Consider  a closed rectifiable curve $\alpha$ in a $\CAT(0)$ space $\spc{U}$.
 Note that if $\alpha$ is a geodesic triangle or it bounds an isometric copy of convex plane figure in $\spc{U}$, then $\alpha$ has a unique (up to congruence) majorizing convex figure.
 
-What about the converse?
+Does the converse hold?
 \end{thm}
 
-Notice that the majorization theorem implies isoperimetrical inequality for $\CAT(0)$ metrics on the plane.
-Moreover, it implies the generalized isoperimetrical inequality in the style of Frederick Almgren \cite{almgren}: \textit{any curve of length $2\cdot \pi\cdot r$ in a $\CAT(0)$ length space spans a disc of area at most $\pi\cdot r^2$}.
+Notice that the majorization theorem implies the isoperimetric inequality for $\CAT(0)$ metrics on the plane.
+Moreover, it implies the generalized isoperimetric inequality in the style of Frederick Almgren \cite{almgren}: \textit{any curve of length $2\cdot \pi\cdot r$ in a $\CAT(0)$ length space spans a disc of area at most $\pi\cdot r^2$}.
 
 {\sloppy
 
-The isoperimetrical inequality is known for 3- and 4-dimesnional \emph{Hadamard manifolds} (that is, $\CAT(0)$ Riemannian manifolds).
-First the 4-dimensional case was proved by Christopher Croke \cite{croke},
-and latter Bruce Kleiner proved the 3-dimensional case \cite{kleiner-1992}.
+The isoperimetric inequality is known for 3- and 4-dimesnional \emph{Hadamard manifolds} (that is, $\CAT(0)$ Riemannian manifolds).
+The 4-dimensional case was proved by Christopher Croke \cite{croke},
+and later Bruce Kleiner proved the 3-dimensional case \cite{kleiner-1992}.
 Both papers are masterpieces.
-Despite many attempts, the isoperimetrical inequality for $\CAT(0)$ spaces remains open in all other dimensions and codimensions.
+Despite many attempts, the isoperimetric inequality for $\CAT(0)$ spaces remains open in all other dimensions and codimensions.
 
 }
