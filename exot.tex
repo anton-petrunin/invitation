@@ -1,7 +1,8 @@
+%%!TEX root = the-polyhedral.tex
 \chapter{Polyhedral spaces}\label{chap:poly}
 
 This lecture describes a set of rules for gluing Euclidean cubes that produce a 
-locally $\CAT(0)$ space and use these rules to construct exotic examples of aspherical manifolds.
+locally $\CAT(0)$ space and uses these rules to construct exotic examples of aspherical manifolds.
 
 \section{Products, cones, and suspension}
 \label{sec:Products and cones}
@@ -9,7 +10,7 @@ locally $\CAT(0)$ space and use these rules to construct exotic examples of asph
 Products, cones, and suspension are defined in Section~\ref{sec:constructions}.
 
 \begin{thm}{Proposition}\label{ex:product-CAT}
-Let $\spc{U}$ and $\spc{V}$ be $\CAT(0)$ spaces.
+Let  $\spc{U}$ and $\spc{V}$ be $\CAT(0)$ spaces.
 Then the product space $\spc{U}\times\spc{V}$ is $\CAT(0)$.
 \end{thm}
 
@@ -41,7 +42,7 @@ Consider four points in $\EE^4=\EE^2\times\EE^2$
 \tilde y&=(\tilde y_1,\tilde y_2).
 \end{align*}
 Note that the triangles $\trig{\tilde p}{\tilde x}{\tilde y}$ and $\trig{\tilde q}{\tilde x}{\tilde y}$ in $\EE^4$ are isometric to the model triangles 
-$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$.
+$\modtrig(pxy)_{\EE^2}$ and $\modtrig(qxy)_{\EE^2}$. Note however that they need not lie in the same 2-plane.
 
 If $\tilde z=(\tilde z_1,\tilde z_2)\in [\tilde x\tilde y]$, then $\tilde z_1\in [\tilde x_1\tilde y_1]$ and $\tilde z_2\in [\tilde x_2\tilde y_2]$ and
 \begin{align*}
@@ -53,11 +54,14 @@ If $\tilde z=(\tilde z_1,\tilde z_2)\in [\tilde x\tilde y]$, then $\tilde z_1\in
 \end{align*}
 Therefore $\CAT(0)$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
 and 
-$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies 
-$\CAT(0)$ comparison for the quadruples $p,q,x,y$ in $\spc{U}\times \spc{V}$.
+$p_2,q_2,x_2,y_2$ in $\spc{V}$ implies that
+
+\[\dist{p}{q}{\spc{X}}\le \dist{\tilde p}{\tilde z}{\EE^4}+\dist{\tilde z}{\tilde q}{\EE^4}.\]
+
+This gives $\CAT(0)$ comparison for the quadruple $p,q,x,y$ in $\spc{U}\times \spc{V}$.
 \qeds
 
-Recall that metric on the cone \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ is defined via cosine rule.
+Recall that the metric on the cone \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ is defined via the  cosine rule.
 
 \begin{thm}{Proposition}\label{ex:cone+susp}
 Let $\spc{U}$ be a metric space.
@@ -89,7 +93,7 @@ and
 $\trig{\tilde q}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(qxy)_{\EE^2}$.
 Further, note that if $\tilde z\in [\tilde x\tilde y]_{\EE^3}$, then
 $\tilde z'=\tilde z/|\tilde z|$ lies on the geodesic $[\tilde x'\tilde y']_{\SSS^2}$.
-Therefore the $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies the 
+Therefore  $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies  
 $\CAT(0)$ comparison for $\dist{p}{q}{}$ with $\tilde z\in[\tilde x\tilde y]_{\EE^3}$.
 
 If at least one of the model triangles $\modtrig(p'x'y')_{\SSS^2}$ and $\modtrig(q'x'y')_{\SSS^2}$ is undefined,
@@ -105,12 +109,12 @@ This case is left as an exercise. %???
 
 \parit{Only-if part.}
 Suppose that $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ are defined as above.
-Assume all these points lie in a half-space of $\EE^3=\Cone\SSS^2$ with origin at its boundary. 
+Assume all these points lie in a half-space of $\EE^3=\Cone\SSS^2$ with the origin at its boundary. 
 Then we can choose positive values $a$, $b$, $c$, and $d$ such that the points $a\cdot \tilde p'$, $b\cdot \tilde q'$, $c\cdot \tilde x'$, $d\cdot \tilde y'$ lie in one plane.
 Consider the corresponding points $a\cdot  p'$, $b\cdot  q'$, $c\cdot  x'$, $d\cdot y'$ in $\Cone\spc{U}$.
-Applying the $\CAT(0)$ comparison for these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
+Applying $\CAT(0)$ comparison for these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
 
-It remains to consider the case when $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ do not in a half-space.
+It remains to consider the case when $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ do not lie in a half-space.
 Fix $\tilde z'\in [\tilde x' \tilde y']_{\SSS^2}$.
 Observe that 
 \begin{align*}\dist{\tilde p'}{\tilde x'}{\SSS^2}+\dist{\tilde q'}{\tilde x'}{\SSS^2}
@@ -120,7 +124,7 @@ Observe that
 \dist{\tilde p'}{\tilde y'}{\SSS^2}+\dist{\tilde q'}{\tilde y'}{\SSS^2}
 &\le
 \dist{\tilde p'}{\tilde z'}{\SSS^2}+\dist{\tilde q'}{\tilde z'}{\SSS^2}.\end{align*}
-That is, in this case, the $\CAT(1)$ comparison follows from the triangle inequality.
+That is, in this case,  $\CAT(1)$ comparison follows from the triangle inequality.
 \qeds
 
 Suspension is a spherical analog of cone construction,
@@ -205,10 +209,10 @@ The following theorem provides a combinatorial description of polyhedral spaces 
 
 \begin{thm}{Theorem}\label{thm:PL-CAT}
 Let $\tau$ be a triangulation of a polyhedral space $\spc{P}$. 
-The space $\spc{P}$ is locally $\CAT(0)$ if and only if the link of each simplex in $\tau$ has no closed local geodesic shorter than $2\cdot\pi$.
+The space $\spc{P}$ is locally $\CAT(0)$ if and only if the link of each simplex in $\tau$ has no closed local geodesics shorter than $2\cdot\pi$.
 
 Analogously, let $\spc{P}$ be a spherical polyhedral space and $\tau$ be its triangulation. 
-Then $\spc{P}$ is $\CAT(1)$ if and only if neither $\spc{P}$ nor  the  link of any simplex in $\tau$ has a closed local geodesic shorter than $2\cdot\pi$.
+Then $\spc{P}$ is $\CAT(1)$ if and only if neither $\spc{P}$ nor  the  link of any simplex in $\tau$ contains a closed local geodesic shorter than $2\cdot\pi$.
 \end{thm}
 
 
