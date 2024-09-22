@@ -1,11 +1,12 @@
+%%!TEX root = the-globalization.tex
 \chapter{Globalization}\label{chapter:globalization}
 
 This lecture gives a sufficient condition for locally $\CAT(0)$ spaces to be globally $\CAT(0)$.
 
 \section{Locally CAT spaces}
 
-We say that a space $\spc{U}$ is \index{locally $\CAT(\kappa)$ space}\emph{locally $\CAT(0)$} (or {}\emph{locally $\CAT(1)$}) if
-a small closed ball centered at any point $p$ in $\spc{U}$ is $\CAT(0)$ (or $\CAT(1)$, respectively).
+We say that a space $\spc{U}$ is \index{locally $\CAT(\kappa)$ space}\emph{locally $\CAT(0)$} ({}\emph{locally $\CAT(1)$}) if
+a small closed ball centered at any point $p$ in $\spc{U}$ is $\CAT(0)$ ( $\CAT(1)$, respectively).
 
 For example, the circle $\mathbb{S}^1=\RR/\ZZ$ is locally isometric to $\RR$, and so $\mathbb{S}^1$ is locally $\CAT(0)$.
 On the other hand, $\mathbb{S}^1$ is not $\CAT(0)$, since closed local geodesics in $\mathbb{S}^1$ are not geodesics, so $\mathbb{S}^1$ does not meet \ref{cor:loc-geod-are-min}.
@@ -29,6 +30,8 @@ The space of paths in a metric space $\spc{U}$ comes with the natural metric
 \eqlbl{eq:dist-between-paths}
 \]
 
+
+Observe that by  and \eqref{ex:convex-dist} and \eqref{ex:CAT-geodesic}  geodesic paths in a complete geodesic  $\CAT(0)$ space  depends uniquely and continuously on their end points. The same is true in $\CAT(1)$ spaces for geodesic paths shorter than $\pi$.
 \begin{thm}{Proposition}\label{prop:geo-complete}
 Let $\spc{U}$ be a proper geodesic, locally $\CAT(\kappa)$ space.
 
@@ -49,8 +52,8 @@ Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$.
 By~\ref{cor:loc-geod-are-min}, $\sigma$ is a geodesic.  
 In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less containing $\gamma_n(t)$ is a geodesic.
 
-Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a proper geodesic $\CAT(0)$ space, by \ref{ex:CAT-geodesic},
-geodesic segments in $\spc{B}$ depend uniquely on their endpoint pairs.  
+Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a complete geodesic $\CAT(0)$ space, by above
+geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 that  contains a neighborhood of $t$ in $[0,1]$
 and such that the arc $\gamma_n|_\II$ is minimizing for all large~$n$.
@@ -126,15 +129,15 @@ Analogously, if $\spc{U}$ is a proper geodesic, locally $\CAT(1)$ space, then fo
 
 \begin{thm}{Corollary}\label{cor:path-geod}
 If $\spc{U}$ is a proper geodesic, locally $\CAT(0)$ space, then 
-for any path $\alpha$ there is a choice of   local geodesic path $\gamma_\alpha$  connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$. 
+for any path $\alpha$ there is a choice of a   local geodesic path $\gamma_\alpha$  connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$. 
 
-Analogously, if $\spc{U}$ is a proper geodesic, locally $\CAT(1)$ space, then 
+Analogously, if $\spc{U}$ is a proper geodesic locally $\CAT(1)$ space, then 
 for any path $\alpha$ shorter than $\pi$,  
-there is a choice of  local geodesic path $\gamma_\alpha$ shorter than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$.
+there is a choice of a local geodesic path $\gamma_\alpha$ shorter than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$.
 \end{thm}
 
 \parit{Proof of \ref{cor:path-geod}.} 
-We do the $\CAT(0)$ case;
+We only present the proof in the $\CAT(0)$ case;
 the $\CAT(1)$ case is analogous.
 
 Consider the maximal interval $\II\subset[0,1]$ containing $0$
@@ -164,7 +167,7 @@ The \index{product of paths}\emph{product} of two paths  will be denoted with ``
 if two paths $\alpha$ and $\beta$ connect the same pair of points, then the product $\bar\alpha*\beta$ is a closed curve.
 
 \begin{thm}{Exercise}\label{ex:null-homotopic}
-Assume $\spc{U}$ is a proper geodesic, locally $\CAT(1)$ space. 
+Assume $\spc{U}$ is a proper geodesic locally $\CAT(1)$ space. 
 Consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary~\ref{cor:path-geod}.
 
 Assume that $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
@@ -180,7 +183,7 @@ Show that $\gamma_\alpha=\gamma_\beta$.
 
 \begin{thm}{Globalization theorem}
 \label{thm:hadamard-cartan}
-If a proper geodesic, locally $\CAT(0)$ space is simply connected, then it 
+If a proper geodesic locally $\CAT(0)$ space is simply connected, then it 
 is $\CAT(0)$.
 
 Analogously, if $\spc{U}$ is a proper geodesic, locally $\CAT(1)$ space
@@ -335,7 +338,7 @@ and by Stephanie Alexander and Richard Bishop \cite{alexander-bishop-1990} in mo
 
 For proper $\CAT(1)$ spaces, the globalization theorem was proved by Brian Bowditch~\cite{bowditch}.
 
-The globalization theorem holds for complete length spaces (not necessarily proper spaces) \cite{alexander-kapovitch-petrunin-2025}.
+The globalization theorem holds for complete (not necessarily proper)  length spaces \cite{alexander-kapovitch-petrunin-2025}.
 
 
 The patchwork globalization (\ref{thm:alex-patch}) was proved by Alexandrov \cite[Satz 9]{alexandrov-1957}.
