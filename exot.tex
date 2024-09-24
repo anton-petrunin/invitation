@@ -511,8 +511,10 @@ and therefore its universal cover $\tilde{\spc{Q}}$ is $\CAT(0)$.
 \end{thm}
 
 \parit{Proof.}
-The first part of the proposition follows 
-from the construction of $\square_{\spc{S}}$.
+%The first part of the proposition follows 
+It immediately follows from the construction of $\square_{\spc{S}}$ that the link of any vertex of $\spc{Q}$
+is isometric to  ${\spc{S}}$
+equipped with the all-right spherical metric. To see that $\square_{\spc{S}}$ is connected observe that it must contain the whole 1-dimensional skeleton of $\square^{N}$ which is connected.
 
 If ${\spc{S}}$ is flag, 
 then by the flag condition (\ref{thm:flag}) 
@@ -658,7 +660,7 @@ Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere that  is not
 
 For $m\ge 5$, the existence of such $(\spc{W}, \Sigma)$
 is proved by Michel Kervaire \cite{kervaire}. 
-For $m=4$, it follows from the construction of Barry Mazur~\cite{mazur}.
+For $m=4$, it follows from a construction of Barry Mazur~\cite{mazur}.
 
 Pick any triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates~$\Sigma$.
 
@@ -777,19 +779,19 @@ cannot be made piecewise linear --- despite  the fact that $\spc{P}$ is a manifo
 The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool for constructing  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis \cite{charney-davis-1995}.
 
-The $\CAT(0)$ property of a cube complex admits interesting (and useful) geometric descriptions if one exchanged the $\ell^2$-metric to a natural $\ell^1$ or $\ell^\infty$ on each cube.
+The $\CAT(0)$ property of a cube complex admits interesting (and useful) geometric descriptions if one exchanged the $\ell^2$-metric to  natural $\ell^1$ or $\ell^\infty$ metrics on each cube.
 
 \begin{thm}{Theorem}
 The following three conditions are equivalent.
 
-\begin{subthm}{cube-2} A cube complex $Q$ equipped with $\ell^2$-metric is $\CAT(0)$.
+\begin{subthm}{cube-2} A cube complex $Q$ equipped with the $\ell^2$-metric is $\CAT(0)$.
 \end{subthm}
 
-\begin{subthm}{cube-infty} A cube complex $Q$ equipped with $\ell^\infty$-metric is injective.
+\begin{subthm}{cube-infty} A cube complex $Q$ equipped with the $\ell^\infty$-metric is injective, i.e. for any  subset $Y\subset Q$ any 1-Lipschitz map from $Y$ to another metric space $\spc{Z}$ can be extended to a 1-Lipschitz map from $Q$ to $\spc{Z}$.
 \end{subthm}
 
-\begin{subthm}{cube-1} A cube complex $Q$ equipped with $\ell^1$-metric is \index{median space}\emph{median}.
- The latter means that for any three points $x,y,z$ there is a {}\emph{unique} point $m$ (it is called the \index{median}\emph{median} of $x$, $y$, and $z$) and a choice of geodesics such that $[xy]\ni m$, $[xz]\ni m$ and $[yz]\ni m$.
+\begin{subthm}{cube-1} A cube complex $Q$ equipped with the $\ell^1$-metric is \index{median space}\emph{median}.
+ The latter means that for any three points $x,y,z$ there is a {}\emph{unique} point $m$ (it is called the \index{median}\emph{median} of $x$, $y$, and $z$) and a choice of geodesics  $[xy], [xz], [yz]$ such that $[xy]\ni m$, $[xz]\ni m$ and $[yz]\ni m$.
 \end{subthm}
 \end{thm}
 
