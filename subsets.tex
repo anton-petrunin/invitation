@@ -1,3 +1,4 @@
+%%!TEX root = the-subsets.tex
 \chapter{Subsets}\label{chapter:shefel}
 
 This lecture is nearly a copy of \cite[Chapter 4]{alexander-kapovitch-petrunin-2019};
@@ -63,7 +64,7 @@ Therefore
 if $a<b<c$, then $V_b\supset V_a\cap V_c$.
 \end{clm}
 
-Consider the finite union
+Given $t_1,\ldots, t_n\in \RR$ consider the  union
 \[C'=V_{t_1}\cup\dots\cup V_{t_n}.\]
 The inclusion \ref{eq:VcVnV-0} makes it possible to apply Reshetnyak gluing theorem \ref{thm:gluing} recursively and show that $C'$ is $\CAT(0)$.
 
@@ -156,6 +157,7 @@ We get a triangle $\trig xyz$ which is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $\trig xyz$ does not lie in $K$ completely.
 Therefore $K$ is not two-convex.
 (See  figure in the ``only if'' part of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}).)
+\footnote{ \color{red} V: the figure needs to be added}
 
 \parit{If part.}
 Recall that a smooth function $f\:\EE^m\to\RR$ is called \index{strongly convex function}\emph{strongly convex} if its Hessian is positive definite at each point.
@@ -197,7 +199,7 @@ If this critical point is positive, then it is easy to decrease the maximum a li
 
 Consider a closed curve $\gamma\:\mathbb{S}^1\to K$ that is null-homotopic in~$K$.
 Note that the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
-is convex.
+is convex on $\EE^m$.
 Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ in general position.
 From above, there is a disc in $K$ with boundary $\gamma$
 that lies arbitrarily close to $\Conv\gamma$.
@@ -219,7 +221,7 @@ that is null-homotopic in $\Omega$ is also null-homotopic in $W\cap \Omega$.
 \end{thm}
 
 This statement is intuitively obvious, but the proof is not trivial;
-it use the following classical result.
+it uses the following classical result.
 An alternative definition of two-convexity using homology instead of homotopy is mentioned in the last section.
 For this definition the proof is simpler.
 
@@ -318,7 +320,7 @@ can be described as a subgraph
 =
 \set
 {(x_1,\dots,x_m)\in \cBall[p,\eps]}
-{x_m\le f(x_1,\dots,x_{m-1}}.\]
+{x_m\le f(x_1,\dots,x_{m-1})}.\]
 
 Fix $s\in[-\eps,\eps]$.
 Since $\eps$ is small and $k_2(p)>0$, the restriction 
@@ -365,7 +367,7 @@ All $W^i$ are $\CAT(0)$.
 This claim is proved by induction.
 Base: $W^1=V^1$ is $\CAT(0)$ as a convex subset in~$\EE^m$.
 
-\parit{Step:} Assume that $W^i$ is $\CAT(0)$.
+\parit{Induction Step:} Assume that $W^i$ is $\CAT(0)$.
 According to \ref{eq:VcVnV}, 
 \[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
 Moreover, this is a convex set in $\EE^m$ 
@@ -413,13 +415,13 @@ In this section, we  consider inheritance of upper curvature bounds by subsets o
 
 \begin{thm}{Theorem}\label{thm:bishop-plane}
 Let $\Omega$ be an open simply connected subset of~$\EE^2$.
-Equip $\Omega$ with its induced length metric and denote its completion 
+Equip $\Omega$ with the induced length metric and denote its completion 
 by~$K$.
 Then $K$ is $\CAT(0)$.
 \end{thm}
 
 The assumption that the set $\Omega$ is open is not critical;
-instead one can assume that the induced length metric takes finite values at all points of~$\Omega$.
+instead one can assume that the induced length metric takes finite values at all points of~$\Omega$.\footnote{\color{red} V: what does that mean? }
 We sketch the proof given by Richard Bishop \cite{bishop} and leave the details to be finished as an exercise.
 A generalization of this result is proved by 
 Alexander Lytchak and Stefan Wenger
@@ -488,7 +490,7 @@ Show that the completion of $\tilde \Theta$ is $\CAT(1)$.
 \begin{thm}{Exercise}\label{ex:bishop-sphere}
 Prove the following partial case of the proposition:
 
-Let $K$ be closed subset of the unit sphere $\mathbb{S}^2$ that does not contain a closed hemisphere.
+Let $K$ be a closed subset of the unit sphere $\mathbb{S}^2$ that does not contain a closed hemisphere.
 Suppose $K$ is simply connected and bounded by a simple Lipschitz curve.
 Show that $K$ with induced length metric is $\CAT(1)$.
 \end{thm}
