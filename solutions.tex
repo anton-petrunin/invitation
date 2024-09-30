@@ -1,4 +1,4 @@
-%%!TEX root = invitation-springer.tex
+%%!TEX root = invitation-CAT.tex
 \backmatter
 \chapter*{Semisolutions}
 \addcontentsline{toc}{chapter}{Semisolutions}
@@ -131,7 +131,7 @@ and
 $\beta$ is $(b+\eps)$-Lipschitz.
 Therefore the path $t\mapsto (\alpha(t),\beta(t))$ is $(c+2\cdot \eps)$-Lipschitz.
 In particular, its length cannot exceed $c+2\cdot \eps$ for any $\eps>0$.
-Hence $\spc{W}$ meets the conditions in the definition of length space.
+Hence $\spc{W}$ meets the conditions in the definition of a length space.
 
 \parbf{\ref{ex:geod-prod}.}
 Let $\gamma\:t\mapsto (\alpha(t),\beta(t))$ be a geodesic path in $\spc{W}=\spc{U}\times \spc{V}$.
@@ -141,7 +141,7 @@ Show and use that
 \\
 \dist{\beta(t_0)}{\beta(t_1)}{\spc{U}}&=b\cdot \dist{\gamma(t_0)}{\gamma(t_1)}{\spc{W}}
 \end{align*}
-for any $t_0$ and $t_1$ and some fixed values $a\ge 0$ and $b\ge 0$ such that $a^2+b^2=1$.
+for any $t_0$ and $t_1$ and some fixed values $a\ge 0$ and $b\ge 0$ such that $a^2+b^2=1$. To see this first show that both $\alpha$ and $\beta$ are distance minimizing. Use this to reduce the problem to the case where both $\spc{U}$ and $\spc{V}$ are intervals.
 
 
 \parbf{\ref{ex:cone-geod}.}
@@ -149,7 +149,7 @@ Let $\gamma$ be a unit-speed parametrization of $[pq]$.
 Show that after shifting the parametrization,  we can assume that $|\gamma(t)|=\sqrt{a^2+t^2}$ for some constant $a$.
 
 Let $\hat \gamma(t)$ be the projection of $\gamma(t)$ to $\spc{U}$.
-Show and use that $t\z\mapsto \hat\gamma(a\cdot \tan t)$ is a geodesic in $\spc{U}$.
+Show and use that $t\z\mapsto \hat\gamma(a\cdot \tan t)$ is a geodesic in $\spc{U}$.  To see this first observe that $\hat \gamma$ is distance minimizing. Use this to reduce the problem to the case when $\spc{U}$ is an interval.
 
 \parbf{\ref{ex:product-cone}.} A point in $\RR\times \Cone \spc{U}$ can be described by a triple $(x,r,p)$, where $x\in \RR$, $r\in \RR_{\ge}$ and $p\in \spc{U}$.
 Correspondingly, a point in $\Cone[\Susp\spc{U}]$ can be described by a triple $(\rho,\phi,p)$, where $\rho\in \RR_\ge$, $\phi\in [0,\pi]$ and $p\in \spc{U}$.
@@ -159,16 +159,21 @@ $\Cone[\Susp\spc{U}]\to\RR\times\Cone\spc{U}$ defined as
 \[(\rho,\phi,p)\mapsto(\rho\cdot\cos\phi,\rho\cdot\sin\phi,p)\] 
 is the needed isometry.
 
+
+
+
+
 \parbf{\ref{ex:adjacent-angles}.}
-Assume the contrary; that is
-\[\mangle\hinge pxz+\mangle\hinge pyz< \pi.\]
-By the  triangle inequality for angles (\ref{claim:angle-3angle-inq})
-we have 
-\[\mangle\hinge pxy<\pi.\]
-The latter contradicts the triangle inequality for the triangle $\trig{\bar x}{p}{\bar y}$,
-where the points
-$\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
-are sufficiently close to~$p$.
+Use the triangle inequality for angles and \ref{ex:angle-on-shortest}.
+%Assume the contrary; that is
+%\[\mangle\hinge pxz+\mangle\hinge pyz< \pi.\]
+%By the  triangle inequality for angles (\ref{claim:angle-3angle-inq})
+%we have 
+%\[\mangle\hinge pxy<\pi.\]
+%The latter contradicts the triangle inequality for the triangle $\trig{\bar x}{p}{\bar y}$,
+%where the points
+%$\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$
+%are sufficiently close to~$p$.
 
 \parbf{\ref{ex:hausdorff-conv}.}
 By definition of Hausdorff convergence
@@ -184,7 +189,7 @@ note that it is not a converging sequence in the sense of Hausdorff.
 On the other hand, the set of all limit points is well defined --- it is the intersection $A\cap B$.
 
 \parit{Comment.} The set $\ushort{A}_\infty$ of all limits  of sequences $p_n\in A_n$ is called the \emph{lower closed limit}
-and the set $\bar{A}_\infty$ of all partial limits of such sequences is called the \emph{upper closed limit}.
+and the set $\bar{A}_\infty$ of all partial (i.e. subsequential) limits of such sequences is called the \emph{upper closed limit}.
 Clearly $\ushort{A}_\infty\subset \bar{A}_\infty$.
 If $\ushort{A}_\infty=\bar{A}_\infty$, then it is called  the \emph{closed limit} of~$A_n$.
 All these convergences were introduced by Felix Hausdorff in~\cite{hausdorff}.
