@@ -310,12 +310,14 @@ This provides a counterexample to the statement of the exercise if  $\spc{U}$ is
 
 
 \parbf{\ref{ex:convex-distfun}.}
+
+"Only if" direction.
 It is sufficient to prove Jensen's inequality
 \[h(\tfrac{t_0+t_1}2)\le \tfrac12(h(t_0)+h(t_1))\]
 where $h(t)\df f\circ \gamma(t)-\tfrac12\cdot t^2$.
-Observe that the inequality holds in Euclidean plane, and 
-apply that triangle $[p\,\gamma(t_0)\,\gamma(t_1)]_{\spc{U}}$ is thin.
-
+Observe that the inequality holds in the Euclidean plane, and 
+apply that the triangle $[p\,\gamma(t_0)\,\gamma(t_1)]_{\spc{U}}$ is thin.
+ The "if" direction is proved by reversing the above argument.
 \parbf{\ref{ex:convex-dist}.}
 Observe that it is sufficient to show that 
 \[\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\le (1-t)\cdot\dist{\gamma_1(0)}{\gamma_2(0)}{\spc{U}}+t\cdot \dist{\gamma_1(1)}{\gamma_2(1)}{\spc{U}}.\]
@@ -387,7 +389,7 @@ $\trig{\tilde p}{\tilde p^*}{\tilde q^*}$ and $\trig{\tilde p}{\tilde q}{\tilde 
 of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
 the points $\tilde p^*$ and $\tilde q$ lie on the opposite sides from $[{\tilde p}{\tilde q^*}]$.
 
-From thinness of triangles $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$, we get that
+From thinness of the triangles $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$, we get that
 \[\mangle\hinge{\tilde p^*}{\tilde p}{\tilde q^*},\mangle\hinge{\tilde q^*}{\tilde p^*}{\tilde q}\ge \tfrac\pi2.\]
 Hence 
 \[\dist{\tilde p}{\tilde q}{}\ge \dist{\tilde p^*}{\tilde q^*}{}.\]
@@ -434,10 +436,10 @@ therefore $f(z)= 0$ for any $z\z\in [x\,\alpha(s)]$;
 that is, $[x\,\alpha(s)]\z\subset K$, a contradiction.
 
 \parit{Comment.}
-This statement generalizes the theorem of Heinrich Tietze, and the proof presented here is nearly identical to the original proof given in~\cite{tietze}.
+This statement generalizes a theorem of Heinrich Tietze ~\cite{tietze}, and the proof presented here is nearly identical to the original proof given by Tietze.
 
 \parbf{\ref{ex:reshetnyak-doubling}.}
-The ``if'' part follows from Reshetnyak gluing theorem (\ref{thm:gluing}).
+The ``if'' part follows from the Reshetnyak gluing theorem (\ref{thm:gluing}).
 
 Assume $\spc{W}$ is $\CAT(0)$.
 Note that one copy of $\spc{U}$ embeds isometrically in $\spc{W}$.
