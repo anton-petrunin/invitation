@@ -452,6 +452,8 @@ Arrive at a contradiction with the uniqueness of geodesics (\ref{ex:CAT-geodesic
 
 
 \parbf{\ref{ex:supporting-planes}.}
+
+Note that $f$ is convex as the sum of two convex functions.
 By approximation, it is sufficient to consider the case when 
 $A$ and $B$ have smooth boundary. 
 
@@ -472,7 +474,7 @@ Finally, suppose $z_0\in\partial A\cap\partial B$.
 Then the set  $\dot A$ (respectively, $\dot B$) is defined as the unique supporting half-space to $A$ (respectively, $B$) at $z_0$ containing $A$ (respectively, $B$).
 
 Suppose $f(z)<f(z_0)$ for some $z\in \dot A\cap\dot B$.
-Since $f$ is concave,
+Since $f$ is convex,
 $f(\bar z)<f(z_0)$ for any $\bar z \in \left[zz_0\right[$.
 Since $\left[zz_0\right[\cap A\cap B\ne\emptyset$,
 the latter contradicts the fact that $z_0$ is minimum point of $f$ on $A\cap B$.
@@ -495,7 +497,7 @@ Note that all the intersections of  the walls  have $\eps$-wide corners for
 The proof can be guessed from the picture.
 
 \parbf{\ref{ex:centrally-simmetric-walls}.}
-Note that any centrally symmetric convex closed set in Euclidean space is a product of a compact centrally symmetric convex set and a subspace.
+Note that any centrally symmetric convex closed set in $\RR^m$ is a product of a compact centrally symmetric convex set and a subspace.
 
 It follows that there is $R<\infty$
 such that if $X$ is an intersection of an arbitrary number of walls, then for any point $p\in X$ there is an isometry of $X$ 
@@ -504,7 +506,7 @@ that moves  $p$ to a point in the ball $\oBall(0,R)$.
 It remains to repeat the proof of Exercise~\ref{ex:compact-walls}.
 
 \parbf{\ref{cor:balls:dim=1}.}
-Imagine that each ball has zero radius, then may think that balls pass thru each other.
+Imagine that each ball has zero radius, then may think that the balls pass thru each other.
 That is, every ball moves with constant speed along the line.
 Let $x_i(t)$ be the coordinate of $i^{\text{th}}$ ball at time $t$.
 Note that the graph $x_i$ in the $(t,x)$-plane is a straight line.
@@ -512,14 +514,14 @@ Every two lines have at most one intersection and each collision corresponds to 
 We have $n$ lines and therefore at most $\binom n2$ collisions.
 
 The general case, with balls of radius $r>0$ can be reduced to the case above.
-To do this, one have to exclude the space occupied by the balls.
-In other words, if the $i^{\text{th}}$ ball centered at $x$, then the we assume that its coordinate is 
+To do this, one has to exclude the space occupied by the balls.
+In other words, if the $i^{\text{th}}$ ball centered at $x$, then  we assume that its coordinate is 
 $x-2\cdot r\cdot i$.
 With these new coordinates, the balls behave exactly as the balls with vanishing radii.
 
 \parbf{\ref{ex:collision}.}
-Assume that trajectory $\gamma$ defined in an interval $[a,b)$
-and collisions accumulate at $b$.
+Assume that a trajectory $\gamma$ is defined on the interval $[a,b)$
+and the collisions accumulate at $b$.
 Consider the infinite puff pastry $\spc{R}_\gamma$ for $\gamma$
 and let $\bar\gamma$ be its lift.
 
