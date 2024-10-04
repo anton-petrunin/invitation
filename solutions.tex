@@ -629,7 +629,7 @@ It remains to note that $\tilde {\spc{U}}$ can be obtained as the limit of $\spc
 
 
 \parbf{\ref{ex:unique-geod=CAT}.}
-Assume $\spc{P}$ is not $\CAT(0)$.
+It is clearly enough to show that  $\spc{P}$ is locally $\CAT(0)$. Assume the contrary.
 Then by \ref{thm:PL-CAT}, a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
 We can assume that $\Sigma$ has minimal possible dimension;
 so, by \ref{thm:PL-CAT}, $\Sigma$ is locally $\CAT(1)$.
@@ -648,13 +648,14 @@ Hence we can construct two geodesics $\gamma_1$ and $\gamma_2$ in $\spc{P}$ with
 
 It remains to consider the case when $\alpha_1$ (and therefore $\alpha_2$) is not length minimizing.
 
-Pass to its maximal length minimizing arc $\bar\alpha_1$ of $\alpha_1$.
+Pass to a maximal length minimizing arc $\bar\alpha_1$ of $\alpha_1$.
 Since $\Sigma$ is locally $\CAT(1)$, \ref{cor:discrete-paths} implies that 
 there is another geodesic $\bar\alpha_2$ in $\Sigma_p$ that shares endpoints with $\bar\alpha_1$.
 It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\alpha_2$.
 
 \parit{Comments.}
 By \ref{ex:CAT-geodesic}, the given condition is a necessary and sufficient.
+\footnote{ \color{red} I don't understand what this statement means}
 
 In the proof, one can apply \ref{ex:geod-circle};
 in this case the last part of the arguing is not needed.
@@ -694,7 +695,8 @@ so that the corresponding simplices form a nested sequence
 \[\triangle_{v_1}\subset\dots\subset\triangle_{v_\kay}.\]
 
 \parit{Comment.}
-There are a compact metrizable contractible and locally contractible spaces that do not admit a $\CAT(1)$ length metrics \cite{460763}.
+There are a compact metrizable contractible and locally contractible spaces that do not admit a $\CAT(1)$ length metric \cite{460763}.
+\footnote{ \color{red} I am not sure why this comment is here. is the point that such spaces can not be triangulated?}
 
 \parbf{\ref{ex:flag>=pi/2}.}
 Use induction on the dimension  to prove that if in a spherical simplex $\triangle$ every edge is at least $\tfrac\pi2$, then 
@@ -753,8 +755,8 @@ That is, a covering of $\square_{\mathcal{S}}$ is not aspherical and therefore $
 The solution goes along the same lines as the proof of Lemma~\ref{lem:example-pi_infty}, but few changes are needed.
 
 The cycle $\gamma$ is taken in the complement $\mathcal{S}\setminus\{v\}$ (or, alternatively, in the link of $v$ in $\mathcal{S}$).
-Instead of a vertex, one has to take edge $e$ in $\tilde Q$ that corresponds to $v$; so we have to show existence of large cycle in $\tilde Q$ that is not contractible in $\tilde Q\setminus e$.
-Think that $G$ is made from the squares parallel to the squares of the cubical complex which meet the edges of the complex orthogonally at their midpoints.
+Instead of a vertex, one has to take the edge $e$ in $\tilde Q$ that corresponds to $v$; so we have to show existence of large cycle in $\tilde Q$ that is not contractible in $\tilde Q\setminus e$.
+Consider $G$ that is made from the squares parallel to the squares of the cubical complex which meet the edges of the complex orthogonally at their midpoints.
 Note that formally speaking, $G$ is not a subcomplex of the cubical analog.
 
 
@@ -832,9 +834,9 @@ Since any closed curve can be considered as a short map from a boundary of a dis
 Therefore any injective space is simply connected.
 
 Therefore the globalization theorem and flag condition (\ref{thm:hadamard-cartan} and \ref{thm:flag}) imply that it is sufficient to show that each link in $Q$ is flag.
-Further, by \ref{prop:no-trig} it is sufficient to show that link of each cube in $Q$ satisfies no-triangle condition.
+Further, by \ref{prop:no-trig} it is sufficient to show that link of each cube in $Q$ satisfies the no-triangle condition.
 
-Arguing by contradiction, we can assume that no-triangle condition does not hold at a vertex $v$; that is, a zero-dimensional cube.
+Arguing by contradiction, we can assume that the no-triangle condition does not hold at a vertex $v$; that is, a zero-dimensional cube.
 In this case $v$ is a vertex of there edges $e_x$, $e_y$, and $e_z$;
 each pair of edges belong to one of the squares $s_x$, $s_y$, and $s_z$ with complementary index, but the squares $s_x$, $s_y$, $s_z$ do not belong to one cube.
 For higher dimensional cubes we have a product of this configuration with a cube.
@@ -849,7 +851,9 @@ Let $m_x$, $m_y$ and $m_z$ be the midpoints of $e_x$, $e_y$, and $e_z$ respectiv
 Consider 3 balls with centers $m_x$, $m_y$, and $m_z$ and radius $\tfrac14$.
 Observe that each pair of balls have a common point;
 but all three together have no points of intersection.
-It follows that $(Q,\ell^\infty)$ is not an injective space --- it does not contain a point on distance $\tfrac14$ from $m_x$, $m_y$, and $m_z$ --- a contradiction.
+It follows that $(Q,\ell^\infty)$ is not an injective space --- it does not contain a point at distance $\tfrac14$ from $m_x$, $m_y$, and $m_z$ --- a contradiction.
+
+\footnote{\color{red} V: I don't understand why this means that $(Q,\ell^\infty)$ is not injective }
 
 
 \parit{\ref{SHORT.cube-1} $\Rightarrow$ \ref{SHORT.cube-2}.}
@@ -893,8 +897,9 @@ together with the construction in the inheritance lemma (\ref{lem:inherit-angle}
 
 
 \parbf{\ref{ex:bishop-sphere}.}
-From  Exercise~\ref{ex:hemisphere}, it follows that if a lune in $\mathbb{S}^2$ has perimeter smaller then $2\cdot\pi$, then it contains a closed hemisphere in its interior or lies in an open hemisphere.
+One needs to adapt the proof of the proof of Theorem~\ref{thm:bishop-plane} to the spherical case. From  Exercise~\ref{ex:hemisphere}, it follows that if the image in $\mathbb{S}^2$  of a lune in $K$ has perimeter smaller then $2\cdot\pi$, then it contains a closed hemisphere in its interior or lies in an open hemisphere.
 The same holds for a triangular region with concave sides.  
+
 
 By the assumption, $\Theta$ does not contain a closed hemisphere. 
 That is, the first case cannot happen.
@@ -1035,14 +1040,14 @@ a contradiction.
 
 \parbf{\ref{ex:CAT=>two-convex}.}
 Suppose $K$ is not two-convex;
-let $\gamma$ be a closed simple curve in a plane $W$ that do not meet Definition~\ref{def:two-convex}.
-Note that $W$ is not a vertical plane; denote by $V$ the three-dimensional subspace that spanned by $W$ and vertical direction.
+let $\gamma$ be a closed simple curve in a plane $W$ that does not meet Definition~\ref{def:two-convex}.
+Note that $W$ is not a vertical plane; denote by $V$ the three-dimensional subspace that spanned by $W$ and the vertical direction.
 
 Note that $\gamma$ is contractible in $V\cap K$.
-Act as in \ref{ex:inner-support} to show that there exists a plane triangle $\triangle\subset V$ whose sides lie completely in $K$, 
-but whose interior contains points from the complement $\EE^m\setminus K$.
+Argue  as in \ref{ex:inner-support} to show that there exists a plane triangle $\triangle\subset V$ whose sides lie completely in $K$, 
+but whose interior contains points from the complement $\EE^m\setminus K$. This triangle is not thin in $K$.
 \parbf{\ref{ex:two-convex-not-a-CAT}.}
-Clearly, the set $W$ is two-convex, and so is $K$ as the intersection of two-convex sets.
+Clearly, the set $W$ is two-convex, and so is $K$ as the intersection of two two-convex sets.
 
 Consider two $2$-dimensional hemispheres $H_1$ and $H_2$ in $\mathbb{S}^3$ 
 such that the intersection $H_1\cap H_2$ is a geodesic $[\xi\zeta]$ orthogonal to the boundary equators of $H_1$ and $H_2$ and 
