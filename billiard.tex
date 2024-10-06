@@ -14,7 +14,7 @@ Given a quadruple of points $p,q,x,y$ in a metric space $\spc{X}$,
 consider two model triangles in the plane 
 $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\EE^2}$ 
 and 
-$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$ and lying on opposite sides of $[\tilde x\tilde y]$.
+$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$.
 
 \begin{wrapfigure}{r}{25mm}
 \vskip-4mm
@@ -42,7 +42,7 @@ If one of the spherical model triangles is undefined,\footnote{That is, if
 \dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
 then it is assumed that $\CAT(1)$ comparison automatically holds for this quadruple.
 
-We can do the same for the model plane of curvature $\kappa$ for arbitrary $\kappa$;
+We can do the same for the model plane of given curvature $\kappa$;
 that is, an appropriately rescled sphere if $\kappa>0$, 
 the Euclidean plane if $\kappa=0$ 
 and a rescaled Lobachevsky plane if $\kappa<0$.
@@ -54,7 +54,7 @@ so, if you see $\CAT(\kappa)$, you can assume that $\kappa$ is $0$ or~$1$.
 If all quadruples in a metric space $\spc{X}$ satisfy $\CAT(\kappa)$ comparison, then we say that the space $\spc{X}$ is $\CAT(\kappa)$.
 (Note that $\CAT(\kappa)$ is an adjective.)
 
-In order to check $\CAT(\kappa)$ comparison for a quadruple of points, it is sufficient to know the 6 distances between all pairs of points in the quadruple.
+In order to check $\CAT(\kappa)$ comparison for a given quadruple of points, it is sufficient to know the 6 distances between all pairs of points in it.
 This observation implies the following.
 
 \begin{thm}{Proposition}\label{prop:cat-limit}
@@ -200,8 +200,8 @@ Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 \includegraphics{mppics/pic-800}
 \end{wrapfigure}
 
-Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin (see the next section \footnote {\color{red} V: why refer to the next section here?}) and 
-$\dist{\gamma(0)}{\gamma(b)}{}<b$ we have
+Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin and 
+$\dist{\gamma(0)}{\gamma(b)}{}<b$, we have
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
 for all small~$\eps>0$.
 That is, $\gamma$ is not length-minimizing on the interval $[a-\eps,a+\eps]$ for any $\eps>0$,
@@ -213,7 +213,7 @@ The spherical case is proved in the same way.
 \begin{thm}{Exercise}\label{ex:convex-distfun}
 Let $\spc{U}$ be a complete geodesic space.
 Show that $\spc{U}$ is $\CAT(0)$ if and only if the function $f=\tfrac12\cdot\distfun_p^2$ is \index{1-convex function}\emph{1-convex} for any $p\in \spc{U}$;
-that is, the function $t\mapsto f\circ \gamma(t) - \tfrac 12\cdot t^2$ is convex for any unit-speed \footnote{\color{red} V: in our conventions all geodesics are unit speed } geodesic $\gamma$.
+that is, the function $t\mapsto f\circ \gamma(t) - \tfrac 12\cdot t^2$ is convex for any geodesic $\gamma$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:convex-dist}
@@ -228,12 +228,12 @@ Let $\iota$ be an isometry of a $\CAT(0)$ space $\spc{U}$ to itself.
 Show that its \index{displacement function}\emph{displacement function} $f\:\spc{U}\to\RR$ defined by
 \[f(x)\df\dist{x}{\iota(x)}{\spc{U}}\]
 is \index{convex function}\emph{convex};
-that is, the function $t\mapsto f\circ \gamma(t)$ is convex for any geodesic $\gamma$.
+that is, the function $t\mapsto f\circ \gamma(t)$ is convex for any geodesic~$\gamma$.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:convex-nbhd}
-Let $A$ be a convex closed set in a proper \footnote{\color{red} V: I don't think proper is needed here. } geodesic $\CAT(0)$ space $\spc{U}$;
+Let $A$ be a convex closed set in a geodesic $\CAT(0)$ space $\spc{U}$;
 that is, if $x,y\in A$, then $[xy]\subset A$.
 Show that $\distfun_A$ is convex.
 
@@ -253,7 +253,7 @@ For each point $p\in \spc{U}$ there is a unique point $p^*\in K$ that minimizes 
 \end{subthm}
 
 \begin{subthm}{ex:closest-point:b}
-The closest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short (i.e. 1-Lipschitz). 
+The nearest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-point:a} is short (that is, 1-Lipschitz). 
 \end{subthm}
 
 \end{thm}
@@ -276,7 +276,7 @@ into two triangles $\trig p x z$ and $\trig p y z$;
 that is, $\trig p x z$ and $\trig p y z$ have a common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
 
 \begin{wrapfigure}{r}{25mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-810}
 \end{wrapfigure}
@@ -327,7 +327,7 @@ $F\:\tilde D\to \dot D$ that sends
 \end{align*}
 
 \begin{wrapfigure}{r}{50mm}
-\vskip-0mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-830}
 \vskip0mm
@@ -387,8 +387,8 @@ It is straightforward to see that $\spc{W}$ is a proper geodesic space when equi
 \end{align*}
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
 
-The  space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
-If one applies this construction to two copies of one space $\spc{U}$ with a closed convex subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
+The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
+If one applies this construction to two copies of one space $\spc{U}$ with a closed subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
 
 We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
 this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by~$A$.
@@ -423,7 +423,7 @@ Then $\spc{W}$ is $\CAT(0)$.
 \end{thm}
 
 \begin{wrapfigure}{o}{45mm}
-\vskip-2mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-840}
 \end{wrapfigure}
@@ -455,7 +455,7 @@ Gluing of two copies of $\spc{U}$ along the copies of $A$ is called \index{doubl
 
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
 Suppose $\spc{W}$ is a doubling of a geodesic space $\spc{U}$ along its closed subset $A$.
-Show that $\spc{W}$ is $\CAT(0)$ if and only if  $\,\spc{U}$ is $\CAT(0)$, and $A$ is convex in $\spc{U}$.
+Show that $\spc{W}$ is $\CAT(0)$ if and only if $\,\spc{U}$ is $\CAT(0)$, and $A$ is convex in $\spc{U}$.
 \end{thm}
 
 \section{Comments}
@@ -879,7 +879,7 @@ If the balls are identical, then $N$ depends only on~$n$.
 The proof below admits a straightforward generalization to all dimensions.
 
 \begin{thm}{Exercise}\label{cor:balls:dim=1}
-Show that in the case of identical balls in the one-dimensional space (i.e. $\RR$) 
+Show that in the case of identical balls in the one-dimensional space (that is, in $\RR$) 
 the total number of collisions cannot exceed $N=\tfrac{n\cdot(n-1)}2$.
 \end{thm}
 

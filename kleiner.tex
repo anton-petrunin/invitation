@@ -19,14 +19,13 @@ The map $\spx{}\:\triangle^k\mapsto \EE^n$ defined by $\spx{}\:\bm{m}\mapsto z$ 
 If needed we may denote this map by $\spx{\bm{p}}$ or, more generally, $\spx{\bm{f}}$.
 The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f_0,f_1,\dots,f_k)$.
 Formally speaking, the definition \ref{eq:f-spx} makes sense for any array of functions in a metric space;
-although, the map might be undefined or non-uniquely defined.
+but in this case, the map might be undefined or non-uniquely defined.
 
 Further, we will work with this definition in $\CAT(0)$ spaces instead of $\EE^n$.
 It will be used to define and study dimension of $\CAT$ spaces.
 We will use that on a geodesic $\CAT(0)$ space
 functions of the type $f=\tfrac12\cdot\distfun_{p}^2$ are 1-convex; see \ref{ex:convex-distfun}.
-This will be the only way we'll use the  $\CAT(0)$ condition for most of this chapter.
-
+This will be the only way we will use the $\CAT(0)$ condition for most of this chapter.
 
 \section{Barycentric simplex}
 
@@ -59,7 +58,8 @@ where $s$ is the infimum of $f$.
 \end{clm}
 
 \parit{Uniqueness.}
-Assume that $x$ and $y$ are distinct minimum points of $f$. Let $z$ be a midpoint of the geodesic $[x y]$.
+Assume that $x$ and $y$ are distinct minimum points of $f$.
+Let $z$ be the midpoint of a geodesic $[x y]$.
 From \ref{midpoint} we have
 \[f(z)<f(x)=f(y)\] 
 --- a contradiction. 
@@ -370,7 +370,7 @@ If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
 The topological dimension of $\spc{X}$ will be denoted by $\TopDim\spc{X}$.
 \end{thm}
 
-The invariants satisfying the following two statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called  the``dimension'';
+The invariants satisfying the following two statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called  the \index{dimension}\emph{dimension};
 for that reason, we call these statements axioms.
 
 \begin{thm}{Normalization axiom}
@@ -598,20 +598,20 @@ Conclude that for any integer $m\ge 1$ and real $\alpha\ge m$ there is a compact
 \section{Remarks}
 
 The barycenters in $\CAT(\kappa)$ spaces were introduced by Bruce Kleiner \cite{kleiner}.
-He also proved the dimension theorem; an improvement was proved by Alexander Lytchak \cite{lytchak:diff}.
+He also proved the dimension theorem;
+a more exact statement is due to Alexander Lytchak \cite{lytchak:diff}.
 
-It is not known if the dimension theorem holds for arbitrary complete geodesic $\CAT(\kappa)$ spaces.
-It was conjectured that it is so by Bruce Kleiner \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
+Bruce Kleiner made a conjecture that the dimension theorem holds for arbitrary complete geodesic $\CAT(\kappa)$ spaces see \cite{kleiner} and also \cite[p.~133]{gromov:asymt-inv}.
 For separable spaces, the answer is ``yes'', and it follows from Kleiner's argument \cite[Corollary 14.13]{alexander-kapovitch-petrunin-2025}.
 
 One may wonder if bi-H\"older condition \ref{thm:dim-infty-CBA:mnfld} can be improved to bi-Lipschitz;
-this seems to be unknown even for compact spaces.
+this is unknown even for compact spaces.
 However if a compact geodesic $\CAT(0)$ space $\spc{U}$ has finite topological dimension $m$,
 then a slight modification of Kleiner's technique can be used to show that there is a bi-Lipschitz embedding of an $m$-cube into $\spc{U}$ \cite[Theorem 14.15]{alexander-kapovitch-petrunin-2025}.
 In particular, there is a bi-Lipschitz embedding of an $n$-cube for any $n\le m$.
 If $\TopDim\spc{U}=\infty$, then we expect existence of a bi-Lipschitz embedding of an $n$-cube for any integer $n\ge1$.
 The statement is trivial for $n=1$; in this case any geodesic gives an isometric embedding.
-For $n=2$, one can get it from the the fact that minimal (or metric minimizing) surfaces in $\spc{U}$ are $\CAT(0)$ \footnote{ \color{red} V: reference?}(any such surface is locally bi-Lipschitz to the Euclidean plane).
-For $n\ge 3$ the question remains open.%??? solved by Stadler and Co
-
-
+For $n=2$, it follows since minimal and metric minimizing surfaces in $\spc{U}$ are $\CAT(0)$;
+see \cite{petrunin-stadler} and the references therein.
+Any such surface is locally bi-Lipschitz to the Euclidean plane.
+For $n\ge 3$ the question remains open.

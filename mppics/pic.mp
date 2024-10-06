@@ -1847,6 +1847,36 @@ clip currentpicture to (-1.2,-1.2)*u--(1.2,-1.2)*u--(1.2,1.2**2/2)*u--(-1.2,1.2*
 
 endfig;
 
+beginfig(1202) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.l=(-.5,0)*u;
+z.r=(.5,0)*u;
+
+z.x=(-1.4,.5)*u;
+z.y=(-.2,-.8)*u;
+z.z=(1.5,.6)*u;
+
+
+p0=z.x--z.y--z.z--z.x;
+p1=z.l{up}..tension 3..{down}z.r;
+p2=z.r{down}..tension 3..{up}z.l;
+p3=point .1 of p1{direction .1 of p1}..{direction .9 of p1}point .9 of p1;
+
+hatchfill (p0--subpath (0,.1) of p1--p3--subpath (.9,1) of p1--p2--cycle) withcolor (77, 1mm, -.5bp);
+
+draw p0;
+draw subpath (0,.1) of p1;
+draw subpath (.1,.9) of p1 dashed evenly;
+draw subpath (.9,1) of p1;
+draw p2;
+draw p3;
+
+
+endfig;
+
 beginfig(1203) 
 save u,p;
 path p[];
