@@ -371,11 +371,16 @@ The spherical case is done along the same lines.
 \section{Reshetnyak's gluing}\label{sec:cba-gluing}
 
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ are proper geodesic spaces 
-with isometric closed convex sets $A^i\subset\spc{U}^i$ and let $\iota\:A^1\to A^2$ be an isometry.
-Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$. %??? repeating
+$\spc{U}^1$ and $\spc{U}^2$ are spaces 
+with isometric closed sets $A^i\subset\spc{U}^i$ and let $\iota\:A^1\to A^2$ be an isometry.
+Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$.
+Let us equip $\spc{W}$ with the minimal metric such that both natural maps $\spc{U}^1\to \spc{W}$ are short; see \cite{petrunin-2023}.
 
-It is straightforward to see that $\spc{W}$ is a proper geodesic space when equipped with the following metric
+The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
+If one applies this construction to two copies of one space $\spc{U}$ with a closed subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
+
+If $\spc{U}^1$ and $\spc{U}^2$ are proper and geodesic and $A^i$ are convex in $\spc{U}^i$,
+then it is easy to check that $\spc{W}$ is a proper geodesic space as well and its metric can be described the following way:
 \begin{align*}
 \dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}^i}
 \\
@@ -386,9 +391,6 @@ It is straightforward to see that $\spc{W}$ is a proper geodesic space when equi
 &\quad\text{if}\quad x\in \spc{U}^1\quad\text{and}\quad y\in \spc{U}^2.
 \end{align*}
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
-
-The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
-If one applies this construction to two copies of one space $\spc{U}$ with a closed subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
 
 We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
 this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by~$A$.
@@ -556,9 +558,7 @@ Hence the second statement follows.
 \qeds
 
 %??? Sasha suggests to add the following def:
-
 %Say that a puff-pastry is "simple" (or whatever) if there exists a geodesic connecting a point from the first with a point in the last  leave and which does not cut $A_i\cap A_j$  for no $i,j$.
-
 %The theorem about pastry you prove is that if the angles are large there are no high simple puff pastries. 
 
 \begin{thm}{Definition}
@@ -661,13 +661,6 @@ Hence the sublemma.
 
 }
 
-{
-
-\begin{wrapfigure}{r}{26mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-880}
-\end{wrapfigure}
 
 In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
 
@@ -683,7 +676,12 @@ and $z_0$ is also a point of minimum of the restriction $f|_{\dot A\cap \dot B}$
 
 \end{thm}
 
-}
+\begin{wrapfigure}{r}{26mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-880}
+\vskip-4mm
+\end{wrapfigure}
 
 \parit{Proof of \ref{lem:end-to-end-convex}.}
 Fix arbitrary $x,y\in \EE^m$.
