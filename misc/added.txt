@@ -1,0 +1,32 @@
+Updates and additions in "An invitation to Alexandrov geometry: CAT(0) spaces" by Stephanie Alexander, Vitali Kapovitch, and Anton Petrunin.
+
+The book is mostly directed at graduate students and motivated undergraduates.
+It aims to demonstrate the beauty and power of Alexandrov geometry by reaching interesting applications and theorems with a minimum of preparation.
+The material can be divided into five main topics:
+
+1. Gluing and its applications to billiards.
+
+2. Majorization theorem.
+
+3. Globalization theorem and exotic examples of aspherical manifolds.
+
+4. CAT(0) subsets of Euclidean space.
+
+5. Barycenters and their application to dimension theory.
+
+Let us comment on the two topics (#2 and #5) that are added in the revised version.
+
+Reshetnyak's majorization theorem is a key result in the theory of CAT(0) spaces.
+It is a very intuitive reformulation of CAT(0) comparison.
+The power of this reformulation is illustrated in a number of examples.
+(We also noticed that students are excited to learn this subject.)
+
+Barycenters were introduced by Bruce Kleiner in the late 1990s; they provide a new technique based on a nonstandard application of convexity.
+Barycenters play a key role in the dimension theory of CAT(0) spaces, one of the most fundamental topics in the theory.
+The main result proves the equivalence of several definitions of the dimensions of CAT(0) spaces.
+
+Besides these main changes, we made many improvements in the original text, including a number of new exercises, corrections to several mistakes and simplifications of proofs.
+We also subdivided the material so that it better suits the teaching needs.
+Now the material is presented in an even more elementary way.
+
+All these revisions are based on the teaching experience we have gained from the first version of the book since its publication.
