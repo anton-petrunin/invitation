@@ -21,4 +21,4 @@
 *.blg
 *conflicted copy*
 *.DS_Store
-
+*.mps
