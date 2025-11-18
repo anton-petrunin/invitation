@@ -564,7 +564,60 @@ if $\beta$ is a nontrivial knot in Euclidean space, then the
 sum of its external angles is \textit{strictly} larger $4\cdot\pi$.
 
 \parbf{\ref{ex:arm-lemma}.}
-Apply the majorization theorem and the standard arm lemma.
+By the majorization theorem, $P=[x^1\dots x^{n}]$ can be majorized by a convex plane polygon, say $\dot P=[\dot x^1\dots \dot x^{n}]$.
+Note that we have
+\[
+\dist{\dot x^i}{\dot x^{i-1}}{\EE^2}
+=
+\dist{x^i}{x^{i-1}}{\spc{U}}
+\quad \text{and}\quad
+\mangle\hinge{\dot x^i}{\dot x^{i-1}}{\dot x^{i+1}}
+\ge
+\mangle\hinge{x^i}{x^{i-1}}{x^{i+1}}
+\]
+for all $i$, and $\dist{\dot x^0}{\dot x^{n+1}}{\EE^2}
+=
+\dist{x^1}{x^{n}}{\spc{U}}$ as well.%
+(We also get that
+\[\mangle\hinge{\dot x^1}{\dot x^2}{\dot x^n}
+\ge
+\mangle\hinge{x^1}{x^2}{x^n}
+\quad\text{and}\quad
+\mangle\hinge{\dot x^{n}}{\dot x^1}{\dot x^{n-1}}
+\ge
+\mangle\hinge{x^n}{x^1}{x^{n-1}},\] but we will not need it.)
+
+It follows that
+\[
+\dist{\dot x^i}{\dot x^{i-1}}{\EE^2}
+=
+\dist{\tilde x^i}{\tilde x^{i-1}}{\spc{U}}
+\quad \text{and}\quad
+\mangle\hinge{\dot x^i}{\dot x^{i-1}}{\dot x^{i+1}}
+\ge
+\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde x^{i+1}}
+\]
+for all $i$.
+By the classical arm lemma,
+\[\dist{\dot x^1}{\dot x^{n}}{\EE^2}
+\ge
+\dist{\tilde x^1}{\tilde x^{n}}{\spc{U}}\]
+--- hence the result.
+
+\parit{Remarks.}
+In the equality case, the map $\tilde x^i\mapsto x^i$ can be extended to a distance-preserving map from the convex hull of $\tilde P$ to $\spc{U}$; see \cite[9.63]{alexander-kapovitch-petrunin-2025}.
+
+The classical arm lemma has the following close relative in differential geometry.
+
+\parbf{Bow lemma.}
+\textit{Suppose $\tilde\gamma$ is a smooth arc of a planar convex curve, that is, it runs along the boundary of some convex planar domain.
+Further, let $\gamma$ be a smooth curve in $\EE^m$.
+Assume that both curves come with arc-length parametrization by the interval $[a,b]$ and at each time the curvature of $\gamma$ does not exceed the curvature of $\tilde\gamma$.
+Then the distance between the endpoints of $\gamma$ is at least the distance between the endpoints of $\tilde\gamma$; that is,
+\[\dist{\gamma(b)}{\gamma(a)}{\EE^m} \ge \dist{\tilde\gamma(b)}{\tilde\gamma(a)}{\EE^2}.\]}
+
+This lemma can be formulated for $\CAT(\kappa)$ spaces using the notion of extrinsic curvature introduced by the first author and Richard Bishop \cite{alexander-bishop-2006,alexander-bishop-2010}.
+As far as we know, no one has bothered to prove it.
 
 \parbf{\ref{ex:null-homotopic}.}
 Note that the existence of a null-homotopy is equivalent to the following.

@@ -274,7 +274,7 @@ we denote by $[x^1\dots x^n ]_R$ a polygon in the length metric of $R$.
 \end{wrapfigure}
 
 \parit{Proof of \ref{thm:major} for polygons.}
-Now we claim that any closed $n$-gon $[x^1x^2 \dots x^n ]$ in a $\CAT(0)$ space  is majorized by a convex polygonal region \[R_n=\Conv[\tilde x^1\tilde x^2\dots\tilde x^n]\]
+Now we claim that any closed $n$-gon $[x^1x^2 \dots x^n]$ in a $\CAT(0)$ space  is majorized by a convex polygonal region \[R_n=\Conv[\tilde x^1\tilde x^2\dots\tilde x^n]\]
 under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$. 
 
 The base case $n=3$ is proved above.
@@ -325,15 +325,10 @@ Show that the sum of external angles of $\beta$ cannot be smaller than $4\cdot\p
 
 Give an example of such a polygon $\beta$ with the sum of external angles exactly $4\cdot\pi$.
 \end{thm}
-
-\begin{thm}{Exercise}\label{ex:arm-lemma}
-Prove the following generalization of the arm lemma; see \cite{sabitov} and the references therein.
-\end{thm}
-
   
 \begin{thm}{Arm lemma}\label{lem:arm+}
-Let $P=[x^0x^1\dots x^{n+1}]$ be a polygon in a geodesic $\CAT(0)$ space $\spc{U}$.
-Suppose $\tilde P=[\tilde x^0\tilde x^1\dots \tilde x^{n+1}]$ is a convex  polygon in $\EE^2$
+Let $P=[x^1\dots x^{n}]$ be a polygon in a geodesic $\CAT(0)$ space $\spc{U}$.
+Suppose $\tilde P=[\tilde x^1\dots \tilde x^{n}]$ is a convex  polygon in $\EE^2$
 such that 
 \[
 \dist{\tilde x^i}{\tilde x^{i-1}}{\EE^2}
@@ -345,9 +340,14 @@ such that
 \]
 for all $i$.
 Then 
-$\dist{\tilde x^0}{\tilde x^{n+1}}{\EE^2}
-\le
-\dist{x^0}{x^{n+1}}{\spc{U}}$.
+$\dist{x^1}{x^{n}}{\spc{U}}\ge \dist{\tilde x^1}{\tilde x^{n}}{\EE^2}$.
+\end{thm}
+
+If $\spc{U}$ is a Euclidean space, then the statement follows from the classical arm lemma;
+see \cite{sabitov} and the references therein.
+
+\begin{thm}{Exercise}\label{ex:arm-lemma}
+Reduce \ref{lem:arm+} to the classical arm lemma.
 \end{thm}
 
 \section{General case}
