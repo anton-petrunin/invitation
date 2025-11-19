@@ -25,8 +25,11 @@ pdfauthor={\theauthors}
 
 %\overfullrule=100mm
 
+%\makeatletter\let\orig@chapter\chapter\renewcommand{\chapter}[1]{\orig@chapter{#1.}}\makeatletter\let\orig@section\section\renewcommand{\section}[1]{\orig@section{#1.}}\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}
+
 \begin{document}
-\spell{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\emph[1]{#1}}{}
+
+%\pagestyle{empty}\def\emph{\textit}
 
 \frontmatter
 \title{An invitation to Alexandrov geometry: CAT(0) spaces}
@@ -40,6 +43,10 @@ Anton Petrunin
 \thispagestyle{empty}
 \newpage
 \tableofcontents
+
+
+\vfill
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{intro}

@@ -2,29 +2,65 @@
 \mainmatter
 
 \chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\thispagestyle{myheadings}
+\markboth{PREFACE}{PREFACE}
 
-This is a substantially updated edition of our earlier book~\cite{alexander-kapovitch-petrunin-2019}, which itself grew out of our more technical text on Alexandrov geometry \cite{alexander-kapovitch-petrunin-2025}.
-The notes were shaped in a number of courses given by the authors.
+This is a substantially updated edition of our earlier book~\cite{alexander-kapovitch-petrunin-2019}, which itself grew out of our more technical text \cite{alexander-kapovitch-petrunin-2025}.
+The changes were made based on our teaching experience in recent years and the many comments we received.
 
-We want to show the beauty and power of Alexandrov geometry by reaching interesting applications and theorems with a minimum of preparation.
 We discuss $\CAT(0)$ spaces --- metric spaces with nonpositive curvature in the sense of Alexandrov; these spaces can be loosely described as a non-linear generalization of a Hilbert space.
+Our goal is to show the beauty and power of Alexandrov geometry by reaching interesting applications and theorems with a minimum of preparation.
 
-\medskip 
+
+\section*{Notes on the contents}
+
+Exercises that are used in the text are marked with an exclamation point: \textbf{Exercise!}
+
+\begin{wrapfigure}{r}{45mm}
+\vskip-0mm
+\centering
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=1.4,
+  thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
+
+  \node[main node] (1) at (0,1) {\ref{prelim}};
+  \node[main node] (2) at (0,0) {\ref{chapter:gluing}};
+  \node[main node] (3) at (-{sin(360/7)},{cos(360/7)}) {\ref{chap:billiards}};
+  \node[main node] (4) at (-{sin(2*360/7)},{cos(2*360/7)}) {\ref{sec:resh-kirz}};
+  \node[main node] (5) at (-{sin(3*360/7)},{cos(3*360/7)}) {\ref{chapter:globalization}};
+  \node[main node] (6) at (-{sin(4*360/7)},{cos(4*360/7)}) {\ref{chap:poly}};
+  \node[main node] (7) at (-{sin(5*360/7)},{cos(5*360/7)}) {\ref{chapter:shefel}};
+  \node[main node] (8) at (-{sin(6*360/7)},{cos(6*360/7)}) {\ref{chap:barycenter}};
+
+  \path[every node/.style={font=\sffamily\small}]
+   (1) edge node{}(2)
+   (2) edge node{}(3)
+   (2) edge node{}(4)
+   (2) edge node{}(5)
+   (5) edge node{}(6)
+   (6) edge node{}(7)
+   (2) edge node{}(8);
+\end{tikzpicture}
+\end{wrapfigure}
+
+\medskip
 
 In Lecture~\ref{prelim}, we discuss necessary preliminaries.
+It should be used as a quick reference.
 
-In Lecture~\ref{chapter:gluing}, we discuss the Reshetnyak gluing theorem.
+In Lecture~\ref{chapter:gluing}, we discuss the Reshetnyak's gluing theorem.
 Further, we apply it in Lecture~\ref{chap:billiards} to a problem in billiards which was solved by Dmitri Burago, Serge Ferleger, and Alexey Kononenko.
 
-Lecture~\ref{sec:resh-kirz} provides the so-called Reshetnyak's majorization theorem. It is illustrated by several applications about convexity and geodesics.
+Lecture~\ref{sec:resh-kirz} is devoted to Reshetnyak's majorization theorem.
+It is illustrated by several applications concerning convexity and geodesics.
 
 In Lecture~\ref{chapter:globalization}, we discuss the Hadamard--Cartan globalization theorem.
-Further, we apply it in Lecture~\ref{chap:poly} both to describe polyhedral $\CAT(0)$ spaces and to construct exotic aspherical manifolds introduced by Michael Davis.
+Then we apply it in Lecture~\ref{chap:poly} both to describe polyhedral $\CAT(0)$ spaces and to construct exotic aspherical manifolds introduced by Michael Davis.
 
 In Lecture~\ref{chapter:shefel}, we discuss examples of Alexandrov spaces with curvature bounded above.
-It is is largely based on work of Samuel Shefel on nonsmooth saddle surfaces.
+It is largely based on the work of Samuel Shefel on nonsmooth saddle surfaces.
 
-Finally, in Lecture~\ref{chap:barycenter} we discuss barycenters with their applications to the dimension theory. 
+Finally, in Lecture~\ref{chap:barycenter} we discuss barycenters and their applications to dimension theory; this part is based on the work of Bruce Kleiner.
 
 \medskip
 
@@ -33,8 +69,8 @@ we will not assume familiarity with any of these sources.
 
 \begin{itemize}
 \item The book by Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger};
-\item Lecture notes of Werner Ballmann \cite{ballmann:lectures};
-\item Chapter 9 in the book \cite{burago-burago-ivanov} by Dmitri Burago, Yuri Burago and Sergei Ivanov.
+\item The lecture notes of Werner Ballmann \cite{ballmann:lectures};
+\item Chapter 9 in the book \cite{burago-burago-ivanov} by Dmitri Burago, Yuri Burago, and Sergei Ivanov.
 \item Our book \cite{alexander-kapovitch-petrunin-2025}.
 \end{itemize}
 
@@ -42,11 +78,10 @@ we will not assume familiarity with any of these sources.
 
 \section*{Early history of Alexandrov geometry}
 
-
 The idea that the essence of curvature lies in a condition on quadruples of points apparently originated with Abraham Wald.
-It is found in his publication on ``coordinate-free differential geometry'' \cite{wald} written under the supervision of Karl Menger;
-the story of this discovery can be found in \cite{menger}.
-In 1941, similar definitions were rediscovered independently by 
+It is found in his publication on ``coordinate-free differential geometry'' \cite{wald} written under the supervision of Karl Menger.
+(This paper remained almost unnoticed until the 1980s.)
+In 1941, similar definitions were rediscovered independently by
 Alexandr Danilovich Alexandrov %Alexandr is the right spelling
 \cite{alexandrov:def}.
 In Alexandrov's work, the first fruitful applications of this approach were given.
@@ -56,18 +91,18 @@ Mainly:
 \textit{metrics of non-negative curvature on the sphere, and only they, are isometric to closed convex surfaces in Euclidean 3-space}. 
 \item Gluing theorem, which tells when the sphere obtained by gluing two discs along their boundaries has non-negative curvature in the sense of Alexandrov.
 \end{itemize}
-These two results together gave  a very intuitive geometric tool for studying  embeddings and bending of surfaces in  Euclidean space, and changed this subject dramatically.
+These two results together gave  a very intuitive geometric tool for studying  embeddings and bendings of surfaces in  Euclidean space, and changed this subject dramatically.
 They formed the foundation of the branch of geometry now called \emph{Alexandrov geometry}.
 
 The study of  spaces with curvature bounded above started later.
 The first paper on the subject was written by Alexandrov \cite{alexandrov:strong-angle}; it appeared in 1951.
-It was based on work of Herbert Busemann, who studied spaces satisfying a weaker condition \cite{busemann-CBA}.
+It was based on the work of Herbert Busemann, who studied spaces satisfying a weaker condition \cite{busemann-CBA}.
 
 Yurii Grigorievich Reshetnyak proved fundamental results about general spaces with curvature bounded above, the most important of which are  his gluing and majorization theorems.
 An equally important theorem is the Hadamard--Cartan theorem (globalization theorem).
-All these theorems and their history are discussed in lectures.
+All these theorems and their history are discussed in the lectures.
 
-Surfaces with upper curvature bounds were studied extensively in the 50s and 60s, and are by now well understood; see the survey \cite{reshetnyak:survey} and the references therein.
+Surfaces with upper curvature bounds were studied extensively in the 1950s and 1960s, and are by now well understood; see the survey \cite{reshetnyak:survey} and the references therein.
 
 
 \section*{Manifesto of Alexandrov geometry}
@@ -162,7 +197,7 @@ for a number of discussions and suggestions.
 
 }
 
-We thank the mathematical institutions where we worked on this material,  including
+We thank the mathematical institutions where we worked together on this material, including
 BIRS, 
 MFO, 
 the Henri Poincar\'{e} Institute,
