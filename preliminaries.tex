@@ -42,7 +42,7 @@ we write
 \parbf{Geodesic.}
 Let $\spc{X}$ be a metric space 
 and $\II$\index{$\II$} be a real interval. 
-A~globally isometric map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
+A~globally isometric map $\gamma\:\II\z\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
 \footnote{Various authors call it differently: {}\emph{shortest path}, {}\emph{minimizing geodesic}.}; 
 in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
@@ -50,7 +50,7 @@ for any pair $s,t\in \II$.
 
 We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if 
 $\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$.
-In this case the image of $\gamma$ is denoted by $[p q]$\index{$[p q]=[p q]_{\spc{X}}$ (geodesic)} and with an abuse of notations  we also call it a \index{geodesic}\emph{geodesic}.
+In this case the image of $\gamma$ is denoted by $[p q]$\index{$[p q]=[p q]_{\spc{X}}$ (geodesic)} and with an abuse of notation  we also call it a \index{geodesic}\emph{geodesic}.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
@@ -138,7 +138,7 @@ consider the value
 \[\dist{x}{y}{A}=\inf_{\alpha}\{\length\alpha\},\]
 where the infimum is taken for all paths $\alpha$ from $x$ to $y$ in $A$.\footnote{Note that while this notation slightly conflicts with the previously defined notation for distance on a general metric space, we will usually work with ambient length spaces where the meaning will be unambiguous.}
 
-If $\dist{x}{y}{A}$ takes finite value for each pair $x,y\in A$,
+If $\dist{x}{y}{A}$ takes a finite value for each pair $x,y\in A$,
 then $\dist{x}{y}{A}$ defines a metric on  $A$;
 this metric will be called the \index{induced length metric}\emph{induced length metric} on $A$.
 
@@ -165,7 +165,7 @@ Then $\spc{X}$ carries a natural complete length metric with respect to which $\
 
 
 \begin{thm}{Exercise}\label{ex:no-geod}
-Give an example of a complete length space for which no pair of distinct points can be joined by a geodesic.
+Construct a complete length space for which no pair of distinct points can be joined by a geodesic.
 \end{thm}
 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
@@ -285,8 +285,8 @@ in particular $\rho\:\spc{X}\to\RR$ is a continuous function.
 Indeed, 
 assume the contrary; that is, $\rho(x)+|x-y|<\rho(y)$ for some $x,y\in \spc{X}$. 
 Then 
-$\cBall[x,\rho(x)+\eps]$ is a closed subset of $\cBall[y,\rho(y)]$ for some $\eps>0$.
-Then  compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$, a contradiction.\claimqeds
+$\cBall[x,\rho(x)+\eps]$ is a closed subset of $\cBall[y,\rho(y)]$ for some $\eps>0$, and compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$ --- a contradiction.
+\claimqeds
 
 Set $\eps=\min\set{\rho(y)}{y\in B}$; the minimum is defined since $B$ is compact.
 From \ref{eq:rho>0}, we have $\eps>0$.
@@ -294,8 +294,7 @@ From \ref{eq:rho>0}, we have $\eps>0$.
 Choose a finite $\tfrac\eps{10}$-net $\{a_1,a_2,\dots,a_n\}$ in $B$.
 The union $W$ of the closed balls $\cBall[a_i,\eps]$ is compact.
 Clearly 
-$\cBall[x,\rho(x)+\frac\eps{10}]\subset W$.
-Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact,
+$\cBall[x,\rho(x)+\frac\eps{10}]\subset W$, so $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact ---
 a contradiction.
 \qeds
 
@@ -313,11 +312,11 @@ with the metric defined by formula
 \[\dist{(u^1,v^1)}{(u^2,v^2)}{\spc{U}\times\spc{V}}=\sqrt{\dist[2]{u^1}{u^2}{\spc{U}}+\dist[2]{v^1}{v^2}{\spc{V}}}.\]
 
 \begin{thm}{Exercise}\label{ex:length-prod}
-Show that product of length spaces is a length space.
+Show that the product of length spaces is a length space.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:geod-prod}
-Show that projection of a geodesic path from the product space to its factors are geodesic paths. 
+Show that projections of a geodesic path from the product space to its factors are geodesic paths.
 \end{thm}
 
 \parbf{Cone.}
@@ -359,9 +358,9 @@ The points in $\spc{V}$ formed by the equivalence classes of $0\times\spc{U}$ an
 
 \begin{thm}{Exercise}\label{ex:product-cone}
 Let $\spc{U}$ be a metric space.
-Show that the spaces 
-\[\RR\times \Cone\spc{U}\quad\text{and}\quad\Cone[\Susp\spc{U}]\]
-are isometric.
+Construct an isometry
+\[\RR\times \Cone\spc{U}\to\Cone[\Susp\spc{U}].\]
+
 \end{thm}
 
 \section{Model angles and triangles}\label{sec:mod-tri/angles}
@@ -497,8 +496,9 @@ The value under the limit can be calculated from the  cosine law:
 =
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
-The following lemma implies that in \ref{eq:def-angle}, one can use $\angk p{\bar x}{\bar y}_{\mathbb{S}^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ instead of $\angk p{\bar x}{\bar y}_{\EE^2}$.
-
+The following lemma implies that
+changing $\angk p{\bar x}{\bar y}_{\EE^2}$ to $\angk p{\bar x}{\bar y}_{\mathbb{S}^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ in
+in \ref{eq:def-angle} makes no difference.
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
 For any three points $p,x,y$ in a metric space the following inequalities
@@ -506,11 +506,11 @@ For any three points $p,x,y$ in a metric space the following inequalities
 \begin{aligned}
 |\angk p{x}{y}_{\mathbb{S}^2}-\angk p{x}{y}_{\EE^2}|
 &\le 
-\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
+100\cdot(\dist[{{}}]{p}{x}{}+\dist[{{}}]{p}{y}{})^2,
 \\
 |\angk p{x}{y}_{\HH^2}-\angk p{x}{y}_{\EE^2}|
 &\le 
-\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}
+100\cdot(\dist[{{}}]{p}{x}{}+\dist[{{}}]{p}{y}{})^2
 \end{aligned}
 \eqlbl{eq:k-K}\]
 hold whenever the left-hand side is defined.
@@ -533,15 +533,15 @@ Therefore
 &=\area\modtrig(pxy)_{\mathbb{S}^2}+\area\modtrig(pxy)_{\HH^2}.
 \end{align*}
 The inequality \ref{eq:k-K} follows since 
-\begin{align*}
+\[
 0
-&\le
-\area\modtrig(pxy)_{\HH^2}\le 
-\\
-&\le\area\modtrig(pxy)_{\mathbb{S}^2}\le
-\\
-&\le\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}.
-\end{align*}
+\le
+\area\modtrig(pxy)_{\HH^2}
+\le
+\area\modtrig(pxy)_{\mathbb{S}^2}
+\le
+(\dist[{{}}]{p}{x}{}+\dist[{{}}]{p}{y}{})^2.
+\]
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:angle-on-shortest}
@@ -566,7 +566,7 @@ If all  the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined, then t
 Since $\alpha^{13}\le\pi$, we may assume that $\alpha^{12}+\alpha^{23}< \pi$.
 
 Let $\gamma^i$ be the unit-speed parametrization of $[px^i]$ from $p$ to $x^i$.
-Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
+Given a small positive $\eps$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \begin{align*}
 \dist{\gamma^1(t)}{\gamma^3(\tau)}{}
 \le 
@@ -578,7 +578,7 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \end{align*}
 
 \begin{wrapfigure}{o}{30 mm}
-\vskip-6mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-615}
 \vskip3mm
@@ -605,10 +605,13 @@ Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \begin{thm}{Exercise}\label{ex:adjacent-angles}
 Prove that the sum of adjacent angles is at least~$\pi$.
 
-More precisely, let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
-If $p\in \left] x y \right[$, then 
+More precisely: suppose two hinges $\hinge pxz$ and $\hinge pyz$ are \index{adjacent hinges}\emph{adjacent};
+that is, they share side $[pz]$, and the union of two sides $[px]$ and $[py]$ forms a geodesic $[xy]$.
+Show that
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
+
+Give an example showing that the inequality can be strict.
 \end{thm}
 
 
@@ -623,7 +626,7 @@ where $\gamma$ is the unit-speed parametrization of $[qx]$ from $q$ to $x$.
 \end{thm}
 
 \parit{Proof.} Take a sufficiently small $\eps>0$.
-Denote by $\beta$ the the unit-speed parametrization of $[qp]$ from $q$ to $p$.
+Denote by $\beta$ the unit-speed parametrization of $[qp]$ from $q$ to $p$.
 For all sufficiently small $t>0$, we have 
 \begin{align*}
 \dist{\beta(t/\eps)}{\gamma(t)}{}
@@ -656,7 +659,7 @@ of all nontrivial geodesics  that start at~$p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for the angle measure $\mangle$ on $\mathfrak{S}_p$,
 so
  $(\mathfrak{S}_p,\mangle)$ 
-forms a \index{pseudometric space}\emph{pseudometric space};
+forms a \index{semimetric space}\emph{semimetric space};
 that is, $\mangle$ satisfies all the conditions of a metric on $\mathfrak{S}_p$, except that  the angle between distinct geodesics might vanish.
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
@@ -682,7 +685,7 @@ set
 \eqlbl{eq:dist-in-T_p}\]
 Since the angles in $\spc{X}$ are defined, 
 \ref{eq:dist-in-T_p}
-defines a pseudometric on $\mathfrak{T}_p$.
+defines a semimetric on $\mathfrak{T}_p$.
 
 
 The corresponding metric space admits a natural isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
@@ -720,7 +723,7 @@ Let $D_n$ be the disc in the coordinate plane
 with center $(0,n)$ and radius~$n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
 
-Note that sequence of one-point sets $\{(0,n)\}$ converges to the empty set.
+Note that the sequence of one-point sets $\{(0,n)\}$ converges to the empty set.
 Indeed, for any $\distfun_{\{(0,n)\}}(x)\to \infty=\distfun_\emptyset(x)$ for any~$x$.
 
 \begin{thm}{Exercise}\label{ex:hausdorff-conv}
@@ -772,15 +775,14 @@ On the other hand,
 \dist{z_\infty}{y}{}
 \le R
 <
-\distfun_{A_\infty}(y),
+\distfun_{A_\infty}(y)
 \end{align*}
-a contradiction.
+ --- a contradiction.
 
-On the other hand, since $f$ is 1-Lipschitz,  $\distfun_{A_\infty}(y)\ge f(y)$.
+Since $f$ is 1-Lipschitz, $\distfun_{A_\infty}(y)\ge f(y)$.
 Therefore
 \[\distfun_{A_\infty}(y)= f(y)\]
-for any $y\in \spc{X}$.
-Hence the result.
+for any $y\in \spc{X}$; hence the result.
 \qeds
 
 \section{Gromov--Hausdorff convergence}
@@ -854,7 +856,7 @@ Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}
 converges for any $i$ and~$j$.
 
 Consider a countable set of points $\spc{W}=\{w_1,w_2,\dots\}$
-equipped with the pseudometric defined by 
+equipped with the semimetric defined by
 \[\dist{w_i}{w_j}{\spc{W}}
 =
 \lim_{n\to\infty}\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}.\]
@@ -900,11 +902,11 @@ that  converges in both convergences,
 
 \section{Remarks}
 
-It seems that \emph{Hausdorff convergence} was first introduced by Felix Hausdorff in \cite{hausdorff},
-and a couple of years later an equivalent definition was given by Wilhelm Blaschke in~\cite{blaschke}.
+\emph{Hausdorff convergence} was introduced by Felix Hausdorff in \cite{hausdorff},
+but a couple of years later an equivalent definition was given by Wilhelm Blaschke in~\cite{blaschke}.
 A refinement of this definition was introduced by  Zden\v{e}k Frol\'{\i}k in \cite{frolik},
 and later rediscovered by Robert Wijsman in~\cite{wijsman}.  
-However, this refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence}, also introduced by Hausdorff in \cite{hausdorff}.
-For this reason we call it Hausdorff convergence
+This refinement takes an intermediate place between the original Hausdorff convergence and {}\emph{closed convergence}, also introduced by Hausdorff in \cite{hausdorff},
+and we call it Hausdorff convergence
 instead of
-{}\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
+{}\emph{Hausdorff--Blaschke--Frol\'{\i}k--Wijsman convergence}.
