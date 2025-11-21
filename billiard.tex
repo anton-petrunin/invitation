@@ -468,17 +468,16 @@ see the book of Martin Bridson and André Haefliger \cite{bridson-haefliger} and
 
 \chapter{Billiards}\label{chap:billiards}
 
+Now we will look at an application of the previous lecture that is at once beautiful, deep, elementary, and unexpected---enjoy.
+
 \section{Puff pastry}\label{sec:puff-pastry}
 
-In this section, we introduce 
-the notion of 
-Reshetnyak puff pastry.  This  construction will be used in the next section to prove the collision theorem (\ref{thm:collision}).
+Here we introduce the notion of Reshetnyak puff pastry.
+This construction will be applied to billiards (\ref{thm:collision}).
 
 Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in the Euclidean space~$\EE^m$.
 Consider an array of $N+1$ copies of~$\EE^m$.
-Assume that the space $\spc{R}$ is 
-obtained by
-gluing successive pairs of spaces along  $A^1,\dots,A^N$ respectively.
+Let us construct the space $\spc{R}$ by gluing successive pairs of spaces along  $A^1,\dots,A^N$ respectively.
 
 
 \begin{figure}[ht!]
@@ -531,10 +530,7 @@ defined by $x^k\mapsto\check x^k$ is well defined and short.
 
 Moreover, if  
 \[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\eqlbl{eq:dist=dist}\]
-for some $x,y\in \EE^m$ and $i,j\in \{0,\dots,n\}$,
-then the unique geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
-is the image of the unique geodesic $[x^i y^j]_{\spc{R}}$
-under the map $x^i\mapsto \check x^i$.
+for some $x,y\in \EE^m$ and $i,j\in \{0,\dots,N\}$, then the necessarily unique geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ is the image of the necessarily unique geodesic $[x^i y^j]_{\spc{R}}$ under the map $x^i\mapsto \check x^i$.
 \end{thm}
 
 \parit{Proof.}
@@ -574,10 +570,8 @@ $\spc{R}^0\cup\spc{R}^N$ is isometric to the double of $\EE^m$ along the nonempt
 Let $\check{\bm{A}}$ and $\bm{A}$ be arrays of convex bodies in~$\EE^m$.
 Assume that array $\bm{A}$ is
 obtained by inserting in $\check{\bm{A}}$ 
-several copies of the bodies which were already listed in~$\check{\bm{A}}$.
-
-For example, if $\check{\bm{A}}=(A,C,B,C,A)$, by placing $B$ in the second place and $A$ in the fourth place, we obtain $\bm{A}=(A,B,C,A,B,C,A)$.
-
+several copies of the bodies which were already listed in~$\check{\bm{A}}$.%
+\footnote{For example, inserting $B$ and $A$ in $\check{\bm{A}}=(A,C,B,C,A)$, we obtain $\bm{A}=(A,B,C,A,B,C,A)$.}
 Denote by $\check{\spc{R}}$ and $\spc{R}$ 
 the Reshetnyak puff pastries for $\check{\bm{A}}$ and $\bm{A}$ respectively.
 
@@ -621,8 +615,8 @@ is end-to-end convex.
 \end{thm}
 
 
-The proof of the lemma is based on a partial case,
-which we formulate as a sublemma.
+The proof of the lemma is based on its partial case,
+which we formulate as the following sublemma.
 
 \begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
 Let $\ddot A$ and $\ddot B$ be two  
@@ -657,25 +651,25 @@ Hence the sublemma.
 
 
 In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
-
-\begin{thm}[!]{Exercise}\label{ex:supporting-planes}
-Let $A$ and $B$ be two closed convex sets in $\EE^m$ and $A\cap B\ne\emptyset$.
-Given two points $x,y\in \EE^m$  let $f(z)=\dist{x}{z}{}+\dist{y}{z}{}$.
-
-Let $z_0\in A\cap B$ be  a point of minimum of $f|_{A\cap B}$.
-
-Show that there are half-spaces $\dot A$ and $\dot B$ such that
-$\dot A\supset A$ and $\dot B\supset B$
-and $z_0$ is also a point of minimum of the restriction $f|_{\dot A\cap \dot B}$.
-
-\end{thm}
+{
 
 \begin{wrapfigure}{r}{26mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-880}
 \vskip-4mm
 \end{wrapfigure}
+
+\begin{thm}[!]{Exercise}\label{ex:supporting-planes}
+Let $A$ and $B$ be two closed convex sets in $\EE^m$.
+Given two points $x,y\in \EE^m$, consider function $f(p)\df\dist{x}{p}{}+\dist{y}{p}{}$.
+Suppose point $z$ minimizes $f$ in $A\cap B$.
+
+Show that there are half-spaces $\dot A$ and $\dot B$ such that
+$\dot A\supset A$ and $\dot B\supset B$
+and $z$ also minimizes $f$ in $\dot A\cap \dot B$.
+
+\end{thm}
 
 \parit{Proof of \ref{lem:end-to-end-convex}.}
 Fix arbitrary $x,y\in \EE^m$.
@@ -686,20 +680,24 @@ is minimal.
 To show the end-to-end convexity of  $\spc{R}$,
 it is sufficient to prove the following:
 
+}
+
 \begin{clm}{}\label{clm:z in xy}
 The geodesic $[x^0y^N]_\spc{R}$ contains $z^0=z^N\in \spc{R}$.
 \end{clm}
 
 Without loss of generality, we may assume that $z\in\partial A\cap\partial B$.
-Indeed, since the puff pastry for the 1-array $(B)$ is end-to-end convex,
+Indeed, assume $z$ lies in the interior of~$A$.
+Since the puff pastry for the 1-array $(B)$ is end-to-end convex,
 Proposition~\ref{prop:A-check-A} together with \ref{obs:end-to-end-convex}
-imply \ref{clm:z in xy} in  case $z$ lies in the interior of~$A$.
+imply \ref{clm:z in xy}.
 The same way we can treat the case when $z$ lies in the interior of~$B$.
 
-Note that $\EE^{m}$ admits 
+Suppose that $\dot A$ and $\dot B$ are provided by Exercise \ref{ex:supporting-planes}.
+Note that $\EE^{m}$ admits
 an
-isometric splitting $\EE^{m-2}\times \EE^2$ 
-such that 
+isometric splitting $\EE^{m-2}\times \EE^2$
+such that
 \begin{align*}
 \dot A&=\EE^{m-2}\times \ddot A
 \\
@@ -707,7 +705,8 @@ such that
 \end{align*}
 where $\ddot A$ and $\ddot B$ are half-planes in~$\EE^2$.
 
-Using Exercise \ref{ex:supporting-planes}, let us replace each $A$ by $\dot A$ and each $B$ by $\dot B$
+
+Let us replace each $A$ by $\dot A$ and each $B$ by $\dot B$
 in the array, to get the array
 \[(\underbrace{\dot A,\dot B,\dot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
 The corresponding puff pastry $\dot{\spc{R}}$
@@ -758,7 +757,7 @@ such that for any subset $F\subset\{1,\dots,n\}$,
 the intersection
 $\bigcap_{i\in F}A^i$ 
 has $\eps$-wide corners.
-In this case, we may say briefly \index{$\eps$-wide corners}\textit{all intersections of $A^i$ have $\eps$-wide corners}.
+In this case, we may say briefly that \index{$\eps$-wide corners}\textit{all intersections of $A^i$ have $\eps$-wide corners}.
 
 
 \begin{thm}{Exercise}\label{ex:compact-walls}
@@ -772,8 +771,7 @@ convex sets with nonempty interiors that have a common center of symmetry.
 Show that all intersections of $A^i$ have $\eps$-wide corners for some~$\eps>0$.
 \end{thm}
 
-The proof of the following proposition is based on \ref{lem:end-to-end-convex};
-this lemma is essentially the case $n=2$ in the proposition.
+The proof of the following proposition is based on lemma \ref{lem:end-to-end-convex}, which is essentially the case $n=2$ in the proposition.
 
 \begin{thm}{Proposition}\label{prop:end-to-end-convex}
 Given $\eps>0$ and a positive integer $n$, 
@@ -835,9 +833,9 @@ at the breakpoints on $\partial A^i$
 --- in particular, the angle of reflection is equal to the angle of incidence.
 The breakpoints of the trajectory will be called {}\emph{collisions}.
 \textit{
-We assume that trajectory never meets a wall in a tangent direction. 
+We assume that our trajectory never meets a wall in a tangent direction.
 Also, we will always assume the trajectory meets at most one wall in a small neighborhood of every time moment.
-For example, if $\gamma$ have to meet more then two walls at time moment $t$
+For example, if $\gamma$ has to meet more than two walls at time moment $t$
 or collisions accumulate at $t$, then we have to assume that $\gamma$ dies before $t$.}
 
 Recall that the definition of sets with $\eps$-wide corners is given in \ref{sec:wide-corners}.
@@ -849,10 +847,8 @@ Then the number of collisions of any trajectory in  $T$  is bounded
 by a number $N$ which depends only on $n$ and~$\eps$.
 \end{thm}
 
-As we will see from the proof,
-the value $N$ can be found explicitly;
-$N=(\lceil\tfrac\pi\eps\rceil+1)^{n^2}$
-will do.
+As we will see from the proof, the value $N$ can be found explicitly;
+say, $N=(\lceil\tfrac\pi\eps\rceil+1)^{n^2}$ will do.
 
 \begin{thm}{Corollary}\label{cor:balls}
 Consider $n$ homogeneous hard balls
@@ -896,8 +892,7 @@ is the configuration space of our system.
 Its points correspond
 to valid positions of the system of balls.
 
-The evolution of the system
-of balls is described by the motion of
+The evolution of the system is described by the motion of
 the point $\bm{a}\in\RR^{3\cdot n}$.
 It moves along a straight line at a
 constant speed until it hits one of the cylinders $C_{i,j}$; 
@@ -910,9 +905,7 @@ Consider the norm of $\bm{a}=(a_1,\dots,a_n)\in \RR^{3\cdot n}$ defined by
 \sqrt{M_1\cdot|a_1|^2+\dots+M_n\cdot |a_n|^2},\]
 where $|a_i|=\sqrt{x_i^2+y_i^2+z_i^2}$ 
 and $M_i$ denotes the mass of the $i$-th ball.
-In the metric defined by $\lVert {*}\rVert$,
-the collisions follow the
-standard law of billiards. 
+It is straightforward to check that the metric defined by $\lVert {*}\rVert$, the collisions follow the standard law of billiards.
 
 By construction, the number of collisions of hard balls that we need to estimate 
 is the same as the number of collisions of the corresponding billiard trajectory on the table with $C_{i,j}$ as the walls.
@@ -920,11 +913,11 @@ is the same as the number of collisions of the corresponding billiard trajectory
 Note that each cylinder $C_{i,j}$ is a convex set;
 it has smooth boundary, 
 and it is centrally symmetric around the origin.
-By \ref{ex:centrally-simmetric-walls}, all the intersections of the walls have $\eps$-wide corners for some $\eps>0$ that depend on the radiuses $R_i$ and the masses~$M_i$.
+By \ref{ex:centrally-simmetric-walls}, all the intersections of the walls have $\eps$-wide corners for some $\eps>0$ that depends on the radii $R_i$ and the masses~$M_i$.
 It remains to apply the collision theorem (\ref{thm:collision}).
 \qeds
 
-Now we present the proof of the collision theorem (\ref{thm:collision})
+Finally, we present the proof of the collision theorem (\ref{thm:collision})
 based on the results developed in the previous section.
 
 \parit{Proof of \ref{thm:collision}.}
@@ -944,7 +937,7 @@ Consider the array
 The induction hypothesis implies:
 
 \begin{clm}{}\label{clm:collision-induction hypothesis}
-There is a positive integer $M$ such that any $M$ consecutive elements of $\bm{A}_\gamma$ contain each $A^i$ at least once.
+There is a positive integer $N_0$ such that any $N_0$ consecutive elements of $\bm{A}_\gamma$ contain each $A^i$ at least once.
 \end{clm}
 
 Let $\spc{R}_\gamma $ be  the  Reshetnyak puff pastry for~$\bm{A}_\gamma$.
@@ -967,7 +960,7 @@ Let
 be the array provided by Proposition~\ref{prop:end-to-end-convex};
 so $\bm{B}$ contains each $A^i$ at least once
 and the puff pastry $\spc{R}_{\bm{B}}$ for $\bm{B}$ is end-to-end convex.
-If $N$ is sufficiently large, namely $N\ge K\cdot M$, then
+If $N$ is sufficiently large, namely $N\ge K\cdot N_0$, then
  \ref{clm:collision-induction hypothesis}
 implies that $\bm{A}_\gamma$ can be obtained  
 by inserting a finite number of $A^i$'s in~$\bm{B}$.
@@ -979,33 +972,30 @@ $\spc{R}_\gamma$ is end-to-end convex --- a contradiction.
 \begin{thm}{Exercise}\label{ex:collision}
 Let $T\subset\EE^m$ be a billiard table with $n$ convex walls.
 Assume that the walls of $T$ have a common point.
-Show that any trajectory in $T$ has only finite number of collisions in a finite time interval.
+Show that any trajectory in $T$ has only a finite number of collisions in a finite time interval.
 
-Construct an example of a billiard table on the plane with $2$ convex walls
+Construct an example of a billiard table on the plane with two convex walls
 such that the walls have a common point,
 but there is no upper bound on the number of collisions of its trajectories.
 \end{thm}
 
 \section{Comments}
 
+Note that the interior points of the walls play a key role in the proof
+despite that the trajectories never go inside the walls.
+
 The collision theorem (\ref{thm:collision}) was proved by Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{burago-ferleger-kononenko-1997}.
 Its corollary (\ref{cor:balls}) answers a question posed by Yakov Sinai \cite{galperin}.
 Puff pastry is used to bound topological entropy of the billiard flow 
-and to approximate the shortest billiard path that  touches given lines in a given order; 
-see the papers of Dmitri Burago with  Serge Ferleger,
-and Alexey Kononenko~\cite{burago-ferleger-kononenko-1998}, and with
-Dimitri Grigoriev and Anatol Slissenko~\cite{burago-grigoriev-slissenko}.
+and to approximate the shortest billiard path that  touches given lines in a given order \cite{burago-ferleger-kononenko-1998,burago-grigoriev-slissenko}.
 The lecture of Dmitri Burago \cite{burago-1998} gives a short survey on the subject.
-
-Note that the interior points of the walls play a key role in the proof
-despite that the trajectories never go inside the walls.
-In a similar fashion, puff pastry was used by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}
+Puff pastry was also used by Stephanie Alexander and Richard Bishop \cite{alexander-bishop}
 to find the upper curvature bound for warped products.
 
 Joel Hass \cite{hass} constructed an example of a Riemannian metric on the closed 3-ball with negative curvature and concave boundary.
 This example might decrease your appetite for generalizing the collision theorem --- while
-locally such a 3-ball looks as good as the billiards table in the theorem, the number of collisions is obviously infinite.
+locally such a 3-ball looks as good as the billiard table in the theorem, the number of collisions is obviously infinite.
 
-It was shown by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls in $\RR^3$ grows at least exponentially in $n$; the two-dimensional remains open.
+It was shown by Dmitri Burago and Sergei Ivanov \cite{burago-ivanov} that the number of collisions that may occur between $n$ identical balls in $\RR^3$ grows at least exponentially in $n$; the two-dimensional case remains open.
 
-Roman Barinov and Sergei Ivanov used another method to prove analogous statement in normed spaces with strongly convex smooth norm \cite{ivanov2024}.
+Roman Barinov and Sergei Ivanov used another method to prove analogous statements for normed spaces with strongly convex smooth norms \cite{ivanov2024}.

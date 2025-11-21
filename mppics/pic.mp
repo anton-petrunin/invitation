@@ -1425,7 +1425,7 @@ whitelabel.lft(btex $A$ etex, point .4 of p1);
 whitelabel.rt(btex $B$ etex, point .6 of p2);
 label.lft(btex $x$ etex, z.x);
 label.rt(btex $y$ etex, z.y);
-whitelabel.bot(btex $z_0$ etex, z.z0+(0,-2));
+whitelabel.bot(btex $z$ etex, z.z0+(0,-2));
 
 endfig;
 
