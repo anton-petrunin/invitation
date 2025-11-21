@@ -34,21 +34,21 @@ $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\mathbb{S}^2}$
 and 
 $\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\mathbb{S}^2}$,
 then we arrive at the definition of $\CAT(1)$ comparison.
-If one of the spherical model triangles is undefined,\footnote{That is, if 
+If one of the spherical model triangles is undefined\footnote{That is, if
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi
 \quad
 \text{or}
 \quad
-\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]}
+\dist{q}{x}{}+\dist{q}{y}{}+\dist{x}{y}{}\ge 2\cdot\pi.\]},
 then it is assumed that $\CAT(1)$ comparison automatically holds for this quadruple.
 
 We can do the same for the model plane of given curvature $\kappa$;
-that is, an appropriately rescled sphere if $\kappa>0$, 
-the Euclidean plane if $\kappa=0$ 
+that is, an appropriately rescaled sphere if $\kappa>0$,
+the Euclidean plane if $\kappa\z=0$
 and a rescaled Lobachevsky plane if $\kappa<0$.
 In this way we arrive at the definition of $\CAT(\kappa)$ comparison for any real $\kappa$.
-However in these notes we will mostly consider  $\CAT(0)$ comparison and occasionally $\CAT(1)$ comparison;
-so, if you see $\CAT(\kappa)$, you can assume that $\kappa$ is $0$ or~$1$.
+However, we will mostly consider  $\CAT(0)$ comparison and occasionally $\CAT(1)$ comparison;
+so, if you see $\CAT(\kappa)$, you can safely assume that $\kappa$ is $0$ or~$1$.
 
 
 If all quadruples in a metric space $\spc{X}$ satisfy $\CAT(\kappa)$ comparison, then we say that the space $\spc{X}$ is $\CAT(\kappa)$.
@@ -62,20 +62,16 @@ Any Gromov--Hausdorff limit of a sequence of $\CAT(\kappa)$ spaces is $\CAT(\kap
 \end{thm}
 
 In the proposition above, 
-it does not matter which definition of convergence for metric spaces you use, 
+it does not matter which definition of convergence for metric spaces we use,
 as long as any quadruple of points in the limit space can be arbitrarily well approximated by  quadruples in the sequence of metric spaces.
-In particular, it works for the so-called \emph{ultralimits}.
+In particular, it works for the so-called \emph{ultralimits}; see for example \cite{petrunin-2023}.
 
 \section{Geodesics}
 
 The $\CAT$ comparison can be applied to any metric space,
 but it is usually applied to geodesic spaces (or complete length spaces).
 To simplify the presentation we will often assume in addition that the space is \index{proper space}\emph{proper}.
-The latter means that any closed ball is compact.
-
-Recall that a function is \index{proper function}\emph{proper} if the inverse image of any compact set is compact.
- \textit{A metric space is proper} if and only if the distance function from one (and therefore any) point is proper; see Section~\ref{sec:metric spaces}.
-
+The latter means that any closed ball is compact; see Section~\ref{sec:intrinsic}
 
 \begin{thm}{Proposition}\label{ex:CAT-geodesic}
 Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
@@ -84,7 +80,7 @@ Then any two points in $\spc{U}$ are joined by a unique geodesic.
 
 \parit{Proof.} 
 Suppose there are two geodesics between $x$ and $y$.
-Then we can choose two points $p\ne q$ on these geodesics such that $\dist{x}{p}{}=\dist{x}{q}{}$ and  $\dist{y}{p}{}=\dist{y}{q}{}$.
+Then we can choose two points $p\ne q$ on these geodesics such that $\dist{x}{p}{}=\dist{x}{q}{}$ (and therefore $\dist{y}{p}{}=\dist{y}{q}{}$).
 
 Observe that the model triangles $[\tilde p\tilde x\tilde y]=\modtrig(pxy)$ and $[\tilde q\tilde x\tilde y]\z=\modtrig(qxy)$ are degenerate and moreover $\tilde p=\tilde q$.
 Applying $\CAT(0)$ comparison with $\tilde z=\tilde p=\tilde q$,
@@ -121,13 +117,13 @@ Namely, given two maps $h_0,h_1\:\spc{X}\to \spc{U}$ we define homotopy
 \[h_t(x)= \gamma_x(t),\]
 where $\gamma_x$ is the geodesic path from $h_0(x)$ to $h_1(x)$.
 
-The construction in the previous exercise should help to solve the next one.
+This construction will be useful in the following exercise.
 
 \begin{thm}{Exercise}\label{ex:CAT-mnfld=>ext.geod}
 Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
 Assume $\spc{U}$ is a topological manifold.
 Show that any geodesic in $\spc{U}$ can be extended 
-as a two-side infinite geodesic.
+as a two-sided infinite geodesic.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:geod-CBA}
@@ -136,7 +132,7 @@ Assume $\spc{U}$ is a proper length $\CAT(0)$ space
 that is, any geodesic is an arc in a local geodesic $\RR\to \spc{U}$.
 Show that the space of geodesic directions at any point in $\spc{U}$ is complete.
 
-Does the statement remain true if $\spc{U}$ is complete, but is not required to be proper?
+What if $\spc{U}$ is only complete?
 \end{thm}
 
 \section{Thin triangles}
@@ -163,11 +159,10 @@ if and only if
 all its triangles are thin (respectively, all its triangles of perimeter $<2\cdot\pi$ are spherically thin).
 \end{thm}
 
-\parit{Proof; if part.} 
-Apply  the triangle inequality and thinness of triangles $\trig pxy$ and $\trig qxy$, where $p$, $q$, $x$, and $y$ are as in the definition of the $\CAT(\kappa)$ comparison.
+\parit{Proof.} The if part follows from the triangle inequality and thinness of triangles $\trig pxy$ and $\trig qxy$, where $p$, $q$, $x$, and $y$ are as in the definition of the $\CAT(\kappa)$ comparison.
 
 \parit{Only-if part.} 
-Applying $\CAT(0)$ comparison to a quadruple $p,q,x,y$ with $q\in [xy]$ shows that any triangle satisfies \index{point-side comparison}\emph{point-side comparison}, that is, the distance from a vertex to a  point on the opposite side is no greater than the corresponding distance in the Euclidean model triangle.  
+Applying $\CAT(0)$ comparison to a quadruple $p,q,x,y$ with $q\in [xy]$ shows that any triangle satisfies \index{point-side comparison}\emph{point-side comparison}; that is, the distance from a vertex to a  point on the opposite side is no greater than the corresponding distance in the Euclidean model triangle.
 
 Now consider a triangle $\trig{x}{y}{z}$ and let $p\in [xy]$ and $q\in [xz]$.
 Let $\tilde p$, $\tilde q$ be the corresponding points on the sides of the model triangle $\modtrig({x}{y}{z})_{\EE^2}$.
@@ -179,7 +174,7 @@ The $\CAT(1)$ argument is the same.
 \qeds
 
 Recall that a curve $\gamma\:\II\to \spc{U}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
-Note that a local geodesic has unit speed.
+Note that a local geodesic has to have unit speed.
 
 \begin{thm}{Proposition}\label{cor:loc-geod-are-min}
 Suppose $\spc{U}$ is a proper geodesic $\CAT(0)$ space.  
@@ -191,7 +186,7 @@ Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local g
 \parit{Proof.}
 Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
 Choose $a$ to be the maximal value 
-such that $\gamma$ is a geodesic on $[0,a]$. By assumption $a<l$.
+such that $\gamma$ is a geodesic on $[0,a]$. By assumption $a<\ell$.
 Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 
 \begin{wrapfigure}{r}{25mm}
@@ -237,10 +232,9 @@ Let $A$ be a convex closed set in a geodesic $\CAT(0)$ space $\spc{U}$;
 that is, if $x,y\in A$, then $[xy]\subset A$.
 Show that $\distfun_A$ is convex.
 
-In particular, for any $r>0$ the closed $r$-neighborhood of $A$ is convex;
-that is, the set
-\[A_r=\set{x\in \spc{U}}{\distfun_Ax\le r}\]
-is convex.
+In particular, for any $r>0$ the set $A$ has a convex closed $r$-neighborhood
+\[A_r=\set{x\in \spc{U}}{\distfun_Ax\le r}.\]
+
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:closest-point}
@@ -258,7 +252,7 @@ The nearest-point projection $p\mapsto p^*$ defined by \ref{SHORT.ex:closest-poi
 
 \end{thm}
 
-Recall that a set $A$ in a metric space $\spc{U}$ is called \index{locally convex set}\emph{locally convex} if for any point $p\in A$ there is an open neighborhood $\spc{U}\ni p$ such that any geodesic in $\spc{U}$ with  ends in $A$ lies in~$A$. 
+Recall that a set $A$ in a metric space $\spc{U}$ is called \index{locally convex set}\emph{locally convex} if for any point $p\in A$ there is an open neighborhood $\Omega\ni p$ such that any geodesic in $\Omega$ with  ends in $A$ lies in~$A$.
 
 \begin{thm}[!]{Exercise}\label{ex:locally-convex}
 Let $\spc{U}$ be a proper geodesic $\CAT(0)$ space.
@@ -307,7 +301,7 @@ Let us show that
 If not, then for some point $\dot w\in[\dot p\dot z]$, we have \[\dist{\dot x}{\dot w}{}+\dist{\dot w}{\dot y}{}
 <
 \dist{\dot x}{\dot z}{}+\dist{\dot z}{\dot y}{}=\dist{x}{y}{}.\]
-Let $w\in[p z]$ correspond to $\dot w$; that is, $\dist{z}{w}{}=\dist{\dot z}{\dot w}{}$. 
+Suppose $w\in[p z]$ corresponds to $\dot w$; that is, $\dist{z}{w}{}=\dist{\dot z}{\dot w}{}$.
 Since $\trig p x z$ and $\trig p y z$ are thin, we have 
 \[\dist{x}{w}{}+\dist{w}{y}{}<\dist{x}{y}{},\]
 contradicting the triangle inequality. 
@@ -363,7 +357,7 @@ set $F(x) = z$.
 By construction, $F$ satisfies the conditions.
 
 By assumption, the natural maps $\trig {\dot p} {\dot x} {\dot z}\to\trig p x z$ and $\trig {\dot p} {\dot y} {\dot z}\to\trig p y z$ are short.  
-By composition,  the natural map from $\trig{\tilde  p}{\tilde  x}{\tilde  y}$ to $\trig p y z$ is short, as claimed.
+By composition, the natural map from $\trig{\tilde  p}{\tilde  x}{\tilde  y}$ to $\trig p x y$ is short, as claimed.
 
 The spherical case is done along the same lines.
 \qeds
@@ -372,13 +366,13 @@ The spherical case is done along the same lines.
 
 Suppose 
 $\spc{U}^1$ and $\spc{U}^2$ are spaces 
-with isometric closed sets $A^i\subset\spc{U}^i$ and let $\iota\:A^1\to A^2$ be an isometry.
+with isometric closed sets $A^1\subset\spc{U}^1$ and $A^2\subset\spc{U}^2$.
+Let $\iota\:A^1\to A^2$ be an isometry.
 Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$.
-Let us equip $\spc{W}$ with the minimal metric such that both natural maps $\spc{U}^1\to \spc{W}$ are short;
-for a more general definition see \cite[1D]{petrunin-2023}.
+Let us equip $\spc{W}$ with the minimal metric such that both natural maps $\spc{U}^i\to \spc{W}$ are short.
+(A more general definition is discussed in \cite[1D]{petrunin-2023}.)
 
 The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
-If one applies this construction to two copies of one space $\spc{U}$ with a closed subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
 
 If $\spc{U}^1$ and $\spc{U}^2$ are proper and geodesic and $A^i$ are convex in $\spc{U}^i$,
 then it is easy to check that $\spc{W}$ is a proper geodesic space as well and its metric can be described the following way:
@@ -450,14 +444,13 @@ $\trig{y}{a}{b}$, and $\trig{y}{b}{z}$ is thin.
 
 Applying the inheritance lemma (\ref{lem:inherit-angle}) twice, 
 we get that $\trig {x}{y}{b}$ 
-and consequently $\trig {x}{y}{z}$ is thin.
+and consequently $\trig {x}{y}{z}$ are thin.
 \qeds
 
-Let $A$ be a closed subset in a metric space $\spc{U}$.
-Gluing of two copies of $\spc{U}$ along the copies of $A$ is called \index{doubling}\emph{doubling}  $\spc{U}$ along $A$ 
+If one applies gluing to two copies of one space $\spc{U}$ with a closed subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
 
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
-Suppose $\spc{W}$ is a doubling of a geodesic space $\spc{U}$ along its closed subset $A$.
+Suppose $\spc{W}$ is a double of a geodesic space $\spc{U}$ along its closed subset $A$.
 Show that $\spc{W}$ is $\CAT(0)$ if and only if $\,\spc{U}$ is $\CAT(0)$, and $A$ is convex in $\spc{U}$.
 \end{thm}
 
@@ -468,7 +461,7 @@ It can be extended to all geodesic $\CAT(0)$ spaces.
 It also admits a natural generalization to 
 geodesic $\CAT(\kappa)$
 spaces for arbitrary $\kappa$;
-see the book of Martin Bridson and  Andr\'e Haefliger \cite{bridson-haefliger} and our book \cite{alexander-kapovitch-petrunin-2025} for details.
+see the book of Martin Bridson and André Haefliger \cite{bridson-haefliger} and our book \cite{alexander-kapovitch-petrunin-2025} for details.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
