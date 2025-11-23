@@ -1,8 +1,7 @@
 %%!TEX root = the-polyhedral.tex
 \chapter{Polyhedral spaces}\label{chap:poly}
 
-This lecture describes a set of rules for gluing Euclidean cubes that produce a 
-locally $\CAT(0)$ space and uses these rules to construct exotic examples of aspherical manifolds.
+This lecture introduces LEGO-like rules for assembling $\CAT(0)$ spaces out of Euclidean cubes and then uses them to construct exotic aspherical manifolds.
 
 \section{Products, cones, and suspension}
 \label{sec:Products and cones}
@@ -56,11 +55,11 @@ If $\tilde z=(\tilde z_1,\tilde z_2)\in [\tilde x\tilde y]$, then $\tilde z_1\in
 Therefore $\CAT(0)$ comparison for the quadruples $p_1,q_1,x_1,y_1$ in $\spc{U}$
 and 
 $p_2,q_2,x_2,y_2$ in $\spc{V}$ implies that
-\[\dist{p}{q}{\spc{X}}\le \dist{\tilde p}{\tilde z}{\EE^4}+\dist{\tilde z}{\tilde q}{\EE^4}.\]
+\[\dist{p}{q}{\spc{U}\times\spc{V}}
+\le
+\dist{\tilde p}{\tilde z}{\EE^4}+\dist{\tilde z}{\tilde q}{\EE^4}.\]
 This gives $\CAT(0)$ comparison for the quadruple $p,q,x,y$ in $\spc{U}\z\times \spc{V}$.
 \qeds
-
-Recall that the metric on the cone \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ is defined via the cosine rule.
 
 \begin{thm}{Proposition}\label{ex:cone+susp}
 Let $\spc{U}$ be a metric space.
@@ -92,7 +91,7 @@ and
 $\trig{\tilde q}{\tilde x}{\tilde y}_{\EE^3}\iso\modtrig(qxy)_{\EE^2}$.
 Further, note that if $\tilde z\in [\tilde x\tilde y]_{\EE^3}$, then
 $\tilde z'=\tilde z/|\tilde z|$ lies on the geodesic $[\tilde x'\tilde y']_{\SSS^2}$.
-Therefore $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies 
+Therefore, $\CAT(1)$ comparison for $\dist{p'}{q'}{}$ with $\tilde z'\in[\tilde x'\tilde y']_{\SSS^2}$ implies
 $\CAT(0)$ comparison for $\dist{p}{q}{}$ with $\tilde z\in[\tilde x\tilde y]_{\EE^3}$.
 
 If at least one of the model triangles $\modtrig(p'x'y')_{\SSS^2}$ and $\modtrig(q'x'y')_{\SSS^2}$ is undefined,
@@ -111,7 +110,7 @@ Suppose that $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ are defined as a
 Assume all these points lie in a half-space of $\EE^3=\Cone\SSS^2$ with the origin at its boundary. 
 Then we can choose positive values $a$, $b$, $c$, and $d$ such that the points $a\cdot \tilde p'$, $b\cdot \tilde q'$, $c\cdot \tilde x'$, $d\cdot \tilde y'$ lie in one plane.
 Consider the corresponding points $a\cdot p'$, $b\cdot q'$, $c\cdot x'$, $d\cdot y'$ in $\Cone\spc{U}$.
-Applying $\CAT(0)$ comparison for these points leads to $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $ x'$, $ y'$ in $\spc{U}$.
+$\CAT(0)$ comparison for these points implies $\CAT(1)$ comparison for the quadruple $ p'$, $q'$, $x'$, $ y'$ in $\spc{U}$.
 
 It remains to consider the case when $\tilde p'$, $\tilde q'$, $\tilde x'$, $\tilde y'$ do not lie in a half-space.
 Fix $\tilde z'\in [\tilde x' \tilde y']_{\SSS^2}$.
@@ -126,13 +125,13 @@ Observe that
 That is, in this case, $\CAT(1)$ comparison follows from the triangle inequality.
 \qeds
 
-Suspension is a spherical analog of cone construction,
-and the following statement is a direct analog of \ref{ex:cone+susp};
+Recall that suspension is a spherical analog of cone construction; see Section~\ref{sec:constructions}.
+The following statement is a direct analog of \ref{ex:cone+susp};
 it can be proved along the same lines.
 
 \begin{thm}{Proposition}\label{prop:susp}
 Let $\spc{U}$ be a metric space,
-and let $\spc{N}$ be a neighborhood of the north pole in $\Susp\spc{U}$ (possibly $\spc{N}=\Susp\spc{U}$)
+and let $\spc{N}$ be a neighborhood of the north pole in $\Susp\spc{U}$ (possibly $\spc{N}=\Susp\spc{U}$).
 Then $\spc{N}$ is $\CAT(1)$ if and only if so is $\spc{U}$.
 \end{thm}
 
@@ -155,8 +154,8 @@ is defined as the maximal dimension of the simplices
 in one (and therefore any) triangulation of~$\spc{P}$.
 
 \parbf{Links.}
-Let $\spc{P}$ be a polyhedral space
-and $\sigma$ be a simplex in a triangulation $\tau$ of~$\spc{P}$.
+Let $\tau$ be a triangulation of a polyhedral space $\spc{P}$,
+and let $\sigma$ be a simplex in this triangulation.
 
 The simplices that contain $\sigma$
 form an abstract simplicial complex called the \index{link}\emph{link} of $\sigma$, 
@@ -178,6 +177,8 @@ The angle metric between directions makes $\Link_\sigma$ into a spherical polyhe
 We will always consider the link with this metric.
 
 \parbf{Tangent space and space of directions.}
+Recall that tangent space and space of directions are defined in Section~\ref{sec:tangent-space+directions}.
+
 Let $\spc{P}$ be a polyhedral space (Euclidean or spherical) and $\tau$ be its triangulation.
 If a point $p\in \spc{P}$ 
 lies in the interior of a $k$-simplex $\sigma$ of $\tau$ 
@@ -194,13 +195,13 @@ In particular,
 for any point $p$ in $\sigma$,
 the isometry class of $\Link_\sigma$ together with $k=\dim\sigma$
 determines the isometry class of $\Sigma_p$, 
- and the other way around --- $\Sigma_p$ and $k$ determines the isometry class of $\Link_\sigma$.
+ and the other way around: $\Sigma_p$ and $k$ determines the isometry class of $\Link_\sigma$.
 
 A small neighborhood of $p$ is isometric to a neighborhood of the tip of $\Cone\Sigma_p$. 
 In fact, if this property holds at any point of a compact length space $\spc{P}$,
 then $\spc{P}$ is a polyhedral space \cite{lebedeva-petrunin}.
 
-\section{CAT test}
+\section{CAT criterion}
 
 The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded above.
 
@@ -237,13 +238,11 @@ is isometric to a neighborhood of the north pole in the suspension over the spac
 Note that $\Sigma_p$ is a spherical polyhedral space, 
 and its links are isometric to links of~$\spc{P}$. 
 By the induction hypothesis, $\Sigma_p$ is $\CAT(1)$.
-Thus, by the second part of Exercise~\ref{ex:cone+susp}, $\spc{P}$ is locally $\CAT(1)$.
-
-
+Thus, by \ref{prop:susp}, $\spc{P}$ is locally $\CAT(1)$.
 Applying the second part of Corollary~\ref{cor:closed-geod-cat},
 we get the statement.
 
-The $\CAT(0)$ case is done in exactly the same way except we need to use Proposition~\ref{ex:cone+susp} and the first part of Corollary~\ref{cor:closed-geod-cat} on the last step.
+Since the links of $\CAT(0)$ spaces are $\CAT(1)$, the $\CAT(0)$ case is done in exactly the same way except we need to use Proposition~\ref{ex:cone+susp} and the first part of Corollary~\ref{cor:closed-geod-cat} on the very last step when we finally have to talk about $\spc{P}$ (not about its links).
 \qeds
 
 \begin{thm}{Exercise}\label{ex:unique-geod=CAT}
@@ -276,6 +275,13 @@ Note that every flag complex is determined by its one-skeleton.
 Moreover, for any graph, its \index{clique}\emph{cliques} (that is, complete subgraphs) define a flag complex.
 For that reason, flag complexes are also called \index{clique complex}\emph{clique complexes}.
 
+From the definition of flag complex,
+we get the following.
+
+\begin{thm}{Observation}\label{obs:link-of-flag}
+Any link of any simplex in a flag complex is flag.
+\end{thm}
+
 \begin{thm}[!]{Exercise}\label{ex:baricenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
 
@@ -291,15 +297,7 @@ $\mathcal{S}$ as well as the links of all its simplices
 satisfy the no-triangle condition.
 \end{thm}
 
-From the definition of flag complex, 
-we get the following.
-
-\begin{thm}{Observation}\label{obs:link-of-flag}
-Any link of any simplex in a flag complex is flag.
-\end{thm}
-
-
-\parit{Proof of \ref{prop:no-trig}.}
+\parit{Proof.}
 By Observation~\ref{obs:link-of-flag}, the no-triangle condition holds 
 for any flag complex and the links of all its simplices.
 
@@ -317,14 +315,13 @@ and so on, we get that $\spc{S}$ is flag.
 
 
 \parbf{All-right triangulation.}
-A triangulation of a spherical polyhedral space 
-is called an \index{all-right triangulation}\emph{all-right triangulation} 
-if each simplex of the triangulation is isometric 
-to a spherical simplex all of whose angles are right.
+If each simplex of a triangulation $\tau$ of a spherical polyhedral space $\spc{P}$ is isometric to a spherical simplex with all edges $\tfrac\pi2$,
+then $\tau$ is called an \index{all-right triangulation}\emph{all-right triangulation}.
+(Note that such a simplex has all right angles.)
 Similarly, we say that a simplicial complex 
 is equipped with an \index{all-right spherical metric}\emph{all-right spherical metric}
 if it is a length metric and each simplex is isometric 
-to a spherical simplex all of whose angles are right.
+to a spherical simplex with all edges $\tfrac\pi2$.
 
 Spherical polyhedral $\CAT(1)$ spaces glued from right-angled simplices
 admit the following characterization 
@@ -360,7 +357,8 @@ Then by \ref{prop:susp},
 $\Link_\sigma\spc{P}$ is $\CAT(1)$ for every simplex $\sigma$ 
 in~$\tau$. 
 
-Each of these links is an all-right spherical complex and by \ref{cor:closed-geod-cat}, none of these links can contain a geodesic circle shorter than $2\cdot\pi$. 
+Each of these links is an all-right spherical complex.
+By \ref{cor:closed-geod-cat}, none of these links can contain a geodesic circle shorter than $2\cdot\pi$.
 
 Therefore Proposition~\ref{prop:no-trig} and \ref{clm:3pi/2} 
 imply the ``only if'' part.
@@ -431,7 +429,7 @@ and Karen Vogtmann \cite{billera-holmes-vogtmann}.
 Let $\spc{T}_n$ be the set of all metric trees with 
 $n$ end vertices
 labeled by $a^1,\dots,a^n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $t$ with end vertices $a^1,\dots, a^n$,
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $t$ with these end vertices,
 and all other vertices of degree 3,
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge vanishes, we assume that this edge degenerates;
@@ -474,7 +472,7 @@ such that each simplex is isometric to a Euclidean simplex.
 In particular, the underlying space of $\spc{Q}$ is a Euclidean polyhedral space.
 
 The link of a cube in a cubical complex is defined similarly to the link of a simplex in a simplicial complex.
-It is a simplicial complex that admits a natural all-right triangulation --- each simplex corresponds to an adjusted cube.
+It is a simplicial complex that admits a natural all-right triangulation --- each simplex corresponds to an adjacent cube.
 
 \parbf{Cubical analog of a simplicial complex.}
 Let $\spc{S}$ be a finite simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its vertices.
@@ -484,11 +482,7 @@ Denote by $\square^N$ the standard unit cube in $\RR^N$;
 that is, 
 \[\square^N=\set{(x_1,\dots,x_N)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
 
-Given a $k$-dimensional simplex $\<v_{i_0},\dots,v_{i_k}\>$ in $\spc{S}$, 
-mark the $(k\z+1)$-dimensional faces in $\square^N$ (there are $2^{N-k}$ of them)
-which are parallel to the coordinate $(k+1)$-plane 
-spanned by $e_{i_0},\dots,e_{i_k}$.
-
+Given a $k$-dimensional simplex $\<v_{i_0},\dots,v_{i_k}\>$ in $\spc{S}$, let us mark the $(k\z+1)$-dimensional faces in $\square^N$ (there are $2^{N-k}$ of them) that are parallel to the coordinate $(k+1)$-plane spanned by $e_{i_0},\dots,e_{i_k}$.
 
 Note that the set of all marked faces of $\square^{N}$
 forms a cubical complex;
@@ -505,7 +499,7 @@ is isometric to ${\spc{S}}$
 equipped with the all-right spherical metric.
 
 In particular, if $\spc{S}$ is a flag complex,
-then $\spc{Q}$ is a locally $\CAT(0)$,
+then $\spc{Q}$ is locally $\CAT(0)$,
 and therefore its universal cover $\tilde{\spc{Q}}$ is $\CAT(0)$.
 \end{thm}
 
@@ -514,14 +508,9 @@ By the construction of $\square_{\spc{S}}$, the link of any vertex of $\spc{Q}$ 
 equipped with the all-right spherical metric.
 Further, $\square_{\spc{S}}$ is connected since it must contain the whole 1-dimensional skeleton of $\square^{N}$, which is connected.
 
-If ${\spc{S}}$ is flag, 
-then by the flag condition (\ref{thm:flag}) 
-the link of any cube in $\spc{Q}$ is $\CAT(1)$.
-Therefore, by the cone construction (\ref{ex:cone+susp})
-$\spc{Q}$
-is locally $\CAT(0)$.
-It remains to apply the globalization theorem 
-(\ref{thm:hadamard-cartan}).
+If ${\spc{S}}$ is flag, then by the flag condition (\ref{thm:flag}), the link of any cube in $\spc{Q}$ is $\CAT(1)$.
+Therefore, by the cone construction (\ref{ex:cone+susp}) $\spc{Q}$ is locally $\CAT(0)$.
+It remains to apply the globalization theorem (\ref{thm:hadamard-cartan}).
 \qeds
 
 From Proposition \ref{prob:cubical-analog}, 
@@ -534,7 +523,7 @@ Show that a finite simplicial complex is flag
 if and only if its cubical analog is aspherical.
 \end{thm}
 
-\section{Construction}
+\section{Exotic aspherical manifolds}
 
 By \ref{ex:contractible}, any complete length $\CAT(0)$ space is contractible.
 Therefore, by the globalization theorem (\ref{thm:hadamard-cartan}), all proper length, locally $\CAT(0)$ spaces 
@@ -542,8 +531,7 @@ are \index{aspherical}\emph{aspherical};
 that is, they have contractible universal covers.
 This observation will be used to construct examples of aspherical spaces. 
 
-Let $\spc X$ be a proper topological space.
-Recall that $\spc X$ is called 
+A proper topological space $\spc X$ is called
 \index{simply connected space at infinity}\emph{simply connected at infinity} 
 if for any compact set $K\subset\spc X$
 there is a bigger compact set $K'\supset K$
@@ -552,7 +540,7 @@ and any loop which lies in $\spc X\setminus K'$
 is null-homotopic in $\spc X\setminus K$.
 
 Recall that path-connected spaces are not empty by definition.
-Therefore compact spaces are not simply connected at infinity.
+In particular, compact spaces are not simply connected at infinity.
 
 The following example was constructed by Michael Davis \cite{davis-1983}.
 
@@ -623,7 +611,7 @@ That is,
 $\gamma$ is not a shortest noncontractible circle --- a contradiction.
 \claimqeds
 
-Further, note that 
+Note that
 $\tilde G$ is homeomorphic to the plane
 since $\tilde G$ is 
 a two-dimensional manifold without boundary which 
@@ -642,24 +630,24 @@ if $K\supset \tilde v$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity --- a contradiction.
 \qeds
 
-The proof of the following exercise is analogous.
-It will be used later in the proof of Proposition~\ref{prop:loc-CAT-mnfld} --- a more geometric version of Proposition~\ref{prop:aspherical}.
-
 \begin{thm}[!]{Exercise}\label{ex:example-pi_infty-new}
 Under the assumptions of Lemma~\ref{lem:example-pi_infty}, 
 for any vertex $v$ in $\spc{S}$
 the complement $\spc{S}\setminus\{v\}$ is simply connected.
 \end{thm}
 
-\parit{Proof of \ref{prop:aspherical}.}
-Let $\Sigma^{m-1}$ be an $(m-1)$-dimensional smooth homology sphere that is not simply connected, and bounds a contractible smooth compact $m$-dimensional manifold~$\spc{W}$. 
-
-For $m\ge 5$, the existence of such $(\spc{W}, \Sigma)$
-is proved by Michel Kervaire \cite{kervaire}. 
+The proof of \ref{prop:aspherical} will use the following topological fact, which we are not going to prove.
+If $m\ge 5$, then it is proved by Michel Kervaire \cite{kervaire}.
 For $m=4$, it follows from a construction of Barry Mazur~\cite{mazur}.
 
-Pick any triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates~$\Sigma$.
+\begin{thm}{Fact}\label{thm:fact}
+Given an integer $m\ge 4$ there is a $(m-1)$-dimensional smooth homology sphere $\Sigma^{m-1}$ that is not simply connected, and bounds a contractible smooth compact $m$-dimensional manifold~$\spc{W}$.
+\end{thm}
 
+
+\parit{Proof of \ref{prop:aspherical}.}
+Choose $\spc{W}$ and $\Sigma^{m-1}$ provided by \ref{thm:fact}.
+Pick any triangulation $\tau$ of $\spc{W}$ and let $\spc{S}$ be the resulting subcomplex that triangulates~$\Sigma$.
 
 We can assume that $\spc{S}$ is flag; 
 otherwise, pass to the barycentric subdivision 
@@ -701,12 +689,13 @@ that is, for any compact sets $A\subset \tilde{\spc{Q}}$ and $B\subset\tilde{\sp
 \qeds
 
 
+\section{Remarks}
+
 The following proposition was proved by
 Fredric Ancel, 
 Michael Davis,
 and Craig Guilbault \cite{ancel-davis-guilbault};
 it could be considered as a more geometric version of Proposition~\ref{prop:aspherical}.
-
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
 Given $m\ge 5$, there is a Euclidean polyhedral space $\spc{P}$ such that:
@@ -736,18 +725,15 @@ construct a finite $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\
 and $\pi_1(\spc{S}\setminus\{v\})\ne0$ for some vertex $v$ in~$\spc{S}$.
 \end{thm} 
 
-\section{Remarks}
-
-Theorem \ref{thm:PL-CAT} gives is a good-looking description of polyhedral $\CAT(\kappa)$ spaces,
+Theorem \ref{thm:PL-CAT} gives a good-looking description of polyhedral $\CAT(\kappa)$ spaces,
 but in fact, it is hard to check even in very simple cases.
 For example, the description of those coverings of $\mathbb{S}^3$ branching at three 
 great circles which are $\CAT(1)$ requires quite a bit of work \cite{charney-davis-1993} --- try to guess the answer before reading.
 
-Another example is the braid space $\spc{B}_n$ that is the universal cover of $\CC^n$ infinitely branching in complex hyperplanes $z_i=z_j$ with the induced length metric.
+Another example is the braid space $\spc{B}_n$ that is the universal metric cover of $\CC^n$ infinitely branching in complex hyperplanes $z_i=z_j$.
 So far it is not known if $\spc{B}_n$ is $\CAT(0)$ for any $n\ge 4$ \cite{panov-petrunin-2016}.
 Understanding this space could help to study the braid group.
 This circle of questions is closely related to the generalization of the flag condition (\ref{thm:flag}) to spherical simplices with few acute dihedral angles.
-
 
 The construction used in the proof of Proposition~\ref{prop:aspherical} admits a number of modifications, several of which are discussed in a survey by Michael Davis \cite{davis-2001}.
 
@@ -772,9 +758,9 @@ According to Stone's theorem \cite{stone, davis-januszkiewicz}, the triangulatio
 cannot be made piecewise linear --- despite the fact that $\spc{P}$ is a manifold, its triangulation does not induce a piecewise linear structure.
 
 The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool for constructing aspherical spaces;
-a good survey on the subject is given by Ruth Charney and Michael Davis \cite{charney-davis-1995}.
+a survey on the subject is given by Ruth Charney and Michael Davis \cite{charney-davis-1995}.
 
-The $\CAT(0)$ property of a cube complex admits interesting (and useful) geometric descriptions if one exchanged the $\ell^2$-metric to natural $\ell^1$ or $\ell^\infty$ metrics on each cube.
+The $\CAT(0)$ property of a cube complex admits interesting (and useful) geometric descriptions if one exchanges the $\ell^2$-metric for natural $\ell^1$ or $\ell^\infty$ metrics on each cube.
 
 \begin{thm}{Theorem}
 The following three conditions are equivalent.

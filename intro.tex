@@ -18,7 +18,7 @@ Our goal is to show the beauty and power of Alexandrov geometry by reaching inte
 Exercises that are used in the text are marked with an exclamation point: \textbf{Exercise!}
 
 \begin{wrapfigure}{r}{45mm}
-\vskip-0mm
+\vskip-8mm
 \centering
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,scale=1.4,
   thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=8mm}]
@@ -33,7 +33,7 @@ Exercises that are used in the text are marked with an exclamation point: \textb
   \node[main node] (8) at (-{sin(6*360/7)},{cos(6*360/7)}) {\ref{chap:barycenter}};
 
   \path[every node/.style={font=\sffamily\small}]
-   (1) edge node{}(2)
+   (1) edge[dashed] node{}(2)
    (2) edge node{}(3)
    (2) edge node{}(4)
    (2) edge node{}(5)
