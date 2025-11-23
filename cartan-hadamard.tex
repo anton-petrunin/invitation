@@ -9,20 +9,23 @@ We say that a space $\spc{U}$ is \index{locally $\CAT(\kappa)$ space}\emph{local
 a small closed ball centered at any point $p$ in $\spc{U}$ is $\CAT(0)$ ($\CAT(1)$, respectively).
 
 For example, the circle $\mathbb{S}^1=\RR/\ZZ$ is locally isometric to $\RR$, and so $\mathbb{S}^1$ is locally $\CAT(0)$.
-On the other hand, $\mathbb{S}^1$ is not $\CAT(0)$, since closed local geodesics in $\mathbb{S}^1$ are not geodesics, so $\mathbb{S}^1$ does not meet \ref{cor:loc-geod-are-min}.
+On the other hand, $\mathbb{S}^1$ is not $\CAT(0)$, since closed local geodesics in $\mathbb{S}^1$ are not length-minimizing, so $\mathbb{S}^1$ does not satisfy \ref{cor:loc-geod-are-min}.
 
-If $\spc{U}$ is a proper geodesic space, then it is locally $\CAT(0)$ (or locally $\CAT(1)$) 
-if and only if 
-each point $p\in \spc{U}$ admits an open neighborhood $\Omega$ that is geodesic and such that any triangle in $\Omega$ is thin (or spherically thin, respectively).
+%\begin{thm}{Observation}
+%Let $\spc{U}$ be a proper geodesic space.
+%Then it is locally $\CAT(0)$ (or locally $\CAT(1)$) if and only ifeach point $p\in \spc{U}$ admits an open neighborhood $\Omega$ that is geodesic and such that any triangle in $\Omega$ is thin (or spherically thin, respectively).
+%\end{thm}
+
+
+
 
 \section{Space of local geodesic paths}\label{sec:geod-space}
-
-Recall that a constant-speed parameterization of a local geodesic by the unit interval $[0,1]$ is called a \index{geodesic!local geodesic}\emph{local geodesic path}. 
 
 In this section, we will study the behavior of local geodesics in locally $\CAT(\kappa)$  spaces.  
 The results will be used in the proof of the globalization theorem (\ref{thm:hadamard-cartan}).
 
-Recall that a \index{path}\emph{path} is a curve parametrized by $[0,1]$.
+Recall that a \index{path}\emph{path} is a curve parametrized by the unit interval $[0,1]$,
+and a \index{geodesic!local geodesic}\emph{local geodesic path} is a constant-speed parameterization of a local geodesic by $[0,1]$.
 The space of paths in a metric space $\spc{U}$ comes with the natural metric
 \[\dist{\alpha}{\beta}{}
 =
@@ -30,7 +33,7 @@ The space of paths in a metric space $\spc{U}$ comes with the natural metric
 \eqlbl{eq:dist-between-paths}
 \]
 
-By \eqref{ex:convex-dist} and \eqref{ex:CAT-geodesic} geodesic paths in a complete geodesic $\CAT(0)$ space  depends uniquely and continuously on their end points.
+By \eqref{ex:convex-dist} and \eqref{ex:CAT-geodesic} geodesic paths in a complete geodesic $\CAT(0)$ space depend uniquely and continuously on their end points.
 The same is true in $\CAT(1)$ spaces for geodesic paths shorter than $\pi$.
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
@@ -43,7 +46,8 @@ Moreover
 as $n\to\infty$.
 \end{thm}
 
-\parit{Proof; $\CAT(0)$ case.} 
+\parit{Proof.}
+Assume $\spc{U}$ is $\CAT(0)$.
 Fix $t\in[0,1]$.  
 Let $R>0$ be sufficiently small, so that $\cBall[\gamma_\infty(t),R]$ forms a proper geodesic $\CAT(0)$ space.
 %"value" looks weird here. value usually means value of a function. V.
@@ -53,8 +57,7 @@ Then $\sigma$ cannot leave the ball $\cBall[\gamma_\infty(t),R]$.
 By~\ref{cor:loc-geod-are-min}, $\sigma$ is a geodesic.  
 In particular, for all sufficiently large $n$, any arc of $\gamma_n$ of length $R/2$ or less containing $\gamma_n(t)$ is a geodesic.
 
-Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a complete geodesic $\CAT(0)$ space, by above
-geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.  
+Since $\spc{B}=\cBall[\gamma_\infty(t),R]$ is a complete geodesic $\CAT(0)$ space, by \ref{ex:CAT-geodesic} and \ref{ex:convex-dist} geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs.
 Thus there is a subinterval $\II$ of $[0,1]$,
 that  contains a neighborhood of $t$ in $[0,1]$
 and such that the arc $\gamma_n|_\II$ is minimizing for all large~$n$.
@@ -95,9 +98,10 @@ $\cBall[\gamma(t),r]$ forms a proper geodesic $\CAT(0)$ space.
 \end{figure}
 
 Choose a partition $0\z=t_0<t_1<\dots<t_n\z=1$ such that 
-\[\oBall(\gamma(t_i),r)\supset \gamma([t_{i-1},t_i])\] for all $n>i>0$.
+\[\oBall(\gamma(t_i),r)\supset \gamma([t_{i-1},t_i])\]
+for each $i$.
 Set $\spc{B}_i=\cBall[\gamma(t_i),r]$.
-We can assume in addition that $\spc{B}_{i-1}\cap \spc{B}_{i+1}\subset \spc{B}_{i}$ if $0<i<n$.
+We can assume that $\spc{B}_{i-1}\cap \spc{B}_{i+1}\z\subset \spc{B}_{i}$ if both sets are defined.
 
 Consider the disjoint union $\bigsqcup_i\spc{B}_i=\set{(i,x)}{x\in\spc{B}_i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all~$i$.
 Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}_i$ along~$\sim$.
@@ -132,7 +136,7 @@ Analogously, if $\spc{U}$ is a proper geodesic, locally $\CAT(1)$ space, then fo
 If $\spc{U}$ is a proper geodesic, locally $\CAT(0)$ space, then 
 for any path $\alpha$ there is a choice of a   local geodesic path $\gamma_\alpha$  connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$. 
 
-Analogously, if $\spc{U}$ is a proper geodesic locally $\CAT(1)$ space, then 
+Analogously, if $\spc{U}$ is a proper geodesic, locally $\CAT(1)$ space, then
 for any path $\alpha$ shorter than $\pi$,  
 there is a choice of a local geodesic path $\gamma_\alpha$ shorter than $\pi$ connecting the ends of $\alpha$ such that the map $\alpha\mapsto\gamma_\alpha$ is continuous, and if $\alpha$ is a local geodesic path then $\gamma_\alpha=\alpha$.
 \end{thm}
@@ -169,7 +173,7 @@ if two paths $\alpha$ and $\beta$ connect the same pair of points, then the prod
 
 \begin{thm}[!]{Exercise}\label{ex:null-homotopic}
 Assume $\spc{U}$ is a proper geodesic locally $\CAT(1)$ space. 
-Consider the construction $\alpha\mapsto\gamma_\alpha$ provided by Corollary~\ref{cor:path-geod}.
+Let $\alpha\mapsto\gamma_\alpha$ be the construction provided by Corollary~\ref{cor:path-geod}.
 
 Assume that $\alpha$ and $\beta$ are two paths connecting the same pair of points in $\spc{U}$, where 
 each is shorter than $\pi$ 
@@ -188,9 +192,7 @@ If a proper geodesic locally $\CAT(0)$ space is simply connected, then it
 is $\CAT(0)$.
 
 Analogously, if $\spc{U}$ is a proper geodesic, locally $\CAT(1)$ space
-such that any closed curve $\gamma\:\mathbb{S}^1\to \spc{U}$ shorter than $2\cdot\pi$
-is null-homotopic in the class of closed curves shorter than $2\cdot\pi$.
-Then $\spc{U}$ is $\CAT(1)$.
+such that any closed curve $\gamma\:\mathbb{S}^1\to \spc{U}$ shorter than $2\cdot\pi$ is null-homotopic in the class of closed curves shorter than $2\cdot\pi$, then $\spc{U}$ is $\CAT(1)$.
 \end{thm}
 
 
@@ -202,7 +204,7 @@ is an example of a simply connected space that  is locally $\CAT(1)$ but not $\C
 \includegraphics{mppics/pic-930}
 \end{figure}
 To contract the marked curve one has to increase its length to $2\cdot\pi$ or more;
-in particular, the surface does not satisfy the assumption of the globalization theorem.
+in particular, this surface does not satisfy the assumption of the globalization theorem.
 
 
 The proof of the globalization theorem relies on the following theorem, 
@@ -218,7 +220,7 @@ if and only if all pairs of points in $\spc{U}$ at distance less than $\pi$ are 
 
 The proof uses a thin-triangle decomposition with the inheritance lemma (\ref{lem:inherit-angle}) and the line-of-sight map (\ref{def:sight}).
 
-\parit{Proof of the patchwork globalization theorem (\ref{thm:alex-patch}).} 
+\parit{Proof.}
 Note that the implication ``only if'' follows from \ref{ex:CAT-geodesic} and \ref{ex:convex-dist}; it remains to prove the ``if'' part.
 
 Fix a triangle $\trig p x y$  in $\spc{U}$. 
@@ -236,7 +238,7 @@ By the assumptions, the line-of-sight map  $(t,s)\mapsto\gamma_t(s)$ from $p$ to
 Fix  a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\] 
 and set $x^{i,j}=\gamma_{t^i}(t^j)$. 
 Since the line-of-sight map is continuous and $\spc{U}$ is locally $\CAT(0)$, we may assume that the triangles 
-\[\trig{x^{i,j}}{x^{i,j+1}}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}}{x^{i+1,j}}{x^{i+1,j+1}}\] 
+\[\trig{x^{i,j}\,}{x^{i,j+1}\,}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}\,}{x^{i+1,j}\,}{x^{i+1,j+1}}\]
 are thin for each pair $i$,~$j$.
 
 Now we show that the thin property propagates to $\trig p x y$ by repeated application of the inheritance lemma (\ref{lem:inherit-angle}):
@@ -244,17 +246,17 @@ Now we show that the thin property propagates to $\trig p x y$ by repeated appli
 \item 
 For fixed $i$, 
 sequentially applying the lemma shows that the triangles 
-$\trig{p}{x^{i,1}}{x^{i+1,2}}$, 
-$\trig{p}{x^{i,2}}{x^{i+1,2}}$, 
-$\trig{p}{x^{i,2}}{x^{i+1,3}}$,
+$\trig{p\,}{x^{i,1}\,}{x^{i-1,2}}$,
+$\trig{p\,}{x^{i,2}\,}{x^{i-1,2}}$,
+$\trig{p\,}{x^{i,2}\,}{x^{i-1,3}}$,
 and so on are thin. 
 \end{itemize}
-In particular, for each $i$, the long triangle $\trig{p}{x^{i,N}}{x^{i+1,N}}$ is thin.
+In particular, for each $i$, the long triangle $\trig{p\,}{x^{i,N}\,}{x^{i-1,N}}$ is thin.
 \begin{itemize} 
 \item 
-By the same lemma the  triangles $\trig{p}{x^{0,N}}{x^{2,N}}$, $\trig{p}{x^{0,N}}{x^{3,N}}$, and so on, are thin. 
+By the same lemma the  triangles $\trig{p\,}{x^{0,N}\,}{x^{2,N}}$, $\trig{p\,}{x^{0,N}\,}{x^{3,N}}$, and so on, are thin.
 \end{itemize}
-In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is thin.
+In particular, $\trig p x y=\trig{p\,}{x^{0,N}\,}{x^{N,N}}$ is thin.
 \qeds
 
 \parit{Proof of the globalization theorem; $\CAT(0)$ case.}
@@ -291,7 +293,7 @@ otherwise, there would be a closed noncontractible curve in a $\CAT(0)$ neighbor
 Since the space is compact, the class contains a length-minimizing curve, 
 which must be a closed local geodesic. 
 
-The $\CAT(1)$ case is analogous, one only has to consider a homotopy class of closed curves shorter than $2\cdot\pi$.
+The $\CAT(1)$ case is analogous, one only has to consider a homotopy in the class of closed curves shorter than $2\cdot\pi$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:geod-circle}
@@ -304,17 +306,14 @@ Formulate and prove the analogous statement for $\CAT(1)$ spaces.
 
 \begin{thm}{Advanced exercise}\label{ex:branching-cover} 
 Let $\spc{U}$ be a proper geodesic $\CAT(0)$ space.
-Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric double cover branching along a geodesic $\gamma$.
-(Formally speaking, $\tilde{\spc{U}}$ is completion of a double cover of the complement $\spc{U}\setminus \gamma$.
+Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric double cover branching along a geodesic~$\gamma$.
+(Formally speaking, $\tilde{\spc{U}}$ is the completion of a double cover of the complement $\spc{U}\setminus \gamma$.
 For example, 3-dimensional Euclidean space admits a double cover branching along a line.)
 
 Show that $\tilde{\spc{U}}$ is $\CAT(0)$.
 \end{thm}
 
 \section{Remarks}
-
-The motivation for the notion of $\CAT(\kappa)$ spaces comes from the fact that a Riemannian manifold is locally  $\CAT(\kappa)$ if and only if it has sectional curvature at most $\kappa$.
-This easily follows from Rauch comparison for Jacobi fields and Proposition~\ref{prop:thin=cat}.
 
 The lemma about patchwork along a geodesic (\ref{lem:patch}) and its proof were suggested to us by Alexander Lytchak.  
 This statement was originally proved by Stephanie Alexander and Richard Bishop \cite{alexander-bishop-1990} using a different method.
@@ -334,8 +333,8 @@ Formulations for metric spaces of different generality were proved by
 Herbert Busemann \cite{busemann-CBA},
 Willi Rinow \cite{rinow},
 Mikhael Gromov \cite[p.~119]{gromov-1987}. 
-A detailed proof of Gromov's statement was given by Werner Ballmann \cite{ballmann-1995} when $\spc{U}$ is proper,
-and by Stephanie Alexander and Richard Bishop \cite{alexander-bishop-1990} in more generality.
+A detailed proof of Gromov's statement for proper spaces was given by Werner Ballmann \cite{ballmann-1995},
+and for complete spaces by Stephanie Alexander and Richard Bishop \cite{alexander-bishop-1990}.
 
 For proper $\CAT(1)$ spaces, the globalization theorem was proved by Brian Bowditch~\cite{bowditch}.
 

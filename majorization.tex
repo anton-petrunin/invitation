@@ -35,8 +35,7 @@ s&=\length \gamma,
 &
 \tilde s&= \length \tilde \gamma.
 \end{align*}
-Then
-\[\tilde r\ge r = s =\tilde s\ge\tilde r.\]
+Then $\tilde r\ge r = s =\tilde s\ge\tilde r$.
 Therefore $\tilde s=\tilde r$, and the statement follows.
 \qeds
 
@@ -95,15 +94,18 @@ For triangle ${\trig p x y}_\spc{Q}$ in $\spc{Q}$ and its model triangle $\trig{
 we have 
 \[\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{\spc{Q}}=\dist{x}{z}{}+\dist{z}{y}{}.\]
 Then the map $F$ defined by matching line-of-sight parameters satisfies $F(\tilde x)=x$ and $\dist{x}{F(\tilde w)}{}>\dist{\tilde x}{\tilde w}{}$ if $\tilde w$ is near the midpoint $\tilde z$ of $[\tilde x\tilde y]$ and lies on $[\tilde p\tilde z]$. 
-Indeed, for $\eps=1-s$ we have
-\[\dist{\tilde x}{\tilde w}{}
-=\dist{\tilde x}{\tilde \gamma_\frac12(s)}{}
-=\dist{x}{z}{}+o(\eps)\] and 
-\[\dist{x}{F(\tilde w)}{}
-=\dist{x}{\gamma_\frac12(s)}{}
-=\dist{x}{z}{}+\delta\cdot\eps+o(\eps),\]
-where $\delta=-\dist{p}{z}{}\cdot\cos\hinge zpx>0$.
-Thus $F$ is not majorizing.
+Indeed,
+\begin{align*}
+\dist{\tilde x}{\tilde w}{}
+&=\dist{\tilde x}{\tilde \gamma_\frac12(s)}{}
+=\dist{x}{z}{}+o(1-s),
+\\
+\dist{x}{F(\tilde w)}{}
+&=\dist{x}{\gamma_\frac12(s)}{}
+=\dist{x}{z}{}+\eps\cdot(1-s)+o(1-s),
+\end{align*}
+where $\eps=-\dist{p}{z}{}\cdot\cos\hinge zpx>0$.
+Thus $\dist{\tilde x}{\tilde w}{}<\dist{x}{F(\tilde w)}{}$ if $s$ is slightly smaller than $1$; therefore, $F$ is not majorizing.
 
 \begin{wrapfigure}{r}{38 mm}
 \vskip-0mm
