@@ -497,8 +497,7 @@ The value under the limit can be calculated from the  cosine law:
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
 
 The following lemma implies that
-changing $\angk p{\bar x}{\bar y}_{\EE^2}$ to $\angk p{\bar x}{\bar y}_{\mathbb{S}^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ in
-in \ref{eq:def-angle} makes no difference.
+changing $\angk p{\bar x}{\bar y}_{\EE^2}$ to $\angk p{\bar x}{\bar y}_{\mathbb{S}^2}$ or  $\angk p{\bar x}{\bar y}_{\HH^2}$ in \ref{eq:def-angle} makes no difference.
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
 For any three points $p,x,y$ in a metric space the following inequalities
@@ -724,7 +723,7 @@ with center $(0,n)$ and radius~$n$.
 Then $D_n$ converges to the upper half-plane as $n\to\infty$. 
 
 Note that the sequence of one-point sets $\{(0,n)\}$ converges to the empty set.
-Indeed, for any $\distfun_{\{(0,n)\}}(x)\to \infty=\distfun_\emptyset(x)$ for any~$x$.
+Indeed, $\distfun_{\{(0,n)\}}(x)\to \infty=\distfun_\emptyset(x)$ for any~$x$.
 
 \begin{thm}{Exercise}\label{ex:hausdorff-conv}
 Let $A_n\to A_\infty$ as in Definition \ref{def:hausdorff-coverge}.  
@@ -751,18 +750,18 @@ Therefore, the corresponding subsequence of $A_n$ converges to the empty set.
 Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
 we can assume that $\distfun_{A_n}(x_\kay)$ converges as $n\to\infty$ for any fixed~$\kay$.
 
-Note that for each $n$, the function $\distfun_{A_n}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
-Therefore the sequence $\distfun_{A_n}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
+Note that for each $n$, the function $\distfun_{A_n}\:\spc{X}\to\RR$ is 1-Lipschitz and non-negative.
+Therefore the sequence $\distfun_{A_n}$ converges pointwise to a 1-Lipschitz non-negative function $f\:\spc{X}\to\RR$.
 
 Set $A_\infty=f^{-1}(0)$. Let us show that 
 \[\distfun_{A_\infty}(y)\le f(y)\] 
 for any~$y$.
 Assume the contrary;
 that is, 
-$f(z)<R<\distfun_{A_\infty}(z)$ 
-for some $z\in \spc{X}$ and $R>0$.
+$f(y)<R<\distfun_{A_\infty}(y)$
+for some $y\in \spc{X}$ and $R>0$.
 Then for any sufficiently large $n$, there is a point $z_n\in A_n$ such that
-$\dist{x}{z_n}{}\le R$.
+$\dist{y}{z_n}{}\le R$.
 Since $\spc{X}$ is proper, we can pass to a partial limit $z_\infty$ of $z_n$ as $n\to\infty$.
 
 It is clear that $f(z_\infty)=0$;
@@ -823,7 +822,7 @@ corresponding to convergence in the ambient space $(\bm{X},\rho)$.
 Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we have  made a choice of convergence.
 Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, it might be possible to construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xrightarrow{\rho}} \spc{X}_\infty$ and $\spc{X}_n\xrightarrow{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
 
-For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$
+For example, the constant sequence $\spc{X}_n\iso\RR_{\ge0}$
 may converge to $\RR_{\ge0}$ and $\RR$.
 The first convergence is evident and the second could be guessed from the diagram.
 

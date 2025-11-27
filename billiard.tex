@@ -71,7 +71,7 @@ In particular, it works for the so-called \emph{ultralimits}; see for example \c
 The $\CAT$ comparison can be applied to any metric space,
 but it is usually applied to geodesic spaces (or complete length spaces).
 To simplify the presentation we will often assume in addition that the space is \index{proper space}\emph{proper}.
-The latter means that any closed ball is compact; see Section~\ref{sec:intrinsic}
+The latter means that any closed ball is compact; see Section~\ref{sec:intrinsic}.
 
 \begin{thm}{Proposition}\label{ex:CAT-geodesic}
 Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
@@ -625,7 +625,7 @@ if $D$ contains $X$ and the edge of $D$ contains~$p$.
 }
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
-Let $A$ and $B$ be two-convex sets in~$\EE^m$.
+Let $A$ and $B$ be two convex sets in~$\EE^m$.
 Assume that any dihedral angle supporting $A\cap B$ has angle measure at least~$\alpha$.
 Then the Reshetnyak puff pastry for the array
 \[(\underbrace{A,B,A,\ldots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}}).\]
@@ -846,10 +846,11 @@ and the billiards described above will be called {}\emph{billiards with convex w
 A billiard {}\emph{trajectory} on the table is a unit-speed polygonal line $\gamma$ that follows the standard law of billiards at the breakpoints on $\partial A^i$
 --- in particular, the angle of reflection is equal to the angle of incidence.
 The breakpoints of the trajectory will be called {}\emph{collisions}.
-\textit{We assume that our trajectory never meets a wall in a tangent direction.
-Also, we will always assume the trajectory meets at most one wall in a small neighborhood of every time moment.
-For example, if $\gamma$ has to meet more than two walls at time moment $t$
-or collisions accumulate at $t$, then we have to assume that $\gamma$ dies before $t$.}
+\textit{We assume that our trajectory (1) never meets a wall in a tangent direction and (2) meets at most one wall in a small neighborhood of every time $t$.
+If $\gamma$ meets a wall tangentially,
+or meets two or more walls at time $t$,
+or collisions accumulate at $t$,
+then we declare that $\gamma$ dies right before $t$ (that is, $\gamma$ is not defined at $t$).}
 
 Recall that the definition of sets with $\eps$-wide corners is given in \ref{sec:wide-corners}.
 
@@ -887,7 +888,7 @@ the total number of collisions cannot exceed $N=\tfrac{n\cdot(n-1)}2$.
 
 \parit{Proof of \ref{cor:balls} modulo \ref{thm:collision}.}
 Denote by $a_i=(x_i,y_i,z_i) \in \RR^3$ the center of the $i$-th ball.
-Consider the corresponding point in $\RR^{3\cdot N}$
+Consider the corresponding point in $\RR^{3\cdot n}$
 \begin{align*}
 \bm{a}&=(a_1, a_2 , \ldots , a_n ) =
 \\
@@ -918,7 +919,7 @@ Consider the norm of $\bm{a}=(a_1,\ldots,a_n)\in \RR^{3\cdot n}$ defined by
 \sqrt{M_1\cdot|a_1|^2+\ldots+M_n\cdot |a_n|^2},\]
 where $|a_i|=\sqrt{x_i^2+y_i^2+z_i^2}$ 
 and $M_i$ denotes the mass of the $i$-th ball.
-It is straightforward to check that the metric defined by $\lVert {*}\rVert$, the collisions follow the standard law of billiards.
+It is straightforward to check that for the metric defined by $\lVert {*}\rVert$, the collisions follow the standard law of billiards.
 
 By construction, the number of collisions of hard balls that we need to estimate 
 is the same as the number of collisions of the corresponding billiard trajectory on the table with $C_{i,j}$ as the walls.

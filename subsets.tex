@@ -145,7 +145,7 @@ Consider the unit normal vector field $\nu$ on $S$ that  points outside of~$K$.
 Denote by $k_1\le \ldots\le k_{m-1}$ the principal curvature functions of $S$ with respect to $\nu$ (note that if $K$ is convex, then  $k_1\ge 0$).
 
 Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
-Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary small neighborhood of~$p$.
+Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrarily small neighborhood of~$p$.
 \end{thm}
 
 The proof uses a straightforward modification of the Morse theory for manifolds with boundary; the paper of Sergei Vakhrameev \cite{vakhrameev} contains all the necessary lemmas.
@@ -404,7 +404,7 @@ Note that two-convexity survives under affine transformations of a Euclidean spa
 Therefore, as a consequence of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}), we get the following.
 
 \begin{thm}{Corollary}\label{cor:affine}
-Let $K\subset \EE^m$ be closed connected set that admits a smooth parametrization by a closed $m$-ball.
+Let $K\subset \EE^m$ be a closed connected set that admits a smooth parametrization by a closed $m$-ball.
 If $K$ equipped with the induced length metric is $\CAT(0)$, then the same holds for any affine transformation of $K$.
 \end{thm}
 
@@ -516,12 +516,13 @@ The following corollary is a generalization of the smooth two-convexity theorem 
 
 \begin{thm}{Corollary}\label{cor:shefel}
 Let $K$ be a closed subset in $\EE^3$.
-Assume there is a Lipschitz homeomorphism from closed ball in $\EE^3$ to $K$.
+Assume there is a Lipschitz homeomorphism from a closed ball in $\EE^3$ to $K$.
 Then $K$ with the induced length metric is $\CAT(0)$ if and only if the interior of $K$ is two-convex.
 \end{thm}
 
 \parit{Proof.}
-Set $\Omega=\Int K$ by the domain invariance theorem, $\Omega$ is homeomorphic to an open ball; in particular it is simply connected.
+Set $\Omega=\Int K$.
+By the domain invariance theorem, $\Omega$ is homeomorphic to an open ball; in particular it is simply connected.
 
 Apply the two-convexity theorem to~$\Omega$.
 Note that the completion of $\Omega$ equipped with the induced length metric 
@@ -551,7 +552,7 @@ are two-convex.
 Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed unit disc~$\DD$. 
 Then the graph
 \[\Gamma=\set{(x,y,z)\in \EE^3}{z=f(x,y)},\] 
-equipped with induced length metric is $\CAT(0)$.
+equipped with the induced length metric is $\CAT(0)$.
 \end{thm}
 
 \parit{Proof.}
@@ -568,7 +569,7 @@ Consider the sequence of sets
 \[K_n
 =
 \set{(x,y,z)\in \EE^3}{z\lege f(x,y)\pm\tfrac1n,\ (x,y)\in \DD}.\]
-Note that each $K_n$ meets the conditions in Corollary~\ref{cor:shefel}
+Note that each $K_n$ meets the conditions in Corollary~\ref{cor:shefel}.
 Therefore, $K_n$ equipped with the induced length metric is $\CAT(0)$.
 It remains to note that $K_n\to \Gamma$ in the sense of Gromov--Hausdorff, and apply \ref{prop:cat-limit}.
 \qeds
@@ -608,7 +609,7 @@ However in general
 we only have a locally distance-preserving map $K\to P$;
 it does not have to be onto and it may not be injective. 
 An example can be guessed from the picture.
-Nevertheless, is easy to see that $K$ is always a polyhedral space.
+Nevertheless, it is easy to see that $K$ is always a polyhedral space.
 
 The proof uses the following two exercises.
 
@@ -808,7 +809,7 @@ $\Omega'$ is a two-convex open set,
 (2) the boundary $\partial\Omega'$ 
 contains a finite number of polygons $F_i'$
 and the remaining part $S$ of the boundary is locally concave.
-It remains to show that (1) and (2) imply that $S$ and therefore $\partial\Omega'$
+It remains to show that (1) and (2) imply that the closure of $S$ and therefore $\partial\Omega'$
 are piecewise linear.
 
 \begin{thm}[!]{Exercise}\label{ex:convex+saddle+broken=>PL}
@@ -846,15 +847,14 @@ Denote by $\tilde K'$ the completion of~$\tilde\Omega'$.
 By Lemma~\ref{lem:poly-shefel}, $\tilde K'$ is $\CAT(0)$.
 
 By construction of $\Int P$, the embedding $\Int P\hookrightarrow \Omega'$
-admits a lift $\iota\:X\hookrightarrow \tilde K'$.
-By construction, $\iota$ almost preserves the distances between the points $x^1,x^2,x^3,x^4$;
+admits a lift $\iota\:X\hookrightarrow \tilde K'$, and $\iota$ almost preserves the distances between the points $x^1,x^2,x^3,x^4$;
 namely 
 \begin{align*}
-\dist{\iota(x^i)}{\iota(x^j)}{L}\lessgtr \dist{x^i}{x^j}{\Int P}\pm\eps.
+\dist{\iota(x^i)}{\iota(x^j)}{\tilde K'}\lessgtr \dist{x^i}{x^j}{\Int P}\pm\eps.
 \end{align*}
 
 Since $\eps>0$ is arbitrary and $\CAT(0)$ comparison holds in $\tilde K'$,
-we get that $\CAT(0)$ comparison holds for $x^1,x^2,x^3,x^4$ in $\Omega$.
+we get that $\CAT(0)$ comparison holds for $x^1,x^2,x^3,x^4$ in $\tilde \Omega$.
 
 The statement follows since the quadruple $x^1,x^2,x^3,x^4\in\tilde\Omega$ is arbitrary.
 \qeds
