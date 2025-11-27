@@ -47,7 +47,7 @@ as $n\to\infty$.
 \end{thm}
 
 \parit{Proof.}
-Assume $\spc{U}$ is $\CAT(0)$.
+Assume $\kappa=0$.
 Fix $t\in[0,1]$.  
 Let $R>0$ be sufficiently small, so that $\cBall[\gamma_\infty(t),R]$ forms a proper geodesic $\CAT(0)$ space.
 %"value" looks weird here. value usually means value of a function. V.
@@ -122,7 +122,7 @@ The $\CAT(1)$ case is proved in the same way.
 \qeds
 
 Recall that local geodesics are geodesics in any $\CAT(0)$ space; see \ref{cor:loc-geod-are-min}.
-Using it with \ref{lem:patch} and the uniqueness of geodesics (\ref{cor:loc-geod-are-min}), we get the following.
+Using it with \ref{lem:patch} and the uniqueness of geodesics (\ref{ex:CAT-geodesic}), we get the following.
 
 \begin{thm}{Corollary}\label{cor:discrete-paths}
 If $\spc{U}$ is a proper geodesic, locally $\CAT(0)$ space, then for any pair of points $p,q\in\spc{U}$, the space of all local geodesic paths from $p$ to $q$ is discrete;
@@ -147,7 +147,7 @@ the $\CAT(1)$ case is analogous.
 
 Consider the maximal interval $\II\subset[0,1]$ containing $0$
 such that there is a continuous one-parameter family of 
-local geodesic paths $\gamma_t$ for $t\in \II$ connecting $\alpha(0)$ to $\alpha(t)$, with $\gamma_t(0)=\gamma_0(t)=\alpha(0)$ for any~$t$. 
+local geodesic paths $\gamma_t$ for $t\in \II$ connecting $\alpha(0)$ to $\alpha(t)$ (that is, $\gamma_t(0)=\alpha(0)$ and $\gamma_t(1)=\alpha(t)$ for any~$t$) such that $\gamma_0$ is the constant path at $\alpha(0)$.
 
 By \ref{prop:geo-complete}, $\II$ is closed,
 so we may assume $\II=[0,s]$ for some $s\in [0,1]$.

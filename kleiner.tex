@@ -14,7 +14,7 @@ that is, $\bm{\mu}=(\mu^0,\ldots,\mu^k)\in\triangle^k$ if $\mu^0+\ldots+\mu^k=1$
 Consider a point array $\bm{p}=(p^0,\ldots,p^k)$ in the Euclidean space $\EE^n$.
 Recall that
 \[z=\mu^0\cdot p^0+\ldots+\mu^k\cdot p^k\]
-is called the \index{barycenter}\emph{barycenter} of the point array $\bm{p}=(p^0,\ldots,p^k)$ with masses $\bm{\mu}\z=(\mu^0,\ldots, \mu^k)\in \triangle^k$.
+is called the \index{barycenter}\emph{barycenter} of the point array $\bm{p}=(p^0,\ldots,p^k)$ with masses \index{$\triangle^k$}$\bm{\mu}\z=(\mu^0,\ldots, \mu^k)\in \triangle^k$.
 Equivalently, 
 \[z\df \argmin (\mu^0\cdot f^0+\ldots+\mu^k\cdot f^k),\eqlbl{eq:f-spx}\]
 where $f^i=\tfrac12\cdot\distfun_{p^i}^2$ for each $i$, and $\argmin f$\index{$\argmin$} denotes a point of minimum of the function $f$.
@@ -34,7 +34,7 @@ functions of the type $f=\tfrac12\cdot\distfun_{p}^2$ are 1-convex; see \ref{ex:
 \begin{thm}{Theorem}\label{thm:barycenter}
 Let $\spc{X}$ be a complete geodesic space 
 and $\bm{f}\z=(f^0,\z\ldots,f^k)\:\spc{X}\to\RR^{k+1}$
-be an array of nonnegative 1-convex locally Lipschitz functions.
+be an array of non-negative 1-convex locally Lipschitz functions.
 Then the barycentric simplex 
 $\spx{\bm{f}}\:\triangle^k\to \spc{X}$ is a uniquely defined Lipschitz map.
 
@@ -210,7 +210,7 @@ that is,
 \begin{thm}{Proposition}\label{thm:up-convex}
 Let $\spc{X}$ be a complete geodesic space 
 and $\bm{f}\z=(f^0,\z\ldots,f^\kay)\:\spc{X}\to\RR^{\kay+1}$
-be an array of nonnegative 1-convex locally Lipschitz functions.
+be an array of non-negative 1-convex locally Lipschitz functions.
 Consider the set $W=\Up[\bm{f}(\spc{X})]\subset\RR^{k+1}$.
 Then 
 
@@ -262,7 +262,7 @@ therefore $\bm{f}[\spx{\bm{f}}(\triangle^k)]$ lies in a convex hypersurface $\pa
 Choose $\bm{w}\in W$.
 Observe that $\bm{w}\succcurlyeq\bm{v}$ for some $\bm{v}\in \bar V\cap \partial W$.
 Note that $W$ is supported at $\bm{v}$ by a hyperplane 
-\[\Pi=\set{(x_1,\ldots,x_k)\in \RR^k}{\mu^0\cdot x_0+\ldots+\mu^k\cdot x_k=\const}\]
+\[\Pi=\set{(x_0,\ldots,x_k)\in \RR^{k+1}}{\mu^0\cdot x_0+\ldots+\mu^k\cdot x_k=\const}\]
 for some $\bm{\mu}=(\mu^0,\ldots,\mu^k)\in\triangle^{\kay}$.
 Let $p=\spx{\bm f}(\bm{\mu})$.
 By \ref{lem:argmin(convex)}, $\bm{f}(p)\z=\bm{v}$;
@@ -270,7 +270,7 @@ in particular $\bm{v}\in V$.
 
 Note that $p\in \spx{\bm{f}}(\triangle^k)\setminus\spx{\bm{f}}(\partial\triangle^k)$ if and only if 
 $\bm{f}(p)$ is supported by a plane as above for some $\bm{\mu}\in\triangle^{\kay}$,
-but it is not supported by a plane for some $\bm{\mu}\in\partial\triangle^{\kay}$.
+but not supported by any such plane with $\bm{\mu}\in\partial\triangle^{\kay}$.
 This condition is open, therefore $\spx{\bm{f}}(\triangle^k)\z\setminus\spx{\bm{f}}(\partial\triangle^k)$ is an open set.
 
 Since $\triangle^k$ is compact, $W=\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])$ is closed.
@@ -400,7 +400,7 @@ Let us recall two notions in general topology:
 
 \begin{thm}{Definition}\label{def:TopDim}\index{dimension!topological dimension}\index{topological dimension}
 Let $\spc{X}$ be a metric space. 
-The topological dimension of $\spc{X}$ is defined to be the minimum of nonnegative integers $n$ 
+The topological dimension of $\spc{X}$ is defined to be the minimum of non-negative integers $n$
 such that for any open cover of $\spc{X}$ there is a locally finite open refinement with order~$n$.
 If no such $n$ exists, then the topological dimension of $\spc{X}$ is infinite.
 
@@ -475,7 +475,7 @@ such that
 
 
 \begin{subthm}{thm:dim-infty-CBA:mnfld} 
-There is a $C^{\frac{1}{2}}$-embedding of an open set in $\RR^m$ to $\spc{U}$;
+There is a $C^{\frac{1}{2}}$-embedding of an open set in $\RR^m$ into $\spc{U}$;
 that is, $\map$ is bi-Hölder with exponent $\tfrac{1}{2}$.
 \end{subthm}
 
@@ -585,7 +585,7 @@ for any $x\in \spc{U}$.
 Arguing by contradiction,
 assume $\TopDim\spc{U}<m$.
 By \ref{lem:approximation-cba:im},
-the image of $F\circ\Psi\circ\map$ lies in the $F$-image of the $(m-1)$-skeleton of $\spc{N}$;
+the image of $F\circ\Psi\circ\map$ lies in the $F\circ\Psi$-image of the $(m-1)$-skeleton of $\spc{N}$;
 In particular, it can be covered by a countable collection of Lipschitz images of $(m-1)$-simplexes.
 Hence
 $\bm{0}\in \RR^m$ is not a stable value of $F\circ\Psi\circ\map$.
@@ -597,7 +597,7 @@ The following exercise is a generalization of Helly's theorem; for closely relat
 
 \begin{thm}{Exercise}\label{ex:helly}
 Let $K^1,\ldots,K^n$ be closed convex subsets in a proper length $\CAT(0)$ space $\spc{U}$.
-Suppose that $\TopDim \spc{U}=m$ and any $m+1$ subsets from $\{K^1,\ldots, K^n\}$ have a common point.
+Suppose that $\TopDim \spc{U}\le m$ for some $m<n$ and any $m+1$ subsets from $\{K^1,\ldots, K^n\}$ have a common point.
 Show that all subsets $K^1,\ldots,K^n$ have a common point.
 \end{thm}
 

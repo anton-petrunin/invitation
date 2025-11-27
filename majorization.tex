@@ -20,16 +20,18 @@ The following proposition is a consequence of the definition.
 \label{prop:majorize-geodesic} 
 Let  $\alpha$  be a closed curve in a metric space $\spc{X}$.
 Suppose $D\subset\EE^2$ majorizes $\alpha$ under $F\: D \to \spc{X}$.  
-Then any geodesic subarc of $\alpha$ is the image under $F$ of a subarc of $\partial_{\EE^2} D$ that is geodesic in the length metric of $D$.
+Then any geodesic subarc of $\alpha$ is the image under $F$ of a subarc of $\partial D$ that is geodesic in the length metric of $D$.
 
 In particular, if $D$ is convex, then the corresponding subarc is a geodesic in $\EE^2$.
 \end{thm}
 
-\parit{Proof.} For a geodesic subarc $\gamma\:[a,b]\to\spc{X}$ of $\alpha=F\circ\tilde \alpha$, set
+\parit{Proof.}
+Given a geodesic subarc $\gamma\:[a,b]\to\spc{X}$ of $\alpha$,
+let $\tilde \gamma = (F|_{\partial D})^{-1}\circ\gamma$,
 \begin{align*}
-\tilde r&=\dist{\tilde \gamma(a)}{\tilde \gamma(b)}{D},
+r&=\dist{\gamma(a)}{\gamma(b)}{\spc{X}},
 &
-\tilde \gamma &= (F|_{\partial D})^{-1}\circ\gamma,
+\tilde r&=\dist{\tilde \gamma(a)}{\tilde \gamma(b)}{D},
 \\
 s&=\length \gamma,
 &
@@ -77,7 +79,7 @@ is a \index{line-of-sight map}\emph{line-of-sight map from $p$ to $\alpha$}.
 Note that a line-of-sight map is essentially a geodesic homotopy from a constant map to a curve.
 
 We will show that there is a majorizing map for $\trig p x y$ whose image $W$ is the image of the line-of-sight map for $[x y]$ from  $p$.
-However, as one can see from the following example, the line-of-sight map might be \textit{not} majorizing.
+However, as one can see from the following example, the line-of-sight map might \textit{not} be majorizing.
 
 
 
@@ -277,8 +279,9 @@ we denote by $[x^1\ldots x^n ]_R$ a polygon in the length metric of $R$.
 \end{wrapfigure}
 
 \parit{Proof of \ref{thm:major} for polygons.}
-We claim that any closed $n$-gon $[x^1x^2 \ldots x^n]$ in a $\CAT(0)$ space  is majorized by a convex polygonal region \[R_n=\Conv[\tilde x^1\tilde x^2\ldots\tilde x^n]\]
-under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$. 
+We claim that any closed $n$-gon $[x^1x^2 \ldots x^n]$ in a $\CAT(0)$ space $\spc{U}$ is majorized by a convex polygonal region
+\[R_n=\Conv[\tilde x^1\tilde x^2\ldots\tilde x^n],\]
+under a map $F_n$ that sends $\tilde x^i\mapsto x^i$ for each $i$.
 
 The base case $n=3$ is proved above.
 Assume the statement is true for $(n-1)$-gons, $n\ge 4$.  
@@ -292,7 +295,7 @@ and $\dot F\:\dot R\to \spc{U}$ be a majorizing map for $\trig { x^1}{x^{n-1}}{ 
 
 Set 
 $R= R_{n-1}\cup \dot R$, where $R$ carries its length metric.
-Since $F_n$ and $\dot F$ agree on $[\tilde x^1 \tilde x^{n-1}]$, we may define $F\:R\to\spc{U}$ by
+Since $F_{n-1}$ and $\dot F$ agree on $[\tilde x^1 \tilde x^{n-1}]$, we may define $F\:R\to\spc{U}$ by
 \[
 F(x)=
 \begin{cases}
