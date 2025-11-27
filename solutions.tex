@@ -1279,12 +1279,14 @@ By assumption $k\ge m+1$.
 
 Suppose $k<n$.
 We can assume that $n=k+1$ and $K^1\cap\ldots\cap K^{n}\z=\emptyset$.
-Choose a point array $\bm{p}=(p^1,\dots,p^k)$ such that
+Choose a point array $\bm{p}=(p^1,\dots,p^{k+1})$ such that
 \[p^i\in \bigcap_{j\ne i} K^j\]
 for each $i$.
 Observe that $\spx{\bm{p}}(\partial\triangle^k)\subset \bigcup_iK^i$.
-Since $\spx{\bm{p}}$ is degenerate, $\spx{\bm{p}}(\triangle^k)\subset \bigcup_iK^i$.
-Apply Sperner's lemma \cite{sperner-lemma} to show that $\spx{\bm{p}}(\triangle^k)(x)\z\in \bigcap_iK^i$ for some $x\in \triangle^k$,
+
+By \ref{thm:bihoelder}, the simplex $\spx{\bm{p}}$ is degenerate.
+Therefore, $\spx{\bm{p}}(\triangle^k)\subset \bigcup_iK^i$.
+Apply Sperner's lemma \cite{sperner-lemma} to show that $\spx{\bm{p}}(\triangle^k)(\bm{\mu})\z\in \bigcap_iK^i$ for some $\bm{\mu}\in \triangle^k$,
 and arrive at a contradiction.
 
 \parbf{\ref{ex:dim-top-haus-CAT}.}
