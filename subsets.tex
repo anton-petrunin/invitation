@@ -19,24 +19,32 @@ C&=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}.
 Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, are $\CAT(0)$ and why?
 \end{thm}
 
-The answers are given below, but it is instructive to think about these questions before reading further.
+The answers are given below, but it is instructive to think before reading further.
 
-\parbf{$\bm{A}$.} No, $A$ is not $\CAT(0)$.
+\parit{$\bm{A}$.}
+No, $A$ is not $\CAT(0)$.
+
+Choose a triangle $[pqr]$ in the $(x,y)$-plane that surrounds the origin.
+Lift it a bit up, so $[pqr]$ remains in $A$, and observe that this triangle is not thin in the induced length metric of $A$.
+\qeds
+
+Let us give another visual argument more in the style of  differential geometry.
  
-The boundary $\partial A$ is the paraboloid described by  $z=x^2+y^2$;  in particular it bounds an open convex set in $\EE^3$ whose complement is~$A$.
+\parit{Another way.} The boundary $\partial A$ is the paraboloid described by  $z\z=x^2+y^2$;  in particular it bounds an open convex set in $\EE^3$ whose complement is~$A$.
 The nearest-point projection of $A\to\partial A$ is short (Exercise~\ref{ex:closest-point}).
 It follows that $\partial A$ is a convex set in $A$ equipped with its induced length metric.
 
 Therefore if $A$ is $\CAT(0)$, then so is~$\partial A$.
 The latter is not true: $\partial A$ is a smooth convex surface, and has strictly positive curvature by the Gauss formula.
+\qeds
 
-\parbf{$\bm{B}$.} Yes, $B$ is $\CAT(0)$. 
+\parit{$\bm{B}$.} Yes, $B$ is $\CAT(0)$.
 
-Evidently $B$ is a convex closed set in~$\EE^3$. 
+Evidently $B$ is a closed convex set in~$\EE^3$.
 Therefore the length metric on $B$ coincides with the Euclidean metric
-and $\CAT(0)$ comparison holds.
+and $\CAT(0)$ comparison holds.\qeds
 
-\parbf{$\bm{C}$.} Yes, $C$ is $\CAT(0)$, 
+\parit{$\bm{C}$.} Yes, $C$ is $\CAT(0)$,
 but the proof is not as easy as before.
 
 Set $f_t(x,y)=x^2-y^2 -2\cdot (x-t)^2$.
@@ -59,7 +67,7 @@ if $a<b<c$, then $V_b\supset V_a\cap V_c$.
 \end{clm}
 
 Given $t_1,\ldots, t_n\in \RR$ consider the  union
-\[C'=V_{t_1}\cup\dots\cup V_{t_n}.\]
+\[C'=V_{t_1}\cup\ldots\cup V_{t_n}.\]
 The inclusion \ref{eq:VcVnV-0} makes it possible to apply Reshetnyak gluing theorem \ref{thm:gluing} recursively and show that $C'$ is $\CAT(0)$.
 
 By approximation, the $\CAT(0)$ comparison holds for any 4 points in $C$;
@@ -72,11 +80,12 @@ note that
 We may assume that $C'$ contains all $\gamma_{i,j}$.
 It follows that 
 \[\dist{x_i}{x_j}{C}\le \dist{x_i}{x_j}{C'}\le \dist{x_i}{x_j}{C}+2\cdot\eps\]
-Since and $C'$ is $\CAT(0)$, $\eps>0$ is arbitrary, so is $C$.
+Since $\eps>0$ is arbitrary and $C'$ is $\CAT(0)$, so is $C$.\qeds
 
-\parbf{Remark.}
-The set $C$ is not convex, but it is \textit{two-convex} as defined in the next section.
-As you will see, two-convexity is closely related to the inheritance of an upper curvature bound by a subset.
+\parbf{Remarks.}
+The last argument will be reused in the proof of \ref{thm:set-with-smooth-bry:CBA}.
+While the set $C$ is not convex, we shall see that it is \textit{two-convex} as defined in the next section.
+In fact, two-convexity is closely related to the inheritance of an upper curvature bound by a subset.
 
 \section{Two-convexity}
 
@@ -133,13 +142,12 @@ Let $K\subset \EE^m$ be a closed subset.
 
 Assume that the boundary of $K$ is a smooth hypersurface~$S$.
 Consider the unit normal vector field $\nu$ on $S$ that  points outside of~$K$.
-Denote by $k_1\le \dots\le k_{m-1}$ the principal curvature functions of $S$ with respect to $\nu$ (note that if $K$ is convex, then  $k_1\ge 0$).
+Denote by $k_1\le \ldots\le k_{m-1}$ the principal curvature functions of $S$ with respect to $\nu$ (note that if $K$ is convex, then  $k_1\ge 0$).
 
 Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
 Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrary small neighborhood of~$p$.
 \end{thm}
 
-The following proof was given by Mikhael Gromov \cite[\S\textonehalf]{gromov-1991}, but we added a few details.
 The proof uses a straightforward modification of the Morse theory for manifolds with boundary; the paper of Sergei Vakhrameev \cite{vakhrameev} contains all the necessary lemmas.
 
 \begin{wrapfigure}{r}{25mm}
@@ -149,11 +157,11 @@ The proof uses a straightforward modification of the Morse theory for manifolds 
 \end{wrapfigure}
 
 \parit{Proof; only-if part.}
-If $k_2(p)<0$ for some $p\in S$,
+Suppose $k_2(p)<0$ at some point $p\in S$,
 consider the plane $W$ containing $p$ and spanned by the first two principal directions at~$p$.
 Choose a small triangle in $W$ that surrounds $p$ and move it slightly in the direction of $\nu(p)$.
 We get a triangle $\trig xyz$ that is null-homotopic in $K$,
-but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $\trig xyz$ does not lie in $K$ completely.
+but the solid triangle $\Delta=\Conv\{x,y,z\}$ bounded by $\trig xyz$ does not lie in $K$ completely.
 Therefore $K$ is not two-convex.
 
 \parit{If part.}
@@ -207,7 +215,7 @@ Namely,  any plane curve $\gamma$ (not necessary simple) which is  contractible 
 The latter condition does not hold for the complement 
 of two planes in $\EE^4$, which is two-convex by Proposition~\ref{prop:two-hull};
 see also Exercise~\ref{ex:two-planes} below.
-The following proposition shows that there are no such examples in~$\EE^3$.
+By the following proposition, there are no such examples in~$\EE^3$.
 
 \begin{thm}{Proposition}\label{prop:3d-strong-2-convexity}
 Let $\Omega\subset\EE^3$ be an open two-convex subset.
@@ -218,16 +226,14 @@ that is null-homotopic in $\Omega$ is also null-homotopic in $W\cap \Omega$.
 
 This statement is intuitively obvious, but the proof is not trivial;
 it uses the following classical result.
-An alternative definition of two-convexity using homology instead of homotopy is mentioned in the last section.
-For this definition the proof is simpler.
 
 \begin{thm}{Loop theorem}
-Let $M$ be a three-dimensional manifold with nonempty boundary $\partial M$.
+Let $M$ be a 3-dimensional manifold with nonempty boundary $\partial M$.
 Assume 
 $f\: (\DD,\partial \DD)\to (M,\partial M)$
-is a continuous map from the disc $\DD$ such that the boundary curve $f|_{\partial \DD}$ is not null-homotopic in $\partial M$.  Then there is an embedding 
-$h\: (\DD,\partial \DD)\to (M,\partial M)$ 
-with the same property.
+is a continuous map of pairs
+such that the boundary curve $f|_{\partial \DD}$ is not null-homotopic in $\partial M$; here $\DD$ denotes the disc.
+Then there is an embedding of pairs $h\: (\DD,\partial \DD)\to (M,\partial M)$ with the same property.
 \end{thm}
 
 The theorem is due to Christos Papakyriakopoulos \cite[a proof can be found in][]{hatcher}. 
@@ -271,14 +277,13 @@ Then
 $K$ is $\CAT(0)$ if and only if $K$ is two-convex.
 \end{thm}
 
-This theorem is a baby case of a result of Stephanie Alexander, David Berg, and Richard Bishop \cite{alexander-berg-bishop}, which is briefly discussed at the end of the lecture.
-The proof below is based on the argument in Section \ref{sec:solid-parabolonds}.
+The proof below is based on the argument in \ref{CAT(0)?}$C$.
 
 \parit{Proof.}
 Denote by $S$ and by $\Omega$ the boundary and the interior of $K$ respectively. 
 Since $K$ is connected and $S$ is smooth, $\Omega$ is also connected.
 
-Denote by $k_1(p)\le\dots\le k_{m-1}(p)$ the principal curvatures of $S$ at $p\in S$ with respect to the normal vector $\nu(p)$ pointing out of~$K$.
+Denote by $k_1(p)\le\ldots\le k_{m-1}(p)$ the principal curvatures of $S$ at $p\in S$ with respect to the normal vector $\nu(p)$ pointing out of~$K$.
 By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2(p)\ge 0$ for any $p\in S$.
 
 \parit{Only-if part.}
@@ -292,9 +297,9 @@ Since $K$ is simply connected,
 by the globalization theorem (\ref{thm:hadamard-cartan})
 it suffices to show that any point $p\in K$ admits a $\CAT(0)$ neighborhood.
 
-If $p\in\Int K$, then it admits a neighborhood isometric to a $\CAT(0)$ subset of $\EE^m$.
-Fix $p\in S$.
-Assume that $k_2(p)>0$.
+Evidently, such a neighborhood exists if $p\in\Int K$
+
+Assume $p\in S$ and $k_2(p)>0$.
 Fix a sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
 Let us show that 
 \begin{clm}{}\label{K'-is-CAT}
@@ -308,8 +313,8 @@ can be described as a subgraph
 \[K'
 =
 \set
-{(x_1,\dots,x_m)\in \cBall[p,\eps]}
-{x_m\le f(x_1,\dots,x_{m-1})}.\]
+{(x_1,\ldots,x_m)\in \cBall[p,\eps]}
+{x_m\le f(x_1,\ldots,x_{m-1})}.\]
 
 Fix $s\in[-\eps,\eps]$.
 Since $\eps$ is small and $k_2(p)>0$, the restriction 
@@ -322,32 +327,32 @@ consider the set
 \[V_s
 =
 \set
-{(x_1,\dots,x_m)\in K'}
-{x_m\le f(x_1,\dots,x_{m-1})+\lambda\cdot (x_1-s)^2}.\]
+{(x_1,\ldots,x_m)\in K'}
+{x_m\le f(x_1,\ldots,x_{m-1})+\lambda\cdot (x_1-s)^2}.\]
 Note that the function 
-\[(x_1,\dots, x_{m-1})\mapsto f(x_1,\dots,x_{m-1})+\lambda\cdot (x_1-s)^2\]
+\[(x_1,\ldots, x_{m-1})\mapsto f(x_1,\ldots,x_{m-1})+\lambda\cdot (x_1-s)^2\]
 is concave near the origin.
 Since $\eps$ is small, we can assume that the $V_s$ are convex subsets of~$\EE^m$.
 
 Further note that 
 \[K'=\bigcup_{s\in[-\eps,\eps]}V_s.\]
 
-Also, the same argument as in \ref{CAT(0)?} shows that
+Also, the same argument as in \ref{CAT(0)?}$C$ shows that
 \begin{clm}{}\label{eq:VcVnV}
 If $a<b<c$, then $V_b\supset V_a\cap V_c$.
 
 \end{clm}
 
-Given an array of values $s^1<\dots<s^k$ in $[-\eps,\eps]$,
+Given an array of values $s^1<\ldots<s^k$ in $[-\eps,\eps]$,
 set $V^i=V_{s^i}$ and
 consider the unions 
-\[W^i=V^1\cup\dots\cup V^i\]
+\[W^i=V^1\cup\ldots\cup V^i\]
 equipped with the induced length metric.
 
-Note that the array $(s^n)$ can be chosen in such a way that 
+Note that the array $(s^1,\ldots,s^k)$ can be chosen in such a way that
 $W^k$ is arbitrarily close to~$K'$ in the sense of Hausdorff.
 
-Arguing as in \ref{sec:solid-parabolonds}, we get that the following claim implies \ref{K'-is-CAT}.
+Arguing as in \ref{CAT(0)?}$C$, we get that the following claim implies \ref{K'-is-CAT}.
 \begin{clm}{}
 All $W^i$ are $\CAT(0)$.
 \end{clm}
@@ -360,11 +365,12 @@ According to \ref{eq:VcVnV},
 \[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
 Moreover, this is a convex set in $\EE^m$ 
 and therefore it is a convex set in $W^i$ and in $V^{i+1}$.
-By the Reshetnyak gluing theorem, $W^{i+1}$ is $\CAT(0)$.
+By the Reshetnyak gluing theorem (\ref{thm:gluing}), $W^{i+1}$ is $\CAT(0)$.
 Hence the claim follows.
 \claimqeds
 
-Note that we have proved the following:
+Summarizing, we have proved the following claim:
+
 \begin{clm}{}\label{clm-strong2convex}
 $K'$ is $\CAT(0)$ if $K$ is 
 \index{strongly two-convex set}\emph{strongly two-convex},
@@ -373,19 +379,19 @@ that is, $k_2(p)>0$ at any point $p\in S$.
 
 It remains to show that $p$ admits a $\CAT(0)$ neighborhood in the case $k_2(p)=0$.
 
-Choose a coordinate system $(x_1,\dots,x_m)$ as above,
-so that the $(x_1,\dots,x_{m-1})$-coordinate hyperplane is the tangent subspace to $S$ at~$p$.
+Choose a coordinate system $(x_1,\ldots,x_m)$ as above,
+so that the $(x_1,\ldots,x_{m-1})$-coordinate hyperplane is the tangent subspace to $S$ at~$p$.
 
 Fix $\eps>0$ so that a neighborhood of $p$ in $S$ 
 is the graph
-\[x_m= f(x_1,\dots,x_{m-1})\]
-of a function $f$ defined on the open ball $B$ of radius $\eps$ centered at the origin in the $(x_1,\dots,x_{m-1})$-hyperplane.
+\[x_m= f(x_1,\ldots,x_{m-1})\]
+of a function $f$ defined on the open ball $B$ of radius $\eps$ centered at the origin in the $(x_1,\ldots,x_{m-1})$-hyperplane.
 Fix a smooth positive 
 strongly 
 convex function $\phi\:B\to \RR_+$
 such that $\phi(x)\to\infty$ as $x$ approaches the boundary of $B$.
 Note that for $\delta>0$, the subgraph $K_\delta$ defined by the inequality
-\[x_m\le f(x_1,\dots,x_{m-1})-\delta\cdot\phi(x_1,\dots,x_{m-1})\]
+\[x_m\le f(x_1,\ldots,x_{m-1})-\delta\cdot\phi(x_1,\ldots,x_{m-1})\]
 is strongly two-convex.
 By \ref{clm-strong2convex}, $K_\delta$ is $\CAT(0)$.
 
@@ -393,6 +399,16 @@ Finally as $\delta\to0$, the closed $\eps$-neighborhoods of $p$ in $K_\delta$
 converge to the closed $\eps$-neighborhood of $p$ in $K$.
 By \ref{prop:cat-limit}, the $\eps$-neighborhood of $p$ is $\CAT(0)$.
 \qeds
+
+Note that two-convexity survives under affine transformations of a Euclidean space.
+Therefore, as a consequence of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}), we get the following.
+
+\begin{thm}{Corollary}\label{cor:affine}
+Let $K\subset \EE^m$ be closed connected set that admits a smooth parametrization by a closed $m$-ball.
+If $K$ equipped with the induced length metric is $\CAT(0)$, then the same holds for any affine transformation of $K$.
+\end{thm}
+
+Corollary~\ref{cor:shefel} will provide a more general statement in 3-dimensional Euclidean space.
 
 \section{Open plane sets}
 
@@ -404,12 +420,6 @@ Equip $\Omega$ with the induced length metric and denote its completion
 by~$K$.
 Then $K$ is $\CAT(0)$.
 \end{thm}
-
-We sketch the proof given by Richard Bishop \cite{bishop} and leave the details to be finished as an exercise.
-A generalization of this result is proved by 
-Alexander Lytchak and Stefan Wenger
-\cite[Proposition 12.1]{lytchak-wenger};
-this paper also contains a far-reaching application.
 
 If $\Omega$ is not open, then the induced intrinsic metric might be infinite for some pair of points.
 In this case the proof implies that each metric component of $\Omega$ with the induced length metric is $\CAT(0)$.
@@ -456,10 +466,6 @@ Equip $S$ with the induced length metric.
 Show that the triangle $T$ is thin in~$S$.
 \end{thm}
 
-Here is a spherical analog of Theorem \ref{thm:bishop-plane},
-which can be proved along the same lines.
-It will be used in the next section. 
-
 \begin{thm}{Proposition}\label{prop:bishop-sphere}
 Let $\Theta$ be an open connected subset of the unit sphere $\mathbb{S}^2$ that does not contain a closed hemisphere.
 Equip $\Theta$ with the induced length metric.
@@ -469,34 +475,20 @@ such that any closed curve in $\tilde \Theta$ shorter than $2\cdot\pi$ is contra
 Show that the completion of $\tilde \Theta$ is $\CAT(1)$.
 \end{thm}
 
+
+This proposition will be used in the next section.
+It is a spherical analog of Theorem \ref{thm:bishop-plane}
+and can be proved along the same lines with an additional idea from the following exercise.
+
 \begin{thm}{Exercise}\label{ex:bishop-sphere}
-Prove the following partial case of the proposition:
-
-Let $K$ be a closed subset of the unit sphere $\mathbb{S}^2$ that does not contain a closed hemisphere.
-Suppose $K$ is simply connected and bounded by a simple Lipschitz curve.
-Show that $K$ with induced length metric is $\CAT(1)$.
+Let $K$ be a closed subset of the unit sphere $\mathbb{S}^2$.
+Suppose $K$ is simply connected, bounded by a simple closed Lipschitz curve, and its interior does not contain a closed hemisphere.
+Show that $K$ with the induced length metric is $\CAT(1)$.
 \end{thm}
 
-\section{Shefel's theorem}
+\section{Two-convexity theorem}
 
-In this section, we will formulate our version of a theorem of Samuel Shefel (\ref{thm:shefel}) and prove a couple of its corollaries.
-
-It seems that Shefel was very intrigued by the survival of metric properties under affine transformation.
-To describe an instance of such phenomena,
-note that two-convexity survives under affine transformations of a Euclidean space.
-Therefore, as a consequence of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}), the following holds.
-
-\begin{thm}{Corollary}
-Let $K$ be closed connected subset of Euclidean space 
-equipped with the induced length metric.
-Assume $K$ is $\CAT(0)$ and bounded by a smooth hypersurface. 
-Then any affine transformation of $K$ is also $\CAT(0)$.
-\end{thm}
-
-By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in the three-dimensional Euclidean space.
-In higher dimensions this is no longer true.
-
-\begin{thm}{Two-convexity theorem}\label{thm:shefel}
+\begin{thm}{Theorem}\label{thm:shefel}
 Let $\Omega$ be a connected open set in~$\EE^3$.
 Equip $\Omega$ with the induced length metric
 and denote by $\tilde K$ the completion of the universal metric cover of~$\Omega$.
@@ -505,7 +497,7 @@ if and only if $\Omega$ is two-convex.
 \end{thm}
 
 The proof of this statement will be given in the following three sections.
-First we prove its polyhedral analog, then we prove some properties of two-convex hulls in three-dimensional Euclidean space and only then do we prove the general statement. 
+First we prove its polyhedral analog, then we prove some properties of two-convex hulls in 3-dimensional Euclidean space and only then do we prove the general statement.
 
 The following exercise shows that the analogous statement does not hold in higher dimensions.
 
@@ -520,18 +512,16 @@ $\tilde K$ is $\CAT(0)$ if and only if $\Pi_1\perp\Pi_2$.
 
 Before coming to the proof of the two-convexity theorem, 
 let us formulate a few corollaries.
-The following corollary is a generalization of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}) for three-dimensional Euclidean space.
+The following corollary is a generalization of the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}) for 3-dimensional Euclidean space.
 
 \begin{thm}{Corollary}\label{cor:shefel}
-Let $K$ be a closed subset in $\EE^3$ 
-bounded by a Lipschitz hypersurface.
-Then $K$ with the induced length metric is $\CAT(0)$ if and only if the interior of $K$ is two-convex and simply connected.
+Let $K$ be a closed subset in $\EE^3$.
+Assume there is a Lipschitz homeomorphism from closed ball in $\EE^3$ to $K$.
+Then $K$ with the induced length metric is $\CAT(0)$ if and only if the interior of $K$ is two-convex.
 \end{thm}
 
 \parit{Proof.}
-Set $\Omega=\Int K$.
-Since $K$ is simply connected and bounded by a surface, 
-$\Omega$ is also simply connected.
+Set $\Omega=\Int K$ by the domain invariance theorem, $\Omega$ is homeomorphic to an open ball; in particular it is simply connected.
 
 Apply the two-convexity theorem to~$\Omega$.
 Note that the completion of $\Omega$ equipped with the induced length metric 
@@ -541,7 +531,7 @@ Hence the result.
 
 Note that the Lipschitz condition is used just once to show that the completion of $\Omega$ is isometric to $K$ with the induced length metric.
 This property holds for a wider class of hypersurfaces;
-for instance Alexander horned ball might have $\CAT(0)$ induced length metric. 
+for instance, some examples of Alexander horned balls have $\CAT(0)$ induced length metric.
 
 Let $U$ be an open set in~$\RR^2$.
 A continuous function $f\:U\to\RR$ is called 
@@ -578,13 +568,8 @@ Consider the sequence of sets
 \[K_n
 =
 \set{(x,y,z)\in \EE^3}{z\lege f(x,y)\pm\tfrac1n,\ (x,y)\in \DD}.\]
-Note that each $K_n$ is closed and simply connected.
-By definition $K$ is also two-convex. 
-Moreover the boundary of $K_n$ is a Lipschitz surface.
-
-Equip $K_n$ with the induced length metric.
-By Corollary~\ref{cor:shefel},
-$K_n$ is $\CAT(0)$.
+Note that each $K_n$ meets the conditions in Corollary~\ref{cor:shefel}
+Therefore, $K_n$ equipped with the induced length metric is $\CAT(0)$.
 It remains to note that $K_n\to \Gamma$ in the sense of Gromov--Hausdorff, and apply \ref{prop:cat-limit}.
 \qeds
 
@@ -592,25 +577,25 @@ It remains to note that $K_n\to \Gamma$ in the sense of Gromov--Hausdorff, and a
 
 Now we are back to the proof of the two-convexity theorem (\ref{thm:shefel}).
 
-Recall that a subset $P$ of $\EE^m$ is called a \index{polytope}\emph{polytope} 
+Recall that a subset $P$ of $\EE^m$ is called \index{polyhedral set}\emph{polyhedral}
 if it can be presented as a union of a finite number of simplices.
 Similarly,
-a \index{spherical polytope}\emph{spherical polytope}
+a \index{spherical polyhedral set}\emph{spherical polyhedral set}
 is a union of a finite number of simplices in~$\mathbb{S}^m$.
 
-Note that any polytope admits a finite triangulation.
-Therefore any polytope equipped with the induced length metric 
+Note that any polyhedral set admits a finite triangulation.
+Therefore any polyhedral set equipped with the induced length metric
 forms a Euclidean polyhedral space as defined in~\ref{def:poly}.
  
 \begin{thm}{Lemma}\label{lem:poly-shefel}
-The two-convexity theorem (\ref{thm:shefel}) holds if the set $\Omega$ is the interior of a polytope.
+The two-convexity theorem (\ref{thm:shefel}) holds if the set $\Omega$ is the interior of a polyhedral set.
 \end{thm}
 
-The statement might look obvious, but there is a hidden obstacle in the proof that is related to the following.
-Let $P$ be a polytope and $\Omega$ its interior,
+The statement might look obvious, but we will face a technical difficulty in the proof that is related to the following.
+Let $P$ be a polyhedral set and $\Omega$ its interior,
 both considered with the induced length metrics.
-Typically, the completion $K$ of $\Omega$ 
-is isometric to~$P$ --- in this case, the lemma follows easily from
+If the completion $K$ of $\Omega$
+is isometric to~$P$, then the lemma follows easily from
 \ref{thm:PL-CAT}.
 
 \begin{wrapfigure}{r}{20mm}
@@ -628,7 +613,7 @@ Nevertheless, is easy to see that $K$ is always a polyhedral space.
 The proof uses the following two exercises.
 
 \begin{thm}[!]{Exercise}\label{ex:hemisphere}
-Show that any closed path of length $<2\cdot \pi$ in the units sphere $\mathbb{S}^2$ lies in an open hemisphere. 
+Show that any closed path of length $<2\cdot \pi$ in the unit sphere $\mathbb{S}^2$ lies in an open hemisphere.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:inner-support}
@@ -644,7 +629,7 @@ The ``only if'' part can be proved in the same way as in the smooth two-convexit
 \parit{If part.}
 Assume that $\Omega$ is two-convex.
 Denote by $\tilde\Omega$ the universal metric cover of~$\Omega$.
-Let $\tilde K$ and $K$ be the corresponding completions of $\tilde\Omega$ and $\Omega$.
+Let $\tilde K$ and $K$ be the completions of $\tilde\Omega$ and $\Omega$, respectively.
 
 The main step is to show that $\tilde K$ is $\CAT(0)$. 
 
@@ -655,8 +640,9 @@ is not simply connected and $\tilde K\to K$ branches at~$p$.}
 
 Fix a point $\tilde p\in \tilde K\setminus\tilde\Omega$; 
 denote by $p$ the image of $\tilde p$ in~$K$.
-Note that $\tilde K$ is a ramified cover of $K$ and hence is locally contractible. Thus, any loop in $\tilde K$ is homotopic to a loop in $\tilde\Omega$ which is simply connected.
-Therefore $\tilde K$ is simply connected too.
+Note that $\tilde K$ is a ramified cover of $K$ and hence is locally contractible.
+Thus, any loop in $\tilde K$ is homotopic to a loop in $\tilde\Omega$.
+Since $\tilde\Omega$ is simply connected, so is $\tilde K$.
 
 Thus, by the globalization theorem (\ref{thm:hadamard-cartan}), it is sufficient to show that
 
@@ -667,15 +653,15 @@ a small neighborhood of $\tilde p$ in $\tilde K$ is $\CAT(0)$.
 Recall that $\Sigma_{\tilde p}=\Sigma_{\tilde p}\tilde K$ denotes the space of directions at~$\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
 is isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
-By Exercise~\ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show that
+By \ref{ex:cone+susp}, \ref{eq:curv=<0} follows once we can show that
 
 \begin{clm}{}\label{eq:curv=<1}
 $\Sigma_{\tilde p}$ is $\CAT(1)$.
 \end{clm}
 
-By rescaling, we can assume that every face of $K$ which does not contain $p$ lies at distance at least 2 from~$p$.
-Denote by $\mathbb{S}^2$ the unit sphere centered at $p$, and 
-set $\Theta=\mathbb{S}^2\cap\Omega$.
+By rescaling, we can assume that all faces of $K$ that do not contain $p$ lie at distance at least 2 from~$p$.
+Let $\mathbb{S}^2$ be the unit sphere centered at $p$,
+and let $\Theta=\mathbb{S}^2\cap\Omega$.
 Note that $\Sigma_pK$ is isometric to the completion of $\Theta$
 and $\Sigma_{\tilde p}\tilde K$ is the completion of the regular metric covering $\tilde\Theta$ of $\Theta$ induced by the universal metric cover $\tilde \Omega\to \Omega$.
 
@@ -705,11 +691,11 @@ describes a construction which produces the two-convex hull $\Conv_2 \Omega$ of 
 This construction is very close to the one given by Samuel Shefel~\cite{shefel-1964}.
 
 \begin{thm}{Proposition}\label{prop:2-conv-construction}
-Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
+Let $\Pi_1,\Pi_2\ldots$ be an everywhere dense
 sequence of planes in~$\EE^3$.
 Given an open set $\Omega$, consider 
 the recursively defined sequence of open sets 
-$\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
+$\Omega=\Omega_0\subset\Omega_1\subset\ldots$
 such that 
 $\Omega_n$ is the union of $\Omega_{n-1}$ 
 and all the bounded components of 
@@ -753,26 +739,25 @@ but not null-homotopic in $\Pi\cap\Omega'$.
 
 By approximation we can assume that $\Pi=\Pi_n$ for a large $n$, and that $\gamma$ lies in $\Omega_{n-1}$.
 By the same argument as in the proof of Proposition~\ref{prop:3d-strong-2-convexity} using the loop theorem, we can assume that there is an embedding $\phi\: \DD\to \Omega'$ such that $\phi|_{\partial\DD}=\gamma$ and $\phi(D)$ lies entirely in one of the half-spaces bounded by~$\Pi$.
-By the $n$-step of the construction, the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$ --- a contradiction. \qeds
+By the $n$-th step of the construction, the entire bounded domain $U$ bounded by $ \Pi_n$ and $\phi(D)$ is contained in $\Omega'$ and hence $\gamma$ is contractible in $\Pi\cap\Omega'$ --- a contradiction.
+\qeds
 
 \begin{thm}{Key lemma}\label{lem:key-shefel}
-The two-convex hull of the interior of a polytope in $\EE^3$
-is also the interior of a polytope.
+The two-convex hull of the interior of a polyhedral set in $\EE^3$
+is also the interior of a polyhedral set.
 \end{thm}
 
 \parit{Proof.}
-Fix a polytope $P$ in~$\EE^3$.
+Fix a polyhedral set $P$ in~$\EE^3$.
 Set $\Omega=\Int P$.
 We may assume that $\Omega$ is dense in~$P$
 (if not, redefine $P$ as the closure of $\Omega$).
-Denote by $F_1,\dots,F_m$ the facets of~$P$. 
+Denote by $F_1,\ldots,F_m$ the facets of~$P$.
 By subdividing $F_i$ if necessary, we may assume that all $F_i$ are convex polygons.
 
 Set $\Omega'=\Conv_2\Omega$ and let $P'$ be the closure of~$\Omega'$.
-Further, 
-for each $i$, 
-set $F'_i=F_i\setminus \Omega'$.
-In other words, 
+Further, let $F'_i=F_i\setminus \Omega'$;
+in other words,
 $F'_i$ is the subset of the facet $F_i$ 
 which remains on the boundary of~$P'$.
 
@@ -797,7 +782,8 @@ Each connected component of the complement $F_i\setminus F'_i$ is convex.
 \end{wrapfigure}
 
 Indeed, assume a connected component $A$ of $F_i\setminus F'_i$ fails to be convex.
-Then there is a supporting line $\ell$ to $F'_i$ touching $F'_i$ at a single point in the interior of~$F_i$.
+Then $F'_i$ has an extreme point in the interior of $F_i$.
+In other words, there is a supporting line $\ell$ to $F'_i$ touching $F'_i$ at a single point in the interior of~$F_i$.
 Then one could rotate the plane of $F_i$ slightly around $\ell$ and move it parallelly to cut a ``cap'' from the complement of~$\Omega$.
 The latter means that $\Omega$ is not two-convex
 --- a contradiction.
@@ -843,13 +829,13 @@ Let us show that
 $\CAT(0)$ comparison holds for this quadruple.
 
 Fix $\eps>0$.
-Choose six broken lines in $\tilde \Omega$ connecting all pairs of points $x^1,x^2,x^3,x^4$, where the length of each broken line is at most $\eps$ bigger than 
+Choose six polygonal lines in $\tilde \Omega$ connecting all pairs of points $x^1,x^2,x^3,x^4$, where the length of each polygonal line is at most $\eps$ bigger than
 the distance between its ends in the length metric on~$\tilde \Omega$.
-Denote by $X$ the union of these broken lines.
-Choose a polytope $P$ in $\Omega$ such that its interior $\Int P$ contains the projections of all six broken lines and discs which contract all the loops created by them (it is sufficient to take 3 discs).
+Denote by $X$ the union of these polygonal lines.
+Choose a polyhedral set $P$ in $\Omega$ such that its interior $\Int P$ contains the projections of all six polygonal lines and discs which contract all the loops created by them (it is sufficient to take 3 discs).
 
 Denote by $\Omega'$ the two-convex hull of the interior of~$P$.
-According to the key lemma (\ref{lem:key-shefel}), $\Omega'$ is the interior of a polytope.
+According to the key lemma (\ref{lem:key-shefel}), $\Omega'$ is the interior of a polyhedral set.
 
 Equip $\Omega'$ with the induced length metric.
 Consider the universal metric cover $\tilde\Omega'$ of~$\Omega'$.
@@ -868,26 +854,17 @@ namely
 \end{align*}
 
 Since $\eps>0$ is arbitrary and $\CAT(0)$ comparison holds in $\tilde K'$,
-we get that $\CAT(0)$ comparison holds in $\Omega$ for $x^1,x^2,x^3,x^4$.
+we get that $\CAT(0)$ comparison holds for $x^1,x^2,x^3,x^4$ in $\Omega$.
 
 The statement follows since the quadruple $x^1,x^2,x^3,x^4\in\tilde\Omega$ is arbitrary.
 \qeds
 
-\begin{thm}{Exercise}\label{ex:CAT=>two-convex}
-Assume $K\subset\EE^m$ is a closed set bounded by a Lipschitz hypersurface.
+\begin{thm}{Exercise}\label{ex:CAT=>two-convex}\label{ex:two-convex-not-a-CAT}
+Assume $K\subset \EE^{m}$ is a subgraph of a Lipschitz function $f\:\RR^{m-1}\to\RR$.
 Equip $K$ with the induced length metric.
 Show that if $K$ is $\CAT(0)$, then $K$ is two-convex.
-\end{thm}
 
-The following exercise is analogous to Exercise~\ref{ex:two-planes}.
-It provides a counterexample to the analog of Corollary~\ref{cor:shefel} in higher dimensions.
-
-\begin{thm}{Exercise}\label{ex:two-convex-not-a-CAT}
-Let $K=W\cap W'$, where 
-\[W=\set{(x,y,z,t)\in \EE^4}{z\ge -x^2}\]
-and $W'=\iota(W)$ for some motion $\iota\:\EE^4\to\EE^4$.
-
-Show that $K$ is always two-convex and one can choose $\iota$ so that $K$ with the induced length metric is not $\CAT(0)$.
+Show that the converse does not hold.
 \end{thm}
 
 \section{Remarks}
@@ -898,19 +875,20 @@ In addition to the inheritance of upper curvature bounds by two-convex sets disc
 these sets appear as the maximal open sets with vanishing curvature in Riemannian manifolds with non-negative or non-positive sectional curvature [see Lemma 5.8 in \ncite{buyalo}, \ncite{andersson-howard}
 and \ncite{panov-petrunin}].
 
-Two-convex sets could be defined using homology instead of homotopy, as in Gromov's formulation of the Leftschetz theorem \cite[\S\textonehalf]{gromov-1991}.
-Namely, we can say that $K$ is two-convex if the following condition holds: if a one-dimensional cycle $z$ has support in the intersection of $K$ with a plane $W$ and bounds in $K$, then it bounds in $K\cap W$.
+Two-convex sets could be defined using homology instead of homotopy, as in Gromov's formulation of the Lefschetz theorem \cite[\S\textonehalf]{gromov-1991}.
+Namely, we can say that $K$ is two-convex if the following condition holds: \textit{if a 1-dimensional cycle $z$ has support in the intersection of $K$ with a plane $W$ and bounds in $K$, then it bounds in $K\cap W$}.
 
 The resulting definition is equivalent to the one used above.
 But unlike our definition it can be generalized to define $k$-convex sets in $\EE^m$ for~$k>2$.
 With this homological definition one can also avoid the use of the loop theorem, whose proof is quite involved.
-Nevertheless, we chose the definition using homotopies since it is easier to visualize.
+We stick to the homotopy-based definition since it is slightly easier to visualize.
 
 Both definitions work well for open sets; for general sets one should be able to give a similar definition using  an appropriate homotopy/ho\-mo\-logy theory.
 
-In \cite{alexander-berg-bishop}, Stephanie Alexander, David Berg and Richard Bishop gave the exact upper bound on Alexandrov's curvature for the Riemannian manifolds with boundary.
+Proposition~\ref{prop:two-cove+smooth} was proved by Mikhael Gromov \cite[\S\textonehalf]{gromov-1991}, but we added a few details.
+
+Jointly with David Berg and Richard Bishop, the first author proved the following theorem, which gives the exact upper bound on Alexandrov's curvature for the Riemannian manifolds with boundary.
 This theorem includes the smooth two-convexity theorem (\ref{thm:set-with-smooth-bry:CBA}) as a partial case.
-Namely they show the following.
 
 \begin{thm}{Theorem}
 Let $M$ be a Riemannian manifold with boundary~$\partial M$.
@@ -930,22 +908,27 @@ Assume that all the sectional curvatures of $M$ and $\partial M$ are bounded abo
 Then $M$ is locally $\CAT(\kappa)$.
 \end{thm}
 
+The Theorem~\ref{thm:bishop-plane} was proved by Richard Bishop \cite{bishop}.
+A generalization of this result is proved by Alexander Lytchak and Stefan Wenger \cite[Proposition 12.1]{lytchak-wenger}; this paper also contains a far-reaching application.
+
+Samuel Shefel was intrigued by the survival of metric properties under affine transformation.
+An instance of this can be seen in Corollary~\ref{cor:affine}.
+
 Theorem~\ref{thm:shefel-graph} is from Shefel's original paper~\cite{shefel-1965}.
 It is related to Alexandrov's theorem about ruled surfaces \cite{alexandrov-1957-ruled-surfaces}.
 
-Let $D$ be an embedded closed disc in~$\EE^3$.
-We say that $D$ is \index{saddle surface}\emph{saddle} if each connected component which any plane cuts from $D$ contains a point on the boundary~$\partial D$.
-If $D$ is locally described by a Lipschitz embedding, then 
-this condition is equivalent to saying that $D$ is two-convex.
+The following question remains open.
 
 \begin{thm}{Shefel's conjecture}
-Any saddle surface in $\EE^3$ equipped with the length-metric is locally $\CAT(0)$.
-\end{thm} 
+Suppose $s\:\DD \to\EE^3$ is a Lipschitz embedding of the disc $\DD$,
+and its image $D=s(\DD)$ is \index{saddle surface}\emph{saddle}; that is, for any plane $\Pi$ each connected component of $D\setminus \Pi$ meets the boundary of $D$.
+Then $D$ equipped with the length-metric is locally $\CAT(0)$.
+\end{thm}
 
-The conjecture is open even for the surfaces described by a bi-Lipschitz embedding of a disc.
-From another result of Samuel Shefel \cite{shefel-1965}, 
-it follows that a saddle surface satisfies the isoperimetric inequality $a\le C\cdot \ell^2$ 
-where $a$ is the area of a disc  bounded by a curve of length $\ell$ and $C=\tfrac{1}{3\cdot\pi}$.
-By a result of Alexander Lytchak and Stefan Wenger \cite{lytchak-wenger}, Shefel's conjecture is equivalent to the isoperimetric inequality with the optimal constant $C=\tfrac{1}{4\cdot\pi}$.
-For more on the subject, see \cite{petrunin-stadler,lytchak-wagner} and the references therein.
- 
+A partial answer is given in Theorem \ref{thm:shefel-graph},
+which is a result of Shefel~\cite{shefel-1964}.
+He also solved an analogous question in $\EE^2$; see \cite{shefel-1965}.
+Applying Crofton-type argument to his result, one can see that a saddle disc satisfies the isoperimetric inequality $a\le C\cdot \ell^2$
+where $a$ is the area of a disc bounded by a curve of length $\ell$ and $C=\tfrac{1}{3\cdot\pi}$.
+By a result of Alexander Lytchak and Stefan Wenger \cite{lytchak-wenger}, Shefel's conjecture would follow if the constant would be optimal; that is, $C=\tfrac{1}{4\cdot\pi}$.
+Several variations and generalizations of this conjecture are discussed by the third author and Stephan Stadler \cite{petrunin-stadler}.

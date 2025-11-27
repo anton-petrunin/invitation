@@ -1,43 +1,45 @@
 %%!TEX root = the-kleiner.tex
 \chapter{Barycenters}\label{chap:barycenter}
 
+Barycenters provide yet another way to use your Euclidean intuition for $\CAT(0)$ spaces.
+We will apply them to dimension theory.
+
+
 \section{Definition}
 
 Let us denote by $\triangle^k\subset \RR^{k+1}$\index{$\triangle^m$} 
 the \index{standard simplex}\emph{standard $k$-simplex}; 
-that is, $\bm{m}=(m_0,\dots,m_k)\in\triangle^k$ if $m_0+\dots+m_k=1$ and $m_i\ge0$ for all $i$.
+that is, $\bm{\mu}=(\mu^0,\ldots,\mu^k)\in\triangle^k$ if $\mu^0+\ldots+\mu^k=1$ and $\mu^i\ge0$ for all $i$.
 
-Consider a point array $\bm{p}=(p_0,\dots,p_k)$ in the Euclidean space $\EE^n$.
+Consider a point array $\bm{p}=(p^0,\ldots,p^k)$ in the Euclidean space $\EE^n$.
 Recall that
-\[z=m_0\cdot p_0+\dots+m_k\cdot p_k\]
-is called the  \index{barycenter}\emph{barycenter} of the point array $\bm{p}=(p_0,\dots,p_k)$ with masses $\bm{m}\z=(m_0,\dots, m_k)\in \triangle^k$.
+\[z=\mu^0\cdot p^0+\ldots+\mu^k\cdot p^k\]
+is called the \index{barycenter}\emph{barycenter} of the point array $\bm{p}=(p^0,\ldots,p^k)$ with masses $\bm{\mu}\z=(\mu^0,\ldots, \mu^k)\in \triangle^k$.
 Equivalently, 
-\[z\df \argmin (m_0\cdot f_0+\dots+m_k\cdot f_k),\eqlbl{eq:f-spx}\]
-where $f_i=\tfrac12\cdot\distfun_{p_i}^2$ for each $i$, and $\argmin f$\index{$\argmin$} denotes a point of minimum of the function $f$.
+\[z\df \argmin (\mu^0\cdot f^0+\ldots+\mu^k\cdot f^k),\eqlbl{eq:f-spx}\]
+where $f^i=\tfrac12\cdot\distfun_{p^i}^2$ for each $i$, and $\argmin f$\index{$\argmin$} denotes a point of minimum of the function $f$.
 
-The map $\spx{}\:\triangle^k\mapsto \EE^n$ defined by $\spx{}\:\bm{m}\mapsto z$ is called the \index{barycentric simplex} \emph{barycentric simplex} of the array $\bm{p}$.
+The map $\spx{}\:\triangle^k\mapsto \EE^n$ defined by $\spx{}\:\bm{\mu}\mapsto z$ is called the \index{barycentric simplex} \emph{barycentric simplex} of the array $\bm{p}$.
 If needed we may denote this map by $\spx{\bm{p}}$ or, more generally, $\spx{\bm{f}}$.
-The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f_0,f_1,\dots,f_k)$.
+The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f^0,\ldots,f^k)$.
 Formally speaking, the definition \ref{eq:f-spx} makes sense for any array of functions in a metric space;
 but in this case, the map might be undefined or non-uniquely defined.
 
-Further, we will work with this definition in $\CAT(0)$ spaces instead of $\EE^n$.
-It will be used to define and study dimension of $\CAT$ spaces.
-We will use that on a geodesic $\CAT(0)$ space
+Further, we will work with this definition in $\CAT(0)$ spaces.
+We will essentially use only that on a geodesic $\CAT(0)$ space
 functions of the type $f=\tfrac12\cdot\distfun_{p}^2$ are 1-convex; see \ref{ex:convex-distfun}.
-This will be the only way we will use the $\CAT(0)$ condition for most of this chapter.
 
 \section{Barycentric simplex}
 
 \begin{thm}{Theorem}\label{thm:barycenter}
 Let $\spc{X}$ be a complete geodesic space 
-and $\bm{f}\z=(f_0,\z\dots,f_k)\:\spc{X}\to\RR^{k+1}$
+and $\bm{f}\z=(f^0,\z\ldots,f^k)\:\spc{X}\to\RR^{k+1}$
 be an array of nonnegative 1-convex locally Lipschitz functions.
 Then the barycentric simplex 
-$\spx{\bm{f}}\:\triangle^k\to \spc{X}$ is a uniquely defined Lipshitz map.
+$\spx{\bm{f}}\:\triangle^k\to \spc{X}$ is a uniquely defined Lipschitz map.
 
-In particular, we have that for any point array $\bm{p}\z=(p_0,\z\dots,p_k)$ in a complete geodesic $\CAT(0)$ space
-the barycentric simplex $\spx{\bm{p}}$  is a uniquely defined Lipschitz map.
+In particular, we have that for any point array $\bm{p}\z=(p^0,\z\ldots,p^k)$ in a complete geodesic $\CAT(0)$ space
+the barycentric simplex $\spx{\bm{p}}$ is a uniquely defined Lipschitz map.
 \end{thm}
 
 
@@ -73,65 +75,71 @@ Applying \ref{midpoint} for $x\z=p_n$, $y\z=p_m$, we see that $p_n$ is a Cauchy 
 Thus the sequence $p_n$ converges to a minimum point of $f$.
 \qeds
 
+Assume $\phi$ is a convex function defined on a real interval $\II$.
+For $t_0\in\II$, let us define the \index{right derivative}\emph{right} (respectively, \index{left derivative}\emph{left}) \index{$\phi^\pm$}\emph{derivative} $\phi^+(t_0)$ ($\phi^-(t_0)$) at $t_0$ by
+\[\phi^\pm(t_0)=\lim_{t\to t_0\pm} \frac{\phi(t)-\phi(t_0)}{|t-t_0|}.\]
+Note that our sign convention for $\phi^-$ is not standard --- for $\phi(t)=t$ we have
+$\phi^+(t)=1$ and $\phi^-(t)=-1$.
+
 \parit{Proof of \ref{thm:barycenter}.}
-Since each $f_i$ is $1$-convex, for any $\bm{x}=(x_0,x_1,\dots,x_k)\z\in\triangle^k$ 
+Since each $f^i$ is $1$-convex, for any $\bm{\lambda}=(\lambda^0,\ldots,\lambda^k)\z\in\triangle^k$
 the convex combination 
-\[\left(\sum_i x_i\cdot f_i\right)\:\spc{X}\to\RR\] 
+\[\left(\sum_i \lambda_i\cdot f^i\right)\:\spc{X}\to\RR\]
 is also $1$-convex.
 Therefore, according to \ref{lem:argmin(convex)}, the barycentric simplex 
-%$\spx{\bm{f}}(\bm{x})$ is defined for any $\bm{x}\in\triangle^k$.
+%$\spx{\bm{f}}(\bm{\lambda})$ is defined for any $\bm{\lambda}\in\triangle^k$.
 $\spx{\bm{f}}$ is uniquely defined on $\triangle^k$.
  
-For $\bm{x},\bm{y}\in\triangle^k$,
+For $\bm{\lambda},\bm{\mu}\in\triangle^k$,
 let 
 \begin{align*}
-f_{\bm{x}}
-&=\sum_i x_i\cdot f_i,
+f_{\bm{\lambda}}
+&=\sum_i \lambda_i\cdot f^i,
 &
-f_{\bm{y}}
-&=\sum_i y_i\cdot f_i,
+f_{\bm{\mu}}
+&=\sum_i \mu^i\cdot f^i,
 \\
 p
-&=\spx{\bm{f}}(\bm{x}),
+&=\spx{\bm{f}}(\bm{\lambda}),
 &
 q
-&=\spx{\bm{f}}(\bm{y}),
+&=\spx{\bm{f}}(\bm{\mu}),
 \end{align*}
 Choose a geodesic $\gamma$ from $p$ to $q$;
 suppose $s=\dist{p}{q}{}$ and so $\gamma(0)=p$ and $\gamma(s)=q$.
 Observe the following:
 \begin{itemize}
-\item The function $\phi(t)=f_{\bm{x}}\circ\gamma(t)$ has a minimum at $0$. 
+\item The function $\phi(t)=f_{\bm{\lambda}}\circ\gamma(t)$ has a minimum at $0$.
 Therefore $\phi^+(0)\ge 0$.
 
-\item The function $\psi(t)=f_{\bm{y}}\circ\gamma(t)$ has a minimum at $s$. 
+\item The function $\psi(t)=f_{\bm{\mu}}\circ\gamma(t)$ has a minimum at $s$.
 Therefore $\psi^-(s)\ge 0$.
 \end{itemize}
-From $1$-convexity of $f_{\bm{y}}$, we have
+From $1$-convexity of $f_{\bm{\mu}}$, we have
 \[\psi^+(0)+\psi^-(s)+s\le0.\]
 
-Let $\Lip$ be a Lipschitz constant for all $f_i$ in a neighborhood $\Omega\ni p$.
+Let $\Lip$ be a Lipschitz constant for all $f^i$ in a neighborhood $\Omega\ni p$.
 Then 
 \[\psi^+(0)
 \le 
-\phi^+(0)+\Lip\cdot\|\bm{x}-\bm{y}\|_1,\] 
-where $\|\bm{x}-\bm{y}\|_1=\sum_{i=0}^k|x_i-y_i|$.
-It follows that given $\bm{x}\in\triangle^k$, there is a constant $\Lip$ such that
+\phi^+(0)+\Lip\cdot\|\bm{\lambda}-\bm{\mu}\|_1,\]
+where $\|\bm{\lambda}-\bm{\mu}\|_1=\sum_{i=0}^k|\lambda^i-\mu^i|$.
+It follows that given $\bm{\lambda}\in\triangle^k$, there is a constant $\Lip$ such that
 \begin{align*}
-\dist{\spx{\bm{f}}(\bm{x})}{\spx{\bm{f}}(\bm{y})}{}
+\dist{\spx{\bm{f}}(\bm{\lambda})}{\spx{\bm{f}}(\bm{\mu})}{}
 &=
 s
 \le
 \\
 &\le 
-\Lip\cdot\|\bm{x}-\bm{y}\|_1
+\Lip\cdot\|\bm{\lambda}-\bm{\mu}\|_1
 \end{align*}
-for any $\bm{y}\in\triangle^k$.
-In particular, there is $\eps>0$ such that if $\|\bm{x}-\bm{y}\|_1<\eps,$ $\|\bm{x}-\bm{z}\|_1 <\eps$, then $\spx{\bm{f}}(\bm{y})$, $\spx{\bm{f}}(\bm{z})\in\Omega$. 
+for any $\bm{\mu}\in\triangle^k$.
+In particular, there is $\eps>0$ such that if $\|\bm{\lambda}-\bm{\mu}\|_1<\eps,$ $\|\bm{\lambda}-\bm{\nu}\|_1 <\eps$, then $\spx{\bm{f}}(\bm{\mu})$, $\spx{\bm{f}}(\bm{\nu})\in\Omega$.
 Thus the same argument as above implies 
-\[\dist{\spx{\bm{f}}(\bm{y})}{\spx{\bm{f}}(\bm{z})}{}
-\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
-for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$; that is, $\spx{\bm{f}}$ is locally Lipschitz.
+\[\dist{\spx{\bm{f}}(\bm{\mu})}{\spx{\bm{f}}(\bm{\nu})}{}
+\le \Lip\cdot\|\bm{\mu}-\bm{\nu}\|_1\]
+for any $\bm{\mu}$ and $\bm{\nu}$ sufficiently close to $\bm{\lambda}$; that is, $\spx{\bm{f}}$ is locally Lipschitz.
 Since $\triangle^k$ is compact, $\spx{\bm{f}}$ is Lipschitz.
 \qeds
 
@@ -147,13 +155,44 @@ $G$ is finite, or, more generally,
 Show that the action of $G$ has a fixed point.
 \end{thm}
 
+The following exercise gives useful versions of the Jensen inequality.
+
+\begin{thm}{Advanced exercise}\label{ex:bary-jensen}
+Let $z$ be the barycenter of points $p^0,\ldots,p^k$ equipped with masses $\mu^0,\ldots,\mu^k$; we assume that $\mu^i\ge0$ for all $i$,
+$\mu^0+\ldots+\mu^k=1$, and the points $p^0,\ldots,p^k$ are in a complete geodesic $\CAT(0)$ space $\spc{U}$.
+
+\begin{subthm}{ex:bary-jensen:moment}
+Show that
+\[\sum_i \mu^i\cdot \dist[2]{q}{p^i}{}\ge \dist[2]{z}{q}{} +\sum_i \mu^i\cdot \dist[2]{z}{p^i}{}\]
+for any $q\in \spc{U}$.
+\end{subthm}
+
+\begin{subthm}{ex:bary-jensen:moment+}
+ Show that
+\[\sum_i
+\mu^i\cdot \dist[2]{z}{p^i}{}
+\le
+\sum_{i<j}
+\mu^i\cdot\mu^j\cdot \dist[2]{p^i}{p^j}{}.\]
+\end{subthm}
+
+
+\begin{subthm}{ex:bary-jensen:jensen}
+Try to show that
+\[h(z)\le \mu^0\cdot h(p^0)+\ldots+\mu^k\cdot h(p^k)\]
+for any convex function $h\:\spc{U}\to\RR$.
+\end{subthm}
+
+\end{thm}
+
+
 \section{Convexity of up-set}
 
 \begin{thm}{Definition}\label{def:ordung}
 For two real arrays $\bm{v}$, $\bm{w}\in \RR^{\kay+1}$,
-$\bm{v}=(v_0,\z\dots,v_\kay)$ 
+$\bm{v}=(v_0,\z\ldots,v_\kay)$
 and 
-$\bm{w}=(w_0,\z\dots,w_\kay)$, 
+$\bm{w}=(w_0,\z\ldots,w_\kay)$,
 we will write
 $\bm{v}\succcurlyeq\bm{w}$ if $v_i\ge w_i$ for each $i$.
 \end{thm}
@@ -170,12 +209,14 @@ that is,
 
 \begin{thm}{Proposition}\label{thm:up-convex}
 Let $\spc{X}$ be a complete geodesic space 
-and $\bm{f}\z=(f_0,\z\dots,f_\kay)\:\spc{X}\to\RR^{\kay+1}$ 
+and $\bm{f}\z=(f^0,\z\ldots,f^\kay)\:\spc{X}\to\RR^{\kay+1}$
 be an array of nonnegative 1-convex locally Lipschitz functions.
 Consider the set $W=\Up[\bm{f}(\spc{X})]\subset\RR^{k+1}$.
 Then 
+
+
 \begin{subthm}{thm:up-convex:convex}
-The set $W$ is convex.
+The set $W$ is closed.
 \end{subthm}
 
 \begin{subthm}{thm:up-convex:bry}
@@ -186,14 +227,11 @@ Moreover, $\bm{f}[\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial\trian
 \begin{subthm}{thm:up-convex:bry+}
 $W=\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])$; 
 in other words, $\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])\supset\bm{f}(\spc{X})$.
+In particular, $W$ is closed.
 \end{subthm}
-
-
-
 
 \end{thm}
 
-Note that since $\triangle^k$ is compact, we also get that $W$ is closed.
 
 \begin{wrapfigure}{r}{48mm}
 \vskip0mm
@@ -206,7 +244,7 @@ Let $V=\bm{f}(\spc{X})\subset\RR^{k+1}$; so $W\z=\Up V$.
 Denote by $\bar V$ the closure of $V$.
 
 \parit{\ref{SHORT.thm:up-convex:convex}.}
-Convexity of all $f_i$ implies that
+Convexity of all $f^i$ implies that
 for any two points $p,q\in \spc{X}$ and $t\z\in[0,1]$ we have
 \[(1-t)\cdot\bm{f}(p)+t\cdot \bm{f}(q)
 \succcurlyeq
@@ -216,71 +254,71 @@ Therefore, $W$ is convex.
 
 \parit{\ref{SHORT.thm:up-convex:bry}+\ref{SHORT.thm:up-convex:bry+}.}
 Choose $p\in \spx{\bm{f}}(\triangle^k)$.
-Note that if $\bm{f}(p)\succcurlyeq\bm{w}$ for some $\bm{w}\in W$, then  $\bm{f}(p)\succcurlyeq\bm{w}\succcurlyeq\bm{f}(x)$ for some $x\in \spc{X}$ and hence $x=p$ by the uniqueness of $\spx{\bm{f}}$. Therefore  $\bm{f}(p)=\bm{w}$.
-It follows that $\bm{f}(p)\in\partial  W$;
-therefore $\bm{f}[\spx{\bm{f}}(\triangle^k)]$ lies in a convex hypersurface $\partial  W$.
+Note that if $\bm{f}(p)\succcurlyeq\bm{w}$ for some $\bm{w}\in W$, then $\bm{f}(p)\succcurlyeq\bm{w}\succcurlyeq\bm{f}(x)$ for some $x\in \spc{X}$ and hence $x=p$ by the uniqueness of $\spx{\bm{f}}$.
+Therefore, $\bm{f}(p)=\bm{w}$.
+It follows that $\bm{f}(p)\in\partial W$;
+therefore $\bm{f}[\spx{\bm{f}}(\triangle^k)]$ lies in a convex hypersurface $\partial W$.
 
 Choose $\bm{w}\in W$.
 Observe that $\bm{w}\succcurlyeq\bm{v}$ for some $\bm{v}\in \bar V\cap \partial W$.
 Note that $W$ is supported at $\bm{v}$ by a hyperplane 
-\[\Pi=\set{(x_1,\dots,x_k)\in \RR^k}{m_0\cdot x_0+\dots+m_k\cdot x_k=\const}\]
-for some $\bm{m}=(m_0,\dots,m_k)\in\triangle^{\kay}$.
-Let $p=\spx{\bm f}(\bm m)$.
+\[\Pi=\set{(x_1,\ldots,x_k)\in \RR^k}{\mu^0\cdot x_0+\ldots+\mu^k\cdot x_k=\const}\]
+for some $\bm{\mu}=(\mu^0,\ldots,\mu^k)\in\triangle^{\kay}$.
+Let $p=\spx{\bm f}(\bm{\mu})$.
 By \ref{lem:argmin(convex)}, $\bm{f}(p)\z=\bm{v}$;
 in particular $\bm{v}\in V$.
 
 Note that $p\in \spx{\bm{f}}(\triangle^k)\setminus\spx{\bm{f}}(\partial\triangle^k)$ if and only if 
-$\bm{f}(p)$ is supported by a plane as above for some $\bm{m}\in\triangle^{\kay}$,
-but it is not supported by a plane for some $\bm{m}\in\partial\triangle^{\kay}$.
+$\bm{f}(p)$ is supported by a plane as above for some $\bm{\mu}\in\triangle^{\kay}$,
+but it is not supported by a plane for some $\bm{\mu}\in\partial\triangle^{\kay}$.
 This condition is open, therefore $\spx{\bm{f}}(\triangle^k)\z\setminus\spx{\bm{f}}(\partial\triangle^k)$ is an open set.
+
+Since $\triangle^k$ is compact, $W=\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])$ is closed.
 \qeds
 
 \section{Nondegenerate simplex}
 
-Given an array $\bm{f}=(f_0,\dots,f_k)$,
-we denote by $\bm{f}^{\without i}$ the subarray of $\bm{f}$ with $f_i$ removed;
+Given an array $\bm{f}=(f^0,\ldots,f^k)$,
+we denote by $\bm{f}^{\without i}$ the subarray of $\bm{f}$ with $f^i$ removed;
 that is, 
 \[\bm{f}^{\without i\,}
 \df
-(f_0,\dots,f_{i-1},f_{i+1},\dots,f_k).\]
-It should be clear from the definition that $\spx{\bm{f}^{\without i}}$ 
-coincides with the restriction of $\spx{\bm{f}}$ to the corresponding facet of $\triangle^k$.
+(f^0,\ldots,f^{i-1},f^{i+1},\ldots,f^k).\]
+Note that $\spx{\bm{f}^{\without i}}$ coincides with the restriction of $\spx{\bm{f}}$ to the corresponding facet of $\triangle^k$.
 
-If $\Im \spx{\bm{f}}$ is not covered by the union of $\Im \spx{\bm{f}^{\without i}}$ over all $i$
-then we say that $\spx{\bm{f}}$ is nondegenerate.
+If $\Im \spx{\bm{f}}$ is not covered by the union of $\Im \spx{\bm{f}^{\without i}}$ over all $i$, then we say that $\spx{\bm{f}}$ is nondegenerate.
 In other words, $\spx{\bm{f}}$ is \index{nondegenerate simplex}\emph{nondegenerate} if 
 \[\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial \triangle^k)\ne\emptyset.\]
 
 \begin{thm}{Exercise}\label{ex:barysimple}
 Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
 
-Show that the image 1-dimensional barycentric simplex for a pair of points $p_0,p_1\in\spc{U}$ is the geodesic $[p_0p_1]$.
+Show that the image of the 1-dimensional barycentric simplex for a pair of points $p^0,p^1\in\spc{U}$ is the geodesic $[p^0\,p^1]$.
 
-Construct a $\CAT(0)$ space with a three-point array $(p_0,p_1,p_2)$ such that its barycentric simplex is nondegenerate and noninjective. 
+Construct a $\CAT(0)$ space with a three-point array $(p^0,p^1,p^2)$ such that its barycentric simplex is nondegenerate and noninjective.
 \end{thm}
 
-
 \begin{thm}[!]{Exercise}\label{lem:nondeg-test-with-balls}
-Let $\bm{p}\z=(p_0,\dots, p_\kay)$ be a point array 
+Let $\bm{p}\z=(p^0,\ldots, p^\kay)$ be a point array
 in a complete length $\CAT(0)$ space $\spc{U}$, 
-and $B_i=\cBall[p_i,r_i]$ for some array of positive reals $(r_0,r_1,\dots,r_\kay)$.
+and $B^i=\cBall[p^i,r^i]$ for some array of positive reals $(r^0,r^1,\ldots,r^\kay)$.
 
 \begin{subthm}{lem:nondeg-test-with-ball:U}
-Suppose $\bigcap_i B_i\ne \emptyset$.
+Suppose $\bigcap_i B^i\ne \emptyset$.
 Show that 
-\[\Im\spx{\bm{p}}\subset \bigcup_i B_i.\]
+\[\Im\spx{\bm{p}}\subset \bigcup_i B^i.\]
 \end{subthm}
 
 \begin{subthm}{lem:nondeg-test-with-balls:nondeg}
-Suppose $\bigcap_i B_i= \emptyset$, but $\bigcap_{i\ne j} B_i\ne \emptyset$ for any $j$.
+Suppose $\bigcap_i B^i= \emptyset$, but $\bigcap_{i\ne j} B^i\ne \emptyset$ for any $j$.
 Show that 
 $\spx{\bm{p}}$ is nondegenerate.
 \end{subthm}
 
 \begin{subthm}{lem:nondeg-test-with-balls:nondeg+}
 Suppose $\spx{\bm{p}}$ is nondegenerate.
-Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} hold for some 
-  array of positive reals $(r_0,\dots,r_\kay)$.
+Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} holds for some
+ array of positive reals $(r^0,\ldots,r^\kay)$.
 \end{subthm}
 
 \end{thm}
@@ -291,7 +329,7 @@ Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} hold fo
 
 \begin{thm}{Theorem}\label{thm:bihoelder}
 Let $\spc{X}$ be a complete geodesic space 
-and $\bm{f}\z=(f_0,\z\dots,f_k)\:\spc{X}\to\RR^{k+1}$
+and $\bm{f}\z=(f^0,\z\ldots,f^k)\:\spc{X}\to\RR^{k+1}$
 be an array of 1-convex locally Lipschitz functions.
 Then the set 
 \[Z=\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial \triangle^k)\]
@@ -299,24 +337,24 @@ is $C^{\frac12}$-bi-H\"older to an open domain in $\RR^k$.
 \end{thm}
 
 \parit{Proof.}
-Let $\proj\:\RR^{k+1}\to\Pi$ be orthogonal projection to the hyperplane $x_0+\dots+x_k=0$.
-Let us show that the restriction $\proj\circ \bm{f}|_Z$ is a bi-H\"older embedding.
+Let $\proj\:\RR^{k+1}\to\Pi$ be orthogonal projection to the hyperplane $x_0+\ldots+x_k=0$.
+We will show that the restriction $\proj\circ \bm{f}|_Z$ is a bi-H\"older embedding.
 
-The map $\proj\circ \bm{f}$ is Lipschitz;
-it is sufficient  to construct its right inverse and show that it is $C^{\frac12}$-continuous.
+Since the map $\proj\circ \bm{f}$ is Lipschitz,
+it is sufficient to construct its right inverse and show that it is $C^{\frac12}$-continuous.
 
-Given $\bm{v}=(v_0,v_1,\dots,v_\kay)\in\Pi$, consider the function 
+Given $\bm{v}=(v_0,\ldots,v_\kay)\in\Pi$, consider the function
 $h_{\bm{v}}\: \spc{X}\to \RR$ defined by
-\[h_{\bm{v}}(p)=\max_i\{f_i(p)-v_i\}.\]
+\[h_{\bm{v}}(p)=\max_i\{f^i(p)-v_i\}.\]
 Note that $h_{\bm{v}}$ is $1$-convex.
 Let 
 $$\map(\bm{v})\df\argmin h_{\bm{v}}.$$
 According to Lemma~\ref{lem:argmin(convex)}, $\map(\bm{v})$ is uniquely defined.
 
 If $\bm{v}=\proj \bm{f}(p)$, then 
-\[f_i\circ \map(\bm{v})\le f_i(p)\]
+\[f^i\circ \map(\bm{v})\le f^i(p)\]
 for any $i$.
-In particular, if $p\in \spx{\bm{f}}(\triangle^k)$, then  $p=\map(\bm{v})$.
+In particular, if $p\in \spx{\bm{f}}(\triangle^k)$, then $p=\map(\bm{v})$.
 That is, $\map$ is a right inverse of the restriction $\bm{f}|_{\spx{\bm{f}}(\triangle^k)}$.
 
 Given $\bm{v},\bm{w}\in\RR^{\kay+1}$,
@@ -344,19 +382,19 @@ Therefore,
 In particular,
 $\map$ is $C^{\frac{1}{2}}$-continuous.
 
-Finally, by \ref{thm:up-convex:bry}, $\bm{f}(Z)$ is a $k$-dimensional manifold, hence the result.
+Finally, by \ref{thm:up-convex:bry}, $\bm{f}(Z)$ is a $k$-dimensional manifold --- hence the result.
 \qeds
 
-\section{Topological dimension}
+\section{Review of topological dimension}
 
-Let $\spc{X}$ be a metric space and $\{V_\beta\}_{\beta\in\mathcal{B}}$
+Let $\spc{X}$ be a metric space and $\set{V_\beta}{\beta\in\mathcal{B}}$
  be an open cover of $\spc{X}$.
 Let us recall two notions in general topology:
 \begin{itemize}
 
-\item The \index{order of a cover}\emph{order} of $\{V_\beta\}$ is the supremum of all integers $n$ such that there is a collection of $n+1$ elements of $\{V_\beta\}$ with nonempty intersection.
+\item The \index{order of a cover}\emph{order} of $\set{V_\beta}{\beta\in\mathcal{B}}$ is the supremum of all integers $n$ such that there is a collection of $n+1$ elements of $\{V_\beta\}$ with nonempty intersection.
 
-\item An open cover $\{W_\alpha\}_{\alpha\in\IndexSet}$ of $\spc{X}$ is called a \index{refinement of a cover}\emph{refinement} of  $\{V_\beta\}_{\beta\in\mathcal{B}}$ if for any $\alpha\in\IndexSet$ there is $\beta\in\mathcal{B}$ such that $W_\alpha\subset V_\beta$.
+\item An open cover $\set{W_\alpha}{\alpha\in\IndexSet}$ of $\spc{X}$ is called a \index{refinement of a cover}\emph{refinement} of $\set{V_\beta}{\beta\in\mathcal{B}}$ if for any $\alpha\in\IndexSet$ there is $\beta\in\mathcal{B}$ such that $W_\alpha\subset V_\beta$.
 
 \end{itemize}
 
@@ -364,13 +402,12 @@ Let us recall two notions in general topology:
 Let $\spc{X}$ be a metric space. 
 The topological dimension of $\spc{X}$ is defined to be the minimum of nonnegative integers $n$ 
 such that for any open cover of $\spc{X}$ there is a locally finite open refinement with order~$n$.
-
-If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
+If no such $n$ exists, then the topological dimension of $\spc{X}$ is infinite.
 
 The topological dimension of $\spc{X}$ will be denoted by $\TopDim\spc{X}$.
 \end{thm}
 
-The invariants satisfying the following two statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called  the \index{dimension}\emph{dimension};
+The invariants satisfying statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called the \index{dimension}\emph{dimension};
 for that reason, we call these statements axioms.
 
 \begin{thm}{Normalization axiom}
@@ -390,17 +427,17 @@ If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$, then
 \parbf{On product spaces.} 
 The following inequality holds for arbitrary metric spaces
 \begin{align*}
-\TopDim  (\spc{X}\times\spc{Y})
+\TopDim (\spc{X}\times\spc{Y})
 &\le 
-\TopDim \spc{X}+ \TopDim\spc{Y}.
+\TopDim \spc{X}+ \TopDim\spc{Y}
 \end{align*}
-It is strict for a pair of Pontryagin surfaces \cite{pontyagin-surface}.
+and this inequality might be strict \cite{pontyagin-surface}.
 
 \medskip
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space
-and $F\:\spc{X}\to\RR^m$ be  a continuous map.
+and $F\:\spc{X}\to\RR^m$ be a continuous map.
 A point $\bm{z}\in \Im F$ is called a \emph{stable value} of $F$
 if there is $\eps>0$ such that $\bm{z}\in\Im F'$ 
 for any \emph{$\eps$-close} to $F$ continuous map $F'\:\spc{X}\to\RR^m$,
@@ -414,7 +451,7 @@ The next theorem follows from \cite[theorems VI 1$\&$2]{hurewicz-wallman}.
 
 \begin{thm}{Stable value theorem}\label{thm:stable-value}
 Let $\spc{X}$ be a separable metric space.
-Then $\TopDim\spc{X}\ge m$ if and only if there is a map $F\:\spc{X}\to\RR^{m}$ with a stable value.
+Then $\TopDim\spc{X}\ge m$ if and only if there is a map $F\:\spc{X}\to\RR^m$ with a stable value.
 \end{thm}
 
 \section{Dimension theorem}\label{sec:dim-CAT}
@@ -427,11 +464,11 @@ For any proper geodesic $\CAT(0)$ space $\spc{U}$, the following statements are 
 \end{subthm}
 
 \begin{subthm}{thm:dim-infty-CBA:bary} 
-For some $z\in \spc{U}$ there is an array of $m+1$ balls $B_i\z=\oBall(a_i,r_i)$ 
+For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$
 such that 
-\[\bigcap_i B_i=\emptyset
-\quad\text{and}\quad
-\bigcap_{i\ne j} B_i\ne \emptyset
+\[\bigcap_i B^i=\emptyset,
+\quad\text{but}\quad
+\bigcap_{i\ne j} B^i\ne \emptyset
 \quad \text{for each $j$}.\]
 
 \end{subthm}
@@ -472,14 +509,14 @@ Choose a locally finite countable covering $\set{\Omega_\alpha}{\alpha\in\IndexS
 
 Denote by $\spc{N}$ the \index{nerve}\emph{nerve} of the covering $\{\Omega_\alpha\}$;
 that is, $\spc{N}$ is an abstract simplicial complex with 
-%set of vertexes formed by $\IndexSet$, 
+%set of vertices formed by $\IndexSet$,
 vertex set $\IndexSet$,
 such that a finite subset 
-$\{\alpha_0,\z\dots,\alpha_n\}\subset\IndexSet$ 
+$\{\alpha_0,\z\ldots,\alpha_n\}\subset\IndexSet$
 forms a simplex if and only if
 \[\Omega_{\alpha_0}
 \cap
-\dots\cap
+\ldots\cap
 \Omega_{\alpha_n}\ne\emptyset.\]
 
 Choose a Lipschitz partition of unity 
@@ -498,9 +535,9 @@ and $\Psi$ is locally Lipschitz.
 \parit{\ref{SHORT.lem:approximation-cba:displacement}.}
 Fix $x\in\spc{U}$.
 Denote by $\triangle$ the minimal simplex that contains $\map(x)$, 
-and let $\alpha_0,\alpha_1,\dots,\alpha_n$ be the vertexes of $\triangle$.
+and let $\alpha_0,\alpha_1,\ldots,\alpha_n$ be the vertices of $\triangle$.
 %Denote by $\triangle$ the minimal simplex that contains $\map(x)$;
-%and let $(\alpha_0,\alpha_1,\dots,\alpha_n)$ be the vertices of $\triangle$.
+%and let $(\alpha_0,\alpha_1,\ldots,\alpha_n)$ be the vertices of $\triangle$.
 Note that $\alpha$ is a vertex of $\triangle$ if and only if $\phi_{\alpha}(x)>0$.
 Thus
 \[\dist{x}{x_{\alpha_i}}{}<\tfrac{1}{3}\cdot\rho(x)\] 
@@ -532,7 +569,7 @@ and Theorem~\ref{thm:bihoelder}, and \ref{SHORT.thm:dim-infty-CBA:mnfld}$\Righta
  
 \parit{\ref{SHORT.thm:dim-infty-CBA:TopDim}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:bary}.}
 According to \ref{thm:stable-value}, 
-there is a continuous map $F\:\spc{U}\to \RR^{m}$ with a stable value.
+there is a continuous map $F\:\spc{U}\to \RR^m$ with a stable value.
 
 Fix $\eps>0$.
 Since $F$ is continuous, there is a continuous positive function $\rho$ defined on $\spc{U}$ such that 
@@ -548,10 +585,10 @@ for any $x\in \spc{U}$.
 Arguing by contradiction,
 assume $\TopDim\spc{U}<m$.
 By \ref{lem:approximation-cba:im},
-the image $F_\eps\circ\Psi\circ\map(K)$ lies in the $F_\eps$-image of the $(m-1)$-skeleton of $\spc{N}$;
+the image of $F\circ\Psi\circ\map$ lies in the $F$-image of the $(m-1)$-skeleton of $\spc{N}$;
 In particular, it can be covered by a countable collection of Lipschitz images of $(m-1)$-simplexes.
 Hence
-$\bm{0}\in \RR^m$ is not a stable value of  $F_\eps\circ\Psi\circ\map$.
+$\bm{0}\in \RR^m$ is not a stable value of $F\circ\Psi\circ\map$.
 Since $\eps>0$ is arbitrary, we get the result.
 \qeds
 
@@ -559,9 +596,9 @@ The following exercise is a generalization of Helly's theorem; for closely relat
 
 
 \begin{thm}{Exercise}\label{ex:helly}
-Let $K_1,\dots,K_n$ be closed convex subsets in a proper length $\CAT(0)$ space $\spc{U}$.
-Suppose that $\TopDim \spc{U}=m$ and any $m+1$ subsets from $\{K_1,\dots, K_n\}$ have a common point.
-Show that all subsets $K_1,\dots,K_n$ have a common point.
+Let $K^1,\ldots,K^n$ be closed convex subsets in a proper length $\CAT(0)$ space $\spc{U}$.
+Suppose that $\TopDim \spc{U}=m$ and any $m+1$ subsets from $\{K^1,\ldots, K^n\}$ have a common point.
+Show that all subsets $K^1,\ldots,K^n$ have a common point.
 \end{thm}
 
 \section{Hausdorff dimension}
@@ -585,11 +622,11 @@ In particular,
 $\TopDim\spc{X}\le\HausDim\spc{X}$.
 \end{thm}
 
-Except for Szpilrajn's theorem, there are no other relations between topological and Husdorff dimension for general separable spaces.
+Except for Szpilrajn's theorem, there are no other relations between topological and Hausdorff dimension for general separable spaces.
 Moreover, the following exercise implies that the same holds for compact geodesic $\CAT(0)$ spaces of topological dimension at least 1.
 
 \begin{thm}{Exercise}\label{ex:dim-top-haus-CAT}
-For any $\alpha\ge 1$ construct a metric on the binary tree such that it has compact completion of  Hausdorff dimension $\alpha$.
+Given $\alpha\ge 1$ construct a metric on the binary tree such that it has compact completion of Hausdorff dimension $\alpha$.
 
 Conclude that for any integer $m\ge 1$ and real $\alpha\ge m$ there is a compact $\CAT(0)$ space with topological dimension $m$ and Hausdorff dimension $\alpha$. 
 \end{thm}
@@ -597,11 +634,10 @@ Conclude that for any integer $m\ge 1$ and real $\alpha\ge m$ there is a compact
 
 \section{Remarks}
 
-The barycenters in $\CAT(\kappa)$ spaces were introduced by Bruce Kleiner \cite{kleiner}.
-He also proved the dimension theorem;
-a more exact statement is due to Alexander Lytchak \cite{lytchak:diff}.
-
-Bruce Kleiner made a conjecture that the dimension theorem holds for arbitrary complete geodesic $\CAT(\kappa)$ spaces see \cite{kleiner} and also \cite[p.~133]{gromov:asymt-inv}.
+The dimension theorem is the first fruitful application of barycenters to $\CAT(\kappa)$ spaces.
+It is due to Bruce Kleiner \cite{kleiner};
+a more exact version was proved by Alexander Lytchak \cite{lytchak:diff}.
+Kleiner conjectured that the dimension theorem holds for arbitrary complete geodesic $\CAT(\kappa)$ spaces \cite{kleiner}; see also \cite[p.~133]{gromov:asymt-inv}.
 For separable spaces, the answer is ``yes'', and it follows from Kleiner's argument \cite[Corollary 14.13]{alexander-kapovitch-petrunin-2025}.
 
 One may wonder if bi-H\"older condition \ref{thm:dim-infty-CBA:mnfld} can be improved to bi-Lipschitz;

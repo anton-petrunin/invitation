@@ -261,9 +261,9 @@ such that the total angle around each edge in its triangulation is at least $2\c
 
 \begin{thm}{Definition}\label{def:flag}
 A simplicial complex $\mathcal{S}$ 
-is called \index{flag complex}\emph{flag} if whenever $\{v^0,\z\dots,v^k\}$
+is called \index{flag complex}\emph{flag} if whenever $\{v^0,\z\ldots,v^k\}$
 is a set of distinct vertices of $\mathcal{S}$
-that are pairwise joined by edges, then the vertices $v^0,\dots,v^k$
+that are pairwise joined by edges, then the vertices $v^0,\ldots,v^k$
 span a $k$-simplex in~$\mathcal{S}$.
 
 If the above condition is satisfied for $k=2$, 
@@ -413,9 +413,9 @@ if $\tau$ is flag.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:polyhedron-glue}
-Let $P$ be a convex polyhedron in $\EE^3$ with $n$ faces $F_1,\dots, F_n$.
+Let $P$ be a convex polyhedron in $\EE^3$ with $n$ faces $F_1,\ldots, F_n$.
 Suppose that each face of $P$ has only obtuse or right angles.
-Let us take $2^n$ copies of $P$ indexed by an $n$-bit array of 0s and 1s.
+Let us take $2^n$ copies of $P$ indexed by all $n$-bit arrays of 0s and 1s.
 Glue two copies of $P$ along $F_i$ if their arrays differ only in the $i$-th bit.
 Show that the obtained space is a locally $\CAT(0)$ topological manifold.
 \end{thm}
@@ -428,14 +428,14 @@ and Karen Vogtmann \cite{billera-holmes-vogtmann}.
 
 Let $\spc{T}_n$ be the set of all metric trees with 
 $n$ end vertices
-labeled by $a^1,\dots,a^n$.
+labeled by $a^1,\ldots,a^n$.
 To describe one tree in $\spc{T}_n$ we may fix a topological tree $t$ with these end vertices,
 and all other vertices of degree 3,
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge vanishes, we assume that this edge degenerates;
 such a tree can be also described using a different topological tree~$t'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $t$ can be identified with the octant
-\[\set{(x_1,\dots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
+\[\set{(x_1,\ldots,x_{2\cdot n-3})\in\mathbb{R}^{2\cdot n-3}}{x_i\ge 0}.\]
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the length metric on $\spc{T}_n$ induced by these metrics.
 
 \begin{thm}{Exercise}\label{ex:tree}
@@ -475,14 +475,14 @@ The link of a cube in a cubical complex is defined similarly to the link of a si
 It is a simplicial complex that admits a natural all-right triangulation --- each simplex corresponds to an adjacent cube.
 
 \parbf{Cubical analog of a simplicial complex.}
-Let $\spc{S}$ be a finite simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its vertices.
+Let $\spc{S}$ be a finite simplicial complex and $\{v_1,\ldots,v_N\}$ be the set of its vertices.
 
-Consider $\RR^N$ with the standard basis $\{e_1,\dots,e_N\}$.
+Consider $\RR^N$ with the standard basis $\{e_1,\ldots,e_N\}$.
 Denote by $\square^N$ the standard unit cube in $\RR^N$;
 that is, 
-\[\square^N=\set{(x_1,\dots,x_N)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
+\[\square^N=\set{(x_1,\ldots,x_N)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
 
-Given a $k$-dimensional simplex $\<v_{i_0},\dots,v_{i_k}\>$ in $\spc{S}$, let us mark the $(k\z+1)$-dimensional faces in $\square^N$ (there are $2^{N-k}$ of them) that are parallel to the coordinate $(k+1)$-plane spanned by $e_{i_0},\dots,e_{i_k}$.
+Given a $k$-dimensional simplex $\<v_{i_0},\ldots,v_{i_k}\>$ in $\spc{S}$, let us mark the $(k\z+1)$-dimensional faces in $\square^N$ (there are $2^{N-k}$ of them) that are parallel to the coordinate $(k+1)$-plane spanned by $e_{i_0},\ldots,e_{i_k}$.
 
 Note that the set of all marked faces of $\square^{N}$
 forms a cubical complex;
@@ -566,7 +566,7 @@ Then $\spc{S}$ is simply connected.
 Assume $\spc{S}$ is not simply connected. Equip $\spc{S}$ with an all-right spherical metric.
 Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of~$\spc{S}$.
 
-Note that $\gamma$ forms a one-dimensional subcomplex of $\spc{S}$ which is a closed local geodesic.
+Note that $\gamma$ forms a 1-dimensional subcomplex of $\spc{S}$ which is a closed local geodesic.
 Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to~$\gamma$.
 
 Fix a vertex $v\in G$;
@@ -614,7 +614,7 @@ $\gamma$ is not a shortest noncontractible circle --- a contradiction.
 Note that
 $\tilde G$ is homeomorphic to the plane
 since $\tilde G$ is 
-a two-dimensional manifold without boundary which 
+a 2-dimensional manifold without boundary which
 by the above is $\CAT(0)$ and hence is contractible.
 
 Denote by $C_R$ the circle of radius $R$ in $\tilde G$ centered at~$\tilde v$.
@@ -631,7 +631,7 @@ It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity --- a cont
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:example-pi_infty-new}
-Under the assumptions of Lemma~\ref{lem:example-pi_infty}, 
+Show that under the assumptions of Lemma~\ref{lem:example-pi_infty},
 for any vertex $v$ in $\spc{S}$
 the complement $\spc{S}\setminus\{v\}$ is simply connected.
 \end{thm}
@@ -712,8 +712,14 @@ The universal cover of $\spc{P}$ is not simply connected at infinity.
 \end{subthm}
 \end{thm}
 
-Dale Rolfsen \cite{rolfsen} has shown that there are no three-dimensional examples of that type.
-Paul Thurston \cite{thurston} conjectured that the same holds in the four-dimensional case.
+There are no such examples in dimensions 3 and 4.
+In dimension 3 it was showen by
+Dale Rolfsen \cite{rolfsen}
+and the 4-dimensional case was done by
+Alexander Lytchak,
+Koichi Nagano,
+and Stephan Stadler
+\cite{lytchak-nagano-stadler}.
 
 \parit{Proof.}
 Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of the simplicial complex $\spc{S}$ provided by Exercise~\ref{ex:funny-S}.
@@ -740,12 +746,12 @@ The construction used in the proof of Proposition~\ref{prop:aspherical} admits a
 A similar argument was used by Michael Davis, 
 Tadeusz Ja\-nu\-szkie\-wicz,
 and Jean-Fran\c{c}ois Lafont \cite{davis-januszkiewicz-lafont}.
-They constructed a closed smooth four-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$, such that $M$ admits a polyhedral metric which is locally $\CAT(0)$, but does not admit a Riemannian metric with nonpositive sectional curvature.
+They constructed a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$, such that $M$ admits a polyhedral metric which is locally $\CAT(0)$, but does not admit a Riemannian metric with nonpositive sectional curvature.
 Another example of that type was constructed by Stephan Stadler \cite{stadler}.
 There are no lower-dimensional examples of this type ---
-the two-dimensional case follows from the classification of surfaces,
+the 2-dimensional case follows from the classification of surfaces,
 and 
-the three-dimensional case follows from the geometrization conjecture.
+the 3-dimensional case follows from the geometrization conjecture.
 
 It is noteworthy that any complete, simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
 In fact, by the globalization theorem
