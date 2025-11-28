@@ -307,6 +307,9 @@ a half-line attached to each point of its boundary is a complete $\CAT(0)$ lengt
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 This provides a counterexample to the statement of the exercise if $\spc{U}$ is not assumed to be proper.
 
+\parit{Comment.}
+Properties of (locally) $\CAT(\kappa)$ spaces with extendable geodesics were studied by Alexander Lytchak and Koichi Nagano \cite{lytchak-nagano-2019}.
+
 \parbf{\ref{ex:tan-CBA}}; \ref{SHORT.ex:tan-CBA:geodesic}.
 Given two points $p$ and $q$ choose a sequence of $\eps$-midpoints for $\eps\to 0$.
 Use the comparison to prove that this sequence is Cauchy.
@@ -1146,35 +1149,19 @@ but whose interior contains points from the complement $\EE^m\setminus K$.
 This triangle is not thin in $K$.
 
 Now let us show that the converse does not hold in $\EE^4$.
-Consider the set
-\[W=\set{(x,y,z,t)\in \EE^4}{z\ge -x^2}.\]
-Clearly, $W$ is two-convex.
+Let $K$ be a subgraph of the function
+\[f(x,y,z)=10^{10}\cdot \min\{\,|y|+x,|z|-x\,\}.\]
 
-Choose an isometry $\iota$ of $\EE^4$
-such that $K=W\cap \iota(W)$ is a subgraph in a suitable $(x,y,z,t)$-coordinates.
-Note that $K$ is two-convex, as the intersection of two-convex sets.
+Note that $K$ is two-convex, since it is the intersection of two two-convex sets.
+Furthermore, $K$ is the complement of two open dihedral angles $D_1$ and $D_2$.
+Therefore, $K=\Cone\Sigma$, where $\Sigma$
+is the complement of two open lenses, say $L_1$ and $L_2$, that correspond to $D_1$ and $D_2$.
+(Each lens is an intersection of two open hemispheres.)
 
-Consider two $2$-dimensional hemispheres $H_1$ and $H_2$ in $\mathbb{S}^3$ 
-such that the intersection $H_1\cap H_2$ is a geodesic $[\xi\zeta]$ orthogonal to the boundary equators of $H_1$ and $H_2$ and 
-\[\dist{\xi}{\zeta}{\mathbb{S}^3}<\tfrac\pi2.\]
-Equip the complement $\mathbb{S}^3\setminus(H_1\cup H_2)$ with the induced length metric and denote by $\Sigma$ its completion.
+Show that $\partial L_1\cap\partial L_2$ is a closed local geodesic of length smaller than $2\cdot\pi$ in $\Sigma$.
+By \ref{cor:closed-geod-cat}, $\Sigma$ is not $\CAT(1)$.
+Therefore, by \ref{ex:cone+susp}, $K$ is not $\CAT(0)$.
 
-\begin{wrapfigure}{r}{41mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-728}
-\end{wrapfigure}
-
-Note that there is a closed geodesic in $\Sigma$ whose projection to $\mathbb{S}^3$
-is formed by a product of four copies of $[\xi\zeta]$.
-In particular there is a closed geodesic in $\Sigma$ shorter than $2\cdot\pi$.
-
-Hence $\Sigma$ is not $\CAT(1)$ 
-and therefore $K'=\Cone \Sigma$ is not $\CAT(0)$.
-
-For a suitable choice of the motion $\iota$,
-we have that $\tfrac1n\cdot K\to K'$ as $n\to\infty$ in the sense of Gromov--Hausdorff.
-By \ref{prop:cat-limit}, $K$ is not $\CAT(0)$.
 
 \parbf{\ref{ex:finite-action-CAT}}; \ref{SHORT.ex:finite-action-CAT:finite}
 Suppose $G$ is finite.
