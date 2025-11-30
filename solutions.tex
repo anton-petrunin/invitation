@@ -1108,48 +1108,42 @@ Further, by construction a small circle around $p$ in $W$ is contractible in $\O
 
 \parbf{\ref{ex:convex+saddle+broken=>PL}.}
 The proof is simple and visual, but it is hard to write it formally in a non-tedious way;
-for that reason we give only a sketch.
+for that reason we give only its plan.
 
 \medskip
 
-Consider the surface $\bar S$ 
-formed by the closure of the remaining part $S$ of the boundary.
-Note that the boundary of $\bar S$ is a collection of closed polygonal lines.
+
+Let $\bar S$ be the closure of $S$.
+Note that $\bar S$ is bounded by a collection of closed polygonal lines.
+
+Choose a point $p\in S$.
+Since $S$ is locally concave, there is a plane $\Pi$ that locally supports $S$ at $p$.
+Choose a closed $\eps$-neighborhood $B\ni p$ such that $B\setminus \Omega'$ is convex.
+Note that
+$V=\Pi\cap B\cap S$ is convex,
+$\Pi$ locally supports $S$ at any point of $V$,
+and
+\[W=\Omega'\cap B\cap \Pi\z=(B\cap\Pi)\setminus V\]
+has convex connected components.
+(In particular, $p$ is not an isolated point in $S\cap \Pi$.)
+
+Apply this observation with an open-closed argument to prove that every point $p\in S$ lies in a line segment with ends in $\partial \bar S$ or in a convex polygon with vertices in $\partial\bar S$.
 
 \begin{wrapfigure}{r}{41mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-21}
 \end{wrapfigure}
 
-Assume $\bar S$ is not piecewise linear.
-Show that there is a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p$ and has no common points with $S$ except~$p$.
+Suppose $\bar S$ is not piecewise linear.
+Show that there is a line segment $[xy]$ in $\bar S$ with the ends on $\partial\bar S$ and a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p\in \left]xy\right[$ and has no common points with $S$ except~$p$.
+We can assume that points $x$, $y$, $q$, and therefore $p$ lie in a horizontal plane $\Pi$, and $\Pi$ supports $S$  at $p$ from below.
+Observe that line segments of $\partial\bar S$ that start at $x$ or $y$ cannot point up.
+Further, show that we can choose $z\in\partial\bar S$ such that the solid triangle $xyz$ intersects $[pq]$ along a line segment and $\partial \bar S$ contains $[xz]$ or $[yz]$.
+If this is not the case, then one could arrive at a contradiction essentially the same way as in \ref{clm:complement-of-F'-convex}.
 
-Since $S$ is locally concave,
-there is a local inner (with respect to $\Omega'$)  supporting plane $\Pi$ at $p$ that contains the segment $[pq]$.
-
-Consider a small  closed convex neighbourhood $U$ of $p$ in $S$. Then $\Pi\cap U$ is a convex subset of $\Pi$. It can not be  equal to $\{p\}$ as this would contradict 2-convexity of $\Omega'$. 
-
-
-
-
-Suppose is $\Pi\cap U$ is 2-dimensional. 
-We claim that  $p$ lies in the interior of an interval contained in  $\Pi\cap U$.  This is obvious if 
- $p$ is a 2-manifold interior point of $\Pi\cap U$. If $p$ is a 2-manifold boundary point of $\Pi\cap U$ then the 
-same argument as in the proof of \ref{clm:complement-of-F'-convex} shows that it can not be an extremal point and hence it again lies in the interior of an interval contained in  $\Pi\cap U$. The same holds if  $\Pi\cap U$ is 1-dimensional. 
-  Iterating this argument we get that $\Pi\cap \bar S$ contains a segment $[xy]\ni p$ with ends in $\partial \bar S$.
-
-We can think of $\Pi$ as the $xy$ -coordinate plane in $\RR^3$ with $\Omega$ touching $\Pi$ from below at $p$. 
-Let $\RR^3_+$ be the upper half space bounded by $\Pi$. Denote by $\Pi^+$ the half-plane in $\Pi$ that contains $[pq]$ and has $[xy]$ in its boundary.
-Since the boundary of $S$ is a collection of closed polygonal lines we have that a small closed neighborhood of $x$ (resp. $y$) in $\partial \bar S$ consists of two closed intervals $[xx_1], [xx_2]$ (resp.  $[yy_1], [yy_2]$ ). Local concavity of $S$ implies that these four intervals lie in $\RR^3_+$. Observe that we can not have that the points $x_1,x_2,y_1,y_2$ all lie in the interior of  $\RR^3$. Otherwise shifting $\Pi$ slightly up  would give a contradiction with $2$-convexity of $\Omega'$. This means that one of these 4 points must lie in $\Pi$.  Moreover, we must have that either $x_1, x_2\in \Pi$ or $y_1,y_2\in \Pi$ since otherwise we again can get a contradiction to 2-convexity of $\Omega$ by shifting $\Pi$  up and slightly tilting it. Without loss of generality $x_1,x_2\in \Pi$. The construction of $[pq]$ and local concavity of $S$ imply that either $x_1$ or $x_2$ is in $\Pi_+$. Denote this point by $z$  (see the picture).
-
-
-
-%Use the fact that $[pq]$ is tangent to $S$ to show that there is a point $z\in\partial \bar S$ such that the line segment $[xz]$ or $[yz]$ lies in $\partial \bar S\cap\Pi^+$.
- 
-From the latter statement and local concavity of $S$,
-it follows that the solid triangle $[xyz]$ lies in~$\bar S$.
-In particular, all points on $[pq]$ sufficiently close to $p$ lie in $\bar S$ --- a contradiction.
+It remains to observe that the solid triangle $xyz$ lies in $\bar S$.
+In particular, all points on $[pq]$ sufficiently close to $p$ lie in $S$ --- a contradiction.
 
 \parbf{\ref{ex:CAT=>two-convex}.}
 Suppose $K$ is not two-convex;
@@ -1189,7 +1183,7 @@ Let $\mu$ be the probability Haar measure on $G$.
 Choose a point $p\in \spc{U}$ and consider the function
 \[f=\tfrac12\cdot\int_{g\in G} \distfun_{g\cdot p}^2\cdot\mu.\]
 Show that $f$ is 1-convex.
-By \ref{lem:argmin(convex)}, $f$ has a unique minimum point, say $z$.
+By \ref{lem:argmin(convex)}, $f$ has a unique minimum point, say~$z$.
 Observe that $f$ is $G$-invariant;
 therefore $z$ is a fixed point.
 
