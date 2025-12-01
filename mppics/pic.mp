@@ -391,8 +391,8 @@ label.top(btex $q$ etex, z.q);
 label.lft(btex $x$ etex, z.x);
 label.lft(btex $z$ etex, z.y);
 label.rt(btex $y$ etex, z.z);
-label.rt(btex $\partial \bar S$ etex, z.z2);
-label.lft(btex $\partial \bar S$ etex, z.x2);
+label.rt(btex $L$ etex, z.z2);
+label.lft(btex $L$ etex, z.x2);
 endfig;
 
 beginfig(30) 
