@@ -261,9 +261,9 @@ such that the total angle around each edge in its triangulation is at least $2\c
 
 \begin{thm}{Definition}\label{def:flag}
 A simplicial complex $\mathcal{S}$ 
-is called \index{flag complex}\emph{flag} if whenever $\{v^0,\z\ldots,v^k\}$
+is called \index{flag complex}\emph{flag} if whenever $\{v_0,\z\ldots,v_k\}$
 is a set of distinct vertices of $\mathcal{S}$
-that are pairwise joined by edges, then the vertices $v^0,\ldots,v^k$
+that are pairwise joined by edges, then the vertices $v_0,\ldots,v_k$
 span a $k$-simplex in~$\mathcal{S}$.
 
 If the above condition is satisfied for $k=2$, 
@@ -335,20 +335,20 @@ if and only if $\tau$ is flag.
 \end{thm}
 
 \parit{Proof; only-if part.} 
-Assume there are three vertices $v^1$, $v^2$, and $v^3$ of $\tau$
+Assume there are three vertices $v_1$, $v_2$, and $v_3$ of $\tau$
 that are pairwise joined by edges 
 but do not span a triangle.
 Note that in this case 
 \[
-\mangle\hinge{v^1}{v^2}{v^3}=
-\mangle\hinge{v^2}{v^3}{v^1}=
-\mangle\hinge{v^3}{v^1}{v^2}=
+\mangle\hinge{v_1}{v_2}{v_3}=
+\mangle\hinge{v_2}{v_3}{v_1}=
+\mangle\hinge{v_3}{v_1}{v_2}=
 \pi.
 \]
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
 The product
-of the geodesics $[v^1v^2]$, $[v^2v^3]$, and $[v^3v^1]$
+of the geodesics $[v_1v_2]$, $[v_2v_3]$, and $[v_3v_1]$
 forms a locally geodesic loop in~$\spc{P}$ of length $\tfrac32\cdot\pi$.
 \end{clm}
 
@@ -428,7 +428,7 @@ and Karen Vogtmann \cite{billera-holmes-vogtmann}.
 
 Let $\spc{T}_n$ be the set of all metric trees with 
 $n$ end vertices
-labeled by $a^1,\ldots,a^n$.
+labeled by $a_1,\ldots,a_n$.
 To describe one tree in $\spc{T}_n$ we may fix a topological tree $t$ with these end vertices,
 and all other vertices of degree 3,
 and prescribe the lengths of $2\cdot n-3$ edges.

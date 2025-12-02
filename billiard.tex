@@ -152,10 +152,10 @@ Show that for any $p\in\spc{U}$ the tangent space $\T_p\spc{U}$ is a geodesic $\
 
 \section{Thin triangles}
 
-Let $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\z=\modtrig({x^1}{x^2}{x^3})$
+Let $\trig{\tilde x_1}{\tilde x_2}{\tilde x_3}\z=\modtrig({x_1}{x_2}{x_3})$
 be a model triangle for a triangle 
-$\trig{x^1}{x^2}{x^3}$ in a metric space.
-The map that sends a point $\tilde z\in[\tilde x^i\tilde x^j]$ to the corresponding point $z\in[x^ix^j]$ for each side will be called \index{natural map}\emph{natural}.
+$\trig{x_1}{x_2}{x_3}$ in a metric space.
+The map that sends a point $\tilde z\in[\tilde x_i\tilde x_j]$ to the corresponding point $z\in[x_ix_j]$ for each side will be called \index{natural map}\emph{natural}.
 
 \begin{thm}{Definition}\label{def:k-thin}
 A triangle $\trig{x}{y}{z}$ in the metric space $\spc{U}$ 
@@ -380,43 +380,43 @@ The spherical case is done along the same lines.
 \section{Reshetnyak's gluing}\label{sec:cba-gluing}
 
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ are spaces 
-with isometric closed sets $A^1\subset\spc{U}^1$ and $A^2\subset\spc{U}^2$.
-Let $\iota\:A^1\to A^2$ be an isometry.
-Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}^1\sqcup\spc{U}^2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A^1$.
-Let us equip $\spc{W}$ with the minimal metric such that both natural maps $\spc{U}^i\to \spc{W}$ are short.
+$\spc{U}_1$ and $\spc{U}_2$ are spaces
+with isometric closed sets $A_1\subset\spc{U}_1$ and $A_2\subset\spc{U}_2$.
+Let $\iota\:A_1\to A_2$ be an isometry.
+Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}_1\sqcup\spc{U}_2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A_1$.
+Let us equip $\spc{W}$ with the minimal metric such that both natural maps $\spc{U}_i\to \spc{W}$ are short.
 (A more general definition is discussed in \cite[1D]{petrunin-2023}.)
 
-The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}^1$ and  $\spc{U}^2$ along~$\iota$.
+The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}_1$ and  $\spc{U}_2$ along~$\iota$.
 
-If $\spc{U}^1$ and $\spc{U}^2$ are proper and geodesic and $A^i$ are convex in $\spc{U}^i$,
+If $\spc{U}_1$ and $\spc{U}_2$ are proper and geodesic and $A_i$ are convex in $\spc{U}_i$,
 then it is easy to check that $\spc{W}$ is a proper geodesic space as well and its metric can be described the following way:
 \begin{align*}
-\dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}^i}
+\dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}_i}
 \\
-&\quad\text{if}\quad x,y\in \spc{U}^i,\quad\text{and}
+&\quad\text{if}\quad x,y\in \spc{U}_i,\quad\text{and}
 \\
-\dist{x}{y}{\spc{W}}&\df\min\set{\dist{x}{a}{\spc{U}^1}+\dist{y}{\iota(a)}{\spc{U}^2}}{a\in A^1}
+\dist{x}{y}{\spc{W}}&\df\min\set{\dist{x}{a}{\spc{U}_1}+\dist{y}{\iota(a)}{\spc{U}_2}}{a\in A_1}
 \\
-&\quad\text{if}\quad x\in \spc{U}^1\quad\text{and}\quad y\in \spc{U}^2.
+&\quad\text{if}\quad x\in \spc{U}_1\quad\text{and}\quad y\in \spc{U}_2.
 \end{align*}
-Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}^1\sqcup\spc{U}^2$ and their equivalence classes in $\spc{U}^1\sqcup\spc{U}^2/{{\sim}}$.
+Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}_1\sqcup\spc{U}_2$ and their equivalence classes in $\spc{U}_1\sqcup\spc{U}_2/{{\sim}}$.
 
-We can (and will) identify $\spc{U}^i$ with its image in $\spc{W}$;
-this way both subsets $A^i\subset \spc{U}^i$ will be identified and denoted further by~$A$.
-Note that $A=\spc{U}^1\cap \spc{U}^2\subset \spc{W}$,
+We can (and will) identify $\spc{U}_i$ with its image in $\spc{W}$;
+this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by~$A$.
+Note that $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
 therefore $A$ is also a convex set in~$\spc{W}$.
 
 {\sloppy
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ are proper geodesic $\CAT(0)$ spaces 
+$\spc{U}_1$ and $\spc{U}_2$ are proper geodesic $\CAT(0)$ spaces
 with isometric 
 closed 
  convex
-sets $A^i\subset\spc{U}^i$, and $\iota\:A^1\z\to A^2$ is an isometry.
-Then the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ is a $\CAT(0)$ proper geodesic space.
+sets $A_i\subset\spc{U}_i$, and $\iota\:A_1\z\to A_2$ is an isometry.
+Then the gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$ is a $\CAT(0)$ proper geodesic space.
 \end{thm}
 
 }
@@ -428,9 +428,9 @@ By construction of the gluing space, the statement can be reformulated in the fo
 \begin{thm}{Reformulation of \ref{thm:gluing}}
 Let $\spc{W}$ be a 
 proper geodesic space with two closed 
-convex sets $\spc{U}^1,\spc{U}^2\subset\spc{W}$ such that 
-$\spc{U}^1\cup\spc{U}^2=\spc{W}$
-and $\spc{U}^1$, $\spc{U}^2$ are $\CAT(0)$.
+convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
+$\spc{U}_1\cup\spc{U}_2=\spc{W}$
+and $\spc{U}_1$, $\spc{U}_2$ are $\CAT(0)$.
 Then $\spc{W}$ is $\CAT(0)$.
 \end{thm}
 
@@ -442,17 +442,17 @@ Then $\spc{W}$ is $\CAT(0)$.
 
 It suffices to show that any triangle $\trig {x}{y}{z}$ 
 in $\spc{W}$ is thin.
-This is obviously true if all three points $x$, $y$, $z$ lie in one of~$\spc{U}^i$.
-Thus, without loss of generality, we may assume that $x\z\in\spc{U}^1$ and $y,z\z\in\spc{U}^2$.
+This is obviously true if all three points $x$, $y$, $z$ lie in one of~$\spc{U}_i$.
+Thus, without loss of generality, we may assume that $x\z\in\spc{U}_1$ and $y,z\z\in\spc{U}_2$.
 
 
-Choose points $a,b\in A\z=\spc{U}^1\z\cap\spc{U}^2$ 
+Choose points $a,b\in A\z=\spc{U}_1\z\cap\spc{U}_2$
 that lie respectively on the sides $[xy], [xz]$.
 Note that
 
 \begin{itemize}
-\item the triangle $\trig{x}{a}{b}$ lies in $\spc{U}^1$,
-\item both triangles $\trig{y}{a}{b}$ and $\trig{y}{b}{z}$ lie in~$\spc{U}^2$.
+\item the triangle $\trig{x}{a}{b}$ lies in $\spc{U}_1$,
+\item both triangles $\trig{y}{a}{b}$ and $\trig{y}{b}{z}$ lie in~$\spc{U}_2$.
 \end{itemize}
 In particular, each triangle $\trig{x}{a}{b}$,
 $\trig{y}{a}{b}$, and $\trig{y}{b}{z}$ is thin.
@@ -493,9 +493,9 @@ Now we will look at an application of the previous lecture that is at once beaut
 Here we introduce the notion of Reshetnyak puff pastry.
 This construction will be applied to billiards (\ref{thm:collision}).
 
-Let $\bm{A}=(A^1,\ldots,A^N)$ be an array of closed convex sets in the Euclidean space~$\EE^m$.
+Let $\bm{A}=(A_1,\ldots,A_N)$ be an array of closed convex sets in the Euclidean space~$\EE^m$.
 Consider an array of $N+1$ copies of~$\EE^m$.
-Let us construct the space $\spc{R}$ by gluing successive pairs of spaces along  $A^1,\ldots,A^N$ respectively.
+Let us construct the space $\spc{R}$ by gluing successive pairs of spaces along  $A_1,\ldots,A_N$ respectively.
 
 
 \begin{figure}[ht!]
@@ -510,23 +510,23 @@ the
 \index{puff pastry}\emph{Reshetnyak puff pastry} for array~$\bm{A}$.
 The copies of $\EE^m$ in the puff pastry $\spc{R}$
 will be called {}\emph{levels};
-they will be denoted by $\spc{R}^0,\ldots,\spc{R}^N$.
-The point in the $k$-th level $\spc{R}^k$
+they will be denoted by $\spc{R}_0,\ldots,\spc{R}_N$.
+The point in the $k$-th level $\spc{R}_k$
 that corresponds to $x\in \EE^m$
-will be denoted by~$x^k$.
+will be denoted by~$x_k$.
 
-Given $x\in \EE^m$, any point $x^k\in\spc{R}$ is called a {}\emph{lifting} of~$x$.
-The map $x\mapsto x^k$ defines an isometry $\EE^m\to \spc{R}^k$;  
+Given $x\in \EE^m$, any point $x_k\in\spc{R}$ is called a {}\emph{lifting} of~$x$.
+The map $x\mapsto x_k$ defines an isometry $\EE^m\to \spc{R}_k$;
 in particular, we can talk about liftings of subsets in~$\EE^m$.
 
 Note that: 
 \begin{itemize}
-\item The intersection $A^1\cap\ldots\cap A^N$ admits a unique lifting in~$\spc{R}$.
-\item Moreover, $x^i=x^j$ for some $i<j$
+\item The intersection $A_1\cap\ldots\cap A_N$ admits a unique lifting in~$\spc{R}$.
+\item Moreover, $x_i=x_j$ for some $i<j$
 if and only if 
-\[x\in A^{i+1}\cap\ldots\cap A^j.\]
-\item For any $k$, the restriction $\spc{R}^k\to \EE^m$
-of the natural projection $x^k\mapsto x$ is an isometry.
+\[x\in A_{i+1}\cap\ldots\cap A_j.\]
+\item For any $k$, the restriction $\spc{R}_k\to \EE^m$
+of the natural projection $x_k\mapsto x$ is an isometry.
 \end{itemize}
 
 
@@ -540,15 +540,15 @@ Any Reshetnyak puff pastry is a proper geodesic $\CAT(0)$ space.
 \qeds
 
 \begin{thm}{Proposition}\label{prop:A-check-A}
-Assume $(A^1,\ldots,A^N)$ and $(\check A^1,\ldots,\check A^N)$ are two arrays of closed convex sets in $\EE^m$
-such that $ A^k\subset \check A^k$ for each~$k$.
+Assume $(A_1,\ldots,A_N)$ and $(\check A_1,\ldots,\check A_N)$ are two arrays of closed convex sets in $\EE^m$
+such that $ A_k\subset \check A_k$ for each~$k$.
 Let $\spc{R}$ and $\check{\spc{R}}$ be the corresponding Reshetnyak  puff pastries.
 Then the map $\spc{R}\to\check{\spc{R}}$
-defined by $x^k\mapsto\check x^k$ is well-defined and short.
+defined by $x_k\mapsto\check x_k$ is well-defined and short.
 
 Moreover, if  
-\[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\eqlbl{eq:dist=dist}\]
-for some $x,y\in \EE^m$ and $i,j\in \{0,\ldots,N\}$, then the necessarily unique geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ is the image of the necessarily unique geodesic $[x^i y^j]_{\spc{R}}$ under the map $x^i\mapsto \check x^i$.
+\[\dist{x_i}{y_j}{\spc{R}}=\dist{\check x_i}{\check y_j}{\check{\spc{R}}}\eqlbl{eq:dist=dist}\]
+for some $x,y\in \EE^m$ and $i,j\in \{0,\ldots,N\}$, then the necessarily unique geodesic $[\check x_i \check y_j]_{\check{\spc{R}}}$ is the image of the necessarily unique geodesic $[x_i y_j]_{\spc{R}}$ under the map $x_i\mapsto \check x_i$.
 \end{thm}
 
 \parit{Proof.}
@@ -557,11 +557,11 @@ follows from the construction of Reshetnyak  puff pastries.
 
 By Observation~\ref{obs:puff pastry is CAT}, 
 $\spc{R}$  and  $\check{\spc{R}}$ are proper geodesic $\CAT(0)$ spaces; 
-hence $[x^i y^j]_{\spc{R}}$ 
-and $[\check x^i \check y^j]_{\check{\spc{R}}}$ are unique.  
+hence $[x_i y_j]_{\spc{R}}$
+and $[\check x_i \check y_j]_{\check{\spc{R}}}$ are unique.
 By \ref{eq:dist=dist}, since the map $\spc{R}\to\check{\spc{R}}$ is short, 
-the image of $[x^i y^j]_{\spc{R}}$
-is a geodesic of $\check{\spc{R}}$ joining $\check x^i$ to~$\check y^j$.
+the image of $[x_i y_j]_{\spc{R}}$
+is a geodesic of $\check{\spc{R}}$ joining $\check x_i$ to~$\check y_j$.
 Hence the second statement follows.
 \qeds
 
@@ -571,17 +571,17 @@ Hence the second statement follows.
 
 \begin{thm}{Definition}
 Consider a Reshetnyak puff pastry $\spc{R}$ with the levels 
-$\spc{R}^0,\ldots,\spc{R}^N$.
+$\spc{R}_0,\ldots,\spc{R}_N$.
 We say that $\spc{R}$ is \index{end-to-end convex}\emph{end-to-end convex} 
-if $\spc{R}^0\cup\spc{R}^N$, the union of its lower and upper levels, 
+if $\spc{R}_0\cup\spc{R}_N$, the union of its lower and upper levels,
 forms a convex set in~$\spc{R}$;
-that is, if $x,y\in \spc{R}^0\cup\spc{R}^N$, then $[xy]_{\spc{R}}\subset  \spc{R}^0\cup\spc{R}^N$.
+that is, if $x,y\in \spc{R}_0\cup\spc{R}_N$, then $[xy]_{\spc{R}}\subset  \spc{R}_0\cup\spc{R}_N$.
 \end{thm}
 
-Note that if $\spc{R}$ is the Reshetnyak puff pastry for an array of convex sets $\bm{A}=(A^{1},\ldots, A^{N})$,
+Note that if $\spc{R}$ is the Reshetnyak puff pastry for an array of convex sets $\bm{A}=(A_{1},\ldots, A_{N})$,
 then $\spc{R}$ is end-to-end convex
 if and only if the union of the lower and the upper levels
-$\spc{R}^0\cup\spc{R}^N$ is isometric to the double of $\EE^m$ along the nonempty intersection $A^1\cap\ldots\cap A^N$.
+$\spc{R}_0\cup\spc{R}_N$ is isometric to the double of $\EE^m$ along the nonempty intersection $A_1\cap\ldots\cap A_N$.
 
 
 \begin{thm}{Observation}\label{obs:end-to-end-convex}
@@ -602,7 +602,7 @@ obtained by inserting one element in $\check{\bm{A}}$,
 say at the place number~$k$.
 
 Note that $\check{\spc{R}}$ is isometric to the puff pastry 
-for $\bm{A}$ with $A^k$ replaced by~$\EE^m$.
+for $\bm{A}$ with $A_k$ replaced by~$\EE^m$.
 It remains to apply Proposition~\ref{prop:A-check-A}.
 \qeds
 
@@ -701,7 +701,7 @@ it is sufficient to prove the following:
 }
 
 \begin{clm}{}\label{clm:z in xy}
-The geodesic $[x^0y^N]_\spc{R}$ contains $z^0=z^N\in \spc{R}$.
+The geodesic $[x_0y_N]_\spc{R}$ contains $z_0=z_N\in \spc{R}$.
 \end{clm}
 
 Without loss of generality, we may assume that $z\in\partial A\cap\partial B$.
@@ -741,11 +741,11 @@ Since $\dot{\spc{R}}\iso\EE^{m-2}\times\ddot{\spc{R}}$,
 the puff pastry $\dot{\spc{R}}$ is also end-to-end convex;
 see \ref{ex:geod-prod}.
 
-It follows that the geodesic $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ contains $\dot z^0=\dot z^N\in\dot{\spc{R}}$.
+It follows that the geodesic $[\dot x_0\dot y_N]_{\dot{\spc{R}}}$ contains $\dot z_0=\dot z_N\in\dot{\spc{R}}$.
 By Proposition~\ref{prop:A-check-A}, 
-the image of $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ 
-under the map $\dot x^k\mapsto x^k$
-is the geodesic $[x^0 y^N]_{\spc{R}}$.
+the image of $[\dot x_0\dot y_N]_{\dot{\spc{R}}}$
+under the map $\dot x_k\mapsto x_k$
+is the geodesic $[x_0 y_N]_{\spc{R}}$.
 Hence \ref{clm:z in xy} and the lemma follow.
 \qeds
 
@@ -770,23 +770,23 @@ has $\eps$-wide corners
 if all its interior angles are at least~$\eps$.
 
 We will consider arrays of closed convex sets 
-$A^1,\ldots,A^n$ in $\EE^m$
+$A_1,\ldots,A_n$ in $\EE^m$
 such that for any subset $F\subset\{1,\ldots,n\}$,
 the intersection
-$\bigcap_{i\in F}A^i$ 
+$\bigcap_{i\in F}A_i$
 has $\eps$-wide corners.
-In this case, we may say briefly that \index{wide corners}\textit{all intersections of $A^i$ have $\eps$-wide corners}.
+In this case, we may say briefly that \index{wide corners}\textit{all intersections of $A_i$ have $\eps$-wide corners}.
 
 
 \begin{thm}{Exercise}\label{ex:compact-walls}
-Assume $A^1,\ldots,A^n\subset\EE^m$ are compact, convex sets with a common interior point.
-Show that all intersections of $A^i$ have $\eps$-wide corners for some~$\eps>0$.
+Assume $A_1,\ldots,A_n\subset\EE^m$ are compact, convex sets with a common interior point.
+Show that all intersections of $A_i$ have $\eps$-wide corners for some~$\eps>0$.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:centrally-simmetric-walls}
-Assume $A^1,\ldots,A^n\subset\EE^m$ are
+Assume $A_1,\ldots,A_n\subset\EE^m$ are
 convex sets with nonempty interiors that have a common center of symmetry.
-Show that all intersections of $A^i$ have $\eps$-wide corners for some~$\eps>0$.
+Show that all intersections of $A_i$ have $\eps$-wide corners for some~$\eps>0$.
 \end{thm}
 
 The proof of the following proposition is based on lemma \ref{lem:end-to-end-convex}, which is essentially the case $n=2$ in the proposition.
@@ -801,10 +801,10 @@ and each number $1,\ldots,n$ appears in $\bm{j}_\eps$ at least once.
 \end{subthm}
 
 \begin{subthm}{}
-If $A^1,\ldots,A^n$ is a collection of closed convex sets in $\EE^m$ with a common point
+If $A_1,\ldots,A_n$ is a collection of closed convex sets in $\EE^m$ with a common point
 and all their intersections have $\eps$-wide corners,  
 then the puff pastry for the array
-$(A^{j_1},\ldots,A^{j_N})$ is end-to-end convex.
+$(A_{j_1},\ldots,A_{j_N})$ is end-to-end convex.
 \end{subthm}
 
 Moreover, we can assume that $N\le (\lceil\tfrac\pi\eps\rceil+1)^n$.
@@ -823,10 +823,10 @@ By Lemma \ref{lem:end-to-end-convex},
 the end-to-end convexity of the puff pastry for $\bm{j}_\eps(n\z+1)$
 follows from the end-to-end convexity of the puff pastry for the array
 where each string
-\[\underbrace{A^n,A^{n+1},A^n,\ldots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}\]
-is replaced by  $Q=A^n\cap A^{n+1}$.
+\[\underbrace{A_n,A_{n+1},A_n,\ldots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}\]
+is replaced by  $Q=A_n\cap A_{n+1}$.
 End-to-end convexity of the latter follows by the assumption on $\bm{j}_\eps(n)$, 
-since all the intersections of $A^1,\ldots,A^{n-1},Q$
+since all the intersections of $A_1,\ldots,A_{n-1},Q$
 have $\eps$-wide corners.
 
 The upper bound on $N$ follows directly from the construction.
@@ -834,16 +834,16 @@ The upper bound on $N$ follows directly from the construction.
 
 \section{Billiards}
 
-Let $A^1,A^2,\ldots, A^n$ be a finite collection of closed convex sets in~$\EE^m$.
+Let $A_1,A_2,\ldots, A_n$ be a finite collection of closed convex sets in~$\EE^m$.
 Assume that for each $i$
-the boundary $\partial A^i$ is a smooth hypersurface.
+the boundary $\partial A_i$ is a smooth hypersurface.
 
 Consider the billiard table formed by the closure of the complement 
-$$T=\overline{\EE^m\setminus \bigcup_{i} A^i}.$$
-The sets $A^i$ will be called {}\emph{walls} of the table
+$$T=\overline{\EE^m\setminus \bigcup_{i} A_i}.$$
+The sets $A_i$ will be called {}\emph{walls} of the table
 and the billiards described above will be called {}\emph{billiards with convex walls}.
 
-A billiard {}\emph{trajectory} on the table is a unit-speed polygonal line $\gamma$ that follows the standard law of billiards at the breakpoints on $\partial A^i$
+A billiard {}\emph{trajectory} on the table is a unit-speed polygonal line $\gamma$ that follows the standard law of billiards at the breakpoints on $\partial A_i$
 --- in particular, the angle of reflection is equal to the angle of incidence.
 The breakpoints of the trajectory will be called {}\emph{collisions}.
 \textit{We assume that our trajectory (1) never meets a wall in a tangent direction and (2) meets at most one wall in a small neighborhood of every time $t$.
@@ -939,48 +939,48 @@ Let us apply induction on~$n$.
 
 \parit{Base: $n=1$.}
 The number of collisions cannot exceed~1.  
-Indeed, by the convexity of $A^1$,
-if the trajectory is reflected once in $\partial A^1$, 
-then it cannot return to~$A^1$. 
+Indeed, by the convexity of $A_1$,
+if the trajectory is reflected once in $\partial A_1$,
+then it cannot return to~$A_1$.
 
 \parit{Step.}
-Assume $\gamma$ is a trajectory that  meets the walls in the order $A^{i_1},\ldots,A^{i_N}$ for a large integer~$N$.
+Assume $\gamma$ is a trajectory that  meets the walls in the order $A_{i_1},\ldots,A_{i_N}$ for a large integer~$N$.
 
 Consider the array 
-\[\bm{A}_\gamma=(A^{i_1},\ldots,A^{i_N}).\]
+\[\bm{A}^\gamma=(A_{i_1},\ldots,A_{i_N}).\]
 The induction hypothesis implies:
 
 \begin{clm}{}\label{clm:collision-induction hypothesis}
-There is a positive integer $N_0$ such that any $N_0$ consecutive elements of $\bm{A}_\gamma$ contain each $A^i$ at least once.
+There is a positive integer $N_0$ such that any $N_0$ consecutive elements of $\bm{A}^\gamma$ contain each $A_i$ at least once.
 \end{clm}
 
-Let $\spc{R}_\gamma $ be  the  Reshetnyak puff pastry for~$\bm{A}_\gamma$.
+Let $\spc{R}^\gamma $ be  the  Reshetnyak puff pastry for~$\bm{A}^\gamma$.
 
-Consider the lift of $\gamma$ to $\spc{R}_\gamma$,
+Consider the lift of $\gamma$ to $\spc{R}^\gamma$,
 defined by 
-$\bar\gamma(t)=\gamma^k(t)\in \spc{R}_\gamma$ 
+$\bar\gamma(t)=\gamma_k(t)\in \spc{R}^\gamma$
 for any moment of time $t$ between the $k$-th and $(k+1)$-th collisions.  
-Since $\gamma$ follows the standard law of billiards at breakpoints, the lift $\bar\gamma$ is locally a geodesic in~$\spc{R}_\gamma$.
+Since $\gamma$ follows the standard law of billiards at breakpoints, the lift $\bar\gamma$ is locally a geodesic in~$\spc{R}^\gamma$.
 By \ref{obs:puff pastry is CAT},
-the puff pastry $\spc{R}_\gamma$ is a proper geodesic $\CAT(0)$ space.
+the puff pastry $\spc{R}^\gamma$ is a proper geodesic $\CAT(0)$ space.
 Therefore $\bar\gamma$ is a geodesic.
 
-Since $\gamma$ does not meet $A^1\cap\ldots\cap A^n$,
-the lift $\bar\gamma$ does not lie in  $\spc{R}_\gamma^0\cup \spc{R}_\gamma^N$.
-In particular, $\spc{R}_\gamma$ is not end-to-end convex.
+Since $\gamma$ does not meet $A_1\cap\ldots\cap A_n$,
+the lift $\bar\gamma$ does not lie in  $\spc{R}^\gamma_0\cup \spc{R}^\gamma_N$.
+In particular, $\spc{R}^\gamma$ is not end-to-end convex.
 
 Let 
-\[\bm{B}=(A^{j_1},\ldots,A^{j_K})\]
+\[\bm{B}=(A_{j_1},\ldots,A_{j_K})\]
 be the array provided by Proposition~\ref{prop:end-to-end-convex};
-so $\bm{B}$ contains each $A^i$ at least once
+so $\bm{B}$ contains each $A_i$ at least once
 and the puff pastry $\spc{R}_{\bm{B}}$ for $\bm{B}$ is end-to-end convex.
 If $N$ is sufficiently large, namely $N\ge K\cdot N_0$, then
  \ref{clm:collision-induction hypothesis}
-implies that $\bm{A}_\gamma$ can be obtained  
-by inserting a finite number of $A^i$'s in~$\bm{B}$.
+implies that $\bm{A}^\gamma$ can be obtained
+by inserting a finite number of $A_i$'s in~$\bm{B}$.
 
 By \ref{obs:end-to-end-convex}, 
-$\spc{R}_\gamma$ is end-to-end convex --- a contradiction.
+$\spc{R}^\gamma$ is end-to-end convex --- a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:collision}

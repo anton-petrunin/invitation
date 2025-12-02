@@ -112,14 +112,14 @@ This example is taken from the book by Martin Bridson and André Haefliger \cite
 
 \parbf{\ref{ex:length-prod}.}
 Let $\spc{W}=\spc{U}\times \spc{V}$.
-Choose two pairs of points $u^0,u^1\in \spc{U}$
-and $v^0,v^1\in \spc{V}$.
-Set $a=\dist{u^0}{u^1}{\spc{U}}$, $b=\dist{v^0}{v^1}{\spc{V}}$ and $c=\dist{(u^0,v^0)}{(u^1,v^1)}{\spc{W}}$.
+Choose two pairs of points $u_0,u_1\in \spc{U}$
+and $v_0,v_1\in \spc{V}$.
+Set $a=\dist{u_0}{u_1}{\spc{U}}$, $b=\dist{v_0}{v_1}{\spc{V}}$ and $c=\dist{(u_0,v_0)}{(u_1,v_1)}{\spc{W}}$.
 
 Since $\spc{U}$ and $\spc{V}$ are length spaces,
 given $\eps>0$,
-we can choose curves $\alpha\:[0,1]\to \spc{U}$ from $u^0$ to $u^1$
-and $\beta\:[0,1]\to \spc{V}$ from $v^0$ to $v^1$
+we can choose curves $\alpha\:[0,1]\to \spc{U}$ from $u_0$ to $u_1$
+and $\beta\:[0,1]\to \spc{V}$ from $v_0$ to $v_1$
 such that 
 \[\length \alpha<a+\eps
 \quad\text{and}\quad
@@ -517,8 +517,8 @@ the latter contradicts the fact that $z$ is a minimum point of $f$ on $A\cap B$.
 \parbf{\ref{ex:compact-walls}.}
 Fix two open balls $B_1\z=\oBall(0,r_1)$ and $B_2=\oBall(0,r_2)$
 such that 
-\[B_1\subset A^i\subset B_2\]
-for each wall~$A^i$.
+\[B_1\subset A_i\subset B_2\]
+for each wall~$A_i$.
 
 Note that all the intersections of the walls have $\eps$-wide corners for
 \[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
@@ -555,11 +555,11 @@ Let me also recommend a video by Grant Sanderson \cite{sanderson} about a peculi
 Assume that a trajectory $\gamma$ is defined on the interval $[a,b)$
 and the collisions accumulate at $b$.
 Without loss of generality, we may assume that $\gamma$ meets each wall infinitely many times.
-Consider the infinite puff pastry $\spc{R}_\gamma$ for $\gamma$
+Consider the infinite puff pastry $\spc{R}^\gamma$ for $\gamma$
 and let $\bar\gamma$ be its lift.
 
-Pass to the completion $\bar{\spc{R}}_\gamma$ of $\spc{R}_\gamma$;
-observe that $\bar{\spc{R}}_\gamma$ is $\CAT(0)$.
+Pass to the completion $\bar{\spc{R}}^\gamma$ of $\spc{R}^\gamma$;
+observe that $\bar{\spc{R}}^\gamma$ is $\CAT(0)$.
 Define $\bar\gamma(b)$ to be the limit point of $\bar\gamma(t)$ as $t\to b$.
 Notice that $\bar\gamma\:[a,b]\to \bar{\spc{R}}_\gamma$ is a minimizing geodesic.
 
@@ -601,48 +601,48 @@ sum of its external angles is \textit{strictly} larger than $4\cdot\pi$.
 \parbf{\ref{ex:arm-lemma}.}
 Note that the majorization theorem for polygons is already proved, and we can use it.
 
-By the majorization theorem, $P=[x^1\ldots x^{n}]$ can be majorized by a convex plane polygon, say $\dot P=[\dot x^1\ldots \dot x^{n}]$.
+By the majorization theorem, $P=[x_1\ldots x_{n}]$ can be majorized by a convex plane polygon, say $\dot P=[\dot x_1\ldots \dot x_{n}]$.
 Note that we have
 \[
-\dist{\dot x^i}{\dot x^{i-1}}{\EE^2}
+\dist{\dot x_i}{\dot x_{i-1}}{\EE^2}
 =
-\dist{x^i}{x^{i-1}}{\spc{U}}
+\dist{x_i}{x_{i-1}}{\spc{U}}
 \quad \text{and}\quad
-\mangle\hinge{\dot x^i}{\dot x^{i-1}}{\dot x^{i+1}}_{\EE^2}
+\mangle\hinge{\dot x_i}{\dot x_{i-1}}{\dot x_{i+1}}_{\EE^2}
 \ge
-\mangle\hinge{x^i}{x^{i-1}}{x^{i+1}}_{\spc{U}}
+\mangle\hinge{x_i}{x_{i-1}}{x_{i+1}}_{\spc{U}}
 \]
-for all $i$, and $\dist{\dot x^1}{\dot x^n}{\EE^2}
+for all $i$, and $\dist{\dot x_1}{\dot x_n}{\EE^2}
 =
-\dist{x^1}{x^{n}}{\spc{U}}$ as well.%
+\dist{x_1}{x_{n}}{\spc{U}}$ as well.%
 \footnote{We also get that
-\[\mangle\hinge{\dot x^1}{\dot x^2}{\dot x^n}
+\[\mangle\hinge{\dot x_1}{\dot x_2}{\dot x_n}
 \ge
-\mangle\hinge{x^1}{x^2}{x^n}
+\mangle\hinge{x_1}{x_2}{x_n}
 \quad\text{and}\quad
-\mangle\hinge{\dot x^{n}}{\dot x^1}{\dot x^{n-1}}
+\mangle\hinge{\dot x_{n}}{\dot x_1}{\dot x_{n-1}}
 \ge
-\mangle\hinge{x^n}{x^1}{x^{n-1}},\] but we will not need it.}
+\mangle\hinge{x_n}{x_1}{x_{n-1}},\] but we will not need it.}
 
 It follows that
 \[
-\dist{\dot x^i}{\dot x^{i-1}}{\EE^2}
+\dist{\dot x_i}{\dot x_{i-1}}{\EE^2}
 =
-\dist{\tilde x^i}{\tilde x^{i-1}}{\EE^2}
+\dist{\tilde x_i}{\tilde x_{i-1}}{\EE^2}
 \quad \text{and}\quad
-\mangle\hinge{\dot x^i}{\dot x^{i-1}}{\dot x^{i+1}}
+\mangle\hinge{\dot x_i}{\dot x_{i-1}}{\dot x_{i+1}}
 \ge
-\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde x^{i+1}}
+\mangle\hinge{\tilde x_i}{\tilde x_{i-1}}{\tilde x_{i+1}}
 \]
 for all $i$.
 By the classical arm lemma,
-\[\dist{\dot x^1}{\dot x^{n}}{\EE^2}
+\[\dist{\dot x_1}{\dot x_{n}}{\EE^2}
 \ge
-\dist{\tilde x^1}{\tilde x^{n}}{\EE^2}\]
+\dist{\tilde x_1}{\tilde x_{n}}{\EE^2}\]
 --- hence the result.
 
 \parit{Remarks.}
-In the equality case, the map $\tilde x^i\mapsto x^i$ can be extended to a distance-preserving map from the convex hull of $\tilde P$ to $\spc{U}$; see \cite[9.63]{alexander-kapovitch-petrunin-2025}.
+In the equality case, the map $\tilde x_i\mapsto x_i$ can be extended to a distance-preserving map from the convex hull of $\tilde P$ to $\spc{U}$; see \cite[9.63]{alexander-kapovitch-petrunin-2025}.
 
 The classical arm lemma has the following close relative in differential geometry.
 
@@ -1192,8 +1192,8 @@ Therefore, by \ref{ex:cone+susp}, $K$ is not $\CAT(0)$.
 
 \parbf{\ref{ex:finite-action-CAT}}; \ref{SHORT.ex:finite-action-CAT:finite}
 Suppose $G$ is finite.
-Choose its orbit $\{p^1,\ldots,p^n\}$.
-Consider the barycenter $z$ of the array $\bm{p}=(p^1,\ldots,p^n)$ with equal masses;
+Choose its orbit $\{p_1,\ldots,p_n\}$.
+Consider the barycenter $z$ of the array $\bm{p}=(p_1,\ldots,p_n)$ with equal masses;
 in other words, $z\df\spx{\bm{p}}(\tfrac1n,\ldots,\tfrac1n)$.
 Observe that $z$ is a fixed point of the action.
 
@@ -1211,7 +1211,7 @@ therefore $z$ is a fixed point.
 \parbf{\ref{ex:bary-jensen}}; \ref{SHORT.ex:bary-jensen:moment}.
 Let $\gamma$ be geodesic from $z$ to $q$ and let $r=\dist{q}{z}{}$.
 Consider the function
-\[\phi(t)=\tfrac12\cdot \sum_i \mu^i\cdot \dist[2]{\gamma(t)}{p^i}{}.\]
+\[\phi(t)=\tfrac12\cdot \sum_i \mu_i\cdot \dist[2]{\gamma(t)}{p_i}{}.\]
 Observe that $\phi$ is 1-convex, and $\phi^+(0)\ge 0$.
 Conclude that
 $\phi(r)\ge \tfrac12\cdot r^2$
@@ -1223,23 +1223,23 @@ Given two tangent vectors $v,w$, define their \emph{scalar product} as
 where $\theta$ is the angle between $v$ and $w$;
 if one of the vectors is zero, then you can choose $\theta$ arbitrary, say $\theta=0$.
 
-Let $v^i$ be the tangent vector at $z$ of the geodesic path from $z$ to $p^i$.
-Note that $\dist{z}{p^i}{}=|v^i|$ for each $i$.
+Let $v_i$ be the tangent vector at $z$ of the geodesic path from $z$ to $p_i$.
+Note that $\dist{z}{p_i}{}=|v_i|$ for each $i$.
 
 Show that
-\[\mu^0\cdot\langle w,v^0\rangle+\ldots+\mu^k\cdot\langle w,v^k\rangle\le 0 \leqno{(*)}\]
+\[\mu_0\cdot\langle w,v_0\rangle+\ldots+\mu_k\cdot\langle w,v_k\rangle\le 0 \leqno{(*)}\]
 for any $w\in \T_z$.
 
 Use comparison to show that
-\[\dist[2]{p^i}{p^j}{}\ge \dist[2]{z}{p^i}{}+\dist[2]{z}{p^j}{}-2\cdot \langle v^i,v^j\rangle.\]
+\[\dist[2]{p_i}{p_j}{}\ge \dist[2]{z}{p_i}{}+\dist[2]{z}{p_j}{}-2\cdot \langle v_i,v_j\rangle.\]
 It remains to apply your algebraic skills.
 
 \parit{\ref{SHORT.ex:bary-jensen:jensen}.}
-Let $v^i\in\T_z$ be as above.
+Let $v_i\in\T_z$ be as above.
 
 Define differential $\dd_z h\:\T_z\to\RR$ of $h$ at $z$.
 Observe that
-\[h(p^i)\ge h(z)+\dd_z h(v^i)\]
+\[h(p_i)\ge h(z)+\dd_z h(v_i)\]
 for each $i$.
 Further, show and use that there is a vector $v\in \T_z$ such that
 \[\dd_z h(w)+\langle v,w\rangle\ge 0
@@ -1260,49 +1260,49 @@ For the second part consider the cone over a circle with length bigger than $2\c
 or the product of a tripod with the real line.
 
 \parbf{\ref{lem:nondeg-test-with-balls}}; \ref{SHORT.lem:nondeg-test-with-ball:U}.
-Choose $q\in \bigcap_i B^i$.
-Assume $s\notin \bigcup_i B^i$.
-Observe that $\dist{p^i}{s}{}>\dist{p^i}{q}{}$ for any $i$ and apply \ref{thm:up-convex:bry}.
+Choose $q\in \bigcap_i B_i$.
+Assume $s\notin \bigcup_i B_i$.
+Observe that $\dist{p_i}{s}{}>\dist{p_i}{q}{}$ for any $i$ and apply \ref{thm:up-convex:bry}.
 Conclude that $s\notin\spx{\bm{p}}(\triangle^k)$.
 
 \parit{\ref{SHORT.lem:nondeg-test-with-balls:nondeg}.}
 Show that there is a point, say $z$, that minimizes 
-\[\ell=\max_i\{\dist{p^i}{z}{}-r^i\}.\]
+\[\ell=\max_i\{\dist{p_i}{z}{}-r_i\}.\]
 Note that $\ell>0$.
 
-Let us show that $\ell=\dist{p^i}{z}{}-r^i$ for any $i$.
-Assume the contrary; that is, that $\ell>\dist{p^j}{z}{}-r^j$ for some $j$.
-Choose a point $q^j\in\bigcap_{i\ne j} B^i$.
-Note that $\ell>\dist{p^j}{x}{}-r^j$
-for any point $x\in \left]zq^j\right[$.
+Let us show that $\ell=\dist{p_i}{z}{}-r_i$ for any $i$.
+Assume the contrary; that is, that $\ell>\dist{p_j}{z}{}-r_j$ for some $j$.
+Choose a point $q_j\in\bigcap_{i\ne j} B_i$.
+Note that $\ell>\dist{p_j}{x}{}-r_j$
+for any point $x\in \left]zq_j\right[$.
 Therefore $\ell$ is not minimal --- a contradiction.
 
 Observe that $z\in \spx{\bm{p}}(\triangle^k)$.
-By \ref{SHORT.lem:nondeg-test-with-ball:U}, $\spx{\bm{p}}(\partial\triangle^k)\subset \bigcup_{i} B^i$.
+By \ref{SHORT.lem:nondeg-test-with-ball:U}, $\spx{\bm{p}}(\partial\triangle^k)\subset \bigcup_{i} B_i$.
 Hence $\spx{\bm{p}}(\triangle^k)\setminus\spx{\bm{p}}(\partial\triangle^k)\ne \emptyset$.
 
 \parit{\ref{SHORT.lem:nondeg-test-with-balls:nondeg+}.}
 Choose $z\in \spx{\bm{p}}(\triangle^k)\setminus\spx{\bm{p}}(\partial\triangle^k)$.
-Show that for each $j$, there is a point $z^j$ such that
-\[\dist{p^i}{z^j}{}<\dist{p^i}{z}{}\]
+Show that for each $j$, there is a point $z_j$ such that
+\[\dist{p_i}{z_j}{}<\dist{p_i}{z}{}\]
 for any $i\ne j$.
-Choose $r^i=\min_{j\ne i}\{\dist{p^i}{z^j}{}\}$.
+Choose $r_i=\min_{j\ne i}\{\dist{p_i}{z_j}{}\}$.
 
 \parbf{\ref{ex:helly}.}
-We can assume that $n=m+2$ and $K^1\cap\ldots\cap K^{n}\z=\emptyset$.
-Choose a point array $\bm{p}=(p^1,\dots,p^n)$ such that
-\[p^i\in \bigcap_{j\ne i} K^j\]
+We can assume that $n=m+2$ and $K_1\cap\ldots\cap K_{n}\z=\emptyset$.
+Choose a point array $\bm{p}=(p_1,\dots,p_n)$ such that
+\[p_i\in \bigcap_{j\ne i} K_j\]
 for each $i$.
-Observe that $\spx{\bm{p}}(\partial\triangle^k)\subset \bigcup_iK^i$.
+Observe that $\spx{\bm{p}}(\partial\triangle^k)\subset \bigcup_iK_i$.
 
 By \ref{thm:bihoelder}, the simplex $\spx{\bm{p}}$ is degenerate.
-Therefore, $\spx{\bm{p}}(\triangle^k)\subset \bigcup_iK^i$.
-Apply Sperner's lemma \cite{sperner-lemma} to show that $\spx{\bm{p}}(\triangle^k)(\bm{\mu})\z\in \bigcap_iK^i$ for some $\bm{\mu}\in \triangle^k$ and each $i$.
+Therefore, $\spx{\bm{p}}(\triangle^k)\subset \bigcup_iK_i$.
+Apply Sperner's lemma \cite{sperner-lemma} to show that $\spx{\bm{p}}(\triangle^k)(\bm{\mu})\z\in \bigcap_iK_i$ for some $\bm{\mu}\in \triangle^k$ and each $i$.
 Arrive at a contradiction.
 
 \parbf{\ref{ex:dim-top-haus-CAT}.}
 Let $T$ be a binary rooted tree.
-Choose a metric on $T$ such that each edge from level $n$ to $n+1$ has length $\lambda^n$ for some $0<\lambda<1$.
+Choose a metric on $T$ such that each edge from level $n$ to $n+1$ has length $\lambda_n$ for some $0<\lambda<1$.
 Passing to completion of the obtained space, we add to it a \textit{crown} which is homeomorphic to the Cantor set.
 Observe that the completion has topological dimension 1.
 

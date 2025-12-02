@@ -235,10 +235,10 @@ By the assumptions, the line-of-sight map  $(t,s)\mapsto\gamma_t(s)$ from $p$ to
 \includegraphics{mppics/pic-950}
 \end{figure}
 
-Fix  a partition \[0\z=t^0\z<t^1\z<\z\ldots\z<t^N=1,\]
-and set $x^{i,j}=\gamma_{t^i}(t^j)$. 
+Fix  a partition \[0\z=t_0\z<t_1\z<\z\ldots\z<t_N=1,\]
+and set $x_{i,j}=\gamma_{t_i}(t_j)$.
 Since the line-of-sight map is continuous and $\spc{U}$ is locally $\CAT(0)$, we may assume that the triangles 
-\[\trig{x^{i,j}\,}{x^{i,j+1}\,}{x^{i+1,j+1}}\quad\text{and}\quad\trig{x^{i,j}\,}{x^{i+1,j}\,}{x^{i+1,j+1}}\]
+\[\trig{x_{i,j}\,}{x_{i,j+1}\,}{x_{i+1,j+1}}\quad\text{and}\quad\trig{x_{i,j}\,}{x_{i+1,j}\,}{x_{i+1,j+1}}\]
 are thin for each pair $i$,~$j$.
 
 Now we show that the thin property propagates to $\trig p x y$ by repeated application of the inheritance lemma (\ref{lem:inherit-angle}):
@@ -246,17 +246,17 @@ Now we show that the thin property propagates to $\trig p x y$ by repeated appli
 \item 
 For fixed $i$, 
 sequentially applying the lemma shows that the triangles 
-$\trig{p\,}{x^{i,1}\,}{x^{i-1,2}}$,
-$\trig{p\,}{x^{i,2}\,}{x^{i-1,2}}$,
-$\trig{p\,}{x^{i,2}\,}{x^{i-1,3}}$,
+$\trig{p\,}{x_{i,1}\,}{x_{i-1,2}}$,
+$\trig{p\,}{x_{i,2}\,}{x_{i-1,2}}$,
+$\trig{p\,}{x_{i,2}\,}{x_{i-1,3}}$,
 and so on are thin. 
 \end{itemize}
-In particular, for each $i$, the long triangle $\trig{p\,}{x^{i,N}\,}{x^{i-1,N}}$ is thin.
+In particular, for each $i$, the long triangle $\trig{p\,}{x_{i,N}\,}{x_{i-1,N}}$ is thin.
 \begin{itemize} 
 \item 
-By the same lemma the  triangles $\trig{p\,}{x^{0,N}\,}{x^{2,N}}$, $\trig{p\,}{x^{0,N}\,}{x^{3,N}}$, and so on, are thin.
+By the same lemma the  triangles $\trig{p\,}{x_{0,N}\,}{x_{2,N}}$, $\trig{p\,}{x_{0,N}\,}{x_{3,N}}$, and so on, are thin.
 \end{itemize}
-In particular, $\trig p x y=\trig{p\,}{x^{0,N}\,}{x^{N,N}}$ is thin.
+In particular, $\trig p x y=\trig{p\,}{x_{0,N}\,}{x_{N,N}}$ is thin.
 \qeds
 
 \parit{Proof of the globalization theorem; $\CAT(0)$ case.}

@@ -343,29 +343,29 @@ If $a<b<c$, then $V_b\supset V_a\cap V_c$.
 
 \end{clm}
 
-Given an array of values $s^1<\ldots<s^k$ in $[-\eps,\eps]$,
-set $V^i=V_{s^i}$ and
+Given an array of values $s_1<\ldots<s_k$ in $[-\eps,\eps]$,
+set $V_i=V_{s_i}$ and
 consider the unions 
-\[W^i=V^1\cup\ldots\cup V^i\]
+\[W_i=V_1\cup\ldots\cup V_i\]
 equipped with the induced length metric.
 
-Note that the array $(s^1,\ldots,s^k)$ can be chosen in such a way that
-$W^k$ is arbitrarily close to~$K'$ in the sense of Hausdorff.
+Note that the array $(s_1,\ldots,s_k)$ can be chosen in such a way that
+$W_k$ is arbitrarily close to~$K'$ in the sense of Hausdorff.
 
 Arguing as in \ref{CAT(0)?}$C$, we get that the following claim implies \ref{K'-is-CAT}.
 \begin{clm}{}
-All $W^i$ are $\CAT(0)$.
+All $W_i$ are $\CAT(0)$.
 \end{clm}
 
 This claim is proved by induction.
-Base: $W^1=V^1$ is $\CAT(0)$ as a convex subset in~$\EE^m$.
+Base: $W_1=V_1$ is $\CAT(0)$ as a convex subset in~$\EE^m$.
 
-\parit{Induction step:} Assume that $W^i$ is $\CAT(0)$.
+\parit{Induction step:} Assume that $W_i$ is $\CAT(0)$.
 According to \ref{eq:VcVnV}, 
-\[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
+\[V_{i+1}\cap W_i=V_{i+1}\cap V_i.\]
 Moreover, this is a convex set in $\EE^m$ 
-and therefore it is a convex set in $W^i$ and in $V^{i+1}$.
-By the Reshetnyak gluing theorem (\ref{thm:gluing}), $W^{i+1}$ is $\CAT(0)$.
+and therefore it is a convex set in $W_i$ and in $V_{i+1}$.
+By the Reshetnyak gluing theorem (\ref{thm:gluing}), $W_{i+1}$ is $\CAT(0)$.
 Hence the claim follows.
 \claimqeds
 
@@ -835,12 +835,12 @@ The ``only if'' part can be proved in the same way as in the smooth two-convexit
 Suppose $\Omega$ is two-convex. 
 We need to show that $\tilde K$ is $\CAT(0)$.
 
-Fix a quadruple of points $x^1,x^2,x^3,x^4\in\tilde \Omega$.
+Fix a quadruple of points $x_1,x_2,x_3,x_4\in\tilde \Omega$.
 Let us show that
 $\CAT(0)$ comparison holds for this quadruple.
 
 Fix $\eps>0$.
-Choose six polygonal lines in $\tilde \Omega$ connecting all pairs of points $x^1,x^2,x^3,x^4$, where the length of each polygonal line is at most $\eps$ bigger than
+Choose six polygonal lines in $\tilde \Omega$ connecting all pairs of points $x_1,x_2,x_3,x_4$, where the length of each polygonal line is at most $\eps$ bigger than
 the distance between its ends in the length metric on~$\tilde \Omega$.
 Denote by $X$ the union of these polygonal lines.
 Choose a polyhedral set $P$ in $\Omega$ such that its interior $\Int P$ contains the projections of all six polygonal lines and discs which contract all the loops created by them (it is sufficient to take 3 discs).
@@ -857,16 +857,16 @@ Denote by $\tilde K'$ the completion of~$\tilde\Omega'$.
 By Lemma~\ref{lem:poly-shefel}, $\tilde K'$ is $\CAT(0)$.
 
 By construction of $\Int P$, the embedding $\Int P\hookrightarrow \Omega'$
-admits a lift $\iota\:X\hookrightarrow \tilde K'$, and $\iota$ almost preserves the distances between the points $x^1,x^2,x^3,x^4$;
+admits a lift $\iota\:X\hookrightarrow \tilde K'$, and $\iota$ almost preserves the distances between the points $x_1,x_2,x_3,x_4$;
 namely 
 \begin{align*}
-\dist{\iota(x^i)}{\iota(x^j)}{\tilde K'}\lessgtr \dist{x^i}{x^j}{\Int P}\pm\eps.
+\dist{\iota(x_i)}{\iota(x_j)}{\tilde K'}\lessgtr \dist{x_i}{x_j}{\Int P}\pm\eps.
 \end{align*}
 
 Since $\eps>0$ is arbitrary and $\CAT(0)$ comparison holds in $\tilde K'$,
-we get that $\CAT(0)$ comparison holds for $x^1,x^2,x^3,x^4$ in $\tilde \Omega$.
+we get that $\CAT(0)$ comparison holds for $x_1,x_2,x_3,x_4$ in $\tilde \Omega$.
 
-The statement follows since the quadruple $x^1,x^2,x^3,x^4\in\tilde\Omega$ is arbitrary.
+The statement follows since the quadruple $x_1,x_2,x_3,x_4\in\tilde\Omega$ is arbitrary.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:CAT=>two-convex}\label{ex:two-convex-not-a-CAT}

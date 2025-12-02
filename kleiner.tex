@@ -9,19 +9,19 @@ We will apply them to dimension theory.
 
 Let us denote by $\triangle^k\subset \RR^{k+1}$\index{1@$\triangle^m$ (simplex)}
 the \index{standard simplex}\emph{standard $k$-simplex}; 
-that is, $\bm{\mu}=(\mu^0,\ldots,\mu^k)\in\triangle^k$ if $\mu^0+\ldots+\mu^k=1$ and $\mu^i\ge0$ for all $i$.
+that is, $\bm{\mu}=(\mu_0,\ldots,\mu_k)\in\triangle^k$ if $\mu_0+\ldots+\mu_k=1$ and $\mu_i\ge0$ for all $i$.
 
-Consider a point array $\bm{p}=(p^0,\ldots,p^k)$ in the Euclidean space $\EE^n$.
+Consider a point array $\bm{p}=(p_0,\ldots,p_k)$ in the Euclidean space $\EE^n$.
 Recall that
-\[z=\mu^0\cdot p^0+\ldots+\mu^k\cdot p^k\]
-is called the \index{barycenter}\emph{barycenter} of the point array $\bm{p}=(p^0,\ldots,p^k)$ with masses $\bm{\mu}\z=(\mu^0,\ldots, \mu^k)\in \triangle^k$.
+\[z=\mu_0\cdot p_0+\ldots+\mu_k\cdot p_k\]
+is called the \index{barycenter}\emph{barycenter} of the point array $\bm{p}=(p_0,\ldots,p_k)$ with masses $\bm{\mu}\z=(\mu_0,\ldots, \mu_k)\in \triangle^k$.
 Equivalently, 
-\[z\df \argmin (\mu^0\cdot f^0+\ldots+\mu^k\cdot f^k),\eqlbl{eq:f-spx}\]
-where $f^i=\tfrac12\cdot\distfun_{p^i}^2$ for each $i$, and $\argmin f$\index{3@$\argmin$ (point of minimum)} denotes a point of minimum of the function $f$.
+\[z\df \argmin (\mu_0\cdot f_0+\ldots+\mu_k\cdot f_k),\eqlbl{eq:f-spx}\]
+where $f_i=\tfrac12\cdot\distfun_{p_i}^2$ for each $i$, and $\argmin f$\index{3@$\argmin$ (point of minimum)} denotes a point of minimum of the function $f$.
 
 The map $\spx{}\:\triangle^k\mapsto \EE^n$ defined by $\spx{}\:\bm{\mu}\mapsto z$ is called the \index{barycentric simplex} \emph{barycentric simplex} of the array $\bm{p}$.
 If needed we may denote this map by $\spx{\bm{p}}$ or, more generally, $\spx{\bm{f}}$.
-The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f^0,\ldots,f^k)$.
+The latter means that we define the map via \ref{eq:f-spx} for an array of functions $\bm{f}=(f_0,\ldots,f_k)$.
 Formally speaking, the definition \ref{eq:f-spx} makes sense for any array of functions in a metric space;
 but in this case, the map might be undefined or non-uniquely defined.
 
@@ -33,12 +33,12 @@ functions of the type $f=\tfrac12\cdot\distfun_{p}^2$ are 1-convex; see \ref{ex:
 
 \begin{thm}{Theorem}\label{thm:barycenter}
 Let $\spc{X}$ be a complete geodesic space 
-and $\bm{f}\z=(f^0,\z\ldots,f^k)\:\spc{X}\to\RR^{k+1}$
+and $\bm{f}\z=(f_0,\z\ldots,f_k)\:\spc{X}\to\RR^{k+1}$
 be an array of non-negative 1-convex locally Lipschitz functions.
 Then the barycentric simplex 
 $\spx{\bm{f}}\:\triangle^k\to \spc{X}$ is a uniquely defined Lipschitz map.
 
-In particular, we have that for any point array $\bm{p}\z=(p^0,\z\ldots,p^k)$ in a complete geodesic $\CAT(0)$ space
+In particular, we have that for any point array $\bm{p}\z=(p_0,\z\ldots,p_k)$ in a complete geodesic $\CAT(0)$ space
 the barycentric simplex $\spx{\bm{p}}$ is a uniquely defined Lipschitz map.
 \end{thm}
 
@@ -82,9 +82,9 @@ Note that our sign convention for $\phi^-$ is not standard --- for $\phi(t)=t$ w
 $\phi^+(t)=1$ and $\phi^-(t)=-1$.
 
 \parit{Proof of \ref{thm:barycenter}.}
-Since each $f^i$ is $1$-convex, for any $\bm{\lambda}=(\lambda^0,\ldots,\lambda^k)\z\in\triangle^k$
+Since each $f_i$ is $1$-convex, for any $\bm{\lambda}=(\lambda_0,\ldots,\lambda_k)\z\in\triangle^k$
 the convex combination 
-\[\left(\sum_i \lambda_i\cdot f^i\right)\:\spc{X}\to\RR\]
+\[\left(\sum_i \lambda_i\cdot f_i\right)\:\spc{X}\to\RR\]
 is also $1$-convex.
 Therefore, according to \ref{lem:argmin(convex)}, the barycentric simplex 
 %$\spx{\bm{f}}(\bm{\lambda})$ is defined for any $\bm{\lambda}\in\triangle^k$.
@@ -94,10 +94,10 @@ For $\bm{\lambda},\bm{\mu}\in\triangle^k$,
 let 
 \begin{align*}
 f_{\bm{\lambda}}
-&=\sum_i \lambda_i\cdot f^i,
+&=\sum_i \lambda_i\cdot f_i,
 &
 f_{\bm{\mu}}
-&=\sum_i \mu^i\cdot f^i,
+&=\sum_i \mu_i\cdot f_i,
 \\
 p
 &=\spx{\bm{f}}(\bm{\lambda}),
@@ -118,12 +118,12 @@ Therefore $\psi^-(s)\ge 0$.
 From $1$-convexity of $f_{\bm{\mu}}$, we have
 \[\psi^+(0)+\psi^-(s)+s\le0.\]
 
-Let $\Lip$ be a Lipschitz constant for all $f^i$ in a neighborhood $\Omega\ni p$.
+Let $\Lip$ be a Lipschitz constant for all $f_i$ in a neighborhood $\Omega\ni p$.
 Then 
 \[\psi^+(0)
 \le 
 \phi^+(0)+\Lip\cdot\|\bm{\lambda}-\bm{\mu}\|_1,\]
-where $\|\bm{\lambda}-\bm{\mu}\|_1=\sum_{i=0}^k|\lambda^i-\mu^i|$.
+where $\|\bm{\lambda}-\bm{\mu}\|_1=\sum_{i=0}^k|\lambda_i-\mu_i|$.
 It follows that given $\bm{\lambda}\in\triangle^k$, there is a constant $\Lip$ such that
 \begin{align*}
 \dist{\spx{\bm{f}}(\bm{\lambda})}{\spx{\bm{f}}(\bm{\mu})}{}
@@ -158,28 +158,28 @@ Show that the action of $G$ has a fixed point.
 The following exercise gives useful versions of the Jensen inequality.
 
 \begin{thm}{Advanced exercise}\label{ex:bary-jensen}
-Let $z$ be the barycenter of points $p^0,\ldots,p^k$ equipped with masses $\mu^0,\ldots,\mu^k$; we assume that $\mu^i\ge0$ for all $i$,
-$\mu^0+\ldots+\mu^k=1$, and the points $p^0,\ldots,p^k$ are in a complete geodesic $\CAT(0)$ space $\spc{U}$.
+Let $z$ be the barycenter of points $p_0,\ldots,p_k$ equipped with masses $\mu_0,\ldots,\mu_k$; we assume that $\mu_i\ge0$ for all $i$,
+$\mu_0+\ldots+\mu_k=1$, and the points $p_0,\ldots,p_k$ are in a complete geodesic $\CAT(0)$ space $\spc{U}$.
 
 \begin{subthm}{ex:bary-jensen:moment}
 Show that
-\[\sum_i \mu^i\cdot \dist[2]{q}{p^i}{}\ge \dist[2]{z}{q}{} +\sum_i \mu^i\cdot \dist[2]{z}{p^i}{}\]
+\[\sum_i \mu_i\cdot \dist[2]{q}{p_i}{}\ge \dist[2]{z}{q}{} +\sum_i \mu_i\cdot \dist[2]{z}{p_i}{}\]
 for any $q\in \spc{U}$.
 \end{subthm}
 
 \begin{subthm}{ex:bary-jensen:moment+}
  Show that
 \[\sum_i
-\mu^i\cdot \dist[2]{z}{p^i}{}
+\mu_i\cdot \dist[2]{z}{p_i}{}
 \le
 \sum_{i<j}
-\mu^i\cdot\mu^j\cdot \dist[2]{p^i}{p^j}{}.\]
+\mu_i\cdot\mu_j\cdot \dist[2]{p_i}{p_j}{}.\]
 \end{subthm}
 
 
 \begin{subthm}{ex:bary-jensen:jensen}
 Try to show that
-\[h(z)\le \mu^0\cdot h(p^0)+\ldots+\mu^k\cdot h(p^k)\]
+\[h(z)\le \mu_0\cdot h(p_0)+\ldots+\mu_k\cdot h(p_k)\]
 for any convex function $h\:\spc{U}\to\RR$.
 \end{subthm}
 
@@ -209,7 +209,7 @@ that is,
 
 \begin{thm}{Proposition}\label{thm:up-convex}
 Let $\spc{X}$ be a complete geodesic space 
-and $\bm{f}\z=(f^0,\z\ldots,f^\kay)\:\spc{X}\to\RR^{\kay+1}$
+and $\bm{f}\z=(f_0,\z\ldots,f_\kay)\:\spc{X}\to\RR^{\kay+1}$
 be an array of non-negative 1-convex locally Lipschitz functions.
 Consider the set $W=\Up[\bm{f}(\spc{X})]\subset\RR^{k+1}$.
 Then 
@@ -244,7 +244,7 @@ Let $V=\bm{f}(\spc{X})\subset\RR^{k+1}$; so $W\z=\Up V$.
 Denote by $\bar V$ the closure of $V$.
 
 \parit{\ref{SHORT.thm:up-convex:convex}.}
-Convexity of all $f^i$ implies that
+Convexity of all $f_i$ implies that
 for any two points $p,q\in \spc{X}$ and $t\z\in[0,1]$ we have
 \[(1-t)\cdot\bm{f}(p)+t\cdot \bm{f}(q)
 \succcurlyeq
@@ -262,8 +262,8 @@ therefore $\bm{f}[\spx{\bm{f}}(\triangle^k)]$ lies in a convex hypersurface $\pa
 Choose $\bm{w}\in W$.
 Observe that $\bm{w}\succcurlyeq\bm{v}$ for some $\bm{v}\in \bar V\cap \partial W$.
 Note that $W$ is supported at $\bm{v}$ by a hyperplane 
-\[\Pi=\set{(x_0,\ldots,x_k)\in \RR^{k+1}}{\mu^0\cdot x_0+\ldots+\mu^k\cdot x_k=\const}\]
-for some $\bm{\mu}=(\mu^0,\ldots,\mu^k)\in\triangle^{\kay}$.
+\[\Pi=\set{(x_0,\ldots,x_k)\in \RR^{k+1}}{\mu_0\cdot x_0+\ldots+\mu_k\cdot x_k=\const}\]
+for some $\bm{\mu}=(\mu_0,\ldots,\mu_k)\in\triangle^{\kay}$.
 Let $p=\spx{\bm f}(\bm{\mu})$.
 By \ref{lem:argmin(convex)}, $\bm{f}(p)\z=\bm{v}$;
 in particular $\bm{v}\in V$.
@@ -278,12 +278,12 @@ Since $\triangle^k$ is compact, $W=\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])$ is cl
 
 \section{Nondegenerate simplex}
 
-Given an array $\bm{f}=(f^0,\ldots,f^k)$,
-we denote by $\bm{f}^{\without i}$ the subarray of $\bm{f}$ with $f^i$ removed;
+Given an array $\bm{f}=(f_0,\ldots,f_k)$,
+we denote by $\bm{f}^{\without i}$ the subarray of $\bm{f}$ with $f_i$ removed;
 that is, 
 \[\bm{f}^{\without i\,}
 \df
-(f^0,\ldots,f^{i-1},f^{i+1},\ldots,f^k).\]
+(f_0,\ldots,f_{i-1},f_{i+1},\ldots,f_k).\]
 Note that $\spx{\bm{f}^{\without i}}$ coincides with the restriction of $\spx{\bm{f}}$ to the corresponding facet of $\triangle^k$.
 
 If $\Im \spx{\bm{f}}$ is not covered by the union of $\Im \spx{\bm{f}^{\without i}}$ over all $i$, then we say that $\spx{\bm{f}}$ is nondegenerate.
@@ -293,24 +293,24 @@ In other words, $\spx{\bm{f}}$ is \index{nondegenerate simplex}\emph{nondegenera
 \begin{thm}{Exercise}\label{ex:barysimple}
 Let $\spc{U}$ be a complete geodesic $\CAT(0)$ space.
 
-Show that the image of the 1-dimensional barycentric simplex for a pair of points $p^0,p^1\in\spc{U}$ is the geodesic $[p^0\,p^1]$.
+Show that the image of the 1-dimensional barycentric simplex for a pair of points $p_0,p_1\in\spc{U}$ is the geodesic $[p_0\,p_1]$.
 
-Construct a $\CAT(0)$ space with a three-point array $(p^0,p^1,p^2)$ such that its barycentric simplex is nondegenerate and noninjective.
+Construct a $\CAT(0)$ space with a three-point array $(p_0,p_1,p_2)$ such that its barycentric simplex is nondegenerate and noninjective.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{lem:nondeg-test-with-balls}
-Let $\bm{p}\z=(p^0,\ldots, p^\kay)$ be a point array
+Let $\bm{p}\z=(p_0,\ldots, p_\kay)$ be a point array
 in a complete length $\CAT(0)$ space $\spc{U}$, 
-and $B^i=\cBall[p^i,r^i]$ for some array of positive reals $(r^0,r^1,\ldots,r^\kay)$.
+and $B_i=\cBall[p_i,r_i]$ for some array of positive reals $(r_0,r_1,\ldots,r_\kay)$.
 
 \begin{subthm}{lem:nondeg-test-with-ball:U}
-Suppose $\bigcap_i B^i\ne \emptyset$.
+Suppose $\bigcap_i B_i\ne \emptyset$.
 Show that 
-\[\Im\spx{\bm{p}}\subset \bigcup_i B^i.\]
+\[\Im\spx{\bm{p}}\subset \bigcup_i B_i.\]
 \end{subthm}
 
 \begin{subthm}{lem:nondeg-test-with-balls:nondeg}
-Suppose $\bigcap_i B^i= \emptyset$, but $\bigcap_{i\ne j} B^i\ne \emptyset$ for any $j$.
+Suppose $\bigcap_i B_i= \emptyset$, but $\bigcap_{i\ne j} B_i\ne \emptyset$ for any $j$.
 Show that 
 $\spx{\bm{p}}$ is nondegenerate.
 \end{subthm}
@@ -318,7 +318,7 @@ $\spx{\bm{p}}$ is nondegenerate.
 \begin{subthm}{lem:nondeg-test-with-balls:nondeg+}
 Suppose $\spx{\bm{p}}$ is nondegenerate.
 Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} holds for some
- array of positive reals $(r^0,\ldots,r^\kay)$.
+ array of positive reals $(r_0,\ldots,r_\kay)$.
 \end{subthm}
 
 \end{thm}
@@ -329,7 +329,7 @@ Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} holds f
 
 \begin{thm}{Theorem}\label{thm:bihoelder}
 Let $\spc{X}$ be a complete geodesic space 
-and $\bm{f}\z=(f^0,\z\ldots,f^k)\:\spc{X}\to\RR^{k+1}$
+and $\bm{f}\z=(f_0,\z\ldots,f_k)\:\spc{X}\to\RR^{k+1}$
 be an array of 1-convex locally Lipschitz functions.
 Then the set 
 \[Z=\spx{\bm{f}}(\triangle^k)\setminus \spx{\bm{f}}(\partial \triangle^k)\]
@@ -345,14 +345,14 @@ it is sufficient to construct its right inverse and show that it is $C^{\frac12}
 
 Given $\bm{v}=(v_0,\ldots,v_\kay)\in\Pi$, consider the function
 $h_{\bm{v}}\: \spc{X}\to \RR$ defined by
-\[h_{\bm{v}}(p)=\max_i\{f^i(p)-v_i\}.\]
+\[h_{\bm{v}}(p)=\max_i\{f_i(p)-v_i\}.\]
 Note that $h_{\bm{v}}$ is $1$-convex.
 Let 
 $$\map(\bm{v})\df\argmin h_{\bm{v}}.$$
 According to Lemma~\ref{lem:argmin(convex)}, $\map(\bm{v})$ is uniquely defined.
 
 If $\bm{v}=\proj \bm{f}(p)$, then 
-\[f^i\circ \map(\bm{v})\le f^i(p)\]
+\[f_i\circ \map(\bm{v})\le f_i(p)\]
 for any $i$.
 In particular, if $p\in \spx{\bm{f}}(\triangle^k)$, then $p=\map(\bm{v})$.
 That is, $\map$ is a right inverse of the restriction $\bm{f}|_{\spx{\bm{f}}(\triangle^k)}$.
@@ -464,11 +464,11 @@ For any proper geodesic $\CAT(0)$ space $\spc{U}$, the following statements are 
 \end{subthm}
 
 \begin{subthm}{thm:dim-infty-CBA:bary} 
-For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$
+For some $z\in \spc{U}$ there is an array of $m+1$ balls $B_i\z=\oBall(a_i,r_i)$
 such that 
-\[\bigcap_i B^i=\emptyset,
+\[\bigcap_i B_i=\emptyset,
 \quad\text{but}\quad
-\bigcap_{i\ne j} B^i\ne \emptyset
+\bigcap_{i\ne j} B_i\ne \emptyset
 \quad \text{for each $j$}.\]
 
 \end{subthm}
@@ -596,9 +596,9 @@ The following exercise is a generalization of Helly's theorem; for closely relat
 
 
 \begin{thm}{Exercise}\label{ex:helly}
-Let $K^1,\ldots,K^n$ be closed convex subsets in a proper length $\CAT(0)$ space $\spc{U}$.
-Suppose that $\TopDim \spc{U}\le m$ for some $m<n$ and any $m+1$ subsets from $\{K^1,\ldots, K^n\}$ have a common point.
-Show that all subsets $K^1,\ldots,K^n$ have a common point.
+Let $K_1,\ldots,K_n$ be closed convex subsets in a proper length $\CAT(0)$ space $\spc{U}$.
+Suppose that $\TopDim \spc{U}\le m$ for some $m<n$ and any $m+1$ subsets from $\{K_1,\ldots, K_n\}$ have a common point.
+Show that all subsets $K_1,\ldots,K_n$ have a common point.
 \end{thm}
 
 \section{Hausdorff dimension}

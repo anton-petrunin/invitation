@@ -152,11 +152,11 @@ it can be approximated by polygonal lines that are concave with respect to $p$,
 with their lengths converging to $\length \beta$. 
 Passing to a partial limit we will obtain the needed map $G$.  
 
-Suppose $\beta=x^0x^1\ldots x^n$ is a polygonal line with $x^0=x$ and $x^n\z=y$.
-Consider a sequence of polygonal lines $\beta_i=x^0x^1\ldots x^{i-1}y_i$ such that $\dist{p}{y_i}{}=\dist{p}{y}{}$ and
+Suppose $\beta=x_0x_1\ldots x_n$ is a polygonal line with $x_0=x$ and $x_n\z=y$.
+Consider a sequence of polygonal lines $\beta_i=x_0x_1\ldots x_{i-1}y_i$ such that $\dist{p}{y_i}{}=\dist{p}{y}{}$ and
 $\beta_i$ has the same length as $\beta$;
 that is, 
-\[\dist{x^{i-1}}{y_i}{}=\dist{x^{i-1}}{x^{i}}{}+\dist{x^{i}}{x^{i+1}}{}+\ldots+\dist{x^{n-1}}{x^n}{}.\]
+\[\dist{x_{i-1}}{y_i}{}=\dist{x_{i-1}}{x_{i}}{}+\dist{x_{i}}{x_{i+1}}{}+\ldots+\dist{x_{n-1}}{x_n}{}.\]
 
 \begin{figure}[!ht]
 \vskip-0mm
@@ -168,7 +168,7 @@ Clearly $\beta_n=\beta$.
 Sequentially applying Alexandrov's lemma (\ref{lem:alex}), we get that each of the polygonal lines $\beta_{n-1}, \beta_{n-2},\ldots,\beta_1$ is concave with respect to $p$.
 
 Let $D_i$ be the subgraph of $\beta_i$ with respect to $p$.
-Applying the argument in the inheritance lemma (\ref{lem:inherit-angle}) gives a short map $G_i\:D_{i}\z\to D_{i+1}$ that maps $y_{i}\mapsto y_{i+1}$ and does not move $p$ and $x$ (in fact,  $G_i$ is the identity everywhere except on $\Conv\trig{p}{x^{i-1}}{y_i}$).
+Applying the argument in the inheritance lemma (\ref{lem:inherit-angle}) gives a short map $G_i\:D_{i}\z\to D_{i+1}$ that maps $y_{i}\mapsto y_{i+1}$ and does not move $p$ and $x$ (in fact,  $G_i$ is the identity everywhere except on $\Conv\trig{p}{x_{i-1}}{y_i}$).
 Thus the composition 
 \[G_{n-1}\circ\ldots\circ G_1\: D_1\to D_n\]
 is short.
@@ -227,20 +227,20 @@ In particular, $D$ majorizes triangle $\trig p x y$.
 \parit{Proof.}
 Let $\gamma\:[0,T]\to \spc{U}$ be a unit-speed parametrization of $[xy]$; so, $T=\dist{x}{y}{}$.
 Choose a partition 
-\[0=t^0<t^1<\ldots<t^n=T,\]
-and set $x^i=\gamma(t^i)$. 
-Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}\z=
-\modtrig(p x^{i-1} {x^i})$, with $\tilde x^0=\tilde x$ and the direction of $[\tilde p\tilde x^i]$ turning counterclockwise as $i$ grows.  
-Let $D_n$ be the subgraph with respect to $\tilde p$ of the polygonal line $\tilde x^0\ldots \tilde x^n$.
+\[0=t_0<t_1<\ldots<t_n=T,\]
+and set $x_i=\gamma(t_i)$.
+Construct a chain of model triangles  $\trig{\tilde p}{\tilde x_{i-1}}{\tilde x_i}\z=
+\modtrig(p x_{i-1} {x_i})$, with $\tilde x_0=\tilde x$ and the direction of $[\tilde p\tilde x_i]$ turning counterclockwise as $i$ grows.
+Let $D_n$ be the subgraph with respect to $\tilde p$ of the polygonal line $\tilde x_0\ldots \tilde x_n$.
 
-Now we construct a map $H_n \: D_n\to\spc{U}$  that increases distances by at most $2\cdot\delta_n$, where $\delta_n=\max\{\,\dist{\tilde x^i}{\tilde x^{i-1}}{}\,\}$.
+Now we construct a map $H_n \: D_n\to\spc{U}$  that increases distances by at most $2\cdot\delta_n$, where $\delta_n=\max\{\,\dist{\tilde x_i}{\tilde x_{i-1}}{}\,\}$.
 Suppose $w\in D_n$.
-Then $w$ lies on or inside some triangle $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$.  
-Define $H_n(w)$ by first mapping $w$ to a nearest point on $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$ (choosing one if there are several), followed by the natural map to the triangle  $\trig {p}{x^{i-1}}{ x^i}$. 
+Then $w$ lies on or inside some triangle $\trig{\tilde p}{\tilde x_{i-1}}{\tilde x_i}$.
+Define $H_n(w)$ by first mapping $w$ to a nearest point on $\trig{\tilde p}{\tilde x_{i-1}}{\tilde x_i}$ (choosing one if there are several), followed by the natural map to the triangle  $\trig {p}{x_{i-1}}{ x_i}$.
 
-Since triangles in $\spc{U}$ are thin, the restriction of $H_n$ to each triangle $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$ is short.   
+Since triangles in $\spc{U}$ are thin, the restriction of $H_n$ to each triangle $\trig{\tilde p}{\tilde x_{i-1}}{\tilde x_i}$ is short.
 Then the triangle inequality implies that the restriction of $H_n$ to 
-\[U_n=\bigcup_{1\le i\le n}\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}\]
+\[U_n=\bigcup_{1\le i\le n}\trig{\tilde p}{\tilde x_{i-1}}{\tilde x_i}\]
 is short with respect to the length metric on $D_n$. 
 Since nearest-point projection from $D_n$ to $U_n$ increases the $D_n$-distance between two points by at most $2\cdot\delta_n$, the map $H_n$ also increases the $D_n$-distance by at most $2\cdot\delta_n$. 
 
@@ -266,10 +266,10 @@ Clearly $H\circ G$ is a majorizing map for $\trig p x y$.
 \section{Polygons}\label{sec:polygons}
 
 A closed piecewise geodesic curve in a metric space will be called a \index{polygon}\emph{polygon}.
-Further, $[x^1\ldots x^n ]$ (for $n\ge 3$) will denote a polygon
+Further, $[x_1\ldots x_n ]$ (for $n\ge 3$) will denote a polygon
 with edges $[x_1x_2],\ldots,[x_{n-1}x_n]$, and $[x_n x_1]$.
 For a subset $R$ of the ambient metric space,
-we denote by $[x^1\ldots x^n ]_R$ a polygon in the length metric of $R$.
+we denote by $[x_1\ldots x_n ]_R$ a polygon in the length metric of $R$.
 
 \begin{wrapfigure}{o}{40 mm}
 \vskip-4mm
@@ -279,23 +279,23 @@ we denote by $[x^1\ldots x^n ]_R$ a polygon in the length metric of $R$.
 \end{wrapfigure}
 
 \parit{Proof of \ref{thm:major} for polygons.}
-We claim that any closed $n$-gon $[x^1x^2 \ldots x^n]$ in a $\CAT(0)$ space $\spc{U}$ is majorized by a convex polygonal region
-\[R_n=\Conv[\tilde x^1\tilde x^2\ldots\tilde x^n],\]
-under a map $F_n$ that sends $\tilde x^i\mapsto x^i$ for each $i$.
+We claim that any closed $n$-gon $[x_1x_2 \ldots x_n]$ in a $\CAT(0)$ space $\spc{U}$ is majorized by a convex polygonal region
+\[R_n=\Conv[\tilde x_1\tilde x_2\ldots\tilde x_n],\]
+under a map $F_n$ that sends $\tilde x_i\mapsto x_i$ for each $i$.
 
 The base case $n=3$ is proved above.
 Assume the statement is true for $(n-1)$-gons, $n\ge 4$.  
-Then  $[x^1 x^2 \ldots x^{n-1}]$  is majorized by a convex polygonal region
-\[R_{n-1}=\Conv[\tilde x^1 \tilde x^2,\ldots, \tilde x^{n-1}],\]
-in $\EE^2$ under a map $F_{n-1}$ satisfying $F_{n-1}(\tilde x^i)=x^i$ for all $i$. 
-Take $\dot x^n\in\EE^2$ such that $\trig{\tilde x^1}{\tilde x^{n-1}}{\dot x^n}=\modtrig(x^1 x^{n-1} x^n)$ 
-and this triangle lies on the other side of $[\tilde x^1\tilde x^{n-1}]$ from $R_{n-1}$.  
-Let $\dot R\z=\Conv\trig{\tilde x^1}{\tilde x^{n-1}}{\dot x^n}$, 
-and $\dot F\:\dot R\to \spc{U}$ be a majorizing map for $\trig { x^1}{x^{n-1}}{ x^n}$ as provided above.
+Then  $[x_1 x_2 \ldots x_{n-1}]$  is majorized by a convex polygonal region
+\[R_{n-1}=\Conv[\tilde x_1 \tilde x_2,\ldots, \tilde x_{n-1}],\]
+in $\EE^2$ under a map $F_{n-1}$ satisfying $F_{n-1}(\tilde x_i)=x_i$ for all $i$.
+Take $\dot x_n\in\EE^2$ such that $\trig{\tilde x_1}{\tilde x_{n-1}}{\dot x_n}=\modtrig(x_1 x_{n-1} x_n)$
+and this triangle lies on the other side of $[\tilde x_1\tilde x_{n-1}]$ from $R_{n-1}$.
+Let $\dot R\z=\Conv\trig{\tilde x_1}{\tilde x_{n-1}}{\dot x_n}$,
+and $\dot F\:\dot R\to \spc{U}$ be a majorizing map for $\trig { x_1}{x_{n-1}}{ x_n}$ as provided above.
 
 Set 
 $R= R_{n-1}\cup \dot R$, where $R$ carries its length metric.
-Since $F_{n-1}$ and $\dot F$ agree on $[\tilde x^1 \tilde x^{n-1}]$, we may define $F\:R\to\spc{U}$ by
+Since $F_{n-1}$ and $\dot F$ agree on $[\tilde x_1 \tilde x_{n-1}]$, we may define $F\:R\to\spc{U}$ by
 \[
 F(x)=
 \begin{cases}
@@ -303,17 +303,17 @@ F_{n-1}(x),\quad & x\in R_{n-1},\\
 \dot F(x),\quad & x\in \dot R.\\
 \end{cases}
 \]
-Then $F$ is length-nonincreasing and is a majorizing map for $[x^1 x^2 \z\ldots x^n ]$ (as in Definition~\ref{def:majorize}).
+Then $F$ is length-nonincreasing and is a majorizing map for $[x_1 x_2 \z\ldots x_n ]$ (as in Definition~\ref{def:majorize}).
 
 If $R$ is a convex subset of $\EE^2$, we are done. 
 
-If $R$ is not convex, the total internal angle of $R$ at $\tilde x^1$ or $ \tilde x^{n-1} $ or both is larger than $\pi$.
-By relabeling we may suppose this holds for~$\tilde x^{n-1}$.  
+If $R$ is not convex, the total internal angle of $R$ at $\tilde x_1$ or $ \tilde x_{n-1} $ or both is larger than $\pi$.
+By relabeling we may suppose this holds for~$\tilde x_{n-1}$.
 
-The region $R$ is obtained by gluing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
+The region $R$ is obtained by gluing $R_{n-1}$ to $\dot R$ by $[x_1x_{n-1}]$.
 Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ carrying its length metric is a $\CAT(0)$ space.
-Moreover $[\tilde x^{n-2}\tilde x^{n-1}]\cup[\tilde x^{n-1} \dot x^n]$ is a geodesic of $R$.
-Thus $[\tilde x^1 \tilde x^2 \ldots \tilde x^{n-2} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \EE^2$ to~$R$, followed by $F$,  is the desired majorizing map.
+Moreover $[\tilde x_{n-2}\tilde x_{n-1}]\cup[\tilde x_{n-1} \dot x_n]$ is a geodesic of $R$.
+Thus $[\tilde x_1 \tilde x_2 \ldots \tilde x_{n-2} \dot x_n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \EE^2$ to~$R$, followed by $F$,  is the desired majorizing map.
 \qeds
 
 For a polygon $[p_1\ldots p_n]$, the values $\theta_i=\pi-\mangle\hinge{p_i}{p_{i-1}}{p_{i+1}}$ for all $i\pmod n$ are called \emph{external angles} of the polygon.
@@ -333,20 +333,20 @@ Give an example of such a polygon $\beta$ with the sum of external angles exactl
 \end{thm}
   
 \begin{thm}{Arm lemma}\label{lem:arm+}
-Let $P=[x^1\ldots x^{n}]$ be a polygon in a geodesic $\CAT(0)$ space $\spc{U}$.
-Suppose $\tilde P=[\tilde x^1\ldots \tilde x^{n}]$ is a convex  polygon in $\EE^2$
+Let $P=[x_1\ldots x_n]$ be a polygon in a geodesic $\CAT(0)$ space $\spc{U}$.
+Suppose $\tilde P=[\tilde x_1\ldots \tilde x_{n}]$ is a convex  polygon in $\EE^2$
 such that 
 \[
-\dist{\tilde x^i}{\tilde x^{i-1}}{\EE^2}
+\dist{\tilde x_i}{\tilde x_{i-1}}{\EE^2}
 =
-\dist{x^i}{x^{i-1}}{\spc{U}}
+\dist{x_i}{x_{i-1}}{\spc{U}}
 \quad \text{and}\quad 
-\mangle\hinge{x^i}{x^{i-1}}{x^{i+1}}\ge\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde x^{i+1}}
+\mangle\hinge{x_i}{x_{i-1}}{x_{i+1}}\ge\mangle\hinge{\tilde x_i}{\tilde x_{i-1}}{\tilde x_{i+1}}
 \eqlbl{eq:arm}
 \]
 for all $i$.
 Then 
-$\dist{x^1}{x^{n}}{\spc{U}}\ge \dist{\tilde x^1}{\tilde x^{n}}{\EE^2}$.
+$\dist{x_1}{x_{n}}{\spc{U}}\ge \dist{\tilde x_1}{\tilde x_n}{\EE^2}$.
 \end{thm}
 
 If $\spc{U}$ is a Euclidean space, then the statement follows from the classical arm lemma;
