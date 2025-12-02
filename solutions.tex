@@ -1136,13 +1136,15 @@ It remains to apply this observation with an open-closed argument.
 \parit{\ref{SHORT.ex:convex+saddle+broken=>PL:b}.}
 Suppose $\bar S$ is not piecewise linear.
 Show that there is a line segment $[xy]$ in $\bar S$ with the ends on $\partial\bar S$ and a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p\in \left]xy\right[$ and has no common points with $S$ except~$p$.
-We can assume that points $x$, $y$, $q$, and therefore $p$ lie in a horizontal plane $\Pi$, and $\Pi$ supports $S$  at $p$ from below.
+We can assume that points $x$, $y$, $q$, and therefore $p$ lie in a horizontal plane $\Pi$, and $\Pi$ supports $S$ at $p$ from above.
 
 Let us assume that $\partial\bar S$ is a union of disjoint polygonal lines;
 soon you will see that it is not a strong assumption.
 Observe that line segments of $\partial\bar S$ that start at $x$ or $y$ cannot point up.
-Otherwise, we can arrive at a contradiction by applying \ref{SHORT.ex:convex+saddle+broken=>PL:a} to a point $s\in S$ near an end of $[xy]$ (in the corner between the edge and $[xy]$).
-%I don't understand, how do you use a) to get a contradiction?
+Otherwise, choose such line segment, say $[xw]$, and a point $s\in S$ near $x$ that between $[xy]$ and $[xw]$.
+The line segment (or polygon) provided by \ref{SHORT.ex:convex+saddle+broken=>PL:a} for $s$ cannot cross $[xy]$.
+Therefore it must have point on $[xw]$, but then local concavity of $S$ implies that $\Pi$
+does not support $S$ at $p$ from above --- a contradiction.
 
 Further, show that we can choose $z\in \partial\bar S$ such that the solid triangle $xyz$ intersects $[pq]$ along a line segment, and $\partial\bar S$ contains $[xz]$ or $[yz]$.
 If this is not the case, then one could arrive at a contradiction essentially the same way as in \ref{clm:complement-of-F'-convex}.
