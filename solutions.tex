@@ -1107,12 +1107,12 @@ The plane $W$ tangent to the dome at $p$ has the required property --- the point
 Further, by construction a small circle around $p$ in $W$ is contractible in $\Omega$.
 
 \parbf{\ref{ex:convex+saddle+broken=>PL}.}
-The proof is simple and visual, but it is hard to write it formally in a non-tedious way;
-read the following,
-wait until you feel the geometric picture, and read again.
+The proof is simple and visual, but it is hard to write it down formally in a non-tedious way.
+Read the following, wait until you feel the geometric picture, and then read it again.
+If it still does not work, try reading the original \cite[§ 2]{shefel-1964}.
 
 \parit{\ref{SHORT.ex:convex+saddle+broken=>PL:a}.}
-Note that $L$ is a collection of closed polygonal lines.
+Note that $\partial\bar S$ is a finite union of closed polygonal lines.
 
 Choose a point $p\in S$.
 Since $S$ is locally concave, there is a plane $\Pi$ that locally supports $S$ at $p$.
@@ -1121,7 +1121,7 @@ Note that (1)
 $V=\Pi\cap B\cap S$ is convex, (2)
 $\Pi$ locally supports $S$ at any point of $V$,
 and (3)
-\[W=\Omega'\cap B\cap \Pi\z=(B\cap\Pi)\setminus V\]
+\[W=\Omega'\cap B\cap \Pi=(B\cap\Pi)\setminus V\]
 has convex connected components.
 (In particular, $p$ is not an isolated point in $S\cap \Pi$.)
 
@@ -1135,15 +1135,24 @@ It remains to apply this observation with an open-closed argument.
 
 \parit{\ref{SHORT.ex:convex+saddle+broken=>PL:b}.}
 Suppose $\bar S$ is not piecewise linear.
-Show that there is a line segment $[xy]$ in $\bar S$ with the ends on $L'$ and a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p\in \left]xy\right[$ and has no common points with $S$ except~$p$.
+Show that there is a line segment $[xy]$ in $\bar S$ with the ends on $\partial\bar S$ and a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p\in \left]xy\right[$ and has no common points with $S$ except~$p$.
 We can assume that points $x$, $y$, $q$, and therefore $p$ lie in a horizontal plane $\Pi$, and $\Pi$ supports $S$  at $p$ from below.
 
-Observe that line segments of $L$ that start at $x$ or $y$ cannot point up.
-Further, show that we can choose $z\in L$ such that the solid triangle $xyz$ intersects $[pq]$ along a line segment, and $L$ contains $[xz]$ or $[yz]$.
+Let us assume that $\partial\bar S$ is a union of disjoint polygonal lines;
+soon you will see that it is not a strong assumption.
+Observe that line segments of $\partial\bar S$ that start at $x$ or $y$ cannot point up.
+Otherwise, we can arrive at a contradiction by applying \ref{SHORT.ex:convex+saddle+broken=>PL:a} to a point $s\in S$ near an end of $[xy]$ (in the corner between the edge and $[xy]$).
+
+Further, show that we can choose $z\in \partial\bar S$ such that the solid triangle $xyz$ intersects $[pq]$ along a line segment, and $\partial\bar S$ contains $[xz]$ or $[yz]$.
 If this is not the case, then one could arrive at a contradiction essentially the same way as in \ref{clm:complement-of-F'-convex}.
 
 It remains to observe that the solid triangle $xyz$ lies in $\bar S$.
 In particular, all points on $[pq]$ sufficiently close to $p$ lie in $S$ --- a contradiction.
+
+Observe that the assumption on $\partial\bar S$ was used only in the neighborhood of $x$ and $y$ and the whole argument works in a small neighborhood $U$ of $[xy]$.
+If the assumption does not hold, then it means that several sectors of $U\cap \bar S$ meet at $x$ or $y$.
+In this case remove the sectors that do not contain a piece of $[xy]$ and apply the argument to the remaining part of $U\cap \bar S$.
+
 
 \parbf{\ref{ex:CAT=>two-convex}.}
 Suppose $K$ is not two-convex;
