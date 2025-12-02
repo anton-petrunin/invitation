@@ -41,7 +41,7 @@ we write
 
 \parbf{Geodesic.}
 Let $\spc{X}$ be a metric space 
-and $\II$\index{$\II$} be a real interval. 
+and $\II$\index{3@$\II$ (real interval)} be a real interval.
 A~globally isometric map $\gamma\:\II\z\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
 \footnote{Various authors call it differently: {}\emph{shortest path}, {}\emph{minimizing geodesic}.}; 
 in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if
@@ -50,7 +50,7 @@ for any pair $s,t\in \II$.
 
 We say that  $\gamma\:\II\to \spc{X}$ is a geodesic from point $p$ to point $q$ if 
 $\II=[a,b]$ and $p=\gamma(a)$, $q=\gamma(b)$.
-In this case the image of $\gamma$ is denoted by $[p q]$\index{$[p q]=[p q]_{\spc{X}}$ (geodesic)} and with an abuse of notation  we also call it a \index{geodesic}\emph{geodesic}.
+In this case the image of $\gamma$ is denoted by $[p q]$\index{2@$[x y]=[x y]_{\spc{X}}$ (geodesic)} and with an abuse of notation  we also call it a \index{geodesic}\emph{geodesic}.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
@@ -71,7 +71,7 @@ However,  once we write $[p q]$ we mean that we have  made a choice of  geodesic
 A metric space is called \index{geodesic}\emph{geodesic} if any pair of its points can be joined by a geodesic. 
 
 
-A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parametrization by $[0,1]$.
+A \index{geodesic!path}\emph{geodesic path} is a geodesic with constant-speed parametrization by $[0,1]$.
 %Given a geodesic $[p q]$, we denote by $\geodpath_{[pq]}$ the corresponding geodesic path; that is, $$\geodpath_{[pq]}(t)\z\df\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
 A curve $\gamma\:\II\to \spc{X}$  is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U$ of $t$ in $\II$ such that the restriction $\gamma|_U$ is a  geodesic.
@@ -80,7 +80,7 @@ A constant-speed parametrization of a local geodesic by the unit interval $[0,1]
 
 \parbf{Triangle.}
 For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
-$\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{2@$\trig xyz=\trig xyz_{\spc{X}}$ (triangle)}.
 
 Again, given a triple $p,q,r\in \spc{X}$ there may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
@@ -95,7 +95,7 @@ will be called the {}\emph{perimeter of the triangle} $\trig p q r$.
 \parbf{Hinge.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
 A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
-$\hinge p x y$\index{$\hinge{{*}}{{*}}{{*}}$}.
+$\hinge p x y=\hinge p x y_{\spc{X}}$\index{2@$\hinge yxz=\hinge yxz_{\spc{X}}$ (hinge)}.
 
 
 \parbf{Convex set.}\label{def:convex-set}
@@ -144,7 +144,7 @@ this metric will be called the \index{induced length metric}\emph{induced length
 
 If for any $\eps>0$ and any pair of points $x$ and $y$ in a metric space $\spc{X}$, there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
-then $\spc{X}$ is called a \index{length space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length metric}\emph{length metric}.\label{page:length metric}
+then $\spc{X}$ is called a \index{length!space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length!metric}\emph{length metric}.\label{page:length metric}
 
 If $f\:\tilde{\spc{X}}\to\spc{X}$ is a covering,
 then a length metric on $\spc{X}$ can be lifted to $\tilde{\spc{X}}$
@@ -175,7 +175,7 @@ Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
-A point $z\in \spc{X}$ is called an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} between $x$ and $y$
+A point $z\in \spc{X}$ is called an {}\emph{$\eps$-midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
@@ -370,7 +370,7 @@ $p,q,r\in \spc{X}$.
 Let us define the \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
-\index{$\modtrig$!$\modtrig({*}{*}{*})_{\EE^2}$}) to be a triangle in the plane $\EE^2$ with the same side lengths; that is,
+\index{1@$\modtrig(xyz)$ (model triangle)}) to be a triangle in the plane $\EE^2$ with the same side lengths; that is,
 \[\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{},
 \quad\dist{\tilde q}{\tilde r}{}=\dist{q}{r}{},
 \quad\dist{\tilde r}{\tilde p}{}=\dist{r}{p}{}.\]
@@ -388,7 +388,7 @@ the angle measure of
 $\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$ 
 will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
 $\angk p q r_{\EE^2}$%
-\index{$\angk{{*}}{{*}}{{*}}$}.
+\index{1@$\angk yxz$ (model angle)}.
 In the same way we define $\angk p q r_{\HH^2}$ and $\angk p q r_{\mathbb{S}^2}$;
 in the latter case  we assume in addition that the model triangle $\modtrig(p q r)_{\mathbb{S}^2}$ is defined.
 
@@ -402,7 +402,6 @@ We may use the notation $\angk p q r$ if it is evident which of the model spaces
 
 \begin{thm}{Alexandrov's lemma}
 \index{Alexandrov's lemma}
-\index{lemma!Alexandrov's lemma}
 \label{lem:alex}  
 Let $p,x,y,z$ be distinct points in a metric space such that $z\in \left]x y\right[$.
 Then 
@@ -484,7 +483,7 @@ as required.
 \section{Angles and the first variation}\label{sec:angles}
 
 Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} as 
-the limit\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
+the limit\index{1@$\mangle\hinge y x z$ (angle)}
 \[\mangle\hinge p x y
 \df
 \lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y}_{\EE^2},\eqlbl{eq:def-angle}\]
@@ -662,7 +661,7 @@ forms a \index{semimetric space}\emph{semimetric space};
 that is, $\mangle$ satisfies all the conditions of a metric on $\mathfrak{S}_p$, except that  the angle between distinct geodesics might vanish.
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
-Elements of $\Sigma'_p$ are called \index{geodesic directions}\emph{geodesic directions} at~$p$.
+Elements of $\Sigma'_p$ are called \index{geodesic!directions}\emph{geodesic directions} at~$p$.
 Each geodesic direction is formed by an equivalence class of geodesics in $\mathfrak{S}_p$
 for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
@@ -696,7 +695,7 @@ Elements of $\T_p$ will be called
 \index{tangent vector}\emph{tangent vectors} 
 at $p$, regardless of the fact that $\T_p$ is only a metric cone and need not be a vector space.
 Elements of $\T'_p$ will be called 
-\index{geodesic tangent vector}\emph{geodesic tangent vectors} 
+\index{geodesic!tangent vector}\emph{geodesic tangent vectors}
 at~$p$.
 
 \section{Hausdorff convergence}
@@ -714,7 +713,7 @@ briefly $A_n\to A_\infty$, if
 $$\distfun_{A_n}(x)\to\distfun_{A_\infty}(x)\ \ \text{as}\ \ n\to\infty$$
 for every $x\in \spc{X}$.
 
-In this case, the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{converge in the sense of Hausdorff}\emph{converge in the sense of Hausdorff}.
+In this case, the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to \index{Hausdorff convergence}\emph{converge in the sense of Hausdorff}.
 \end{thm}
 
 \parbf{Examples.}
@@ -807,7 +806,7 @@ Then we say $\rho$ defines a
 \index{convergence in the sense of Gromov--Hausdorff}\emph{convergence}%
 \footnote{Formally speaking, convergence in the topology induced by $\rho$ on~$\bm{X}$.} 
 in the sense of \emph{Gromov--Hausdorff}%
-\index{convergence in the sense of Gromov--Hausdorff},
+\index{Gromov--Hausdorff convergence},
 and write $\spc{X}_n\to \spc{X}_\infty$ or $\spc{X}_n\xrightarrow{\rho} \spc{X}_\infty$.
 The space $\spc{X}_\infty$ is called the \emph{limit space} of the sequence $(\spc{X}_n)$ \emph{along} $\rho$.
 \end{thm}
