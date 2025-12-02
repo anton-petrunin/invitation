@@ -1127,34 +1127,41 @@ has convex connected components.
 
 It remains to apply this observation with an open-closed argument.
 
-\begin{wrapfigure}{r}{41mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-21}
-\end{wrapfigure}
-
 \parit{\ref{SHORT.ex:convex+saddle+broken=>PL:b}.}
-Suppose $\bar S$ is not piecewise linear.
-Show that there is a line segment $[xy]$ in $\bar S$ with the ends on $\partial\bar S$ and a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p\in \left]xy\right[$ and has no common points with $S$ except~$p$.
-We can assume that points $x$, $y$, $q$, and therefore $p$ lie in a horizontal plane $\Pi$, and $\Pi$ supports $S$ at $p$ from above.
+Choose a point $p\in S$.
+Given a local supporting plane $\Pi$ at $p$, denote by $A_\Pi$ the set provided by part \ref{SHORT.ex:convex+saddle+broken=>PL:a};
+so, $A_\Pi$ is a line segment or a polygon lying in $\bar S$.
 
-Let us assume that $\partial\bar S$ is a union of disjoint polygonal lines;
-soon you will see that it is not a strong assumption.
-Observe that line segments of $\partial\bar S$ that start at $x$ or $y$ cannot point up.
-Otherwise, choose such line segment, say $[xw]$, and a point $s\in S$ near $x$ that between $[xy]$ and $[xw]$.
-The line segment (or polygon) provided by \ref{SHORT.ex:convex+saddle+broken=>PL:a} for $s$ cannot cross $[xy]$.
-Therefore it must have point on $[xw]$, but then local concavity of $S$ implies that $\Pi$
-does not support $S$ at $p$ from above --- a contradiction.
+Assume that $p$ is not an interior point of $A_\Pi$ for some supporting plane $\Pi$ at $p$.
+Argue as in \ref{clm:complement-of-F'-convex} (page \pageref{clm:complement-of-F'-convex}) to show that in this case there are two local supporting planes $\Pi_1$ and $\Pi_2$ at $p$ such that a neighborhood of $p$ is covered by $A_{\Pi_1}$ and $A_{\Pi_2}$.
 
-Further, show that we can choose $z\in \partial\bar S$ such that the solid triangle $xyz$ intersects $[pq]$ along a line segment, and $\partial\bar S$ contains $[xz]$ or $[yz]$.
-If this is not the case, then one could arrive at a contradiction essentially the same way as in \ref{clm:complement-of-F'-convex}.
+Observe that this statement leads to a solution.
 
-It remains to observe that the solid triangle $xyz$ lies in $\bar S$.
-In particular, all points on $[pq]$ sufficiently close to $p$ lie in $S$ --- a contradiction.
-
-Observe that the assumption on $\partial\bar S$ was used only in the neighborhood of $x$ and $y$ and the whole argument works in a small neighborhood $U$ of $[xy]$.
-If the assumption does not hold, then it means that several sectors of $U\cap \bar S$ meet at $x$ or $y$.
-In this case remove the sectors that do not contain a piece of $[xy]$ and apply the argument to the remaining part of $U\cap \bar S$.
+%\begin{wrapfigure}{r}{41mm}
+%\vskip-3mm
+%\centering
+%\includegraphics{mppics/pic-21}
+%\end{wrapfigure}
+%
+%Suppose $\bar S$ is not piecewise linear.
+%Show that there is a line segment $[xy]$ in $\bar S$ with the ends on $\partial\bar S$ and a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p\in \left]xy\right[$ and has no common points with $S$ except~$p$.
+%We can assume that points $x$, $y$, $q$, and therefore $p$ lie in a horizontal plane $\Pi$, and $\Pi$ supports $S$ at $p$ from above.
+%
+%Let us assume that $\partial\bar S$ is a union of disjoint polygonal lines; soon you will see that it is not a strong assumption.
+%Observe that line segments of $\partial\bar S$ that start at $x$ or $y$ cannot point up.
+%Otherwise, choose such line segment, say $[xw]$, and a point $s\in S$ near $x$ that between $[xy]$ and $[xw]$.
+%The line segment (or polygon) provided by \ref{SHORT.ex:convex+saddle+broken=>PL:a} for $s$ cannot cross $[xy]$.
+%Therefore it must have point on $[xw]$, but then local concavity of $S$ implies that $\Pi$ does not support $S$ at $p$ from above --- a contradiction.
+%
+%Further, show that we can choose $z\in \partial\bar S$ such that the solid triangle $xyz$ intersects $[pq]$ along a line segment, and $\partial\bar S$ contains $[xz]$ or $[yz]$.
+%If this is not the case, then one could arrive at a contradiction essentially the same way as in \ref{clm:complement-of-F'-convex}.
+%
+%It remains to observe that the solid triangle $xyz$ lies in $\bar S$.
+%In particular, all points on $[pq]$ sufficiently close to $p$ lie in $S$ --- a contradiction.
+%
+%Observe that the assumption on $\partial\bar S$ was used only in the neighborhood of $x$ and $y$ and the whole argument works in a small neighborhood $U$ of $[xy]$.
+%If the assumption does not hold, then it means that several sectors of $U\cap \bar S$ meet at $x$ or $y$.
+%In this case remove the sectors that do not contain a piece of $[xy]$ and apply the argument to the remaining part of $U\cap \bar S$.
 
 
 \parbf{\ref{ex:CAT=>two-convex}.}
