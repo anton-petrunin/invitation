@@ -1112,12 +1112,12 @@ Read the following, wait until you feel the geometric picture, and then read it 
 If it still does not work, try reading the original \cite[§ 2]{shefel-1964}.
 
 \parit{\ref{SHORT.ex:convex+saddle+broken=>PL:a}.}
-Note that $\partial\bar S$ is a finite union of closed polygonal lines.
+By \ref{clm:F'} on page \pageref{clm:F'}, $\partial S$ is a finite union of line segments and points.
 
 Choose a point $p\in S$.
 Since $S$ is locally concave, there is a plane $\Pi$ that locally supports $S$ at $p$.
 Choose a closed $\eps$-neighborhood $B\ni p$ such that $B\setminus \Omega'$ is convex.
-Note that (1)
+Show that (1)
 $V=\Pi\cap B\cap S$ is convex, (2)
 $\Pi$ locally supports $S$ at any point of $V$,
 and (3)
@@ -1133,9 +1133,25 @@ Given a local supporting plane $\Pi$ at $p$, denote by $A_\Pi$ the set provided 
 so, $A_\Pi$ is a line segment or a polygon lying in $\bar S$.
 
 Assume that $p$ is not an interior point of $A_\Pi$ for some (and therefore any) supporting plane $\Pi$ at $p$.
-Argue essentially as in \ref{clm:complement-of-F'-convex} (page \pageref{clm:complement-of-F'-convex}) to show that, in this case, there are two local supporting planes $\Pi_1$ and $\Pi_2$ at $p$ such that a neighborhood of $p$ in $S$ is covered by $A_{\Pi_1}$ and $A_{\Pi_2}$.
+Note that in this case $p$ lies on a line segment in $\bar S$ with the endpoints on $\partial S$;
+denote this segment by $[xy]$.
+In particular, all locally supporting planes at $p$ contain $[xy]$.
+Consider two outermost supporting planes at $p$, say $\Pi_1$ and $\Pi_2$ (if the supporting plane is unique, then $\Pi_1=\Pi_2$).
 
+Let us show that a neighborhood of $p$ in $S$ is covered by $A_{\Pi_1}\cup A_{\Pi_2}$.
 Observe that this statement leads to a solution.
+
+Assume that this is not the case.
+Apply \ref{SHORT.ex:convex+saddle+broken=>PL:a} to show that there is a sequence of points $p_n\in S$ and line segments $[x_n\,y_n]\ni p_n$ with the same properties as above such that $p_n\to p$ and lines containing $[x_ny_n]$ approach the line of $[xy]$ as $n\to\infty$.
+Moreover for one plane, say $\Pi_1$, we have $b_n>0$ for all $n$, and $b_n\z=o(a_n)$, where $a_n$ and $b_n$ denote the distance from $p_n$ to $[xy]$ and $\Pi_1$, respectively.
+
+Recall that $\partial S$ is a union of finitely many line segments and points.
+Therefore, after passing to a subsequence, we can choose two line segments $X$ and $Y$ in $\partial S$ (possibly degenerate) such that $x_n\in X$ and $y_n\in Y$ for any $n$.
+Show that $X\subset \Pi_1$ or $Y\subset \Pi_1$.
+Conclude that $[x_n\,y_n]\subset \Pi_1$ and arrive at a contradiction.
+
+
+
 
 %\begin{wrapfigure}{r}{41mm}
 %\vskip-3mm
