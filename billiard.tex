@@ -144,7 +144,7 @@ Show that $\spc{U}$ is geodesic.
 \end{subthm}
 
 \begin{subthm}{ex:tan-CBA:tan}
-Show that for any $p\in\spc{U}$ the tangent space $\T_p\spc{U}$ is a geodesic $\CAT(0)$ space.
+Show that for any $p\in\spc{U}$ the tangent space $\T_p\,\spc{U}$ is a geodesic $\CAT(0)$ space.
 \end{subthm}
 
 \end{thm}
@@ -385,13 +385,13 @@ with isometric closed sets $A_1\subset\spc{U}_1$ and $A_2\subset\spc{U}_2$.
 Let $\iota\:A_1\to A_2$ be an isometry.
 Consider the space $\spc{W}$ of all equivalence classes in $\spc{U}_1\sqcup\spc{U}_2$ with the equivalence relation given by $a\sim\iota(a)$ for any $a\in A_1$.
 Let us equip $\spc{W}$ with the minimal metric such that both natural maps $\spc{U}_i\to \spc{W}$ are short.
-(A more general definition is discussed in \cite[1D]{petrunin-2023}.)
 
 The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}_1$ and  $\spc{U}_2$ along~$\iota$.
+(A more general definition is discussed in \cite[1D]{petrunin-2023}.)
 
 If $\spc{U}_1$ and $\spc{U}_2$ are proper and geodesic and $A_i$ are convex in $\spc{U}_i$,
 then it is easy to check that $\spc{W}$ is a proper geodesic space as well and its metric can be described the following way:
-\begin{align*}
+\[\begin{aligned}
 \dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}_i}
 \\
 &\quad\text{if}\quad x,y\in \spc{U}_i,\quad\text{and}
@@ -399,7 +399,9 @@ then it is easy to check that $\spc{W}$ is a proper geodesic space as well and i
 \dist{x}{y}{\spc{W}}&\df\min\set{\dist{x}{a}{\spc{U}_1}+\dist{y}{\iota(a)}{\spc{U}_2}}{a\in A_1}
 \\
 &\quad\text{if}\quad x\in \spc{U}_1\quad\text{and}\quad y\in \spc{U}_2.
-\end{align*}
+\end{aligned}
+\eqlbl{eq:gluing}
+\]
 Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}_1\sqcup\spc{U}_2$ and their equivalence classes in $\spc{U}_1\sqcup\spc{U}_2/{{\sim}}$.
 
 We can (and will) identify $\spc{U}_i$ with its image in $\spc{W}$;
@@ -414,12 +416,14 @@ Suppose
 $\spc{U}_1$ and $\spc{U}_2$ are proper geodesic $\CAT(0)$ spaces
 with isometric 
 closed 
- convex
+convex
 sets $A_i\subset\spc{U}_i$, and $\iota\:A_1\z\to A_2$ is an isometry.
 Then the gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$ is a $\CAT(0)$ proper geodesic space.
 \end{thm}
 
 }
+
+The condition that the spaces are proper will be needed only in order to use formula \ref{eq:gluing}.
 
 \parit{Proof.} 
 By construction of the gluing space, the statement can be reformulated in the following way:
@@ -434,17 +438,16 @@ and $\spc{U}_1$, $\spc{U}_2$ are $\CAT(0)$.
 Then $\spc{W}$ is $\CAT(0)$.
 \end{thm}
 
-\begin{wrapfigure}{o}{45mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-840}
-\end{wrapfigure}
-
 It suffices to show that any triangle $\trig {x}{y}{z}$ 
 in $\spc{W}$ is thin.
 This is obviously true if all three points $x$, $y$, $z$ lie in one of~$\spc{U}_i$.
 Thus, without loss of generality, we may assume that $x\z\in\spc{U}_1$ and $y,z\z\in\spc{U}_2$.
 
+\begin{wrapfigure}{o}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-840}
+\end{wrapfigure}
 
 Choose points $a,b\in A\z=\spc{U}_1\z\cap\spc{U}_2$
 that lie respectively on the sides $[xy], [xz]$.
@@ -475,12 +478,11 @@ The motivation for the notion of $\CAT(\kappa)$ spaces comes from the fact that 
 This easily follows from Rauch comparison for Jacobi fields and Proposition~\ref{prop:thin=cat}.
 
 The gluing theorem (\ref{thm:gluing}) was proved by Yuri Reshetnyak~\cite{reshetnyak-1960}.
-It can be extended to all geodesic $\CAT(0)$ spaces.
+Applying the argument in \ref{ex:tan-CBA:geodesic}, it can be extended to all geodesic $\CAT(0)$ spaces (not necessarily proper).
 It also admits a natural generalization to 
 geodesic $\CAT(\kappa)$
 spaces for arbitrary $\kappa$;
 see the book of Martin Bridson and André Haefliger \cite{bridson-haefliger} and our book \cite{alexander-kapovitch-petrunin-2025} for details.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
