@@ -66,7 +66,7 @@ We also use the following shortcut notation:
 
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not  be unique.  
-However,  once we write $[p q]$ we mean that we have  made a choice of  geodesic.
+However,  once we write $[p q]$ we mean that we have  made a choice of  a geodesic.
 
 A metric space is called \index{geodesic}\emph{geodesic} if any pair of its points can be joined by a geodesic. 
 
@@ -321,7 +321,7 @@ Show that projections of a geodesic path from the product space to its factors a
 
 \parbf{Cone.}
 The \index{cone}\emph{cone} $\spc{V}=\Cone\spc{U}$ over a metric space $\spc{U}$
-is defined as the metric space whose underlying set consists of
+is defined as the metric space whose underlying set consists of the
 equivalence classes in
 $[0,\infty)\times \spc{U}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{U}$,
 and whose metric is given by the cosine rule
@@ -704,7 +704,8 @@ Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
 We will denote by $\distfun_A(x)$ the distance from $A$ to a point $x$ in $\spc{X}$;
 that is,
 $$\distfun_A(x)\df\inf\set{\dist{a}{x}{\spc{X}}}{a\in A}.$$
-It is natural to assume that $\distfun_\emptyset(x)=\infty$ for any $x$.
+We will use the convention that $\distfun_\emptyset(x)=\infty$ for any $x\in \spc{X}$.
+%it's not an assumption but our choice of definition
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
 Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$, 
@@ -802,7 +803,7 @@ $\spc{X}_n$ is an open set in
 $(\bm{X},\rho)$ for each $n\ne\infty$, and 
 $\spc{X}_n\to \spc{X}_\infty$ in $(\bm{X},\rho)$ as $n\to\infty$ in the sense of Hausdorff (see Definition~\ref{def:hausdorff-coverge}).
 
-Then we say $\rho$ defines a 
+Then we say that $\rho$ defines a 
 \index{convergence in the sense of Gromov--Hausdorff}\emph{convergence}%
 \footnote{Formally speaking, convergence in the topology induced by $\rho$ on~$\bm{X}$.} 
 in the sense of \emph{Gromov--Hausdorff}%
