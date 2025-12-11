@@ -199,6 +199,8 @@ Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local g
 \end{thm}
 
 \parit{Proof.}
+
+We first consider the case when  $\spc{U}$ is $\CAT(0)$. 
 Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
 Choose $a$ to be the maximal value 
 such that $\gamma$ is a geodesic on $[0,a]$. By assumption $a<\ell$.
@@ -390,7 +392,7 @@ The space $\spc{W}$ is called the \index{gluing}\emph{gluing} of $\spc{U}_1$ and
 (A more general definition is discussed in \cite[1D]{petrunin-2023}.)
 
 If $\spc{U}_1$ and $\spc{U}_2$ are proper and geodesic and $A_i$ are convex in $\spc{U}_i$,
-then it is easy to check that $\spc{W}$ is a proper geodesic space as well and its metric can be described the following way:
+then it is easy to check that $\spc{W}$ is a proper geodesic space as well and its metric can be described in the following way:
 \[\begin{aligned}
 \dist{x}{y}{\spc{W}}&\df\dist{x}{y}{\spc{U}_i}
 \\
@@ -402,7 +404,7 @@ then it is easy to check that $\spc{W}$ is a proper geodesic space as well and i
 \end{aligned}
 \eqlbl{eq:gluing}
 \]
-Abusing notation, we denote by $x$ and $y$ the points in $\spc{U}_1\sqcup\spc{U}_2$ and their equivalence classes in $\spc{U}_1\sqcup\spc{U}_2/{{\sim}}$.
+Abusing notation we denote by $x$ and $y$ both the points in $\spc{U}_1\sqcup\spc{U}_2$ and their equivalence classes in $\spc{U}_1\sqcup\spc{U}_2/{{\sim}}$.
 
 We can (and will) identify $\spc{U}_i$ with its image in $\spc{W}$;
 this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by~$A$.
@@ -465,10 +467,10 @@ we get that $\trig {x}{y}{b}$
 and consequently $\trig {x}{y}{z}$ are thin.
 \qeds
 
-If one applies gluing to two copies of one space $\spc{U}$ with a closed subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
+If one applies gluing to two copies of a single space $\spc{U}$ with a closed subset $A\subset \spc{U}$ and the identity map $\iota\:A\to A$, then the obtained space is called the \index{double}\emph{double} of $\spc{U}$ along~$A$.
 
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
-Suppose $\spc{W}$ is a double of a geodesic space $\spc{U}$ along its closed subset $A$.
+Suppose $\spc{W}$ is the double of a geodesic space $\spc{U}$ along its closed subset $A$.
 Show that $\spc{W}$ is $\CAT(0)$ if and only if $\,\spc{U}$ is $\CAT(0)$, and $A$ is convex in $\spc{U}$.
 \end{thm}
 
