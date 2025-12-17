@@ -69,11 +69,11 @@ In this case, by Corollary~\ref{cor:maj-triangle}, the majorizing convex region 
 \begin{thm}{Line-of-sight map} \label{def:sight}
 Let $p$ be a point and $\alpha$ be a curve of finite length in a geodesic $\CAT(0)$ space~$\spc{U}$.
 Let $\mathring\alpha:[0,1]\to\spc{U}$ be the constant-speed parametrization of~$\alpha$.  
-If $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\mathring\alpha(t)$, we say
+If $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\mathring\alpha(t)$, we say that 
 \[
 [0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)
 \]
-is a \index{line-of-sight map}\emph{line-of-sight map from $p$ to $\alpha$}.  
+is the \index{line-of-sight map}\emph{line-of-sight map from $p$ to $\alpha$}.  
 \end{thm}
 
 Note that a line-of-sight map is essentially a geodesic homotopy from a constant map to a curve.
@@ -92,10 +92,10 @@ However, as one can see from the following example, the line-of-sight map might 
 \parbf{Example.} Let $\spc{Q}$ be a solid quadrangle $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the picture).  
 Equip $\spc{Q}$ with the length metric. 
 By Reshetnyak gluing (\ref{thm:gluing}), $\spc{Q}$ is $\CAT(0)$.
-For triangle ${\trig p x y}_\spc{Q}$ in $\spc{Q}$ and its model triangle $\trig{\tilde p}{\tilde x}{\tilde y}$ in $\EE^2$,  
+For the triangle ${\trig p x y}_\spc{Q}$ in $\spc{Q}$ and its model triangle $\trig{\tilde p}{\tilde x}{\tilde y}$ in $\EE^2$,  
 we have 
 \[\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{\spc{Q}}=\dist{x}{z}{}+\dist{z}{y}{}.\]
-Then the map $F$ defined by matching line-of-sight parameters satisfies $F(\tilde x)=x$ and $\dist{x}{F(\tilde w)}{}>\dist{\tilde x}{\tilde w}{}$ if $\tilde w$ is near the midpoint $\tilde z$ of $[\tilde x\tilde y]$ and lies on $[\tilde p\tilde z]$. 
+Then the map $F$ defined by matching the line-of-sight parameters satisfies $F(\tilde x)=x$ and $\dist{x}{F(\tilde w)}{}>\dist{\tilde x}{\tilde w}{}$ if $\tilde w$ is near the midpoint $\tilde z$ of $[\tilde x\tilde y]$ and lies on $[\tilde p\tilde z]$. 
 Indeed,
 \begin{align*}
 \dist{\tilde x}{\tilde w}{}
@@ -138,7 +138,7 @@ ${\trig p x y}_D$.
 Then there is a short map 
 \[G\:\Conv\trig{\tilde p}{\tilde x}{\tilde y}\to D\]
 such that $\tilde p\mapsto p$, $\tilde x\mapsto x$, $\tilde y\mapsto y$, and $G$ is length-preserving on each side of $\trig{\tilde p}{\tilde x}{\tilde y}$.
-In particular, $\Conv\trig{\tilde p}{\tilde x}{\tilde y}$ majorizes triangle $[p x y]_D$ in $D$ under~$G$.
+In particular, $\Conv\trig{\tilde p}{\tilde x}{\tilde y}$ majorizes the triangle $[p x y]_D$ in $D$ under~$G$.
 \end{subthm}
 \end{thm} 
 
@@ -218,10 +218,10 @@ Show that a geodesic space $\spc{U}$ is $\CAT(0)$ if and only if the development
 
 \begin{thm}{Lemma}\label{lem:majorize-triangle}
 Let $\trig{p}{x}{y}$ be a triangle in a geodesic $\CAT(0)$ space $\spc{U}$,
-and let $\tilde \gamma$ be the $\kappa$-development of $[x y]$ with respect to $p$, where $\tilde \gamma$ has basepoint $\tilde p$ and subgraph $D$.
+and let $\tilde \gamma$ be the development of $[x y]$ with respect to $p$, where $\tilde \gamma$ has basepoint $\tilde p$ and subgraph $D$.
 Consider the map $H\:D\to\spc{U}$ that sends the point with parameter $(t,s)$ under the line-of-sight map for $\tilde \gamma$ with respect to $\tilde p$, to the point with the same parameter under the line-of-sight map $f$ for $[x y]$ with respect to $p$.
 Then $H$ is  length-nonincreasing.
-In particular, $D$ majorizes triangle $\trig p x y$.
+In particular, $D$ majorizes the triangle $\trig p x y$.
 \end{thm}
 
 \parit{Proof.}
@@ -308,7 +308,7 @@ Then $F$ is length-nonincreasing and is a majorizing map for $[x_1 x_2 \z\ldots 
 If $R$ is a convex subset of $\EE^2$, we are done. 
 
 If $R$ is not convex, the total internal angle of $R$ at $\tilde x_1$ or $ \tilde x_{n-1} $ or both is larger than $\pi$.
-By relabeling we may suppose this holds for~$\tilde x_{n-1}$.
+By relabeling we may suppose that this holds for~$\tilde x_{n-1}$.
 
 The region $R$ is obtained by gluing $R_{n-1}$ to $\dot R$ by $[x_1x_{n-1}]$.
 Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ carrying its length metric is a $\CAT(0)$ space.
@@ -399,4 +399,4 @@ Namely, \textit{for any integers $n>m>0$ and real $r>0$, any $m$-dimensional sur
  \item For $m=2$ and $n=3$ it was proved later by Bruce Kleiner \cite{kleiner-1992}.
  \item For $m=2$ it was proved by Felix Schulze \cite{schulze}.
 \end{itemize}
-In all other cases, the problem remains open despite a sequence of unsuccessful attempts.
+In all other cases, the problem remains open despite a number of unsuccessful attempts.
