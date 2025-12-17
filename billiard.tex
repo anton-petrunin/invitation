@@ -508,7 +508,7 @@ Let us construct the space $\spc{R}$ by gluing successive pairs of spaces along 
 \includegraphics{mppics/pic-850}
 \caption*{Puff pastry for $(A,B,A)$.}
 \end{figure}
-
+% superindexes in the pic should be changed to subindexes
 The resulting space $\spc{R}$  will be called 
 the
 \index{puff pastry}\emph{Reshetnyak puff pastry} for array~$\bm{A}$.
@@ -838,7 +838,7 @@ The upper bound on $N$ follows directly from the construction.
 
 \section{Billiards}
 
-Let $A_1,A_2,\ldots, A_n$ be a finite collection of closed convex sets in~$\EE^m$.
+Let $A_1,A_2,\ldots, A_n$ be a finite collection of closed convex bodies in~$\EE^m$.
 Assume that for each $i$
 the boundary $\partial A_i$ is a smooth hypersurface.
 
@@ -854,7 +854,7 @@ The breakpoints of the trajectory will be called {}\emph{collisions}.
 If $\gamma$ meets a wall tangentially,
 or meets two or more walls at time $t$,
 or collisions accumulate at $t$,
-then we declare that $\gamma$ dies right before $t$ (that is, $\gamma$ is not defined at $t$).}
+then we declare that $\gamma$ dies right before $t$ (that is, $\gamma$ is not defined at times  $\ge t$).}
 
 Recall that the definition of sets with $\eps$-wide corners is given in \ref{sec:wide-corners}.
 
@@ -1000,7 +1000,7 @@ but there is no upper bound on the number of collisions of its trajectories.
 \section{Notes}
 
 Note that the interior points of the walls play a key role in the proof
-despite that the trajectories never go inside the walls.
+despite the fact  that the trajectories never go inside the walls.
 
 The collision theorem (\ref{thm:collision}) was proved by Dmitri Burago, Serge Ferleger and Alexey Kononenko \cite{burago-ferleger-kononenko-1997}.
 Its corollary (\ref{cor:balls}) answers a question posed by Yakov Sinai \cite{galperin}.
