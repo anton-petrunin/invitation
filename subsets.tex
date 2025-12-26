@@ -19,7 +19,7 @@ C&=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}.
 Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, are $\CAT(0)$ and why?
 \end{thm}
 
-The answers are given below, but it is instructive to think before reading further.
+The answers are given below, but it is instructive to try to answer yourself before reading further.
 
 \parit{$\bm{A}$.}
 No, $A$ is not $\CAT(0)$.
@@ -142,7 +142,7 @@ Let $K\subset \EE^m$ be a closed subset.
 
 Assume that the boundary of $K$ is a smooth hypersurface~$S$.
 Consider the unit normal vector field $\nu$ on $S$ that  points outside of~$K$.
-Denote by $k_1\le \ldots\le k_{m-1}$ the principal curvature functions of $S$ with respect to $\nu$ (note that if $K$ is convex, then  $k_1\ge 0$).
+Denote by $k_1\le \ldots\le k_{m-1}$ the principal curvature functions of $S$ with respect to $\nu$ (note that if $K$ is convex, then  $k_1\ge 0$ and for connected $K$ the converse is also true).
 
 Then $K$ is two-convex if and only if $k_2(p)\ge 0$ for any point $p\in S$.
 Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} fails for some curve $\gamma$ forming a triangle in an arbitrarily small neighborhood of~$p$.
@@ -203,7 +203,7 @@ If this critical point is positive, then it is easy to decrease the maximum a li
 
 Consider a closed curve $\gamma\:\mathbb{S}^1\to K$ that is null-homotopic in~$K$.
 Note that the distance function \[f_0(x)\z=\dist{\Conv\gamma}{x}{\EE^m}\] 
-is convex on $\EE^m$.
+is convex on $\EE^m$ by Exercise \ref{ex:displacement}.
 Therefore $f_0$ can be approximated by smooth strongly convex functions $f$ in general position.
 From above, there is a disc in $K$ with boundary $\gamma$
 that lies arbitrarily close to $\Conv\gamma$.
@@ -288,7 +288,7 @@ By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2
 
 \parit{Only-if part.}
 Assume $K$ is not two-convex.
-Then by Proposition~\ref{prop:two-cove+smooth}, there is a triangle $\trig xyz$ in $K$ that is null-homotopic in $K$, but the solid triangle $\Delta=\Conv\{x,y,z\}$ does not lie in $K$ completely.
+Then by Proposition~\ref{prop:two-cove+smooth}, $k_2(p)<0$ at some point $p\in S$. Hence there is a triangle $\trig xyz$ in $K$ that is null-homotopic in $K$, but the solid triangle $\Delta=\Conv\{x,y,z\}$ does not lie in $K$ completely.
 Evidently the triangle $\trig xyz$ is not thin in~$K$. 
 Hence $K$ is not $\CAT(0)$.
 
@@ -408,7 +408,7 @@ Let $K\subset \EE^m$ be a closed connected set that admits a smooth parametrizat
 If $K$ equipped with the induced length metric is $\CAT(0)$, then the same holds for any affine transformation of $K$.
 \end{thm}
 
-Corollary~\ref{cor:shefel} will provide a more general statement in 3-dimensional Euclidean space.
+Corollary~\ref{cor:shefel} will provide a more general statement in the 3-dimensional Euclidean space.
 
 \section{Open plane sets}
 
@@ -447,7 +447,7 @@ Evidently, there is no plane lune with concave sides ---  a contradiction.
 
 Note that it is sufficient to consider only simple triangles $\trig xyz$, 
 that is, triangles whose sides $[xy]$, $[yz]$ and $[zx]$ intersect each other only at the common vertices.
-If this is not the case, chopping the overlapping part of sides reduces to the injective case (this is formally stated in Exercise~\ref{ex:chopping-triangle}).
+If this is not the case, chopping the overlapping part of sides reduces to the case when the triangle is simple (this is formally stated in Exercise~\ref{ex:chopping-triangle}).
 
 Again, the open region, say $\Delta$, bounded by the image of $\trig xyz$ has concave sides in the plane, since otherwise one could shorten the sides by pushing them into~$\Omega$.
 It remains to solve Exercise~\ref{ex:concave-triangle}.
@@ -497,7 +497,7 @@ if and only if $\Omega$ is two-convex.
 \end{thm}
 
 The proof of this statement will be given in the following three sections.
-First we prove its polyhedral analog, then we prove some properties of two-convex hulls in 3-dimensional Euclidean space and only then do we prove the general statement.
+First we prove its polyhedral analog, then we prove some properties of two-convex hulls in the 3-dimensional Euclidean space and only then do we prove the general statement.
 
 The following exercise shows that the analogous statement does not hold in higher dimensions.
 
@@ -940,5 +940,5 @@ which is a result of Shefel~\cite{shefel-1964}.
 He also solved an analogous question in $\EE^2$; see \cite{shefel-1965}.
 Applying Crofton-type argument to his result, one can see that a saddle disc satisfies the isoperimetric inequality $a\le C\cdot \ell^2$
 where $a$ is the area of a disc bounded by a curve of length $\ell$ and $C=\tfrac{1}{3\cdot\pi}$.
-By a result of Alexander Lytchak and Stefan Wenger \cite{lytchak-wenger}, Shefel's conjecture would follow if the constant would be optimal; that is, $C=\tfrac{1}{4\cdot\pi}$.
+By a result of Alexander Lytchak and Stefan Wenger \cite{lytchak-wenger}, Shefel's conjecture would follow if the constant could be made optimal; that is, $C=\tfrac{1}{4\cdot\pi}$.
 Several variations and generalizations of this conjecture are discussed by the third author and Stephan Stadler \cite{petrunin-stadler}.
