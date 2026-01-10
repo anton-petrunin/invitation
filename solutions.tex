@@ -169,7 +169,7 @@ is the needed isometry.
 
 \parbf{\ref{ex:adjacent-angles}.}
 Use the triangle inequality for angles and \ref{ex:angle-on-shortest}.
-An example with strict inequality can be obtained by gluing together two copies of a triangle along a side adjacent to its obtuse angle.
+An example with strict inequality can be obtained by gluing together two copies of a  planar triangle with an obtuse angle along a side adjacent to the obtuse angle.
 
 \parbf{\ref{ex:hausdorff-conv}.}
 By definition of Hausdorff convergence
@@ -303,12 +303,12 @@ Show that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$.
 \end{wrapfigure}
 
 The unit disc in the plane with
-a half-line attached to each point of its boundary is a complete $\CAT(0)$ length space with extendable geodesics.
+a half-line attached to each point of its boundary is a complete $\CAT(0)$ length space (prove this!) with extendable geodesics.
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 This provides a counterexample to the statement of the exercise if $\spc{U}$ is not assumed to be proper.
 
 \parit{Comment.}
-Properties of (locally) $\CAT(\kappa)$ spaces with extendable geodesics were studied by Alexander Lytchak and Koichi Nagano \cite{lytchak-nagano-2019}.
+Properties of proper (locally) $\CAT(\kappa)$ spaces with extendable geodesics were studied by Alexander Lytchak and Koichi Nagano \cite{lytchak-nagano-2019}.
 
 \parbf{\ref{ex:tan-CBA}}; \ref{SHORT.ex:tan-CBA:geodesic}.
 Given two points $p$ and $q$ choose a sequence of $\eps$-midpoints for $\eps\to 0$.
@@ -321,7 +321,7 @@ By \ref{SHORT.ex:tan-CBA:geodesic}, it is sufficient to show that $\T_p$ is a le
 Choose four geodesic vectors $v_1$, $v_2$, $v_3$, and $v_4$ in $\T_p$.
 Let $\gamma_i$ be a geodesic that starts at $p$ in directions $v_i$.
 Reparametrize each $\gamma_i$ with speed $|v_i|$ so that $\gamma_i(0)=p$.
-Given small $t>0$, consider the quadruple of points $a_i=\gamma_i(t)$.
+Given small $t>0$, consider the quadruple of points $a_i=\gamma_i(t), i=1,2,3,4$.
 Observe that $\CAT(0)$ comparison holds for the quadruple $(a_1$, $a_2$, $a_3$, $a_4)$ in $\spc{U}$ for all small $t>0$, and it implies $\CAT(0)$ comparison holds for $(v_1$, $v_2$, $v_3$, $v_4)$.
 Since geodesic vectors are dense in $\T_p$, we get $\CAT(0)$ comparison in $\T_p$.
 
@@ -525,7 +525,8 @@ Note that all the intersections of the walls have $\eps$-wide corners for
 The proof can be guessed from the picture.
 
 \parbf{\ref{ex:centrally-simmetric-walls}.}
-Note that any centrally symmetric closed convex set in $\RR^m$ is a product of a compact centrally symmetric convex set and a linear subspace of $\RR^m$.
+Observe that any closed unbounded centrally symmetric set in $\RR^m$ splits off an $\RR$ factor.
+Therefore, any centrally symmetric closed convex set in $\RR^m$ is a product of a compact centrally symmetric convex set and a linear subspace of $\RR^m$.
 
 It follows that there is $R<\infty$
 such that if $X$ is an intersection of an arbitrary number of walls, then for any point $p\in X$ there is an isometry of $X$ 
@@ -549,7 +550,7 @@ With these new coordinates, the balls behave exactly as the balls with vanishing
 
 \parit{Comment.}
 Generalization of this problem for different masses is discussed in some popular books \cite{galperin-zemlyakov,tabachnikov}.
-Let me also recommend a video by Grant Sanderson \cite{sanderson} about a peculiar connection between $\pi$ and the number of collisions in 1-dimensional billiards.
+Let us also recommend a video by Grant Sanderson \cite{sanderson} about a peculiar connection between $\pi$ and the number of collisions in 1-dimensional billiards.
 
 \parbf{\ref{ex:collision}.}
 Assume that a trajectory $\gamma$ is defined on the interval $[a,b)$
@@ -580,7 +581,7 @@ Suppose $D$ is a convex figure that majorizes $[p_1\ldots p_n]$.
 Show that $D$ is an $n$-gon and, for each $i$, the majorization sends
 a vertex of $D$, say $\tilde p_i$, to $p_i$.
 Show that the external angle of $D$ at $\tilde p_i$ cannot exceed the external angle at $p_i$;
-make a conclusion.
+make the conclusion.
 
 \begin{wrapfigure}{r}{25 mm}
 \vskip-0mm
@@ -589,7 +590,7 @@ make a conclusion.
 \end{wrapfigure}
 
 \parbf{\ref{ex:FM}.}
-It is a theorem of the first author and Richard Bishop \cite{alexander-bishop-1998}.
+The claimed lower bound on the sum of external angles is a theorem of the first author and Richard Bishop \cite{alexander-bishop-1998}.
 The required polygon is shown on the diagram;
 it lies in the product space of the real line and a \index{tripod}\emph{tripod}; that is, three line segments glued together at one end.
 
