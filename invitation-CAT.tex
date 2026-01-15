@@ -17,15 +17,15 @@ menucolor=black,
 urlcolor=black,
 pdftitle={\thetitle},
 pdfsubject={Geometry},
-pdfauthor={\theauthors}
+pdfauthor={\theauthors},
+unicode,
+linktocpage
 ]{hyperref}
 \makeindex
 
 %\usepackage[x-1a]{pdfx}
 
 %\overfullrule=100mm
-
-
 
 %\makeatletter\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}\pagestyle{empty}\let\ps@plain\ps@empty\makeatother\def\emph{\textit}\hyphenpenalty=10000\exhyphenpenalty=10000\renewcommand{\frac}[2]{(#1/#2)}\renewcommand{\tfrac}[2]{(#1/#2)}\everydisplay{\textstyle}
 
@@ -66,12 +66,19 @@ Anton Petrunin
 \include{solutions}
 
 {
+\newpage
+\phantomsection
+\sloppy
+
 \input{invitation-CAT.ind}
+
+
 
 \def\emph{\textit}
 
 \printbibliography[heading=bibintoc]
 \fussy
+
 }
 
 
