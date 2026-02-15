@@ -245,8 +245,9 @@ This condition is equivalent to each of the following statements:
 \item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
 the closed ball $\cBall[p,R]\subset\spc{X}$ is compact. 
 \item The function $\distfun_p\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$;
-that is, for any compact set $K\subset \RR$, its inverse image 
+that is, the inverse image
 $\set{x\in \spc{X}}{\dist{p}{x}{\spc{X}}\in K}$
+of any compact set $K\subset \RR$
 is compact.
 \end{enumerate}
 
@@ -284,7 +285,7 @@ in particular $\rho\:\spc{X}\to\RR$ is a continuous function.
 \end{clm}
 
 Indeed, 
-assume the contrary; that is, $\rho(x)+|x-y|<\rho(y)$ for some $x,y\in \spc{X}$. 
+assume the contrary; that is, $\rho(x)+|x-y|<\rho(y)$ for some $x,y\z\in \spc{X}$.
 Then 
 $\cBall[x,\rho(x)+\eps]$ is a closed subset of $\cBall[y,\rho(y)]$ for some $\eps>0$, and compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$ --- a contradiction.
 \claimqeds
@@ -630,7 +631,7 @@ Give an example showing that the inequality can be strict.
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
 Assume that for a  hinge $\hinge q p x$ 
-the angle $\alpha=\mangle\hinge q p x$ is defined.
+the angle $\alpha\z=\mangle\hinge q p x$ is defined.
 Then
 \[\dist{p}{\gamma(t)}{}
 \le
@@ -834,7 +835,7 @@ and so on,
 corresponding to convergence in the ambient space $(\bm{X},\rho)$.
 
 Once we write $\spc{X}_n\to \spc{X}_\infty$, we mean that we have  made a choice of convergence.
-Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, it might be possible to construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xrightarrow{\rho}} \spc{X}_\infty$ and $\spc{X}_n\xrightarrow{\rho'} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
+Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, it might be possible to construct different Gromov--Hausdorff convergences, say $\spc{X}_n\z{\xrightarrow{\rho}} \spc{X}_\infty$ and $\spc{X}_n\z{\xrightarrow{\rho'}} \spc{X}_\infty'$,   whose limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other.
 
 For example, the constant sequence $\spc{X}_n\iso\RR_{\ge0}$
 may converge to $\RR_{\ge0}$ and $\RR$.
