@@ -4,7 +4,7 @@ input mparrows
 
 verbatimtex
 %&latex
-\documentclass[oneside]{book}
+\documentclass[graybox,envcountchap,sectrefs]{../SNmono}
 \usepackage{../lectures}
 \begin{document}
 etex
@@ -19,7 +19,7 @@ outputformat := "eps";
 
 beginfig(1) 
 save u,n;
-u:=1.4cm;
+u:=2cm;
 n:=7;
 
 draw (0,0)*u--(1,0)*u--(1,1)*u--(0,1)*u;
@@ -108,7 +108,7 @@ endfig;
 beginfig(9) 
 save u,p;
 path p[];
-u:=1.4cm;
+u:=2cm;
 
 z0=(0,0)*u;
 z1=(1,-.8)*u;
@@ -185,7 +185,7 @@ endfig;
 beginfig(12) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 p0=circle(origin,1*u);
 
@@ -203,7 +203,7 @@ endfig;
 beginfig(13) 
 save u,p,a,b,c,r;
 path p[];
-u:=1.4cm;
+u:=2cm;
 a:=30;
 b:=30;
 c:=56;
@@ -214,8 +214,8 @@ p1=(0,.5+r)*u--(r,.5+r)*u--(r,.5-r)*u--(0,.5-r)*u--cycle;
 
 picture box;
 box:= image(
-hatchfill p0 withcolor (c, 1mm, -.5bp);
-hatchfill p1 withcolor (c-90, 1mm, -.5bp);
+hatchfill p0 withcolor (c, 2mm, -.5bp);
+hatchfill p1 withcolor (c-90, 2mm, -.5bp);
 draw (0,0)*u--(1,0)*u--(1,1)*u--(0,1)*u;
 draw subpath (0,3) of p0;
 draw subpath (0,3) of p1;
@@ -243,12 +243,17 @@ draw box transformed T1;
 draw box transformed T2;
 draw box transformed T3;
 
+dOt .5*z.x,.5*z.y,.5*z.z;
+
+whitelabel.urt(btex $m_x$ etex, .5*z.x);
+whitelabel.lrt(btex $m_y$ etex, .5*z.y);
+whitelabel.lft(btex $m_z$ etex, .5*z.z);
 endfig;
 
 beginfig(15) 
 save u,p,a,b,c,r;
 path p[];
-u:=1.4cm;
+u:=2cm;
 a:=30;
 b:=40;
 c:=37;
@@ -293,7 +298,7 @@ endfig;
 
 beginfig(19) 
 save u;
-u:=1cm;
+u:=1.4cm;
 path p[];
 
 z.p=(-.5,.8)*u;
@@ -305,7 +310,7 @@ p1=-z.r..z.p..z.r;
 p2=z.a..tension 1.5..point 1 of p1{direction 1 of p1}..tension 1.5..z.b;
 
 
-hatchfill p2--cycle withcolor (77, 1mm, -.5bp);
+hatchfill p2--cycle withcolor (77, 2mm, -.5bp);
 draw p1;
 draw p2;
 draw ddline(-z.r,z.r)(.2,.2);
@@ -487,7 +492,7 @@ endfig;
 
 beginfig(41) 
 save u;
-u:=1.3cm;
+u:=2cm;
 
 z.p=(-1,1)*u;
 z.pp=(-.7,0)*u;
@@ -508,7 +513,7 @@ endfig;
 
 beginfig(43) 
 save u,ang;
-u:=1cm;
+u:=1.4cm;
 ang=25;
 
 z.a=(1,1.2)*u;
@@ -625,34 +630,11 @@ draw (0,0)*u--(1,0)*u--(1,1)*u--(2,1)*u--(2,2)*u--(3,2)*u--(3,3)*u--(4,3)*u--(4,
 
 endfig;
 
-beginfig(105) 
-save u,p;
-path p[];
-u:=1cm;
-
-z.A=origin;
-z.B=(3,0)*u;
-z.C=(1,2)*u;
-
-draw z.A--z.B--z.C--cycle;
-
-arcs(z.B, z.A, z.C, 12);
-
-dOt z.A,z.B,z.C;
-
-label.llft(btex $\tilde x$ etex, z.A);
-label.lrt(btex $\tilde p$ etex, z.B);
-label.top(btex $\tilde q$ etex, z.C);
-label(btex $=\mangle\hinge x p q$ etex rotated (angle(z.C-z.A)/2), z.A +32*unitvector(unitvector(z.B-z.A)+unitvector(z.C-z.A)));
-label(btex $\side\hinge x p q$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
-label(btex $\dist{x}{q}{}$ etex rotated angle(z.C-z.A), .5[z.A,z.C]+8*unitvector(z.C-z.A) zscaled (0,1));
-label.bot(btex $\dist{x}{p}{}$ etex, .5[z.A,z.B]);
-endfig;
 
 beginfig(416) 
 save u,p;
 path p[];
-u:=.3cm;
+u:=.5cm;
 
 z.l=(-.2,1.4)*u;
 z.r=(.2,1.2)*u;
@@ -698,7 +680,7 @@ endfig;
 
 beginfig(615) 
 save u;
-u:=2cm;
+u:=2.8cm;
 
 z.p=origin;
 z.x=(1,1)*u;
@@ -722,7 +704,7 @@ endfig;
 
 beginfig(700) 
 save u;
-u:=1cm;
+u:=1.4cm;
 
 z.a=(0,0)*u;
 z.b=(1,0)*u;
@@ -736,8 +718,8 @@ p2=circle(z.b,z.a-z.b);
 draw p1;
 draw p2;
 
-hatchfill p1 withcolor (77, 1mm, -.5bp);
-hatchfill p2 withcolor (177, 1mm, -.5bp);
+hatchfill p1 withcolor (77, 2mm, -.5bp);
+hatchfill p2 withcolor (177, 2mm, -.5bp);
 
 label.top(btex $\spc{M}_4$ etex, z.b rotatedabout(z.a,60)+(0,2));
 whitelabel(btex $\spc{E}_4$ etex, .5[z.a,z.b]);
@@ -748,7 +730,7 @@ endfig;
 
 beginfig(710) 
 save u;
-u:=1cm;
+u:=1.4cm;
 
 z.a=(0,0)*u;
 z.b=(1,0)*u;
@@ -775,7 +757,7 @@ endfig;
 
 beginfig(720) 
 save u;
-u:=1cm;
+u:=2cm;
 
 z.p=(0,0)*u;
 z.q=(1.5,1.3)*u;
@@ -799,7 +781,7 @@ endfig;
 beginfig(722)
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 z.z=origin;
 z.r=(1,1)*u;
@@ -867,7 +849,7 @@ endfig;
 
 beginfig(730) 
 save u;
-u:=1.4cm;
+u:=2cm;
 
 z.p=(0,0)*u;
 z.x=(.2,1)*u;
@@ -890,7 +872,7 @@ endfig;
 
 beginfig(740) 
 save u;
-u:=1.4cm;
+u:=2cm;
 
 z.p=(0,0)*u;
 z.x=(.2,1)*u;
@@ -916,7 +898,7 @@ endfig;
 
 beginfig(750) 
 save u;
-u:=1.4cm;
+u:=2cm;
 
 z.p=(0,0)*u;
 z.x=(.2,1)*u;
@@ -940,20 +922,20 @@ endfig;
 
 beginfig(800) 
 save u,p;
-u:=1cm;
+u:=1.4cm;
 path p[];
 
 z.o=(0,0)*u;
-z.a=(.3,.7)*u;
-z.b=(1,1)*u;
+z.a=(1.3,.3)*u;
+z.b=(2,0)*u;
 
 draw z.o..z.a..z.b--cycle;
 
 dOt z.o,z.a,z.b;
 
-label.llft(btex $\gamma(0)$ etex, z.o);
-label.ulft(btex $\gamma(a)$ etex, z.a);
-label.urt(btex $\gamma(b)$ etex, z.b);
+label.lft(btex $\gamma(0)$ etex, z.o);
+label.top(btex $\gamma(a)$ etex, z.a);
+label.rt(btex $\gamma(b)$ etex, z.b);
 
 endfig;
 
@@ -1000,7 +982,7 @@ endfig;
 
 beginfig(810) 
 save u;
-u:=1.4cm;
+u:=2cm;
 
 z.p=(0,0)*u;
 z.x=(.2,1)*u;
@@ -1024,7 +1006,7 @@ endfig;
 beginfig(811) 
 save u,p,k;
 path p[];
-u:=1.2cm;
+u:=1.5cm;
 k:=1.3;
 
 z.p=origin;
@@ -1073,7 +1055,7 @@ endfig;
 
 beginfig(821) 
 save u;
-u:=2cm;
+u:=2.8cm;
 
 z.p=(0,0)*u;
 z.x=(.2,1)*u;
@@ -1133,7 +1115,7 @@ endfig;
 
 beginfig(830) 
 save u,p;
-u:=2cm;
+u:=2.8cm;
 path p[];
 
 z.x=(0,0)*u;
@@ -1229,7 +1211,7 @@ endfig;
 
 beginfig(840) 
 save u,p;
-u:=1.4cm;
+u:=2cm;
 path p[];
 
 z.a=(0,0)*u;
@@ -1332,7 +1314,7 @@ endfig;
 beginfig(860) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 z.p=origin;
 z.q=(1.5,0)*u;
@@ -1343,8 +1325,8 @@ p0=z.p{z.w}..z.q..{-z.v}z.p;
 p1=z.v--p0--z.w{z.w}..tension 5..{-z.v}cycle;
 
 draw subpath (0,4) of p1;
-hatchfill p0--cycle withcolor (77, 1.5mm, -.5bp);
-hatchfill p1 withcolor (37, 1.5mm, -.5bp);
+hatchfill p0--cycle withcolor (77, 2mm, -.5bp);
+hatchfill p1 withcolor (37, 2mm, -.5bp);
 
 dOt z.p;
 
@@ -1356,7 +1338,7 @@ endfig;
 beginfig(870) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 
 z.o=origin;
@@ -1397,7 +1379,7 @@ endfig;
 beginfig(880) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 z.z0=origin;
 z.z1=(-.5,-1)*u;
@@ -1551,7 +1533,7 @@ endfig;
 beginfig(951) 
 save u,p;
 path p[];
-u:=.8cm;
+u:=1.2cm;
 
 z.p=(-1,0)*u;
 z.z=(1,0)*u;
@@ -1575,7 +1557,7 @@ endfig;
 beginfig(960) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 z.x1=(0,0)*u;
 z.x2=(-.6,-1)*u;
@@ -1676,7 +1658,7 @@ endfig;
 beginfig(1000) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 z.v=(-1,0)*u;
 z.vv=z.v xscaled -1;
@@ -1737,7 +1719,7 @@ endfig;
 beginfig(1100) 
 save u,p;
 path p[];
-u:=.7cm;
+u:=1cm;
 
 z.x=origin;
 z.z=(0,1)*u;
@@ -1763,7 +1745,7 @@ endfig;
 beginfig(1106) 
 save u,p,k;
 path p[];
-u:=1cm;
+u:=1.4cm;
 k:=4;
 
 drawarrow (-.5,0)*u--(k,0)*u;
@@ -1791,7 +1773,7 @@ endfig;
 beginfig(1201) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 p0=
 (-3,-3)*u..
@@ -1850,7 +1832,7 @@ endfig;
 beginfig(1202) 
 save u,p;
 path p[];
-u:=.7cm;
+u:=1.4cm;
 
 z.l=(-.5,0)*u;
 z.r=(.5,0)*u;
@@ -1880,7 +1862,7 @@ endfig;
 beginfig(1203) 
 save u,p;
 path p[];
-u:=.7cm;
+u:=1cm;
 
 z.x=(0,0)*u;
 z.x1=(-1,0)*u;
@@ -1904,7 +1886,7 @@ p1=z.x{2*z.x-z.y-z.z}..z.x1..z.x2;
 p2=z.y{-z.x+2*z.y-z.z}..z.y1..z.y2;
 p3=z.z{-z.x-z.y+2*z.z}..z.z1..{right}z.z2;
 
-hatchfill p0 withcolor (77, 1mm, -.5bp);
+hatchfill p0 withcolor (77, 2mm, -.5bp);
 draw p0;
 draw p1;
 draw p2;
@@ -1943,7 +1925,7 @@ endfig;
 beginfig(1206) 
 save u,p;
 path p[];
-u:=1cm;
+u:=2cm;
 
 z0=(-1,0)*u;
 z.slope0=(1,2);
@@ -1955,7 +1937,7 @@ p0=z0{z.slope0}..{z.slope1}z1;
 p1=p0 shifted z.shift;
 p2=p0 shifted -z.shift;
 
-hatchfill p1--reverse(p2)--cycle withcolor (77, 1mm, -.5bp);
+hatchfill p1--reverse(p2)--cycle withcolor (77, 2mm, -.5bp);
 draw p0 pensemibold;
 draw p1--reverse(p2)--cycle;
 
@@ -1966,7 +1948,7 @@ endfig;
 beginfig(1207) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 z0=(0,0)*u;
 z1=(0,1)*u;
@@ -1988,7 +1970,7 @@ endfig;
 beginfig(1209) 
 save u,p;
 path p[];
-u:=1cm;
+u:=2cm;
 
 z0=(0,0)*u;
 z1=(-.3,1)*u;
@@ -2007,7 +1989,7 @@ draw z.p+ z.d*u--z.p- z.d*u;
 
 
 
-hatchfill (subpath (1.7,4.2) of p0)--p1--cycle withcolor (77, 1mm, -.5bp);
+hatchfill (subpath (1.7,4.2) of p0)--p1--cycle withcolor (77, 2mm, -.5bp);
 draw p0;
 draw p1;
 
@@ -2127,7 +2109,7 @@ endfig;
 
 beginfig(1650) 
 save u,k;
-u:=.9cm;
+u:=1.4cm;
 k=.5;
 
 

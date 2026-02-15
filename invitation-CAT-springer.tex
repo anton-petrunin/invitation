@@ -1,4 +1,4 @@
-\documentclass[twoside]{book}
+\documentclass[graybox,envcountchap,sectrefs]{SNmono}
 
 %\newcommand{\spell}[2]{#1} %spell
 \newcommand{\spell}[2]{#2} %notes
@@ -23,37 +23,28 @@ linktocpage
 ]{hyperref}
 \makeindex
 
-%\usepackage[x-1a]{pdfx}
-
-%\overfullrule=100mm
-
-%\makeatletter\usepackage{environ}\RenewEnviron{figure}[1][]{}\RenewEnviron{figure*}[1][]{}\RenewEnviron{wrapfigure}[1][]{}\pagestyle{empty}\let\ps@plain\ps@empty\makeatother\def\emph{\textit}\hyphenpenalty=10000\exhyphenpenalty=10000\renewcommand{\frac}[2]{(#1/#2)}\renewcommand{\tfrac}[2]{(#1/#2)}\everydisplay{\textstyle}
-
 \begin{document}
 
 \frontmatter
 \title{An invitation to Alexandrov geometry: CAT(0) spaces}
 \author{
 Stephanie Alexander,\\
-Vitali Kapovitch,\\ 
+Vitali Kapovitch,\\
 Anton Petrunin
 }
 \date{}
 \maketitle
 \thispagestyle{empty}
-\mainmatter
-\newpage
-\cleardoublepage
-\phantomsection
-\pdfbookmark[0]{\contentsname}{bm:toc}
+
+\include{intro}
 \tableofcontents
 
 
 \vfill
 
-
+\mainmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{intro}
+
 \include{preliminaries}
 \include{billiard}
 \include{majorization}
@@ -70,7 +61,7 @@ Anton Petrunin
 \phantomsection
 \sloppy
 
-\input{invitation-CAT.ind}
+\input{invitation-CAT-springer.ind}
 
 
 

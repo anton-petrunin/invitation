@@ -51,13 +51,14 @@ Set $f_t(x,y)=x^2-y^2 -2\cdot (x-t)^2$.
 Consider the one-parameter family of sets 
 \[V_t=\set{(x,y,z)\in\EE^3}{z\le f_t(x,y)}.\]
 
-\begin{wrapfigure}{r}{25mm}
+\begin{figure}[t!]
 \vskip-10mm
 \centering
 \includegraphics{mppics/pic-1201}
-\end{wrapfigure}
+\caption{$C=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}$.}
+\end{figure}
 
-Each set $V_t$ is a solid paraboloid tangent to $\partial C$ along the parabola $y\mapsto(t,y,t^2-y^2)$.
+Each set $V_t$ is a solid paraboloid tangent to $\partial C$ along the parabola $y\z\mapsto(t,y,t^2-y^2)$.
 The set $V_t$ is closed and convex for any $t$, and
 \[C=\bigcup_t V_t.\]
 Further note that the function $t\mapsto f_t(x,y)$ is concave for any fixed $x,y$.
@@ -150,11 +151,12 @@ Moreover, if $k_2(p)<0$ at some point $p$, then Definition~\ref{def:two-convex} 
 
 The proof uses a straightforward modification of the Morse theory for manifolds with boundary; the paper of Sergei Vakhrameev \cite{vakhrameev} contains all the necessary lemmas.
 
-\begin{wrapfigure}{r}{25mm}
-\vskip-4mm
+\begin{figure}[t!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1202}
-\end{wrapfigure}
+\caption{A triangle moved in the direction of $\nu(p)$.}
+\end{figure}
 
 \parit{Proof; only-if part.}
 Suppose $k_2(p)<0$ at some point $p\in S$,
@@ -243,7 +245,7 @@ Fix a closed plane curve $\gamma$ in $W\cap \Omega$ that  is null-homotopic in $
 
 Let $\phi\: \DD\to\Omega$ be a map of the disc with the boundary curve~$\gamma$.
 
-Since $\Omega$ is open we can first change  $\phi$  slightly so that $\phi(x)\notin W$ for $1-\eps<|x|<1$ for some small $\eps>0$.
+Since $\Omega$ is open we can first change  $\phi$  slightly so that $\phi(x)\notin W$ for $1-\eps\z<|x|\z<1$ for some small $\eps>0$.
 By further changing $\phi$ slightly we can assume that it is transversal to $W$  on  $\Int \DD$ and agrees with the previous map near~$\partial \DD$.
 
 This means that $\phi^{-1} (W)\cap \Int \DD$ consists of finitely many simple closed curves which cut $\DD$ into several components. 
@@ -300,7 +302,7 @@ it suffices to show that any point $p\in K$ admits a $\CAT(0)$ neighborhood.
 Evidently, such a neighborhood exists if $p\in\Int K$
 
 Assume $p\in S$ and $k_2(p)>0$.
-Fix a sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
+Fix a sufficiently small $\eps>0$ and set $K'\z=K\cap \cBall[p,\eps]$.
 Let us show that 
 \begin{clm}{}\label{K'-is-CAT}
 $K'$ is $\CAT(0)$.
@@ -377,7 +379,7 @@ $K'$ is $\CAT(0)$ if $K$ is
 that is, $k_2(p)>0$ at any point $p\in S$.
 \end{clm}
 
-It remains to show that $p$ admits a $\CAT(0)$ neighborhood in the case $k_2(p)=0$.
+It remains to show that $p$ admits a $\CAT(0)$ neighborhood in the case $k_2(p)\z=0$.
 
 Choose a coordinate system $(x_1,\ldots,x_m)$ as above,
 so that the $(x_1,\ldots,x_{m-1})$-coordinate hyperplane is the tangent subspace to $S$ at~$p$.
@@ -432,14 +434,16 @@ Note that $K$ admits a length-preserving map to $\EE^2$ that extends the embeddi
 Therefore each triangle $\trig xyz$ in $K$ can be mapped to the plane in a length-preserving way.
 Since $\Omega$ is simply connected, any open region, say $\Delta$, that is surrounded by the image of $\trig xyz$ lies completely in~$\Omega$.
 
-\begin{wrapfigure}{r}{35mm}
-\vskip-4mm
+\begin{figure}[b!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1203}
-\end{wrapfigure}
+\caption{A triangle with overlapping sides.}
+\label{pic-1203}
+\end{figure}
 
 Note that in each triangle $\trig xyz$ in $K$, the sides $[xy]$, $[yz]$ and $[zx]$ intersect each other along a geodesic starting at a common vertex, possibly a one-point geodesic.
-In other words, every triangle in $K$ looks like the one in the diagram. 
+In other words, every triangle in $K$ looks like the one in figure \ref{pic-1203}.
 
 Indeed, assuming the contrary, there will be a {}\emph{lune} in $K$ bounded by two minimizing geodesics with common ends but no other common points.
 The image of this lune in the plane must have concave sides, since otherwise one could shorten the sides by pushing them into the interior.
@@ -559,11 +563,12 @@ equipped with the induced length metric is $\CAT(0)$.
 Since the function $f$ is Lipschitz,
 its graph $\Gamma$ with the induced length metric is bi-Lipschitz equivalent to $\DD$ with the Euclidean metric.
 
-\begin{wrapfigure}{r}{21mm}
-\vskip-4mm
+\begin{figure}[t!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1206}
-\end{wrapfigure}
+\caption{}
+\end{figure}
 
 Consider the sequence of sets 
 \[K_n
@@ -599,16 +604,18 @@ If the completion $K$ of $\Omega$
 is isometric to~$P$, then the lemma follows easily from
 \ref{thm:PL-CAT}.
 
-\begin{wrapfigure}{r}{20mm}
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1207}
-\end{wrapfigure}
+\caption{A polyhedral set that is not isometric to the completion of its interior.}
+\label{pic-1207}
+\end{figure}
 
 However in general
 we only have a locally distance-preserving map $K\to P$;
 it does not have to be onto and it may not be injective. 
-An example can be guessed from the picture.
+An example can be guessed from the figure~\ref{pic-1207}.
 Nevertheless, it is easy to see that $K$ is always a polyhedral space.
 
 The proof uses the following two exercises.
@@ -774,13 +781,12 @@ Further, since $\Omega'$ is two-convex we obtain the following:
 Each connected component of the complement $F_i\setminus F'_i$ is convex.
 \end{clm}
 
-{
-
-\begin{wrapfigure}{r}{20mm}
+\begin{figure}[t!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1209}
-\end{wrapfigure}
+\caption{Facet $F_i$ and its subset $F'_i$ which remains on the boundary of~$P'$.}
+\end{figure}
 
 Indeed, assume a connected component $A$ of $F_i\setminus F'_i$ fails to be convex.
 Then $F'_i$ has an extreme point in the interior of $F_i$.
@@ -790,7 +796,6 @@ The latter means that $\Omega$ is not two-convex
 --- a contradiction.
 \claimqeds
 
-}
 
 From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we conclude
 \begin{clm}{}\label{clm:F'} $F'_i$ is a convex polygon for each~$i$.

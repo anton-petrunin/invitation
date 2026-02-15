@@ -232,11 +232,12 @@ In particular, $W$ is closed.
 \end{thm}
 
 
-\begin{wrapfigure}{r}{48mm}
+\begin{figure}[t!]
 \vskip0mm
 \centering
 \includegraphics{mppics/pic-1106}
-\end{wrapfigure}
+\caption{}
+\end{figure}
 
 \parit{Proof.}
 Let $V=\bm{f}(\spc{X})\subset\RR^{k+1}$; so $W\z=\Up V$.
@@ -448,10 +449,14 @@ that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
 The next theorem follows from \cite[theorems VI 1$\&$2]{hurewicz-wallman}.
 (This theorem also holds for non-separable metric spaces \cite{nagata}, \cite[3.2.10]{engelking}). 
 
+{\sloppy
+
 \begin{thm}{Stable value theorem}\label{thm:stable-value}
 Let $\spc{X}$ be a separable metric space.
 Then $\TopDim\spc{X}\ge m$ if and only if there is a map $F\:\spc{X}\to\RR^m$ with a stable value.
 \end{thm}
+
+}
 
 \section{Dimension theorem}\label{sec:dim-CAT}
 
@@ -577,7 +582,7 @@ Since $F$ is continuous, there is a continuous positive function $\rho$ defined 
 |F(x)- F(y)|<\tfrac13\cdot\eps.\]
 Apply \ref{lem:approximation-cba} to $\rho$.
 For the resulting simplicial complex $\spc{N}$ 
- and the maps $\map\:\spc{U}\to \spc{N}$, $\Psi\:\spc{N}\to \spc{U}$, we have
+ and the maps $\map\:\spc{U}\z\to \spc{N}$, $\Psi\:\spc{N}\to \spc{U}$, we have
 \[|F\circ \Psi\circ\map(x)-F(x)|<\tfrac13\cdot\eps\] 
 for any $x\in \spc{U}$.
 

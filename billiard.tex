@@ -16,11 +16,12 @@ $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\EE^2}$
 and 
 $\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$.
 
-\begin{wrapfigure}{r}{25mm}
-\vskip-4mm
+\begin{figure}[b!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-720}
-\end{wrapfigure}
+\caption{$\CAT(0)$ comparison.}
+\end{figure}
 
 If the inequality
 \[\dist{p}{q}{\spc{X}}\le \dist{\tilde p}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde q}{\EE^2}\]
@@ -87,11 +88,12 @@ Applying $\CAT(0)$ comparison with $\tilde z=\tilde p=\tilde q$,
 we get that $\dist{p}{q}{}=0$ --- a contradiction.
 \qeds
 
-\begin{wrapfigure}[3]{r}{25mm}
-\vskip-8mm
+\begin{figure}[t!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-750}
-\end{wrapfigure}
+\caption{Monotonicity of $\angk p{\bar x}{\bar y}$.}
+\end{figure}
 
 \begin{thm}[!]{Exercise}\label{ex:noncreasing-CAT}
 Given a hinge $\hinge p x y$ in a $\CAT(0)$ space $\spc{U}$ consider the function 
@@ -199,18 +201,18 @@ Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local g
 \end{thm}
 
 \parit{Proof.}
-
 We first consider the case when  $\spc{U}$ is $\CAT(0)$. 
 Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
 Choose $a$ to be the maximal value 
 such that $\gamma$ is a geodesic on $[0,a]$. By assumption $a<\ell$.
 Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
 
-\begin{wrapfigure}{r}{25mm}
+\begin{figure}[t!]
 \vskip-5mm
 \centering
 \includegraphics{mppics/pic-800}
-\end{wrapfigure}
+\caption{}
+\end{figure}
 
 Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin and 
 $\dist{\gamma(0)}{\gamma(b)}{}<b$, we have
@@ -286,11 +288,30 @@ in a metric space is \index{decomposed triangle}\emph{decomposed}
 into two triangles $\trig p x z$ and $\trig p y z$;
 that is, $\trig p x z$ and $\trig p y z$ have a common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
 
-\begin{wrapfigure}{r}{25mm}
-\vskip-0mm
+\begin{figure}[b!]
+\begin{minipage}{.38\textwidth}
 \centering
 \includegraphics{mppics/pic-810}
-\end{wrapfigure}
+\end{minipage}\hfill
+\begin{minipage}{.58\textwidth}
+\centering
+\includegraphics{mppics/pic-821}
+\end{minipage}
+
+\medskip
+
+\begin{minipage}{.38\textwidth}
+\centering
+\caption{}
+\end{minipage}\hfill
+\begin{minipage}{.58\textwidth}
+\centering
+\caption{$\dist{\dot x}{\dot w}{}+\dist{\dot w}{\dot y}{}
+<
+\dist{\dot x}{\dot z}{}+\dist{\dot z}{\dot y}{}$}
+\end{minipage}
+\vskip-0mm
+\end{figure}
 
 If both triangles $\trig p x z$ and $\trig p y z$ are thin, 
 then the triangle $\trig p x y$ is also thin.
@@ -303,19 +324,13 @@ Analogously, if $\trig p x y$ has perimeter $<2\cdot\pi$ and both triangles $\tr
 Construct  the model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
 and $\trig {\dot p} {\dot y} {\dot z}\z=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
-\begin{wrapfigure}{r}{33mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-821}
-\vskip0mm
-\end{wrapfigure}
-
 Let us show that 
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 \ge
 \pi.
 \eqlbl{eq:<+<>=pi}\]
-If not, then for some point $\dot w\in[\dot p\dot z]$, we have \[\dist{\dot x}{\dot w}{}+\dist{\dot w}{\dot y}{}
+If not, then for some point $\dot w\in[\dot p\dot z]$, we have
+\[\dist{\dot x}{\dot w}{}+\dist{\dot w}{\dot y}{}
 <
 \dist{\dot x}{\dot z}{}+\dist{\dot z}{\dot y}{}=\dist{x}{y}{}.\]
 Suppose $w\in[p z]$ corresponds to $\dot w$; that is, $\dist{z}{w}{}=\dist{\dot z}{\dot w}{}$.
@@ -325,8 +340,8 @@ contradicting the triangle inequality.
 
 Denote by $\dot D$ the union of two solid triangles $\trig {\dot p}{\dot x}{\dot z}$ and $\trig {\dot p} {\dot y} {\dot z}$.
 Further, denote by $\tilde D$ the solid triangle $\trig{\tilde  p}{\tilde  x}{\tilde  y}=\modtrig(p x y)_{\EE^2}$.
-By \ref{eq:<+<>=pi}, there is a \index{short map}\emph{short map}\footnote{In other words, distance-nonexpanding or 1-Lipschitz.}
-$F\:\tilde D\to \dot D$ that sends 
+By \ref{eq:<+<>=pi}, there is a \index{short map}\emph{short map}
+$F\:\tilde D\to \dot D$ (in other words, distance-nonexpanding or 1-Lipschitz) that sends
 \begin{align*}
 \tilde p&\mapsto \dot p,
 &
@@ -337,18 +352,20 @@ $F\:\tilde D\to \dot D$ that sends
 \tilde y&\mapsto \dot y.
 \end{align*}
 
-\begin{wrapfigure}{r}{50mm}
-\vskip-2mm
+\begin{figure}[t!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-830}
 \vskip0mm
-\end{wrapfigure}
+\caption{Definition of $F$.}
+\end{figure}
 
 Indeed, by Alexandrov's lemma (\ref{lem:alex}), 
 there are nonoverlapping triangles 
-\[\trig{\tilde p}{\tilde x}{\tilde z_x}\iso\trig {\dot p}{\dot x}{\dot z}\] 
-and 
-\[\trig{\tilde p}{\tilde y}{\tilde z_y}\iso\trig {\dot p}{\dot y}{\dot z}\]
+\[\trig{\tilde p}{\tilde x}{\tilde z_x}\iso\trig {\dot p}{\dot x}{\dot z}
+\quad\text{and}\quad
+\trig{\tilde p}{\tilde y}{\tilde z_y}\iso\trig {\dot p}{\dot y}{\dot z}
+\]
 inside the  triangle $\trig{\tilde p}{\tilde x}{\tilde y}$.
 
 Connect  the points in each pair
@@ -445,11 +462,12 @@ in $\spc{W}$ is thin.
 This is obviously true if all three points $x$, $y$, $z$ lie in one of~$\spc{U}_i$.
 Thus, without loss of generality, we may assume that $x\z\in\spc{U}_1$ and $y,z\z\in\spc{U}_2$.
 
-\begin{wrapfigure}{o}{45mm}
-\vskip-2mm
+\begin{figure}[b!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-840}
-\end{wrapfigure}
+\caption{Subdivision of $[xyz]$.}
+\end{figure}
 
 Choose points $a,b\in A\z=\spc{U}_1\z\cap\spc{U}_2$
 that lie respectively on the sides $[xy], [xz]$.
@@ -502,11 +520,11 @@ Consider an array of $N+1$ copies of~$\EE^m$.
 Let us construct the space $\spc{R}$ by gluing successive pairs of spaces along  $A_1,\ldots,A_N$ respectively.
 
 
-\begin{figure}[ht!]
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-850}
-\caption*{Puff pastry for $(A,B,A)$.}
+\caption{Puff pastry for $(A,B,A)$.}
 \end{figure}
 % superindexes in the pic should be changed to subindexes
 The resulting space $\spc{R}$  will be called 
@@ -610,23 +628,21 @@ for $\bm{A}$ with $A_k$ replaced by~$\EE^m$.
 It remains to apply Proposition~\ref{prop:A-check-A}.
 \qeds
 
-{
-
-\begin{wrapfigure}{o}{30mm}
-\vskip-4mm
+\begin{figure}[t!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-860}
-\end{wrapfigure}
+\caption{Dihedral angle.}
+\label{pic-860}
+\end{figure}
 
-Let $X$ be a convex subset in a Euclidean space.
+Let $X$ be a convex subset in a Euclidean space; see figure \ref{pic-860}.
 By a \index{dihedral angle}\emph{dihedral angle}, we understand an intersection of two half-spaces;
 the intersection of corresponding hyperplanes is called the {}\emph{edge} of the angle.
 We say that a dihedral angle $D$ 
 supports
  $X$ at a point $p\in X$ 
 if $D$ contains $X$ and the edge of $D$ contains~$p$.
-
-}
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
 Let $A$ and $B$ be two convex sets in~$\EE^m$.
@@ -648,39 +664,29 @@ is end-to-end convex.
 \end{thm}
 
 \parit{Proof.}
-Note that the puff pastry $\ddot{\spc{R}}$ is isometric to the cone over the space glued from the unit circles as shown on the diagram.
+Note that the puff pastry $\ddot{\spc{R}}$ is isometric to the cone over the space glued from the unit circles as shown in figure~\ref{pic-870}.
 
-All the short arcs on the diagram have length $\alpha$;
+All the short arcs in the figure have length $\alpha$;
 the long arcs have length $\pi-\alpha$,
 so making a circuit along any path will take~$2\cdot\pi$.
 
-{
-
-\begin{wrapfigure}{r}{35mm}
+\begin{figure}[t!]
 \vskip0mm
 \centering
 \includegraphics{mppics/pic-870}
-\end{wrapfigure}
+\caption{Unit sphere in $\ddot{\spc{R}}$.}
+\label{pic-870}
+\end{figure}
 
 Applying Exercise \ref{ex:cone-geod}, we get that 
 the end-to-end convexity of $\ddot{\spc{R}}$ follows if any geodesic shorter than $\pi$ with the ends on the inner and the outer circles lies completely in the union of these two circles.
-The latter holds if the zigzag line in the picture has length at least~$\pi$.
+The latter holds if the zigzag line in the figure~\ref{pic-870} has length at least~$\pi$.
 This line is formed by $\lceil\tfrac\pi\alpha\rceil$ arcs with length $\alpha$ each.
 Hence the sublemma.
 \qeds
 
-}
-
 
 In the proof of \ref{lem:end-to-end-convex}, we will use the following exercise in convex geometry:
-{
-
-\begin{wrapfigure}{r}{26mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-880}
-\vskip-4mm
-\end{wrapfigure}
 
 \begin{thm}[!]{Exercise}\label{ex:supporting-planes}
 Let $A$ and $B$ be two closed convex sets in $\EE^m$.
@@ -702,8 +708,6 @@ is minimal.
 To show the end-to-end convexity of  $\spc{R}$,
 it is sufficient to prove the following:
 
-}
-
 \begin{clm}{}\label{clm:z in xy}
 The geodesic $[x_0y_N]_\spc{R}$ contains $z_0=z_N\in \spc{R}$.
 \end{clm}
@@ -714,6 +718,14 @@ Since the puff pastry for the 1-array $(B)$ is end-to-end convex,
 Proposition~\ref{prop:A-check-A} together with \ref{obs:end-to-end-convex}
 imply \ref{clm:z in xy}.
 The same way we can treat the case when $z$ lies in the interior of~$B$.
+
+\begin{figure}[t!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-880}
+\vskip-0mm
+\caption{}
+\end{figure}
 
 Suppose that $\dot A$ and $\dot B$ are provided by Exercise \ref{ex:supporting-planes}.
 Note that $\EE^{m}$ admits
@@ -756,17 +768,18 @@ Hence \ref{clm:z in xy} and the lemma follow.
 \section{Wide corners}
 \label{sec:wide-corners}
 
-\begin{wrapfigure}{r}{26mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-885}
-\end{wrapfigure}
-
 We say that a closed convex set $A\subset \EE^m$ has {}\emph{$\eps$-wide corners}\label{page:wide corners} for given $\eps >0$
 if together with each point $p$, 
 the set $A$ contains a small right circular cone
 with the tip at $p$ and aperture $\eps$;
 that is, $\eps$ is the maximum angle between two generating lines of the cone.
+
+\begin{figure}[t!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-885}
+\caption{An $\eps$-wide corner.}
+\end{figure}
 
 For example, 
 a plane polygon 

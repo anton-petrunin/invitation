@@ -2,6 +2,8 @@
 \backmatter
 \chapter*{Semisolutions}
 \addcontentsline{toc}{chapter}{Semisolutions}
+\addtocounter{chapter}{1}
+
 \chaptermark{Semisolutions}
 
 \parbf{\ref{ex:two-components-of-M4}.} 
@@ -22,15 +24,16 @@ for any vector $v$ parallel to one of the faces of~$\triangle$.
 Note that $\spc{X}$ is isometric to a 4-point subset in the 3-dimensional Euclidean space
 if and only if $W(v)\ge 0$ for any vector $v$ in~$\RR^3$.
 
-\begin{wrapfigure}{r}{33mm}
+Therefore, if $\spc{X}$ is not of type $\mathcal{E}_4$, then $W(v)<0$ for some vector~$v$.
+From above, the vector $v$ must be transversal to each of the 4 faces of~$\triangle$.
+Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of the two pictures.
+
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-710}
-\end{wrapfigure}
-
-Therefore, if $\spc{X}$ is not of type $\mathcal{E}_4$, then $W(v)<0$ for some vector~$v$.
-From above, the vector $v$ must be transversal to each of the 4 faces of~$\triangle$.
-Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of the two pictures on the right.
+\caption{}
+\end{figure}
 
 Note that the set of vectors $v$ such that $W(v)<0$ has two connected components;
 the opposite vectors $v$ and $-v$ lie in different components.
@@ -84,12 +87,6 @@ In particular, $(B,\rho_1)$ has no geodesics.
 \parit{Comment.}
 This example is due to Fedor Nazarov \cite{nazarov}.
 
-\begin{wrapfigure}{r}{20 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1}
-\end{wrapfigure}
-
 \parbf{\ref{exercise from BH}.}
 Consider the following subset of $\RR^2$ equipped with the induced length metric
 \[
@@ -100,6 +97,13 @@ Consider the following subset of $\RR^2$ equipped with the induced length metric
 \bigl(\{1,\tfrac12,\tfrac13,\ldots\}\times[0,1]\bigr)
 \]
 Note that $\spc{X}$ is locally compact and geodesic.
+
+\begin{figure}[t!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1}
+\caption{}
+\end{figure}
 
 Its completion $\bar{\spc{X}}$ is isometric to the closure of $\spc{X}$ equipped with the induced length metric;
 $\bar{\spc{X}}$ is obtained from $\spc{X}$ by adding two points $p=(0,0)$ and $q=(0,1)$.
@@ -296,11 +300,12 @@ Since $\spc{U}$ is proper, we can pass to a converging subsequence of $q_n$;
 suppose $q$ is its limit.
 Show that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$.
 
-\begin{wrapfigure}{r}{45 mm}
-\vskip-4mm
+\begin{figure}[t!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-12}
-\end{wrapfigure}
+\caption{}
+\end{figure}
 
 The unit disc in the plane with
 a half-line attached to each point of its boundary is a complete $\CAT(0)$ length space (prove this!) with extendable geodesics.
@@ -351,11 +356,12 @@ apply the thinness of the triangle $[p\,\gamma(t_0)\,\gamma(t_1)]_{\spc{U}}$.
 Observe that it is sufficient to show that 
 \[\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\le (1-t)\cdot\dist{\gamma_1(0)}{\gamma_2(0)}{\spc{U}}+t\cdot \dist{\gamma_1(1)}{\gamma_2(1)}{\spc{U}}.\]
 
-\begin{figure}[htb!]
+\begin{figure}[t!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1650}
 \vskip0mm
+\caption{$\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\le\dist{\gamma_1(t)}{\beta(t)}{\spc{U}}+\dist{\beta(t)}{\gamma_2(t)}{\spc{U}}$.}
 \end{figure}
 
 Let $\beta$ be the geodesic path from $\gamma_1(0)$ to $\gamma_2(1)$.
@@ -400,12 +406,13 @@ Thinness of triangles implies that
 \[\dist{p}{z}{}<\dist{p}{x}{}=\dist{p}{y}{}\]
 --- a contradiction.
 
-\begin{wrapfigure}{r}{37 mm}
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-41}
 \vskip-0mm
-\end{wrapfigure}
+\caption{}
+\end{figure}
 
 It remains to show that the map $p\mapsto p^*$ is short, 
 that is, 
@@ -448,11 +455,12 @@ Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\z\to K$.
 Use \ref{prop:thin=cat} to show that the geodesics $[x\,\alpha(s)]$
 are uniquely defined and depend continuously on~$s$.
 
-\begin{wrapfigure}{r}{50 mm}
+\begin{figure}[t!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-9}
-\end{wrapfigure}
+\caption{}
+\end{figure}
 
 If $[xy]=[x\,\alpha(1)]$ does not completely lie in $K$, then 
 there is a value $s\in [0,1]$ such that $[x\,\alpha(s)]$ 
@@ -503,16 +511,9 @@ Then the set $\dot A$ (respectively, $\dot B$) is defined as the unique supporti
 
 Suppose $f(p)<f(z)$ for some $p\in \dot A\cap\dot B$.
 Since $f$ is convex,
-$f(\bar z)<f(z)$ for any $\bar z \in \left[pz\right[$.
+$f(\bar z)\z<f(z)$ for any $\bar z \in \left[pz\right[$.
 Since $\left[pz\right[\cap A\cap B\ne\emptyset$,
 the latter contradicts the fact that $z$ is a minimum point of $f$ on $A\cap B$.
-
-\begin{wrapfigure}{r}{40 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-43}
-\vskip-0mm
-\end{wrapfigure}
 
 \parbf{\ref{ex:compact-walls}.}
 Fix two open balls $B_1\z=\oBall(0,r_1)$ and $B_2=\oBall(0,r_2)$
@@ -520,9 +521,18 @@ such that
 \[B_1\subset A_i\subset B_2\]
 for each wall~$A_i$.
 
+\begin{figure}[t!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-43}
+\caption{}
+\label{pic-43}
+\vskip-0mm
+\end{figure}
+
 Note that all the intersections of the walls have $\eps$-wide corners for
 \[\eps=2\cdot \arcsin\tfrac{r_1}{r_2}.\]
-The proof can be guessed from the picture.
+The proof can be guessed from the figure~\ref{pic-43}.
 
 \parbf{\ref{ex:centrally-simmetric-walls}.}
 Observe that any closed unbounded centrally symmetric set in $\RR^m$ splits off an $\RR$ factor.
@@ -583,16 +593,18 @@ a vertex of $D$, say $\tilde p_i$, to $p_i$.
 Show that the external angle of $D$ at $\tilde p_i$ cannot exceed the external angle at $p_i$;
 make the conclusion.
 
-\begin{wrapfigure}{r}{25 mm}
+\parbf{\ref{ex:FM}.}
+The claimed lower bound on the sum of external angles is a theorem of the first author and Richard Bishop \cite{alexander-bishop-1998}.
+The required polygon is shown in figure~\ref{pic-416};
+it lies in the product space of the real line and a \index{tripod}\emph{tripod}; that is, three line segments glued together at one end.
+
+\begin{figure}[t!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-416}
-\end{wrapfigure}
-
-\parbf{\ref{ex:FM}.}
-The claimed lower bound on the sum of external angles is a theorem of the first author and Richard Bishop \cite{alexander-bishop-1998}.
-The required polygon is shown on the diagram;
-it lies in the product space of the real line and a \index{tripod}\emph{tripod}; that is, three line segments glued together at one end.
+\caption{An equality case in Fáry--Milnor theorem.}
+\label{pic-416}
+\end{figure}
 
 There are no such examples in the Euclidean space.
 Indeed, the original Fáry--Milnor theorem implies that 
@@ -678,6 +690,13 @@ $\gamma_{\alpha_\tau}=\gamma_{\beta_\tau}$ for any $\tau$ --- hence the result.
 \parbf{\ref{ex:geod-circle}.}
 By the globalization theorem there is a nontrivial homotopy class of closed curves.
 
+\begin{figure}[b!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-11}
+\caption{}
+\end{figure}
+
 Consider a shortest noncontractible closed curve $\gamma$ in $\spc{X}$;
 due to compactness of $\spc{X}$ such a curve exists.
 Indeed, let $\ell$ be the infimum of lengths of all noncontractible closed curves in $\spc{X}$.
@@ -695,19 +714,9 @@ Then $\gamma_1$ or $\gamma_2$ is noncontractible,
 \length\gamma_2<\ell\]
 --- a contradiction.
 
-{
-
-\begin{wrapfigure}{r}{25 mm}
-\vskip-10mm
-\centering
-\includegraphics{mppics/pic-11}
-\end{wrapfigure}
-
 In the $\CAT(1)$ case we also have a geodesic circle.
 The proof is done in nearly  the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.
 One also needs to apply \ref{ex:null-homotopic}, to show that curves $\gamma_1$ and $\gamma_2$ are not contractible in the class of curves shorter than $2\cdot \pi$.
-
-}
 
 \parit{Comment.}
 Note that the surface of revolution of the graph of $y\z=e^x$ around the $x$-axis is locally $\CAT(0)$ but has no closed geodesics.
@@ -943,11 +952,28 @@ In this case $v$ is a vertex of three edges $e_x$, $e_y$, and $e_z$;
 each pair of edges belongs to one of the squares $s_x$, $s_y$, and $s_z$ with complementary index, but the squares $s_x$, $s_y$, $s_z$ do not belong to one cube.
 For higher dimensional cubes we have a product of this configuration with a cube.
 
-\begin{wrapfigure}{r}{25 mm}
-\vskip-0mm
+\begin{figure}[t!]
+\begin{minipage}{.48\textwidth}
 \centering
 \includegraphics{mppics/pic-13}
-\end{wrapfigure}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-15}
+\end{minipage}
+
+\medskip
+
+\begin{minipage}{.48\textwidth}
+\centering
+\caption{\ref{SHORT.cube-infty} $\Rightarrow$ \ref{SHORT.cube-2}.}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\caption{\ref{SHORT.cube-1} $\Rightarrow$ \ref{SHORT.cube-2}.}
+\end{minipage}
+\vskip-0mm
+\end{figure}
 
 Let $m_x$, $m_y$, and $m_z$ be the midpoints of $e_x$, $e_y$, and $e_z$ respectively.
 Consider 3 balls with centers $m_x$, $m_y$, and $m_z$ and radius $\tfrac14$.
@@ -959,9 +985,6 @@ and this map cannot be extended to a short map on the whole 4-point space.
 (For more on injective spaces, see \cite{petrunin-2023}.)
 That is, $(Q,\ell^\infty)$ is not an injective space --- a contradiction.
 
-
-
-
 \parit{\ref{SHORT.cube-1} $\Rightarrow$ \ref{SHORT.cube-2}.}
 Observe that median point $m(x,y,z)$ depends continuously on the triple of points $(x,y,z)$ and $m(x,x,y)=x$.
 
@@ -969,12 +992,6 @@ Given a loop $\gamma\:[0,1]\to Q$ with base at $p=\gamma(0)=\gamma(1)$,
 consider the map $(a,b)\mapsto m(p,\gamma(a),\gamma(b))$ of the triangle $\triangle$ defined by $0\z\le a \z\le b\z\le 1$.
 Note that the boundary of triangle runs along $\gamma$.
 It follows that $\gamma$ is null homotopic and therefore $Q$ is simply connected.
-
-\begin{wrapfigure}{r}{25 mm}
-\vskip-3mm
-\centering
-\includegraphics{mppics/pic-15}
-\end{wrapfigure}
 
 It remains to check that all links of $Q$ satisfy the no-triangle condition.
 
@@ -1040,16 +1057,17 @@ branching at three planes intersecting at the origin is $\CAT(0)$, then these al
 \parbf{\ref{ex:hemisphere}.}
 Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 
-\begin{wrapfigure}{r}{35 mm}
-\vskip-4mm
+\begin{figure}[b!]
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-722}
-\end{wrapfigure}
+\caption{Hemisphere.}
+\end{figure}
 
 Assume $\ell<\pi$.
-Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and~$q$. 
+Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and~$q$.
 Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in~$\mathbb{S}^2$.
-Let $z$ be the midpoint of $[pq]$. 
+Let $z$ be the midpoint of $[pq]$.
 
 We claim that $\alpha$ lies in the open hemisphere $H$ centered at~$z$.
 
@@ -1096,11 +1114,12 @@ Fix a circle $\Gamma$ in $W_0$ that surrounds $Q\cap W_0$.
 Since $Q$ lies in a half-space with boundary $W_0$, there is a
 smallest spherical dome with boundary $\Gamma$ that includes the set $R=Q\setminus\Omega$.
 
-\begin{wrapfigure}{r}{43mm}
+\begin{figure}[t!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-19}
-\end{wrapfigure}
+\caption{$p$ is an isolated point in $W\cap R$.}
+\end{figure}
 
 The dome has to touch $R$ at some point~$p$.
 The plane $W$ tangent to the dome at $p$ has the required property --- the point $p$ is an isolated point of the complement $W\setminus \Omega$.
@@ -1153,11 +1172,11 @@ Conclude that $[x_n\,y_n]\subset \Pi_1$ and arrive at a contradiction.
 
 
 
-%\begin{wrapfigure}{r}{41mm}
-%\vskip-3mm
+%\begin{figure}[ht!]
+%\vskip-0mm
 %\centering
 %\includegraphics{mppics/pic-21}
-%\end{wrapfigure}
+%\end{figure}
 %
 %Suppose $\bar S$ is not piecewise linear.
 %Show that there is a line segment $[xy]$ in $\bar S$ with the ends on $\partial\bar S$ and a line segment $[pq]$ in $\EE^3$ that is tangent to $S$ at some point $p\in \left]xy\right[$ and has no common points with $S$ except~$p$.

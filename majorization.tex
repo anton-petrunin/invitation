@@ -83,14 +83,15 @@ However, as one can see from the following example, the line-of-sight map might 
 
 
 
-\begin{wrapfigure}{r}{30 mm}
+\parbf{Example.} Let $\spc{Q}$ be a solid quadrangle $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the figure \ref{pic-951}).
+Equip $\spc{Q}$ with the length metric. 
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-951}
-\end{wrapfigure}
-
-\parbf{Example.} Let $\spc{Q}$ be a solid quadrangle $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the picture).  
-Equip $\spc{Q}$ with the length metric. 
+\caption{}
+\label{pic-951}
+\end{figure}
 By Reshetnyak gluing (\ref{thm:gluing}), $\spc{Q}$ is $\CAT(0)$.
 For the triangle ${\trig p x y}_\spc{Q}$ in $\spc{Q}$ and its model triangle $\trig{\tilde p}{\tilde x}{\tilde y}$ in $\EE^2$,  
 we have 
@@ -109,12 +110,6 @@ Indeed,
 where $\eps=-\dist{p}{z}{}\cdot\cos\hinge zpx>0$.
 Thus $\dist{\tilde x}{\tilde w}{}<\dist{x}{F(\tilde w)}{}$ if $s$ is slightly smaller than $1$; therefore, $F$ is not majorizing.
 
-\begin{wrapfigure}{r}{38 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-811}
-\end{wrapfigure}
-
 \begin{thm}{Definition}\label{def:convex-devel}
 Let $\tilde \gamma\:\II\to\EE^2$ be a curve.
 Assume that for some point $\tilde p\in\EE^2$ the direction of $[\tilde p\,\tilde \gamma(t)]$ turns monotonically as $t$ grows.
@@ -122,6 +117,13 @@ Assume that for some point $\tilde p\in\EE^2$ the direction of $[\tilde p\,\tild
 The set formed by all geodesics from  $\tilde p$ to the points on $\tilde \gamma$ is called the \index{development!subgraph/supergraph} \emph{subgraph} of $\tilde \gamma$ with respect to $\tilde p$.
 
 The set of all points $\tilde x\in\EE^2$ such that a geodesic $[\tilde p\tilde x]$ intersects $\tilde \gamma$ is called the \emph{supergraph} of $\tilde \gamma$ with respect to $\tilde p$.
+
+\begin{figure}[b!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-811}
+\caption{Subgraph and supergraph of $\tilde\gamma$.}
+\end{figure}
 
 The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to a point}\emph{convex} (\emph{concave}) with respect to $\tilde p$ if the subgraph (respectively, supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
 \end{thm}
@@ -158,10 +160,11 @@ $\beta_i$ has the same length as $\beta$;
 that is, 
 \[\dist{x_{i-1}}{y_i}{}=\dist{x_{i-1}}{x_{i}}{}+\dist{x_{i}}{x_{i+1}}{}+\ldots+\dist{x_{n-1}}{x_n}{}.\]
 
-\begin{figure}[!ht]
+\begin{figure}[!t]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-955}
+\caption{}
 \end{figure}
 
 Clearly $\beta_n=\beta$.
@@ -267,16 +270,9 @@ Clearly $H\circ G$ is a majorizing map for $\trig p x y$.
 
 A closed piecewise geodesic curve in a metric space will be called a \index{polygon}\emph{polygon}.
 Further, $[x_1\ldots x_n ]$ (for $n\ge 3$) will denote a polygon
-with edges $[x_1x_2],\ldots,[x_{n-1}x_n]$, and $[x_n x_1]$.
+with edges $[x_1x_2],\z\ldots,[x_{n-1}x_n]$, and $[x_n x_1]$.
 For a subset $R$ of the ambient metric space,
 we denote by $[x_1\ldots x_n ]_R$ a polygon in the length metric of $R$.
-
-\begin{wrapfigure}{o}{40 mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-960}
-\vskip0mm
-\end{wrapfigure}
 
 \parit{Proof of \ref{thm:major} for polygons.}
 We claim that any closed $n$-gon $[x_1x_2 \ldots x_n]$ in a $\CAT(0)$ space $\spc{U}$ is majorized by a convex polygonal region
@@ -288,10 +284,18 @@ Assume the statement is true for $(n-1)$-gons, $n\ge 4$.
 Then  $[x_1 x_2 \ldots x_{n-1}]$  is majorized by a convex polygonal region
 \[R_{n-1}=\Conv[\tilde x_1 \tilde x_2,\ldots, \tilde x_{n-1}],\]
 in $\EE^2$ under a map $F_{n-1}$ satisfying $F_{n-1}(\tilde x_i)=x_i$ for all $i$.
-Take $\dot x_n\in\EE^2$ such that $\trig{\tilde x_1}{\tilde x_{n-1}}{\dot x_n}=\modtrig(x_1 x_{n-1} x_n)$
+Take $\dot x_n\z\in\EE^2$ such that $\trig{\tilde x_1}{\tilde x_{n-1}}{\dot x_n}=\modtrig(x_1 x_{n-1} x_n)$
 and this triangle lies on the other side of $[\tilde x_1\tilde x_{n-1}]$ from $R_{n-1}$.
 Let $\dot R\z=\Conv\trig{\tilde x_1}{\tilde x_{n-1}}{\dot x_n}$,
 and $\dot F\:\dot R\to \spc{U}$ be a majorizing map for $\trig { x_1}{x_{n-1}}{ x_n}$ as provided above.
+
+\begin{figure}[t!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-960}
+\vskip0mm
+\caption{$R= R_{n-1}\cup \dot R$.}
+\end{figure}
 
 Set 
 $R= R_{n-1}\cup \dot R$, where $R$ carries its length metric.

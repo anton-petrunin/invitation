@@ -1,10 +1,8 @@
 \usepackage{amssymb, amsfonts, amsthm}
 \usepackage[intlimits]{amsmath}
-%%%\usepackage{enumerate}%lnm-problem
 \usepackage{bm}%makes better bold fornt in math
 \usepackage{color}
 \usepackage{pifont,manfnt}
-\usepackage[top=0.9in, bottom=0.9in,left=0.9in, right=0.9in, paperwidth=6in, paperheight=9in]{geometry}
 \usepackage{graphicx}
 \usepackage{epsfig,lpic,wrapfig}
 \usepackage{ushort}
@@ -19,10 +17,6 @@
 
 \usepackage{tikz}
 \usetikzlibrary{arrows}
-
-\newenvironment{Figure}
-  {\par\medskip\noindent\minipage{\linewidth}}
-  {\endminipage\par\medskip}
 
 
 
@@ -71,26 +65,9 @@ isbn=false]{biblatex}
 
 \renewcommand\emph{\ann}
 
-\usepackage{titletoc}% http://ctan.org/pkg/titletoc
-\titlecontents*{section}[.5em]
-  {\small}
-  {\thecontentslabel.~{}}
-  {}
-  { \textbf{\thecontentspage}}
-  [; ][.]
 
-%LIST STILES
-\renewcommand{\@listI}{%
-\leftmargin=25pt
-\rightmargin=0pt
-\labelsep=5pt
-\labelwidth=20pt
-\itemindent=0pt
-\listparindent=0pt
-\topsep=0pt plus 1pt
-\partopsep=\topsep
-\parsep=\topsep
-\itemsep=\topsep}
+
+
 
 %ITEMIZE-first order sign
 \renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
@@ -289,6 +266,7 @@ ho-mo-mor-phism
 ho-meo-mor-phisms
 Bow-ditch
 Ca-me-ron
+Glo-ba-li-zation
 Kar-sten
 Kirsz-braun 
 Ku-ra-tow-ski 
@@ -312,3 +290,15 @@ Sprin-ger
 Vla-di-mir
 Wil-de-rich
 }
+
+\let\Gamma\varGamma
+\let\Delta\varDelta
+\let\Theta\varTheta
+\let\Lambda\varLambda
+\let\Xi\varXi
+\let\Pi\varPi
+\let\Sigma\varSigma
+\let\Upsilon\varUpsilon
+\let\Phi\varPhi
+\let\Psi\varPsi
+\let\Omega\varOmega

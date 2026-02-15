@@ -395,11 +395,6 @@ in the latter case  we assume in addition that the model triangle $\modtrig(p q 
 
 We may use the notation $\angk p q r$ if it is evident which of the model spaces $\HH^2$, $\EE^2$ or $\mathbb{S}^2$ is meant.
 
-\begin{wrapfigure}{r}{25mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-730}
-\end{wrapfigure}
 
 \begin{thm}{Alexandrov's lemma}
 \index{Alexandrov's lemma}
@@ -417,6 +412,29 @@ $\angk z p x
 +\angk z p y -\pi$.
 \end{subthm}
 
+\begin{figure}[b!]
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-730}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\includegraphics{mppics/pic-740}
+\end{minipage}
+
+\medskip
+
+\begin{minipage}{.48\textwidth}
+\centering
+\caption{Alexandrov's configuration.}
+\end{minipage}\hfill
+\begin{minipage}{.48\textwidth}
+\centering
+\caption{Model triangles.}
+\end{minipage}
+\vskip-0mm
+\end{figure}
+
 Moreover,
 \[\angk p x y \ge \angk p x z +  \angk p z y,\]
 with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} and \ref{SHORT.lem-alex-angle} vanish.
@@ -432,12 +450,6 @@ Consider the model triangle $\trig{\tilde x}{\tilde p}{\tilde z}=\modtrig(x p z)
 Take 
 a point $\tilde y$ on the extension of 
 $[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{}$ (and therefore $\dist{\tilde x}{\tilde z}{}=\dist{x}{z}{}$). 
-
-\begin{wrapfigure}{r}{33mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-740}
-\end{wrapfigure}
 
 Since increasing the opposite side in a plane triangle increases the corresponding angle, 
 the following expressions have the same sign:
@@ -577,13 +589,6 @@ Given a small positive $\eps$, for all sufficiently small $t,\tau,s\in\RR_+$ we 
 &+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha_{23}+\eps)}\le
 \end{align*}
 
-\begin{wrapfigure}{o}{30 mm}
-\vskip-10mm
-\centering
-\includegraphics{mppics/pic-615}
-\vskip3mm
-\end{wrapfigure}
-
 Below we define 
 $s(t,\tau)$ so that for 
 $s=s(t,\tau)$, this chain of inequalities can be continued as follows:
@@ -593,6 +598,14 @@ $s=s(t,\tau)$, this chain of inequalities can be continued as follows:
 Thus for any $\eps>0$, 
 \[\alpha_{13}\le \alpha_{12}+\alpha_{23}+2\cdot \eps.\]
 Hence the result.
+
+\begin{figure}[t!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-615}
+\vskip0mm
+\caption{Definition of $s(t,\tau)$.}
+\end{figure}
 
 To define $s(t,\tau)$, consider three rays $\tilde\gamma_1$, $\tilde\gamma_2$, $\tilde\gamma_3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde\gamma_1,\tilde\gamma_2)\z=\alpha_{12}+\eps$, $\mangle(\tilde\gamma_2,\tilde\gamma_3)\z=\alpha_{23}+\eps$ and $\mangle(\tilde\gamma_1,\tilde\gamma_3)\z=\alpha_{12}+\alpha_{23}+2\cdot \eps$.
 We parametrize each ray by the distance from the starting point.
@@ -825,12 +838,14 @@ Note that for a fixed sequence of metric spaces $(\spc{X}_n)$, it might be possi
 
 For example, the constant sequence $\spc{X}_n\iso\RR_{\ge0}$
 may converge to $\RR_{\ge0}$ and $\RR$.
-The first convergence is evident and the second could be guessed from the diagram.
+The first convergence is evident and the second could be guessed from figure~\ref{pic-500}.
 
-\begin{figure}[ht!]
+\begin{figure}[t!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-500}
+\caption{Convergence of $\RR_{\ge0}$ and $\RR$.}
+\label{pic-500}
 \end{figure}
 
 \begin{thm}{Second selection theorem}\label{thm:gromov-selection}
