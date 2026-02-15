@@ -170,7 +170,8 @@ Construct a complete length space for which no pair of distinct points can be jo
 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
-\begin{enumerate}[(i)]
+\begin{enumerate}
+\renewcommand\labelenumi{(\roman{enumi})}
 \item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
@@ -213,10 +214,10 @@ Further, let $\alpha(\frac14)$
 and $\alpha(\frac34)$ be $\eps_2$-midpoints between the pairs $(\alpha(0),\alpha(\tfrac12))$ 
 and $(\alpha(\tfrac12),\alpha(1))$ respectively.
 Applying the above procedure recursively,
-on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$,
-for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, 
+on the $n$-th step we define $\alpha(\tfrac{k}{2^n})$,
+for every odd integer $k$ such that $0<\tfrac k{2^n}<1$,
 as an $\eps_{n}$-midpoint between the already defined
-$\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
+$\alpha(\tfrac{k-1}{2^n})$ and $\alpha(\tfrac{k+1}{2^n})$.
 
 
 In this way we define $\alpha(t)$ for $t\in W$,
@@ -440,7 +441,8 @@ $[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\di
 
 Since increasing the opposite side in a plane triangle increases the corresponding angle, 
 the following expressions have the same sign:
-\begin{enumerate}[(i)]
+\begin{enumerate}
+\renewcommand\labelenumi{(\roman{enumi})}
 \item $\mangle\hinge{\tilde x}{\tilde p}{\tilde y}-\angk{x}{p}{y}$,
 \item $\dist{\tilde p}{\tilde y}{}-\dist{p}{y}{}$,
 \item $\mangle\hinge{\tilde z}{\tilde p}{\tilde y}-\angk{z}{p}{y}$.
@@ -743,12 +745,12 @@ Then the sequence  $(A_n)_{n=1}^\infty$ has a convergent subsequence in the sens
 \parit{Proof.}
 Since $\spc{X}$ is proper,
 there is a countable dense set $\{x_1,x_2,\ldots\}$ in~$\spc{X}$.
-We can assume that the sequence $d_n=\distfun_{A_n}(x_\kay)$ is bounded for each~$\kay$.
+We can assume that the sequence $d_n=\distfun_{A_n}(x_k)$ is bounded for each~$k$.
 Otherwise there is a subsequence such that $\distfun_{A_n}(x)\to \infty$ as $n\to \infty$ for some (and therefore any) $x$.
 Therefore, the corresponding subsequence of $A_n$ converges to the empty set.
 
 Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
-we can assume that $\distfun_{A_n}(x_\kay)$ converges as $n\to\infty$ for any fixed~$\kay$.
+we can assume that $\distfun_{A_n}(x_k)$ converges as $n\to\infty$ for any fixed~$k$.
 
 Note that for each $n$, the function $\distfun_{A_n}\:\spc{X}\to\RR$ is 1-Lipschitz and non-negative.
 Therefore the sequence $\distfun_{A_n}$ converges pointwise to a 1-Lipschitz non-negative function $f\:\spc{X}\to\RR$.
@@ -846,8 +848,8 @@ From the main assumption in the theorem,
 in each space $\spc{X}_n$ 
 there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that the following condition holds for a fixed sequence of integers $M_1<M_2<\ldots$
 \begin{itemize}
-\item $\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1$ if $i\le M_\kay$,
-\item the points $z_{1,n},\ldots,z_{M_\kay,n}$ form an $\tfrac1\kay$-net in $\cBall[x_n,\kay]_{\spc{X}_n}$.
+\item $\dist{z_{i,n}}{x_n}{\spc{X}_n}\le k+1$ if $i\le M_k$,
+\item the points $z_{1,n},\ldots,z_{M_k,n}$ form an $\tfrac1k$-net in $\cBall[x_n,k]_{\spc{X}_n}$.
 \end{itemize}
 
 Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}\] 

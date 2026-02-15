@@ -1,6 +1,6 @@
 \usepackage{amssymb, amsfonts, amsthm}
 \usepackage[intlimits]{amsmath}
-\usepackage{enumerate}
+%%%\usepackage{enumerate}%lnm-problem
 \usepackage{bm}%makes better bold fornt in math
 \usepackage{color}
 \usepackage{pifont,manfnt}
@@ -24,13 +24,7 @@
   {\par\medskip\noindent\minipage{\linewidth}}
   {\endminipage\par\medskip}
 
-\usepackage{titling}
-\newcommand{\subtitle}[1]{%
-\posttitle{%
-\par\end{center}
-\begin{center}\large#1\end{center}
-\vskip0.5em}%
-}
+
 
 \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -75,7 +69,7 @@ isbn=false]{biblatex}
     \EndAccSupp{}%
 }
 
-\def\emph{\ann}
+\renewcommand\emph{\ann}
 
 \usepackage{titletoc}% http://ctan.org/pkg/titletoc
 \titlecontents*{section}[.5em]
@@ -107,158 +101,88 @@ isbn=false]{biblatex}
 \renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
 
 
-\def\smallskip{\vskip\smallskipamount}
-\def\medskip{\vskip\medskipamount}
-\def\bigskip{\vskip\bigskipamount}
+\renewcommand\smallskip{\vskip\smallskipamount}
+\renewcommand\medskip{\vskip\medskipamount}
+\renewcommand\bigskip{\vskip\bigskipamount}
 
+\newcommand\parit[1]{\medskip\noindent{\it #1}}
+\newcommand\parbf[1]{\medskip\noindent{\bf #1}}
 
-\def\parit#1{\medskip\noindent{\it #1}}
-\def\parbf#1{\medskip\noindent{\bf #1}}
+\newcommand\CC{\mathbb{C}}%
+\newcommand\DD{\mathbb{D}}%
+\newcommand\EE{\mathbb{E}}%
+\newcommand\HH{\mathbb{H}}%
+\newcommand\PP{\mathbb{P}}%
+\newcommand\MM{\mathbb{M}}%
+\newcommand\NN{\mathbb{N}}%
+\newcommand\RR{\mathbb{R}}%
+\newcommand\SSS{\mathbb{S}}
+\newcommand\TT{\mathbb{T}}%
+\newcommand\T{\mathrm{T}}%
+\newcommand\ZZ{\mathbb{Z}}%
+\newcommand\QQ{\mathbb{Q}}%
+\newcommand\II{\mathbb{I}}%
+\newcommand\2{\mathrm{I{\hskip-.1em}I}}
 
-\def\noi{\noindent}%  
+\newcommand\eps{\varepsilon}%
+\renewcommand\ge{\geqslant}%
+\renewcommand\le{\leqslant}%
+\newcommand\lege{\lessgtr}
+\newcommand\gele{\gtrless}
+\renewcommand\phi{\varphi}%
+\renewcommand\emptyset{\varnothing}%
 
-\def\CC{\mathbb{C}}%  
-\def\DD{\mathbb{D}}% 
-\def\EE{\mathbb{E}}%
-\def\HH{\mathbb{H}}% 
-\def\PP{\mathbb{P}}%  
-\def\MM{\mathbb{M}}%
-\def\NN{\mathbb{N}}%  
-\def\RR{\mathbb{R}}% 
-\def\SSS{\mathbb{S}}
-\def\TT{\mathbb{T}}%
-\def\T{\mathrm{T}}%
-\def\UU{\mathrm{U}}%
-\def\ZZ{\mathbb{Z}}% 
-\def\QQ{\mathbb{Q}}% 
-\def\II{\mathbb{I}}%
-\def\2{\mathrm{I{\hskip-.1em}I}}
-
-\def\RP{\RR\mathrm{P}}%
-\def\CP{\CC\mathrm{P}}%
-\def\Ad{\mathrm{Ad}}%
-\def\Jac{\mathrm{Jac}}%
-\def\jac{\mathrm{jac}}%
-\def\haus{\mathrm{haus}}%
-\def\Re{\mathrm{Re}}%
-\def\Sc{\mathrm{Sc}}%
-\def\SO{\mathrm{SO}}%
-\def\SU{\mathrm{SU}}%
-\def\SL{\mathrm{SL}}
-\def\UU{\mathbb{U}}% 
-
-\def\eps{\varepsilon}%  
-\def\ge{\geqslant}%
-\def\le{\leqslant}%
-\def\lege{\lessgtr}
-\def\gele{\gtrless}
-\def\phi{\varphi}%
-\def\<{\langle}%
-\def\>{\rangle}%
-\def\~{\tilde}%
-\def\emptyset{\varnothing}%
-\def\aall{\buildrel \hbox{\tiny\it a.e.} \over{=\joinrel=}}
-\def\liminf{\varliminf}
 
 %operators
-\def\argmin{\mathop{\rm MinPoint}}
-\def\const{\operatorname{\rm const}\nolimits}
-\def\area{\operatorname{\rm area}\nolimits}
-\def\perim{\operatorname{\rm perim}\nolimits}
-\def\acts{\curvearrowright}
-\def\bus{\operatorname{\rm bus}\nolimits}
-\def\cost{\operatorname{\rm cost}\nolimits}
-\def\vol{\operatorname{\rm vol}\nolimits}
-\def\diam{\operatorname{\rm diam}\nolimits}
-\def\codim{\operatorname{\rm codim}\nolimits}
-\def\Const{c}
-\def\dim{\operatorname{\rm dim}\nolimits}
-\def\div{\operatorname{\rm div}\nolimits}
-\def\FillRad{\operatorname{\rm FillRad}}
-\def\GF{\mathop{\rm Flow}\nolimits}
-\def\Hess{\operatorname{\rm hess}\nolimits}
-\def\Haus{\operatorname{\rm Haus}\nolimits}
-\def\GH{\operatorname{\rm GH}\nolimits}
-\def\Im{\operatorname{\rm Im}\nolimits}
-\def\InjRad{\operatorname{\rm InjRad}\nolimits}
-\def\Inn{\operatorname{\rm Inn}\nolimits}
-\def\Int{\operatorname{\rm Int}\nolimits}
-\def\id{\operatorname{\rm id}\nolimits}
-\def\kay{k}
-\def\length{\operatorname{\rm length}\nolimits}
-\def\Lin{\mathop{\rm Lin}\nolimits}
-\def\LinDim{\mathop{\rm LinDim}\nolimits}
-\def\HausDim{\mathop{\rm HausDim}\nolimits}
-\def\HausMes{\mathop{\rm HausMes}\nolimits}
-\def\map{\Phi}
-\def\pack{\operatorname{\rm pack}\nolimits}
-\def\proj{\operatorname{\rm proj}\nolimits}
-\def\gexp{\operatorname{\rm gexp}\nolimits}
-\def\Ric{\operatorname{\rm Ric}\nolimits}
-\def\Rm{\operatorname{\rm Rm}\nolimits}
+\newcommand\argmin{\mathop{\rm MinPoint}}
+\newcommand\const{\operatorname{\rm const}\nolimits}
+\newcommand\area{\operatorname{\rm area}\nolimits}
+\newcommand\diam{\operatorname{\rm diam}\nolimits}
+\renewcommand\dim{\operatorname{\rm dim}\nolimits}
+\newcommand\Haus{\operatorname{\rm Haus}\nolimits}
+\renewcommand\Im{\operatorname{\rm Im}\nolimits}
+\newcommand\Int{\operatorname{\rm Int}\nolimits}
+\newcommand\HausDim{\mathop{\rm HausDim}\nolimits}
+\newcommand\HausMes{\mathop{\rm HausMes}\nolimits}
+\newcommand\map{\Phi}
+\newcommand\proj{\operatorname{\rm proj}\nolimits}
 \newcommand*{\spx}[1]{\mathfrak{S}_{#1}}
-\def\supp{\operatorname{\rm supp}\nolimits}
-\def\TopDim{\mathop{\rm TopDim}\nolimits}
-\def\Tor{\operatorname{\rm Tor}\nolimits}
-\def\Up{\mathop{\rm Up}\nolimits}
-\def\VolPro{\operatorname{\rm VolPro}\nolimits}
-\def\Wass{\operatorname{\rm Wass}\nolimits}
-\def\width{\operatorname{\rm width}\nolimits}
-\def\without{{-}}
+\newcommand\TopDim{\mathop{\rm TopDim}\nolimits}
+\newcommand\Up{\mathop{\rm Up}\nolimits}
+\newcommand\without{{-}}
 \newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
 \renewcommand*{\lg}{%
 \mathrel{\vcenter{\offinterlineskip
 \hbox{$<$}\vskip-0.75ex\hbox{$>$}}}}
 
-\def\spc#1{\mathcal{#1}}
-\def\oBall{\mathrm{B}{}}
-\def\cBall{\overline{\mathrm{B}}{}}
-\def\length{\mathop{\rm length}\nolimits}
-\def\df{\mathrel{:=}}
-\def\iso{\buildrel \hbox{\tiny\it iso} \over{=\joinrel=}}
-\def\GHto{\xrightarrow{\mbox{\tiny\rm GH}}}
-\def\Hto{\xrightarrow{\mbox{\tiny\rm H}}}
-\def\rad{\mathop{\rm rad}\nolimits}
-\def\Inj{\mathop{\rm Ext}\nolimits}
-\def\IndexSet{\mathcal{A}}
-\def\Cone{\mathop{\rm Cone}\nolimits}
-\def\Susp{\mathop{\rm Susp}\nolimits}
-\def\sys{\mathop{\rm sys}\nolimits}
-\def\Dom{\mathop{\rm Dom}\nolimits}
-\def\Lip{L}
-\def\T{\mathrm{T}}
-\def\0{0}
-\def\subto{\to}
-\newcommand*\dir[2]{{\uparrow}_{[{#1}{#2}]}}
+\newcommand\spc[1]{\mathcal{#1}}
+\newcommand\oBall{\mathrm{B}{}}
+\newcommand\cBall{\overline{\mathrm{B}}{}}
+\newcommand\length{\mathop{\rm length}\nolimits}
+\newcommand\df{\mathrel{:=}}
+\newcommand\iso{\buildrel \hbox{\tiny\it iso} \over{=\joinrel=}}
+\newcommand\IndexSet{\mathcal{A}}
+\newcommand\Cone{\mathop{\rm Cone}\nolimits}
+\newcommand\Susp{\mathop{\rm Susp}\nolimits}
+\newcommand\Lip{L}
+\renewcommand\T{\mathrm{T}}
 
-
-
-\def\Asym{\mathop{\rm Asym}\nolimits}
-\def\Conv{\mathop{\rm Conv}\nolimits}
-\def\Link{\mathop{\rm Link}\nolimits}
-\def\Star{\mathop{\rm Star}\nolimits}
-\def\dd{\bm{d}}
+\newcommand\Conv{\mathop{\rm Conv}\nolimits}
+\newcommand\Link{\mathop{\rm Link}\nolimits}
+\newcommand\Star{\mathop{\rm Star}\nolimits}
+\newcommand\dd{\bm{d}}
 \newcommand*\trig[3]{[#1#2#3]}
 \newcommand*\angk[3]{\tilde\measuredangle(#1\,{}^{#2}_{#3})}
-\newcommand*{\side}{\mathop{\tilde\curlyvee}\nolimits}
-\def\CAT{\mathrm{CAT}}
-\def\CBB{\mathrm{CBB}}
-\newcommand*\Alex[1]{\CBB(#1)}
-\def\modtrig{\tilde\triangle}
-\def\mangle{\measuredangle}
-
-
-
-\def\lege{\lessgtr}
-
-\def\Kappa{\mathrm{K}}
+\newcommand\CAT{\mathrm{CAT}}
+\newcommand\modtrig{\tilde\triangle}
+\newcommand\mangle{\measuredangle}
 
 \newcommand*\yetdist[4][{}]%
 {\|{#2}\z-{#3}\|_{#4}^{#1}}
 
 \newcommand*\dist[4][{}]%
 {|{#2}\z-{#3}|_{#4}^{#1}}
-\def\distfun{\mathrm{dist}}
+\newcommand\distfun{\mathrm{dist}}
 
 \newcommand{\asterism}{\smash{%
 \raisebox{-.5ex}{%
@@ -267,24 +191,18 @@ isbn=false]{biblatex}
 \multicolumn2c*\\[-1.7ex]*&*%
 \end{tabular}}}}
 
-\def\:{\colon}
+\renewcommand\:{\colon}
 \newcommand*{\set}[2]{\left\{\,{#1}\,:\,{#2}\,\right\}}
 
 \newcommand\xqed[1]{%
 \leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
 \quad\hbox{#1}}
-\def\claimqeds{\xqed{$\vartriangle$}\par\medskip}
-\def\claimqedsf{\vskip-6mm\claimqeds}
-\def\qeds{\qed\par\medskip}
-\def\qedsin{\eqno\square}%END OF PROOF in FORMULA
-\def\qedsf{\vskip-4.5mm\qeds\par\medskip}%END OF PROOF BY FORMULA
+\newcommand\claimqeds{\xqed{$\vartriangle$}\par\medskip}
+\newcommand\claimqedsf{\vskip-6mm\claimqeds}
+\newcommand\qeds{\qed\par\medskip}
+\newcommand\qedsin{\eqno\square}%END OF PROOF in FORMULA
+\newcommand\qedsf{\vskip-4.5mm\qeds\par\medskip}%END OF PROOF BY FORMULA
 
-%comment
-\def\comment#1{\par\smallskip
-\hbox{%
-\hspace{3em}\parbox{.91\textwidth}%
-{{\small\it #1}}}
-}
 
 \DeclareCiteCommand{\ncite}%[\mkbibbrackets]
   {\usebibmacro{cite:init}%
@@ -299,18 +217,18 @@ isbn=false]{biblatex}
             {\hbox{$\mathsurround=0pt #1$}}{}}
 
 \let\oldcdot\cdot
-\def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
+\renewcommand\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
 
 
 %THEOREM
 \newcounter{thm}[chapter]
 \renewcommand{\thethm}{\thechapter.\arabic{thm}}
-\newcommand\claim[2][.]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thechapter.\arabic{thm}. #2#1}
+\newcommand\myclaim[2][.]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thechapter.\arabic{thm}. #2#1}
 \it\ %\ignorespaces
 }
-\def\endclaim{
+\def\endmyclaim{
 \par\medskip}
-\newenvironment{thm}{\claim}{\endclaim}
+\newenvironment{thm}{\myclaim}{\endmyclaim}
 
 
 %SUBTHEOREM 

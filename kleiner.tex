@@ -188,27 +188,27 @@ for any convex function $h\:\spc{U}\to\RR$.
 \section{Convexity of up-set}
 
 \begin{thm}{Definition}\label{def:ordung}
-For two real arrays $\bm{v}$, $\bm{w}\in \RR^{\kay+1}$,
-$\bm{v}=(v_0,\z\ldots,v_\kay)$
+For two real arrays $\bm{v}$, $\bm{w}\in \RR^{k+1}$,
+$\bm{v}=(v_0,\z\ldots,v_k)$
 and 
-$\bm{w}=(w_0,\z\ldots,w_\kay)$,
+$\bm{w}=(w_0,\z\ldots,w_k)$,
 we will write
 $\bm{v}\succcurlyeq\bm{w}$ if $v_i\ge w_i$ for each $i$.
 \end{thm}
 
-Given a subset $Q\subset \RR^{\kay+1}$, 
+Given a subset $Q\subset \RR^{k+1}$,
 denote by $\Up Q$ \label{PAGE.def:Up}
 the smallest upper set containing $Q$;
 that is,
 \begin{align*}
 \Up Q 
 &=
-\set{\bm{v}\in\RR^{\kay+1}}{\exists\, \bm{w}\in Q\ \text{such that}\ \bm{v}\succcurlyeq\bm{w}},
+\set{\bm{v}\in\RR^{k+1}}{\exists\, \bm{w}\in Q\ \text{such that}\ \bm{v}\succcurlyeq\bm{w}},
 \end{align*}
 
 \begin{thm}{Proposition}\label{thm:up-convex}
 Let $\spc{X}$ be a complete geodesic space 
-and $\bm{f}\z=(f_0,\z\ldots,f_\kay)\:\spc{X}\to\RR^{\kay+1}$
+and $\bm{f}\z=(f_0,\z\ldots,f_k)\:\spc{X}\to\RR^{k+1}$
 be an array of non-negative 1-convex locally Lipschitz functions.
 Consider the set $W=\Up[\bm{f}(\spc{X})]\subset\RR^{k+1}$.
 Then 
@@ -262,14 +262,14 @@ Choose $\bm{w}\in W$.
 Observe that $\bm{w}\succcurlyeq\bm{v}$ for some $\bm{v}\in \bar V\cap \partial W$.
 Note that $W$ is supported at $\bm{v}$ by a hyperplane 
 \[\Pi=\set{(x_0,\ldots,x_k)\in \RR^{k+1}}{\mu_0\cdot x_0+\ldots+\mu_k\cdot x_k=\const}\]
-for some $\bm{\mu}=(\mu_0,\ldots,\mu_k)\in\triangle^{\kay}$.
+for some $\bm{\mu}=(\mu_0,\ldots,\mu_k)\in\triangle^{k}$.
 Let $p=\spx{\bm f}(\bm{\mu})$.
 By \ref{lem:argmin(convex)}, $\bm{f}(p)\z=\bm{v}$;
 in particular $\bm{v}\in V$.
 
 Note that $p\in \spx{\bm{f}}(\triangle^k)\setminus\spx{\bm{f}}(\partial\triangle^k)$ if and only if 
-$\bm{f}(p)$ is supported by a plane as above for some $\bm{\mu}\in\triangle^{\kay}$,
-but not supported by any such plane with $\bm{\mu}\in\partial\triangle^{\kay}$.
+$\bm{f}(p)$ is supported by a plane as above for some $\bm{\mu}\in\triangle^{k}$,
+but not supported by any such plane with $\bm{\mu}\in\partial\triangle^{k}$.
 This condition is open, therefore $\spx{\bm{f}}(\triangle^k)\z\setminus\spx{\bm{f}}(\partial\triangle^k)$ is an open set.
 
 Since $\triangle^k$ is compact, $W=\Up(\bm{f}[\spx{\bm{f}}(\triangle^k)])$ is closed.
@@ -298,9 +298,9 @@ Construct a $\CAT(0)$ space with a three-point array $(p_0,p_1,p_2)$ such that i
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{lem:nondeg-test-with-balls}
-Let $\bm{p}\z=(p_0,\ldots, p_\kay)$ be a point array
+Let $\bm{p}\z=(p_0,\ldots, p_k)$ be a point array
 in a complete length $\CAT(0)$ space $\spc{U}$, 
-and $B_i=\cBall[p_i,r_i]$ for some array of positive reals $(r_0,r_1,\ldots,r_\kay)$.
+and $B_i=\cBall[p_i,r_i]$ for some array of positive reals $(r_0,r_1,\ldots,r_k)$.
 
 \begin{subthm}{lem:nondeg-test-with-ball:U}
 Suppose $\bigcap_i B_i\ne \emptyset$.
@@ -317,7 +317,7 @@ $\spx{\bm{p}}$ is nondegenerate.
 \begin{subthm}{lem:nondeg-test-with-balls:nondeg+}
 Suppose $\spx{\bm{p}}$ is nondegenerate.
 Show that the condition in \ref{SHORT.lem:nondeg-test-with-balls:nondeg} holds for some
- array of positive reals $(r_0,\ldots,r_\kay)$.
+ array of positive reals $(r_0,\ldots,r_k)$.
 \end{subthm}
 
 \end{thm}
@@ -342,7 +342,7 @@ We will show that the restriction $\proj\circ \bm{f}|_Z$ is a bi-H\"older embedd
 Since the map $\proj\circ \bm{f}$ is Lipschitz,
 it is sufficient to construct its right inverse and show that it is $C^{\frac12}$-continuous.
 
-Given $\bm{v}=(v_0,\ldots,v_\kay)\in\Pi$, consider the function
+Given $\bm{v}=(v_0,\ldots,v_k)\in\Pi$, consider the function
 $h_{\bm{v}}\: \spc{X}\to \RR$ defined by
 \[h_{\bm{v}}(p)=\max_i\{f_i(p)-v_i\}.\]
 Note that $h_{\bm{v}}$ is $1$-convex.
@@ -356,7 +356,7 @@ for any $i$.
 In particular, if $p\in \spx{\bm{f}}(\triangle^k)$, then $p=\map(\bm{v})$.
 That is, $\map$ is a right inverse of the restriction $\bm{f}|_{\spx{\bm{f}}(\triangle^k)}$.
 
-Given $\bm{v},\bm{w}\in\RR^{\kay+1}$,
+Given $\bm{v},\bm{w}\in\RR^{k+1}$,
 set $p=\map (\bm{v})$ and $q=\map (\bm{w})$.
 Since $h_{\bm{v}}$ and $h_{\bm{w}}$ are 1-convex, we have
 \begin{align*}
@@ -553,13 +553,13 @@ In particular,
 \parit{\ref{SHORT.lem:approximation-cba:im}.}
 Assume the contrary;
 that is, $\Psi(\spc{N})$ is not contained in the $\Psi$-image of the $m$-skeleton of $\spc{N}$.
-Then for some $\kay>m$,
-there is a $\kay$-simplex $\triangle^\kay$ in $\spc{N}$
-such that the barycentric simplex $\sigma=\Psi|_{\triangle^\kay}$ is nondegenerate; 
+Then for some $k>m$,
+there is a $k$-simplex $\triangle^k$ in $\spc{N}$
+such that the barycentric simplex $\sigma=\Psi|_{\triangle^k}$ is nondegenerate;
 that is, 
-$$W=\Psi(\triangle^\kay)\setminus\Psi(\partial\triangle^\kay)\ne \emptyset.
+$$W=\Psi(\triangle^k)\setminus\Psi(\partial\triangle^k)\ne \emptyset.
 $$
-By \ref{thm:bihoelder}, $\TopDim\spc{U}\ge \kay$ --- a contradiction.
+By \ref{thm:bihoelder}, $\TopDim\spc{U}\ge k$ --- a contradiction.
 \qeds
 
 \parit{Proof of \ref{thm:dim-infty-CBA}; \ref{SHORT.thm:dim-infty-CBA:bary}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:mnfld}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:TopDim}.}
