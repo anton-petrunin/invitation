@@ -539,8 +539,8 @@ dOt  z.a;
 
 label(btex $B_1$ etex, origin) withcolor 1;
 label.llft(btex $B_2$ etex, z.b+(1,0));
-whitelabel.ulft(btex $A^i$ etex, (-.7,.3)*u);
-whitelabel.lrt(btex $A^j$ etex, (.5,-.5)*u);
+whitelabel.ulft(btex $A_i$ etex, (-.7,.3)*u);
+whitelabel.lrt(btex $A_j$ etex, (.5,-.5)*u);
 
 endfig;
 
@@ -625,30 +625,6 @@ draw (0,0)*u--(1,0)*u--(1,1)*u--(2,1)*u--(2,2)*u--(3,2)*u--(3,3)*u--(4,3)*u--(4,
 
 endfig;
 
-beginfig(105) 
-save u,p;
-path p[];
-u:=1cm;
-
-z.A=origin;
-z.B=(3,0)*u;
-z.C=(1,2)*u;
-
-draw z.A--z.B--z.C--cycle;
-
-arcs(z.B, z.A, z.C, 12);
-
-dOt z.A,z.B,z.C;
-
-label.llft(btex $\tilde x$ etex, z.A);
-label.lrt(btex $\tilde p$ etex, z.B);
-label.top(btex $\tilde q$ etex, z.C);
-label(btex $=\mangle\hinge x p q$ etex rotated (angle(z.C-z.A)/2), z.A +32*unitvector(unitvector(z.B-z.A)+unitvector(z.C-z.A)));
-label(btex $\side\hinge x p q$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
-label(btex $\dist{x}{q}{}$ etex rotated angle(z.C-z.A), .5[z.A,z.C]+8*unitvector(z.C-z.A) zscaled (0,1));
-label.bot(btex $\dist{x}{p}{}$ etex, .5[z.A,z.B]);
-endfig;
-
 beginfig(416) 
 save u,p;
 path p[];
@@ -705,8 +681,8 @@ z.x=(1,1)*u;
 z.z=(1.2,-.8)*u;
 z.y=.5[z.x,z.z];
 
-labelarcsprof(z.x, z.p, z.y, 10, 26, btex $=\alpha^{23}+\eps$ etex rotated (.5*(angle(z.y-z.p)+angle(z.x-z.p))));
-labelarcsprof2(z.y, z.p, z.z, 10, 25, btex $=\alpha^{12}+\eps$ etex rotated (.5*(angle(z.y-z.p)+angle(z.z-z.p))));
+labelarcsprof(z.x, z.p, z.y, 10, 26, btex $=\alpha_{23}+\eps$ etex rotated (.5*(angle(z.y-z.p)+angle(z.x-z.p))));
+labelarcsprof2(z.y, z.p, z.z, 10, 25, btex $=\alpha_{12}+\eps$ etex rotated (.5*(angle(z.y-z.p)+angle(z.z-z.p))));
 
 draw ddline(z.p,z.x)(0,.2);
 draw ddline(z.p,z.y)(0,.2);
@@ -1259,8 +1235,8 @@ draw z.z1--z.z2--z.x1 pensemibold;
 
 dOt z.x0,z.x1,z.x2,z.z1,z.z2;
 
-whitelabel.urt(btex $\spc{U}^1$ etex, point 1.7 of p1);
-whitelabel.lft(btex $\spc{U}^2$ etex, point 1 of p2);
+whitelabel.urt(btex $\spc{U}_1$ etex, point 1.7 of p1);
+whitelabel.lft(btex $\spc{U}_2$ etex, point 1 of p2);
 whitelabel.top(btex $A$ etex, point 1.6 of p2);
 
 whitelabel.ulft(btex $x$ etex, z.x0);
@@ -1322,10 +1298,10 @@ draw (z.b1--z.r) shifted (z.a0-z.b1) zscaled z.w shifted (z.bb1-z.a0) penhair;
 
 label.top(btex $A$ etex, .5[z.a0,z.a1]);
 label.top(btex $B$ etex, .5[z.b0,z.b1]);
-whitelabel(btex $\mathcal{R}^0$ etex zscaled z.w, z.r shifted (z.a0-z.a1) zscaled z.w shifted (z.aaa1-z.a0));
-whitelabel(btex $\mathcal{R}^1$ etex zscaled z.w, z.r shifted (z.a0-z.b1) zscaled z.w shifted (z.bb1-z.a0));
-whitelabel(btex $\mathcal{R}^2$ etex zscaled z.v, z.r shifted (z.a0-z.b1) zscaled z.v shifted (z.bb1-z.a0));
-whitelabel(btex $\mathcal{R}^3$ etex zscaled z.v, z.r shifted (z.a0-z.a1) zscaled z.v shifted (z.aa1-z.a0));
+whitelabel(btex $\mathcal{R}_0$ etex zscaled z.w, z.r shifted (z.a0-z.a1) zscaled z.w shifted (z.aaa1-z.a0));
+whitelabel(btex $\mathcal{R}_1$ etex zscaled z.w, z.r shifted (z.a0-z.b1) zscaled z.w shifted (z.bb1-z.a0));
+whitelabel(btex $\mathcal{R}_2$ etex zscaled z.v, z.r shifted (z.a0-z.b1) zscaled z.v shifted (z.bb1-z.a0));
+whitelabel(btex $\mathcal{R}_3$ etex zscaled z.v, z.r shifted (z.a0-z.a1) zscaled z.v shifted (z.aa1-z.a0));
 
 endfig;
 
@@ -1470,10 +1446,10 @@ draw circle(point i of p0, .7*u);
 dOt point i of p0;
 endfor
 
-whitelabel.lft(btex $\spc{B}^0$ etex,(-4,0) +point 0 of p0);
-whitelabel.bot(btex $\spc{B}^1$ etex, (0,-4) +point 1/n of p0);
+whitelabel.lft(btex $\spc{B}_0$ etex,(-4,0) +point 0 of p0);
+whitelabel.bot(btex $\spc{B}_1$ etex, (0,-4) +point 1/n of p0);
 whitelabel.bot(btex $\dots$ etex rotated angle(direction (n+1)/(2*n) of p0), (2,-1)+point (n+1)/(2*n) of p0);
-whitelabel.rt(btex $\spc{B}^n$ etex, (4,0) +point 1 of p0);
+whitelabel.rt(btex $\spc{B}_n$ etex, (4,0) +point 1 of p0);
 endfig;
 
 beginfig(930) 
@@ -1537,12 +1513,12 @@ endfor
 dOt z.p;
 
 
-label.urt(btex $p=x^{0,0}=\dots=x^{N,0}$ etex, z.p);
-label.lrt(btex $y=x^{N,N}$ etex, z.y);
-label.llft(btex $x^{0,N}=x$ etex, z.x);
-label.ulft(btex $x^{0,1}$ etex, z.x[0][1]);
-label.urt(btex $x^{N,1}$ etex, z.x[n][1]);
-label.bot(btex $x^{1,N}$ etex, z.x[1][n]);
+label.urt(btex $p=x_{0,0}=\dots=x_{N,0}$ etex, z.p);
+label.lrt(btex $y=x_{N,N}$ etex, z.y);
+label.llft(btex $x_{0,N}=x$ etex, z.x);
+label.ulft(btex $x_{0,1}$ etex, z.x[0][1]);
+label.urt(btex $x_{N,1}$ etex, z.x[n][1]);
+label.bot(btex $x_{1,N}$ etex, z.x[1][n]);
 label.bot(btex $\dots$ etex, z.x[3][n]+(0,-2));
 label(btex $\dots$ etex rotated angle(z.p-z.x), z.x[0][3]+(-3,3));
 label(btex $\dots$ etex rotated angle(z.y-z.p), z.x[n][3]+(3,3));
@@ -1597,12 +1573,12 @@ dOt z.x1,z.x2,z.x3,z.x4,z.x5,z.x6;
 
 whitelabel(btex $R_{n-1}$ etex, .5[.5[z.x1,z.x5],z.x3]);
 whitelabel(btex $\dot R$ etex, .3[.5[z.x1,z.x5],z.x6]);
-label.ulft(btex $\tilde x^1$ etex, z.x1);
-label.lft(btex $\tilde x^2$ etex, z.x2);
+label.ulft(btex $\tilde x_1$ etex, z.x1);
+label.lft(btex $\tilde x_2$ etex, z.x2);
 label(btex $\dots$ etex rotated angle(z.x4-z.x3), 
 .5[z.x3,z.x4]+4*unitvector(z.x3-z.x4) rotated 90);
-label.rt(btex $\tilde x^{n-1}$ etex, z.x5);
-label.top(btex $\dot x^n$ etex, z.x6);
+label.rt(btex $\tilde x_{n-1}$ etex, z.x5);
+label.top(btex $\dot x_n$ etex, z.x6);
 endfig;
 
 beginfig(955) 
@@ -1647,12 +1623,12 @@ whiterimmark10(z.p--z.y1,z.p--z.y2,z.p--z.y3);
 
 dOt z.p,z.x0,z.x1,z.x2,z.y1,z.y2,z.y3,z.x1x2,z.x0x1,z.x0x2;
 
-label.rt(btex $x^0$ etex, z.x0);
-label.bot(btex $x^1$ etex, z.x1);
-whitelabel.bot(btex $x^2$ etex, z.x2);
-label.urt(btex $x^3=y^3$ etex, z.y3);
-label.urt(btex $y^2$ etex, z.y2);
-label.urt(btex $y^1$ etex, z.y1);
+label.rt(btex $x_0$ etex, z.x0);
+label.bot(btex $x_1$ etex, z.x1);
+whitelabel.bot(btex $x_2$ etex, z.x2);
+label.urt(btex $x_3=y_3$ etex, z.y3);
+label.urt(btex $y_2$ etex, z.y2);
+label.urt(btex $y_1$ etex, z.y1);
 label.lft(btex $p$ etex, z.p);
 endfig;
 
