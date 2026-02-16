@@ -56,9 +56,10 @@ Consider the one-parameter family of sets
 \centering
 \includegraphics{mppics/pic-1201}
 \caption{$C=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}$.}
+\label{pic-1201}
 \end{figure}
 
-Each set $V_t$ is a solid paraboloid tangent to $\partial C$ along the parabola $y\z\mapsto(t,y,t^2-y^2)$.
+Each set $V_t$ is a solid paraboloid tangent to $\partial C$ along the parabola $y\z\mapsto(t,y,t^2-y^2)$;  see figure~\ref{pic-1201}.
 The set $V_t$ is closed and convex for any $t$, and
 \[C=\bigcup_t V_t.\]
 Further note that the function $t\mapsto f_t(x,y)$ is concave for any fixed $x,y$.
@@ -156,12 +157,13 @@ The proof uses a straightforward modification of the Morse theory for manifolds 
 \centering
 \includegraphics{mppics/pic-1202}
 \caption{A triangle moved in the direction of $\nu(p)$.}
+\label{pic-1202}
 \end{figure}
 
 \parit{Proof; only-if part.}
 Suppose $k_2(p)<0$ at some point $p\in S$,
 consider the plane $W$ containing $p$ and spanned by the first two principal directions at~$p$.
-Choose a small triangle in $W$ that surrounds $p$ and move it slightly in the direction of $\nu(p)$.
+Choose a small triangle in $W$ that surrounds $p$ and move it slightly in the direction of $\nu(p)$; see figure~\ref{pic-1202}.
 We get a triangle $\trig xyz$ that is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,z\}$ bounded by $\trig xyz$ does not lie in $K$ completely.
 Therefore $K$ is not two-convex.
@@ -435,7 +437,6 @@ Therefore each triangle $\trig xyz$ in $K$ can be mapped to the plane in a lengt
 Since $\Omega$ is simply connected, any open region, say $\Delta$, that is surrounded by the image of $\trig xyz$ lies completely in~$\Omega$.
 
 \begin{figure}[b!]
-\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1203}
 \caption{A triangle with overlapping sides.}
@@ -544,7 +545,7 @@ A continuous function $f\:U\to\RR$ is called
 if for any linear function $\ell\:\RR^2\to\RR$, the difference 
 $f-\ell$
 does not have local maxima or local minima in~$U$.
-Equivalently, the open subgraph and epigraph of $f$
+Equivalently, the open subgraph and epigraph of~$f$
 \begin{align*}
 &\set{(x,y,z)\in\EE^3}{z<f(x,y),\ (x,y)\in U},
 \\
@@ -568,9 +569,10 @@ its graph $\Gamma$ with the induced length metric is bi-Lipschitz equivalent to 
 \centering
 \includegraphics{mppics/pic-1206}
 \caption{}
+\label{pic-1206}
 \end{figure}
 
-Consider the sequence of sets 
+Consider the sequence of sets (figure~\ref{pic-1206})
 \[K_n
 =
 \set{(x,y,z)\in \EE^3}{z\lege f(x,y)\pm\tfrac1n,\ (x,y)\in \DD}.\]
@@ -767,7 +769,7 @@ Set $\Omega'=\Conv_2\Omega$ and let $P'$ be the closure of~$\Omega'$.
 Further, let $F'_i=F_i\setminus \Omega'$;
 in other words,
 $F'_i$ is the subset of the facet $F_i$ 
-which remains on the boundary of~$P'$.
+which remains on the boundary of~$P'$ (figure~\ref{pic-1209}).
 
 From the construction of the two-convex hull (\ref{prop:2-conv-construction}) we have:
 
@@ -786,6 +788,7 @@ Each connected component of the complement $F_i\setminus F'_i$ is convex.
 \centering
 \includegraphics{mppics/pic-1209}
 \caption{Facet $F_i$ and its subset $F'_i$, which remains on the boundary of~$P'$.}
+\label{pic-1209}
 \end{figure}
 
 Indeed, assume a connected component $A$ of $F_i\setminus F'_i$ fails to be convex.

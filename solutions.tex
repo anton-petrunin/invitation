@@ -26,13 +26,14 @@ if and only if $W(v)\ge 0$ for any vector $v$ in~$\RR^3$.
 
 Therefore, if $\spc{X}$ is not of type $\mathcal{E}_4$, then $W(v)<0$ for some vector~$v$.
 From above, the vector $v$ must be transversal to each of the 4 faces of~$\triangle$.
-Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of the two pictures.
+Therefore if we project $\triangle$ along $v$ to a plane transversal to $v$ we see one of the two pictures (figure~\ref{pic-710}).
 
 \begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-710}
 \caption{}
+\label{pic-710}
 \end{figure}
 
 Note that the set of vectors $v$ such that $W(v)<0$ has two connected components;
@@ -88,7 +89,7 @@ In particular, $(B,\rho_1)$ has no geodesics.
 This example is due to Fedor Nazarov \cite{nazarov}.
 
 \parbf{\ref{exercise from BH}.}
-Consider the following subset of $\RR^2$ equipped with the induced length metric
+Consider the following subset of $\RR^2$ (figure~\ref{pic-1})
 \[
 \spc{X}
 =
@@ -96,6 +97,7 @@ Consider the following subset of $\RR^2$ equipped with the induced length metric
 \cup
 \bigl(\{1,\tfrac12,\tfrac13,\ldots\}\times[0,1]\bigr)
 \]
+equipped with the induced length metric.
 Note that $\spc{X}$ is locally compact and geodesic.
 
 \begin{figure}[t!]
@@ -103,6 +105,7 @@ Note that $\spc{X}$ is locally compact and geodesic.
 \centering
 \includegraphics{mppics/pic-1}
 \caption{}
+\label{pic-1}
 \end{figure}
 
 Its completion $\bar{\spc{X}}$ is isometric to the closure of $\spc{X}$ equipped with the induced length metric;
@@ -305,10 +308,11 @@ Show that the direction $\xi$ of $[pq]$ is the limit of directions $\xi_n$.
 \centering
 \includegraphics{mppics/pic-12}
 \caption{}
+\label{pic-12}
 \end{figure}
 
 The unit disc in the plane with
-a half-line attached to each point of its boundary is a complete $\CAT(0)$ length space (prove this!) with extendable geodesics.
+a half-line attached to each point of its boundary (figure~\ref{pic-12}) is a complete $\CAT(0)$ length space (prove this!) with extendable geodesics.
 However, the space of geodesic directions on the boundary of the disc is not complete --- there is no geodesic tangent to the boundary of the disc.
 This provides a counterexample to the statement of the exercise if $\spc{U}$ is not assumed to be proper.
 
@@ -362,6 +366,7 @@ Observe that it is sufficient to show that
 \includegraphics{mppics/pic-1650}
 \vskip0mm
 \caption{$\dist{\gamma_1(t)}{\gamma_2(t)}{\spc{U}}\le\dist{\gamma_1(t)}{\beta(t)}{\spc{U}}+\dist{\beta(t)}{\gamma_2(t)}{\spc{U}}$.}
+\label{pic-1650}
 \end{figure}
 
 Let $\beta$ be the geodesic path from $\gamma_1(0)$ to $\gamma_2(1)$.
@@ -371,7 +376,7 @@ Observe that
 \\
 \dist{\beta(t)}{\gamma_2(t)}{\spc{U}}&\le (1-t)\cdot\dist{\beta(0)}{\gamma_2(0)}{\spc{U}},
 \end{align*}
-and apply the triangle inequality.
+and apply the triangle inequality (figure~\ref{pic-1650}).
 
 \parbf{\ref{ex:displacement}.}
 Choose a geodesic $\gamma_1$.
@@ -412,6 +417,7 @@ Thinness of triangles implies that
 \includegraphics{mppics/pic-41}
 \vskip-0mm
 \caption{}
+\label{pic-41}
 \end{figure}
 
 It remains to show that the map $p\mapsto p^*$ is short, 
@@ -421,10 +427,7 @@ that is,
 for any $p,q\in \spc{U}$.
 
 Assume $p\ne p^*$, $q\ne q^*$, $p^*\ne q^*$.
-Construct the model triangles 
-$\trig{\tilde p}{\tilde p^*}{\tilde q^*}$ and $\trig{\tilde p}{\tilde q}{\tilde q^*}$
-of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that 
-the points $\tilde p^*$ and $\tilde q$ lie on the opposite sides from $[{\tilde p}{\tilde q^*}]$.
+Construct the model triangles $\trig{\tilde p}{\tilde p^*}{\tilde q^*}$ and $\trig{\tilde p}{\tilde q}{\tilde q^*}$ of $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$ so that the points $\tilde p^*$ and $\tilde q$ lie on the opposite sides from $[{\tilde p}{\tilde q^*}]$ (figure~\ref{pic-41}).
 
 From thinness of the triangles $\trig{p}{p^*}{q^*}$ and $\trig{p}{q}{q^*}$, we get that
 \[\mangle\hinge{\tilde p^*}{\tilde p}{\tilde q^*},\mangle\hinge{\tilde q^*}{\tilde p^*}{\tilde q}\ge \tfrac\pi2.\]
@@ -451,21 +454,19 @@ it is locally path connected.
 Since $K$ is connected, it is also path connected.
 
 Fix two points $x,y\in K$. 
-Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\z\to K$.
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\z\to K$ (figure~\ref{pic-9}).
 Use \ref{prop:thin=cat} to show that the geodesics $[x\,\alpha(s)]$
 are uniquely defined and depend continuously on~$s$.
 
-\begin{figure}[t!]
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-9}
 \caption{}
+\label{pic-9}
 \end{figure}
 
-If $[xy]=[x\,\alpha(1)]$ does not completely lie in $K$, then 
-there is a value $s\in [0,1]$ such that $[x\,\alpha(s)]$ 
-lies in $\Omega$,
-but does not completely lie in~$K$.
+If $[xy]=[x\,\alpha(1)]$ does not completely lie in $K$, then there is a value $s\in [0,1]$ such that $[x\,\alpha(s)]$ lies in $\Omega$, but does not completely lie in~$K$.
 Therefore $f=\distfun_{K}$ is convex 
 along $[x\alpha(s)]$.
 
@@ -521,13 +522,12 @@ such that
 \[B_1\subset A_i\subset B_2\]
 for each wall~$A_i$.
 
-\begin{figure}[t!]
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-43}
 \caption{}
 \label{pic-43}
-\vskip-0mm
 \end{figure}
 
 Note that all the intersections of the walls have $\eps$-wide corners for
@@ -690,13 +690,6 @@ $\gamma_{\alpha_\tau}=\gamma_{\beta_\tau}$ for any $\tau$ --- hence the result.
 \parbf{\ref{ex:geod-circle}.}
 By the globalization theorem there is a nontrivial homotopy class of closed curves.
 
-\begin{figure}[b!]
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-11}
-\caption{}
-\end{figure}
-
 Consider a shortest noncontractible closed curve $\gamma$ in $\spc{X}$;
 due to compactness of $\spc{X}$ such a curve exists.
 Indeed, let $\ell$ be the infimum of lengths of all noncontractible closed curves in $\spc{X}$.
@@ -705,7 +698,7 @@ Then choosing a sequence of unit speed noncontractible curves whose lengths conv
 
 Assume that $\gamma$ is not a geodesic circle,
 that is, there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$
-is shorter than the lengths of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to~$q$.
+is shorter than the lengths of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to~$q$ (figure~\ref{pic-11}).
 Consider the product curves, say $\gamma_1$ and $\gamma_2$,
 of $[qp]$ with $\alpha_1$ and~$\alpha_2$.
 Then $\gamma_1$ or $\gamma_2$ is noncontractible,
@@ -713,6 +706,14 @@ Then $\gamma_1$ or $\gamma_2$ is noncontractible,
 \quad\text{and}\quad
 \length\gamma_2<\ell\]
 --- a contradiction.
+
+\begin{figure}[t!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-11}
+\caption{}
+\label{pic-11}
+\end{figure}
 
 In the $\CAT(1)$ case we also have a geodesic circle.
 The proof is done in nearly  the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.
@@ -952,6 +953,16 @@ In this case $v$ is a vertex of three edges $e_x$, $e_y$, and $e_z$;
 each pair of edges belongs to one of the squares $s_x$, $s_y$, and $s_z$ with complementary index, but the squares $s_x$, $s_y$, $s_z$ do not belong to one cube.
 For higher dimensional cubes we have a product of this configuration with a cube.
 
+Let $m_x$, $m_y$, and $m_z$ be the midpoints of $e_x$, $e_y$, and $e_z$ respectively (figure~\ref{pic-13}).
+Consider 3 balls with centers $m_x$, $m_y$, and $m_z$ and radius $\tfrac14$.
+Observe that each pair of balls have a common point;
+but all three together have no points of intersection.
+However, in an injective space, the former implies the latter.
+Indeed, we may think that $m_x$, $m_y$, and $m_z$ are images of a distance-preserving map from a 3-point subset in a 4-point metric space with the fourth point at distance $\tfrac14$ from the rest,
+and this map cannot be extended to a short map on the whole 4-point space.
+(For more on injective spaces, see \cite{petrunin-2023}.)
+That is, $(Q,\ell^\infty)$ is not an injective space --- a contradiction.
+
 \begin{figure}[t!]
 \begin{minipage}{.48\textwidth}
 \centering
@@ -967,23 +978,16 @@ For higher dimensional cubes we have a product of this configuration with a cube
 \begin{minipage}{.48\textwidth}
 \centering
 \caption{\ref{SHORT.cube-infty} $\Rightarrow$ \ref{SHORT.cube-2}.}
+\label{pic-13}
 \end{minipage}\hfill
 \begin{minipage}{.48\textwidth}
 \centering
 \caption{\ref{SHORT.cube-1} $\Rightarrow$ \ref{SHORT.cube-2}.}
+\label{pic-15}
 \end{minipage}
 \vskip-0mm
 \end{figure}
 
-Let $m_x$, $m_y$, and $m_z$ be the midpoints of $e_x$, $e_y$, and $e_z$ respectively.
-Consider 3 balls with centers $m_x$, $m_y$, and $m_z$ and radius $\tfrac14$.
-Observe that each pair of balls have a common point;
-but all three together have no points of intersection.
-However, in an injective space, the former implies the latter.
-Indeed, we may think that $m_x$, $m_y$, and $m_z$ are images of a distance-preserving map from a 3-point subset in a 4-point metric space with the fourth point at distance $\tfrac14$ from the rest,
-and this map cannot be extended to a short map on the whole 4-point space.
-(For more on injective spaces, see \cite{petrunin-2023}.)
-That is, $(Q,\ell^\infty)$ is not an injective space --- a contradiction.
 
 \parit{\ref{SHORT.cube-1} $\Rightarrow$ \ref{SHORT.cube-2}.}
 Observe that median point $m(x,y,z)$ depends continuously on the triple of points $(x,y,z)$ and $m(x,x,y)=x$.
@@ -999,7 +1003,7 @@ Assume that a link of $Q$ does not satisfy the no-triangle condition.
 The same way as in the previous problem, we can assume that it is a link of a vertex;
 so we have a configuration of three squares $s_x$, $s_y$, and $s_z$, 
 three edges $e_x$, $e_y$, and $e_z$, and one common vertex $v$ as above.
-Let $x$, $y$, and $z$ be the squares $s_x$, $s_y$, and $s_z$, respectively.
+Let $x$, $y$, and $z$ be the centers of squares $s_x$, $s_y$, and $s_z$, respectively (figure~\ref{pic-15}).
 Observe that the geodesics $[xy]_{\ell^1}$, $[xz]_{\ell^1}$, and $[yz]_{\ell^1}$ are uniquely defined and they have no common point.
 It follows that the triple $(x,y,z)$ does not have a median; 
 that is, $(Q,\ell^1)$ is not a median space --- a contradiction.
@@ -1061,7 +1065,8 @@ Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-722}
-\caption{Hemisphere.}
+\caption{Hemisphere with the pole at $z$.}
+\label{pic-722}
 \end{figure}
 
 Assume $\ell<\pi$.
@@ -1071,7 +1076,7 @@ Let $z$ be the midpoint of $[pq]$.
 
 We claim that $\alpha$ lies in the open hemisphere $H$ centered at~$z$.
 
-Assume the contrary; that is, $\alpha$ meets the equator $\partial H$ at a point $r$.
+Assume the contrary (figure~\ref{pic-722}); that is, $\alpha$ meets the equator $\partial H$ at a point $r$.
 Without loss of generality we may assume that $r\in\check\alpha$.
 
 The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which meets $r$ and its antipodal point~$r'$.
@@ -1106,7 +1111,7 @@ and is contractible in $\Omega$ but not contractible in $\Omega\cap W_0$.
 Let $\phi\:\DD\to \Omega$ be a disc that shrinks~$\gamma$.
 Applying the loop theorem (arguing as in the proof of Proposition~\ref{prop:3d-strong-2-convexity}), we can assume that $\phi$ is an embedding and $\phi(\DD)$ lies on one side of~$W_0$.
 
-Let $Q$ be the bounded closed domain cut from $\EE^3$ by $\phi(\DD)$ and~$W_0$. 
+Let $Q$ be the bounded closed domain cut from $\EE^3$ by $\phi(\DD)$ and~$W_0$ (figure~\ref{pic-19}).
 By assumption it contains a point that is not in~$\Omega$. 
 Changing $W_0,\gamma$ and $\phi$ slightly, we can assume that such a point lies in the interior of~$Q$.
 
@@ -1114,11 +1119,12 @@ Fix a circle $\Gamma$ in $W_0$ that surrounds $Q\cap W_0$.
 Since $Q$ lies in a half-space with boundary $W_0$, there is a
 smallest spherical dome with boundary $\Gamma$ that includes the set $R=Q\setminus\Omega$.
 
-\begin{figure}[t!]
+\begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-19}
 \caption{$p$ is an isolated point in $W\cap R$.}
+\label{pic-19}
 \end{figure}
 
 The dome has to touch $R$ at some point~$p$.

@@ -14,13 +14,14 @@ Given a quadruple of points $p,q,x,y$ in a metric space $\spc{X}$,
 consider two model triangles in the plane 
 $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig{}(pxy)_{\EE^2}$ 
 and 
-$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$.
+$\trig{\tilde q}{\tilde x}{\tilde y}=\modtrig{}(qxy)_{\EE^2}$ with common side $[\tilde x\tilde y]$ (figure~\ref{pic-720}).
 
 \begin{figure}[b!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-720}
 \caption{$\CAT(0)$ comparison.}
+\label{pic-720}
 \end{figure}
 
 If the inequality
@@ -93,12 +94,13 @@ we get that $\dist{p}{q}{}=0$ --- a contradiction.
 \centering
 \includegraphics{mppics/pic-750}
 \caption{Monotonicity of $\angk p{\bar x}{\bar y}$.}
+\label{pic-750}
 \end{figure}
 
 \begin{thm}[!]{Exercise}\label{ex:noncreasing-CAT}
 Given a hinge $\hinge p x y$ in a $\CAT(0)$ space $\spc{U}$ consider the function 
 \[f\:(\dist{p}{\bar x}{},\dist{p}{\bar y}{})\mapsto \angk p{\bar x}{\bar y},\]
-where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
+where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$ (figure~\ref{pic-750}).
 Show that $f$ is nondecreasing in each argument.
 
 Conclude that any hinge in a $\CAT(0)$ space has a well  defined angle.
@@ -204,14 +206,16 @@ Analogously, if $\spc{U}$ is a proper geodesic $\CAT(1)$ space, then any local g
 We first consider the case when  $\spc{U}$ is $\CAT(0)$. 
 Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic that is not a geodesic.
 Choose $a$ to be the maximal value 
-such that $\gamma$ is a geodesic on $[0,a]$. By assumption $a<\ell$.
-Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$.
+such that $\gamma$ is a geodesic on $[0,a]$.
+By assumption $a<\ell$.
+Further, choose $b>a$ so that $\gamma$ is a geodesic on $[a,b]$ (figure~\ref{pic-800}).
 
 \begin{figure}[t!]
 \vskip-5mm
 \centering
 \includegraphics{mppics/pic-800}
 \caption{}
+\label{pic-800}
 \end{figure}
 
 Since the triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is thin and 
@@ -286,7 +290,7 @@ Show that any closed, connected, locally convex set in $\spc{U}$ is convex.
 Assume that a triangle $\trig p x y$ 
 in a metric space is \index{decomposed triangle}\emph{decomposed} 
 into two triangles $\trig p x z$ and $\trig p y z$;
-that is, $\trig p x z$ and $\trig p y z$ have a common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
+that is, $\trig p x z$ and $\trig p y z$ have a common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$ (figure~\ref{pic-810}).
 
 \begin{figure}[b!]
 \begin{minipage}{.38\textwidth}
@@ -303,12 +307,14 @@ that is, $\trig p x z$ and $\trig p y z$ have a common side $[p z]$, and the sid
 \begin{minipage}{.38\textwidth}
 \centering
 \caption{}
+\label{pic-810}
 \end{minipage}\hfill
 \begin{minipage}{.58\textwidth}
 \centering
 \caption{$\dist{\dot x}{\dot w}{}+\dist{\dot w}{\dot y}{}
 <
 \dist{\dot x}{\dot z}{}+\dist{\dot z}{\dot y}{}$}
+\label{pic-821}
 \end{minipage}
 \vskip-0mm
 \end{figure}
@@ -322,7 +328,7 @@ Analogously, if $\trig p x y$ has perimeter $<2\cdot\pi$ and both triangles $\tr
 
 \parit{Proof.}
 Construct  the model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig(p x z)_{\EE^2}$ 
-and $\trig {\dot p} {\dot y} {\dot z}\z=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
+and $\trig {\dot p} {\dot y} {\dot z}\z=\modtrig(p y z)_{\EE^2}$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$ (figure~\ref{pic-821}).
 
 Let us show that 
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
@@ -358,6 +364,7 @@ $F\:\tilde D\z\to \dot D$ (in other words, distance-nonexpanding or 1-Lipschitz)
 \includegraphics{mppics/pic-830}
 \vskip0mm
 \caption{Definition of $F$.}
+\label{pic-830}
 \end{figure}
 
 Indeed, by Alexandrov's lemma (\ref{lem:alex}), 
@@ -373,7 +380,7 @@ $(\tilde z,\tilde z_x)$,
 $(\tilde z_x,\tilde z_y)$ 
 and $(\tilde z_y,\tilde z)$ 
 with arcs of circles centered at 
-$\tilde y$, $\tilde p$, and $\tilde x$ respectively. 
+$\tilde y$, $\tilde p$, and $\tilde x$ respectively (figure~\ref{pic-830}).
 Define $F$ as follows:
 \begin{itemize}
 
@@ -467,10 +474,11 @@ Thus, without loss of generality, we may assume that $x\z\in\spc{U}_1$ and $y,z\
 \centering
 \includegraphics{mppics/pic-840}
 \caption{Subdivision of $[xyz]$.}
+\label{pic-840}
 \end{figure}
 
 Choose points $a,b\in A\z=\spc{U}_1\z\cap\spc{U}_2$
-that lie respectively on the sides $[xy], [xz]$.
+that lie respectively on the sides $[xy], [xz]$ (figure~\ref{pic-840}).
 Note that
 
 \begin{itemize}
@@ -525,6 +533,7 @@ Let us construct the space $\spc{R}$ by gluing successive pairs of spaces along 
 \centering
 \includegraphics{mppics/pic-850}
 \caption{Puff pastry for $(A,B,A)$.}
+\label{pic-850}
 \end{figure}
 % superindexes in the pic should be changed to subindexes
 The resulting space $\spc{R}$  will be called 
@@ -636,7 +645,7 @@ It remains to apply Proposition~\ref{prop:A-check-A}.
 \label{pic-860}
 \end{figure}
 
-Let $X$ be a convex subset in a Euclidean space; see figure \ref{pic-860}.
+Let $X$ be a convex subset in a Euclidean space (figure \ref{pic-860}).
 By a \index{dihedral angle}\emph{dihedral angle}, we understand an intersection of two half-spaces;
 the intersection of corresponding hyperplanes is called the {}\emph{edge} of the angle.
 We say that a dihedral angle $D$ 
@@ -704,7 +713,7 @@ Fix arbitrary $x,y\in \EE^m$.
 Choose a point $z\in A\cap B$
 for which the sum 
 \[\dist{x}{z}{}+\dist{y}{z}{}\] 
-is minimal.
+is minimal (figure~\ref{pic-880}).
 To show the end-to-end convexity of  $\spc{R}$,
 it is sufficient to prove the following:
 
@@ -725,6 +734,7 @@ The same way we can treat the case when $z$ lies in the interior of~$B$.
 \includegraphics{mppics/pic-880}
 \vskip-0mm
 \caption{}
+\label{pic-880}
 \end{figure}
 
 Suppose that $\dot A$ and $\dot B$ are provided by Exercise \ref{ex:supporting-planes}.
@@ -772,13 +782,14 @@ We say that a closed convex set $A\subset \EE^m$ has {}\emph{$\eps$-wide corners
 if together with each point $p$, 
 the set $A$ contains a small right circular cone
 with the tip at $p$ and aperture $\eps$;
-that is, $\eps$ is the maximum angle between two generating lines of the cone.
+that is, $\eps$ is the maximum angle between two generating lines of the cone (figure~\ref{pic-885}).
 
 \begin{figure}[t!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-885}
 \caption{An $\eps$-wide corner.}
+\label{pic-885}
 \end{figure}
 
 For example, 
