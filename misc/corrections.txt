@@ -1,13 +1,15 @@
 GLOBAL FORMATTING REQUESTS
 
-Restore alphabetic labels of sections --- 1A–1J became 1.1–1.10. (This is crucial; otherwise it is hard to navigate in the book.)
+Restore alphabetic labels of sections --- A–J became 1.1–1.10. (This is crucial; otherwise it is hard to navigate in the book.)
 
-Restore sentence case in chapter and section titles (unless Springer is very strict about it).
+Restore sentence case in chapter and section titles. (Unless strictly required by Springer house style.)
 
-Right now all figures have been moved to the right and their captions often take several lines. Please make it more standard, say with each figure centered and caption under figure on one line, where possible. Captions have no periods at the end, but empty captions have a standalone period --- please fix it.
+Right now all figures have been moved to the right and their captions often take several lines. Please make it more standard, say with each figure centered and its caption below it on one line, where possible. 
 
-Restore the periods after run-in headings as in our manuscript: "Lemma. ...", "Theorem. ...", and "Proof. ..." and so on.
-If you insist on keeping this style, please add a little more space after the headings.
+Please add periods after captions. (Unless strictly required by Springer house style.)
+
+Restore the periods after run-in headings as in our manuscript: "Lemma. ...", "Theorem. ...",  "Proof. ...", and so on.
+If Springer house style strictly requires this, please add a little more space after the headings.
 
 ESSENTIAL STRUCTURAL CORRECTIONS
 
@@ -47,3 +49,25 @@ p.100, l.34: replace "<" with "\z<"
 p.115, l.492: replace "\times" with "\z\times"
 p.120, l.675: replace "=" with "\z="
 p.120, l.676: replace "+" with "\z+"
+
+CAPTIONS:
+
+Fig. 2.3 A nonminimizing local geodesic
+Fig. 2.4 A decomposed triangle
+Fig. 3.4 The minimizing point
+Fig. 4.1 A nonconvex quadrangle
+Fig. 4.3 Unfolding a polygonal line
+Fig. 5.1 Patchwork
+Fig. 5.2 A dumbbell-shaped surface
+Fig. 6.1 Two stars
+Fig. 7.4 A thickened graph
+Fig. 8.1 The up-set
+Fig. A.1 Two projections of a tetrahedron
+Fig. A.2 This space has no geodesic from $p$ to $q$
+Fig. A.3 A complete geodesic $\CAT(0)$ space with noncomplete spaces of directions
+Fig. A.5 Two model triangles
+Fig. A.6 Moving geodesics
+Fig. A.7 Nested balls and walls
+Fig. A.9 A shortcut of $\gamma$
+
+We agree with all the other changes.
