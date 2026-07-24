@@ -1,0 +1,49 @@
+GLOBAL FORMATTING REQUESTS
+
+Restore alphabetic labels of sections --- 1A–1J became 1.1–1.10. (This is crucial; otherwise it is hard to navigate in the book.)
+
+Restore sentence case in chapter and section titles (unless Springer is very strict about it).
+
+Right now all figures have been moved to the right and their captions often take several lines. Please make it more standard, say with each figure centered and caption under figure on one line, where possible. Captions have no periods at the end, but empty captions have a standalone period --- please fix it.
+
+Restore the periods after run-in headings as in our manuscript: "Lemma. ...", "Theorem. ...", and "Proof. ..." and so on.
+If you insist on keeping this style, please add a little more space after the headings.
+
+ESSENTIAL STRUCTURAL CORRECTIONS
+
+Preface: restore the numbers 0.1 and 0.2 for the two exercises. Their corresponding semisolutions in the Appendix are still numbered 0.1 and 0.2.
+
+Please resolve the problem with citations in the Preface. The original global bibliography has been divided into chapter bibliographies, but the
+Preface still contains citations [8], [9], [27], [88], and [103]. These citations currently have no corresponding bibliography.
+
+LOCAL CHANGES
+
+In the corrections below, \z is a macro already defined in our source.
+It keeps our math formula hyphenations at new places.
+
+p.2, l.44: replace "=" with "\z="
+p.10, l.279: replace "+" with "\z+"
+p.14, l.393: replace "\in" with "\z\in"
+p.28, l.39: replace "=" with "\z="
+p.30, l.76: replace "\in" with "\z\in"
+p.33, l.164: replace "=" with "\z="
+p.42, l.136: replace "\to" with "\z\to"
+p.43, l.165: replace "\cup" with "\z\cup"
+p.52, l.171: replace "\to" with "\z\to"
+p.70, l.99: replace "-" with "\z-"
+p.73, l.143: replace "=" with "\z="
+p.74, l.176: replace "\cap" with "\z\cap"
+p.74, l.184: replace "\le" with "\z\le"
+p.75, l.219: replace "\to" with "\z\to"
+p.81, l.380: replace "=" with "\z="
+p.81, l.391: replace "\in" with "\z\in"
+p.83, l.465: replace "\to" with "\z\to"
+p.89, l.69: replace "<" with "\z<"
+p.90, l.97: replace "\to" with "\z\to"
+p.94, l.199: replace "\ge" with "\z\ge"
+p.96, l.266: replace "\ge" with "\z\ge"
+p.100, l.33: replace "\le" with "\z\le"
+p.100, l.34: replace "<" with "\z<"
+p.115, l.492: replace "\times" with "\z\times"
+p.120, l.675: replace "=" with "\z="
+p.120, l.676: replace "+" with "\z+"

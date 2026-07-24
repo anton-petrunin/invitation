@@ -1,6 +1,7 @@
-invitation-CAT.tex
-invitation-CAT.ind
-invitation-CAT.bbl
+SNmono.cls
+invitation-CAT-springer.tex
+invitation-CAT-springer.ind
+invitation-CAT-springer.bbl
 billiard.tex
 cartan-hadamard.tex
 exot.tex
