@@ -10,12 +10,13 @@ Please add periods after captions. (Unless strictly required by Springer house s
 
 Restore the periods after run-in headings as in our manuscript: "Lemma. ...", "Theorem. ...",  "Proof. ...", and so on.
 If Springer house style strictly requires this, please add a little more space after the headings.
+V: if they don't agree to restore periods maybe ask that the word Proof be on a separate line? 
 
 ESSENTIAL STRUCTURAL CORRECTIONS
 
 Preface: restore the numbers 0.1 and 0.2 for the two exercises. Their corresponding semisolutions in the Appendix are still numbered 0.1 and 0.2.
 
-Please resolve the problem with citations in the Preface. The original global bibliography has been divided into chapter bibliographies, but the
+Please resolve the problem with citations in the Preface. The original global bibliography has been divided into chapter bibliographies, but this has not been done in the Preface. The
 Preface still contains citations [8], [9], [27], [88], and [103]. These citations currently have no corresponding bibliography.
 
 LOCAL CHANGES
@@ -24,6 +25,8 @@ In the corrections below, \z is a macro already defined in our source.
 It keeps our math formula hyphenations at new places.
 
 p.2, l.44: replace "=" with "\z="
+p. 8, Figure 1.2. Restore the node caption $\tilde y'$ at the bottom right. It's currently missing "y".
+p. 8 l 212L there is a bad line break at the end of the line.
 p.10, l.279: replace "+" with "\z+"
 p.14, l.393: replace "\in" with "\z\in"
 p.28, l.39: replace "=" with "\z="
