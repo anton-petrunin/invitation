@@ -9,8 +9,12 @@ Right now all figures have been moved to the right and their captions often take
 Please add periods after captions. (Unless strictly required by Springer house style.)
 
 Restore the periods after run-in headings as in our manuscript: "Lemma. ...", "Theorem. ...",  "Proof. ...", and so on.
+<<<<<<< HEAD
 If Springer house style strictly requires this, please add a little more space after the headings.
 V: if they don't agree to restore periods maybe ask that the word Proof be on a separate line? 
+=======
+If Springer house style strictly requires no periods, please add a little more space after the headings.
+>>>>>>> 40af9d7c012d927d530c5b442699c542708cefa9
 
 ESSENTIAL STRUCTURAL CORRECTIONS
 
