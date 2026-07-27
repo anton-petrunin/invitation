@@ -43,15 +43,23 @@ p. 38, l 43: the first "=" sign is misaligned.
 p.42, l.136: replace "\to" with "\z\to"
 p.43, l.165: replace "\cup" with "\z\cup"
 p. 45, l.233:  Reference 9. is improperly aligned and uses different font than the rest of the references.
+p. 48, l. 44: space should be increased between "If" and "length"
+p. 49, l. 67:  space should be increased between "If" and "U"
+p. 50, l. 107:  space should be increased between "if" and "U"
 p.52, l.171: replace "\to" with "\z\to"
+p. 58, l. 108 and l. 110: "dim" should be in math Roman font everywhere. Currently "d" is roman and "im" is italic.
+p. 63, l. 271: there should be a colon after $\gamma$
 p.70, l.99: replace "-" with "\z-"
 p.73, l.143: replace "=" with "\z="
 p.74, l.176: replace "\cap" with "\z\cap"
 p.74, l.184: replace "\le" with "\z\le"
+p. 75, l. 90: change "the $V_s$" to "all $V_s$" 
 p.75, l.219: replace "\to" with "\z\to"
+p. 76: Figure 7.3 is only referred to on page 77. should it maybe moved to page 77?
 p.81, l.380: replace "=" with "\z="
 p.81, l.391: replace "\in" with "\z\in"
 p.83, l.465: replace "\to" with "\z\to"
+p.85, l. 523 and l. 540: References 1 and 11 are improperly aligned and use different font than the rest of the references.
 p.89, l.69: replace "<" with "\z<"
 p.90, l.97: replace "\to" with "\z\to"
 p.94, l.199: replace "\ge" with "\z\ge"
