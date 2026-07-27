@@ -1,3 +1,5 @@
+Please update file (mppics/pic-41.mps) for Fig. A.5 (attached)
+
 GLOBAL FORMATTING REQUESTS
 
 Restore alphabetic labels of sections --- A–J became 1.1–1.10. (This is crucial; otherwise it is hard to navigate in the book.)
@@ -27,7 +29,7 @@ It keeps our math formula hyphenations at new places.
 
 p.2, l.44: replace "=" with "\z="
 p. 8, Figure 1.2. Restore the node caption $\tilde y'$ at the bottom right. It's currently missing "y".
-p. 8 l 212L there is a bad line break at the end of the line.
+p. 8 l 213 replace "=" with "\z=".
 p.10, l.279: replace "+" with "\z+"
 p.14, l.393: replace "\in" with "\z\in"
 p. 24, l. 229, Reference 4. is improperly aligned and uses different font than the rest of the references.
