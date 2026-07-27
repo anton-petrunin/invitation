@@ -33,6 +33,7 @@ p. 8, Figure 1.2. Restore the node caption $\tilde y'$ at the bottom right. It's
 p. 8 l 212L there is a bad line break at the end of the line.
 p.10, l.279: replace "+" with "\z+"
 p.14, l.393: replace "\in" with "\z\in"
+p. 24, l. 229, Reference 4. is improperly aligned and uses different font than the rest of the references.
 p.28, l.39: replace "=" with "\z="
 p.30, l.76: replace "\in" with "\z\in"
 p.33, l.164: replace "=" with "\z="
