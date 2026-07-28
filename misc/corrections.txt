@@ -70,6 +70,7 @@ p.100, l.34: replace "<" with "\z<"
 p.115, l.492: replace "\times" with "\z\times"
 p.120, l.675: replace "=" with "\z="
 p.120, l.676: replace "+" with "\z+"
+p. 122, l.733 and l.750: References 13 and 23 are improperly aligned and use different font than the rest of the references.
 
 CAPTIONS:
 
