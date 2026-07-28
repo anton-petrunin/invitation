@@ -15,11 +15,6 @@ Restore the periods after run-in headings as in our manuscript: "Lemma. ...", "T
 If Springer house style strictly requires this, please add a little more space after the headings.
 V: if they don't agree to restore periods maybe ask that the word Proof be on a separate line? 
 
-Add definitions:
-
-\renewcommand\ge{\geqslant}%
-\renewcommand\le{\leqslant}%
-
 ESSENTIAL STRUCTURAL CORRECTIONS
 
 Preface: restore the numbers 0.1 and 0.2 for the two exercises. Their corresponding semisolutions in the Appendix are still numbered 0.1 and 0.2.
@@ -33,12 +28,10 @@ In the corrections below, \z is a macro already defined in our source.
 It keeps our math formula hyphenations at new places.
 
 p.2, l.44: replace "=" with "\z="
-p. 8, Figure 1.2.: Restore the node caption $\tilde y'$ at the bottom right. It's currently missing "y".
-p. 8 l. 213: replace "=" with "\z=".
+p. 8, Figure 1.2. Restore the node caption $\tilde y'$ at the bottom right. It's currently missing "y".
+p. 8 l 213 replace "=" with "\z=".
 p.10, l.279: replace "+" with "\z+"
-p. 13 l. 363 replace "\le" with "\z\le".
 p.14, l.393: replace "\in" with "\z\in"
-p. 18 l. 42: replace "=" with "\z=".
 p. 24, l. 229, Reference 4. is improperly aligned and uses different font than the rest of the references.
 p.28, l.39: replace "=" with "\z="
 p.30, l.76: replace "\in" with "\z\in"
@@ -68,16 +61,15 @@ p.81, l.391: replace "\in" with "\z\in"
 p.83, l.465: replace "\to" with "\z\to"
 p.85, l. 523 and l. 540: References 1 and 11 are improperly aligned and use different font than the rest of the references.
 p.89, l.69: replace "<" with "\z<"
+p. 89, l. 80: space between $0$ and "for all" should be increased.
 p.90, l.97: replace "\to" with "\z\to"
 p.94, l.199: replace "\ge" with "\z\ge"
 p.96, l.266: replace "\ge" with "\z\ge"
 p.100, l.33: replace "\le" with "\z\le"
 p.100, l.34: replace "<" with "\z<"
-p.114, l.483: replace "\Cone \spc{S}\simeq \spc{R}\setminus\{s\}" with "\Cone \spc{S}\z\simeq \spc{R}\setminus\{s\}"
 p.115, l.492: replace "\times" with "\z\times"
 p.120, l.675: replace "=" with "\z="
 p.120, l.676: replace "+" with "\z+"
-p.121, l.691-692: replace "\ell>\dist{p_j}{x}{}-r_j" with "\ell\z>\dist{p_j}{x}{}\z-r_j"
 
 CAPTIONS:
 
